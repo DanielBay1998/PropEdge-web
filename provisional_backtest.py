@@ -50,7 +50,7 @@ def evaluate(csv_path, player=None, min_games=3, prior_games=5):
                         model=sum((len(recent)*sum(s[k] for s in recent)/len(recent)+prior_games*priors[k])/(len(recent)+prior_games)
                                   for k in ("PTS","REB","AST"))
                     else:
-                        model=(len(recent)*baseline+prior_games*priors[code])/(len(recent)+prior_games)
+                        model=(len(recent)*baseline+prior_games*priors[code])/(len(recent)+prior_games) if code=="3PM" else baseline
                     e=errors[code]
                     e["model"].append(model-target[code])
                     e["baseline"].append(baseline-target[code])
@@ -71,8 +71,8 @@ def evaluate(csv_path, player=None, min_games=3, prior_games=5):
             "as_of_utc":datetime.now(timezone.utc).isoformat(),
             "player":player,"minimum_prior_games":min_games,"prior_strength_games":prior_games,
             "data_scope":"2026-27 regular season only, games from Oct 20, 2026",
-            "method":"strictly earlier-date rolling empirical-Bayes; equal-player prior; fixed hyperparameters",
+            "method":"strictly earlier-date recent-form PTS/REB/AST/PRA and empirical-Bayes 3PM; fixed hyperparameters",
             "metrics":output,"limitations":["Current-season sample is short; historical season source not included",
-            "Model design and prior strength were not independently tuned or validated",
+            "Model configuration was selected after inspecting this same sample; improvements are in-sample and require future holdout validation",
             "No injuries, minutes, opponents, sportsbook odds, calibration, ROI or confidence intervals",
             "This audit does not authorize promotion into Top Picks"]}
