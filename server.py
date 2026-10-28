@@ -389,6 +389,12 @@ def refresh():
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
     return base
 
+@app.get("/api/provisional-backtest")
+def provisional_backtest(player: str = ""):
+    from provisional_backtest import evaluate
+    name=player.strip()[:120] or None
+    return evaluate(ROOT/"data"/"nba_2026_27.csv",player=name)
+
 @app.get("/api/missing-model-coverage")
 def missing_model_coverage(limit: int = 100):
     # Diagnostic only. Never invent projections or promote game averages to model picks.
