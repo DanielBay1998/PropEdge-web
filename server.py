@@ -294,3 +294,37 @@ def headshots():
         for chunk in pool.map(get_roster,team_ids):result.update(chunk)
     _headshot_cache.update(until=time.monotonic()+21600,headshots=result)
     return {"headshots":result}
+
+
+# Complete NBA scoreboard independent of the qualifying prop board.
+_schedule_cache={"until":0,"date":None,"result":None}
+@app.get("/api/games")
+def nba_games():
+    from zoneinfo import ZoneInfo
+    from urllib.request import Request,urlopen
+    from urllib.parse import urlencode
+    today=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y%m%d")
+    now=time.monotonic()
+    if _schedule_cache["date"]==today and now<_schedule_cache["until"]:
+        return _schedule_cache["result"]
+    url="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?"+urlencode({"dates":today,"limit":100})
+    try:
+        with urlopen(Request(url,headers={"User-Agent":"PropEdge/2.2"}),timeout=8) as response:
+            payload=json.load(response)
+        games=[]
+        for event in payload.get("events",[]):
+            comp=(event.get("competitions") or [{}])[0]
+            teams=comp.get("competitors") or []
+            away=next((x for x in teams if x.get("homeAway")=="away"),None)
+            home=next((x for x in teams if x.get("homeAway")=="home"),None)
+            if not away or not home:continue
+            def team(t):
+                x=t.get("team") or {}
+                return {"name":x.get("displayName") or x.get("name") or "Unknown", "abbreviation":x.get("abbreviation") or "", "logo":x.get("logo") or (x.get("logos") or [{}])[0].get("href") or "", "score":t.get("score")}
+            games.append({"id":event.get("id"),"date":event.get("date"),"away":team(away),"home":team(home),"status":((event.get("status") or {}).get("type") or {}).get("shortDetail") or "Scheduled", "state":((event.get("status") or {}).get("type") or {}).get("state") or "pre"})
+        result={"date":today,"games":games,"source":"ESPN NBA scoreboard","as_of":datetime.now(timezone.utc).isoformat()}
+        _schedule_cache.update({"until":now+180,"date":today,"result":result})
+        return result
+    except Exception as exc:
+        # Never claim an incomplete model-signal list is the complete slate.
+        return {"date":today,"games":[],"error":"NBA schedule temporarily unavailable ("+type(exc).__name__+")","source":"ESPN NBA scoreboard"}
