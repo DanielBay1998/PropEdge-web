@@ -535,7 +535,7 @@ function chooseDailyParlay(signals){
  for(const [book,entries] of groups){
   entries.sort((a,b)=>b.parlayScore-a.parlayScore||b.book_count-a.book_count);
   // One player and one event per leg; avoid correlated same-game selections.
-  const pool=entries.slice(0,45);
+  const pool=entries.slice(0,16);
   function search(start,legs,usedEvents,usedPlayers,decimal,scoreSum){
    if(legs.length>=3){
     const american=americanFromDecimal(decimal);
@@ -544,7 +544,7 @@ function chooseDailyParlay(signals){
     const ranking=distance+Math.max(0,65-quality)*0.025;
     if(american>=850&&american<=1250&&(!best||ranking<best.ranking))best={book,legs:[...legs],american,ranking,decimal};
    }
-   if(legs.length===6||decimal>14)return;
+   if(legs.length===5||decimal>14)return;
    for(let i=start;i<pool.length;i++){
     const leg=pool[i],event=String(leg.event_id),player=String(leg.player).toLowerCase();
     if(usedEvents.has(event)||usedPlayers.has(player))continue;
