@@ -1,0 +1,23 @@
+name: PropEdge Publisher Validation (Dry Run Only)
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'data/propedge_shadow_projections.csv'
+      - 'data/propedge_candidate_projections.csv'
+      - 'approved_changes.csv'
+      - 'propedge_guarded_publish.py'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate candidate against approvals (never publish)
+        run: |
+          python propedge_guarded_publish.py \
+            --production data/propedge_shadow_projections.csv \
+            --candidate data/propedge_candidate_projections.csv \
+            --approvals approved_changes.csv
