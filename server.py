@@ -321,6 +321,44 @@ def refresh():
             # Use exact canonical player names only, plus game team validation
             # to avoid applying a same-name injury from a different team.
             return next((i for i in entries if norm(i.get("team")) in {norm(teams[0]),norm(teams[1])}),None)
+        # Experimental, non-qualifying teammate on/off scenario.
+        logs_for_injuries=load_game_logs()
+        def injury_scenario(player,game,market,baseline):
+            if baseline is None:return None
+            teams=str(game or "").split(" @ ")
+            if len(teams)!=2:return None
+            rows=logs_for_injuries.get(canonical_player(player),[])
+            if not rows:return None
+            team=norm(rows[0].get("team"))
+            own=[r for r in rows if norm(r.get("team"))==team and r.get("game_id")]
+            if len(own)<10:return None
+            if market not in ("PTS","REB","AST","3PM","PRA"):return None
+            def value(r):
+                return sum(r[k] for k in ("PTS","REB","AST")) if market=="PRA" else r[market]
+            comparisons=[]
+            for injured in report:
+                if norm(injured.get("team")) not in {norm(teams[0]),norm(teams[1])}:continue
+                if norm(injured.get("status"))!="out":continue
+                mate=canonical_player(injured.get("player"))
+                if mate==canonical_player(player):continue
+                mate_rows=[r for r in logs_for_injuries.get(mate,[]) if norm(r.get("team"))==team and r.get("game_id")]
+                if len(mate_rows)<5:continue
+                active={r["game_id"] for r in mate_rows if r.get("MIN") is None or r["MIN"]>0}
+                with_mate=[value(r) for r in own if r["game_id"] in active]
+                without_mate=[value(r) for r in own if r["game_id"] not in active]
+                if len(with_mate)<5 or len(without_mate)<5:continue
+                on=sum(with_mate)/len(with_mate)
+                off=sum(without_mate)/len(without_mate)
+                if on<=0.5:continue
+                comparisons.append((min(len(with_mate),len(without_mate)),injured.get("player"),len(with_mate),len(without_mate),off/on-1))
+            if not comparisons:return None
+            _,mate,on_games,off_games,observed=max(comparisons,key=lambda x:x[0])
+            change=max(-0.15,min(0.15,observed*0.35))
+            return {"projection":round(max(0,baseline*(1+change)),2),
+                    "baseline":round(baseline,2),"adjustment_pct":round(change*100,1),
+                    "teammate":mate,"with_games":on_games,"without_games":off_games,
+                    "method":"experimental teammate on/off; shrunk and capped",
+                    "validated":False,"qualifying_eligible":False}
         def attach_availability(row):
             report_row=injury_for(row.get("player"),row.get("game"))
             status=str(report_row.get("status") or "") if report_row else ""
@@ -331,6 +369,7 @@ def refresh():
             row["availability_warning"]=("Reported out; excluded from qualifying picks" if status.casefold()=="out" else
                                          "Reported "+status+"; availability requires confirmation" if status else
                                          "No injury entry returned; availability not independently verified")
+            row['injury_scenario']=injury_scenario(row.get('player'),row.get('game'),row.get('market'),number(row.get('projection'))) if status.casefold()!='out' else None
             return row
         for signal in signals:attach_availability(signal)
         excluded=[r for r in signals if (r.get("injury_status") or "").casefold()=="out"]
