@@ -22,6 +22,11 @@ def number(value):
 
 def norm(s):return " ".join(str(s or "").casefold().split())
 
+# Verified, narrowly scoped naming variants. Do not fuzzy-merge other players.
+PLAYER_ALIASES={"ace bailey (uta)":"ace bailey","airious bailey":"ace bailey","airious ace bailey":"ace bailey"}
+def canonical_player(name):
+    return PLAYER_ALIASES.get(norm(name),norm(name))
+
 def projections():
     p=ROOT/"data"/"propedge_shadow_projections.csv"
     if not p.exists():return {}
@@ -31,7 +36,7 @@ def projections():
         if r.get("MinutesModelStatus")!="MODELED":continue
         n=number(r.get("ShadowProjection"))
         if n is None or n<0:continue
-        result[(norm(r.get("ResolvedPlayer")),r.get("MarketCode"))]=r
+        result[(canonical_player(r.get("ResolvedPlayer")),r.get("MarketCode"))]=r
     return result
 
 
@@ -50,7 +55,7 @@ def load_game_logs():
         if not path.exists():continue
         with path.open(encoding='utf-8-sig',newline='') as handle:
             for row in csv.DictReader(handle):
-                player=norm(row.get('Player'))
+                player=canonical_player(row.get('Player'))
                 date=str(row.get('Date') or '').strip()
                 if not player or len(date)!=8 or not date.isdigit():continue
                 if season=='current' and date<'20261020':continue
@@ -66,7 +71,7 @@ def load_game_logs():
     return logs
 
 def add_game_analysis(signal,logs):
-    rows=logs.get(norm(signal.get('player')),[])
+    rows=logs.get(canonical_player(signal.get('player')),[])
     code=signal['market'];line=signal['line'];side=signal['side']
     def val(row):
         return sum(row[k] for k in ('PTS','REB','AST')) if code=='PRA' else row.get(code)
@@ -96,7 +101,7 @@ def add_game_analysis(signal,logs):
 
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
-    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0}
+    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0,"game_coverage":[]}
     key=os.getenv("PROPLINE_API_KEY","").strip()
     if not key:
         base["error"]="PROPLINE_API_KEY not configured in Render environment. No live picks shown."
@@ -107,7 +112,7 @@ def refresh():
         events=client.get_events("basketball_nba")
         model=projections();base["players"]=len({p for p,m in model})
         candidates=defaultdict(list)
-        raw_props=defaultdict(lambda: {"books":set(),"prices":{},"model":None})
+        raw_props=defaultdict(lambda: {"books":set(),"prices":{},"model":None,"raw_names":set()})
         upcoming=[]
         # Check every upcoming event in a bounded 36-hour window, not just
         # the first eight. The window prevents a provider's long-term event
@@ -173,7 +178,7 @@ def refresh():
                 game=f'{event.get("away_team", "Away")} @ {event.get("home_team", "Home")}'
                 for book in odds.get("bookmakers",[]):
                     bk=norm(book.get("key"))
-                    if not bk:continue
+                    if not bk or bk in {"prizepicks","underdog","pick6"}:continue
                     for market in book.get("markets",[]):
                         code=MARKETS.get(market.get("key"))
                         if not code or market.get("line_type")!="main":continue
@@ -181,10 +186,7 @@ def refresh():
                         if period not in {"","full","full_game","game"}:continue
                         for o in market.get("outcomes",[]):
                             if norm(o.get("name")) not in {"over","under"}:continue
-                            if bk=="prizepicks" and norm(o.get("dfs_odds_type"))!="standard":continue
-                            if bk=="underdog" and number(o.get("payout_multiplier"))!=1.0:continue
-                            if bk=="pick6" and norm(o.get("dfs_odds_type"))!="standard":continue
-                            line=number(o.get("point")); player=norm(o.get("description"))
+                            line=number(o.get("point")); player=canonical_player(o.get("description"))
                             if line is None or line<0.5 or not player:continue
                             side=norm(o.get("name"))
                             # Keep an independent, bounded browse-only inventory. These
@@ -192,9 +194,10 @@ def refresh():
                             inventory_key=(str(eid),player,code,side,line)
                             inv=raw_props[inventory_key]
                             inv["books"].add(bk)
+                            inv["raw_names"].add(str(o.get("description") or "").strip())
                             inv["prices"][bk]=o.get("price")
                             inv["game"]=game
-                            inv["player_name"]=str(o.get("description") or "").strip()
+                            inv["player_name"]= "Ace Bailey" if player=="ace bailey" else str(o.get("description") or "").strip()
                             inv["event_id"]=str(eid)
                             m=model.get((player,code))
                             if m is None:continue
@@ -245,18 +248,32 @@ def refresh():
             browse.append({"event_id":eid,"game":inv["game"],"player":m.get("ResolvedPlayer") if m else inv["player_name"],
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
-                           "books":books,"book_count":len(books),"qualified":(eid,player,code,side,line) in qualified_keys,
+                           "books":books,"book_count":len(books),"source_names":sorted(inv["raw_names"]),"qualified":(eid,player,code,side,line) in qualified_keys,
                            "model_status":"matched" if proj is not None else "unmatched"})
         browse.sort(key=lambda r:(r["game"],r["player"],r["market"],r["line"],r["side"]))
         base["game_props"]=browse[:5000]
         base["game_prop_rows"]=len(browse)
         base["game_props_truncated"]=len(browse)>5000
+        event_coverage=defaultdict(lambda:{"players":set(),"books":set(),"rows":0,"unmatched_players":set(),"aliases":defaultdict(set)})
+        for row in browse:
+            cov=event_coverage[row["event_id"]]
+            cov["players"].add(canonical_player(row["player"]))
+            cov["books"].update(row["books"])
+            cov["rows"]+=1
+            if row["model_status"]=="unmatched":cov["unmatched_players"].add(canonical_player(row["player"]))
+            for name in row["source_names"]:cov["aliases"][canonical_player(row["player"])].add(name)
+        base["game_coverage"]=[{"event_id":eid,"game":stat["game"],"status":stat["status"],
+            "players_with_lines":len(event_coverage[eid]["players"]),"captured_directions":event_coverage[eid]["rows"],
+            "sportsbooks":sorted(event_coverage[eid]["books"]),"sportsbook_count":len(event_coverage[eid]["books"]),
+            "players_without_model":len(event_coverage[eid]["unmatched_players"]),
+            "merged_aliases":{p:sorted(names) for p,names in event_coverage[eid]["aliases"].items() if len(names)>1}}
+            for eid,stat in event_stats.items()]
         logs=load_game_logs()
         # Descriptive game-log stats for browse-only lines, including nonqualifying props.
         # Compute once per player/market/side/line; preserve current projection logic.
         analysis_cache={}
         for row in base["game_props"]:
-            k=(norm(row["player"]),row["market"],row["side"],row["line"])
+            k=(canonical_player(row["player"]),row["market"],row["side"],row["line"])
             if k not in analysis_cache:
                 temp={"player":row["player"],"market":row["market"],"side":row["side"],"line":row["line"]}
                 add_game_analysis(temp,logs)
@@ -282,38 +299,6 @@ def board():
             _cache["until"]=time.monotonic()+(30 if _cache["result"].get("error") else 300)
         return _cache["result"]
 
-
-@app.get("/api/prizepicks")
-def prizepicks_snapshot():
-    """Separate research snapshot; never represent it as verified live PrizePicks odds."""
-    path=ROOT/"data"/"phase7b_prizepicks_latest.json"
-    if not path.exists():
-        return {"lines":[],"verified":False,"live":False,"error":"PrizePicks research snapshot not uploaded to data/phase7b_prizepicks_latest.json"}
-    try:
-        payload=json.loads(path.read_text(encoding="utf-8-sig"))
-        captured=datetime.fromisoformat(str(payload.get("generated_utc", "")).replace("Z","+00:00"))
-        age=(datetime.now(timezone.utc)-captured).total_seconds()
-        if age<0 or age>6*3600:
-            return {"lines":[],"verified":False,"live":False,"as_of":payload.get("generated_utc"),"error":"PrizePicks research snapshot is older than 6 hours or has an invalid future timestamp; refresh the source before displaying."}
-        lines=[]
-        for row in payload.get("lines",[]):
-            if not isinstance(row,dict) or row.get("source")!="Prop-Line / PrizePicks":continue
-            line=number(row.get("line"));proj=number(row.get("minutes_projection"))
-            if line is None or proj is None or line<=0:continue
-            tip=row.get("tipoff_utc")
-            try:
-                if datetime.fromisoformat(str(tip).replace("Z","+00:00"))<=datetime.now(timezone.utc):continue
-            except (TypeError,ValueError):continue
-            # A matching event/team roster has not yet been independently verified.
-            # Publish research comparisons only, not actionable verified picks.
-            lines.append({"player":row.get("player"),"team":row.get("team"),"market":row.get("market"),"line":line,
-                          "projection":round(proj,2),"direction":row.get("minutes_pick"),"tipoff_utc":tip,
-                          "captured_utc":row.get("captured_utc"),"source":row.get("source"),
-                          "verified":False,"research_only":True})
-        return {"lines":lines,"count":len(lines),"live":False,"verified":False,"as_of":payload.get("generated_utc"),
-                "warning":"Research-only Prop-Line / PrizePicks snapshot. Player/team mappings and availability are unverified. Not live odds or verified bets."}
-    except (OSError,ValueError,TypeError,KeyError) as exc:
-        return {"lines":[],"live":False,"verified":False,"error":f"Could not read PrizePicks snapshot ({type(exc).__name__})"}
 
 @app.get("/healthz")
 def health():return {"status":"ok"}
