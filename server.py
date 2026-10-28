@@ -34,6 +34,66 @@ def projections():
         result[(norm(r.get("ResolvedPlayer")),r.get("MarketCode"))]=r
     return result
 
+
+# Historical statistics are descriptive, not calibrated win probabilities.
+# The current-season source has no season-type or minutes field. To avoid
+# mixing preseason with regular-season stats, include only dates from
+# the first known regular-season week (Oct 20, 2026 onward).
+from functools import lru_cache
+
+@lru_cache(maxsize=1)
+def load_game_logs():
+    logs=defaultdict(list)
+    sources=[(ROOT/'data'/'nba_2026_27.csv','current'),
+             (ROOT/'data'/'propedge_historical_2025_26_minutes.csv','historical')]
+    for path,season in sources:
+        if not path.exists():continue
+        with path.open(encoding='utf-8-sig',newline='') as handle:
+            for row in csv.DictReader(handle):
+                player=norm(row.get('Player'))
+                date=str(row.get('Date') or '').strip()
+                if not player or len(date)!=8 or not date.isdigit():continue
+                if season=='current' and date<'20261020':continue
+                if season=='historical' and norm(row.get('Season Type'))!='regular':continue
+                values={k:number(row.get(k)) for k in ('PTS','REB','AST','3PM','MIN')}
+                if any(values[k] is None or values[k]<0 for k in ('PTS','REB','AST','3PM')):continue
+                logs[player].append({'date':date,'game_id':str(row.get('Game ID') or ''),
+                                     'team':row.get('Team') or '', 'season':season, **values})
+    for rows in logs.values():
+        # Most recent first; ignore duplicated player/game rows across sources.
+        rows.sort(key=lambda r:(r['date'],r['game_id']),reverse=True)
+        seen=set();rows[:]=[r for r in rows if not ((r['game_id'],r['date']) in seen or seen.add((r['game_id'],r['date'])))]
+    return logs
+
+def add_game_analysis(signal,logs):
+    rows=logs.get(norm(signal.get('player')),[])
+    code=signal['market'];line=signal['line'];side=signal['side']
+    def val(row):
+        return sum(row[k] for k in ('PTS','REB','AST')) if code=='PRA' else row.get(code)
+    def summarize(items):
+        values=[val(r) for r in items if val(r) is not None]
+        if not values:return {'games':0,'average':None,'hits':None,'hit_rate':None,'avg_minutes':None}
+        hits=sum((v>line if side=='OVER' else v<line) for v in values)
+        mins=[r['MIN'] for r in items if r['MIN'] is not None]
+        return {'games':len(values),'average':round(sum(values)/len(values),2),
+                'hits':hits,'hit_rate':round(100*hits/len(values),1),
+                'avg_minutes':round(sum(mins)/len(mins),1) if mins else None}
+    current=[r for r in rows if r['season']=='current']
+    historical=[r for r in rows if r['season']=='historical']
+    # Keep current-season and previous-season samples separate and explicit.
+    signal['analysis']={
+        'current':summarize(current),
+        'previous_season':summarize(historical),
+        'last5':summarize(rows[:5]),'last10':summarize(rows[:10]),'last20':summarize(rows[:20]),
+        'recent_games':[{'date':r['date'],'season':r['season'],'stat':val(r),'minutes':r['MIN']}
+                        for r in rows[:10]],
+        'sample_warning':('No regular-season current-year game logs available.' if not current else
+                          'Only '+str(len(current))+' current-season regular-season games available.' if len(current)<5 else None),
+        'minutes_warning':'Current-season source does not include minutes; displayed minute averages use historical records only.',
+        'note':'Historical hit rates are descriptive and not estimated probabilities or EV.'
+    }
+    return signal
+
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
     base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None}
@@ -140,6 +200,8 @@ def refresh():
             bk,o,game,m,proj,gap=q
             if gap<max(0.5,0.08*max(line,1)):continue
             signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+        logs=load_game_logs()
+        for signal in signals:add_game_analysis(signal,logs)
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals[:200],live=True,verified=(len(failures)==0))
         if failures:
