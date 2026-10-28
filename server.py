@@ -592,7 +592,18 @@ def model_performance():
     for market in ("PTS","REB","AST","3PM","PRA"):
         subset=[r for r in completed if r.get("market")==market]
         w=sum(r["status"]=="win" for r in subset);l=sum(r["status"]=="loss" for r in subset)
-        by_market[market]={"wins":w,"losses":l,"pushes":sum(r["status"]=="push" for r in subset),"hit_rate":round(100*w/(w+l),1) if w+l else None}
+        p=sum(r["status"]=="push" for r in subset)
+        valid=[r for r in subset if number(r.get("projection")) is not None and number(r.get("actual")) is not None]
+        mae=round(sum(abs(float(r["projection"])-float(r["actual"])) for r in valid)/len(valid),3) if valid else None
+        # Flat 1-unit bets at the saved pregame American price; pushes refund stake.
+        priced=[r for r in subset if number(r.get("odds")) is not None and abs(float(r["odds"]))>=100]
+        profit=sum((float(r["odds"])/100 if float(r["odds"])>0 else 100/abs(float(r["odds"]))) if r["status"]=="win" else (-1 if r["status"]=="loss" else 0) for r in priced)
+        by_market[market]={"captured":sum(r.get("market")==market for r in rows),
+            "graded":len(subset),"pending":sum(r.get("market")==market and r.get("status")=="pending" for r in rows),
+            "wins":w,"losses":l,"pushes":p,"hit_rate":round(100*w/(w+l),1) if w+l else None,
+            "mean_absolute_error":mae,"priced_graded":len(priced),
+            "flat_profit_units":round(profit,3) if priced else None,
+            "flat_roi_pct":round(100*profit/len(priced),1) if priced else None}
     # Distinct, date-scoped snapshots of the actual captured pregame picks.
     # Do not conflate this with historical experimental simulations.
     windows={}
@@ -616,7 +627,7 @@ def model_performance():
             "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
             "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
             "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
-            "by_market":by_market,"windows":windows,"recent":list(reversed(rows[-60:])),
+            "by_market":by_market,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
 # Supplemental injury/lineup research. Never infer a confirmed starter or silently
