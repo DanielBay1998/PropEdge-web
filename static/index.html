@@ -515,7 +515,7 @@ function attach(container){container.querySelectorAll('[data-card]').forEach(el=
 
 function americanOdds(value){
  const str=String(value??'').trim().replace(/,/g,'');
- if(!/^[+-]?\\d+(?:\\.0+)?$/.test(str))return null;
+ if(!/^[+-]?\d+(?:\.0+)?$/.test(str))return null;
  const n=Number(str);return Number.isInteger(n)&&Math.abs(n)>=100&&Math.abs(n)<=3000?n:null;
 }
 function decimalOdds(n){return n>0?1+n/100:1+100/Math.abs(n)}
