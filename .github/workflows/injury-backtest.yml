@@ -1,0 +1,47 @@
+name: Historical injury backfill and audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'backfill_historical_nba.py'
+      - 'backtest_injuries.py'
+      - '.github/workflows/injury-backtest.yml'
+permissions:
+  contents: write
+concurrency:
+  group: historical-injury-backfill
+  cancel-in-progress: false
+jobs:
+  backfill-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download historical NBA game logs
+        run: python backfill_historical_nba.py
+      - name: Run walk-forward injury audit
+        run: |
+          mkdir -p data
+          python backtest_injuries.py > data/injury_backtest_results.json
+          cat data/injury_backtest_results.json
+      - name: Commit data and results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/propedge_historical_2025_26_minutes.csv data/injury_backtest_results.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Backfill 2025-26 game logs and record injury audit"
+            git push
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: injury-audit-results
+          path: |
+            data/injury_backtest_results.json
+            data/propedge_historical_2025_26_minutes.csv
+          if-no-files-found: ignore
