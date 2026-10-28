@@ -36,6 +36,13 @@ jobs:
             --research model/reports/release3/research_projection_comparison.csv \
             --candidate website/data/propedge_candidate_projections.csv \
             --report website/reports/candidate_review.csv
+      - name: Reconcile ESPN identities (read-only)
+        run: |
+          python website/propedge_identity_reconcile.py \
+            --production website/data/propedge_shadow_projections.csv \
+            --research model/reports/release3/research_projection_comparison.csv \
+            --output website/reports/identity_reconciliation.csv \
+            --summary website/reports/identity_reconciliation_summary.json
       - name: Validate against website production (dry run only)
         run: |
           printf 'ResolvedPlayer,MarketCode,ESPNPlayerID,ExpectedOldProjection,ApprovedNewProjection,Reviewer,ReviewDate,IdentityEvidence\n' > /tmp/propedge_no_approvals.csv
@@ -51,6 +58,8 @@ jobs:
           path: |
             model/reports/
             website/reports/candidate_review.csv
+            website/reports/identity_reconciliation.csv
+            website/reports/identity_reconciliation_summary.json
             website/data/propedge_candidate_projections.csv
           if-no-files-found: warn
           retention-days: 14
