@@ -468,6 +468,45 @@ def model_performance():
             "by_market":by_market,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
+# Supplemental injury/lineup research. Never infer a confirmed starter or silently
+# change projections based on a feed that may be missing or stale.
+_injury_cache={"until":0,"data":None}
+@app.get("/api/availability")
+def availability_context():
+    import urllib.request
+    now=time.time()
+    if _injury_cache["data"] is not None and now<_injury_cache["until"]:
+        return _injury_cache["data"]
+    result={"source":"ESPN NBA injury report","checked_at":datetime.now(timezone.utc).isoformat(),
+            "injuries":[],"injury_feed_status":"unavailable",
+            "lineups":[],"lineup_feed_status":"not_connected",
+            "note":"Injury designations are informational and may change. Starting lineups are not confirmed by this feed. Model projections and qualification rules are unchanged."}
+    try:
+        request=urllib.request.Request("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/injuries",headers={"User-Agent":"PropEdge/1.0"})
+        with urllib.request.urlopen(request,timeout=8) as response:
+            payload=json.load(response)
+        teams=payload.get("injuries") if isinstance(payload,dict) else None
+        if isinstance(teams,list):
+            entries=[]
+            for team in teams:
+                if not isinstance(team,dict):continue
+                teamname=(team.get("team") or {}).get("displayName") if isinstance(team.get("team"),dict) else str(team.get("displayName") or "")
+                for item in (team.get("injuries") or []):
+                    if not isinstance(item,dict):continue
+                    athlete=item.get("athlete") or {}
+                    if not isinstance(athlete,dict):athlete={}
+                    player=athlete.get("displayName") or item.get("name")
+                    if not player:continue
+                    entries.append({"player":str(player),"team":str(teamname or ""),"status":str(item.get("status") or "Not specified"),
+                                    "detail":str((item.get("details") or {}).get("detail") or "") if isinstance(item.get("details"),dict) else "",
+                                    "source":"ESPN"})
+            result["injuries"]=entries
+            result["injury_feed_status"]="available"
+    except Exception:
+        pass
+    _injury_cache.update(until=now+600,data=result)
+    return result
+
 @app.get("/api/board")
 def board():
     with _lock:
