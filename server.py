@@ -259,3 +259,38 @@ def health():return {"status":"ok"}
 
 @app.get("/")
 def home():return HTMLResponse((ROOT/"static"/"index.html").read_text(encoding="utf-8"))
+
+
+# Optional player portraits from ESPN NBA team rosters. Failure never affects live picks.
+_headshot_cache={"until":0,"headshots":{}}
+@app.get("/api/headshots")
+def headshots():
+    import urllib.request
+    from concurrent.futures import ThreadPoolExecutor
+    now=time.monotonic()
+    if now<_headshot_cache["until"]:return {"headshots":_headshot_cache["headshots"]}
+    team_ids=["atl","bos","bkn","cha","chi","cle","dal","den","det","gs","hou","ind","lac","lal","mem","mia","mil","min","no","ny","okc","orl","phi","phx","por","sac","sa","tor","utah","wsh"]
+    def get_roster(team):
+        url=f"https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{team}/roster"
+        try:
+            req=urllib.request.Request(url,headers={"User-Agent":"PropEdge/2.0"})
+            with urllib.request.urlopen(req,timeout=3) as res: payload=json.load(res)
+            athletes=payload.get("athletes",[])
+            if isinstance(athletes,dict):athletes=list(athletes.values())
+            output={}
+            for a in athletes:
+                if isinstance(a,dict) and "items" in a: entries=a["items"]
+                elif isinstance(a,list):entries=a
+                else:entries=[a]
+                for p in entries:
+                    if not isinstance(p,dict):continue
+                    name=p.get("displayName") or p.get("fullName")
+                    photo=(p.get("headshot") or {}).get("href")
+                    if name and photo and photo.startswith("https://"):output[name.casefold()]=photo
+            return output
+        except Exception:return {}
+    result={}
+    with ThreadPoolExecutor(max_workers=12) as pool:
+        for chunk in pool.map(get_roster,team_ids):result.update(chunk)
+    _headshot_cache.update(until=time.monotonic()+21600,headshots=result)
+    return {"headshots":result}
