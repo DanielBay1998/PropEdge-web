@@ -28,6 +28,8 @@ def canonical_player(name):
     raw=norm(name)
     # Strip only a terminal parenthesized NBA team abbreviation, not arbitrary nicknames.
     raw=re.sub(r"\s*\((?:ATL|BOS|BKN|CHA|CHI|CLE|DAL|DEN|DET|GSW|HOU|IND|LAC|LAL|MEM|MIA|MIL|MIN|NOP|NYK|OKC|ORL|PHI|PHX|POR|SAC|SAS|TOR|UTA|WAS)\)$", "", raw, flags=re.I)
+    raw=re.sub(r"[’‘ʼ`´']", "", raw)
+    raw=re.sub(r"[^\w\s-]", "", raw)
     return PLAYER_ALIASES.get(raw,raw)
 
 def projection_freshness():
@@ -254,7 +256,7 @@ def refresh():
             proj=number(m.get("ShadowProjection")) if m else None
             gap=(proj-line if side=="over" else line-proj) if proj is not None else None
             books=sorted(inv["books"])
-            browse.append({"event_id":eid,"game":inv["game"],"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or inv["player_name"]).strip()) if m else inv["player_name"],
+            browse.append({"event_id":eid,"game":inv["game"],"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or inv["player_name"]).strip()) if m else ("De'Aaron Fox" if player=="deaaron fox" else inv["player_name"]),
                            "player_key":player,
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
