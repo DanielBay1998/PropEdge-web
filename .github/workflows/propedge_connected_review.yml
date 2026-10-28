@@ -1,0 +1,56 @@
+name: PropEdge Connected Research and Website Review
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 15 * * *'
+permissions:
+  contents: read
+jobs:
+  connected-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+        with:
+          path: website
+      - name: Checkout private model repository
+        uses: actions/checkout@v4
+        with:
+          repository: DanielBay1998/Prop-
+          token: ${{ secrets.PROPEDGE_MODEL_REPO_TOKEN }}
+          ref: main
+          path: model
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install model dependencies
+        run: python -m pip install pandas numpy requests
+      - name: Generate research and reviews (no publishing)
+        working-directory: model
+        run: python propedge_daily_pipeline.py
+      - name: Build unchanged website candidate and review report
+        run: |
+          python website/propedge_build_review_candidate.py \
+            --production website/data/propedge_shadow_projections.csv \
+            --research model/reports/release3/research_projection_comparison.csv \
+            --candidate website/data/propedge_candidate_projections.csv \
+            --report website/reports/candidate_review.csv
+      - name: Validate against website production (dry run only)
+        run: |
+          printf 'ResolvedPlayer,MarketCode,ESPNPlayerID,ExpectedOldProjection,ApprovedNewProjection,Reviewer,ReviewDate,IdentityEvidence\n' > /tmp/propedge_no_approvals.csv
+          python website/propedge_guarded_publish.py \
+            --production website/data/propedge_shadow_projections.csv \
+            --candidate website/data/propedge_candidate_projections.csv \
+            --approvals /tmp/propedge_no_approvals.csv
+      - name: Upload reports even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: propedge-connected-review
+          path: |
+            model/reports/
+            website/reports/candidate_review.csv
+            website/data/propedge_candidate_projections.csv
+          if-no-files-found: warn
+          retention-days: 14
