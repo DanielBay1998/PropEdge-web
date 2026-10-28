@@ -302,6 +302,42 @@ def refresh():
             if gap<max(0.5,0.08*max(line,1)):continue
             event_stats[str(eid)]["qualified_signals"]+=1
             signals.append({"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or "").strip()),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+        # Availability guardrail: a reported OUT player is not an actionable pick.
+        # Questionable/doubtful/probable statuses remain visible with warnings.
+        # Never adjust statistical projections from an uncalibrated injury assumption.
+        try:
+            availability=availability_context()
+            report=availability.get("injuries",[]) if availability.get("injury_feed_status")=="available" else []
+        except Exception:
+            availability={"injury_feed_status":"unavailable","lineup_feed_status":"not_connected"}
+            report=[]
+        injury_by_player=defaultdict(list)
+        for injury in report:
+            injury_by_player[canonical_player(injury.get("player"))].append(injury)
+        def injury_for(player,game):
+            entries=injury_by_player.get(canonical_player(player),[])
+            teams=str(game or "").split(" @ ")
+            if len(teams)!=2:return None
+            # Use exact canonical player names only, plus game team validation
+            # to avoid applying a same-name injury from a different team.
+            return next((i for i in entries if norm(i.get("team")) in {norm(teams[0]),norm(teams[1])}),None)
+        def attach_availability(row):
+            report_row=injury_for(row.get("player"),row.get("game"))
+            status=str(report_row.get("status") or "") if report_row else ""
+            row["injury_status"]=status or None
+            row["injury_source"]="ESPN" if report_row else None
+            row["lineup_status"]="not_verified"
+            row["availability_checked_at"]=availability.get("checked_at")
+            row["availability_warning"]=("Reported out; excluded from qualifying picks" if status.casefold()=="out" else
+                                         "Reported "+status+"; availability requires confirmation" if status else
+                                         "No injury entry returned; availability not independently verified")
+            return row
+        for signal in signals:attach_availability(signal)
+        excluded=[r for r in signals if (r.get("injury_status") or "").casefold()=="out"]
+        signals=[r for r in signals if (r.get("injury_status") or "").casefold()!="out"]
+        base["injury_excluded_signals"]=len(excluded)
+        base["injury_feed_status"]=availability.get("injury_feed_status")
+        base["lineup_feed_status"]="not_connected"
         # Browse-only rows: one per event/player/market/side/line, including
         # unmatched players and single-book quotes. Never promote to Top Picks.
         qualified_keys={(str(x["event_id"]),canonical_player(x["player"]),x["market"],norm(x["side"]),x["line"]) for x in signals}
@@ -333,6 +369,11 @@ def refresh():
                                "Model edge below 8% of line or 0.5 minimum" if gap is not None and gap<max(0.5,0.08*max(line,1)) else
                                "Not qualified; check source validation"),
                            "required_edge":round(max(0.5,0.08*max(line,1)),2)})
+        for row in browse:
+            attach_availability(row)
+            if (row.get("injury_status") or "").casefold()=="out":
+                row["qualified"]=False
+                row["qualification_reason"]="Reported OUT on injury feed; excluded from qualifying picks"
         browse.sort(key=lambda r:(r["game"],r["player"],r["market"],r["line"],r["side"]))
         # Fair event distribution: the old global 5,000-row slice could hide
         # later games entirely when earlier games had many alternate lines.
