@@ -45,6 +45,24 @@ def run(args):
                      'Change':round(candidate-prior,5) if np.isfinite(candidate) and np.isfinite(prior) else np.nan,
                      'CurrentGames':count,'Recent10Mean':recent,'LastGameDate':last,'Status':status})
     out=pd.DataFrame(rows)
+    # PRA must equal the sum of candidate PTS, REB and AST, when all four markets exist.
+    # Keep the baseline model untouched; this is an audit-only candidate.
+    wide=out.pivot(index='ResolvedPlayer',columns='MarketCode',values='CandidateProjection')
+    if {'PTS','REB','AST','PRA'}.issubset(wide.columns):
+        valid=wide[['PTS','REB','AST','PRA']].notna().all(axis=1)
+        sums=wide.loc[valid,['PTS','REB','AST']].sum(axis=1).round(5)
+        pra_mask=out['MarketCode'].eq('PRA') & out['ResolvedPlayer'].isin(sums.index)
+        out.loc[pra_mask,'CandidateProjection']=out.loc[pra_mask,'ResolvedPlayer'].map(sums)
+        out.loc[pra_mask,'Change']=(out.loc[pra_mask,'CandidateProjection']-out.loc[pra_mask,'PreviousProjection']).round(5)
+        out.loc[pra_mask,'Status']='PRA_RECONCILED_CANDIDATE'
+        # Report candidates exceeding the normal per-market movement cap; do not publish.
+        caps=out['PreviousProjection'].abs().mul(args.max_change_pct/100).clip(lower=1.0)
+        out['ExceedsChangeCap']=out['Change'].abs().gt(caps+0.00001)
+        check=out.pivot(index='ResolvedPlayer',columns='MarketCode',values='CandidateProjection')
+        delta=(check.loc[valid,'PRA']-check.loc[valid,['PTS','REB','AST']].sum(axis=1)).abs()
+        assert (delta<0.00002).all(),'PRA mismatch after reconciliation'
+    else:
+        out['ExceedsChangeCap']=False
     assert len(out)==len(base) and not out.duplicated(['ResolvedPlayer','MarketCode']).any()
     assert out.CandidateProjection.notna().sum()==base.ShadowProjection.notna().sum()
     assert (out.CandidateProjection.dropna()>=0).all()
