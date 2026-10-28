@@ -51,6 +51,11 @@
 .recent-bar-item>small{position:absolute;top:calc(100% + 5px);left:-8px;right:-8px;text-align:center;font-size:10px!important;line-height:13px!important;white-space:normal!important}
 .recent-threshold{transform:none!important;z-index:2!important}
 .recent-threshold span{bottom:auto!important;top:-17px;right:0;background:#102436;padding:1px 3px;font-size:10px!important;white-space:nowrap}
+/* Prevent line label from covering bar values; give the x-axis two readable rows. */
+.recent-threshold span{top:auto!important;bottom:3px!important;right:2px!important;background:#102436ee!important}
+.recent-bar-item>small{left:-3px!important;right:-3px!important;font-size:9px!important;line-height:14px!important}
+.recent-bar-chart{overflow:hidden}
+@media(max-width:390px){.recent-bars{gap:3px!important}.recent-bar-item>b{font-size:11px!important}.recent-bar-item>small{font-size:8px!important}}
 .side-quote .wheel{width:66px!important;height:66px!important;min-width:66px!important;min-height:66px!important;padding:6px!important;overflow:visible!important}
 .side-quote .wheelinside{overflow:visible!important}
 .side-quote .wheelinside strong{font-size:24px!important;line-height:1.1!important}
@@ -126,7 +131,7 @@ function marketPanel(market,items){
  // This is the most widely captured line, NOT the best price: inventory lacks comparable odds.
  const featured=sorted[0];
  const renderSide=(r,label)=>{if(!r)return `<div class="side-quote missing"><span>${label}</span><small>Not captured</small></div>`;const cls=r.qualified?'qualifying':Number(r.gap)>0?'favorable':'neutral';return `<div class="side-quote ${cls}"><span>${label}${r.qualified?' ★':''}</span><small>${r.projection==null?'No model':`Model ${escapeHTML(r.projection)} · gap ${escapeHTML(r.gap)}`}</small>${r.qualified?wheel(strength(r)):''}<small class="qualification-reason">${escapeHTML(r.qualification_reason|| (r.qualified?'Qualifies':'Reason unavailable'))}${!r.qualified&&r.required_edge!=null&&r.projection!=null?' · needs '+escapeHTML(r.required_edge)+' edge':''}</small></div>`};
- const recentStats=(e)=>{const r=e.over||e.under,a=r?.analysis;if(!a)return '<div class="recent-summary">Recent-game stats unavailable</div>';
+ const recentStats=(e)=>{const r=[e.over,e.under].find(x=>x?.analysis?.recent_games?.length)||e.over||e.under,a=r?.analysis;if(!a)return '<div class="recent-summary">Recent-game stats unavailable</div>';
  const avg=x=>x&&x.average!=null?Number(x.average).toFixed(1):'—';
  const rate=(x)=>x&&x.games?`${x.hits}/${x.games} (${x.hit_rate}%)`:'—';
  const games=(a.recent_games||[]).slice(0,5);
