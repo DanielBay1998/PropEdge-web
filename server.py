@@ -543,6 +543,19 @@ def model_coverage(player: str = ""):
             "captured_lines":len(browse),"odds_cache_as_of":refreshed,
             "note":"Captured lines are from the existing board cache only; no live odds refresh is triggered. Missing captured lines do not imply missing projections."}
 
+@app.get("/api/research-backtests")
+def research_backtests():
+    reports={}
+    for name,file in (("injury","injury_backtest_results.json"),
+                      ("minutes_usage","minutes_usage_backtest_results.json")):
+        try:
+            path=ROOT/"data"/file
+            reports[name]=json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+        except (OSError,ValueError):
+            reports[name]=None
+    return {"reports":reports,"production_model_affected":False,
+            "note":"Retrospective research uses absence proxies and trailing averages, not saved production model predictions."}
+
 @app.get("/api/model-performance")
 def model_performance():
     path=ROOT/"data"/"model_tracking.json"
@@ -558,11 +571,30 @@ def model_performance():
         subset=[r for r in completed if r.get("market")==market]
         w=sum(r["status"]=="win" for r in subset);l=sum(r["status"]=="loss" for r in subset)
         by_market[market]={"wins":w,"losses":l,"pushes":sum(r["status"]=="push" for r in subset),"hit_rate":round(100*w/(w+l),1) if w+l else None}
+    # Distinct, date-scoped snapshots of the actual captured pregame picks.
+    # Do not conflate this with historical experimental simulations.
+    windows={}
+    now=datetime.now(timezone.utc)
+    for days in (7,30):
+        recent=[]
+        for r in rows:
+            try:
+                stamp=datetime.fromisoformat(str(r.get("captured_at","")).replace("Z","+00:00"))
+                if stamp.tzinfo is None:stamp=stamp.replace(tzinfo=timezone.utc)
+                if now-timedelta(days=days)<=stamp<=now:recent.append(r)
+            except (ValueError,TypeError):continue
+        graded=[r for r in recent if r.get("status") in ("win","loss","push")]
+        w=sum(r.get("status")=="win" for r in graded)
+        l=sum(r.get("status")=="loss" for r in graded)
+        windows[str(days)]={"captured":len(recent),"graded":len(graded),
+                            "pending":sum(r.get("status")=="pending" for r in recent),
+                            "wins":w,"losses":l,"pushes":sum(r.get("status")=="push" for r in graded),
+                            "hit_rate":round(100*w/(w+l),1) if w+l else None}
     return {"total_captured":len(rows),"pending":sum(r.get("status")=="pending" for r in rows),
             "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
             "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
             "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
-            "by_market":by_market,"recent":list(reversed(rows[-60:])),
+            "by_market":by_market,"windows":windows,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
 # Supplemental injury/lineup research. Never infer a confirmed starter or silently
