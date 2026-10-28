@@ -96,7 +96,7 @@ def add_game_analysis(signal,logs):
 
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
-    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None}
+    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0}
     key=os.getenv("PROPLINE_API_KEY","").strip()
     if not key:
         base["error"]="PROPLINE_API_KEY not configured in Render environment. No live picks shown."
@@ -124,6 +124,7 @@ def refresh():
         # Bound the first-pass refresh to the next 8 eligible games.
         # Avoid requesting odds sequentially for an entire provider event archive.
         upcoming=sorted(upcoming,key=lambda e: str(e.get("commence_time") or e.get("start_time") or "9999"))[:8]
+        event_stats={str(e["id"]):{"event_id":str(e["id"]),"game":f'{e.get("away_team", "Away")} @ {e.get("home_team", "Home")}',"status":"pending","matched_model_quotes":0,"candidate_groups":0,"qualified_signals":0} for e in upcoming}
         base["events_checked"]=len(upcoming)
         def fetch(event):
             # Retry only the failed event once, rather than repeating all games.
@@ -147,9 +148,11 @@ def refresh():
                 try:
                     odds=task.result()
                     successful+=1
+                    event_stats[str(eid)]["status"]="checked"
                 except Exception as exc:
                     failures.append(type(exc).__name__)
                     failed_event_ids.append(eid)
+                    event_stats[str(eid)]["status"]="odds_request_failed"
                     logging.warning("Live odds failed for event %s: %s",eid,type(exc).__name__)
                     continue
                 game=f'{event.get("away_team", "Away")} @ {event.get("home_team", "Home")}'
@@ -177,6 +180,7 @@ def refresh():
                             if gap<=0:continue
                             candidates[(eid,player,code,side,line)].append((bk,o,game,m,proj,gap))
                             base["quotes"]+=1
+                            event_stats[str(eid)]["matched_model_quotes"]+=1
         base["events_succeeded"]=successful
         base["events_failed"]=len(failures)
         base["failure_types"]=sorted(set(failures))
@@ -190,6 +194,7 @@ def refresh():
             return base
         signals=[]
         for (eid,player,code,side,line),quotes in candidates.items():
+            event_stats[str(eid)]["candidate_groups"]+=1
             distinct={q[0] for q in quotes}
             # Two independent books must quote the exact same standard main line.
             # DFS platforms are not counted as independent sportsbook confirmations.
@@ -199,11 +204,12 @@ def refresh():
             q=next((q for q in quotes if q[0] in sportsbooks),quotes[0])
             bk,o,game,m,proj,gap=q
             if gap<max(0.5,0.08*max(line,1)):continue
+            event_stats[str(eid)]["qualified_signals"]+=1
             signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
         logs=load_game_logs()
         for signal in signals:add_game_analysis(signal,logs)
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
-        base.update(signals=signals[:200],live=True,verified=(len(failures)==0))
+        base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0))
         if failures:
             base["error"]=(f"Partial live feed: {successful} of {len(upcoming)} games succeeded. "
                            "Signals from successful games only; failed games excluded. "
