@@ -325,6 +325,29 @@ def refresh():
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
     return base
 
+@app.get("/api/model-coverage")
+def model_coverage(player: str = ""):
+    # Read-only diagnostics: no odds requests, model changes, or fabricated lines.
+    requested=canonical_player(player)
+    if not requested or len(requested)>100:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=400,detail="Provide a player name (up to 100 characters)")
+    model=projections()
+    markets={code:round(number(row.get("ShadowProjection")),2)
+             for (name,code),row in model.items() if name==requested
+             and number(row.get("ShadowProjection")) is not None}
+    logs=load_game_logs().get(requested,[])
+    with _lock:
+        cached=_cache.get("result") or {}
+        browse=[r for r in cached.get("game_props",[]) if canonical_player(r.get("player"))==requested]
+        refreshed=cached.get("as_of") if cached else None
+    return {"player":player.strip(),"canonical_player":requested,
+            "modeled_markets":markets,"modeled_market_count":len(markets),
+            "current_season_game_logs":sum(r["season"]=="current" for r in logs),
+            "captured_markets":sorted(set(r["market"] for r in browse)),
+            "captured_lines":len(browse),"odds_cache_as_of":refreshed,
+            "note":"Captured lines are from the existing board cache only; no live odds refresh is triggered. Missing captured lines do not imply missing projections."}
+
 @app.get("/api/board")
 def board():
     with _lock:
