@@ -83,6 +83,27 @@ def load_game_logs():
         seen=set();rows[:]=[r for r in rows if not ((r['game_id'],r['date']) in seen or seen.add((r['game_id'],r['date'])))]
     return logs
 
+def early_sample_estimates(logs,model,min_games=3):
+    """Explicitly descriptive, non-validated estimates for missing model players.
+
+    These are recent regular-season sample means, never MODELED projections.
+    They cannot enter Top Picks or the qualification engine.
+    """
+    existing={name for name,market in model}
+    result={}
+    for player,rows in logs.items():
+        if player in existing:continue
+        current=[r for r in rows if r['season']=='current']
+        if len(current)<min_games:continue
+        recent=current[:5]
+        for code in ('PTS','REB','AST','3PM','PRA'):
+            def stat(r):return sum(r[k] for k in ('PTS','REB','AST')) if code=='PRA' else r[code]
+            vals=[stat(r) for r in recent]
+            if all(v is not None for v in vals):
+                result[(player,code)]={'estimate':round(sum(vals)/len(vals),2),
+                                      'games':len(recent),'latest_game_date':recent[0]['date']}
+    return result
+
 def add_game_analysis(signal,logs):
     rows=logs.get(canonical_player(signal.get('player')),[])
     code=signal['market'];line=signal['line'];side=signal['side']
@@ -124,6 +145,7 @@ def refresh():
         client=PropLine(key)
         events=client.get_events("basketball_nba")
         model=projections();base["players"]=len({p for p,m in model})
+        exploratory=early_sample_estimates(load_game_logs(),model)
         candidates=defaultdict(list)
         raw_props=defaultdict(lambda: {"books":set(),"prices":{},"model":None,"raw_names":set()})
         upcoming=[]
@@ -255,14 +277,18 @@ def refresh():
             m=model.get((player,code))
             proj=number(m.get("ShadowProjection")) if m else None
             gap=(proj-line if side=="over" else line-proj) if proj is not None else None
+            sample=exploratory.get((player,code)) if proj is None else None
             books=sorted(inv["books"])
             browse.append({"event_id":eid,"game":inv["game"],"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or inv["player_name"]).strip()) if m else ("De'Aaron Fox" if player=="deaaron fox" else inv["player_name"]),
                            "player_key":player,
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
                            "books":books,"book_count":len(books),"source_names":sorted(inv["raw_names"]),"qualified":(eid,player,code,side,line) in qualified_keys,
-                           "model_status":"matched" if proj is not None else "unmatched",
+                           "model_status":"matched" if proj is not None else "early_sample" if sample else "unmatched",
+                           "early_sample_estimate":sample["estimate"] if sample else None,
+                           "early_sample_games":sample["games"] if sample else None,
                            "qualification_reason":("Qualifies" if (eid,player,code,side,line) in qualified_keys else
+                               "Early-season average only; not a validated model or qualifying pick" if sample else
                                "No matching eligible model projection" if proj is None else
                                "Model favors the opposite direction" if gap is not None and gap<=0 else
                                "Fewer than 2 independent sportsbooks on this exact line" if len(books)<2 else
