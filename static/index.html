@@ -513,11 +513,7 @@ function changeDate(delta){selectedDateOffset=Math.max(-7,Math.min(7,delta));sch
 $('prevDate').onclick=()=>changeDate(selectedDateOffset-1);$('nextDate').onclick=()=>changeDate(selectedDateOffset+1);$('todayDate').onclick=()=>changeDate(0);$('tomorrowDate').onclick=()=>changeDate(1);
 function attach(container){container.querySelectorAll('[data-card]').forEach(el=>{function toggle(){const detail=el.querySelector('.detail');detail.classList.toggle('hidden');el.setAttribute('aria-expanded',String(!detail.classList.contains('hidden')))}el.addEventListener('click',toggle);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}})})}
 
-function americanOdds(value){
- const str=String(value??'').trim().replace(/,/g,'');
- if(!/^[+-]?\d+(?:\.0+)?$/.test(str))return null;
- const n=Number(str);return Number.isInteger(n)&&Math.abs(n)>=100&&Math.abs(n)<=3000?n:null;
-}
+function americanOdds(v){const n=Number(v);return Number.isInteger(n)&&Math.abs(n)>=100&&Math.abs(n)<=3000?n:null}
 function decimalOdds(n){return n>0?1+n/100:1+100/Math.abs(n)}
 function americanFromDecimal(d){return d>=2?Math.round((d-1)*100):-Math.round(100/(d-1))}
 function americanLabel(n){return n>0?'+'+n:String(n)}
@@ -526,7 +522,7 @@ function chooseDailyParlay(signals){
  for(const s of signals){
   if(s.verified!==true||!s.event_id||!s.game||!s.player||!['OVER','UNDER'].includes(s.side))continue;
   const odds=americanOdds(s.odds),score=strength(s);
-  if(odds===null||score===null||score<40||s.availability_status==='OUT')continue;
+  if(odds===null||score===null||score<40||String(s.availability_status||'').toUpperCase()==='OUT')continue;
   const book=String(s.book||'').trim();if(!book||/prizepicks|underdog|pick6/i.test(book))continue;
   if(!groups.has(book))groups.set(book,[]);
   groups.get(book).push({...s,parlayOdds:odds,parlayScore:score});
@@ -534,25 +530,21 @@ function chooseDailyParlay(signals){
  let best=null;
  for(const [book,entries] of groups){
   entries.sort((a,b)=>b.parlayScore-a.parlayScore||b.book_count-a.book_count);
-  // One player and one event per leg; avoid correlated same-game selections.
   const pool=entries.slice(0,16);
-  function search(start,legs,usedEvents,usedPlayers,decimal,scoreSum){
+  function search(start,legs,events,players,decimal,totalScore){
    if(legs.length>=3){
-    const american=americanFromDecimal(decimal);
-    const distance=Math.abs(Math.log(decimal/11));
-    const quality=scoreSum/legs.length;
-    const ranking=distance+Math.max(0,65-quality)*0.025;
+    const american=americanFromDecimal(decimal),quality=totalScore/legs.length;
+    const ranking=Math.abs(Math.log(decimal/11))+Math.max(0,65-quality)*0.025;
     if(american>=850&&american<=1250&&(!best||ranking<best.ranking))best={book,legs:[...legs],american,ranking,decimal};
    }
    if(legs.length===5||decimal>14)return;
    for(let i=start;i<pool.length;i++){
     const leg=pool[i],event=String(leg.event_id),player=String(leg.player).toLowerCase();
-    if(usedEvents.has(event)||usedPlayers.has(player))continue;
-    const next=decimal*decimalOdds(leg.parlayOdds);
-    if(next>14)continue;
-    usedEvents.add(event);usedPlayers.add(player);legs.push(leg);
-    search(i+1,legs,usedEvents,usedPlayers,next,scoreSum+leg.parlayScore);
-    legs.pop();usedEvents.delete(event);usedPlayers.delete(player);
+    if(events.has(event)||players.has(player))continue;
+    const next=decimal*decimalOdds(leg.parlayOdds);if(next>14)continue;
+    events.add(event);players.add(player);legs.push(leg);
+    search(i+1,legs,events,players,next,totalScore+leg.parlayScore);
+    legs.pop();events.delete(event);players.delete(player);
    }
   }
   search(0,[],new Set(),new Set(),1,0);
@@ -560,15 +552,22 @@ function chooseDailyParlay(signals){
  return best;
 }
 function renderDailyParlay(){
- const node=$('dailyParlay');if(!node)return;
+ const node=document.getElementById('dailyParlay');if(!node)return;
  const result=board.live&&!board.error?chooseDailyParlay(board.signals||[]):null;
  if(!result){
-  node.innerHTML='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER</div><div class="parlay-top"><h2>+1000 Parlay of the Day</h2></div><p class="parlay-muted">No qualifying same-sportsbook combination near +1000 is available right now. We will not fabricate legs, odds, or a guaranteed payout. Check back after live lines refresh.</p></div>';return;
+  node.innerHTML='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER</div><div class="parlay-top"><h2>+1000 Parlay of the Day</h2></div><p class="parlay-muted">No qualifying same-sportsbook combination near +1000 is available right now. We do not invent picks or odds. Check back after live lines refresh.</p></div>';return;
  }
  const legs=result.legs;
- node.innerHTML='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER · LIVE ODDS</div><div class="parlay-top"><div><h2>+1000 Parlay of the Day</h2><small class="parlay-muted">'+legs.length+' legs · '+escapeHTML(result.book)+' · one leg per game</small></div><span class="parlay-odds">'+americanLabel(result.american)+'</span></div><p class="parlay-muted">Closest qualifying combination to +1000 using current model-strength signals at one sportsbook. Not a predicted win probability or a guarantee.</p>'+
- legs.map(s=>'<div class="parlay-leg"><div><strong>'+escapeHTML(s.player)+'</strong><small>'+escapeHTML(s.game)+' · '+escapeHTML(s.side)+' '+escapeHTML(s.line)+' '+escapeHTML(s.market)+'</small><small>Model '+escapeHTML(s.projection)+' · Strength '+escapeHTML(s.parlayScore.toFixed(0))+'/100</small></div><b>'+americanLabel(s.parlayOdds)+'</b></div>').join('')+
- '<div class="parlay-footer"><small class="parlay-muted">Illustrative $10 profit: new Set();const picks=(board.signals||[]).filter(s=>(market==='ALL'||s.market===market)&&(selectedGame==='ALL'||s.game===selectedGame)&&passesSideFilters(s)).sort(compareSignals).filter(s=>{const key=canonicalDisplayName(s.player).toLowerCase();if(seen.has(key))return false;seen.add(key);return true}).slice(0,10);$('cards').innerHTML=picks.length?`<div class="top-picks-overview"><div><small>THE SHORTLIST / NBA</small><h2>Top model signals</h2><p>One featured signal per player · sorted by research strength</p></div><span>${picks.length} PLAYS</span></div><div class="top-picks-grid">`+picks.map(topPickCard).join('')+'</div>':'<p class="empty">No verified live model signals available.</p>';attachTopPicks();const q=$('search').value.toLowerCase();const all=(board.signals||[]).filter(s=>(s.player+' '+s.market+' '+s.game).toLowerCase().includes(q)&&passesSideFilters(s)&&(market==='ALL'||s.market===market)).sort(compareSignals).slice(0,100);$('allcards').innerHTML=all.length?all.map(card).join(''):'<p class="empty">No matching props.</p>';attach($('allcards'))}
+ const heading='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER · LIVE ODDS</div><div class="parlay-top"><div><h2>+1000 Parlay of the Day</h2><small class="parlay-muted">'+legs.length+' legs · '+escapeHTML(result.book)+' · one leg per game</small></div><span class="parlay-odds">'+americanLabel(result.american)+'</span></div><p class="parlay-muted">Closest qualifying combination to +1000 using current model signals at one sportsbook. Odds are not win probabilities.</p>';
+ const rows=legs.map(s=>'<div class="parlay-leg"><div><strong>'+escapeHTML(s.player)+'</strong><small>'+escapeHTML(s.game)+' · '+escapeHTML(s.side)+' '+escapeHTML(s.line)+' '+escapeHTML(s.market)+'</small><small>Model '+escapeHTML(s.projection)+' · Strength '+escapeHTML(s.parlayScore.toFixed(0))+'/100</small></div><b>'+americanLabel(s.parlayOdds)+'</b></div>').join('');
+ const footer='<div class="parlay-footer"><small class="parlay-muted">Illustrative $10 profit: $'+(10*(result.decimal-1)).toFixed(2)+' · Verify lines and player availability.</small><button type="button" class="parlay-copy" id="copyDailyParlay">Copy legs</button></div></div>';
+ node.innerHTML=heading+rows+footer;
+ document.getElementById('copyDailyParlay').onclick=()=>{
+  const lines=['PropEdge research parlay · '+result.book+' · '+americanLabel(result.american),...legs.map(s=>s.player+' '+s.side+' '+s.line+' '+s.market+' ('+americanLabel(s.parlayOdds)+')')];
+  navigator.clipboard.writeText(lines.join('\n')).then(()=>{document.getElementById('copyDailyParlay').textContent='Copied!'}).catch(()=>{document.getElementById('copyDailyParlay').textContent='Copy unavailable'});
+ };
+}
+function render(){renderDailyParlay();const seen=new Set();const picks=(board.signals||[]).filter(s=>(market==='ALL'||s.market===market)&&(selectedGame==='ALL'||s.game===selectedGame)&&passesSideFilters(s)).sort(compareSignals).filter(s=>{const key=canonicalDisplayName(s.player).toLowerCase();if(seen.has(key))return false;seen.add(key);return true}).slice(0,10);$('cards').innerHTML=picks.length?`<div class="top-picks-overview"><div><small>THE SHORTLIST / NBA</small><h2>Top model signals</h2><p>One featured signal per player · sorted by research strength</p></div><span>${picks.length} PLAYS</span></div><div class="top-picks-grid">`+picks.map(topPickCard).join('')+'</div>':'<p class="empty">No verified live model signals available.</p>';attachTopPicks();const q=$('search').value.toLowerCase();const all=(board.signals||[]).filter(s=>(s.player+' '+s.market+' '+s.game).toLowerCase().includes(q)&&passesSideFilters(s)&&(market==='ALL'||s.market===market)).sort(compareSignals).slice(0,100);$('allcards').innerHTML=all.length?all.map(card).join(''):'<p class="empty">No matching props.</p>';attach($('allcards'))}
 async function loadAvailability(){const node=$('availabilityContent');node.innerHTML='<p class="secondary">Loading tonight’s games and injury reports…</p>';try{const [ir,sr]=await Promise.all([fetch('/api/availability',{cache:'no-store'}),fetch('/api/schedule?offset=0',{cache:'no-store'}).catch(()=>null)]);if(!ir.ok)throw Error('injuries unavailable');const d=await ir.json();let games=(schedule&&Array.isArray(schedule.games)?schedule.games:[]);if(!games.length&&sr&&sr.ok){const sd=await sr.json();games=sd.games||[];}const injuries=d.injuries||[];const byTeam=t=>injuries.filter(r=>teamCode(r.team)===teamCode(t.name,t.abbreviation));const row=r=>`<div class="availability-row"><div><b>${escapeHTML(r.player)}</b><small>${escapeHTML(r.team)}</small></div><span>${escapeHTML(r.status)}</span></div>`;const renderTeam=t=>{const found=byTeam(t);return `<section class="injury-team"><h3>${escapeHTML(t.name)} <span>${found.length} reported</span></h3>${found.length?found.map(row).join(''):'<p class="injury-empty">No injury entries returned for this team. This does not confirm full availability.</p>'}</section>`};const gamesMarkup=games.map((g,i)=>{const count=byTeam(g.away).length+byTeam(g.home).length;return `<button class="injury-game-tab" data-injury-game="${i}"><span class="injury-game-name">${escapeHTML(g.away.abbreviation||g.away.name)} <em>vs</em> ${escapeHTML(g.home.abbreviation||g.home.name)}</span><span class="injury-game-count">${count} reported</span></button>`}).join('');node.innerHTML=`<div class="availability-header"><small>GAME DAY / NBA</small><h2>Injuries by matchup</h2><p>Select a game to see each team's reported injuries.</p></div><div class="availability-status"><b>Injury feed: ${escapeHTML(d.injury_feed_status)}</b><span>Checked ${escapeHTML((d.checked_at||'').replace('T',' ').slice(0,16))} UTC</span></div><div class="injury-game-tabs">${gamesMarkup||'<p class="secondary">Today’s schedule is unavailable.</p>'}</div><div id="injuryGameDetails"></div><div class="availability-lineups"><strong>Starting lineups: NOT VERIFIED</strong><p>No confirmed lineup provider is connected. Model projections are not adjusted using unverified lineups.</p></div><p class="tracking-disclaimer">${escapeHTML(d.note)} Verify official team reports before betting.</p>`;const detail=$('injuryGameDetails');const tabs=[...node.querySelectorAll('[data-injury-game]')];const select=i=>{tabs.forEach((t,j)=>t.classList.toggle('active',j===i));const g=games[i];detail.innerHTML=g?`<div class="injury-matchup-title">${escapeHTML(g.away.name)} @ ${escapeHTML(g.home.name)}</div>${renderTeam(g.away)}${renderTeam(g.home)}`:'';};tabs.forEach((t,i)=>t.onclick=()=>select(i));if(tabs.length)select(0);}catch(e){node.innerHTML='<p class="secondary">Game injury report is temporarily unavailable. No player availability is assumed.</p>';}}
 async function loadTracking(){const node=$('trackingContent');node.innerHTML='<p class="secondary">Loading model performance…</p>';try{const response=await fetch('/api/model-performance',{cache:'no-store'});if(!response.ok)throw Error('Unable to load performance');const d=await response.json();const fmt=v=>v===null||v===undefined?'—':v;const markets=['PTS','REB','AST','3PM','PRA'];node.innerHTML=`<div class="tracking-header"><small>THE SCORECARD / NBA</small><h2>Model performance</h2><p>Actual results from saved pregame predictions, not historical simulations.</p></div><div class="tracking-kpis"><div><small>RECORD</small><strong>${d.wins}-${d.losses}-${d.pushes}</strong></div><div><small>HIT RATE</small><strong>${fmt(d.hit_rate)}${d.hit_rate==null?'':'%'}</strong></div><div><small>AVG ERROR</small><strong>${fmt(d.mean_absolute_error)}</strong></div><div><small>PENDING</small><strong>${d.pending}</strong></div></div><h3>Live prediction windows</h3><div class="tracking-kpis">${[7,30].map(days=>{const w=(d.windows||{})[String(days)]||{};return '<div><small>LAST '+days+' DAYS</small><strong>'+(w.hit_rate==null?"—":escapeHTML(w.hit_rate)+"%")+'</strong><small>'+(w.wins||0)+'W · '+(w.losses||0)+'L · '+(w.pushes||0)+'P · '+(w.pending||0)+' pending</small></div>'}).join("")}</div><h3>By market</h3><div class="tracking-market-list">${markets.map(m=>{const r=d.by_market[m]||{};return `<div><b>${m}</b><span>${r.wins||0}W · ${r.losses||0}L · ${r.pushes||0}P</span><strong>${fmt(r.hit_rate)}${r.hit_rate==null?'':'%'}</strong></div>`}).join('')}</div><h3>Saved picks</h3><div class="tracking-picks">${d.recent.length?d.recent.map(r=>`<div class="tracking-pick"><span class="tracking-result ${escapeHTML(r.status)}">${escapeHTML(r.status.toUpperCase())}</span><div><b>${escapeHTML(r.player)}</b><small>${escapeHTML(r.side)} ${escapeHTML(r.line)} ${escapeHTML(r.market)} · Model ${escapeHTML(r.projection)} · Actual ${r.actual==null?'—':escapeHTML(r.actual)}</small><small>${escapeHTML(r.game||'')} · ${escapeHTML((r.captured_at||'').slice(0,10))}</small></div></div>`).join(''):'<p class="secondary">No pregame predictions captured yet. Tracking begins after the scheduled capture runs.</p>'}</div><p class="tracking-disclaimer">${escapeHTML(d.note)} Hit rate excludes pushes. Projection error is measured in each market’s stat units; combined error across markets is descriptive, not a single calibrated accuracy score. No ROI is claimed.</p><div id="trackingResearch"><p class="secondary">Loading historical research comparisons…</p></div>`;loadTrackingResearch();}catch(e){node.innerHTML='<p class="secondary">Tracking is temporarily unavailable. No results are assumed.</p>';}}
 async function loadTrackingResearch(){
