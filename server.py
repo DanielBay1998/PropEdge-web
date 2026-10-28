@@ -30,6 +30,14 @@ def canonical_player(name):
     raw=re.sub(r"\s*\((?:ATL|BOS|BKN|CHA|CHI|CLE|DAL|DEN|DET|GSW|HOU|IND|LAC|LAL|MEM|MIA|MIL|MIN|NOP|NYK|OKC|ORL|PHI|PHX|POR|SAC|SAS|TOR|UTA|WAS)\)$", "", raw, flags=re.I)
     return PLAYER_ALIASES.get(raw,raw)
 
+def projection_freshness():
+    paths={"projection_csv":ROOT/"data"/"propedge_shadow_projections.csv",
+           "current_game_logs":ROOT/"data"/"nba_2026_27.csv"}
+    output={}
+    for label,path in paths.items():
+        output[label]={"present":path.is_file(),"modified_utc":datetime.fromtimestamp(path.stat().st_mtime,timezone.utc).isoformat() if path.is_file() else None}
+    return output
+
 def projections():
     p=ROOT/"data"/"propedge_shadow_projections.csv"
     if not p.exists():return {}
@@ -104,7 +112,7 @@ def add_game_analysis(signal,logs):
 
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
-    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0,"game_coverage":[]}
+    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0,"game_coverage":[],"data_freshness":projection_freshness()}
     key=os.getenv("PROPLINE_API_KEY","").strip()
     if not key:
         base["error"]="PROPLINE_API_KEY not configured in Render environment. No live picks shown."
@@ -236,19 +244,18 @@ def refresh():
             bk,o,game,m,proj,gap=q
             if gap<max(0.5,0.08*max(line,1)):continue
             event_stats[str(eid)]["qualified_signals"]+=1
-            signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+            signals.append({"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or "").strip()),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
         # Browse-only rows: one per event/player/market/side/line, including
         # unmatched players and single-book quotes. Never promote to Top Picks.
-        qualified_keys={(str(eid),player,code,side,line) for (eid,player,code,side,line),qs in candidates.items()
-                        if any(x["event_id"]==eid and norm(x["player"])==player and x["market"]==code
-                               and norm(x["side"])==side and x["line"]==line for x in signals)}
+        qualified_keys={(str(x["event_id"]),canonical_player(x["player"]),x["market"],norm(x["side"]),x["line"]) for x in signals}
         browse=[]
         for (eid,player,code,side,line),inv in raw_props.items():
             m=model.get((player,code))
             proj=number(m.get("ShadowProjection")) if m else None
             gap=(proj-line if side=="over" else line-proj) if proj is not None else None
             books=sorted(inv["books"])
-            browse.append({"event_id":eid,"game":inv["game"],"player":m.get("ResolvedPlayer") if m else inv["player_name"],
+            browse.append({"event_id":eid,"game":inv["game"],"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or inv["player_name"]).strip()) if m else inv["player_name"],
+                           "player_key":player,
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
                            "books":books,"book_count":len(books),"source_names":sorted(inv["raw_names"]),"qualified":(eid,player,code,side,line) in qualified_keys,
@@ -261,9 +268,23 @@ def refresh():
                                "Not qualified; check source validation"),
                            "required_edge":round(max(0.5,0.08*max(line,1)),2)})
         browse.sort(key=lambda r:(r["game"],r["player"],r["market"],r["line"],r["side"]))
-        base["game_props"]=browse[:5000]
+        # Fair event distribution: the old global 5,000-row slice could hide
+        # later games entirely when earlier games had many alternate lines.
+        browse_by_event=defaultdict(list)
+        for row in browse:browse_by_event[row["event_id"]].append(row)
+        cap=5000; selected=[]
+        event_ids=sorted(browse_by_event)
+        while len(selected)<cap and event_ids:
+            remaining=[]
+            for event_id in event_ids:
+                if len(selected)>=cap:break
+                if browse_by_event[event_id]:
+                    selected.append(browse_by_event[event_id].pop(0))
+                if browse_by_event[event_id]:remaining.append(event_id)
+            event_ids=remaining
+        base["game_props"]=selected
         base["game_prop_rows"]=len(browse)
-        base["game_props_truncated"]=len(browse)>5000
+        base["game_props_truncated"]=len(browse)>cap
         event_coverage=defaultdict(lambda:{"players":set(),"books":set(),"rows":0,"unmatched_players":set(),"aliases":defaultdict(set)})
         for row in browse:
             cov=event_coverage[row["event_id"]]
@@ -276,6 +297,7 @@ def refresh():
             "players_with_lines":len(event_coverage[eid]["players"]),"captured_directions":event_coverage[eid]["rows"],
             "sportsbooks":sorted(event_coverage[eid]["books"]),"sportsbook_count":len(event_coverage[eid]["books"]),
             "players_without_model":len(event_coverage[eid]["unmatched_players"]),
+            "odds_request_succeeded":stat["status"]=="checked",
             "merged_aliases":{p:sorted(names) for p,names in event_coverage[eid]["aliases"].items() if len(names)>1}}
             for eid,stat in event_stats.items()]
         logs=load_game_logs()
