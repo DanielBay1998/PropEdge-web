@@ -325,6 +325,34 @@ def refresh():
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
     return base
 
+@app.get("/api/missing-model-coverage")
+def missing_model_coverage(limit: int = 100):
+    # Diagnostic only. Never invent projections or promote game averages to model picks.
+    from fastapi import HTTPException
+    if not 1 <= limit <= 500:
+        raise HTTPException(status_code=400,detail="limit must be between 1 and 500")
+    model=projections()
+    logs=load_game_logs()
+    modeled={name for name,code in model}
+    current_players={name for name,games in logs.items() if any(g["season"]=="current" for g in games)}
+    missing=[]
+    for name in sorted(current_players-modeled):
+        games=[g for g in logs[name] if g["season"]=="current"]
+        missing.append({"player":name,"current_season_games":len(games),
+                        "latest_game_date":max(g["date"] for g in games),
+                        "reason":"No MODELED projection for any market"})
+    missing.sort(key=lambda r:(-r["current_season_games"],r["player"]))
+    with _lock:
+        cached=_cache.get("result") or {}
+        captured={canonical_player(r.get("player")) for r in cached.get("game_props",[])}
+        as_of=cached.get("as_of")
+    for row in missing:
+        row["captured_in_cached_odds"]=row["player"] in captured
+    return {"modeled_players":len(modeled),"current_season_players":len(current_players),
+            "missing_model_players":len(missing),"missing":missing[:limit],
+            "odds_cache_as_of":as_of,
+            "note":"Read-only coverage audit. Current-season logs alone do not establish valid model projections; players are not added to picks until the projection pipeline produces validated MODELED rows."}
+
 @app.get("/api/model-coverage")
 def model_coverage(player: str = ""):
     # Read-only diagnostics: no odds requests, model changes, or fabricated lines.
