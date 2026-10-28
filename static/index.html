@@ -51,6 +51,9 @@
 .recent-bar-item>small{position:absolute;top:calc(100% + 5px);left:-8px;right:-8px;text-align:center;font-size:10px!important;line-height:13px!important;white-space:normal!important}
 .recent-threshold{transform:none!important;z-index:2!important}
 .recent-threshold span{bottom:auto!important;top:-17px;right:0;background:#102436;padding:1px 3px;font-size:10px!important;white-space:nowrap}
+.recent-bar-item.historical-game{background:rgba(228,189,108,.07);border:1px dashed rgba(228,189,108,.55);border-radius:7px}
+.recent-bar-item.historical-game>small{color:#e4bd6c!important}
+.recent-season-notice{display:block;margin:7px 2px;color:#e4bd6c;font-size:11px;line-height:1.35}
 /* Prevent line label from covering bar values; give the x-axis two readable rows. */
 .recent-threshold span{top:auto!important;bottom:3px!important;right:2px!important;background:#102436ee!important}
 .recent-bar-item>small{left:-3px!important;right:-3px!important;font-size:9px!important;line-height:14px!important}
@@ -140,16 +143,17 @@ function marketPanel(market,items){
   const valid=numeric.filter(n=>n!==null&&Number.isFinite(n));
   const max=Math.max(1,Number.isFinite(line)?line:0,...valid)*1.18;
   const readableDate=(g,i)=>{const raw=String(g.date||'');if(!/^\d{8}$/.test(raw))return `Game ${i+1}`;return `${Number(raw.slice(4,6))}/${Number(raw.slice(6,8))}/${raw.slice(2,4)}`};
+  const historicalCount=games.filter(g=>g.season==='historical').length;
   const results=games.map((g,i)=>{const n=numeric[i],ok=n!==null&&Number.isFinite(n),above=ok&&Number.isFinite(line)&&n>line,below=ok&&Number.isFinite(line)&&n<line;
   const pct=ok?Math.max(2,Math.min(100,n/max*100)):0;
   const label=readableDate(g,i);
   const season=g.season==='current'?'26–27':g.season==='historical'?'25–26':'Season ?';
-  return `<div class="recent-bar-item" title="${escapeHTML(label)} (${escapeHTML(season)}): ${ok?n:'unavailable'}"><b>${ok?escapeHTML(n):'—'}</b><div class="recent-bar-track"><div class="recent-bar-fill ${above?'above':below?'below':'push'}" style="height:${pct}%"></div></div><small>${escapeHTML(label)}<br>${escapeHTML(season)}</small></div>`;
+  return `<div class="recent-bar-item ${g.season===\'historical\'?\'historical-game\':\'\'}" title="${escapeHTML(label)} (${escapeHTML(season)}): ${ok?n:'unavailable'}"><b>${ok?escapeHTML(n):'—'}</b><div class="recent-bar-track"><div class="recent-bar-fill ${above?'above':below?'below':'push'}" style="height:${pct}%"></div></div><small>${escapeHTML(label)}<br>${escapeHTML(season)}</small></div>`;
   }).join('');
   const threshold=Number.isFinite(line)?`<div class="recent-threshold" style="bottom:calc(29px + (100% - 57px) * ${Math.min(100,line/max*100)/100})"><span>Line ${escapeHTML(e.line)}</span></div>`:'';
   const chart=games.length?`<div class="recent-bar-chart" role="img" aria-label="Recent game results compared with line ${escapeHTML(e.line)}"><div class="recent-plot">${threshold}<div class="recent-bars">${results}</div></div><div class="recent-legend"><span class="above-dot"></span> Above line <span class="below-dot"></span> Below line</div></div>`:'<span>Unavailable</span>';
  const over=e.over?.analysis,under=e.under?.analysis;
- return `<div class="recent-summary"><span><b>L5 avg</b> ${avg(a.last5)}</span><span><b>L10 avg</b> ${avg(a.last10)}</span><span><b>L10 OVER</b> ${rate(over?.last10)}</span><span><b>L10 UNDER</b> ${rate(under?.last10)}</span></div><div class="recent-results"><small>Last 5 game results · dates and seasons shown below bars</small>${chart}</div><small class="recent-note">${escapeHTML(a.sample_warning||'Historical results; not a win probability.')} ${escapeHTML(a.note||'')}</small>`;
+ return `<div class="recent-summary"><span><b>L5 avg</b> ${avg(a.last5)}</span><span><b>L10 avg</b> ${avg(a.last10)}</span><span><b>L10 OVER</b> ${rate(over?.last10)}</span><span><b>L10 UNDER</b> ${rate(under?.last10)}</span></div><div class="recent-results"><small>Last 5 game results · dates and seasons shown below bars</small>${chart}${historicalCount?`<small class="recent-season-notice">Gold dashed column = previous season (2025–26). ${historicalCount} of these ${games.length} results ${historicalCount===1?\'is\':\'are\'} historical, not current-season games.</small>`:\'\'}</div><small class="recent-note">${escapeHTML(a.sample_warning||'Historical results; not a win probability.')} ${escapeHTML(a.note||'')}</small>`;
  };
  const renderLine=(e,featuredLine=false)=>`<div class="paired-line"><div class="paired-heading"><b>Line ${escapeHTML(lineText(e.line))}</b>${featuredLine?'<span class="featured-tag">Most widely listed</span>':''}<small>${e.books.size} source${e.books.size===1?'':'s'}</small></div><div class="side-grid">${renderSide(e.over,'OVER')}${renderSide(e.under,'UNDER')}</div>${recentStats(e)}<details class="books-detail"><summary>Compare captured sources</summary><div>${escapeHTML([...e.books].sort().join(' · ')||'No source names')}</div><small>These are captured source names, not a price ranking. Odds were not included in this inventory.</small></details></div>`;
  return `<details class="market-panel" ${items.some(x=>x.qualified)?'open':''}><summary>${escapeHTML(marketLabels[market]||market)} <span>${sorted.length} line${sorted.length===1?'':'s'} · ${items.filter(x=>x.qualified).length} qualifying sides</span></summary>${featured?renderLine(featured,true):''}${sorted.length>1?`<details class="alternate-lines"><summary>Other lines (${sorted.length-1})</summary>${sorted.slice(1).map(e=>renderLine(e)).join('')}</details>`:''}</details>`;
