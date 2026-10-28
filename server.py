@@ -1,5 +1,5 @@
 from pathlib import Path
-import os,csv,math,time,threading
+import os,csv,math,time,threading,json
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
@@ -220,6 +220,39 @@ def board():
             _cache["result"]=refresh()
             _cache["until"]=time.monotonic()+(30 if _cache["result"].get("error") else 300)
         return _cache["result"]
+
+
+@app.get("/api/prizepicks")
+def prizepicks_snapshot():
+    """Separate research snapshot; never represent it as verified live PrizePicks odds."""
+    path=ROOT/"data"/"phase7b_prizepicks_latest.json"
+    if not path.exists():
+        return {"lines":[],"verified":False,"live":False,"error":"PrizePicks research snapshot not uploaded to data/phase7b_prizepicks_latest.json"}
+    try:
+        payload=json.loads(path.read_text(encoding="utf-8-sig"))
+        captured=datetime.fromisoformat(str(payload.get("generated_utc", "")).replace("Z","+00:00"))
+        age=(datetime.now(timezone.utc)-captured).total_seconds()
+        if age<0 or age>6*3600:
+            return {"lines":[],"verified":False,"live":False,"as_of":payload.get("generated_utc"),"error":"PrizePicks research snapshot is older than 6 hours or has an invalid future timestamp; refresh the source before displaying."}
+        lines=[]
+        for row in payload.get("lines",[]):
+            if not isinstance(row,dict) or row.get("source")!="Prop-Line / PrizePicks":continue
+            line=number(row.get("line"));proj=number(row.get("minutes_projection"))
+            if line is None or proj is None or line<=0:continue
+            tip=row.get("tipoff_utc")
+            try:
+                if datetime.fromisoformat(str(tip).replace("Z","+00:00"))<=datetime.now(timezone.utc):continue
+            except (TypeError,ValueError):continue
+            # A matching event/team roster has not yet been independently verified.
+            # Publish research comparisons only, not actionable verified picks.
+            lines.append({"player":row.get("player"),"team":row.get("team"),"market":row.get("market"),"line":line,
+                          "projection":round(proj,2),"direction":row.get("minutes_pick"),"tipoff_utc":tip,
+                          "captured_utc":row.get("captured_utc"),"source":row.get("source"),
+                          "verified":False,"research_only":True})
+        return {"lines":lines,"count":len(lines),"live":False,"verified":False,"as_of":payload.get("generated_utc"),
+                "warning":"Research-only Prop-Line / PrizePicks snapshot. Player/team mappings and availability are unverified. Not live odds or verified bets."}
+    except (OSError,ValueError,TypeError,KeyError) as exc:
+        return {"lines":[],"live":False,"verified":False,"error":f"Could not read PrizePicks snapshot ({type(exc).__name__})"}
 
 @app.get("/healthz")
 def health():return {"status":"ok"}
