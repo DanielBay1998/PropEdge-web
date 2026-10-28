@@ -533,8 +533,20 @@ def nba_games(date: str = ""):
             if not away or not home:continue
             def team(t):
                 x=t.get("team") or {}
-                return {"name":x.get("displayName") or x.get("name") or "Unknown", "abbreviation":x.get("abbreviation") or "", "logo":x.get("logo") or (x.get("logos") or [{}])[0].get("href") or "", "score":t.get("score")}
-            games.append({"id":event.get("id"),"date":event.get("date"),"away":team(away),"home":team(home),"status":((event.get("status") or {}).get("type") or {}).get("shortDetail") or "Scheduled", "state":((event.get("status") or {}).get("type") or {}).get("state") or "pre"})
+                return {"name":x.get("displayName") or x.get("name") or "Unknown", "abbreviation":x.get("abbreviation") or "", "logo":x.get("logo") or (x.get("logos") or [{}])[0].get("href") or "", "score":t.get("score"),"record":next((v.get("summary") for v in (t.get("records") or []) if v.get("type")=="total"),None) or next((v.get("summary") for v in (t.get("records") or []) if v.get("summary")),None)}
+            # Scoreboard odds are optional and may be absent or stale.
+            raw_odds=(comp.get("odds") or [])
+            quote=next((o for o in raw_odds if isinstance(o,dict) and not o.get("closed")),None)
+            if quote is None:quote=next((o for o in raw_odds if isinstance(o,dict)),None)
+            quote=quote or {}
+            def moneyline(side):
+                obj=quote.get(side+"TeamOdds") or {}
+                return obj.get("moneyLine") or obj.get("moneyline")
+            odds={"provider":(quote.get("provider") or {}).get("name") if isinstance(quote.get("provider"),dict) else None,
+                  "spread":quote.get("details"),"total":quote.get("overUnder"),
+                  "away_moneyline":moneyline("away"),"home_moneyline":moneyline("home"),
+                  "available":bool(quote)}
+            games.append({"id":event.get("id"),"date":event.get("date"),"away":team(away),"home":team(home),"odds":odds,"status":((event.get("status") or {}).get("type") or {}).get("shortDetail") or "Scheduled", "state":((event.get("status") or {}).get("type") or {}).get("state") or "pre"})
         result={"date":requested,"games":games,"source":"ESPN NBA scoreboard","as_of":datetime.now(timezone.utc).isoformat()}
         _schedule_cache.update({"until":now+180,"date":requested,"result":result})
         return result
