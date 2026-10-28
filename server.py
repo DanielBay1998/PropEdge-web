@@ -225,6 +225,8 @@ def refresh():
         upcoming=upcoming[:max_events]
         event_stats={str(e["id"]):{"event_id":str(e["id"]),"game":f'{e.get("away_team", "Away")} @ {e.get("home_team", "Home")}',"status":"pending","matched_model_quotes":0,"candidate_groups":0,"qualified_signals":0} for e in upcoming}
         base["events_checked"]=len(upcoming)
+        base["odds_fetch_mode"]="per_event_player_props"
+        base["refresh_interval_seconds"]=600
         def fetch(event):
             # Retry transient provider failures with bounded backoff and jitter.
             last_error=None
@@ -668,7 +670,10 @@ def board():
         if now>=_cache["until"]:
             _cache["result"]=refresh()
             limited=_rate_limit["until"]>time.monotonic()
-            _cache["until"]=time.monotonic()+(900 if limited else (120 if _cache["result"].get("error") else 300))
+            # Pro-capacity optimization: one server-wide full-slate refresh at most
+            # every 10 minutes, shared by every visitor and the tracking worker.
+            # On errors, avoid rapid polling that burns the daily request budget.
+            _cache["until"]=time.monotonic()+(900 if limited else (300 if _cache["result"].get("error") else 600))
         return _cache["result"]
 
 
