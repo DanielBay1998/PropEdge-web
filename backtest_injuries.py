@@ -29,6 +29,13 @@ def read_logs():
                 try:stats={k:float(r[k]) for k in ("PTS","REB","AST","3PM")}
                 except (ValueError,KeyError,TypeError):continue
                 if not all(math.isfinite(v) and v>=0 for v in stats.values()):continue
+                raw_min=str(r.get("MIN") or "").strip()
+                try:
+                    minutes=float(raw_min.split(":")[0])+float(raw_min.split(":")[1])/60 if ":" in raw_min else float(raw_min)
+                    if not math.isfinite(minutes) or minutes<=0:minutes=None
+                except (ValueError,TypeError,IndexError):
+                    minutes=None
+                stats["MIN"]=minutes
                 key=(date,str(r.get("Game ID") or ""),str(r.get("Team") or "").lower().strip())
                 if not key[1] or not key[2]:continue
                 data[key].append((str(r.get("Player") or "").lower().strip(),stats))
