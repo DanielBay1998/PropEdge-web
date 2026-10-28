@@ -446,6 +446,28 @@ def model_coverage(player: str = ""):
             "captured_lines":len(browse),"odds_cache_as_of":refreshed,
             "note":"Captured lines are from the existing board cache only; no live odds refresh is triggered. Missing captured lines do not imply missing projections."}
 
+@app.get("/api/model-performance")
+def model_performance():
+    path=ROOT/"data"/"model_tracking.json"
+    try:rows=json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    except (ValueError,OSError):rows=[]
+    completed=[r for r in rows if r.get("status") in ("win","loss","push")]
+    wins=sum(r["status"]=="win" for r in completed)
+    losses=sum(r["status"]=="loss" for r in completed)
+    pushes=sum(r["status"]=="push" for r in completed)
+    errors=[abs(float(r["projection"])-float(r["actual"])) for r in completed if number(r.get("projection")) is not None and number(r.get("actual")) is not None]
+    by_market={}
+    for market in ("PTS","REB","AST","3PM","PRA"):
+        subset=[r for r in completed if r.get("market")==market]
+        w=sum(r["status"]=="win" for r in subset);l=sum(r["status"]=="loss" for r in subset)
+        by_market[market]={"wins":w,"losses":l,"pushes":sum(r["status"]=="push" for r in subset),"hit_rate":round(100*w/(w+l),1) if w+l else None}
+    return {"total_captured":len(rows),"pending":sum(r.get("status")=="pending" for r in rows),
+            "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
+            "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
+            "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
+            "by_market":by_market,"recent":list(reversed(rows[-60:])),
+            "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
+
 @app.get("/api/board")
 def board():
     with _lock:
