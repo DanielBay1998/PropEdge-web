@@ -13,6 +13,13 @@ app=FastAPI(title="PropEdge Live Validated")
 app.mount("/static",StaticFiles(directory=str(ROOT/"static")),name="static")
 MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA"}
 _cache={"until":0,"result":None};_lock=threading.Lock()
+_rate_limit={"until":0,"failures":0}
+class ProviderRateLimited(Exception):pass
+
+def is_rate_limited(exc):
+    return ("ratelimit" in type(exc).__name__.lower() or
+            "rate limit" in str(exc).lower() or
+            "429" in str(exc))
 
 def number(value):
     try:
@@ -175,7 +182,11 @@ def refresh():
     try:
         from propline import PropLine
         client=PropLine(key)
-        events=client.get_events("basketball_nba")
+        try:
+            events=client.get_events("basketball_nba")
+        except Exception as exc:
+            if is_rate_limited(exc):raise ProviderRateLimited() from exc
+            raise
         model=projections();base["players"]=len({p for p,m in model})
         exploratory=early_sample_estimates(load_game_logs(),model)
         provisional=provisional_projections(load_game_logs(),model)
@@ -225,6 +236,7 @@ def refresh():
                         raise ValueError("Malformed odds response")
                     return response
                 except Exception as exc:
+                    if is_rate_limited(exc):raise ProviderRateLimited() from exc
                     last_error=exc
                     if attempt<3:time.sleep(min(9,2**attempt)+(hash(str(event["id"]))%4)*0.25)
             raise last_error
@@ -241,9 +253,12 @@ def refresh():
                     successful+=1
                     event_stats[str(eid)]["status"]="checked"
                 except Exception as exc:
-                    failures.append(type(exc).__name__)
+                    if isinstance(exc,ProviderRateLimited):
+                        failures.append("RateLimitError")
+                        _rate_limit["until"]=max(_rate_limit["until"],time.monotonic()+900)
+                    else:failures.append(type(exc).__name__)
                     failed_event_ids.append(eid)
-                    event_stats[str(eid)]["status"]="odds_request_failed"
+                    event_stats[str(eid)]["status"]="rate_limited" if isinstance(exc,ProviderRateLimited) else "odds_request_failed"
                     logging.warning("Live odds failed for event %s: %s",eid,type(exc).__name__)
                     continue
                 game=f'{event.get("away_team", "Away")} @ {event.get("home_team", "Home")}'
@@ -485,6 +500,8 @@ def refresh():
                            f"{base['events_skipped_by_cap']} events excluded by safety cap. "
                            "Signals from successful games only; coverage is incomplete.")
     except Exception as exc:
+        if isinstance(exc,ProviderRateLimited):
+            _rate_limit["until"]=max(_rate_limit["until"],time.monotonic()+900)
         # Fail closed: never substitute stale snapshots for live picks.
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
     return base
@@ -642,9 +659,16 @@ def availability_context():
 @app.get("/api/board")
 def board():
     with _lock:
-        if time.monotonic()>=_cache["until"]:
+        now=time.monotonic()
+        if now<_rate_limit["until"]:
+            if _cache["result"] is None or not _cache["result"].get("error"):
+                _cache["result"]={"signals":[],"live":False,"verified":False,"error":"Live odds provider rate limited; waiting for cooldown. No picks shown.","coverage":"unavailable"}
+            _cache["result"]["retry_after_seconds"]=int(_rate_limit["until"]-now)
+            return _cache["result"]
+        if now>=_cache["until"]:
             _cache["result"]=refresh()
-            _cache["until"]=time.monotonic()+(30 if _cache["result"].get("error") else 300)
+            limited=_rate_limit["until"]>time.monotonic()
+            _cache["until"]=time.monotonic()+(900 if limited else (120 if _cache["result"].get("error") else 300))
         return _cache["result"]
 
 
