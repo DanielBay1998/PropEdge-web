@@ -47,8 +47,7 @@ def evaluate(csv_path, player=None, min_games=3, prior_games=5):
                 for code in CODES:
                     baseline=sum(s[code] for s in recent)/len(recent)
                     if code=="PRA":
-                        model=sum((len(recent)*sum(s[k] for s in recent)/len(recent)+prior_games*priors[k])/(len(recent)+prior_games)
-                                  for k in ("PTS","REB","AST"))
+                        model=baseline
                     else:
                         model=(len(recent)*baseline+prior_games*priors[code])/(len(recent)+prior_games) if code=="3PM" else baseline
                     e=errors[code]
