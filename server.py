@@ -3,7 +3,7 @@ import os,csv,math,time,threading,json
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
-from datetime import datetime,timezone
+from datetime import datetime,timezone,timedelta
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -108,6 +108,11 @@ def refresh():
         model=projections();base["players"]=len({p for p,m in model})
         candidates=defaultdict(list)
         upcoming=[]
+        # Check every upcoming event in a bounded 36-hour window, not just
+        # the first eight. The window prevents a provider's long-term event
+        # archive from consuming API quota on every refresh.
+        cutoff=datetime.now(timezone.utc)+timedelta(hours=36)
+        skipped_outside_window=0
         for event in events:
             eid=event.get("id")
             if not eid:continue
@@ -118,12 +123,21 @@ def refresh():
             if commence:
                 try:
                     dt=datetime.fromisoformat(str(commence).replace("Z","+00:00"))
-                    if dt.tzinfo and dt<=datetime.now(timezone.utc):continue
+                    if dt.tzinfo:
+                        if dt<=datetime.now(timezone.utc):continue
+                        if dt>cutoff:
+                            skipped_outside_window+=1
+                            continue
                 except ValueError:continue
             upcoming.append(event)
-        # Bound the first-pass refresh to the next 8 eligible games.
-        # Avoid requesting odds sequentially for an entire provider event archive.
-        upcoming=sorted(upcoming,key=lambda e: str(e.get("commence_time") or e.get("start_time") or "9999"))[:8]
+        upcoming=sorted(upcoming,key=lambda e: str(e.get("commence_time") or e.get("start_time") or "9999"))
+        base["events_available_in_window"]=len(upcoming)
+        base["events_skipped_outside_window"]=skipped_outside_window
+        # Configurable safety ceiling, higher than a full NBA slate. Expose
+        # truncation explicitly so unchecked games aren't mislabeled.
+        max_events=max(8,min(60,int(os.getenv("PROPEDGE_MAX_ODDS_EVENTS","30"))))
+        base["events_skipped_by_cap"]=max(0,len(upcoming)-max_events)
+        upcoming=upcoming[:max_events]
         event_stats={str(e["id"]):{"event_id":str(e["id"]),"game":f'{e.get("away_team", "Away")} @ {e.get("home_team", "Home")}',"status":"pending","matched_model_quotes":0,"candidate_groups":0,"qualified_signals":0} for e in upcoming}
         base["events_checked"]=len(upcoming)
         def fetch(event):
@@ -140,7 +154,7 @@ def refresh():
         successful=0
         failures=[]
         failed_event_ids=[]
-        with ThreadPoolExecutor(max_workers=3) as pool:
+        with ThreadPoolExecutor(max_workers=4) as pool:
             tasks={pool.submit(fetch,event):event for event in upcoming}
             for task in as_completed(tasks):
                 event=tasks[task]
@@ -185,7 +199,7 @@ def refresh():
         base["events_failed"]=len(failures)
         base["failure_types"]=sorted(set(failures))
         base["failed_event_ids"]=failed_event_ids
-        base["coverage"]="partial" if failures else "complete"
+        base["coverage"]="partial" if failures or base["events_skipped_by_cap"] else "complete"
         if upcoming and successful==0:
             base["error"]="All live odds requests failed: "+", ".join(sorted(set(failures)))
             return base
@@ -209,11 +223,11 @@ def refresh():
         logs=load_game_logs()
         for signal in signals:add_game_analysis(signal,logs)
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
-        base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0))
-        if failures:
-            base["error"]=(f"Partial live feed: {successful} of {len(upcoming)} games succeeded. "
-                           "Signals from successful games only; failed games excluded. "
-                           "Coverage is incomplete.")
+        base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
+        if failures or base["events_skipped_by_cap"]:
+            base["error"]=(f"Partial live feed: {successful} of {len(upcoming)} games succeeded; "
+                           f"{base['events_skipped_by_cap']} events excluded by safety cap. "
+                           "Signals from successful games only; coverage is incomplete.")
     except Exception as exc:
         # Fail closed: never substitute stale snapshots for live picks.
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
