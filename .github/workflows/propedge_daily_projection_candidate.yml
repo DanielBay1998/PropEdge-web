@@ -1,0 +1,22 @@
+name: PropEdge Daily Projection Candidate Audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 12 * * *'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - name: Build safe candidate report (no production overwrite)
+        run: python propedge_daily_projection_candidate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: propedge-daily-projection-candidate
+          path: reports/projection_candidate_audit.csv
