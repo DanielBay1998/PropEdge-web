@@ -535,13 +535,13 @@ function chooseDailyParlay(signals){
    if(legs.length>=3){
     const american=americanFromDecimal(decimal),quality=totalScore/legs.length;
     const ranking=Math.abs(Math.log(decimal/11))+Math.max(0,65-quality)*0.025;
-    if(american>=850&&american<=1250&&(!best||ranking<best.ranking))best={book,legs:[...legs],american,ranking,decimal};
+    if(!best||ranking<best.ranking)best={book,legs:[...legs],american,ranking,decimal};
    }
-   if(legs.length===5||decimal>14)return;
+   if(legs.length===5||decimal>25)return;
    for(let i=start;i<pool.length;i++){
     const leg=pool[i],event=String(leg.event_id),player=String(leg.player).toLowerCase();
     if(events.has(event)||players.has(player))continue;
-    const next=decimal*decimalOdds(leg.parlayOdds);if(next>14)continue;
+    const next=decimal*decimalOdds(leg.parlayOdds);if(next>25)continue;
     events.add(event);players.add(player);legs.push(leg);
     search(i+1,legs,events,players,next,totalScore+leg.parlayScore);
     legs.pop();events.delete(event);players.delete(player);
@@ -555,10 +555,11 @@ function renderDailyParlay(){
  const node=document.getElementById('dailyParlay');if(!node)return;
  const result=board.live&&!board.error?chooseDailyParlay(board.signals||[]):null;
  if(!result){
-  node.innerHTML='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER</div><div class="parlay-top"><h2>+1000 Parlay of the Day</h2></div><p class="parlay-muted">No qualifying same-sportsbook combination near +1000 is available right now. We do not invent picks or odds. Check back after live lines refresh.</p></div>';return;
+  node.innerHTML='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER</div><div class="parlay-top"><h2>+1000 Parlay of the Day</h2></div><p class="parlay-muted">No valid three-game same-sportsbook combination is available right now. We do not invent picks or odds. Check back after live lines refresh.</p></div>';return;
  }
  const legs=result.legs;
- const heading='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER · LIVE ODDS</div><div class="parlay-top"><div><h2>+1000 Parlay of the Day</h2><small class="parlay-muted">'+legs.length+' legs · '+escapeHTML(result.book)+' · one leg per game</small></div><span class="parlay-odds">'+americanLabel(result.american)+'</span></div><p class="parlay-muted">Closest qualifying combination to +1000 using current model signals at one sportsbook. Odds are not win probabilities.</p>';
+ const approximate=result.american>=850&&result.american<=1250;
+ const heading='<div class="parlay-panel"><div class="parlay-eyebrow">DAILY MODEL BUILDER · LIVE ODDS'+(board.coverage==='partial'?' · PARTIAL SLATE':'')+'</div><div class="parlay-top"><div><h2>+1000 Parlay of the Day</h2><small class="parlay-muted">'+legs.length+' legs · '+escapeHTML(result.book)+' · one leg per game</small></div><span class="parlay-odds">'+americanLabel(result.american)+'</span></div><p class="parlay-muted">'+(approximate?'Target range achieved. ':'Closest available combination; target +1000 not reached. ')+(board.coverage==='partial'?'Some games have missing odds. ':'')+'Odds are not win probabilities.</p>';
  const rows=legs.map(s=>'<div class="parlay-leg"><div><strong>'+escapeHTML(s.player)+'</strong><small>'+escapeHTML(s.game)+' · '+escapeHTML(s.side)+' '+escapeHTML(s.line)+' '+escapeHTML(s.market)+'</small><small>Model '+escapeHTML(s.projection)+' · Strength '+escapeHTML(s.parlayScore.toFixed(0))+'/100</small></div><b>'+americanLabel(s.parlayOdds)+'</b></div>').join('');
  const footer='<div class="parlay-footer"><small class="parlay-muted">Illustrative $10 profit: $'+(10*(result.decimal-1)).toFixed(2)+' · Verify lines and player availability.</small><button type="button" class="parlay-copy" id="copyDailyParlay">Copy legs</button></div></div>';
  node.innerHTML=heading+rows+footer;

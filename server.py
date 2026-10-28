@@ -215,20 +215,23 @@ def refresh():
         event_stats={str(e["id"]):{"event_id":str(e["id"]),"game":f'{e.get("away_team", "Away")} @ {e.get("home_team", "Home")}',"status":"pending","matched_model_quotes":0,"candidate_groups":0,"qualified_signals":0} for e in upcoming}
         base["events_checked"]=len(upcoming)
         def fetch(event):
-            # Retry only the failed event once, rather than repeating all games.
+            # Retry transient provider failures with bounded backoff and jitter.
             last_error=None
-            for attempt in range(2):
+            for attempt in range(4):
                 try:
                     sdk=PropLine(key)
-                    return sdk.get_odds("basketball_nba",event_id=event["id"],markets=list(MARKETS))
+                    response=sdk.get_odds("basketball_nba",event_id=event["id"],markets=list(MARKETS))
+                    if not isinstance(response,dict) or not isinstance(response.get("bookmakers"),list):
+                        raise ValueError("Malformed odds response")
+                    return response
                 except Exception as exc:
                     last_error=exc
-                    if attempt==0:time.sleep(1)
+                    if attempt<3:time.sleep(min(9,2**attempt)+(hash(str(event["id"]))%4)*0.25)
             raise last_error
         successful=0
         failures=[]
         failed_event_ids=[]
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=2) as pool:
             tasks={pool.submit(fetch,event):event for event in upcoming}
             for task in as_completed(tasks):
                 event=tasks[task]
