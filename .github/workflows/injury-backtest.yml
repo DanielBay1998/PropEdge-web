@@ -7,6 +7,7 @@ on:
       - 'backfill_historical_nba.py'
       - 'backtest_injuries.py'
       - '.github/workflows/injury-backtest.yml'
+      - 'audit_minutes_usage.py'
 permissions:
   contents: write
 concurrency:
@@ -28,11 +29,13 @@ jobs:
           mkdir -p data
           python backtest_injuries.py > data/injury_backtest_results.json
           cat data/injury_backtest_results.json
+      - name: Evaluate historical minutes and usage research
+        run: python audit_minutes_usage.py > data/minutes_usage_backtest_results.json
       - name: Commit data and results
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/propedge_historical_2025_26_minutes.csv data/injury_backtest_results.json
+          git add data/propedge_historical_2025_26_minutes.csv data/injury_backtest_results.json data/minutes_usage_backtest_results.json
           if ! git diff --cached --quiet; then
             git commit -m "Backfill 2025-26 game logs and record injury audit"
             git push
@@ -43,5 +46,6 @@ jobs:
           name: injury-audit-results
           path: |
             data/injury_backtest_results.json
+            data/minutes_usage_backtest_results.json
             data/propedge_historical_2025_26_minutes.csv
           if-no-files-found: ignore
