@@ -3,7 +3,7 @@
 Run from GitHub Actions; repository commits preserve history across Render restarts.
 Never retroactively modify captured projection, line, or side.
 """
-import csv,json,urllib.request,datetime,os
+import csv,json,urllib.request,urllib.error,datetime,os,time
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"/"model_tracking.json"
@@ -14,8 +14,18 @@ def canonical(s):
 def today():return datetime.datetime.now(datetime.timezone.utc)
 def run():
  records=json.loads(DATA.read_text()) if DATA.exists() else []
- with urllib.request.urlopen(SITE+"/api/board",timeout=75) as resp: board=json.load(resp)
- if board.get("live") and not board.get("error"):
+ board=None
+ for attempt in range(5):
+  try:
+   req=urllib.request.Request(SITE+"/api/board",headers={"User-Agent":"PropEdge-ModelTracker/1.0","Cache-Control":"no-cache"})
+   with urllib.request.urlopen(req,timeout=90) as resp: board=json.load(resp)
+   if isinstance(board,dict) and board.get("live") and not board.get("error"):break
+   print("Board unavailable or not live; attempt",attempt+1,flush=True)
+  except (urllib.error.URLError,TimeoutError,ValueError) as exc:
+   print("Board fetch attempt",attempt+1,"failed:",type(exc).__name__,flush=True)
+  board=None
+  if attempt<4:time.sleep(15*(attempt+1))
+ if board and board.get("live") and not board.get("error"):
   for signal in board.get("signals",[]):
    event=str(signal.get("event_id") or "")
    market=str(signal.get("market") or "")
