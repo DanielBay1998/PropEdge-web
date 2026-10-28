@@ -96,7 +96,7 @@ def add_game_analysis(signal,logs):
 
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
-    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0}
+    base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0}
     key=os.getenv("PROPLINE_API_KEY","").strip()
     if not key:
         base["error"]="PROPLINE_API_KEY not configured in Render environment. No live picks shown."
@@ -107,6 +107,7 @@ def refresh():
         events=client.get_events("basketball_nba")
         model=projections();base["players"]=len({p for p,m in model})
         candidates=defaultdict(list)
+        raw_props=defaultdict(lambda: {"books":set(),"prices":{},"model":None})
         upcoming=[]
         # Check every upcoming event in a bounded 36-hour window, not just
         # the first eight. The window prevents a provider's long-term event
@@ -185,6 +186,15 @@ def refresh():
                             if bk=="pick6" and norm(o.get("dfs_odds_type"))!="standard":continue
                             line=number(o.get("point")); player=norm(o.get("description"))
                             if line is None or line<0.5 or not player:continue
+                            # Keep an independent, bounded browse-only inventory. These
+                            # lines are NOT qualifying signals and do not affect Top Picks.
+                            inventory_key=(str(eid),player,code,side,line)
+                            inv=raw_props[inventory_key]
+                            inv["books"].add(bk)
+                            inv["prices"][bk]=o.get("price")
+                            inv["game"]=game
+                            inv["player_name"]=str(o.get("description") or "").strip()
+                            inv["event_id"]=str(eid)
                             m=model.get((player,code))
                             if m is None:continue
                             proj=number(m.get("ShadowProjection"))
@@ -220,6 +230,26 @@ def refresh():
             if gap<max(0.5,0.08*max(line,1)):continue
             event_stats[str(eid)]["qualified_signals"]+=1
             signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+        # Browse-only rows: one per event/player/market/side/line, including
+        # unmatched players and single-book quotes. Never promote to Top Picks.
+        qualified_keys={(str(eid),player,code,side,line) for (eid,player,code,side,line),qs in candidates.items()
+                        if any(x["event_id"]==eid and norm(x["player"])==player and x["market"]==code
+                               and norm(x["side"])==side and x["line"]==line for x in signals)}
+        browse=[]
+        for (eid,player,code,side,line),inv in raw_props.items():
+            m=model.get((player,code))
+            proj=number(m.get("ShadowProjection")) if m else None
+            gap=(proj-line if side=="over" else line-proj) if proj is not None else None
+            books=sorted(inv["books"])
+            browse.append({"event_id":eid,"game":inv["game"],"player":m.get("ResolvedPlayer") if m else inv["player_name"],
+                           "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
+                           "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
+                           "books":books,"book_count":len(books),"qualified":(eid,player,code,side,line) in qualified_keys,
+                           "model_status":"matched" if proj is not None else "unmatched"})
+        browse.sort(key=lambda r:(r["game"],r["player"],r["market"],r["line"],r["side"]))
+        base["game_props"]=browse[:5000]
+        base["game_prop_rows"]=len(browse)
+        base["game_props_truncated"]=len(browse)>5000
         logs=load_game_logs()
         for signal in signals:add_game_analysis(signal,logs)
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
