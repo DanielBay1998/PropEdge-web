@@ -299,15 +299,27 @@ def headshots():
 # Complete NBA scoreboard independent of the qualifying prop board.
 _schedule_cache={"until":0,"date":None,"result":None}
 @app.get("/api/games")
-def nba_games():
+def nba_games(date: str = ""):
+    import re
+    from fastapi import HTTPException
+    if date and not re.fullmatch(r"\d{8}",date):
+        raise HTTPException(status_code=400,detail="Date must be YYYYMMDD")
     from zoneinfo import ZoneInfo
     from urllib.request import Request,urlopen
     from urllib.parse import urlencode
     today=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y%m%d")
+    requested=date or today
+    from datetime import datetime as _dt
+    if date:
+        try:
+            requested_day=_dt.strptime(date,"%Y%m%d").date()
+            local_day=_dt.strptime(today,"%Y%m%d").date()
+            if abs((requested_day-local_day).days)>7:raise ValueError("out of range")
+        except ValueError:raise HTTPException(status_code=400,detail="Date outside supported seven-day range")
     now=time.monotonic()
-    if _schedule_cache["date"]==today and now<_schedule_cache["until"]:
+    if _schedule_cache["date"]==requested and now<_schedule_cache["until"]:
         return _schedule_cache["result"]
-    url="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?"+urlencode({"dates":today,"limit":100})
+    url="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?"+urlencode({"dates":requested,"limit":100})
     try:
         with urlopen(Request(url,headers={"User-Agent":"PropEdge/2.2"}),timeout=8) as response:
             payload=json.load(response)
@@ -322,9 +334,9 @@ def nba_games():
                 x=t.get("team") or {}
                 return {"name":x.get("displayName") or x.get("name") or "Unknown", "abbreviation":x.get("abbreviation") or "", "logo":x.get("logo") or (x.get("logos") or [{}])[0].get("href") or "", "score":t.get("score")}
             games.append({"id":event.get("id"),"date":event.get("date"),"away":team(away),"home":team(home),"status":((event.get("status") or {}).get("type") or {}).get("shortDetail") or "Scheduled", "state":((event.get("status") or {}).get("type") or {}).get("state") or "pre"})
-        result={"date":today,"games":games,"source":"ESPN NBA scoreboard","as_of":datetime.now(timezone.utc).isoformat()}
-        _schedule_cache.update({"until":now+180,"date":today,"result":result})
+        result={"date":requested,"games":games,"source":"ESPN NBA scoreboard","as_of":datetime.now(timezone.utc).isoformat()}
+        _schedule_cache.update({"until":now+180,"date":requested,"result":result})
         return result
     except Exception as exc:
         # Never claim an incomplete model-signal list is the complete slate.
-        return {"date":today,"games":[],"error":"NBA schedule temporarily unavailable ("+type(exc).__name__+")","source":"ESPN NBA scoreboard"}
+        return {"date":requested,"games":[],"error":"NBA schedule temporarily unavailable ("+type(exc).__name__+")","source":"ESPN NBA scoreboard"}
