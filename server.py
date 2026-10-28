@@ -1,5 +1,5 @@
 from pathlib import Path
-import os,csv,math,time,threading,json
+import os,csv,math,time,threading,json,re
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
@@ -25,7 +25,10 @@ def norm(s):return " ".join(str(s or "").casefold().split())
 # Verified, narrowly scoped naming variants. Do not fuzzy-merge other players.
 PLAYER_ALIASES={"ace bailey (uta)":"ace bailey","airious bailey":"ace bailey","airious ace bailey":"ace bailey"}
 def canonical_player(name):
-    return PLAYER_ALIASES.get(norm(name),norm(name))
+    raw=norm(name)
+    # Strip only a terminal parenthesized NBA team abbreviation, not arbitrary nicknames.
+    raw=re.sub(r"\s*\((?:ATL|BOS|BKN|CHA|CHI|CLE|DAL|DEN|DET|GSW|HOU|IND|LAC|LAL|MEM|MIA|MIL|MIN|NOP|NYK|OKC|ORL|PHI|PHX|POR|SAC|SAS|TOR|UTA|WAS)\)$", "", raw, flags=re.I)
+    return PLAYER_ALIASES.get(raw,raw)
 
 def projections():
     p=ROOT/"data"/"propedge_shadow_projections.csv"
@@ -197,7 +200,7 @@ def refresh():
                             inv["raw_names"].add(str(o.get("description") or "").strip())
                             inv["prices"][bk]=o.get("price")
                             inv["game"]=game
-                            inv["player_name"]= "Ace Bailey" if player=="ace bailey" else str(o.get("description") or "").strip()
+                            inv["player_name"]= "Ace Bailey" if player=="ace bailey" else re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(o.get("description") or "").strip())
                             inv["event_id"]=str(eid)
                             m=model.get((player,code))
                             if m is None:continue
@@ -249,7 +252,14 @@ def refresh():
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
                            "books":books,"book_count":len(books),"source_names":sorted(inv["raw_names"]),"qualified":(eid,player,code,side,line) in qualified_keys,
-                           "model_status":"matched" if proj is not None else "unmatched"})
+                           "model_status":"matched" if proj is not None else "unmatched",
+                           "qualification_reason":("Qualifies" if (eid,player,code,side,line) in qualified_keys else
+                               "No matching eligible model projection" if proj is None else
+                               "Model favors the opposite direction" if gap is not None and gap<=0 else
+                               "Fewer than 2 independent sportsbooks on this exact line" if len(books)<2 else
+                               "Model edge below 8% of line or 0.5 minimum" if gap is not None and gap<max(0.5,0.08*max(line,1)) else
+                               "Not qualified; check source validation"),
+                           "required_edge":round(max(0.5,0.08*max(line,1)),2)})
         browse.sort(key=lambda r:(r["game"],r["player"],r["market"],r["line"],r["side"]))
         base["game_props"]=browse[:5000]
         base["game_prop_rows"]=len(browse)
