@@ -353,10 +353,27 @@ def refresh():
                 comparisons.append((min(len(with_mate),len(without_mate)),injured.get("player"),len(with_mate),len(without_mate),off/on-1))
             if not comparisons:return None
             _,mate,on_games,off_games,observed=max(comparisons,key=lambda x:x[0])
+            # Separate minutes and production-rate effects when minutes exist.
+            # Current-season game logs may lack minutes; never fabricate them.
+            mate_key=canonical_player(mate)
+            mate_ids={r["game_id"] for r in logs_for_injuries.get(mate_key,[])
+                      if norm(r.get("team"))==team and r.get("game_id")}
+            with_rows=[r for r in own if r["game_id"] in mate_ids and number(r.get("MIN")) is not None and r["MIN"]>0]
+            without_rows=[r for r in own if r["game_id"] not in mate_ids and number(r.get("MIN")) is not None and r["MIN"]>0]
+            minute_context=None
+            if len(with_rows)>=5 and len(without_rows)>=5:
+                with_minutes=sum(r["MIN"] for r in with_rows)/len(with_rows)
+                without_minutes=sum(r["MIN"] for r in without_rows)/len(without_rows)
+                if with_minutes>0:
+                    minute_context={"with_teammate":round(with_minutes,1),
+                                    "without_teammate":round(without_minutes,1),
+                                    "minute_change_pct":round(100*(without_minutes/with_minutes-1),1),
+                                    "with_games":len(with_rows),"without_games":len(without_rows)}
             change=max(-0.15,min(0.15,observed*0.35))
             return {"projection":round(max(0,baseline*(1+change)),2),
                     "baseline":round(baseline,2),"adjustment_pct":round(change*100,1),
                     "teammate":mate,"with_games":on_games,"without_games":off_games,
+                    "minutes_context":minute_context,"injury_history_verified":False,
                     "method":"experimental teammate on/off; shrunk and capped",
                     "validated":False,"qualifying_eligible":False}
         def attach_availability(row):
