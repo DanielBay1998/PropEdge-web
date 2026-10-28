@@ -15,7 +15,7 @@ def today():return datetime.datetime.now(datetime.timezone.utc)
 def run():
  records=json.loads(DATA.read_text()) if DATA.exists() else []
  with urllib.request.urlopen(SITE+"/api/board",timeout=75) as resp: board=json.load(resp)
- if board.get("live") and board.get("verified") and not board.get("error"):
+ if board.get("live") and not board.get("error"):
   for signal in board.get("signals",[]):
    event=str(signal.get("event_id") or "")
    market=str(signal.get("market") or "")
@@ -30,8 +30,25 @@ def run():
      "projection":signal.get("projection"),"book":signal.get("book"),
      "odds":signal.get("odds"),"game":signal.get("game"),"status":"pending",
      "actual":None,"graded_at":None})
- # Only settle when the current-season game log contains the corresponding
- # completed game ID. Never match by player/date alone.
+ # Reconcile provider event IDs to ESPN IDs by a unique, completed matchup.
+ scoreboard={}
+ try:
+  dates={datetime.datetime.fromisoformat(r["captured_at"]).strftime("%Y%m%d") for r in records if r["status"]=="pending"}
+  for day in dates:
+   for delta in (0,1):
+    d=(datetime.datetime.strptime(day,"%Y%m%d")+datetime.timedelta(days=delta)).strftime("%Y%m%d")
+    with urllib.request.urlopen("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+d,timeout=20) as resp:
+     data=json.load(resp)
+    for e in data.get("events",[]):
+     comp=(e.get("competitions") or [{}])[0]
+     teams=comp.get("competitors") or []
+     away=next((t for t in teams if t.get("homeAway")=="away"),{})
+     home=next((t for t in teams if t.get("homeAway")=="home"),{})
+     an=(away.get("team") or {}).get("displayName") or ""
+     hn=(home.get("team") or {}).get("displayName") or ""
+     if ((e.get("status") or {}).get("type") or {}).get("completed"):
+      scoreboard.setdefault(canonical(an)+"@"+canonical(hn),set()).add(str(e.get("id")))
+ except Exception as exc:print("Scoreboard reconciliation unavailable:",type(exc).__name__)
  logs=ROOT/"data"/"nba_2026_27.csv"
  if logs.exists():
   with logs.open(encoding="utf-8-sig",newline="") as handle:
@@ -43,7 +60,11 @@ def run():
    if eid and player:by_game[(eid,player)]=row
   for r in records:
    if r["status"]!="pending":continue
-   row=by_game.get((r["event_id"],canonical(r["player"])))
+   teams=str(r.get("game") or "").split(" @ ")
+   match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
+   ids=scoreboard.get(match,set())
+   if len(ids)!=1:continue
+   row=by_game.get((next(iter(ids)),canonical(r["player"])))
    if not row:continue
    try:
     actual=sum(float(row[k]) for k in ("PTS","REB","AST")) if r["market"]=="PRA" else float(row[r["market"]])
