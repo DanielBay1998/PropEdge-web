@@ -1,5 +1,6 @@
 from pathlib import Path
 import os,csv,math,time,threading
+import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import defaultdict
 from datetime import datetime,timezone
@@ -65,11 +66,19 @@ def refresh():
         upcoming=sorted(upcoming,key=lambda e: str(e.get("commence_time") or e.get("start_time") or "9999"))[:8]
         base["events_checked"]=len(upcoming)
         def fetch(event):
-            # Use a separate SDK client per worker to avoid shared-client thread issues.
-            sdk=PropLine(key)
-            return sdk.get_odds("basketball_nba",event_id=event["id"],markets=list(MARKETS))
+            # Retry only the failed event once, rather than repeating all games.
+            last_error=None
+            for attempt in range(2):
+                try:
+                    sdk=PropLine(key)
+                    return sdk.get_odds("basketball_nba",event_id=event["id"],markets=list(MARKETS))
+                except Exception as exc:
+                    last_error=exc
+                    if attempt==0:time.sleep(1)
+            raise last_error
         successful=0
         failures=[]
+        failed_event_ids=[]
         with ThreadPoolExecutor(max_workers=3) as pool:
             tasks={pool.submit(fetch,event):event for event in upcoming}
             for task in as_completed(tasks):
@@ -80,6 +89,8 @@ def refresh():
                     successful+=1
                 except Exception as exc:
                     failures.append(type(exc).__name__)
+                    failed_event_ids.append(eid)
+                    logging.warning("Live odds failed for event %s: %s",eid,type(exc).__name__)
                     continue
                 game=f'{event.get("away_team", "Away")} @ {event.get("home_team", "Home")}'
                 for book in odds.get("bookmakers",[]):
@@ -109,6 +120,8 @@ def refresh():
         base["events_succeeded"]=successful
         base["events_failed"]=len(failures)
         base["failure_types"]=sorted(set(failures))
+        base["failed_event_ids"]=failed_event_ids
+        base["coverage"]="partial" if failures else "complete"
         if upcoming and successful==0:
             base["error"]="All live odds requests failed: "+", ".join(sorted(set(failures)))
             return base
@@ -126,12 +139,13 @@ def refresh():
             q=next((q for q in quotes if q[0] in sportsbooks),quotes[0])
             bk,o,game,m,proj,gap=q
             if gap<max(0.5,0.08*max(line,1)):continue
-            signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid})
+            signals.append({"player":m.get("ResolvedPlayer"),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals[:200],live=True,verified=(len(failures)==0))
         if failures:
-            base["signals"]=[]
-            base["error"]=f"Partial live feed: {len(failures)} of {len(upcoming)} games failed. Signals withheld until complete."
+            base["error"]=(f"Partial live feed: {successful} of {len(upcoming)} games succeeded. "
+                           "Signals from successful games only; failed games excluded. "
+                           "Coverage is incomplete.")
     except Exception as exc:
         # Fail closed: never substitute stale snapshots for live picks.
         base["error"]=f"Live odds unavailable ({type(exc).__name__}). No picks shown. Check Render logs and API limits."
