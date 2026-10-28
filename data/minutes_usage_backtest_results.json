@@ -1,0 +1,50 @@
+{
+  "status": "evaluated",
+  "method": "Chronological prior-only trailing 10 games; expected minutes \u00d7 aggregate per-minute production; capped/shrunk absence-proxy minutes adjustment",
+  "team_games": 2582,
+  "team_games_with_any_minutes": 2470,
+  "results": {
+    "PTS": {
+      "samples": 19313,
+      "baseline_mae": 4.748,
+      "minutes_rate_mae": 4.748,
+      "absence_minutes_scenario_mae": 4.778,
+      "scenario_mae_change_pct": 0.65
+    },
+    "REB": {
+      "samples": 19313,
+      "baseline_mae": 1.957,
+      "minutes_rate_mae": 1.957,
+      "absence_minutes_scenario_mae": 1.974,
+      "scenario_mae_change_pct": 0.87
+    },
+    "AST": {
+      "samples": 19313,
+      "baseline_mae": 1.394,
+      "minutes_rate_mae": 1.394,
+      "absence_minutes_scenario_mae": 1.403,
+      "scenario_mae_change_pct": 0.65
+    },
+    "3PM": {
+      "samples": 19313,
+      "baseline_mae": 0.928,
+      "minutes_rate_mae": 0.928,
+      "absence_minutes_scenario_mae": 0.933,
+      "scenario_mae_change_pct": 0.62
+    },
+    "PRA": {
+      "samples": 19313,
+      "baseline_mae": 6.222,
+      "minutes_rate_mae": 6.222,
+      "absence_minutes_scenario_mae": 6.273,
+      "scenario_mae_change_pct": 0.82
+    }
+  },
+  "verified_historical_injury_designations": false,
+  "limitations": [
+    "Missing teammate box-score rows are not confirmed injuries; roster changes and data gaps can bias estimates.",
+    "The minutes-rate comparator equals the trailing average algebraically; it is a decomposition, not an independent model.",
+    "This is not the deployed shadow model, and it has no independent held-out validation."
+  ],
+  "promote_to_official_picks": false
+}
