@@ -127,12 +127,12 @@ def provisional_projections(logs,model,min_games=3):
         for code in codes:
             sample=sum(r[code] for r in recent)/len(recent)
             prior=priors[code]
-            components[code]=max(0,(len(recent)*sample+shrink_games*prior)/(len(recent)+shrink_games))
+            components[code]=max(0,(len(recent)*sample+shrink_games*prior)/(len(recent)+shrink_games)) if code=='3PM' else max(0,sample)
         components['PRA']=sum(components[k] for k in ('PTS','REB','AST'))
         for code,val in components.items():
             result[(player,code)]={'projection':round(val,2),'games':len(recent),
                                     'latest_game_date':recent[0]['date'],
-                                    'method':'experimental empirical-Bayes shrinkage',
+                                    'method':'experimental recent-form baseline (PTS/REB/AST); shrunk 3PM',
                                     'status':'PROVISIONAL_NOT_VALIDATED'}
     return result
 
