@@ -1,0 +1,162 @@
+{
+  "method": "Walk-forward chronological audit; prior games only; 10-game trailing baseline",
+  "limitations": [
+    "Teammate missing from box score is an absence proxy, not a verified injury designation.",
+    "Incomplete game logs can create false absences.",
+    "Historical rolling average is NOT the production shadow projection.",
+    "Not an independent holdout or causal estimate; do not promote to qualifying bets."
+  ],
+  "results": {
+    "PTS": {
+      "samples": 20422,
+      "baseline_mae": 4.768,
+      "scenario_mae": 4.836,
+      "baseline_rmse": 6.233,
+      "scenario_rmse": 6.317,
+      "mae_change_pct": 1.42
+    },
+    "REB": {
+      "samples": 20318,
+      "baseline_mae": 1.967,
+      "scenario_mae": 2.001,
+      "baseline_rmse": 2.588,
+      "scenario_rmse": 2.624,
+      "mae_change_pct": 1.77
+    },
+    "AST": {
+      "samples": 19459,
+      "baseline_mae": 1.436,
+      "scenario_mae": 1.457,
+      "baseline_rmse": 1.935,
+      "scenario_rmse": 1.959,
+      "mae_change_pct": 1.42
+    },
+    "3PM": {
+      "samples": 16418,
+      "baseline_mae": 1.084,
+      "scenario_mae": 1.096,
+      "baseline_rmse": 1.418,
+      "scenario_rmse": 1.435,
+      "mae_change_pct": 1.11
+    },
+    "PRA": {
+      "samples": 20435,
+      "baseline_mae": 6.261,
+      "scenario_mae": 6.354,
+      "baseline_rmse": 8.065,
+      "scenario_rmse": 8.176,
+      "mae_change_pct": 1.49
+    }
+  },
+  "examples": [
+    {
+      "date": "20251112",
+      "player": "ajay mitchell",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "PTS",
+      "actual": 14.0,
+      "baseline": 16.4,
+      "adjusted": 16.54
+    },
+    {
+      "date": "20251112",
+      "player": "ajay mitchell",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "REB",
+      "actual": 3.0,
+      "baseline": 4.2,
+      "adjusted": 4.7
+    },
+    {
+      "date": "20251112",
+      "player": "ajay mitchell",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "AST",
+      "actual": 3.0,
+      "baseline": 4.1,
+      "adjusted": 4.71
+    },
+    {
+      "date": "20251112",
+      "player": "ajay mitchell",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "3PM",
+      "actual": 1.0,
+      "baseline": 1.3,
+      "adjusted": 1.23
+    },
+    {
+      "date": "20251112",
+      "player": "ajay mitchell",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "PRA",
+      "actual": 20.0,
+      "baseline": 24.7,
+      "adjusted": 26.23
+    },
+    {
+      "date": "20251112",
+      "player": "brooks barnhizer",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "PTS",
+      "actual": 2.0,
+      "baseline": 1.2,
+      "adjusted": 1.2
+    },
+    {
+      "date": "20251112",
+      "player": "brooks barnhizer",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "REB",
+      "actual": 2.0,
+      "baseline": 1.8,
+      "adjusted": 2.07
+    },
+    {
+      "date": "20251112",
+      "player": "brooks barnhizer",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "PRA",
+      "actual": 4.0,
+      "baseline": 3.2,
+      "adjusted": 3.68
+    },
+    {
+      "date": "20251112",
+      "player": "cason wallace",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "PTS",
+      "actual": 6.0,
+      "baseline": 8.1,
+      "adjusted": 7.96
+    },
+    {
+      "date": "20251112",
+      "player": "cason wallace",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "REB",
+      "actual": 0.0,
+      "baseline": 3.2,
+      "adjusted": 2.92
+    },
+    {
+      "date": "20251112",
+      "player": "cason wallace",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "AST",
+      "actual": 1.0,
+      "baseline": 2.6,
+      "adjusted": 2.29
+    },
+    {
+      "date": "20251112",
+      "player": "cason wallace",
+      "teammate_absence_proxy": "luguentz dort",
+      "market": "3PM",
+      "actual": 0.0,
+      "baseline": 1.6,
+      "adjusted": 1.64
+    }
+  ],
+  "verdict": "RESEARCH ONLY: do not change official projections or qualification."
+}
