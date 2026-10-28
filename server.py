@@ -186,6 +186,7 @@ def refresh():
                             if bk=="pick6" and norm(o.get("dfs_odds_type"))!="standard":continue
                             line=number(o.get("point")); player=norm(o.get("description"))
                             if line is None or line<0.5 or not player:continue
+                            side=norm(o.get("name"))
                             # Keep an independent, bounded browse-only inventory. These
                             # lines are NOT qualifying signals and do not affect Top Picks.
                             inventory_key=(str(eid),player,code,side,line)
