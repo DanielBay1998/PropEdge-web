@@ -104,6 +104,38 @@ def early_sample_estimates(logs,model,min_games=3):
                                       'games':len(recent),'latest_game_date':recent[0]['date']}
     return result
 
+def provisional_projections(logs,model,min_games=3):
+    """Experimental empirical-Bayes projections; never eligible for qualifying picks.
+
+    Shrinks a player's recent per-game production toward the across-player
+    current-season baseline. No minutes or injury adjustments are available.
+    """
+    existing={name for name,market in model}
+    codes=('PTS','REB','AST','3PM')
+    current={name:[r for r in rows if r['season']=='current'] for name,rows in logs.items()}
+    eligible={name:rows for name,rows in current.items() if len(rows)>=min_games}
+    # Equal weight per player so stars with more games do not dominate the prior.
+    priors={code:sum(sum(r[code] for r in rows)/len(rows) for rows in eligible.values())/len(eligible)
+            for code in codes} if eligible else {}
+    result={}
+    for player,rows in eligible.items():
+        if player in existing:continue
+        recent=rows[:10]
+        # A fixed prior strength makes short samples explicitly conservative.
+        shrink_games=5
+        components={}
+        for code in codes:
+            sample=sum(r[code] for r in recent)/len(recent)
+            prior=priors[code]
+            components[code]=max(0,(len(recent)*sample+shrink_games*prior)/(len(recent)+shrink_games))
+        components['PRA']=sum(components[k] for k in ('PTS','REB','AST'))
+        for code,val in components.items():
+            result[(player,code)]={'projection':round(val,2),'games':len(recent),
+                                    'latest_game_date':recent[0]['date'],
+                                    'method':'experimental empirical-Bayes shrinkage',
+                                    'status':'PROVISIONAL_NOT_VALIDATED'}
+    return result
+
 def add_game_analysis(signal,logs):
     rows=logs.get(canonical_player(signal.get('player')),[])
     code=signal['market'];line=signal['line'];side=signal['side']
@@ -146,6 +178,7 @@ def refresh():
         events=client.get_events("basketball_nba")
         model=projections();base["players"]=len({p for p,m in model})
         exploratory=early_sample_estimates(load_game_logs(),model)
+        provisional=provisional_projections(load_game_logs(),model)
         candidates=defaultdict(list)
         raw_props=defaultdict(lambda: {"books":set(),"prices":{},"model":None,"raw_names":set()})
         upcoming=[]
@@ -278,6 +311,7 @@ def refresh():
             proj=number(m.get("ShadowProjection")) if m else None
             gap=(proj-line if side=="over" else line-proj) if proj is not None else None
             sample=exploratory.get((player,code)) if proj is None else None
+            provisional_row=provisional.get((player,code)) if proj is None else None
             books=sorted(inv["books"])
             browse.append({"event_id":eid,"game":inv["game"],"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or inv["player_name"]).strip()) if m else ("De'Aaron Fox" if player=="deaaron fox" else inv["player_name"]),
                            "player_key":player,
@@ -287,7 +321,11 @@ def refresh():
                            "model_status":"matched" if proj is not None else "early_sample" if sample else "unmatched",
                            "early_sample_estimate":sample["estimate"] if sample else None,
                            "early_sample_games":sample["games"] if sample else None,
+                           "provisional_projection":provisional_row["projection"] if provisional_row else None,
+                           "provisional_model":provisional_row["method"] if provisional_row else None,
+                           "provisional_games":provisional_row["games"] if provisional_row else None,
                            "qualification_reason":("Qualifies" if (eid,player,code,side,line) in qualified_keys else
+                               "Experimental projection only; not validated or eligible for qualifying picks" if provisional_row else
                                "Early-season average only; not a validated model or qualifying pick" if sample else
                                "No matching eligible model projection" if proj is None else
                                "Model favors the opposite direction" if gap is not None and gap<=0 else
