@@ -1,1 +1,55 @@
 
+name: Sync PrizePicks Feed to PropEdge Web
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '12,42 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: propedge-web-prizepicks-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout PropEdge-web
+        uses: actions/checkout@v4
+
+      - name: Download latest feed
+        env:
+          SOURCE_REPO_TOKEN: ${{ secrets.SOURCE_REPO_TOKEN }}
+          SOURCE_REPO: DanielBay1998/Prop-
+        run: |
+          set -euo pipefail
+          if [ -z "${SOURCE_REPO_TOKEN:-}" ]; then
+            echo 'Missing SOURCE_REPO_TOKEN' >&2
+            exit 1
+          fi
+          mkdir -p data
+          curl --fail-with-body --silent --show-error --location \
+            --header "Authorization: Bearer ${SOURCE_REPO_TOKEN}" \
+            --header 'Accept: application/vnd.github.raw+json' \
+            "https://api.github.com/repos/${SOURCE_REPO}/contents/data/phase7b_prizepicks_latest.json?ref=main" \
+            --output data/phase7b_prizepicks_latest.json
+          python -m json.tool data/phase7b_prizepicks_latest.json > /dev/null
+
+      - name: Commit changed feed
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/phase7b_prizepicks_latest.json
+          if git diff --cached --quiet; then
+            echo 'Feed unchanged'
+          else
+            git commit -m 'Data: sync rolling PrizePicks feed'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
