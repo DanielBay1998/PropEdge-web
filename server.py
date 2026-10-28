@@ -252,6 +252,16 @@ def refresh():
         base["game_prop_rows"]=len(browse)
         base["game_props_truncated"]=len(browse)>5000
         logs=load_game_logs()
+        # Descriptive game-log stats for browse-only lines, including nonqualifying props.
+        # Compute once per player/market/side/line; preserve current projection logic.
+        analysis_cache={}
+        for row in base["game_props"]:
+            k=(norm(row["player"]),row["market"],row["side"],row["line"])
+            if k not in analysis_cache:
+                temp={"player":row["player"],"market":row["market"],"side":row["side"],"line":row["line"]}
+                add_game_analysis(temp,logs)
+                analysis_cache[k]=temp["analysis"]
+            row["analysis"]=analysis_cache[k]
         for signal in signals:add_game_analysis(signal,logs)
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
