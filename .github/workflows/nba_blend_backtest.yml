@@ -7,6 +7,7 @@ on:
       - nba_matchup_features.py
       - nba_defense_backtest.py
       - nba_minutes_backtest.py
+      - nba_integrated_role_backtest.py
       - test_nba_matchup_features.py
       - test_nba_identity_guard.py
       - server.py
@@ -27,12 +28,14 @@ jobs:
           python-version: '3.11'
       - name: Syntax and leakage regression tests
         run: |
-          python -m py_compile test_nba_identity_guard.py server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py nba_defense_backtest.py nba_minutes_backtest.py
-          python -m unittest -v test_nba_matchup_features.py
+          python -m py_compile test_nba_identity_guard.py server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py nba_defense_backtest.py nba_minutes_backtest.py nba_integrated_role_backtest.py
+          python -m unittest -v test_nba_matchup_features.py test_nba_identity_guard.py
       - name: Walk-forward defensive feature backtest
         run: python nba_defense_backtest.py
       - name: Walk-forward minutes model backtest
         run: python nba_minutes_backtest.py
+      - name: Walk-forward integrated role and matchup model
+        run: python nba_integrated_role_backtest.py
       - name: Compare predictions
         run: python nba_blend_backtest.py
       - uses: actions/upload-artifact@v4
@@ -42,3 +45,4 @@ jobs:
             reports/nba_blend_comparison.json
             reports/nba_defense_backtest.json
             reports/nba_minutes_backtest.json
+            reports/nba_integrated_role_backtest.json
