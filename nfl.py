@@ -146,9 +146,13 @@ def odds_board():
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
    record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
-   if validated and edge is not None and edge>0:
+   if validated and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
     if available:
+     try:
+      kickoff=datetime.datetime.fromisoformat(str(record["commence_time"]).replace("Z","+00:00"))
+      if kickoff<=datetime.datetime.now(datetime.timezone.utc):continue
+     except (ValueError,TypeError):continue
      best=max(available,key=lambda bp:bp[1])
      base["top_picks"].append({**record,"book":best[0],"odds":best[1]})
  base["verified"]=bool(base["props"])
