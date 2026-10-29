@@ -875,7 +875,12 @@ def nba_player_profile(player_name:str):
         return {"date":r["date"],"season":r["season"],"team":r["team"],
                 "minutes":r.get("MIN"),**{k:r[k] for k in ("PTS","REB","AST","3PM")},
                 "PRA":sum(r[k] for k in ("PTS","REB","AST"))}
-    return {"player":player_name,"current":[pack(r) for r in rows if r["season"]=="current"],
+    position=None
+    try:
+        snapshot=json.loads((ROOT/"data"/"nba_dvp_2026_27.json").read_text())
+        position=snapshot.get("player_positions",{}).get(name)
+    except (OSError,ValueError,TypeError):pass
+    return {"player":player_name,"position":position,"current":[pack(r) for r in rows if r["season"]=="current"],
             "previous":[pack(r) for r in rows if r["season"]=="historical"]}
 
 @app.get("/api/nba-defense-position")
