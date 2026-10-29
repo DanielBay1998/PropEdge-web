@@ -39,22 +39,30 @@ def predict(history):
     minute_rows=[r for r in long if r["minutes"] is not None and r["minutes"]>=8]
     projected_minutes=None
     if len(minute_rows)>=8:
-        last=[r["minutes"] for r in minute_rows[-5:]]
-        season=[r["minutes"] for r in minute_rows]
-        projected_minutes=max(8,min(42,0.65*sum(last)/len(last)+0.35*sum(season)/len(season)))
+        recent_minutes=[r["minutes"] for r in minute_rows[-5:]]
+        all_minutes=[r["minutes"] for r in minute_rows]
+        projected_minutes=max(8,min(42,0.7*sum(recent_minutes)/len(recent_minutes)
+                                   +0.3*sum(all_minutes)/len(all_minutes)))
     output={}
     for k in MARKETS[:4]:
         recent_avg=sum(r[k] for r in recent)/len(recent)
         long_avg=sum(r[k] for r in long)/len(long)
-        # shrink toward own long-term baseline; avoids league-average star suppression
-        baseline=0.55*recent_avg+0.45*long_avg
+        # Short-term role is informative, but regress toward a longer sample.
+        baseline=0.45*recent_avg+0.55*long_avg
         if projected_minutes is not None:
-            eligible=[r for r in minute_rows if r[k]>=0]
-            # robust per-minute production with an 8-minute floor
-            rate=sum(r[k] for r in eligible)/sum(r["minutes"] for r in eligible)
-            minute_based=rate*projected_minutes
-            baseline=0.55*baseline+0.45*minute_based
-        output[k]=max(0,baseline)
+            recent_rate_rows=minute_rows[-8:]
+            recent_rate=sum(r[k] for r in recent_rate_rows)/sum(r["minutes"] for r in recent_rate_rows)
+            long_rate=sum(r[k] for r in minute_rows)/sum(r["minutes"] for r in minute_rows)
+            rate=0.45*recent_rate+0.55*long_rate
+            minutes_estimate=rate*projected_minutes
+            baseline=0.4*baseline+0.6*minutes_estimate
+        # Guard against extreme historical projections when a new role has
+        # emerged in at least four current-season observations.
+        current=[r for r in long if str(r.get("date","")).startswith("2026")]
+        if len(current)>=4:
+            current_mean=sum(r[k] for r in current[-8:])/len(current[-8:])
+            baseline=0.65*baseline+0.35*current_mean
+        output[k]=max(0,round(baseline,3))
     output["PRA"]=sum(output[k] for k in ("PTS","REB","AST"))
     return output
 
