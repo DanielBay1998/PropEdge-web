@@ -186,3 +186,15 @@ def nfl_teams():
  from nfl_research import team_directory
  try:return {"teams":cached("nfl_teams",86400,team_directory)}
  except Exception:return {"teams":{},"error":"Team metadata unavailable"}
+
+@router.get("/model-evidence/{market}")
+def model_evidence(market:str):
+ from nfl_evidence import evidence
+ if market not in LABELS:raise HTTPException(400,"Unknown NFL market")
+ return evidence(market)
+
+@router.get("/matchup/{opponent}/{market}")
+def matchup_report(opponent:str,market:str):
+ from nfl_matchups import matchup
+ if market not in LABELS:raise HTTPException(400,"Unknown NFL market")
+ return matchup(opponent,market)
