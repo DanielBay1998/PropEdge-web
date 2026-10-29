@@ -1,0 +1,51 @@
+name: Historical NBA Research Backfill
+on:
+  workflow_dispatch:
+    inputs:
+      season:
+        description: Historical NBA season
+        required: true
+        type: choice
+        options:
+          - 2023-24
+          - 2024-25
+      max_days:
+        description: Days to import (0 for full regular season)
+        required: true
+        default: '0'
+permissions:
+  contents: write
+concurrency:
+  group: nba-historical-research-backfill
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate importer
+        run: python -m py_compile backfill_historical_nba.py
+      - name: Import completed historical regular season games
+        env:
+          SEASON: ${{ inputs.season }}
+          MAX_DAYS: ${{ inputs.max_days }}
+        run: python backfill_historical_nba.py --season "$SEASON" --max-days "$MAX_DAYS"
+      - name: Commit research data only
+        env:
+          SEASON: ${{ inputs.season }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          FILE="data/propedge_historical_${SEASON//-/_}_minutes.csv"
+          git add "$FILE"
+          if ! git diff --cached --quiet; then
+            git commit -m "Backfill historical NBA research boxscores for $SEASON"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
