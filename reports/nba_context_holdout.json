@@ -1,0 +1,116 @@
+{
+  "model": "context_rest_back_to_back_v1",
+  "research_only": true,
+  "limitations": [
+    "Not all requested features are present in source data",
+    "No forward-looking team pace, possessions, usage, travel, or betting totals",
+    "No production projections modified"
+  ],
+  "markets": {
+    "PTS": {
+      "status": "holdout_evaluated",
+      "train_n": 49572,
+      "holdout_n": 22374,
+      "holdout_start": "20251121",
+      "baseline_mae": 4.7485,
+      "adjusted_mae": 4.7106,
+      "improved": true,
+      "weights": {
+        "intercept": -0.14799891067538837,
+        "weights": {
+          "rest": -0.29183185863695177,
+          "b2b": -0.1759109290450061
+        },
+        "means": {
+          "rest": 1.478011780844025,
+          "b2b": 0.1536956346324538
+        }
+      },
+      "production_promoted": false
+    },
+    "REB": {
+      "status": "holdout_evaluated",
+      "train_n": 49572,
+      "holdout_n": 22374,
+      "holdout_start": "20251121",
+      "baseline_mae": 1.9492,
+      "adjusted_mae": 1.9302,
+      "improved": true,
+      "weights": {
+        "intercept": -0.09719765190026929,
+        "weights": {
+          "rest": -0.12398536296291301,
+          "b2b": -0.08688618721945675
+        },
+        "means": {
+          "rest": 1.478011780844025,
+          "b2b": 0.1536956346324538
+        }
+      },
+      "production_promoted": false
+    },
+    "AST": {
+      "status": "holdout_evaluated",
+      "train_n": 49572,
+      "holdout_n": 22374,
+      "holdout_start": "20251121",
+      "baseline_mae": 1.3857,
+      "adjusted_mae": 1.3754,
+      "improved": true,
+      "weights": {
+        "intercept": -0.027255587831842867,
+        "weights": {
+          "rest": -0.08717903548184232,
+          "b2b": -0.09547262408752576
+        },
+        "means": {
+          "rest": 1.478011780844025,
+          "b2b": 0.1536956346324538
+        }
+      },
+      "production_promoted": false
+    },
+    "3PM": {
+      "status": "holdout_evaluated",
+      "train_n": 49572,
+      "holdout_n": 22374,
+      "holdout_start": "20251121",
+      "baseline_mae": 0.913,
+      "adjusted_mae": 0.9081,
+      "improved": true,
+      "weights": {
+        "intercept": -0.014682260146858209,
+        "weights": {
+          "rest": -0.03336419733228421,
+          "b2b": -0.03557872959087839
+        },
+        "means": {
+          "rest": 1.478011780844025,
+          "b2b": 0.1536956346324538
+        }
+      },
+      "production_promoted": false
+    },
+    "PRA": {
+      "status": "holdout_evaluated",
+      "train_n": 49572,
+      "holdout_n": 22374,
+      "holdout_start": "20251121",
+      "baseline_mae": 6.2861,
+      "adjusted_mae": 6.221,
+      "improved": true,
+      "weights": {
+        "intercept": -0.27245215040750126,
+        "weights": {
+          "rest": -0.5029962570817043,
+          "b2b": -0.3582697403519868
+        },
+        "means": {
+          "rest": 1.478011780844025,
+          "b2b": 0.1536956346324538
+        }
+      },
+      "production_promoted": false
+    }
+  }
+}
