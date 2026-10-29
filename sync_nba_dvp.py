@@ -53,6 +53,7 @@ def main():
     if not pos:continue
     try:stats={k:float(row[k]) for k in ("PTS","REB","AST","3PM")}
     except (KeyError,ValueError,TypeError):continue
+    stats["PRA"]=stats["PTS"]+stats["REB"]+stats["AST"]
     if min(stats.values())<0:continue
     games[(date,str(row.get("Game ID") or ""))][str(row.get("Team") or "")].append((pos,stats))
   allowances=collections.defaultdict(lambda:collections.defaultdict(lambda:collections.defaultdict(list)))
@@ -74,7 +75,7 @@ def main():
   out[team]={}
   for pos in ("PG","SG","SF","PF","C"):
    stats={}
-   for stat in ("PTS","REB","AST","3PM"):
+   for stat in ("PTS","REB","AST","3PM","PRA"):
     old=prior.get(team,{}).get(pos,{}).get(stat,[])
     new=current.get(team,{}).get(pos,{}).get(stat,[])
     if not old and len(new)<5:continue
