@@ -1,0 +1,14 @@
+name: NFL verified context checks
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl_context.py sync_nfl_context.py nfl.py server.py
+      - run: python -c "from nfl_context import records,categories; from nfl import router; assert len(categories())==6; assert any(r.path=='/api/nfl/context/coverage' for r in router.routes); print('context schema valid')"
