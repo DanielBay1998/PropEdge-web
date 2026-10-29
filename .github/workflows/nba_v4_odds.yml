@@ -1,0 +1,23 @@
+name: NBA V4 captured odds validation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_v4_captured_odds_audit.py
+      - '.github/workflows/nba_v4_odds.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile nba_v4_captured_odds_audit.py
+      - run: python nba_v4_captured_odds_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nba-v4-captured-odds
+          path: reports/nba_v4_captured_odds_audit.json
