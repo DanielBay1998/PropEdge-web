@@ -5,6 +5,7 @@ on:
     paths:
       - nba_blend_backtest.py
       - nba_matchup_features.py
+      - nba_defense_backtest.py
       - test_nba_matchup_features.py
       - server.py
       - static/index.html
