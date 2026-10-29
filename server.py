@@ -665,6 +665,32 @@ def refresh():
                 signal["historical_priority_reason"]="This market was not selected by the exploratory historical filter; review carefully, not a proven negative expectation."
             signal["historical_priority_validated"]=False
         base["historical_priority_mode"]="ASSISTIVE_RANKING_NOT_VALIDATED"
+        # Expose provenance and enforce a minimum of recent verified observations
+        # for featured picks. Historical-only signals remain browseable but not
+        # qualified as actionable Top Picks.
+        supported=[]
+        withheld=0
+        for signal in signals:
+            player_rows=logs.get(canonical_player(signal.get("player")),[])
+            current_rows=[g for g in player_rows if g.get("season")=="current"]
+            historical_rows=[g for g in player_rows if g.get("season")=="historical"]
+            signal["projection_evidence"]={
+                "current_season_games":len(current_rows),
+                "historical_games":len(historical_rows),
+                "total_unique_game_logs":len(player_rows),
+                "latest_game_date":current_rows[0]["date"] if current_rows else None,
+                "primary_projection_source":"saved shadow projections CSV",
+                "challenger_projection_source":"historical game logs and minutes where available",
+                "validation":"NOT_INDEPENDENTLY_VALIDATED",
+            }
+            if len(current_rows)<4:
+                signal["qualification_reason"]="Fewer than 4 verified current-season game logs; excluded from featured picks"
+                withheld+=1
+                continue
+            supported.append(signal)
+        signals=supported
+        base["insufficient_current_season_evidence_filtered"]=withheld
+        base["featured_min_current_season_games"]=4
         signals.sort(key=lambda s:(s["historical_priority"]=="RESEARCH_PRIORITY",s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
