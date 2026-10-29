@@ -767,6 +767,41 @@ def refresh():
             signal["advanced_metrics_model_adjusted"]=False
         base["advanced_metrics_mode"]="PREGAME_CONTEXT_ONLY_UNCALIBRATED"
 
+        # Defensive context derived only from completed prior NBA game logs.
+        # This is opponent points allowed, NOT a possession-adjusted defensive rating.
+        game_team_points=defaultdict(float)
+        game_team_players=defaultdict(int)
+        for player_games in logs.values():
+            for g in player_games:
+                if g.get("season")!="current" or not g.get("game_id"):continue
+                k=(g["game_id"],norm(g.get("team")),g["date"])
+                if number(g.get("PTS")) is not None:
+                    game_team_points[k]+=float(g["PTS"])
+                    game_team_players[k]+=1
+        opponents=defaultdict(list)
+        by_fixture=defaultdict(list)
+        for (gid,team,day),pts in game_team_points.items():
+            if game_team_players[(gid,team,day)]>=5:
+                by_fixture[(gid,day)].append((team,pts))
+        for (gid,day),teams_played in by_fixture.items():
+            if len(teams_played)==2:
+                for team,points in teams_played:
+                    opponents[team].append((day,next(p for t,p in teams_played if t!=team)))
+        for signal in signals:
+            teams=str(signal.get("game") or "").split(" @ ")
+            team=norm(signal.get("identity_latest_team"))
+            if len(teams)!=2 or team not in {norm(t) for t in teams}:continue
+            opponent=norm(teams[0] if team==norm(teams[1]) else teams[1])
+            samples=sorted(opponents.get(opponent,[]),reverse=True)[:10]
+            if len(samples)>=3:
+                signal["advanced_metrics"]["opponent_points_allowed_per_game"]=round(sum(v for _,v in samples)/len(samples),2)
+                signal["advanced_metrics_coverage"]["opponent_points_allowed_per_game"]=True
+            else:
+                signal["advanced_metrics"]["opponent_points_allowed_per_game"]=None
+                signal["advanced_metrics_coverage"]["opponent_points_allowed_per_game"]=False
+        base["defensive_context_source"]="PRIOR_COMPLETED_TEAM_BOXSCORES_NOT_POSSESSION_ADJUSTED"
+
+
         # Research-backed selection assistance from settled historical bets.
         # This is a PRIORITY LABEL, not a trained win probability or a
         # replacement for the primary/challenger projection disagreement veto.
