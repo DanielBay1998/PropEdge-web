@@ -21,9 +21,9 @@ def run():
    for item in pending:
     if item.get("status")!="pending":continue
     captured=datetime.datetime.fromisoformat(item["captured_at"].replace("Z","+00:00")).date()
-    for shift in (-1,0,1,2):
+    for shift in range(-1,8):
      d=captured+datetime.timedelta(days=shift)
-     if d<=today and (today-d).days<=7:days.add(d.strftime("%Y%m%d"))
+     if d<=today and (today-d).days<=14:days.add(d.strftime("%Y%m%d"))
   except (ValueError,KeyError,TypeError) as exc:print("Pending date discovery failed",type(exc).__name__,flush=True)
  print("Checking scoreboard dates",",".join(sorted(days)),flush=True)
  for day in sorted(days):
