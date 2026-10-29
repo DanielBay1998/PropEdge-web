@@ -1,0 +1,29 @@
+name: NFL chronological model selection
+on:
+  pull_request:
+    paths: ['nfl_model.py','nfl.py','.github/workflows/nfl_holdout.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl_model.py nfl.py server.py
+      - run: |
+          python - <<'PY'
+          from nfl_model import summary
+          from nfl import router
+          from server import app
+          m=summary()
+          assert m['history_rows']>=7000
+          for k,v in m['validation'].items():
+           assert v['holdout_samples']>=0
+           if v['improved']:
+            assert v['model_mae']<v['baseline_mae']
+          assert any(r.path=='/api/nfl/board' for r in router.routes)
+          assert any(getattr(r,'path','')=='/api/board' for r in app.routes)
+          print('Chronological NFL holdout:',m['validation'])
+          PY
