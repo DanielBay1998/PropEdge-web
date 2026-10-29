@@ -152,10 +152,11 @@ def odds_board():
     kickoff_date=datetime.datetime.fromisoformat(str(event.get("commence_time") or event.get("start_time")).replace("Z","+00:00")).date()
     projected,advanced=adjusted(player_history,code,opponent,kickoff_date,feature_index)
     if validation.get(code,{}).get("model")=="opponent_adjusted" and projected is not None and advanced.get("defense_games",0)>=4:projection=projected
+   context=for_prop(context_rows,str(event["id"]),(info or {}).get("player_id"),(info or {}).get("team"),event.get("commence_time") or event.get("start_time"))
    audit=validation.get(code,{})
-   validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved"))
+   validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved") and not injury_block(context))
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
-   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
+   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"verified_context":context,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
    if validated and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
@@ -224,3 +225,11 @@ def injury_report():
   return {"available":bool(entries),"players":entries[:200],"source":"ESPN","note":"Informational injury reports; no automatic projection adjustment without verified player/status mapping"}
  try:return cached("nfl_injuries",900,fetch)
  except Exception:return {"available":False,"players":[],"source":"ESPN","note":"Verified injury feed unavailable; no injury adjustment applied"}
+
+@router.get("/context/coverage")
+def nfl_context_coverage():
+ from nfl_context import records,categories
+ rows=records()
+ fields={name:sum(name in r for r in rows) for group in categories().values() for name in group}
+ return {"records":len(rows),"metrics":fields,"categories":categories(),
+         "note":"Metrics with zero verified observations are not used in projections; coverage is not predictive validation."}
