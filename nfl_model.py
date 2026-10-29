@@ -43,6 +43,8 @@ def candidate(rows,market,kind):
  if kind=="weighted_recent":return predict(rows,market)
  return None
 def evaluate(rows):
+ from nfl_features import team_context,opponent_for,adjusted,mapping
+ defensive_index=team_context(rows);matchups=mapping()
  groups=defaultdict(list)
  for row in rows:groups[row["key"]].append(row)
  tests=defaultdict(list)
@@ -52,6 +54,10 @@ def evaluate(rows):
    for market,actual in g["stats"].items():
     if len([p for p in past if market in p["stats"]])<4:continue
     predictions={k:candidate(past,market,k) for k in ("career_mean","season_mean","recent_mean","weighted_recent")}
+    defense=opponent_for(g,matchups)
+    if defense:
+     p,feature=adjusted(past,market,defense,g["date"],defensive_index)
+     if p is not None:predictions["opponent_adjusted"]=p
     if all(v is not None for v in predictions.values()):tests[market].append((g["date"],actual,predictions))
  summary={}
  for market,records in tests.items():
@@ -62,6 +68,18 @@ def evaluate(rows):
    summary[market]={"samples":len(records),"holdout_samples":len(holdout),"improved":False,"reason":"Insufficient chronological holdout samples"}
    continue
   choices=("career_mean","season_mean","recent_mean","weighted_recent")
+  # Only evaluate opponent-aware forecasts on the exact same eligible samples.
+  if sum("opponent_adjusted" in r[2] for r in training)>=100 and sum("opponent_adjusted" in r[2] for r in holdout)>=100:
+   eligible_train=[r for r in training if "opponent_adjusted" in r[2]]
+   eligible_hold=[r for r in holdout if "opponent_adjusted" in r[2]]
+   defensive_train_mae=sum(abs(r[2]["opponent_adjusted"]-r[1]) for r in eligible_train)/len(eligible_train)
+   comparison_mae=sum(abs(r[2]["career_mean"]-r[1]) for r in eligible_train)/len(eligible_train)
+   if defensive_train_mae<comparison_mae:
+    defensive_hold_mae=sum(abs(r[2]["opponent_adjusted"]-r[1]) for r in eligible_hold)/len(eligible_hold)
+    comparison_hold_mae=sum(abs(r[2]["career_mean"]-r[1]) for r in eligible_hold)/len(eligible_hold)
+    if defensive_hold_mae<comparison_hold_mae:
+     summary[market]={"samples":len(records),"holdout_samples":len(eligible_hold),"model":"opponent_adjusted","model_mae":round(defensive_hold_mae,3),"baseline_mae":round(comparison_hold_mae,3),"improved":True,"validation":"Opponent-adjusted trained on earlier games and tested on later holdout; matched opponent-eligible sample"}
+     continue
   selected=min(choices,key=lambda k:sum(abs(r[2][k]-r[1]) for r in training)/len(training))
   mae=lambda data,k:sum(abs(r[2][k]-r[1]) for r in data)/len(data)
   score=mae(holdout,selected);baseline_score=mae(holdout,"career_mean")
@@ -79,11 +97,13 @@ def season_predict(games,market):
   return round((len(this)*current_est+2*previous)/(len(this)+2),2)
  return predict(games,market)
 def projections(rows,validation=None):
+ from nfl_features import team_context,adjusted
+ defensive_index=team_context(rows)
  groups=defaultdict(list)
  for row in rows:groups[row["key"]].append(row)
  result={}
  for name,games in groups.items():
-  market={m:round(candidate(games,m,(validation or {}).get(m,{}).get("model","career_mean")),2) if candidate(games,m,(validation or {}).get(m,{}).get("model","career_mean")) is not None else None for m in FIELDS}
+  market={m:round(candidate(games,m,(validation or {}).get(m,{}).get("model","career_mean") if (validation or {}).get(m,{}).get("model")!="opponent_adjusted" else "career_mean"),2) if candidate(games,m,"career_mean") is not None else None for m in FIELDS}
   if any(v is not None for v in market.values()):
    result[name]={"player":games[-1]["player"],"team":games[-1]["team"],"player_id":games[-1].get("player_id"),"season_games":sum(season_of(g["date"])==season_of(games[-1]["date"]) for g in games),"samples":len(games),"date":games[-1]["date"].isoformat(),"markets":market,
                  "recent":[{"date":g["date"].isoformat(),**g["stats"]} for g in games[-10:]]}
