@@ -49,6 +49,27 @@ def error_profile(rows,model):
             "within_3_pct":round(100*sum(e<=3 for e in errors)/len(errors),2),
             "within_5_pct":round(100*sum(e<=5 for e in errors)/len(errors),2)}
 
+def betting_margin_profile(rows):
+    """Outcome margins measured in stat units from the captured sportsbook line."""
+    wins=[];losses=[];pushes=0
+    for r in rows:
+        margin=(r["actual"]-r["line"])*(1 if r["side"]=="OVER" else -1)
+        if margin>0:wins.append(margin)
+        elif margin<0:losses.append(-margin)
+        else:pushes+=1
+    def stats(values):
+        return {"count":len(values),
+                "average":round(statistics.mean(values),3) if values else None,
+                "median":round(statistics.median(values),3) if values else None,
+                "within_0_5":sum(v<=.5 for v in values),
+                "within_1":sum(v<=1 for v in values),
+                "within_2":sum(v<=2 for v in values),
+                "within_3":sum(v<=3 for v in values),
+                "more_than_5":sum(v>5 for v in values)}
+    return {"wins":stats(wins),"losses":stats(losses),"pushes":pushes,
+            "loss_distance_definition":"Actual result short of winning side of captured sportsbook line; not distance from model projection",
+            "win_distance_definition":"Actual result beyond captured sportsbook line in chosen direction"}
+
 def run():
     history=load(PATHS)
     coeff=json.loads((ROOT/"data/nba_v4_live_coefficients.json").read_text())["markets"]
@@ -86,6 +107,12 @@ def run():
             "overall":{m:summary(matched,m) for m in ("primary","consensus")},
             "by_market":{market:{m:summary([r for r in matched if r["market"]==market],m) for m in ("primary","consensus")} for market in MARKETS},
             "by_date":{day:{m:summary([r for r in matched if r["date"]==day],m) for m in ("primary","consensus")} for day in dates},
+            "betting_margins":{
+                "overall":betting_margin_profile(matched),
+                "by_market":{market:betting_margin_profile([r for r in matched if r["market"]==market]) for market in MARKETS},
+                "by_capture_date":{day:betting_margin_profile([r for r in matched if r["date"]==day]) for day in dates},
+                "note":"The same captured picks and sides were used for primary and consensus. Margins are realized betting outcomes, not a test of consensus-selected bets."
+            },
             "error_analysis":{
                 "overall":{m:error_profile(matched,m) for m in ("primary","challenger","v4","consensus")},
                 "by_market":{market:{m:error_profile([r for r in matched if r["market"]==market],m) for m in ("primary","challenger","v4","consensus")} for market in MARKETS},
