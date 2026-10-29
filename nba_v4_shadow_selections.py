@@ -1,7 +1,7 @@
 """Prospective shadow selection: immutable snapshots of live NBA signals.
 Research only; does not change published picks or grading.
 """
-import datetime,json,os,urllib.request
+import datetime,json,os,urllib.request,urllib.error,time,math
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 DEST=ROOT/"data"/"nba_v4_shadow_selections.json"
@@ -10,7 +10,18 @@ def run():
     existing=json.loads(DEST.read_text()) if DEST.exists() else []
     seen={r["key"] for r in existing}
     req=urllib.request.Request(SITE+"/api/board",headers={"User-Agent":"PropEdge-Prospective-Shadow/1.0","Cache-Control":"no-cache"})
-    with urllib.request.urlopen(req,timeout=30) as resp:board=json.load(resp)
+    board=None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req,timeout=25) as resp:
+                board=json.load(resp)
+            break
+        except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError,ValueError) as exc:
+            print('Board temporarily unavailable',type(exc).__name__,'attempt',attempt+1,flush=True)
+            if attempt<2:time.sleep(8*(attempt+1))
+    if board is None:
+        print('SKIPPED: board unreachable; no snapshots written',flush=True)
+        return
     if not isinstance(board,dict) or not board.get("live") or board.get("error"):
         print("No live verified board; no new shadow selections")
         return
@@ -27,7 +38,7 @@ def run():
         except (ValueError,TypeError,KeyError):continue
         event=str(signal.get("event_id") or "")
         player=str(signal.get("player") or "")
-        if not event or not player or odds==0:continue
+        if not event or not player or odds==0 or not all(map(math.isfinite,(line,projection,odds))):continue
         key="|".join((now[:10],event,player.casefold(),market,side,str(line)))
         if key in seen:continue
         seen.add(key)
