@@ -1,0 +1,32 @@
+name: Test NFL model
+on:
+  pull_request:
+    paths: ['nfl.py','nfl_model.py','sync_nfl_history.py','track_nfl.py','static/nfl.html','.github/workflows/test_nfl_model.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl.py nfl_model.py sync_nfl_history.py track_nfl.py server.py
+      - name: Test leak-free NFL model and isolation
+        run: |
+          python - <<'PY'
+          import datetime
+          from nfl_model import predict,evaluate,summary
+          day=datetime.date(2026,9,1)
+          rows=[{'date':day+datetime.timedelta(days=i),'event_id':str(i),'key':'test','player':'Test','team':'Test','stats':{'REC':float(i)}} for i in range(12)]
+          assert predict(rows[:3],'REC') is None
+          assert predict(rows[:4],'REC') is not None
+          assert evaluate(rows)['REC']['samples']==8
+          from nfl import router
+          paths={r.path for r in router.routes}
+          assert '/api/nfl/historical-model' in paths
+          from server import app
+          paths={getattr(r,'path','') for r in app.routes}
+          assert '/api/board' in paths and '/nfl' in paths
+          print('NFL model, validation, and NBA route isolation verified')
+          PY
