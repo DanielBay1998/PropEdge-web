@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - nba_blend_backtest.py
+      - '.github/workflows/nba_blend_backtest.yml'
       - nba_matchup_features.py
       - nba_defense_backtest.py
       - nba_minutes_backtest.py
