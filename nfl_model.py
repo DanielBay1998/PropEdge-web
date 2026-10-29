@@ -1,5 +1,6 @@
 """NFL-only, walk-forward historical model. Never train on future results."""
 import csv,datetime,json,math
+from functools import lru_cache
 from collections import defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
