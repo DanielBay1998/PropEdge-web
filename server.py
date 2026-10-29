@@ -865,6 +865,21 @@ def availability_context():
     _injury_cache.update(until=now+600,data=result)
     return result
 
+@app.get("/api/nba-defense")
+def nba_defense():
+    """Last verified official NBA.com team defensive ratings; no fabricated fallback."""
+    path=ROOT/"data"/"nba_defense_2026_27.json"
+    if not path.exists():
+        return {"available":False,"reason":"Official NBA defensive ratings have not synced yet.","teams":{}}
+    try:
+        snapshot=json.loads(path.read_text())
+        fetched=datetime.fromisoformat(snapshot["fetched_at"].replace("Z","+00:00"))
+        age=(datetime.now(timezone.utc)-fetched).total_seconds()/3600
+        return {**snapshot,"available":True,"age_hours":round(age,1),
+                "stale":age>36}
+    except (OSError,ValueError,KeyError,TypeError):
+        return {"available":False,"reason":"Defensive ratings snapshot invalid.","teams":{}}
+
 @app.get("/api/board")
 def board():
     with _lock:
