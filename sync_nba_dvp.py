@@ -90,7 +90,9 @@ def main():
      "prior_equivalent_weight":weight,
      "current_weight_pct":round(100*len(new)/(weight+len(new)),1) if weight+len(new) else 0}
    if stats:out[team][pos]=stats
- out={t:p for t,p in out.items() if p}
+ excluded={"Team Stars","Team Stripes","World"}
+ out={t:p for t,p in out.items() if p and t not in excluded}
+ if len(out)>30:raise RuntimeError("Unexpected NBA team keys: "+str(sorted(out)))
  if len(out)<20:raise RuntimeError("Insufficient verified DvP team coverage: "+str(len(out)))
  result={"source":"ESPN completed NBA boxscores + ESPN current roster positions",
  "season":"2026-27","historical_season":"2025-26",
