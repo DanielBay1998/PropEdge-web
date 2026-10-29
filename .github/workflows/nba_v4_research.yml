@@ -1,0 +1,26 @@
+name: NBA V4 research audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_v4_baseline_audit.py
+      - '.github/workflows/nba_v4_research.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile research script
+        run: python -m py_compile nba_v4_baseline_audit.py nba_challenger_model.py
+      - name: Data quality and chronological ridge research
+        run: python nba_v4_baseline_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nba-v4-research-audit
+          path: reports/nba_v4_baseline_audit.json
