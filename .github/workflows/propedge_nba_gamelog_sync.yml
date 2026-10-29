@@ -2,7 +2,7 @@ name: Sync completed NBA boxscores and grade model
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 */2 * * *'
+    - cron: '*/5 * * * *'
   push:
     branches: [main]
     paths:
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
         with:
@@ -27,7 +27,7 @@ jobs:
       - name: Append completed ESPN boxscores only
         run: python sync_final_boxscores.py
       - name: Grade saved pregame predictions against completed games
-        run: python track_model.py
+        run: PROPEDGE_GRADE_ONLY=1 python track_model.py
       - name: Commit validated game logs and grades
         run: |
           set -euo pipefail
