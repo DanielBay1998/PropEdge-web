@@ -1,0 +1,22 @@
+name: Diagnose deployed NFL endpoints
+on:
+  pull_request:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deployed NFL endpoint status and response
+        run: |
+          python - <<'PY'
+          import urllib.request,urllib.error,time
+          base='https://propedge-custom.onrender.com'
+          for path in ('/healthz','/api/nfl/context/coverage','/api/nfl/board'):
+           t=time.monotonic()
+           try:
+            with urllib.request.urlopen(urllib.request.Request(base+path,headers={'User-Agent':'PropEdge-CI-Diagnostic'}),timeout=65) as r:
+             print(path,'HTTP',r.status,'seconds',round(time.monotonic()-t,2),'body',r.read(900).decode(errors='replace'),flush=True)
+           except urllib.error.HTTPError as e:
+            print(path,'HTTP',e.code,'seconds',round(time.monotonic()-t,2),'body',e.read(900).decode(errors='replace'),flush=True)
+           except Exception as e:print(path,type(e).__name__,str(e)[:250],'seconds',round(time.monotonic()-t,2),flush=True)
+          PY
