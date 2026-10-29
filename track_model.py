@@ -4,6 +4,7 @@ Run from GitHub Actions; repository commits preserve history across Render resta
 Never retroactively modify captured projection, line, or side.
 """
 import csv,json,urllib.request,urllib.error,datetime,os,time
+from minutes_shadow_capture import load_history,candidate
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"/"model_tracking.json"
@@ -40,6 +41,7 @@ def run():
   board=None
   if attempt<attempts-1:time.sleep(15*(attempt+1))
  if board and board.get("live") and not board.get("error"):
+  shadow_history=load_history(today().strftime("%Y%m%d"))
   for signal in board.get("signals",[]):
    event=str(signal.get("event_id") or "")
    market=str(signal.get("market") or "")
@@ -59,11 +61,12 @@ def run():
     continue
    key="|".join([event,canonical(player),market,side,str(line)])
    if any(r["id"]==key for r in records):continue
+   shadow=candidate(signal,shadow_history)
    records.append({"id":key,"captured_at":today().isoformat(),"event_id":event,
      "player":player,"market":market,"side":side,"line":line,
      "projection":signal.get("projection"),"book":signal.get("book"),
      "odds":signal.get("odds"),"game":signal.get("game"),"status":"pending",
-     "actual":None,"graded_at":None})
+     "actual":None,"graded_at":None,**(shadow or {})})
  # Match only completed ESPN games to the exact game-log ID.
  # The original tracker used capture UTC date as game date and swallowed a
  # scoreboard exception for the entire batch. Use the actual log dates and
