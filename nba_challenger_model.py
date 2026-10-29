@@ -32,6 +32,9 @@ def load(paths):
 
 def predict(history):
     if len(history)<8:return None
+    # Only observed player games are eligible; do not infer injury or pace data.
+    if any(r.get("minutes") is not None and (r["minutes"]<1 or r["minutes"]>60) for r in history):
+        return None
     recent=history[-8:]; long=history[-30:]
     minute_rows=[r for r in long if r["minutes"] is not None and r["minutes"]>=8]
     projected_minutes=None
