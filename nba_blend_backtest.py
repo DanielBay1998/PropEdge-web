@@ -29,6 +29,13 @@ def run():
         except (TypeError,ValueError,KeyError):continue
         if not all(math.isfinite(x) for x in (actual,primary,line)):continue
         matched+=1
+        matchup={str(t).strip().casefold() for t in str(row.get("game") or "").split(" @ ")}
+        last_team=next((g.get("team") for g in reversed(prior) if g.get("team")),None)
+        if len(matchup)==2 and last_team in matchup:
+            opponent=next(iter(matchup-{last_team}))
+            allowance=prior_allowances(opponent_games,opponent,day)
+            if allowance:
+                defense_matched+=1
         predictions={"primary":primary,"challenger":alt[market],
                      "blend":(primary+alt[market])/2}
         for model,estimate in predictions.items():
