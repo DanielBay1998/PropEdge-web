@@ -27,9 +27,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.459640+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -100,9 +100,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T14:44:44.459701+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|AST|UNDER|6.5",
@@ -356,9 +356,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.459735+00:00"
   },
   {
     "id": "524540|ryanrollins|PTS|OVER|13.5",
@@ -500,9 +500,9 @@
     "book": "betmgm",
     "odds": -200,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T14:44:44.459764+00:00"
   },
   {
     "id": "524520|krisdunn|3PM|UNDER|1.5",
@@ -516,9 +516,9 @@
     "book": "betmgm",
     "odds": -185,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T14:44:44.459791+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -781,9 +781,9 @@
     "book": "betrivers",
     "odds": -114,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 23.0,
+    "graded_at": "2026-10-29T14:44:44.459823+00:00"
   },
   {
     "id": "524538|stephencurry|REB|UNDER|3.5",
@@ -973,9 +973,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.459849+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1014,9 +1014,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T14:44:44.459875+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1055,9 +1055,9 @@
     "book": "betrivers",
     "odds": -112,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 15.0,
+    "graded_at": "2026-10-29T14:44:44.459901+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1112,9 +1112,9 @@
     "book": "betmgm",
     "odds": -135,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T14:44:44.459926+00:00"
   },
   {
     "id": "524538|deanthonymelton|PTS|OVER|10.5",
@@ -1176,9 +1176,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.459948+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1297,9 +1297,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 16.0,
+    "graded_at": "2026-10-29T14:44:44.459971+00:00"
   },
   {
     "id": "524538|joanberinger|REB|UNDER|5.5",
@@ -1329,9 +1329,9 @@
     "book": "betrivers",
     "odds": -107,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T14:44:44.459994+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1450,9 +1450,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T14:44:44.460017+00:00"
   },
   {
     "id": "524539|jalenbrunson|3PM|UNDER|2.5",
@@ -1530,9 +1530,9 @@
     "book": "betrivers",
     "odds": -121,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 31.0,
+    "graded_at": "2026-10-29T14:44:44.460043+00:00"
   },
   {
     "id": "524537|derikqueen|REB|OVER|6.5",
@@ -1578,9 +1578,9 @@
     "book": "betmgm",
     "odds": -155,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T14:44:44.460067+00:00"
   },
   {
     "id": "524539|jalensmith|REB|OVER|6.5",
@@ -1626,9 +1626,9 @@
     "book": "betmgm",
     "odds": -130,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T14:44:44.460090+00:00"
   },
   {
     "id": "524520|dariusgarland|PTS|UNDER|23.5",
@@ -1642,9 +1642,9 @@
     "book": "bovada",
     "odds": -110,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T14:44:44.460112+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1699,9 +1699,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T14:44:44.460136+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1772,9 +1772,9 @@
     "book": "betmgm",
     "odds": 130,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T14:44:44.460158+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1813,9 +1813,9 @@
     "book": "bovada",
     "odds": -120,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T14:44:44.460182+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -1950,9 +1950,9 @@
     "book": "betmgm",
     "odds": -175,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.460204+00:00"
   },
   {
     "id": "524541|isaiahcollier|PTS|OVER|8.5",
@@ -1998,9 +1998,9 @@
     "book": "betrivers",
     "odds": -107,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T14:44:44.460226+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2071,9 +2071,9 @@
     "book": "bovada",
     "odds": 100,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.460248+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2096,9 +2096,9 @@
     "book": "betrivers",
     "odds": -127,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 23.0,
+    "graded_at": "2026-10-29T14:44:44.460270+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|PRA|UNDER|42.5",
@@ -2368,9 +2368,9 @@
     "book": "bovada",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T14:44:44.460293+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2537,9 +2537,9 @@
     "book": "betrivers",
     "odds": -157,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T14:44:44.460316+00:00"
   },
   {
     "id": "524520|krisdunn|PTS|UNDER|9.5",
@@ -2553,9 +2553,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.460337+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2738,9 +2738,9 @@
     "book": "dabble",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T14:44:44.460360+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2811,9 +2811,9 @@
     "book": "bovada",
     "odds": -115,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T14:44:44.460382+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2868,9 +2868,9 @@
     "book": "betrivers",
     "odds": -177,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T14:44:44.460412+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2909,9 +2909,9 @@
     "book": "fanduel",
     "odds": -111,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T14:44:44.460434+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2934,9 +2934,9 @@
     "book": "betrivers",
     "odds": -113,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T14:44:44.460456+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -2975,9 +2975,9 @@
     "book": "betrivers",
     "odds": -122,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T14:44:44.460503+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -3064,9 +3064,9 @@
     "book": "betrivers",
     "odds": -114,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T14:44:44.460534+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -3217,9 +3217,9 @@
     "book": "betrivers",
     "odds": -152,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T14:44:44.460559+00:00"
   },
   {
     "id": "524520|jakelaravia|PRA|UNDER|14.5",
@@ -3233,9 +3233,9 @@
     "book": "courtside",
     "odds": -102,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 12.0,
+    "graded_at": "2026-10-29T14:44:44.460582+00:00"
   },
   {
     "id": "524540|kasparasjakucionis|PTS|OVER|7.5",
@@ -3265,9 +3265,9 @@
     "book": "dabble",
     "odds": 120,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 16.0,
+    "graded_at": "2026-10-29T14:44:44.460605+00:00"
   },
   {
     "id": "524540|reedsheppard|PTS|OVER|11.5",
@@ -3425,9 +3425,9 @@
     "book": "dabble",
     "odds": -128,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.460628+00:00"
   },
   {
     "id": "524538|jadenmcdaniels|PRA|UNDER|25.5",
@@ -3457,9 +3457,9 @@
     "book": "bovada",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T14:44:44.460651+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -3674,9 +3674,9 @@
     "book": "betmgm",
     "odds": -185,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T14:44:44.460673+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -3731,9 +3731,9 @@
     "book": "draftkings",
     "odds": -129,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 12.0,
+    "graded_at": "2026-10-29T14:44:44.460696+00:00"
   },
   {
     "id": "524538|jadenmcdaniels|PTS|UNDER|17.5",
@@ -3779,9 +3779,9 @@
     "book": "dabble",
     "odds": -128,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T14:44:44.460719+00:00"
   },
   {
     "id": "524540|amenthompson|REB|OVER|7.5",
@@ -4051,9 +4051,9 @@
     "book": "kalshi",
     "odds": -163,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T14:44:44.460763+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -4076,9 +4076,9 @@
     "book": "kalshi",
     "odds": -150,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.460785+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -4437,9 +4437,9 @@
     "book": "hardrock",
     "odds": 100,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.460860+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -4542,9 +4542,9 @@
     "book": "betmgm",
     "odds": -135,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 15.0,
+    "graded_at": "2026-10-29T14:44:44.460882+00:00"
   },
   {
     "id": "525120|jaylenwells|PTS|OVER|11.5",
@@ -4654,9 +4654,9 @@
     "book": "betrivers",
     "odds": -124,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T14:44:44.460918+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -4711,9 +4711,9 @@
     "book": "kalshi",
     "odds": -170,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T14:44:44.460941+00:00"
   },
   {
     "id": "524540|tarieason|PTS|UNDER|11.5",
@@ -4759,9 +4759,9 @@
     "book": "dst_propbuilder",
     "odds": -114,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 23.0,
+    "graded_at": "2026-10-29T14:44:44.460971+00:00"
   },
   {
     "id": "525120|tyjerome|AST|OVER|5.5",
@@ -4999,9 +4999,9 @@
     "book": "courtside",
     "odds": 110,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T14:44:44.460999+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5024,9 +5024,9 @@
     "book": "bet99",
     "odds": -130,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 15.0,
+    "graded_at": "2026-10-29T14:44:44.461021+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5049,9 +5049,9 @@
     "book": "hardrock",
     "odds": -175,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T14:44:44.461043+00:00"
   },
   {
     "id": "524520|quentingrimes|PTS|UNDER|13.5",
@@ -5065,9 +5065,9 @@
     "book": "courtside",
     "odds": -127,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 23.0,
+    "graded_at": "2026-10-29T14:44:44.461064+00:00"
   },
   {
     "id": "524520|quentingrimes|PRA|UNDER|19.5",
@@ -5081,9 +5081,9 @@
     "book": "bet99",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 31.0,
+    "graded_at": "2026-10-29T14:44:44.461085+00:00"
   },
   {
     "id": "524520|austinreaves|PRA|UNDER|41.5",
@@ -5097,9 +5097,9 @@
     "book": "draftkings",
     "odds": -121,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 23.0,
+    "graded_at": "2026-10-29T14:44:44.461108+00:00"
   },
   {
     "id": "524520|sandromamukelashvili|PRA|UNDER|19.5",
@@ -5113,9 +5113,9 @@
     "book": "courtside",
     "odds": -116,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 24.0,
+    "graded_at": "2026-10-29T14:44:44.461130+00:00"
   },
   {
     "id": "524520|krisdunn|PRA|UNDER|19.5",
@@ -5129,9 +5129,9 @@
     "book": "bet99",
     "odds": -125,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T14:44:44.461153+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5154,9 +5154,9 @@
     "book": "bet99",
     "odds": -130,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T14:44:44.461176+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5179,9 +5179,9 @@
     "book": "bet99",
     "odds": -105,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T14:44:44.461198+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5204,9 +5204,9 @@
     "book": "bet99",
     "odds": 100,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T14:44:44.461219+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5229,9 +5229,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T14:44:44.461241+00:00"
   },
   {
     "id": "525120|scoothenderson|AST|OVER|1.5",
@@ -5325,9 +5325,9 @@
     "book": "kalshi",
     "odds": -257,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T14:44:44.461292+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
@@ -5510,9 +5510,9 @@
     "book": "bet99",
     "odds": -160,
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null,
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T14:44:44.461373+00:00",
     "validation_status": "invalid_matchup_review",
     "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
     "validation_evidence": [
