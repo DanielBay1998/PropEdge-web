@@ -88,6 +88,10 @@ def game_stats(event_id:str):
 def odds_board():
  from nfl_model import summary, canon
  from nfl_research import athlete_photo
+ from nfl_features import team_context,adjusted,features
+ from nfl_model import history
+ history_rows=history()
+ feature_index=team_context(history_rows)
  model=summary()
  projections=model["projections"]
  validation=model["validation"]
@@ -141,10 +145,17 @@ def odds_board():
    if len(q["books"])<2:continue
    info=projections.get(canon(player))
    projection=(info or {}).get("markets",{}).get(code)
+   opponent=next((t for t in (str(event.get("away_team") or ""),str(event.get("home_team") or "")) if t and t!=(info or {}).get("team")),None)
+   advanced={}
+   if info and code in ("PASS_YDS","RUSH_YDS","REC_YDS","REC","PASS_TD","RUSH_TD"):
+    player_history=[r for r in history_rows if r["key"]==canon(player)]
+    kickoff_date=datetime.datetime.fromisoformat(str(event.get("commence_time") or event.get("start_time")).replace("Z","+00:00")).date()
+    projected,advanced=adjusted(player_history,code,opponent,kickoff_date,feature_index)
+    if validation.get(code,{}).get("model")=="opponent_adjusted" and projected is not None and advanced.get("defense_games",0)>=4:projection=projected
    audit=validation.get(code,{})
    validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved"))
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
-   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
+   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
    if validated and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
