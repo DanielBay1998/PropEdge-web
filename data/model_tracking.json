@@ -29,7 +29,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524537|saddiqbey|3PM|OVER|1.5",
@@ -509,7 +518,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|julianchampagnie|PTS|OVER|9.5",
@@ -957,7 +975,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524537|zionwilliamson|REB|UNDER|5.5",
@@ -989,7 +1016,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524540|amenthompson|AST|UNDER|5.5",
@@ -1021,7 +1057,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|acebailey|PTS|OVER|13.5",
@@ -1133,7 +1178,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524540|reedsheppard|AST|OVER|3.5",
@@ -1277,7 +1331,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524540|ryanrollins|PRA|OVER|22.5",
@@ -1581,7 +1644,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|jaxsonhayes|PTS|OVER|9.5",
@@ -1629,7 +1701,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524538|deanthonymelton|REB|OVER|2.5",
@@ -1693,7 +1774,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524519|isaiahhartenstein|REB|UNDER|9.5",
@@ -1725,7 +1815,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524540|jaimejaquez|PTS|OVER|14.5",
@@ -1901,7 +2000,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524539|mikalbridges|PTS|UNDER|11.5",
@@ -1965,7 +2073,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|austinreaves|PRA|UNDER|40.5",
@@ -2253,7 +2370,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524538|jonathankuminga|PTS|UNDER|15.5",
@@ -2429,7 +2555,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524537|dejountemurray|AST|OVER|5.5",
@@ -2605,7 +2740,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524519|cooperflagg|REB|UNDER|7.5",
@@ -2669,7 +2813,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|keyontegeorge|3PM|OVER|1.5",
@@ -2717,7 +2870,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524519|kenrichwilliams|REB|UNDER|4.5",
@@ -2749,7 +2911,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|krisdunn|PRA|UNDER|18.5",
@@ -2765,7 +2936,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524539|normanpowell|REB|UNDER|3.5",
@@ -2797,7 +2977,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524538|deanthonymelton|PRA|OVER|15.5",
@@ -2877,7 +3066,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|devinvassell|AST|OVER|2.5",
@@ -3261,7 +3459,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524539|matasbuzelis|PRA|OVER|21.5",
@@ -3469,7 +3676,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524537|jamalmurray|AST|OVER|5.5",
@@ -3837,7 +4053,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|brooklopez|PTS|OVER|9.5",
@@ -3853,7 +4078,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524537|deandrejordan|REB|UNDER|6.5",
@@ -4205,7 +4439,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524541|dylanharper|REB|UNDER|5.5",
@@ -4413,7 +4656,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524540|jaimejaquez|PRA|OVER|22.5",
@@ -4749,7 +5001,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|derrickjones|PTS|UNDER|12.5",
@@ -4765,7 +5026,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|collinsexton|REB|OVER|1.5",
@@ -4861,7 +5131,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|brooklopez|PRA|OVER|17.5",
@@ -4877,7 +5156,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|isaiahjackson|PRA|UNDER|18.5",
@@ -4893,7 +5181,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|brooklopez|PTS|OVER|12.5",
@@ -4909,7 +5206,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "524520|sandromamukelashvili|PTS|UNDER|12.5",
@@ -5021,7 +5327,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "525120|donovanclingan|AST|OVER|1.5",
@@ -5197,7 +5512,16 @@
     "game": "Los Angeles Lakers @ Los Angeles Clippers",
     "status": "pending",
     "actual": null,
-    "graded_at": null
+    "graded_at": null,
+    "validation_status": "invalid_matchup_review",
+    "validation_reason": "Player appears in completed boxscore for a different team in capture window; verify game identity before grading",
+    "validation_evidence": [
+      {
+        "game_id": "401909892",
+        "team": "LA Clippers",
+        "date": "20261028"
+      }
+    ]
   },
   {
     "id": "525120|jrueholiday|REB|OVER|3.5",
@@ -5882,6 +6206,678 @@
     "projection": 24.56,
     "book": "dabble",
     "odds": -105,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|preciousachiuwa|PTS|OVER|10.5",
+    "captured_at": "2026-10-29T14:32:54.349405+00:00",
+    "event_id": "525119",
+    "player": "Precious Achiuwa",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 10.5,
+    "projection": 13.06,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zachlavine|REB|UNDER|3.5",
+    "captured_at": "2026-10-29T14:32:54.349447+00:00",
+    "event_id": "525119",
+    "player": "Zach LaVine",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 3.5,
+    "projection": 2.82,
+    "book": "bet99",
+    "odds": -170,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jamorant|REB|UNDER|3.5",
+    "captured_at": "2026-10-29T14:32:54.349477+00:00",
+    "event_id": "525120",
+    "player": "Ja Morant",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 3.5,
+    "projection": 2.87,
+    "book": "bet99",
+    "odds": -145,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|dejountemurray|AST|OVER|5.5",
+    "captured_at": "2026-10-29T14:32:54.349675+00:00",
+    "event_id": "525119",
+    "player": "Dejounte Murray",
+    "market": "AST",
+    "side": "OVER",
+    "line": 5.5,
+    "projection": 6.53,
+    "book": "betmgm",
+    "odds": -150,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|deandrehunter|PTS|UNDER|11.5",
+    "captured_at": "2026-10-29T14:32:54.349777+00:00",
+    "event_id": "525119",
+    "player": "De'Andre Hunter",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 11.5,
+    "projection": 10.39,
+    "book": "betrivers",
+    "odds": -106,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|treymurphyiii|REB|OVER|4.5",
+    "captured_at": "2026-10-29T14:32:54.349802+00:00",
+    "event_id": "525119",
+    "player": "Trey Murphy III",
+    "market": "REB",
+    "side": "OVER",
+    "line": 4.5,
+    "projection": 5.23,
+    "book": "bet99",
+    "odds": 110,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|jeremiahfears|REB|OVER|2.5",
+    "captured_at": "2026-10-29T14:32:54.349846+00:00",
+    "event_id": "525119",
+    "player": "Jeremiah Fears",
+    "market": "REB",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.93,
+    "book": "betmgm",
+    "odds": -160,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jaylenwells|REB|OVER|2.5",
+    "captured_at": "2026-10-29T14:32:54.349870+00:00",
+    "event_id": "525120",
+    "player": "Jaylen Wells",
+    "market": "REB",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.58,
+    "book": "betmgm",
+    "odds": -155,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jarrettallen|PTS|OVER|13.5",
+    "captured_at": "2026-10-29T14:32:54.349989+00:00",
+    "event_id": "525118",
+    "player": "Jarrett Allen",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 13.5,
+    "projection": 15.23,
+    "book": "betmgm",
+    "odds": -115,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jamesharden|PRA|OVER|28.5",
+    "captured_at": "2026-10-29T14:32:54.350013+00:00",
+    "event_id": "525118",
+    "player": "James Harden",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 28.5,
+    "projection": 31.52,
+    "book": "betrivers",
+    "odds": -109,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|cjmccollum|PTS|OVER|15.5",
+    "captured_at": "2026-10-29T14:32:54.350037+00:00",
+    "event_id": "525118",
+    "player": "CJ McCollum",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 15.5,
+    "projection": 18.51,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zachlavine|PRA|UNDER|28.5",
+    "captured_at": "2026-10-29T14:32:54.350080+00:00",
+    "event_id": "525119",
+    "player": "Zach LaVine",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 28.5,
+    "projection": 25.77,
+    "book": "betrivers",
+    "odds": -125,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|robertwilliamsiii|PTS|OVER|6.5",
+    "captured_at": "2026-10-29T14:32:54.350127+00:00",
+    "event_id": "525120",
+    "player": "Robert Williams III",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 6.5,
+    "projection": 8.12,
+    "book": "betrivers",
+    "odds": -110,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|PTS|OVER|18.5",
+    "captured_at": "2026-10-29T14:32:54.350169+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 18.5,
+    "projection": 20.79,
+    "book": "dst_propbuilder",
+    "odds": -105,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|toumanicamara|PRA|OVER|16.5",
+    "captured_at": "2026-10-29T14:32:54.350233+00:00",
+    "event_id": "525120",
+    "player": "Toumani Camara",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 16.5,
+    "projection": 21.22,
+    "book": "bet99",
+    "odds": -110,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|donovanmitchell|PTS|OVER|24.5",
+    "captured_at": "2026-10-29T14:32:54.350257+00:00",
+    "event_id": "525118",
+    "player": "Donovan Mitchell",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 24.5,
+    "projection": 26.74,
+    "book": "betmgm",
+    "odds": -105,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|deandrehunter|PRA|UNDER|18.5",
+    "captured_at": "2026-10-29T14:32:54.350301+00:00",
+    "event_id": "525119",
+    "player": "De'Andre Hunter",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 18.5,
+    "projection": 15.95,
+    "book": "bet99",
+    "odds": -110,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|domantassabonis|PRA|UNDER|39.5",
+    "captured_at": "2026-10-29T14:32:54.350344+00:00",
+    "event_id": "525119",
+    "player": "Domantas Sabonis",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 39.5,
+    "projection": 34.76,
+    "book": "bovada",
+    "odds": -115,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|domantassabonis|REB|UNDER|14.5",
+    "captured_at": "2026-10-29T14:32:54.350368+00:00",
+    "event_id": "525119",
+    "player": "Domantas Sabonis",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 14.5,
+    "projection": 12.99,
+    "book": "bet99",
+    "odds": -135,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|donovanclingan|PRA|OVER|22.5",
+    "captured_at": "2026-10-29T14:32:54.350392+00:00",
+    "event_id": "525120",
+    "player": "Donovan Clingan",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 22.5,
+    "projection": 24.77,
+    "book": "bovada",
+    "odds": -125,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|evanmobley|REB|OVER|8.5",
+    "captured_at": "2026-10-29T14:32:54.350458+00:00",
+    "event_id": "525118",
+    "player": "Evan Mobley",
+    "market": "REB",
+    "side": "OVER",
+    "line": 8.5,
+    "projection": 9.26,
+    "book": "bovada",
+    "odds": -145,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jrueholiday|PRA|OVER|20.5",
+    "captured_at": "2026-10-29T14:32:54.350483+00:00",
+    "event_id": "525120",
+    "player": "Jrue Holiday",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 20.5,
+    "projection": 25.78,
+    "book": "betrivers",
+    "odds": 102,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jaylenwells|PRA|OVER|15.5",
+    "captured_at": "2026-10-29T14:32:54.350510+00:00",
+    "event_id": "525120",
+    "player": "Jaylen Wells",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 15.5,
+    "projection": 18.91,
+    "book": "bet99",
+    "odds": -130,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|toumanicamara|PTS|OVER|11.5",
+    "captured_at": "2026-10-29T14:32:54.350535+00:00",
+    "event_id": "525120",
+    "player": "Toumani Camara",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 11.5,
+    "projection": 15.65,
+    "book": "bovada",
+    "odds": -110,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jamorant|AST|OVER|5.5",
+    "captured_at": "2026-10-29T14:32:54.350577+00:00",
+    "event_id": "525120",
+    "player": "Ja Morant",
+    "market": "AST",
+    "side": "OVER",
+    "line": 5.5,
+    "projection": 7.01,
+    "book": "bet99",
+    "odds": 100,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|toumanicamara|PRA|OVER|17.5",
+    "captured_at": "2026-10-29T14:32:54.350605+00:00",
+    "event_id": "525120",
+    "player": "Toumani Camara",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 17.5,
+    "projection": 21.22,
+    "book": "betrivers",
+    "odds": 104,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jalenjohnson|AST|OVER|6.5",
+    "captured_at": "2026-10-29T14:32:54.350655+00:00",
+    "event_id": "525118",
+    "player": "Jalen Johnson",
+    "market": "AST",
+    "side": "OVER",
+    "line": 6.5,
+    "projection": 7.96,
+    "book": "bet99",
+    "odds": -150,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|preciousachiuwa|PRA|OVER|19.5",
+    "captured_at": "2026-10-29T14:32:54.350699+00:00",
+    "event_id": "525119",
+    "player": "Precious Achiuwa",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 19.5,
+    "projection": 21.55,
+    "book": "bet99",
+    "odds": -120,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jaylontyson|PTS|OVER|7.5",
+    "captured_at": "2026-10-29T14:32:54.350742+00:00",
+    "event_id": "525118",
+    "player": "Jaylon Tyson",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 7.5,
+    "projection": 10.94,
+    "book": "bet99",
+    "odds": -135,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jaylontyson|PRA|OVER|13.5",
+    "captured_at": "2026-10-29T14:32:54.350788+00:00",
+    "event_id": "525118",
+    "player": "Jaylon Tyson",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 13.5,
+    "projection": 17.7,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|deandrehunter|PTS|UNDER|12.5",
+    "captured_at": "2026-10-29T14:32:54.350818+00:00",
+    "event_id": "525119",
+    "player": "De'Andre Hunter",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 12.5,
+    "projection": 10.39,
+    "book": "bet99",
+    "odds": -130,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|luguentzdort|PTS|OVER|6.5",
+    "captured_at": "2026-10-29T14:32:54.350843+00:00",
+    "event_id": "525118",
+    "player": "Luguentz Dort",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 6.5,
+    "projection": 7.51,
+    "book": "bet99",
+    "odds": -130,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jaylontyson|AST|OVER|1.5",
+    "captured_at": "2026-10-29T14:32:54.350954+00:00",
+    "event_id": "525118",
+    "player": "Jaylon Tyson",
+    "market": "AST",
+    "side": "OVER",
+    "line": 1.5,
+    "projection": 2.77,
+    "book": "bet99",
+    "odds": -180,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|isaiahstewart|PTS|OVER|4.5",
+    "captured_at": "2026-10-29T14:32:54.350984+00:00",
+    "event_id": "525120",
+    "player": "Isaiah Stewart",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 4.5,
+    "projection": 8.19,
+    "book": "bet99",
+    "odds": -130,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jocklandale|AST|OVER|1.5",
+    "captured_at": "2026-10-29T14:32:54.351009+00:00",
+    "event_id": "525118",
+    "player": "Jock Landale",
+    "market": "AST",
+    "side": "OVER",
+    "line": 1.5,
+    "projection": 2.36,
+    "book": "bet99",
+    "odds": 100,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|REB|OVER|2.5",
+    "captured_at": "2026-10-29T14:32:54.351034+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "REB",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.5,
+    "book": "bet99",
+    "odds": -160,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|sammerrill|REB|OVER|2.5",
+    "captured_at": "2026-10-29T14:32:54.351077+00:00",
+    "event_id": "525118",
+    "player": "Sam Merrill",
+    "market": "REB",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.26,
+    "book": "bet99",
+    "odds": 135,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|PRA|OVER|23.5",
+    "captured_at": "2026-10-29T14:32:54.351102+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 23.5,
+    "projection": 28.31,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|deandrehunter|PRA|UNDER|19.5",
+    "captured_at": "2026-10-29T14:32:54.351127+00:00",
+    "event_id": "525119",
+    "player": "De'Andre Hunter",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 19.5,
+    "projection": 15.95,
+    "book": "fanatics",
+    "odds": -125,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|dejountemurray|PTS|OVER|16.5",
+    "captured_at": "2026-10-29T14:32:54.351155+00:00",
+    "event_id": "525119",
+    "player": "Dejounte Murray",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 16.5,
+    "projection": 18.45,
+    "book": "courtside",
+    "odds": -122,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|peytonwatson|PRA|UNDER|22.5",
+    "captured_at": "2026-10-29T14:32:54.351181+00:00",
+    "event_id": "525118",
+    "player": "Peyton Watson",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 22.5,
+    "projection": 20.33,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|peytonwatson|PTS|UNDER|15.5",
+    "captured_at": "2026-10-29T14:32:54.351226+00:00",
+    "event_id": "525118",
+    "player": "Peyton Watson",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 15.5,
+    "projection": 14.06,
+    "book": "bet99",
+    "odds": -120,
     "game": "Cleveland Cavaliers @ Atlanta Hawks",
     "status": "pending",
     "actual": null,
