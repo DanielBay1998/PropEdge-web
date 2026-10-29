@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - 'sync_final_boxscores.py'
+      - 'track_model.py'
       - '.github/workflows/propedge_nba_gamelog_sync.yml'
 permissions:
   contents: write
@@ -24,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Verify NBA identity regression tests
+        run: python -m unittest test_nba_identity_guard.py
       - name: Append completed ESPN boxscores only
         run: python sync_final_boxscores.py
       - name: Grade saved pregame predictions against completed games
