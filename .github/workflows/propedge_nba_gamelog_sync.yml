@@ -1,66 +1,43 @@
-name: Sync NBA Game Logs to PropEdge Web
-
+name: Sync completed NBA boxscores and grade model
 on:
   workflow_dispatch:
   schedule:
-    # After the original repo's 11:37 UTC daily refresh
-    - cron: '17 12 * * *'
-
+    - cron: '17 */2 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'sync_final_boxscores.py'
+      - '.github/workflows/propedge_nba_gamelog_sync.yml'
 permissions:
   contents: write
-
 concurrency:
   group: propedge-web-nba-gamelog-sync
   cancel-in-progress: false
-
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
-      - name: Checkout PropEdge-web
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          persist-credentials: true
-
-      - name: Fetch latest NBA game logs from private source
-        env:
-          SOURCE_REPO_TOKEN: ${{ secrets.SOURCE_REPO_TOKEN }}
-        run: |
-          set -euo pipefail
-          test -n "${SOURCE_REPO_TOKEN:-}" || { echo 'Missing SOURCE_REPO_TOKEN' >&2; exit 1; }
-          mkdir -p data
-          curl --fail-with-body --silent --show-error --location \
-            --retry 3 \
-            --header "Authorization: Bearer ${SOURCE_REPO_TOKEN}" \
-            --header 'Accept: application/vnd.github.raw+json' \
-            'https://api.github.com/repos/DanielBay1998/Prop-/contents/data/nba_2026_27.csv?ref=main' \
-            --output /tmp/nba_2026_27.csv
-          python - <<'PY'
-          import csv
-          from pathlib import Path
-          p = Path('/tmp/nba_2026_27.csv')
-          with p.open(newline='', encoding='utf-8-sig') as f:
-              reader = csv.DictReader(f)
-              required = {'Game ID','Date','Player','Team','PTS','REB','AST','3PM'}
-              assert reader.fieldnames and required.issubset(reader.fieldnames), 'Unexpected game-log columns'
-              rows = list(reader)
-              assert len(rows) > 100, 'Too few game-log rows; refusing to publish'
-              assert all(r['Player'].strip() and r['Date'].strip() for r in rows), 'Missing player/date'
-              print(f'Validated {len(rows)} NBA game-log rows')
-          PY
-          cp /tmp/nba_2026_27.csv data/nba_2026_27.csv
-
-      - name: Commit changed logs
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Append completed ESPN boxscores only
+        run: python sync_final_boxscores.py
+      - name: Grade saved pregame predictions against completed games
+        run: python track_model.py
+      - name: Commit validated game logs and grades
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/nba_2026_27.csv
-          if git diff --cached --quiet; then
-            echo 'Game logs unchanged'
-          else
-            git commit -m 'Data: sync latest NBA game logs'
+          git add data/nba_2026_27.csv data/model_tracking.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
             git push origin HEAD:main
+          else
+            echo 'No new final boxscores or grades'
           fi
