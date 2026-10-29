@@ -1,0 +1,79 @@
+{
+  "status": "RESEARCH_ONLY_NO_BET_FILTER",
+  "validation_start": "20250327",
+  "holdout_start": "20260110",
+  "thresholds_from_validation": {
+    "points_std": 5.214,
+    "minutes_std": 5.387
+  },
+  "validation": {
+    "all": {
+      "n": 14442,
+      "pts_mae": 4.807,
+      "pts_bias": 0.26,
+      "miss_over_5_pct": 38.67
+    },
+    "high_pts_volatility": {
+      "n": 7214,
+      "pts_mae": 5.511,
+      "pts_bias": 0.429,
+      "miss_over_5_pct": 47.13
+    },
+    "low_pts_volatility": {
+      "n": 7228,
+      "pts_mae": 4.104,
+      "pts_bias": 0.091,
+      "miss_over_5_pct": 30.23
+    },
+    "high_minutes_volatility": {
+      "n": 7218,
+      "pts_mae": 4.706,
+      "pts_bias": 0.311,
+      "miss_over_5_pct": 37.92
+    },
+    "low_minutes_volatility": {
+      "n": 7221,
+      "pts_mae": 4.909,
+      "pts_bias": 0.208,
+      "miss_over_5_pct": 39.44
+    }
+  },
+  "holdout": {
+    "all": {
+      "n": 15335,
+      "pts_mae": 4.785,
+      "pts_bias": 0.229,
+      "miss_over_5_pct": 38.27
+    },
+    "high_pts_volatility": {
+      "n": 7086,
+      "pts_mae": 5.567,
+      "pts_bias": 0.525,
+      "miss_over_5_pct": 47.12
+    },
+    "low_pts_volatility": {
+      "n": 8249,
+      "pts_mae": 4.114,
+      "pts_bias": -0.025,
+      "miss_over_5_pct": 30.66
+    },
+    "high_minutes_volatility": {
+      "n": 7131,
+      "pts_mae": 4.723,
+      "pts_bias": 0.088,
+      "miss_over_5_pct": 37.9
+    },
+    "low_minutes_volatility": {
+      "n": 8204,
+      "pts_mae": 4.84,
+      "pts_bias": 0.352,
+      "miss_over_5_pct": 38.58
+    }
+  },
+  "limitations": [
+    "Historical points and minutes only; no field-goal attempts, 3PA or true usage data.",
+    "Player-game projection errors, not captured-odds betting ROI.",
+    "Volatility thresholds are exploratory; not validated for profitability.",
+    "No changes to production NBA or NFL models."
+  ]
+}
