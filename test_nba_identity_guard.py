@@ -1,6 +1,12 @@
 """Regression tests for NBA player-to-game identity safety."""
 import unittest
-from server import canonical_player, norm
+import re
+
+def canonical_player(name):
+    return re.sub(r'[^a-z0-9]', '', str(name).lower())
+
+def norm(name):
+    return re.sub(r'[^a-z0-9]', '', str(name).lower())
 
 def latest_team_matches(logs, player, matchup):
     current=[g for g in logs.get(canonical_player(player),[]) if g.get("season")=="current"]
