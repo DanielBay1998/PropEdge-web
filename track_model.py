@@ -59,10 +59,14 @@ def run():
    if len(matchup)!=2 or not latest or latest not in {team_key(t) for t in matchup}:
     print("Capture rejected: mismatched player/team identity",player,event,flush=True)
     continue
-   key="|".join([event,canonical(player),market,side,str(line)])
-   if any(r["id"]==key for r in records):continue
+   captured= today()
+   # Preserve independent pregame capture dates; don't overwrite the historical
+   # record or create unlimited duplicate entries from repeated refreshes.
+   capture_day=captured.strftime("%Y%m%d")
+   key="|".join([capture_day,event,canonical(player),market,side,str(line)])
+   if any(r.get("id")==key for r in records):continue
    shadow=candidate(signal,shadow_history)
-   records.append({"id":key,"captured_at":today().isoformat(),"event_id":event,
+   records.append({"id":key,"captured_at":captured.isoformat(),"event_id":event,
      "player":player,"market":market,"side":side,"line":line,
      "projection":signal.get("projection"),"book":signal.get("book"),
      "odds":signal.get("odds"),"game":signal.get("game"),"status":"pending",
