@@ -1,0 +1,119 @@
+{
+  "status": "RESEARCH_ONLY_NO_PROMOTION",
+  "split": {
+    "train_before": "20250323",
+    "validation_before": "20260108",
+    "test_from": "20260108"
+  },
+  "training_examples": 207935,
+  "validation_examples": 72530,
+  "test_examples": 76660,
+  "markets": {
+    "PTS": {
+      "validation_n": 14506,
+      "test_n": 15332,
+      "selected_on_validation": "challenger",
+      "validation_mae": {
+        "challenger": 4.8555,
+        "rate_0.25": 4.9291,
+        "rate_0.5": 4.9649,
+        "rate_0.75": 5.028
+      },
+      "holdout_mae": {
+        "challenger": 4.817,
+        "rate_0.25": 4.8912,
+        "rate_0.5": 4.9254,
+        "rate_0.75": 4.982
+      },
+      "selected_holdout_mae": 4.817,
+      "challenger_holdout_mae": 4.817,
+      "holdout_improvement": 0.0
+    },
+    "REB": {
+      "validation_n": 14506,
+      "test_n": 15332,
+      "selected_on_validation": "challenger",
+      "validation_mae": {
+        "challenger": 1.9991,
+        "rate_0.25": 2.0378,
+        "rate_0.5": 2.0575,
+        "rate_0.75": 2.0874
+      },
+      "holdout_mae": {
+        "challenger": 1.9646,
+        "rate_0.25": 2.0042,
+        "rate_0.5": 2.018,
+        "rate_0.75": 2.0423
+      },
+      "selected_holdout_mae": 1.9646,
+      "challenger_holdout_mae": 1.9646,
+      "holdout_improvement": 0.0
+    },
+    "AST": {
+      "validation_n": 14506,
+      "test_n": 15332,
+      "selected_on_validation": "challenger",
+      "validation_mae": {
+        "challenger": 1.3877,
+        "rate_0.25": 1.4044,
+        "rate_0.5": 1.4128,
+        "rate_0.75": 1.4301
+      },
+      "holdout_mae": {
+        "challenger": 1.4164,
+        "rate_0.25": 1.4358,
+        "rate_0.5": 1.4472,
+        "rate_0.75": 1.4675
+      },
+      "selected_holdout_mae": 1.4164,
+      "challenger_holdout_mae": 1.4164,
+      "holdout_improvement": 0.0
+    },
+    "3PM": {
+      "validation_n": 14506,
+      "test_n": 15332,
+      "selected_on_validation": "challenger",
+      "validation_mae": {
+        "challenger": 0.9312,
+        "rate_0.25": 0.9443,
+        "rate_0.5": 0.9534,
+        "rate_0.75": 0.9675
+      },
+      "holdout_mae": {
+        "challenger": 0.9225,
+        "rate_0.25": 0.9336,
+        "rate_0.5": 0.9418,
+        "rate_0.75": 0.9552
+      },
+      "selected_holdout_mae": 0.9225,
+      "challenger_holdout_mae": 0.9225,
+      "holdout_improvement": 0.0
+    },
+    "PRA": {
+      "validation_n": 14506,
+      "test_n": 15332,
+      "selected_on_validation": "challenger",
+      "validation_mae": {
+        "challenger": 6.4173,
+        "rate_0.25": 6.5323,
+        "rate_0.5": 6.5678,
+        "rate_0.75": 6.6301
+      },
+      "holdout_mae": {
+        "challenger": 6.3931,
+        "rate_0.25": 6.507,
+        "rate_0.5": 6.5351,
+        "rate_0.75": 6.5882
+      },
+      "selected_holdout_mae": 6.3931,
+      "challenger_holdout_mae": 6.3931,
+      "holdout_improvement": 0.0
+    }
+  },
+  "limitations": [
+    "Only historical per-minute scoring rates and minutes; shot volume, possession usage, confirmed injuries, and matchup defense are not available in this experiment.",
+    "Validation selects candidate; holdout is never used for selection.",
+    "This is not a head-to-head against the three-model production consensus or captured odds.",
+    "No betting ROI claim and no changes to live NBA/NFL models."
+  ]
+}
