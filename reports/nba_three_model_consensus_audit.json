@@ -1,0 +1,166 @@
+{
+  "status": "RETROSPECTIVE_RESEARCH_ONLY_NOT_PROSPECTIVE",
+  "matched": 258,
+  "capture_dates": [
+    "20261028",
+    "20261029"
+  ],
+  "excluded": {
+    "identity_review": 36,
+    "pending": 191
+  },
+  "overall": {
+    "primary": {
+      "eligible_bets": 258,
+      "wins": 132,
+      "losses": 126,
+      "pushes": 0,
+      "flat_stake_roi_pct": -9.36,
+      "mean_absolute_error_on_all_matched": 4.0429
+    },
+    "consensus": {
+      "eligible_bets": 258,
+      "wins": 132,
+      "losses": 126,
+      "pushes": 0,
+      "flat_stake_roi_pct": -9.36,
+      "mean_absolute_error_on_all_matched": 3.9707
+    }
+  },
+  "by_market": {
+    "PTS": {
+      "primary": {
+        "eligible_bets": 79,
+        "wins": 32,
+        "losses": 47,
+        "pushes": 0,
+        "flat_stake_roi_pct": -24.55,
+        "mean_absolute_error_on_all_matched": 5.7613
+      },
+      "consensus": {
+        "eligible_bets": 79,
+        "wins": 32,
+        "losses": 47,
+        "pushes": 0,
+        "flat_stake_roi_pct": -24.55,
+        "mean_absolute_error_on_all_matched": 5.6702
+      }
+    },
+    "REB": {
+      "primary": {
+        "eligible_bets": 62,
+        "wins": 35,
+        "losses": 27,
+        "pushes": 0,
+        "flat_stake_roi_pct": -2.34,
+        "mean_absolute_error_on_all_matched": 2.4534
+      },
+      "consensus": {
+        "eligible_bets": 62,
+        "wins": 35,
+        "losses": 27,
+        "pushes": 0,
+        "flat_stake_roi_pct": -2.34,
+        "mean_absolute_error_on_all_matched": 2.412
+      }
+    },
+    "AST": {
+      "primary": {
+        "eligible_bets": 41,
+        "wins": 26,
+        "losses": 15,
+        "pushes": 0,
+        "flat_stake_roi_pct": 8.8,
+        "mean_absolute_error_on_all_matched": 1.7154
+      },
+      "consensus": {
+        "eligible_bets": 41,
+        "wins": 26,
+        "losses": 15,
+        "pushes": 0,
+        "flat_stake_roi_pct": 8.8,
+        "mean_absolute_error_on_all_matched": 1.7177
+      }
+    },
+    "3PM": {
+      "primary": {
+        "eligible_bets": 29,
+        "wins": 12,
+        "losses": 17,
+        "pushes": 0,
+        "flat_stake_roi_pct": -34.43,
+        "mean_absolute_error_on_all_matched": 1.3845
+      },
+      "consensus": {
+        "eligible_bets": 29,
+        "wins": 12,
+        "losses": 17,
+        "pushes": 0,
+        "flat_stake_roi_pct": -34.43,
+        "mean_absolute_error_on_all_matched": 1.3582
+      }
+    },
+    "PRA": {
+      "primary": {
+        "eligible_bets": 47,
+        "wins": 27,
+        "losses": 20,
+        "pushes": 0,
+        "flat_stake_roi_pct": 6.56,
+        "mean_absolute_error_on_all_matched": 6.9219
+      },
+      "consensus": {
+        "eligible_bets": 47,
+        "wins": 27,
+        "losses": 20,
+        "pushes": 0,
+        "flat_stake_roi_pct": 6.56,
+        "mean_absolute_error_on_all_matched": 6.7477
+      }
+    }
+  },
+  "by_date": {
+    "20261028": {
+      "primary": {
+        "eligible_bets": 252,
+        "wins": 130,
+        "losses": 122,
+        "pushes": 0,
+        "flat_stake_roi_pct": -8.55,
+        "mean_absolute_error_on_all_matched": 3.9416
+      },
+      "consensus": {
+        "eligible_bets": 252,
+        "wins": 130,
+        "losses": 122,
+        "pushes": 0,
+        "flat_stake_roi_pct": -8.55,
+        "mean_absolute_error_on_all_matched": 3.889
+      }
+    },
+    "20261029": {
+      "primary": {
+        "eligible_bets": 6,
+        "wins": 2,
+        "losses": 4,
+        "pushes": 0,
+        "flat_stake_roi_pct": -43.37,
+        "mean_absolute_error_on_all_matched": 8.2967
+      },
+      "consensus": {
+        "eligible_bets": 6,
+        "wins": 2,
+        "losses": 4,
+        "pushes": 0,
+        "flat_stake_roi_pct": -43.37,
+        "mean_absolute_error_on_all_matched": 7.4043
+      }
+    }
+  },
+  "limitations": [
+    "V4 coefficients were trained using games through coefficient timestamp, which can overlap these retrospective test dates: this is IN-SAMPLE and cannot justify production promotion.",
+    "Opposite-side sportsbook prices were not captured; only originally captured side can be evaluated.",
+    "Consensus predictions were reconstructed retrospectively, not stored before games.",
+    "No live betting qualification or ranking changes."
+  ]
+}
