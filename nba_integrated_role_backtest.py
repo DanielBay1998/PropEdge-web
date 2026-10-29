@@ -60,6 +60,9 @@ def run():
         for i,target in enumerate(rows):
             day=target["date"];prior=[r for r in rows[:i] if r["date"]<day]
             if len(prior)<8 or predict(prior) is None:continue
+            # The integrated forecast requires eight *observed* minute games.
+            # Skip ineligible rows instead of scoring a missing prediction.
+            if sum(1 for row in prior[-12:] if row.get("minutes") is not None and row["minutes"]>=8)<8:continue
             pair=game_teams.get((day,target.get("game_id")))
             if not pair or len(pair)!=2 or target.get("team") not in pair:continue
             opponent=next(iter(pair-{target["team"]}))
@@ -87,11 +90,13 @@ def run():
       {"minutes":.5,"role":.25,"absence":.01,"matchup":.3},
       {"minutes":0,"role":0,"absence":0,"matchup":.3}]
     def error(rows,m,w):
-        total=0
+        total=0.0;count=0
         for day,prior,target,t,opp,league in rows:
             p=forecast(prior,t,opp,league,w)
-            total+=abs(p[m]-target[m])
-        return total/len(rows)
+            if p is None:continue
+            total+=abs(p[m]-target[m]);count+=1
+        if count==0:raise ValueError("No eligible integrated-role predictions for "+m)
+        return total/count
     selected={m:min(range(len(candidates)),key=lambda i:error(train,m,candidates[i])) for m in MARKETS}
     report={"status":"RESEARCH_ONLY_NOT_PROMOTED","holdout_start":split,
             "training_player_games":len(train),"holdout_player_games":len(hold),
