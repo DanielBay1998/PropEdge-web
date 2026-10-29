@@ -1,0 +1,29 @@
+name: NBA minutes versus production rate attribution
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'nba_minutes_rate_attribution.py'
+      - '.github/workflows/nba_minutes_rate_attribution.yml'
+  schedule:
+    - cron: '51 12 * * *'
+permissions:
+  contents: write
+jobs:
+  attribution:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate and run attribution
+        run: |
+          python -m py_compile nba_minutes_rate_attribution.py
+          python nba_minutes_rate_attribution.py
+      - name: Publish research report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/nba_minutes_rate_attribution.json
+          git diff --cached --quiet || (git commit -m "Update NBA minutes and rate attribution" && git push)
