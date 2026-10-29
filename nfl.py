@@ -141,4 +141,8 @@ def performance():
  done=[r for r in rows if r.get("status") in ("win","loss","push")]
  w=sum(r["status"]=="win" for r in done);l=sum(r["status"]=="loss" for r in done)
  return {"wins":w,"losses":l,"pushes":len(done)-w-l,"pending":sum(r.get("status")=="pending" for r in rows),"captured":len(rows),"hit_rate":round(w/(w+l)*100,1) if w+l else None,"recent":rows[-40:],"note":"NFL-only verified pregame predictions; no NFL model picks are published until projection validation."}
-\n@router.get("/historical-model")\ndef historical_model():\n from nfl_model import summary\n return summary()\n
+
+@router.get("/historical-model")
+def historical_model():
+ from nfl_model import summary
+ return summary()
