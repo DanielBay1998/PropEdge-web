@@ -353,6 +353,24 @@ def refresh():
         except Exception as challenger_error:
             base["challenger_status"]="SHADOW_UNAVAILABLE"
             base["challenger_error"]=type(challenger_error).__name__
+        # Shrink the primary projection toward the independently computed
+        # challenger when sufficient player history exists. This changes
+        # displayed projections and edge, but is NOT an accuracy guarantee.
+        for signal in signals:
+            candidate=number(signal.get("challenger_projection"))
+            primary=number(signal.get("projection"))
+            if candidate is None or primary is None:continue
+            if candidate<0 or primary<0:continue
+            adjusted=0.5*primary+0.5*candidate
+            signal["original_projection"]=round(primary,2)
+            signal["projection"]=round(adjusted,2)
+            direction=1 if signal.get("side")=="OVER" else -1
+            signal["gap"]=round(direction*(adjusted-signal["line"]),2)
+            signal["projection_method"]="BLENDED_PRIMARY_CHALLENGER_UNVALIDATED"
+        signals=[signal for signal in signals
+                 if number(signal.get("gap")) is not None
+                 and signal["gap"]>=max(0.5,0.08*max(signal["line"],1))]
+        base["projection_method"]="BLENDED_PRIMARY_CHALLENGER_UNVALIDATED"
         # Conservative production integration: use the challenger only as a
         # disagreement veto. Never claim its unvalidated estimate is a win
         # probability; never replace the independently sourced sportsbook line.
