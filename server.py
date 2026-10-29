@@ -86,7 +86,14 @@ def load_game_logs():
                 if any(values[k] is None or values[k]<0 for k in ('PTS','REB','AST','3PM')):continue
                 logs[player].append({'date':date,'game_id':str(row.get('Game ID') or ''),
                                      'team':row.get('Team') or '', 'season':season, **values})
+    opponents=defaultdict(set)
     for rows in logs.values():
+        for r in rows:
+            if r['game_id'] and r['team']:opponents[(r['season'],r['game_id'],r['date'])].add(r['team'])
+    for rows in logs.values():
+        for r in rows:
+            other=opponents.get((r['season'],r['game_id'],r['date']),set())-{r['team']}
+            r['opponent']=next(iter(other)) if len(other)==1 else None
         # Most recent first; ignore duplicated player/game rows across sources.
         rows.sort(key=lambda r:(r['date'],r['game_id']),reverse=True)
         seen=set();rows[:]=[r for r in rows if not ((r['game_id'],r['date']) in seen or seen.add((r['game_id'],r['date'])))]
@@ -872,7 +879,7 @@ def nba_player_profile(player_name:str):
     name=canonical_player(unquote(player_name))
     rows=load_game_logs().get(name,[])
     def pack(r):
-        return {"date":r["date"],"season":r["season"],"team":r["team"],
+        return {"date":r["date"],"season":r["season"],"team":r["team"],"opponent":r.get("opponent"),
                 "minutes":r.get("MIN"),**{k:r[k] for k in ("PTS","REB","AST","3PM")},
                 "PRA":sum(r[k] for k in ("PTS","REB","AST"))}
     position=None
