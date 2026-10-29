@@ -10,6 +10,7 @@ def run():
                   str(ROOT/"data/nba_2026_27.csv")])
     opponent_games=load_team_games([str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),
                                     str(ROOT/"data/nba_2026_27.csv")])
+    league_rows=sorted((g["date"],g["allowed"]) for games in opponent_games.values() for g in games)
     tracking=json.loads((ROOT/"data/model_tracking.json").read_text())
     totals={name:{"n":0,"wins":0,"losses":0,"pushes":0,"absolute_error":0.0}
             for name in ("primary","challenger","blend","defense_challenger")}
@@ -35,7 +36,16 @@ def run():
             opponent=next(iter(matchup-{last_team}))
             allowance=prior_allowances(opponent_games,opponent,day)
             if allowance:
-                defense_matched+=1
+                league_prior=[v for d,v in league_rows if d<day][-1000:]
+                if league_prior:
+                    league=[sum(v[i] for v in league_prior)/len(league_prior) for i in range(4)]
+                    def adjusted(m):
+                        if m=="PRA":return sum(adjusted(k) for k in ("PTS","REB","AST"))
+                        idx=("PTS","REB","AST","3PM").index(m)
+                        ratio=max(.75,min(1.25,allowance[m]/max(1,league[idx])))
+                        return alt[m]*(1+.45*(ratio-1))
+                    defense_estimate=adjusted(market)
+                    defense_matched+=1
         predictions={"primary":primary,"challenger":alt[market],
                      "blend":(primary+alt[market])/2}
         for model,estimate in predictions.items():
