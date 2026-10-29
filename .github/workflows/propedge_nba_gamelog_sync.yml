@@ -29,6 +29,7 @@ jobs:
       - name: Grade saved pregame predictions against completed games
         run: PROPEDGE_CAPTURE_IF_DUE=1 python track_model.py
       - name: Commit validated game logs and grades
+        id: commit
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'

@@ -23,16 +23,18 @@ def run():
    except (ValueError,KeyError,TypeError):pass
   grade_only=bool(timestamps and (today()-max(timestamps)).total_seconds()<1800)
  if grade_only:print("Grade-only mode: skipping live odds board request",flush=True)
- for attempt in range(0 if grade_only else 5):
+ # Scheduled sync must always reach grading even when the live odds board is slow.
+ attempts=1 if os.getenv("PROPEDGE_CAPTURE_IF_DUE")=="1" else 5
+ for attempt in range(0 if grade_only else attempts):
   try:
    req=urllib.request.Request(SITE+"/api/board",headers={"User-Agent":"PropEdge-ModelTracker/1.0","Cache-Control":"no-cache"})
-   with urllib.request.urlopen(req,timeout=90) as resp: board=json.load(resp)
+   with urllib.request.urlopen(req,timeout=18 if attempts==1 else 90) as resp: board=json.load(resp)
    if isinstance(board,dict) and board.get("live") and not board.get("error"):break
    print("Board unavailable or not live; attempt",attempt+1,flush=True)
   except (urllib.error.URLError,TimeoutError,ValueError) as exc:
    print("Board fetch attempt",attempt+1,"failed:",type(exc).__name__,flush=True)
   board=None
-  if attempt<4:time.sleep(15*(attempt+1))
+  if attempt<attempts-1:time.sleep(15*(attempt+1))
  if board and board.get("live") and not board.get("error"):
   for signal in board.get("signals",[]):
    event=str(signal.get("event_id") or "")

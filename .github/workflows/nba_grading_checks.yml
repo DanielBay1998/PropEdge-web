@@ -1,0 +1,27 @@
+name: NBA grading availability checks
+on:
+  pull_request:
+    paths:
+      - track_model.py
+      - .github/workflows/propedge_nba_gamelog_sync.yml
+      - .github/workflows/nba_grading_checks.yml
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate scheduled settlement safety
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          ast.parse(Path('track_model.py').read_text())
+          code=Path('track_model.py').read_text()
+          workflow=Path('.github/workflows/propedge_nba_gamelog_sync.yml').read_text()
+          assert 'attempts=1 if os.getenv("PROPEDGE_CAPTURE_IF_DUE")=="1" else 5' in code
+          assert 'timeout=18 if attempts==1 else 90' in code
+          assert 'id: commit' in workflow
+          assert 'steps.commit.outputs.changed' in workflow
+          assert 'if not ((e.get("status") or {}).get("type") or {}).get("completed"):continue' in code
+          print('NBA grading and deploy gating verified')
+          PY
