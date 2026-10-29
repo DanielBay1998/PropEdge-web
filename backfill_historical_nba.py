@@ -1,7 +1,7 @@
 """Backfill NBA regular-season box scores from ESPN's public scoreboard/summary feeds.
 Checkpointed CSV: safe to rerun; missing games are not interpreted as injuries.
 """
-import csv, json, os, time, urllib.request, urllib.error
+import argparse, csv, json, os, time, urllib.request, urllib.error
 from datetime import date,timedelta
 from pathlib import Path
 
@@ -9,6 +9,9 @@ ROOT=Path(__file__).resolve().parent
 DEST=ROOT/"data"/"propedge_historical_2025_26_minutes.csv"
 START=date(2025,10,21)
 END=date(2026,4,12)
+SEASONS={"2023-24":(date(2023,10,24),date(2024,4,14)),
+         "2024-25":(date(2024,10,22),date(2025,4,13)),
+         "2025-26":(START,END)}
 FIELDS=["Game ID","Date","Player","Team","PTS","REB","AST","3PM","MIN","Season Type"]
 BASE="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/"
 def get(url):
@@ -66,6 +69,15 @@ def extract(summary,event_id,day):
                                "3PM":threes,"MIN":minutes,"Season Type":"regular"})
     return result
 def main():
+    global DEST,START,END
+    parser=argparse.ArgumentParser(description='Checkpointed research-only ESPN regular-season boxscore backfill')
+    parser.add_argument('--season',choices=sorted(SEASONS),default='2025-26')
+    parser.add_argument('--max-days',type=int,default=0,help='Optional bounded test run (0 = entire season)')
+    args=parser.parse_args()
+    if args.max_days<0:parser.error('--max-days must be nonnegative')
+    START,END=SEASONS[args.season]
+    DEST=ROOT/'data'/('propedge_historical_'+args.season.replace('-','_')+'_minutes.csv')
+    if args.max_days:END=min(END,START+timedelta(days=args.max_days-1))
     rows=existing()
     completed=set(r["Game ID"] for r in rows.values())
     current=START
