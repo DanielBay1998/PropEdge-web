@@ -1,0 +1,23 @@
+name: NBA V4 selection ROI research
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_v4_selection_filters.py
+      - '.github/workflows/nba_v4_selection.yml'
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile nba_v4_selection_filters.py
+      - run: python nba_v4_selection_filters.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nba-v4-selection-filters
+          path: reports/nba_v4_selection_filters.json
