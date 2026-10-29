@@ -738,6 +738,35 @@ def refresh():
         signals=identity_checked
         base["identity_filtered_signals"]=identity_filtered
         base["identity_guard"]="LATEST_CURRENT_SEASON_PLAYER_TEAM_MATCH_REQUIRED"
+
+        # Surface verifiable pregame context on every qualified NBA signal.
+        # Never present unavailable advanced inputs as model-adjusted.
+        for signal in signals:
+            rows=sorted((g for g in logs.get(canonical_player(signal.get("player")),[])
+                         if g.get("season")=="current"),key=lambda g:g["date"],reverse=True)
+            latest=rows[0] if rows else None
+            game_day=datetime.now(timezone.utc).date()
+            rest_days=None
+            if latest:
+                try:
+                    observed=datetime.strptime(latest["date"],"%Y%m%d").date()
+                    rest_days=max(0,(game_day-observed).days-1)
+                except ValueError:pass
+            teams=str(signal.get("game") or "").split(" @ ")
+            player_team=norm(latest.get("team")) if latest else ""
+            home=(player_team==norm(teams[1])) if len(teams)==2 and player_team else None
+            if home is False and len(teams)==2 and player_team!=norm(teams[0]):home=None
+            mins=[number(g.get("MIN")) for g in rows[:5]]
+            mins=[v for v in mins if v is not None and v>0]
+            metrics={"minutes":round(sum(mins)/len(mins),2) if mins else None,
+                     "usage_rate":None,"pace":None,"opponent_defense":None,
+                     "rest_days":rest_days,"back_to_back":rest_days==0 if rest_days is not None else None,
+                     "home":home,"travel_miles":None,"team_total":None}
+            signal["advanced_metrics"]=metrics
+            signal["advanced_metrics_coverage"]={k:v is not None for k,v in metrics.items()}
+            signal["advanced_metrics_model_adjusted"]=False
+        base["advanced_metrics_mode"]="PREGAME_CONTEXT_ONLY_UNCALIBRATED"
+
         # Research-backed selection assistance from settled historical bets.
         # This is a PRIORITY LABEL, not a trained win probability or a
         # replacement for the primary/challenger projection disagreement veto.
