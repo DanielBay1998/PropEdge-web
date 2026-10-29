@@ -70,6 +70,48 @@ def betting_margin_profile(rows):
             "loss_distance_definition":"Actual result short of winning side of captured sportsbook line; not distance from model projection",
             "win_distance_definition":"Actual result beyond captured sportsbook line in chosen direction"}
 
+def losing_pick_diagnostics(rows):
+    """Find weak spots without optimizing thresholds on the same games."""
+    unique={}
+    for r in rows:
+        key=(r["date"],r["game"],r["player"],r["market"],r["side"],r["line"])
+        unique.setdefault(key,r)
+    picks=list(unique.values())
+    def breakdown(group):
+        if not group:return {"n":0}
+        losses=[r for r in group if (r["actual"]-r["line"])*(1 if r["side"]=="OVER" else -1)<0]
+        wins=[r for r in group if (r["actual"]-r["line"])*(1 if r["side"]=="OVER" else -1)>0]
+        profit=sum(r["payout"] for r in wins)-len(losses)
+        margins=[abs(r["actual"]-r["line"]) for r in losses]
+        return {"n":len(group),"wins":len(wins),"losses":len(losses),
+                "win_rate_pct":round(100*len(wins)/(len(wins)+len(losses)),2) if wins or losses else None,
+                "flat_roi_pct":round(100*profit/len(group),2),
+                "losses_within_0_5":sum(x<=.5 for x in margins),
+                "losses_within_2":sum(x<=2 for x in margins),
+                "losses_more_than_5":sum(x>5 for x in margins),
+                "average_loss_margin":round(statistics.mean(margins),2) if margins else None}
+    def edge(r):
+        return (r["consensus"]-r["line"])*(1 if r["side"]=="OVER" else -1)
+    def edge_bucket(r):
+        e=edge(r)
+        if e<0:return "consensus_disagrees_with_pick"
+        if e<1:return "consensus_edge_0_to_1"
+        if e<2:return "consensus_edge_1_to_2"
+        if e<4:return "consensus_edge_2_to_4"
+        return "consensus_edge_4_plus"
+    buckets=sorted({edge_bucket(r) for r in picks})
+    losses=sorted((r for r in picks if (r["actual"]-r["line"])*(1 if r["side"]=="OVER" else -1)<0),
+                  key=lambda r:abs(r["actual"]-r["line"]),reverse=True)
+    return {"deduplicated_unique_picks":len(picks),"duplicate_captures_removed":len(rows)-len(picks),
+            "overall":breakdown(picks),
+            "by_market":{m:breakdown([r for r in picks if r["market"]==m]) for m in MARKETS},
+            "by_consensus_edge_bucket":{b:breakdown([r for r in picks if edge_bucket(r)==b]) for b in buckets},
+            "by_market_and_consensus_edge_bucket":{m:{b:breakdown([r for r in picks if r["market"]==m and edge_bucket(r)==b]) for b in buckets} for m in MARKETS},
+            "largest_losing_margins":[{"player":r["player"],"game":r["game"],"market":r["market"],"side":r["side"],"line":r["line"],"actual":r["actual"],"loss_margin":abs(r["actual"]-r["line"]),"consensus":round(r["consensus"],2),"consensus_edge_on_pick":round(edge(r),2)} for r in losses[:20]],
+            "limitations":["Deduplication removes repeated captures of same game/player/market/side/line, keeping the first captured record.",
+                           "Edge buckets are retrospective and V4 coefficients overlap test dates; DO NOT treat bucket rankings as validated selection rules.",
+                           "Odds are only for captured side; no hypothetical reversed-side ROI."]}
+
 def run():
     history=load(PATHS)
     coeff=json.loads((ROOT/"data/nba_v4_live_coefficients.json").read_text())["markets"]
@@ -107,6 +149,7 @@ def run():
             "overall":{m:summary(matched,m) for m in ("primary","consensus")},
             "by_market":{market:{m:summary([r for r in matched if r["market"]==market],m) for m in ("primary","consensus")} for market in MARKETS},
             "by_date":{day:{m:summary([r for r in matched if r["date"]==day],m) for m in ("primary","consensus")} for day in dates},
+            "losing_pick_diagnostics":losing_pick_diagnostics(matched),
             "betting_margins":{
                 "overall":betting_margin_profile(matched),
                 "by_market":{market:betting_margin_profile([r for r in matched if r["market"]==market]) for market in MARKETS},
