@@ -1,0 +1,54 @@
+name: PropEdge 3.3 Research Safety Gates
+on:
+  push:
+    paths:
+      - 'propedge_daily_projection_candidate.py'
+      - 'nba_challenger_model.py'
+      - 'nba_matchup_features.py'
+      - 'test_nba_identity_guard.py'
+      - 'test_nba_matchup_features.py'
+      - '.github/workflows/propedge_research_safety.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install research dependencies
+        run: python -m pip install pandas numpy
+      - name: Compile research and identity code
+        run: python -m py_compile propedge_daily_projection_candidate.py nba_challenger_model.py nba_matchup_features.py test_nba_identity_guard.py test_nba_matchup_features.py
+      - name: Identity and matchup regression tests
+        run: python -m unittest -v test_nba_identity_guard test_nba_matchup_features
+      - name: Generate candidate without modifying production
+        run: python propedge_daily_projection_candidate.py --output reports/projection_candidate_audit.csv
+      - name: Validate candidate audit integrity
+        run: |
+          python - <<'PY'
+          import pandas as pd
+          x=pd.read_csv('reports/projection_candidate_audit.csv')
+          assert len(x)>0
+          assert not x.duplicated(['ResolvedPlayer','MarketCode']).any()
+          assert (x['CandidateProjection'].dropna()>=0).all()
+          assert x['Status'].notna().all()
+          print('Candidate audit rows:',len(x))
+          print('Over-cap candidate rows:',int(x['ExceedsChangeCap'].sum()))
+          PY
+      - name: Run out-of-time challenger research
+        run: python nba_challenger_model.py --output reports/nba_challenger_validation.json
+      - name: Upload research artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: propedge-research-safety
+          path: |
+            reports/projection_candidate_audit.csv
+            reports/nba_challenger_validation.json
+          if-no-files-found: warn
