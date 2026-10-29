@@ -353,6 +353,30 @@ def refresh():
         except Exception as challenger_error:
             base["challenger_status"]="SHADOW_UNAVAILABLE"
             base["challenger_error"]=type(challenger_error).__name__
+        # Conservative production integration: use the challenger only as a
+        # disagreement veto. Never claim its unvalidated estimate is a win
+        # probability; never replace the independently sourced sportsbook line.
+        # Requiring agreement is safer than blindly promoting a new projection.
+        original_count=len(signals)
+        agreed=[]
+        for signal in signals:
+            candidate=signal.get("challenger_projection")
+            if candidate is None:
+                signal["model_agreement"]="UNKNOWN_HISTORY"
+                agreed.append(signal)
+                continue
+            direction=1 if signal["side"]=="OVER" else -1
+            challenger_edge=direction*(candidate-signal["line"])
+            signal["challenger_edge"]=round(challenger_edge,2)
+            signal["model_agreement"]="AGREE" if challenger_edge>0 else "DISAGREE"
+            if challenger_edge<=0:
+                signal["qualification_reason"]="Challenger projection disagrees with production side"
+                continue
+            # Keep existing validated production projection and edge unchanged.
+            agreed.append(signal)
+        signals=agreed
+        base["challenger_filtered_signals"]=original_count-len(signals)
+        base["challenger_filter_mode"]="DISAGREEMENT_VETO_RESEARCH_UNVALIDATED"
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
