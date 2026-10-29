@@ -86,7 +86,7 @@ def run():
  for r in pending:
   try:
    captured=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00"))
-   for offset in (-1,0,1,2):
+   for offset in range(-1,8):
     capture_days.add((captured+datetime.timedelta(days=offset)).strftime("%Y%m%d"))
   except (ValueError,KeyError,TypeError):continue
  # Restrict requests to dates that actually have local game logs.
@@ -134,7 +134,7 @@ def run():
    unmatched_games["invalid capture date"]=unmatched_games.get("invalid capture date",0)+1
    continue
   eligible=[(day,eid) for day,eid in scoreboard.get(match,[])
-            if -1 <= (datetime.datetime.strptime(day,"%Y%m%d").date()-capture_date).days <= 2]
+            if -1 <= (datetime.datetime.strptime(day,"%Y%m%d").date()-capture_date).days <= 7]
   player_key=canonical(r["player"])
   matching=[by_game[(eid,player_key)] for day,eid in eligible if (eid,player_key) in by_game]
   if len(matching)>1:
@@ -175,15 +175,15 @@ def run():
    if p!=player_key:continue
    try: game_date=datetime.datetime.strptime(str(row.get("Date") or "").replace("-",""),"%Y%m%d").date()
    except ValueError:continue
-   if -1 <= (game_date-capture_date).days <= 2 and canonical(row.get("Team")) not in recorded:
+   if -1 <= (game_date-capture_date).days <= 7 and canonical(row.get("Team")) not in recorded:
     other.append((eid,str(row.get("Team") or ""),str(row.get("Date") or "")))
   # If all capture-window scoreboards were fetched successfully and no
   # completed game has the recorded matchup, quarantine stale records
   # for manual event-ID reconciliation rather than inventing a grade.
-  eligible_days={(capture_date+datetime.timedelta(days=i)).strftime("%Y%m%d") for i in (-1,0,1,2)}
+  eligible_days={(capture_date+datetime.timedelta(days=i)).strftime("%Y%m%d") for i in range(-1,8)}
   game_key="@".join(canonical(t) for t in str(r.get("game") or "").split(" @ "))
   completed_match=any(day in eligible_days for day,eid in scoreboard.get(game_key,[]))
-  stale=(today().date()-capture_date).days>3
+  stale=(today().date()-capture_date).days>8
   fully_checked=bool(eligible_days & scoreboard_days_ok) and all(
    d in scoreboard_days_ok for d in eligible_days if d<=today().strftime("%Y%m%d"))
   if stale and fully_checked and not completed_match:
