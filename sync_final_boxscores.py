@@ -2,7 +2,7 @@
 import csv,datetime,json,urllib.request,time
 from pathlib import Path
 FILE=Path(__file__).resolve().parent/"data"/"nba_2026_27.csv"
-FIELDS=["Game ID","Date","Player","Team","PTS","REB","AST","3PM"]
+FIELDS=["Game ID","Date","Player","Team","PTS","REB","AST","3PM","MIN"]
 def get(url):
  req=urllib.request.Request(url,headers={"User-Agent":"PropEdge-BoxscoreSync/1.0","Accept":"application/json"})
  with urllib.request.urlopen(req,timeout=25) as response:return json.load(response)
@@ -13,7 +13,7 @@ def run():
  rows={(r["Game ID"],r["Player"].lower()):r for r in existing if r.get("Game ID") and r.get("Player")}
  today=datetime.datetime.now(datetime.timezone.utc).date()
  checked=0;completed=0;added=0
- days={(today-datetime.timedelta(days=i)).strftime("%Y%m%d") for i in range(4)}
+ days={(today-datetime.timedelta(days=i)).strftime("%Y%m%d") for i in range(14)}
  tracking=FILE.parent/"model_tracking.json"
  if tracking.exists():
   try:
@@ -51,8 +51,9 @@ def run():
       try:
        def val(k):return int(float(values[labels.index(k)]))
        threes=str(values[labels.index("3PT")]).split("-")[0]
+       mins=str(values[labels.index("MIN")]).strip() if "MIN" in labels else ""
        record={"Game ID":eid,"Date":day,"Player":name,"Team":team,
-               "PTS":val("PTS"),"REB":val("REB"),"AST":val("AST"),"3PM":int(threes)}
+               "PTS":val("PTS"),"REB":val("REB"),"AST":val("AST"),"3PM":int(threes),"MIN":mins}
        if min(record[k] for k in ("PTS","REB","AST","3PM"))<0:continue
        new.append(record)
       except (ValueError,IndexError,TypeError):continue
@@ -64,6 +65,7 @@ def run():
    for record in new:
     key=(record["Game ID"],record["Player"].lower())
     if key not in rows:rows[key]=record;added+=1
+    elif record.get("MIN") and not rows[key].get("MIN"):rows[key]["MIN"]=record["MIN"];added+=1
  print("Boxscore sync:",checked,"games checked,",completed,"completed with valid boxscores,",added,"new player rows",flush=True)
  FILE.parent.mkdir(parents=True,exist_ok=True)
  with FILE.open("w",newline="",encoding="utf-8") as f:
