@@ -614,15 +614,18 @@ def refresh():
             player_rows=logs.get(canonical_player(signal.get("player")),[])
             matchup={norm(t) for t in str(signal.get("game") or "").split(" @ ")}
             current_rows=[g for g in player_rows if g.get("season")=="current"]
-            observed_teams={norm(g.get("team")) for g in current_rows if g.get("team")}
-            if len(matchup)!=2 or not current_rows or not (observed_teams & matchup):
+            # Only the latest observed team can verify the player's current matchup.
+            # Checking ANY season team lets a traded player appear in an old matchup.
+            latest_team=norm(current_rows[0].get("team")) if current_rows else ""
+            if len(matchup)!=2 or not latest_team or latest_team not in matchup:
                 identity_filtered+=1
                 continue
             signal["identity_verified_by_current_season_logs"]=True
+            signal["identity_latest_team"]=latest_team
             identity_checked.append(signal)
         signals=identity_checked
         base["identity_filtered_signals"]=identity_filtered
-        base["identity_guard"]="CURRENT_SEASON_PLAYER_TEAM_MATCH_REQUIRED"
+        base["identity_guard"]="LATEST_CURRENT_SEASON_PLAYER_TEAM_MATCH_REQUIRED"
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
