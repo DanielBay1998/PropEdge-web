@@ -6,9 +6,9 @@ from nba_matchup_features import load_team_games, prior_allowances
 
 ROOT=Path(__file__).resolve().parent
 def run():
-    history=load([str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),
+    history=load([*[str(ROOT/"data"/f"propedge_historical_{season}_minutes.csv") for season in ("2023_24","2024_25","2025_26")],
                   str(ROOT/"data/nba_2026_27.csv")])
-    opponent_games=load_team_games([str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),
+    opponent_games=load_team_games([*[str(ROOT/"data"/f"propedge_historical_{season}_minutes.csv") for season in ("2023_24","2024_25","2025_26")],
                                     str(ROOT/"data/nba_2026_27.csv")])
     league_rows=sorted((g["date"],g["allowed"]) for games in opponent_games.values() for g in games)
     tracking=json.loads((ROOT/"data/model_tracking.json").read_text())
