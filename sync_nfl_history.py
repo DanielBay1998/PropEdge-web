@@ -26,7 +26,7 @@ def run():
     if not date:continue
     completed.append((date,eid))
  added=0;games=0
- for date,eid in sorted(set(completed),reverse=True)[:35]:
+ for date,eid in sorted(set(completed),reverse=True):
   try:players=parse_boxscore(eid)
   except Exception as e:
    print("Boxscore unavailable",eid,type(e).__name__,flush=True);continue
