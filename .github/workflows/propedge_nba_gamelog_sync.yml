@@ -9,6 +9,7 @@ on:
       - 'sync_final_boxscores.py'
       - 'track_model.py'
       - 'test_nba_identity_guard.py'
+      - 'evaluate_nba_model.py'
       - '.github/workflows/propedge_nba_gamelog_sync.yml'
 permissions:
   contents: write
@@ -32,13 +33,15 @@ jobs:
         run: python sync_final_boxscores.py
       - name: Grade saved pregame predictions against completed games
         run: PROPEDGE_CAPTURE_IF_DUE=1 python track_model.py
+      - name: Evaluate settled predictions and shadow challenger
+        run: python evaluate_nba_model.py
       - name: Commit validated game logs and grades
         id: commit
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/nba_2026_27.csv data/model_tracking.json
+          git add data/nba_2026_27.csv data/model_tracking.json data/nba_model_evaluation.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
