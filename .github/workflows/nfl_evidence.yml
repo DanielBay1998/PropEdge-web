@@ -1,0 +1,32 @@
+name: Validate NFL opponent and evidence layers
+on:
+  pull_request:
+    paths: ['nfl.py','nfl_evidence.py','nfl_matchups.py','sync_nfl_opponents.py','static/nfl.html','.github/workflows/nfl_evidence.yml']
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl.py nfl_evidence.py nfl_matchups.py sync_nfl_opponents.py server.py
+      - run: |
+          python - <<'PY'
+          from nfl_evidence import evidence
+          from nfl_matchups import matchup
+          from nfl import router
+          from server import app
+          from pathlib import Path
+          x=evidence('PASS_TD')
+          assert 'ready' in x and 'samples' in x
+          assert 'available' in matchup('Green Bay Packers','PASS_TD')
+          paths={r.path for r in router.routes}
+          for p in ('/api/nfl/injuries','/api/nfl/matchup/{opponent}/{market}','/api/nfl/model-evidence/{market}'):
+           assert p in paths,p
+          assert any(getattr(r,'path','')=='/api/board' for r in app.routes)
+          h=Path('static/nfl.html').read_text()
+          assert 'loadInjuries' in h and 'loadEvidence' in h and 'opponentResearch' in h
+          print('NFL opponent and model evidence checks passed')
+          PY

@@ -186,3 +186,26 @@ def nfl_teams():
  from nfl_research import team_directory
  try:return {"teams":cached("nfl_teams",86400,team_directory)}
  except Exception:return {"teams":{},"error":"Team metadata unavailable"}
+
+@router.get("/model-evidence/{market}")
+def model_evidence(market:str):
+ from nfl_evidence import evidence
+ if market not in LABELS:raise HTTPException(400,"Unknown NFL market")
+ return evidence(market)
+
+@router.get("/matchup/{opponent}/{market}")
+def matchup_report(opponent:str,market:str):
+ from nfl_matchups import matchup
+ if market not in LABELS:raise HTTPException(400,"Unknown NFL market")
+ return matchup(opponent,market)
+
+@router.get("/injuries")
+def injury_report():
+ def fetch():
+  data=espn("injuries")
+  if not isinstance(data,dict):return {"available":False,"players":[],"source":"ESPN","note":"No verified injury response"}
+  entries=data.get("injuries") or []
+  if not isinstance(entries,list):entries=[]
+  return {"available":bool(entries),"players":entries[:200],"source":"ESPN","note":"Informational injury reports; no automatic projection adjustment without verified player/status mapping"}
+ try:return cached("nfl_injuries",900,fetch)
+ except Exception:return {"available":False,"players":[],"source":"ESPN","note":"Verified injury feed unavailable; no injury adjustment applied"}
