@@ -41,3 +41,13 @@ jobs:
           else
             echo 'No new final boxscores or grades'
           fi
+      - name: Request Render refresh when deployment hook is configured
+        if: ${{ success() }}
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "${RENDER_DEPLOY_HOOK_URL:-}" ]; then
+            curl --fail --silent --show-error --max-time 20 -X POST "$RENDER_DEPLOY_HOOK_URL"
+          else
+            echo 'No Render deploy hook configured; relying on connected GitHub auto-deploy'
+          fi
