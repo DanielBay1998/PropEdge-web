@@ -56,13 +56,18 @@ def run():
  # isolate network failures per scoreboard day.
  logs=ROOT/"data"/"nba_2026_27.csv"
  by_game={}
+ local_games={}
  game_dates=set()
  if logs.exists():
   with logs.open(encoding="utf-8-sig",newline="") as handle:
    for row in csv.DictReader(handle):
     eid=str(row.get("Game ID") or "").strip()
     player=canonical(row.get("Player"))
-    if eid and player:by_game[(eid,player)]=row
+    if eid and player:
+     by_game[(eid,player)]=row
+     info=local_games.setdefault(eid,{"date":str(row.get("Date") or "").replace("-",""),"teams":set(),"players":set()})
+     if row.get("Team"):info["teams"].add(canonical(row["Team"]))
+     info["players"].add(player)
     if row.get("Date"):game_dates.add(str(row["Date"]).replace("-",""))
  scoreboard={}
  pending=[r for r in records if r["status"]=="pending"]
@@ -91,6 +96,18 @@ def run():
     scoreboard.setdefault(key,[]).append((day,str(e.get("id"))))
   except Exception as exc:
    print("Scoreboard unavailable for",day,type(exc).__name__,flush=True)
+ # Final boxscore CSV is populated only by the completed-game sync. When ESPN
+ # scoreboard is unavailable, use those finalized game IDs as a fallback.
+ for eid,info in local_games.items():
+  if len(info["teams"])!=2 or info["date"] not in capture_days:continue
+  for r in pending:
+   teams=str(r.get("game") or "").split(" @ ")
+   if len(teams)!=2:continue
+   pair={canonical(teams[0]),canonical(teams[1])}
+   if pair!=info["teams"]:continue
+   key=canonical(teams[0])+"@"+canonical(teams[1])
+   candidate=(info["date"],eid)
+   if candidate not in scoreboard.setdefault(key,[]):scoreboard[key].append(candidate)
  graded_now=0
  unmatched_games={}
  missing_players={}
@@ -115,6 +132,9 @@ def run():
    unmatched_games[match]=unmatched_games.get(match,0)+1
    continue
   row=matching[0] if len(matching)==1 else None
+  if row and canonical(row.get("Team")) not in {canonical(t) for t in teams}:
+   missing_players["team mismatch: "+r["player"]]=missing_players.get("team mismatch: "+r["player"],0)+1
+   continue
   if not row:
    missing_players[r["player"]]=missing_players.get(r["player"],0)+1
    continue
