@@ -90,13 +90,19 @@ def run():
   except Exception as exc:
    print("Scoreboard unavailable for",day,type(exc).__name__,flush=True)
  graded_now=0
+ unmatched_games={}
+ missing_players={}
  for r in pending:
   teams=str(r.get("game") or "").split(" @ ")
   match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
   ids=scoreboard.get(match,set())
-  if len(ids)!=1:continue
+  if len(ids)!=1:
+   unmatched_games[match]=unmatched_games.get(match,0)+1
+   continue
   row=by_game.get((next(iter(ids)),canonical(r["player"])))
-  if not row:continue
+  if not row:
+   missing_players[r["player"]]=missing_players.get(r["player"],0)+1
+   continue
   try:
    actual=sum(float(row[k]) for k in ("PTS","REB","AST")) if r["market"]=="PRA" else float(row[r["market"]])
    if actual<0:continue
@@ -105,6 +111,7 @@ def run():
    r["graded_at"]=today().isoformat()
    graded_now+=1
   except (ValueError,KeyError,TypeError):pass
+ print("Pending matchup audit:",json.dumps(unmatched_games,sort_keys=True),"missing player rows:",json.dumps(missing_players,sort_keys=True),flush=True)
  print("Grading audit:",len(pending),"pending;",len(days),"scoreboard dates;",len(scoreboard),"completed matchups;",graded_now,"new grades; game-log rows",len(by_game),flush=True)
  DATA.parent.mkdir(parents=True,exist_ok=True)
  DATA.write_text(json.dumps(records,indent=2,ensure_ascii=False)+"\n")
