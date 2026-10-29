@@ -11,19 +11,31 @@ def fetch(url):
  with urllib.request.urlopen(req,timeout=15) as response:return json.load(response)
 def main():
  teams=fetch(API+"?limit=40")["sports"][0]["leagues"][0]["teams"]
- positions={};roster_count=0
+ positions={};roster_count=0;successful_teams=0
+ def athletes_from(payload):
+  groups=payload.get("athletes",[])
+  if isinstance(groups,dict):groups=list(groups.values())
+  for group in groups:
+   if not isinstance(group,dict):continue
+   if isinstance(group.get("items"),list):
+    yield from (x for x in group["items"] if isinstance(x,dict))
+   elif isinstance(group.get("athletes"),list):
+    yield from (x for x in group["athletes"] if isinstance(x,dict))
+   else:yield group
  for entry in teams:
   t=entry["team"];tid=t["id"]
   try:roster=fetch(API+"/"+str(tid)+"/roster")
   except Exception as e:print("Roster unavailable",tid,type(e).__name__);continue
-  for group in roster.get("athletes",[]):
-   athletes=group.get("items",[]) if isinstance(group,dict) and "items" in group else [group]
-   for p in athletes:
-    name=str(p.get("displayName") or p.get("fullName") or "").strip().casefold()
-    pos=(p.get("position") or {}).get("abbreviation","").upper()
-    if name and pos in ("PG","SG","SF","PF","C"):
-     positions[name]=pos;roster_count+=1
- if len(positions)<250:raise RuntimeError("Incomplete ESPN roster coverage: "+str(len(positions)))
+  successful_teams+=1
+  for p in athletes_from(roster):
+   name=str(p.get("displayName") or p.get("fullName") or "").strip().casefold()
+   position=p.get("position") or {}
+   pos=(position.get("abbreviation","") if isinstance(position,dict) else str(position)).upper()
+   if pos in ("G","F","G-F","F-G","F-C","C-F"):continue
+   if name and pos in ("PG","SG","SF","PF","C"):
+    positions[name]=pos;roster_count+=1
+ print("Roster coverage",successful_teams,"teams,",len(positions),"players")
+ if successful_teams<25 or len(positions)<250:raise RuntimeError("Incomplete ESPN roster coverage: "+str(len(positions))+" across "+str(successful_teams)+" teams")
  # Position-specific prior is built from completed regular-season boxscores.
  # Current roster position is an imperfect historical proxy and is disclosed.
  def collect(path,season):
