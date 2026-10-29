@@ -43,6 +43,16 @@ def run():
    line=signal.get("line")
    player=str(signal.get("player") or "")
    if not(event and market and side in ("OVER","UNDER") and player and isinstance(line,(int,float))):continue
+   # Never capture an unverified event/player identity. The live board's
+   # identity guard uses current-season team evidence, not historical rosters.
+   if signal.get("identity_verified_by_current_season_logs") is not True:
+    print("Capture rejected: unverified player/team identity",player,event,flush=True)
+    continue
+   matchup=str(signal.get("game") or "").split(" @ ")
+   latest=canonical(signal.get("identity_latest_team"))
+   if len(matchup)!=2 or not latest or latest not in {canonical(t) for t in matchup}:
+    print("Capture rejected: mismatched player/team identity",player,event,flush=True)
+    continue
    key="|".join([event,canonical(player),market,side,str(line)])
    if any(r["id"]==key for r in records):continue
    records.append({"id":key,"captured_at":today().isoformat(),"event_id":event,
