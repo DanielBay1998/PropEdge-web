@@ -1,0 +1,29 @@
+name: NFL board runtime regression
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python - <<'PY'
+          import nfl
+          from unittest.mock import patch
+          class PropLine:
+           def __init__(self,key):pass
+           def get_events(self,sport):return [{'id':'test','commence_time':'2099-01-01T00:00:00Z','home_team':'A','away_team':'B'}]
+           def get_odds(self,*args,**kwargs):
+            return {'bookmakers':[{'key':b,'markets':[{'key':'player_pass_yds','outcomes':[{'name':'Over','point':199.5,'description':'Test Player','price':-110}]}]} for b in ('book1','book2')]}
+          import sys,types
+          sys.modules['propline']=types.SimpleNamespace(PropLine=PropLine)
+          with patch.dict('os.environ',{'PROPLINE_API_KEY':'test'}):
+           with patch('nfl_model.summary',return_value={'history_rows':1,'as_of':'2026-10-01','validation':{},'projections':{}}):
+            with patch('nfl_model.history',return_value=[]):
+             result=nfl.odds_board()
+             assert len(result['props'])==1,result
+          print('NFL odds board completed')
+          PY
