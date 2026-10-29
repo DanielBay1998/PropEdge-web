@@ -15,6 +15,8 @@ jobs:
           python-version: '3.11'
       - run: python -m py_compile nba_v4_shadow_selections.py
       - run: python nba_v4_shadow_selections.py
+      - run: python -m py_compile nba_v4_grade_shadow.py
+      - run: python nba_v4_grade_shadow.py
       - name: Persist immutable snapshots
         run: |
           git config user.name "github-actions[bot]"
@@ -24,6 +26,7 @@ jobs:
             exit 0
           fi
           git add data/nba_v4_shadow_selections.json
+          if [ -f reports/nba_v4_prospective_roi.json ]; then git add reports/nba_v4_prospective_roi.json; fi
           if ! git diff --cached --quiet; then
             git commit -m "Record prospective NBA shadow selections"
             git pull --rebase
