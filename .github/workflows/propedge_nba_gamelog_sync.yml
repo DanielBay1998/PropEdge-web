@@ -37,6 +37,8 @@ jobs:
         run: PROPEDGE_CAPTURE_IF_DUE=1 python track_model.py
       - name: Evaluate settled predictions and shadow challenger
         run: python evaluate_nba_model.py
+      - name: Validate contextual NBA adjustments on chronological holdout
+        run: python nba_context_holdout_v1.py
       - name: Audit captured player and matchup identities
         run: python nba_consensus_identity_audit.py
       - name: Grade immutable pregame consensus research snapshots
@@ -47,7 +49,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/nba_2026_27.csv data/model_tracking.json data/nba_model_evaluation.json reports/nba_pregame_consensus_grading.json reports/nba_consensus_identity_audit.json
+          git add data/nba_2026_27.csv data/model_tracking.json data/nba_model_evaluation.json reports/nba_pregame_consensus_grading.json reports/nba_consensus_identity_audit.json reports/nba_context_holdout.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
