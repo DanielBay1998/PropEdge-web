@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - nba_v4_clean_history.py
       - nba_v4_baseline_audit.py
       - nba_v4_duplicate_audit.py
       - nba_v4_calibration_audit.py
@@ -19,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile research script
-        run: python -m py_compile nba_v4_baseline_audit.py nba_v4_duplicate_audit.py nba_v4_calibration_audit.py nba_challenger_model.py
+        run: python -m py_compile nba_v4_clean_history.py nba_v4_baseline_audit.py nba_v4_duplicate_audit.py nba_v4_calibration_audit.py nba_challenger_model.py
       - name: Data quality and chronological ridge research
         run: python nba_v4_baseline_audit.py
       - name: Investigate duplicate player dates
