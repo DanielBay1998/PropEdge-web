@@ -49,3 +49,14 @@ jobs:
           else
             echo "No NFL changes"
           fi
+
+      - name: Trigger Render deploy after NFL dataset refresh
+        if: success()
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$RENDER_DEPLOY_HOOK_URL" ]; then
+            curl --fail --show-error --silent --retry 3 --retry-delay 3 -X POST "$RENDER_DEPLOY_HOOK_URL"
+          else
+            echo "Render deploy hook not configured; website may show stale NFL projections until next deployment."
+          fi
