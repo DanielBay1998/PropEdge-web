@@ -18,6 +18,8 @@ def run(args):
         logs[c]=pd.to_numeric(logs[c],errors='raise')
         assert logs[c].notna().all() and (logs[c]>=0).all(),f'Invalid {c}'
     logs['PRA']=logs['PTS']+logs['REB']+logs['AST']
+    logs['MIN']=pd.to_numeric(logs['MIN'],errors='coerce') if 'MIN' in logs.columns else np.nan
+    logs.loc[~logs['MIN'].between(1,60),'MIN']=np.nan
     logs['Date']=pd.to_datetime(logs['Date'],format='%Y%m%d',errors='raise')
     logs=logs.sort_values(['Player','Date','Game ID'])
     # Exact-name matches only; intentionally avoid fuzzy joins and unsupported injury assumptions.
@@ -30,12 +32,26 @@ def run(args):
         status='RETAIN_UNCHANGED'
         candidate=prior
         count=0;recent=np.nan;last=''
+        recent_minutes=np.nan;projected_minutes=np.nan;minutes_samples=0;minutes_adjustment=np.nan
         if g is not None:
             count=len(g);last=g['Date'].max().strftime('%Y-%m-%d')
         if market in MARKETS and g is not None and count>=args.min_games and np.isfinite(prior) and prior>=0:
             last_games=g.tail(10)
             recent=float(last_games[market].mean())
-            # Deliberately conservative candidate, not claimed as the original minutes model.
+            valid=g[g['MIN'].notna()].tail(20)
+            minutes_samples=len(valid)
+            # Require sufficient minutes observations; never infer minutes from missing rows.
+            if minutes_samples>=3:
+                recent_minutes=float(valid.tail(5)['MIN'].mean())
+                long_minutes=float(valid['MIN'].mean())
+                projected_minutes=float(np.clip(0.7*recent_minutes+0.3*long_minutes,8,42))
+                # Per-minute rate shrunk toward the player's full available sample.
+                rate_recent=float((valid.tail(10)[market]/valid.tail(10)['MIN']).mean())
+                rate_long=float((valid[market]/valid['MIN']).mean())
+                minute_based=projected_minutes*(0.65*rate_recent+0.35*rate_long)
+                minutes_adjustment=minute_based-recent
+                recent=0.75*recent+0.25*minute_based
+            # Conservative research candidate; production remains untouched.
             raw=0.8*prior+0.2*recent
             cap=max(1.0,abs(prior)*args.max_change_pct/100)
             candidate=max(0.,float(np.clip(raw,prior-cap,prior+cap)))
@@ -43,7 +59,9 @@ def run(args):
         rows.append({'ResolvedPlayer':name,'MarketCode':market,'PreviousProjection':prior,
                      'CandidateProjection':round(candidate,5) if np.isfinite(candidate) else np.nan,
                      'Change':round(candidate-prior,5) if np.isfinite(candidate) and np.isfinite(prior) else np.nan,
-                     'CurrentGames':count,'Recent10Mean':recent,'LastGameDate':last,'Status':status})
+                     'CurrentGames':count,'Recent10Mean':recent,'LastGameDate':last,'Status':status,
+                     'MinutesSamples':minutes_samples,'RecentMinutes':recent_minutes,
+                     'ProjectedMinutes':projected_minutes,'MinutesRateAdjustment':minutes_adjustment})
     out=pd.DataFrame(rows)
     # PRA must equal the sum of candidate PTS, REB and AST, when all four markets exist.
     # Keep the baseline model untouched; this is an audit-only candidate.
