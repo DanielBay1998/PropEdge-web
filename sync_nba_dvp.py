@@ -82,7 +82,7 @@ def main():
  "blend_method":"20 prior equivalent player appearances per position and stat, with all verified current-season appearances; current weight rises automatically",
  "metric":"opposing player boxscore stat per appearance, grouped by listed roster position",
  "warning":"Historical player positions use current roster assignments; traded players and small samples can distort allowances. Not defender assignments or per-possession rating.",
- "fetched_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"teams":out,"position_players":len(positions)}
+ "fetched_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"teams":out,"position_players":len(positions),"player_positions":positions}
  path=ROOT/"data"/"nba_dvp_2026_27.json";path.write_text(json.dumps(result,indent=2)+"\n")
  print("DvP teams",len(out),"roster players",len(positions))
 if __name__=="__main__":main()
