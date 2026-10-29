@@ -30,6 +30,7 @@ def run():
         except (TypeError,ValueError,KeyError):continue
         if not all(math.isfinite(x) for x in (actual,primary,line)):continue
         matched+=1
+        defense_estimate=None
         matchup={str(t).strip().casefold() for t in str(row.get("game") or "").split(" @ ")}
         last_team=next((g.get("team") for g in reversed(prior) if g.get("team")),None)
         if len(matchup)==2 and last_team in matchup:
@@ -48,6 +49,8 @@ def run():
                     defense_matched+=1
         predictions={"primary":primary,"challenger":alt[market],
                      "blend":(primary+alt[market])/2}
+        if defense_estimate is not None:
+            predictions["defense_challenger"]=defense_estimate
         for model,estimate in predictions.items():
             item=totals[model]
             item["n"]+=1
