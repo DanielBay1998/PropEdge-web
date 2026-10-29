@@ -36,7 +36,7 @@ def run():
         profit=(odds/100 if odds>0 else 100/abs(odds)) if result=="win" else (-1 if result=="loss" else 0)
         date=str(r.get("captured_at",""))[:10]
         for label in ("overall","market:"+str(r.get("market")),"capture_date:"+date):
-            t=totals[label];t["n"]+=1;t[result+"es" if result=="loss" else result+"s"]+=1
+            t=totals[label];t["n"]+=1;t[{"win":"wins","loss":"losses","push":"pushes"}[result]]+=1
             t["profit"]+=profit;t["implied_sum"]+=implied(odds)
     report={}
     for label,t in totals.items():
