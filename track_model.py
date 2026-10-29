@@ -129,8 +129,8 @@ def run():
    pair={team_key(teams[0]),team_key(teams[1])}
    if pair!=info["teams"]:continue
    key=team_key(teams[0])+"@"+team_key(teams[1])
-   candidate=(info["date"],eid)
-   if candidate not in scoreboard.setdefault(key,[]):scoreboard[key].append(candidate)
+   completed_fixture=(info["date"],eid)
+   if completed_fixture not in scoreboard.setdefault(key,[]):scoreboard[key].append(completed_fixture)
  graded_now=0
  unmatched_games={}
  missing_players={}
