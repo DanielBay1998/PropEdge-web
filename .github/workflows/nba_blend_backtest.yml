@@ -1,0 +1,26 @@
+name: NBA blend comparison
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_blend_backtest.py
+      - nba_challenger_model.py
+      - data/model_tracking.json
+      - data/nba_2026_27.csv
+      - data/propedge_historical_2025_26_minutes.csv
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compare predictions
+        run: python nba_blend_backtest.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nba-blend-backtest
+          path: reports/nba_blend_comparison.json
