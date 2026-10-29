@@ -865,6 +865,19 @@ def availability_context():
     _injury_cache.update(until=now+600,data=result)
     return result
 
+@app.get("/api/nba-player-profile/{player_name}")
+def nba_player_profile(player_name:str):
+    """Current-season and prior-season game logs for every modeled stat."""
+    from urllib.parse import unquote
+    name=canonical_player(unquote(player_name))
+    rows=load_game_logs().get(name,[])
+    def pack(r):
+        return {"date":r["date"],"season":r["season"],"team":r["team"],
+                "minutes":r.get("MIN"),**{k:r[k] for k in ("PTS","REB","AST","3PM")},
+                "PRA":sum(r[k] for k in ("PTS","REB","AST"))}
+    return {"player":player_name,"current":[pack(r) for r in rows if r["season"]=="current"],
+            "previous":[pack(r) for r in rows if r["season"]=="historical"]}
+
 @app.get("/api/nba-defense-position")
 def nba_defense_position():
     path=ROOT/"data"/"nba_dvp_2026_27.json"
