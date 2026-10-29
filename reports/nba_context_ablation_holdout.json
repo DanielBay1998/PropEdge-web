@@ -1,0 +1,140 @@
+{
+  "status": "RESEARCH_ONLY_NOT_PROMOTED",
+  "split": {
+    "validation_from": "20250327",
+    "holdout_from": "20260109"
+  },
+  "validation_examples": 62615,
+  "holdout_examples": 68200,
+  "markets": {
+    "PTS": {
+      "validation_n": 12523,
+      "test_n": 13640,
+      "selected_on_validation": "defense_0.45",
+      "validation_mae": {
+        "challenger": 4.9655,
+        "defense_0.15": 4.9623,
+        "defense_0.3": 4.9602,
+        "defense_0.45": 4.9593,
+        "role_0.25": 4.9655,
+        "role_0.5": 4.9752
+      },
+      "test_mae": {
+        "challenger": 4.8696,
+        "defense_0.15": 4.8646,
+        "defense_0.3": 4.861,
+        "defense_0.45": 4.8585,
+        "role_0.25": 4.8729,
+        "role_0.5": 4.8852
+      },
+      "selected_test_mae": 4.8585,
+      "challenger_test_mae": 4.8696,
+      "improvement": 0.0111
+    },
+    "REB": {
+      "validation_n": 12523,
+      "test_n": 13640,
+      "selected_on_validation": "defense_0.45",
+      "validation_mae": {
+        "challenger": 2.0199,
+        "defense_0.15": 2.0175,
+        "defense_0.3": 2.0156,
+        "defense_0.45": 2.0143,
+        "role_0.25": 2.0202,
+        "role_0.5": 2.0241
+      },
+      "test_mae": {
+        "challenger": 1.9756,
+        "defense_0.15": 1.9731,
+        "defense_0.3": 1.9712,
+        "defense_0.45": 1.9698,
+        "role_0.25": 1.9767,
+        "role_0.5": 1.9813
+      },
+      "selected_test_mae": 1.9698,
+      "challenger_test_mae": 1.9756,
+      "improvement": 0.0058
+    },
+    "AST": {
+      "validation_n": 12523,
+      "test_n": 13640,
+      "selected_on_validation": "defense_0.45",
+      "validation_mae": {
+        "challenger": 1.4231,
+        "defense_0.15": 1.4215,
+        "defense_0.3": 1.4204,
+        "defense_0.45": 1.4198,
+        "role_0.25": 1.4217,
+        "role_0.5": 1.4224
+      },
+      "test_mae": {
+        "challenger": 1.4494,
+        "defense_0.15": 1.4474,
+        "defense_0.3": 1.446,
+        "defense_0.45": 1.445,
+        "role_0.25": 1.4479,
+        "role_0.5": 1.4484
+      },
+      "selected_test_mae": 1.445,
+      "challenger_test_mae": 1.4494,
+      "improvement": 0.0044
+    },
+    "3PM": {
+      "validation_n": 12523,
+      "test_n": 13640,
+      "selected_on_validation": "defense_0.45",
+      "validation_mae": {
+        "challenger": 0.9616,
+        "defense_0.15": 0.9607,
+        "defense_0.3": 0.9601,
+        "defense_0.45": 0.9599,
+        "role_0.25": 0.9619,
+        "role_0.5": 0.9628
+      },
+      "test_mae": {
+        "challenger": 0.9484,
+        "defense_0.15": 0.9478,
+        "defense_0.3": 0.9475,
+        "defense_0.45": 0.9473,
+        "role_0.25": 0.9484,
+        "role_0.5": 0.949
+      },
+      "selected_test_mae": 0.9473,
+      "challenger_test_mae": 0.9484,
+      "improvement": 0.0011
+    },
+    "PRA": {
+      "validation_n": 12523,
+      "test_n": 13640,
+      "selected_on_validation": "defense_0.45",
+      "validation_mae": {
+        "challenger": 6.4812,
+        "defense_0.15": 6.4741,
+        "defense_0.3": 6.4696,
+        "defense_0.45": 6.467,
+        "role_0.25": 6.4823,
+        "role_0.5": 6.5022
+      },
+      "test_mae": {
+        "challenger": 6.3744,
+        "defense_0.15": 6.3634,
+        "defense_0.3": 6.3552,
+        "defense_0.45": 6.3493,
+        "role_0.25": 6.376,
+        "role_0.5": 6.3979
+      },
+      "selected_test_mae": 6.3493,
+      "challenger_test_mae": 6.3744,
+      "improvement": 0.0251
+    }
+  },
+  "limitations": [
+    "Opponent defense is historical team boxscore allowance, not possession-adjusted defensive rating.",
+    "Role is historical minutes trend, not confirmed starter status or lineup.",
+    "No shot attempts, actual usage, injury reports, verified pregame lineups, or travel.",
+    "Only completed games prior to target date enter forecast features; opponent identity is known pregame.",
+    "Selection on validation only; final holdout not used for tuning.",
+    "Not matched against production consensus or sportsbook odds; no ROI proof.",
+    "No NBA or NFL live projection changes."
+  ]
+}
