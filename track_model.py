@@ -88,7 +88,7 @@ def run():
     an=(away.get("team") or {}).get("displayName") or ""
     hn=(home.get("team") or {}).get("displayName") or ""
     key=canonical(an)+"@"+canonical(hn)
-    scoreboard.setdefault(key,set()).add(str(e.get("id")))
+    scoreboard.setdefault(key,[]).append((day,str(e.get("id"))))
   except Exception as exc:
    print("Scoreboard unavailable for",day,type(exc).__name__,flush=True)
  graded_now=0
@@ -97,11 +97,24 @@ def run():
  for r in pending:
   teams=str(r.get("game") or "").split(" @ ")
   match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
-  ids=scoreboard.get(match,set())
-  if len(ids)!=1:
+  # A matchup may occur on multiple dates. Only use a completed game
+  # within the capture window, and require a unique player boxscore.
+  try:
+   capture_date=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00")).date()
+  except (ValueError,KeyError,TypeError):
+   unmatched_games["invalid capture date"]=unmatched_games.get("invalid capture date",0)+1
+   continue
+  eligible=[(day,eid) for day,eid in scoreboard.get(match,[])
+            if -1 <= (datetime.datetime.strptime(day,"%Y%m%d").date()-capture_date).days <= 2]
+  player_key=canonical(r["player"])
+  matching=[by_game[(eid,player_key)] for day,eid in eligible if (eid,player_key) in by_game]
+  if len(matching)>1:
+   unmatched_games["ambiguous completed game: "+match]=unmatched_games.get("ambiguous completed game: "+match,0)+1
+   continue
+  if not eligible:
    unmatched_games[match]=unmatched_games.get(match,0)+1
    continue
-  row=by_game.get((next(iter(ids)),canonical(r["player"])))
+  row=matching[0] if len(matching)==1 else None
   if not row:
    missing_players[r["player"]]=missing_players.get(r["player"],0)+1
    continue
