@@ -2,6 +2,7 @@
 import json, math
 from pathlib import Path
 from nba_challenger_model import load, predict
+from nba_matchup_features import load_team_games, prior_allowances
 
 ROOT=Path(__file__).resolve().parent
 def run():
