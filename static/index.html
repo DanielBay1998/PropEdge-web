@@ -758,9 +758,12 @@ body{background:#080d12!important;color:#f4f7f8!important}
 .matchup-filter button[aria-pressed="false"]{box-shadow:none!important}
 
 /* Consistent legible selected state for every player, market, and window. */
-.pe-window-tab.active,.pe-window-tab.active.unknown,.pe-window-tab.active.strong,.pe-window-tab.active.good,.pe-window-tab.active.mixed,.pe-window-tab.active.weak{
-background:#19503c!important;color:#f0fff7!important;border-color:#7ae4b2!important;outline:2px solid #9fe9c7!important;outline-offset:1px!important;opacity:1!important;
-}
+.pe-window-tab.active{outline:2px solid #e7f5ec!important;outline-offset:1px!important;opacity:1!important;color:#f0fff7!important}
+.pe-window-tab.active.strong{background:#17583f!important;border-color:#49cf91!important}
+.pe-window-tab.active.good{background:#304c37!important;border-color:#87bb91!important}
+.pe-window-tab.active.mixed{background:#514527!important;border-color:#d3b66c!important}
+.pe-window-tab.active.weak{background:#562d35!important;border-color:#d48291!important}
+.pe-window-tab.active.unknown{background:#263b34!important;border-color:#6b897b!important}
 .pe-window-tab.active span,.pe-window-tab.active strong,.pe-window-tab.active small{color:#f0fff7!important;opacity:1!important}
 .pe-window-tab.unknown:not(.active){background:#172c26!important;border-color:#3b554b!important;opacity:1!important;color:#d5e5dc!important}
 .pe-window-tab.unknown strong{color:#dcebe3!important}
