@@ -123,8 +123,14 @@ def odds_board():
   except (TypeError,ValueError):continue
   if dt.tzinfo is None:continue
   if now<dt<now+datetime.timedelta(days=7):upcoming.append(e)
- for event in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:16]:
-  try:response=client.get_odds("americanfootball_nfl",event_id=event["id"],markets=list(MARKETS))
+ from concurrent.futures import ThreadPoolExecutor,wait
+ pool=ThreadPoolExecutor(max_workers=4)
+ futures={pool.submit(client.get_odds,"americanfootball_nfl",event_id=e["id"],markets=list(MARKETS)):e for e in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:8]}
+ done,pending=wait(futures,timeout=12)
+ pool.shutdown(wait=False,cancel_futures=True)
+ for task in done:
+  event=futures[task]
+  try:response=task.result()
   except Exception:continue
   if not isinstance(response,dict):continue
   quotes=defaultdict(lambda:{"books":set(),"prices":{}})
@@ -180,6 +186,9 @@ def odds_board():
      best=max(available,key=lambda bp:bp[1])
      base["top_picks"].append({**record,"book":best[0],"odds":best[1]})
  base["verified"]=bool(base["props"])
+ # Keep the iPhone response bounded; full raw odds should not be shipped as multi-MB JSON.
+ base["total_props_before_limit"]=len(base["props"])
+ base["props"]=sorted(base["props"],key=lambda p:(p["projection"] is None,-abs(p["edge"] or 0)))[:350]
  # Keep the best line for each player/market/side/event; other lines remain in All Props.
  unique={}
  for p in base["top_picks"]:
