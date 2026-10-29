@@ -1,0 +1,51 @@
+name: NFL historical model and grading
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */4 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'sync_nfl_history.py'
+      - 'track_nfl.py'
+      - 'nfl_model.py'
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: nfl-history-writer
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Import completed NFL boxscores
+        run: python sync_nfl_history.py
+      - name: Grade NFL pregame predictions
+        run: python track_nfl.py
+      - name: Validate historical model
+        run: |
+          python - <<'PY'
+          from nfl_model import summary
+          s=summary()
+          print('NFL history rows:',s['history_rows'])
+          print('Walk-forward samples:',{k:v['samples'] for k,v in s['validation'].items()})
+          PY
+      - name: Commit independent NFL datasets
+        run: |
+          git config user.name "PropEdge Data Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/nfl_gamelogs.csv data/nfl_model_tracking.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh final NFL game logs and tracking"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          else
+            echo "No NFL changes"
+          fi
