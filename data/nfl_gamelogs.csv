@@ -1,0 +1,674 @@
+event_id,date,player_id,player,team,PASS_YDS,RUSH_YDS,REC_YDS,REC,PASS_TD,RUSH_TD
+401872988,2026-10-11,5081432,Antonio Williams,Washington Commanders,,,31.0,3.0,,
+401872988,2026-10-11,3068267,Austin Ekeler,Washington Commanders,,,15.0,1.0,,0.0
+401872988,2026-10-11,4696981,Cam Skattebo,New York Giants,,59.0,12.0,2.0,,0.0
+401872988,2026-10-11,4360635,Chig Okonkwo,Washington Commanders,,,60.0,4.0,,
+401872988,2026-10-11,4040655,Darnell Mooney,New York Giants,,,14.0,2.0,,
+401872988,2026-10-11,4361577,Dyami Brown,Washington Commanders,,,2.0,1.0,,
+401872988,2026-10-11,4361050,Isaiah Likely,New York Giants,,,94.0,11.0,,
+401872988,2026-10-11,4433970,J.J. McCarthy,New York Giants,,2.0,,,,0.0
+401872988,2026-10-11,4575131,Jacory Croskey-Merritt,Washington Commanders,,82.0,,,,1.0
+401872988,2026-10-11,2969939,Jameis Winston,New York Giants,326.0,27.0,,,3.0,0.0
+401872988,2026-10-11,4426348,Jayden Daniels,Washington Commanders,199.0,103.0,,,0.0,2.0
+401872988,2026-10-11,4048228,John Bates,Washington Commanders,,,1.0,1.0,,
+401872988,2026-10-11,4682648,Malachi Fields,New York Giants,,,20.0,2.0,,
+401872988,2026-10-11,4595348,Malik Nabers,New York Giants,,,121.0,11.0,,
+401872988,2026-10-11,4241457,Najee Harris,New York Giants,,9.0,5.0,1.0,,0.0
+401872988,2026-10-11,4697815,Rachaad White,Washington Commanders,,18.0,2.0,1.0,,0.0
+401872988,2026-10-11,3121422,Terry McLaurin,Washington Commanders,,,62.0,4.0,,
+401872988,2026-10-11,4429148,Theo Johnson,New York Giants,,,35.0,2.0,,
+401872988,2026-10-11,4567156,Treylon Burks,Washington Commanders,,,26.0,2.0,,
+401872988,2026-10-11,4360516,Tyrone Tracy Jr.,New York Giants,,6.0,25.0,2.0,,0.0
+401872989,2026-10-11,3929914,Adam Prentice,Denver Broncos,,3.0,,,,0.0
+401872989,2026-10-11,4426338,Bo Nix,Denver Broncos,123.0,10.0,,,1.0,0.0
+401872989,2026-10-11,4241263,Charlie Kolar,Los Angeles Chargers,,,37.0,3.0,,
+401872989,2026-10-11,3128429,Courtland Sutton,Denver Broncos,,,18.0,2.0,,
+401872989,2026-10-11,3051876,Evan Engram,Denver Broncos,,,55.0,4.0,,
+401872989,2026-10-11,4428396,Hayden Rucci,Los Angeles Chargers,,,7.0,1.0,,
+401872989,2026-10-11,4241985,J.K. Dobbins,Denver Broncos,,68.0,6.0,2.0,,1.0
+401872989,2026-10-11,4372016,Jaylen Waddle,Denver Broncos,,9.0,19.0,2.0,,0.0
+401872989,2026-10-11,4038941,Justin Herbert,Los Angeles Chargers,121.0,54.0,,,1.0,0.0
+401872989,2026-10-11,4596334,Keaton Mitchell,Los Angeles Chargers,,11.0,18.0,3.0,,0.0
+401872989,2026-10-11,4430968,Kimani Vidal,Los Angeles Chargers,,57.0,,1.0,,1.0
+401872989,2026-10-11,4039057,Lil'Jordan Humphrey,Denver Broncos,,,8.0,1.0,,
+401872989,2026-10-11,3051738,Marquez Valdes-Scantling,Los Angeles Chargers,,,22.0,2.0,,
+401872989,2026-10-11,4686472,Marvin Mims Jr.,Denver Broncos,,3.0,6.0,2.0,,0.0
+401872989,2026-10-11,4685382,Omarion Hampton,Los Angeles Chargers,,33.0,6.0,1.0,,0.0
+401872989,2026-10-11,4595342,Oronde Gadsden,Los Angeles Chargers,,,0.0,0.0,,
+401872989,2026-10-11,4568490,RJ Harvey,Denver Broncos,,7.0,0.0,0.0,,0.0
+401872989,2026-10-11,4426535,Theo Wease Jr.,Los Angeles Chargers,,,16.0,1.0,,
+401872989,2026-10-11,4686612,Tre' Harris,Los Angeles Chargers,,,16.0,2.0,,
+401872989,2026-10-11,4431280,Troy Franklin,Denver Broncos,,,16.0,2.0,,
+401872989,2026-10-11,4362748,Tyler Badie,Denver Broncos,,6.0,,1.0,,0.0
+401872990,2026-10-11,4259305,Bo Melton,Green Bay Packers,,,20.0,3.0,,
+401872990,2026-10-11,15168,Case Keenum,Chicago Bears,108.0,4.0,,,0.0,0.0
+401872990,2026-10-11,4248528,Christian Watson,Green Bay Packers,,,143.0,6.0,,
+401872990,2026-10-11,4258595,Cole Kmet,Chicago Bears,,,8.0,1.0,,
+401872990,2026-10-11,4723086,Colston Loveland,Chicago Bears,,,19.0,2.0,,
+401872990,2026-10-11,4259545,D'Andre Swift,Chicago Bears,,43.0,30.0,4.0,,1.0
+401872990,2026-10-11,5160110,Jahdae Walker,Chicago Bears,,,0.0,0.0,,
+401872990,2026-10-11,4036378,Jordan Love,Green Bay Packers,367.0,6.0,,,2.0,0.0
+401872990,2026-10-11,4819231,Kaleb Johnson,Green Bay Packers,,26.0,,,,0.0
+401872990,2026-10-11,2973405,Kalif Raymond,Chicago Bears,,,6.0,3.0,,0.0
+401872990,2026-10-11,4685278,Luther Burden III,Chicago Bears,,2.0,47.0,4.0,,0.0
+401872990,2026-10-11,4429023,MarShawn Lloyd,Green Bay Packers,,31.0,6.0,1.0,,2.0
+401872990,2026-10-11,4701936,Matthew Golden,Green Bay Packers,,,123.0,6.0,,
+401872990,2026-10-11,4249836,Pierre Strong Jr.,Green Bay Packers,,7.0,11.0,3.0,,0.0
+401872990,2026-10-11,4431299,Rome Odunze,Chicago Bears,,,40.0,3.0,,
+401872990,2026-10-11,4426386,Roschon Johnson,Chicago Bears,,6.0,34.0,5.0,,0.0
+401872990,2026-10-11,4430191,Skyy Moore,Green Bay Packers,,,0.0,1.0,,
+401872990,2026-10-11,4572680,Tucker Kraft,Green Bay Packers,,2.0,64.0,5.0,,0.0
+401872990,2026-10-11,14163,Tyrod Taylor,Green Bay Packers,,,,,,0.0
+401872990,2026-10-11,4434153,Tyson Bagent,Chicago Bears,87.0,17.0,,,0.0,0.0
+401872990,2026-10-11,4869748,Zavion Thomas,Chicago Bears,,11.0,11.0,1.0,,0.0
+401872991,2026-10-11,4374302,Amon-Ra St. Brown,Detroit Lions,,,69.0,6.0,,
+401872991,2026-10-11,4427728,Bam Knight,Arizona Cardinals,,8.0,,,,0.0
+401872991,2026-10-11,4242392,Brock Wright,Detroit Lions,,,11.0,1.0,,
+401872991,2026-10-11,4426844,Elijah Higgins,Arizona Cardinals,,,57.0,3.0,,
+401872991,2026-10-11,5123663,Isaac TeSlaa,Detroit Lions,,,0.0,0.0,,
+401872991,2026-10-11,2578570,Jacoby Brissett,Arizona Cardinals,292.0,19.0,7.0,1.0,3.0,0.0
+401872991,2026-10-11,4429795,Jahmyr Gibbs,Detroit Lions,,151.0,56.0,5.0,,2.0
+401872991,2026-10-11,4692835,Jalen Brooks,Arizona Cardinals,,,16.0,2.0,,
+401872991,2026-10-11,4426388,Jameson Williams,Detroit Lions,,,47.0,2.0,,
+401872991,2026-10-11,3046779,Jared Goff,Detroit Lions,271.0,1.0,,,3.0,1.0
+401872991,2026-10-11,4870808,Jeremiyah Love,Arizona Cardinals,,22.0,0.0,0.0,,0.0
+401872991,2026-10-11,3045523,Kendrick Bourne,Arizona Cardinals,,,70.0,5.0,,
+401872991,2026-10-11,4360761,Michael Wilson,Arizona Cardinals,7.0,,30.0,4.0,0.0,
+401872991,2026-10-11,4869132,Reggie Virgil,Arizona Cardinals,,,29.0,2.0,,
+401872991,2026-10-11,4430027,Sam LaPorta,Detroit Lions,,,88.0,5.0,,
+401872991,2026-10-11,4912274,Sione Vaki,Detroit Lions,,11.0,,,,0.0
+401872991,2026-10-11,4374045,Teagan Quitoriano,Arizona Cardinals,,,15.0,2.0,,
+401872991,2026-10-11,4361307,Trey McBride,Arizona Cardinals,,,66.0,9.0,,
+401872991,2026-10-11,4373626,Tyler Allgeier,Arizona Cardinals,,7.0,9.0,2.0,,0.0
+401872992,2026-10-11,4576297,AJ Barner,Seattle Seahawks,,,20.0,3.0,,
+401872992,2026-10-11,16731,Brandin Cooks,San Francisco 49ers,,,7.0,1.0,,
+401872992,2026-10-11,4361741,Brock Purdy,San Francisco 49ers,189.0,6.0,,,2.0,0.0
+401872992,2026-10-11,3117251,Christian McCaffrey,San Francisco 49ers,,68.0,15.0,3.0,,1.0
+401872992,2026-10-11,2977187,Cooper Kupp,Seattle Seahawks,,,15.0,2.0,,
+401872992,2026-10-11,3126486,Deebo Samuel Sr.,San Francisco 49ers,,4.0,21.0,2.0,,0.0
+401872992,2026-10-11,4678006,Elijah Arroyo,Seattle Seahawks,,,0.0,0.0,,
+401872992,2026-10-11,4887558,Emanuel Wilson,Seattle Seahawks,,61.0,11.0,2.0,,1.0
+401872992,2026-10-11,4429835,George Holani,Seattle Seahawks,,7.0,24.0,4.0,,0.0
+401872992,2026-10-11,3040151,George Kittle,San Francisco 49ers,,,24.0,5.0,,
+401872992,2026-10-11,4575665,Jacob Cowing,San Francisco 49ers,,,9.0,1.0,,
+401872992,2026-10-11,4430878,Jaxon Smith-Njigba,Seattle Seahawks,,16.0,102.0,5.0,,0.0
+401872992,2026-10-11,4696044,Kaelon Black,San Francisco 49ers,,16.0,,,,0.0
+401872992,2026-10-11,4040612,Luke Farrell,San Francisco 49ers,,,0.0,0.0,,
+401872992,2026-10-11,16737,Mike Evans,San Francisco 49ers,,,113.0,7.0,,
+401872992,2026-10-11,4032473,Rashid Shaheed,Seattle Seahawks,,,23.0,2.0,,
+401872992,2026-10-11,3912547,Sam Darnold,Seattle Seahawks,195.0,5.0,,,1.0,0.0
+401872993,2026-10-12,4430807,Bijan Robinson,Atlanta Falcons,,86.0,32.0,4.0,,0.0
+401872993,2026-10-12,4241474,Brian Robinson Jr.,Atlanta Falcons,,16.0,0.0,0.0,,0.0
+401872993,2026-10-12,4035020,Charlie Woerner,Atlanta Falcons,,,13.0,1.0,,
+401872993,2026-10-12,3043078,Derrick Henry,Baltimore Ravens,,102.0,18.0,1.0,,0.0
+401872993,2026-10-12,4696882,Devontez Walker,Baltimore Ravens,,,9.0,2.0,,
+401872993,2026-10-12,4426502,Drake London,Atlanta Falcons,,,118.0,7.0,,
+401872993,2026-10-12,4361409,Jahan Dotson,Atlanta Falcons,,,54.0,2.0,,
+401872993,2026-10-12,16713,Jake Matthews,Atlanta Falcons,,,0.0,0.0,,
+401872993,2026-10-12,4876132,Josh Cuevas,Baltimore Ravens,,,26.0,2.0,,
+401872993,2026-10-12,4038441,Justice Hill,Baltimore Ravens,,73.0,5.0,2.0,,0.0
+401872993,2026-10-12,4360248,Kyle Pitts Sr.,Atlanta Falcons,,,42.0,5.0,,
+401872993,2026-10-12,3116365,Mark Andrews,Baltimore Ravens,,,28.0,4.0,,
+401872993,2026-10-12,4360423,Michael Penix Jr.,Atlanta Falcons,240.0,8.0,,,1.0,0.0
+401872993,2026-10-12,4360939,Rashod Bateman,Baltimore Ravens,,,62.0,5.0,,
+401872993,2026-10-12,4241479,Tua Tagovailoa,Atlanta Falcons,34.0,,,,0.0,
+401872993,2026-10-12,4035671,Tyler Huntley,Baltimore Ravens,201.0,20.0,,,2.0,1.0
+401872993,2026-10-12,4870612,Zachariah Branch,Atlanta Falcons,,,15.0,2.0,,
+401872993,2026-10-12,4429615,Zay Flowers,Baltimore Ravens,0.0,13.0,53.0,8.0,0.0,0.0
+401872994,2026-10-13,4429096,Blake Corum,Los Angeles Rams,,19.0,53.0,3.0,,1.0
+401872994,2026-10-13,4242557,Colby Parkinson,Los Angeles Rams,,,3.0,1.0,,
+401872994,2026-10-13,4385690,Dalton Kincaid,Buffalo Bills,,,7.0,1.0,,
+401872994,2026-10-13,16800,Davante Adams,Los Angeles Rams,,,51.0,5.0,,
+401872994,2026-10-13,4426553,Davis Allen,Los Angeles Rams,,,24.0,2.0,,
+401872994,2026-10-13,3930086,Dawson Knox,Buffalo Bills,,,6.0,1.0,,
+401872994,2026-10-13,4379399,James Cook III,Buffalo Bills,,111.0,7.0,1.0,,2.0
+401872994,2026-10-13,3918298,Josh Allen,Buffalo Bills,210.0,121.0,,,1.0,1.0
+401872994,2026-10-13,4635008,Keon Coleman,Buffalo Bills,,,7.0,1.0,,
+401872994,2026-10-13,4373678,Khalil Shakir,Buffalo Bills,,,80.0,3.0,,
+401872994,2026-10-13,4430737,Kyren Williams,Los Angeles Rams,,49.0,27.0,6.0,,1.0
+401872994,2026-10-13,12483,Matthew Stafford,Los Angeles Rams,383.0,,,,3.0,
+401872994,2026-10-13,4426515,Puka Nacua,Los Angeles Rams,,9.0,138.0,17.0,,0.0
+401872994,2026-10-13,4429501,Ray Davis,Buffalo Bills,,2.0,31.0,1.0,,0.0
+401872994,2026-10-13,4683153,Skyler Bell,Buffalo Bills,,,0.0,0.0,,
+401872994,2026-10-13,4360797,Tutu Atwell,Los Angeles Rams,,,4.0,1.0,,
+401872994,2026-10-13,3915411,Ty Johnson,Buffalo Bills,,,72.0,4.0,,
+401872994,2026-10-13,2573401,Tyler Higbee,Los Angeles Rams,,,83.0,5.0,,
+401872995,2026-10-16,4576297,AJ Barner,Seattle Seahawks,,,16.0,3.0,,
+401872995,2026-10-16,4426338,Bo Nix,Denver Broncos,107.0,2.0,,,0.0,0.0
+401872995,2026-10-16,2977187,Cooper Kupp,Seattle Seahawks,,,50.0,5.0,,
+401872995,2026-10-16,3128429,Courtland Sutton,Denver Broncos,,,19.0,2.0,,
+401872995,2026-10-16,4887558,Emanuel Wilson,Seattle Seahawks,,52.0,0.0,0.0,,0.0
+401872995,2026-10-16,2975863,Eric Saubert,Seattle Seahawks,,,0.0,0.0,,
+401872995,2026-10-16,3051876,Evan Engram,Denver Broncos,,,13.0,2.0,,
+401872995,2026-10-16,4429835,George Holani,Seattle Seahawks,,20.0,,,,1.0
+401872995,2026-10-16,4241985,J.K. Dobbins,Denver Broncos,,41.0,5.0,3.0,,1.0
+401872995,2026-10-16,4430878,Jaxon Smith-Njigba,Seattle Seahawks,,,134.0,12.0,,
+401872995,2026-10-16,4372016,Jaylen Waddle,Denver Broncos,,,24.0,4.0,,
+401872995,2026-10-16,4686472,Marvin Mims Jr.,Denver Broncos,,,13.0,2.0,,
+401872995,2026-10-16,4568490,RJ Harvey,Denver Broncos,,25.0,31.0,3.0,,1.0
+401872995,2026-10-16,4032473,Rashid Shaheed,Seattle Seahawks,,2.0,66.0,5.0,,0.0
+401872995,2026-10-16,3912547,Sam Darnold,Seattle Seahawks,278.0,19.0,,,0.0,0.0
+401872995,2026-10-16,4597703,Tory Horton,Seattle Seahawks,,,13.0,1.0,,
+401872995,2026-10-16,4431280,Troy Franklin,Denver Broncos,,,2.0,1.0,,
+401872995,2026-10-16,4362748,Tyler Badie,Denver Broncos,,6.0,,,,0.0
+401872995,2026-10-16,4035693,Velus Jones Jr.,Seattle Seahawks,,20.0,,1.0,,0.0
+401872996,2026-10-18,4882093,Bhayshul Tuten,Jacksonville Jaguars,,39.0,48.0,4.0,,0.0
+401872996,2026-10-18,4430539,Brenton Strange,Jacksonville Jaguars,,,44.0,5.0,,
+401872996,2026-10-18,4362504,Brevin Jordan,Houston Texans,,,,1.0,,
+401872996,2026-10-18,4432773,Brian Thomas Jr.,Jacksonville Jaguars,,,0.0,0.0,,
+401872996,2026-10-18,4432577,C.J. Stroud,Houston Texans,312.0,5.0,,,3.0,0.0
+401872996,2026-10-18,4426496,Cade Stover,Houston Texans,,5.0,,,,0.0
+401872996,2026-10-18,4362619,Chris Rodriguez Jr.,Jacksonville Jaguars,,55.0,0.0,0.0,,0.0
+401872996,2026-10-18,3117256,Dalton Schultz,Houston Texans,,,33.0,4.0,,
+401872996,2026-10-18,3843945,Foster Moreau,Houston Texans,,,7.0,2.0,,
+401872996,2026-10-18,3916433,Jakobi Meyers,Jacksonville Jaguars,,,83.0,5.0,,
+401872996,2026-10-18,4429939,Jawhar Jordan,Houston Texans,,43.0,7.0,1.0,,1.0
+401872996,2026-10-18,4586312,Jaylin Noel,Houston Texans,,,107.0,4.0,,
+401872996,2026-10-18,4429022,Kayshon Boutte,Houston Texans,,,16.0,2.0,,
+401872996,2026-10-18,4911851,LeQuint Allen Jr.,Jacksonville Jaguars,,1.0,,,,0.0
+401872996,2026-10-18,4432708,Marvin Harrison Jr.,Houston Texans,,,34.0,3.0,,
+401872996,2026-10-18,4686248,Nate Boerkircher,Jacksonville Jaguars,,,8.0,2.0,,
+401872996,2026-10-18,4258173,Nico Collins,Houston Texans,,5.0,74.0,3.0,,0.0
+401872996,2026-10-18,4432620,Parker Washington,Jacksonville Jaguars,,,64.0,4.0,,
+401872996,2026-10-18,4685415,Travis Hunter,Jacksonville Jaguars,,,59.0,4.0,,
+401872996,2026-10-18,4360310,Trevor Lawrence,Jacksonville Jaguars,306.0,11.0,,,4.0,0.0
+401872996,2026-10-18,4429059,Woody Marks,Houston Texans,,56.0,25.0,2.0,,0.0
+401872996,2026-10-18,4686422,Xavier Hutchinson,Houston Texans,,,10.0,2.0,,
+401872997,2026-10-18,4569682,Audric Estime,Cleveland Browns,,19.0,,,,1.0
+401872997,2026-10-18,4362018,Blake Whiteheart,Cleveland Browns,,,8.0,1.0,,
+401872997,2026-10-18,4832800,Denzel Boston,Cleveland Browns,,,15.0,1.0,,
+401872997,2026-10-18,3043078,Derrick Henry,Baltimore Ravens,,58.0,2.0,1.0,,0.0
+401872997,2026-10-18,3122840,Deshaun Watson,Cleveland Browns,164.0,29.0,,,0.0,0.0
+401872997,2026-10-18,4696882,Devontez Walker,Baltimore Ravens,,,0.0,0.0,,
+401872997,2026-10-18,5083076,Harold Fannin Jr.,Cleveland Browns,,,9.0,1.0,,
+401872997,2026-10-18,4870847,Ja'Kobi Lane,Baltimore Ravens,,,40.0,4.0,,
+401872997,2026-10-18,4722893,Jaleel McLaughlin,Cleveland Browns,,41.0,14.0,4.0,,0.0
+401872997,2026-10-18,4241463,Jerry Jeudy,Cleveland Browns,,,69.0,4.0,,
+401872997,2026-10-18,4876132,Josh Cuevas,Baltimore Ravens,,,44.0,4.0,,
+401872997,2026-10-18,4038441,Justice Hill,Baltimore Ravens,,,9.0,3.0,,
+401872997,2026-10-18,4870653,KC Concepcion,Cleveland Browns,,2.0,37.0,4.0,,0.0
+401872997,2026-10-18,3116365,Mark Andrews,Baltimore Ravens,,,4.0,1.0,,
+401872997,2026-10-18,2515270,Michael Burton,Cleveland Browns,,2.0,0.0,0.0,,0.0
+401872997,2026-10-18,4360939,Rashod Bateman,Baltimore Ravens,,,0.0,0.0,,
+401872997,2026-10-18,4241424,Tylan Wallace,Cleveland Browns,,,12.0,1.0,,
+401872997,2026-10-18,4035671,Tyler Huntley,Baltimore Ravens,165.0,28.0,,,1.0,0.0
+401872997,2026-10-18,4429615,Zay Flowers,Baltimore Ravens,,1.0,66.0,6.0,,0.0
+401872998,2026-10-18,4685720,Bryce Young,Carolina Panthers,281.0,6.0,,,2.0,0.0
+401872998,2026-10-18,4714365,Carson Steele,Philadelphia Eagles,,,4.0,1.0,,
+401872998,2026-10-18,4241416,Chuba Hubbard,Carolina Panthers,,120.0,1.0,1.0,,1.0
+401872998,2026-10-18,3121023,Dallas Goedert,Philadelphia Eagles,,,61.0,6.0,,
+401872998,2026-10-18,4360238,Dameon Pierce,Philadelphia Eagles,,35.0,15.0,4.0,,1.0
+401872998,2026-10-18,4715355,Darius Cooper,Philadelphia Eagles,,,9.0,1.0,,
+401872998,2026-10-18,2576925,Darren Waller,Carolina Panthers,,,0.0,0.0,,
+401872998,2026-10-18,4212909,David Moore,Carolina Panthers,,,27.0,1.0,,
+401872998,2026-10-18,4241478,DeVonta Smith,Philadelphia Eagles,,,75.0,7.0,,
+401872998,2026-10-18,4428850,Dontayvion Wicks,Philadelphia Eagles,,,24.0,2.0,,
+401872998,2026-10-18,4372414,Elijah Moore,Philadelphia Eagles,,,4.0,1.0,,
+401872998,2026-10-18,4695883,Jalen Coker,Carolina Panthers,,,97.0,6.0,,
+401872998,2026-10-18,4567096,John Metchie III,Carolina Panthers,,,24.0,2.0,,
+401872998,2026-10-18,3052096,Johnny Mundt,Philadelphia Eagles,,,4.0,1.0,,
+401872998,2026-10-18,4870795,Makai Lemon,Philadelphia Eagles,,,19.0,3.0,,
+401872998,2026-10-18,4683243,Mitchell Evans,Carolina Panthers,,1.0,0.0,0.0,,0.0
+401872998,2026-10-18,4685201,Tanner McKee,Philadelphia Eagles,215.0,0.0,,,1.0,0.0
+401872998,2026-10-18,4685472,Tetairoa McMillan,Carolina Panthers,,,86.0,6.0,,
+401872998,2026-10-18,4372780,Tommy Tremble,Carolina Panthers,,,46.0,4.0,,
+401872998,2026-10-18,4685350,Trevor Etienne,Carolina Panthers,,,,,,0.0
+401872999,2026-10-18,3043275,Austin Hooper,Atlanta Falcons,,,6.0,1.0,,
+401872999,2026-10-18,4430807,Bijan Robinson,Atlanta Falcons,,61.0,,2.0,,0.0
+401872999,2026-10-18,4241474,Brian Robinson Jr.,Atlanta Falcons,,1.0,9.0,2.0,,0.0
+401872999,2026-10-18,4431611,Caleb Williams,Chicago Bears,305.0,3.0,,,1.0,0.0
+401872999,2026-10-18,4258595,Cole Kmet,Chicago Bears,,,3.0,2.0,,
+401872999,2026-10-18,4723086,Colston Loveland,Chicago Bears,,,65.0,6.0,,
+401872999,2026-10-18,4259545,D'Andre Swift,Chicago Bears,,44.0,26.0,4.0,,2.0
+401872999,2026-10-18,4426502,Drake London,Atlanta Falcons,,,62.0,4.0,,
+401872999,2026-10-18,4361409,Jahan Dotson,Atlanta Falcons,,,87.0,3.0,,
+401872999,2026-10-18,2973405,Kalif Raymond,Chicago Bears,,,18.0,2.0,,
+401872999,2026-10-18,4360248,Kyle Pitts Sr.,Atlanta Falcons,,,60.0,5.0,,
+401872999,2026-10-18,4685278,Luther Burden III,Chicago Bears,,,95.0,8.0,,
+401872999,2026-10-18,4360423,Michael Penix Jr.,Atlanta Falcons,225.0,1.0,,,3.0,0.0
+401872999,2026-10-18,3917914,Olamide Zaccheaus,Atlanta Falcons,,,0.0,0.0,,
+401872999,2026-10-18,4431299,Rome Odunze,Chicago Bears,,,39.0,3.0,,
+401872999,2026-10-18,4426386,Roschon Johnson,Chicago Bears,,51.0,34.0,2.0,,1.0
+401872999,2026-10-18,4870612,Zachariah Branch,Atlanta Falcons,,,9.0,2.0,,
+401872999,2026-10-18,4869748,Zavion Thomas,Chicago Bears,,,25.0,3.0,,
+401873000,2026-10-18,3054850,Alvin Kamara,New Orleans Saints,,34.0,35.0,2.0,,0.0
+401873000,2026-10-18,4698597,Barion Brown,New Orleans Saints,,,5.0,1.0,,
+401873000,2026-10-18,4879276,Bryce Lance,New Orleans Saints,,,9.0,2.0,,
+401873000,2026-10-18,5081999,CJ Donaldson,New Orleans Saints,,39.0,0.0,0.0,,0.0
+401873000,2026-10-18,4257188,Charlie Jones,New York Giants,,,66.0,2.0,,
+401873000,2026-10-18,4361370,Chris Olave,New Orleans Saints,,,43.0,4.0,,
+401873000,2026-10-18,4040655,Darnell Mooney,New York Giants,,20.0,0.0,0.0,,0.0
+401873000,2026-10-18,4569559,Devaughn Vele,New Orleans Saints,,,42.0,3.0,,
+401873000,2026-10-18,4040761,Devin Singletary,New York Giants,,14.0,19.0,1.0,,0.0
+401873000,2026-10-18,4361050,Isaiah Likely,New York Giants,,,99.0,6.0,,
+401873000,2026-10-18,4433970,J.J. McCarthy,New York Giants,243.0,26.0,,,1.0,0.0
+401873000,2026-10-18,2969939,Jameis Winston,New York Giants,152.0,4.0,,,1.0,0.0
+401873000,2026-10-18,3929645,Juwan Johnson,New Orleans Saints,,,0.0,0.0,,
+401873000,2026-10-18,4599739,Kendre Miller,New Orleans Saints,,70.0,0.0,2.0,,0.0
+401873000,2026-10-18,4682648,Malachi Fields,New York Giants,,,19.0,2.0,,
+401873000,2026-10-18,4595348,Malik Nabers,New York Giants,,,165.0,12.0,,
+401873000,2026-10-18,4241457,Najee Harris,New York Giants,,2.0,,,,0.0
+401873000,2026-10-18,4036131,Noah Fant,New Orleans Saints,,,0.0,0.0,,
+401873000,2026-10-18,4702559,Oscar Delp,New Orleans Saints,,,10.0,2.0,,
+401873000,2026-10-18,4360689,Tyler Shough,New Orleans Saints,144.0,32.0,,,3.0,1.0
+401873000,2026-10-18,4360516,Tyrone Tracy Jr.,New York Giants,,18.0,27.0,2.0,,1.0
+401873001,2026-10-18,4047646,A.J. Brown,New England Patriots,,,27.0,3.0,,
+401873001,2026-10-18,4685247,Braelon Allen,New York Jets,,78.0,26.0,2.0,,0.0
+401873001,2026-10-18,4431431,Corey Kiner,New England Patriots,,57.0,,,,0.0
+401873001,2026-10-18,4427095,DeMario Douglas,New England Patriots,,,86.0,7.0,,
+401873001,2026-10-18,4431452,Drake Maye,New England Patriots,235.0,24.0,,,3.0,0.0
+401873001,2026-10-18,4695193,Efton Chism III,New England Patriots,,,0.0,0.0,,
+401873001,2026-10-18,4831959,Eli Raridon,New England Patriots,,,11.0,1.0,,
+401873001,2026-10-18,4569618,Garrett Wilson,New York Jets,,,44.0,4.0,,
+401873001,2026-10-18,15864,Geno Smith,New York Jets,252.0,,,,1.0,0.0
+401873001,2026-10-18,3046439,Hunter Henry,New England Patriots,,,48.0,4.0,,
+401873001,2026-10-18,4695404,Isaiah Davis,New York Jets,,16.0,10.0,1.0,,0.0
+401873001,2026-10-18,4569371,Isaiah Williams,New York Jets,,4.0,,,,0.0
+401873001,2026-10-18,4241410,Jelani Woods,New York Jets,,,9.0,1.0,,
+401873001,2026-10-18,5083315,Kenyon Sadiq,New York Jets,,,12.0,1.0,,
+401873001,2026-10-18,4613202,Kyle Williams,New England Patriots,,,12.0,1.0,,
+401873001,2026-10-18,4808766,Mason Taylor,New York Jets,,,33.0,4.0,,
+401873001,2026-10-18,4723820,Omar Cooper Jr.,New York Jets,,,103.0,6.0,,
+401873001,2026-10-18,4569173,Rhamondre Stevenson,New England Patriots,,36.0,,,,0.0
+401873001,2026-10-18,4361432,Romeo Doubs,New England Patriots,,,42.0,1.0,,
+401873001,2026-10-18,3134353,Tim Patrick,New York Jets,,,15.0,1.0,,
+401873001,2026-10-18,4432710,TreVeyon Henderson,New England Patriots,,31.0,9.0,1.0,,0.0
+401873002,2026-10-18,8439,Aaron Rodgers,Pittsburgh Steelers,253.0,,,,2.0,0.0
+401873002,2026-10-18,4890373,Bauer Sharp,Tampa Bay Buccaneers,,,21.0,1.0,,
+401873002,2026-10-18,4596448,Bucky Irving,Tampa Bay Buccaneers,,46.0,3.0,2.0,,0.0
+401873002,2026-10-18,4243331,Cade Otton,Tampa Bay Buccaneers,,,4.0,1.0,,
+401873002,2026-10-18,3116165,Chris Godwin Jr.,Tampa Bay Buccaneers,,,37.0,4.0,,
+401873002,2026-10-18,4047650,DK Metcalf,Pittsburgh Steelers,,,93.0,11.0,,
+401873002,2026-10-18,4430802,Darnell Washington,Pittsburgh Steelers,,,25.0,4.0,,
+401873002,2026-10-18,4567750,Emeka Egbuka,Tampa Bay Buccaneers,,,48.0,7.0,,
+401873002,2026-10-18,4685261,Germie Bernard,Pittsburgh Steelers,,,87.0,11.0,,
+401873002,2026-10-18,4596472,Jalon Daniels,Tampa Bay Buccaneers,164.0,39.0,,1.0,1.0,0.0
+401873002,2026-10-18,4569987,Jaylen Warren,Pittsburgh Steelers,,50.0,28.0,2.0,,0.0
+401873002,2026-10-18,4371733,Kenny Gainwell,Tampa Bay Buccaneers,,17.0,7.0,1.0,,0.0
+401873002,2026-10-18,4361411,Pat Freiermuth,Pittsburgh Steelers,,,11.0,2.0,,
+401873002,2026-10-18,4038815,Rico Dowdle,Pittsburgh Steelers,,40.0,9.0,3.0,,0.0
+401873002,2026-10-18,5220680,Ted Hurst III,Tampa Bay Buccaneers,,,40.0,3.0,,
+401873002,2026-10-18,4608810,Tez Johnson,Tampa Bay Buccaneers,,,7.0,2.0,,
+401873003,2026-10-18,3925357,Calvin Ridley,Tennessee Titans,,,0.0,0.0,,
+401873003,2026-10-18,4688380,Cam Ward,Tennessee Titans,102.0,7.0,,,1.0,0.0
+401873003,2026-10-18,4871023,Carnell Tate,Tennessee Titans,,,70.0,6.0,,
+401873003,2026-10-18,4361516,Daniel Bellinger,Tennessee Titans,,,0.0,0.0,,
+401873003,2026-10-18,3917792,Daniel Jones,Indianapolis Colts,269.0,30.0,,,1.0,0.0
+401873003,2026-10-18,4683151,Deion Burks,Indianapolis Colts,,7.0,41.0,2.0,,0.0
+401873003,2026-10-18,4883647,Elic Ayomanor,Tennessee Titans,,,3.0,1.0,,
+401873003,2026-10-18,4242335,Jonathan Taylor,Indianapolis Colts,,94.0,57.0,2.0,,1.0
+401873003,2026-10-18,4688813,Josh Downs,Indianapolis Colts,,7.0,40.0,4.0,,0.0
+401873003,2026-10-18,15818,Keenan Allen,Indianapolis Colts,,,82.0,8.0,,
+401873003,2026-10-18,3051889,Laquon Treadwell,Indianapolis Colts,,,21.0,2.0,,
+401873003,2026-10-18,2998565,Mo Alie-Cox,Indianapolis Colts,,,1.0,1.0,,
+401873003,2026-10-18,2971281,Pharaoh Brown,Indianapolis Colts,,,7.0,1.0,,
+401873003,2026-10-18,4686468,Seth McGowan,Indianapolis Colts,,27.0,,,,0.0
+401873003,2026-10-18,3916148,Tony Pollard,Tennessee Titans,,76.0,0.0,0.0,,0.0
+401873003,2026-10-18,4428557,Tyjae Spears,Tennessee Titans,,1.0,7.0,1.0,,0.0
+401873003,2026-10-18,4569587,Wan'Dale Robinson,Tennessee Titans,,,22.0,3.0,,
+401873003,2026-10-18,4362523,Will Mallory,Indianapolis Colts,,,20.0,2.0,,
+401873004,2026-10-18,4427728,Bam Knight,Arizona Cardinals,,80.0,18.0,2.0,,0.0
+401873004,2026-10-18,4429096,Blake Corum,Los Angeles Rams,,42.0,18.0,2.0,,0.0
+401873004,2026-10-18,4242557,Colby Parkinson,Los Angeles Rams,,,31.0,5.0,,
+401873004,2026-10-18,16800,Davante Adams,Los Angeles Rams,,,39.0,3.0,,
+401873004,2026-10-18,4426553,Davis Allen,Los Angeles Rams,,0.0,,,,0.0
+401873004,2026-10-18,4426844,Elijah Higgins,Arizona Cardinals,,,28.0,3.0,,
+401873004,2026-10-18,2578570,Jacoby Brissett,Arizona Cardinals,218.0,2.0,,,0.0,0.0
+401873004,2026-10-18,4692835,Jalen Brooks,Arizona Cardinals,,,30.0,2.0,,
+401873004,2026-10-18,3045523,Kendrick Bourne,Arizona Cardinals,,,47.0,5.0,,
+401873004,2026-10-18,4710855,Konata Mumpfield,Los Angeles Rams,,,15.0,2.0,,
+401873004,2026-10-18,4430737,Kyren Williams,Los Angeles Rams,,50.0,17.0,3.0,,0.0
+401873004,2026-10-18,12483,Matthew Stafford,Los Angeles Rams,222.0,,,,2.0,
+401873004,2026-10-18,4360761,Michael Wilson,Arizona Cardinals,,,32.0,4.0,,
+401873004,2026-10-18,4426515,Puka Nacua,Los Angeles Rams,,,80.0,6.0,,
+401873004,2026-10-18,4361307,Trey McBride,Arizona Cardinals,,,53.0,7.0,,
+401873004,2026-10-18,4373626,Tyler Allgeier,Arizona Cardinals,,38.0,10.0,1.0,,0.0
+401873004,2026-10-18,2573401,Tyler Higbee,Los Angeles Rams,,,22.0,4.0,,
+401873005,2026-10-18,4890973,Ashton Jeanty,Las Vegas Raiders,,22.0,36.0,4.0,,1.0
+401873005,2026-10-18,4432665,Brock Bowers,Las Vegas Raiders,,,70.0,4.0,,
+401873005,2026-10-18,4241983,Cody White,Las Vegas Raiders,,,0.0,0.0,,
+401873005,2026-10-18,4385690,Dalton Kincaid,Buffalo Bills,,,38.0,7.0,,
+401873005,2026-10-18,3930086,Dawson Knox,Buffalo Bills,,,0.0,1.0,,
+401873005,2026-10-18,4366963,Dylan Laube,Las Vegas Raiders,,0.0,,1.0,,0.0
+401873005,2026-10-18,4382466,Jalen Nailor,Las Vegas Raiders,,,9.0,1.0,,
+401873005,2026-10-18,4379399,James Cook III,Buffalo Bills,,95.0,58.0,3.0,,1.0
+401873005,2026-10-18,3918298,Josh Allen,Buffalo Bills,255.0,1.0,,,2.0,0.0
+401873005,2026-10-18,4242433,Joshua Palmer,Buffalo Bills,,,37.0,1.0,,
+401873005,2026-10-18,4635008,Keon Coleman,Buffalo Bills,,,59.0,4.0,,
+401873005,2026-10-18,4373678,Khalil Shakir,Buffalo Bills,,,34.0,4.0,,
+401873005,2026-10-18,14880,Kirk Cousins,Las Vegas Raiders,313.0,,,,2.0,
+401873005,2026-10-18,4429086,Michael Mayer,Las Vegas Raiders,,,95.0,7.0,,
+401873005,2026-10-18,4686658,Mike Washington Jr.,Las Vegas Raiders,,43.0,7.0,1.0,,0.0
+401873005,2026-10-18,4429501,Ray Davis,Buffalo Bills,,4.0,5.0,1.0,,0.0
+401873005,2026-10-18,4683153,Skyler Bell,Buffalo Bills,,,0.0,0.0,,
+401873005,2026-10-18,4428718,Tre Tucker,Las Vegas Raiders,,,97.0,5.0,,
+401873005,2026-10-18,3915411,Ty Johnson,Buffalo Bills,,3.0,24.0,2.0,,0.0
+401873006,2026-10-18,5093923,Andrew Armstrong,Kansas City Chiefs,,,13.0,1.0,,
+401873006,2026-10-18,4241263,Charlie Kolar,Los Angeles Chargers,,,20.0,3.0,,
+401873006,2026-10-18,4912218,Cyrus Allen,Kansas City Chiefs,,,27.0,2.0,,
+401873006,2026-10-18,4362477,Derius Davis,Los Angeles Chargers,,4.0,,,,0.0
+401873006,2026-10-18,4832955,Emmett Johnson,Kansas City Chiefs,,6.0,18.0,2.0,,0.0
+401873006,2026-10-18,5082630,Jalen Royals,Kansas City Chiefs,,,24.0,2.0,,
+401873006,2026-10-18,4038941,Justin Herbert,Los Angeles Chargers,204.0,26.0,,,0.0,0.0
+401873006,2026-10-18,4430870,KeAndre Lambert-Smith,Los Angeles Chargers,,,32.0,5.0,,
+401873006,2026-10-18,4596334,Keaton Mitchell,Los Angeles Chargers,,4.0,0.0,0.0,,0.0
+401873006,2026-10-18,4567048,Kenneth Walker III,Kansas City Chiefs,,128.0,11.0,2.0,,2.0
+401873006,2026-10-18,4430968,Kimani Vidal,Los Angeles Chargers,,21.0,19.0,3.0,,0.0
+401873006,2026-10-18,4612826,Ladd McConkey,Los Angeles Chargers,,,17.0,1.0,,
+401873006,2026-10-18,4240472,Noah Gray,Kansas City Chiefs,,,53.0,3.0,,
+401873006,2026-10-18,4685382,Omarion Hampton,Los Angeles Chargers,,18.0,21.0,4.0,,0.0
+401873006,2026-10-18,4595342,Oronde Gadsden,Los Angeles Chargers,,,17.0,3.0,,
+401873006,2026-10-18,3139477,Patrick Mahomes,Kansas City Chiefs,272.0,16.0,,,0.0,0.0
+401873006,2026-10-18,4429025,Quentin Johnston,Los Angeles Chargers,,,57.0,1.0,,
+401873006,2026-10-18,4426535,Theo Wease Jr.,Los Angeles Chargers,,,21.0,2.0,,
+401873006,2026-10-18,15847,Travis Kelce,Kansas City Chiefs,,,53.0,4.0,,
+401873006,2026-10-18,4683062,Xavier Worthy,Kansas City Chiefs,,,73.0,7.0,,
+401873007,2026-10-19,4360967,Brevyn Spann-Ford,Dallas Cowboys,,,35.0,4.0,,
+401873007,2026-10-19,4241389,CeeDee Lamb,Dallas Cowboys,,,70.0,9.0,,
+401873007,2026-10-19,4248528,Christian Watson,Green Bay Packers,,,64.0,3.0,,
+401873007,2026-10-19,2577417,Dak Prescott,Dallas Cowboys,258.0,7.0,,,1.0,0.0
+401873007,2026-10-19,4426354,George Pickens,Dallas Cowboys,,,73.0,6.0,,
+401873007,2026-10-19,4383396,Hunter Luepke,Dallas Cowboys,,,9.0,3.0,,
+401873007,2026-10-19,4242355,Jake Ferguson,Dallas Cowboys,,,13.0,2.0,,
+401873007,2026-10-19,4361579,Javonte Williams,Dallas Cowboys,,41.0,9.0,2.0,,1.0
+401873007,2026-10-19,4036378,Jordan Love,Green Bay Packers,276.0,12.0,,,1.0,1.0
+401873007,2026-10-19,4819231,Kaleb Johnson,Green Bay Packers,,,,,,0.0
+401873007,2026-10-19,4429023,MarShawn Lloyd,Green Bay Packers,,10.0,0.0,0.0,,0.0
+401873007,2026-10-19,4701936,Matthew Golden,Green Bay Packers,,,104.0,6.0,,
+401873007,2026-10-19,4249836,Pierre Strong Jr.,Green Bay Packers,,28.0,39.0,5.0,,0.0
+401873007,2026-10-19,5083754,Ryan Flournoy,Dallas Cowboys,,,40.0,7.0,,
+401873007,2026-10-19,4431487,Savion Williams,Green Bay Packers,,9.0,32.0,4.0,,0.0
+401873007,2026-10-19,4572680,Tucker Kraft,Green Bay Packers,,,37.0,5.0,,
+401873007,2026-10-19,4429676,Tyler Goodson,Dallas Cowboys,,0.0,9.0,1.0,,0.0
+401873008,2026-10-20,5081432,Antonio Williams,Washington Commanders,,,50.0,3.0,,
+401873008,2026-10-20,3068267,Austin Ekeler,Washington Commanders,,3.0,4.0,2.0,,0.0
+401873008,2026-10-20,16731,Brandin Cooks,San Francisco 49ers,,,13.0,1.0,,
+401873008,2026-10-20,4361741,Brock Purdy,San Francisco 49ers,264.0,28.0,,,1.0,0.0
+401873008,2026-10-20,4360635,Chig Okonkwo,Washington Commanders,,,69.0,7.0,,
+401873008,2026-10-20,3117251,Christian McCaffrey,San Francisco 49ers,,64.0,53.0,9.0,,2.0
+401873008,2026-10-20,4361577,Dyami Brown,Washington Commanders,,,6.0,1.0,,
+401873008,2026-10-20,3040151,George Kittle,San Francisco 49ers,,,69.0,5.0,,
+401873008,2026-10-20,4426348,Jayden Daniels,Washington Commanders,300.0,10.0,,,2.0,0.0
+401873008,2026-10-20,3127586,Jeremy McNichols,Washington Commanders,,13.0,,,,0.0
+401873008,2026-10-20,4048228,John Bates,Washington Commanders,,,4.0,1.0,,
+401873008,2026-10-20,4431466,Jordan Watkins,San Francisco 49ers,,,22.0,1.0,,
+401873008,2026-10-20,4696044,Kaelon Black,San Francisco 49ers,,34.0,3.0,1.0,,0.0
+401873008,2026-10-20,16002,Kyle Juszczyk,San Francisco 49ers,,,10.0,1.0,,
+401873008,2026-10-20,4426948,Luke McCaffrey,Washington Commanders,,,0.0,0.0,,
+401873008,2026-10-20,16737,Mike Evans,San Francisco 49ers,,,94.0,3.0,,
+401873008,2026-10-20,4697815,Rachaad White,Washington Commanders,,27.0,30.0,4.0,,0.0
+401873008,2026-10-20,2976212,Stefon Diggs,Washington Commanders,,,44.0,6.0,,
+401873008,2026-10-20,3121422,Terry McLaurin,Washington Commanders,,,27.0,1.0,,
+401873008,2026-10-20,4567156,Treylon Burks,Washington Commanders,,,66.0,4.0,,
+401873010,2026-10-23,4047646,A.J. Brown,New England Patriots,,,48.0,3.0,,
+401873010,2026-10-23,4431611,Caleb Williams,Chicago Bears,308.0,18.0,,,2.0,0.0
+401873010,2026-10-23,4258595,Cole Kmet,Chicago Bears,,,28.0,3.0,,
+401873010,2026-10-23,4723086,Colston Loveland,Chicago Bears,,,69.0,7.0,,
+401873010,2026-10-23,4431431,Corey Kiner,New England Patriots,,13.0,,,,0.0
+401873010,2026-10-23,4259545,D'Andre Swift,Chicago Bears,,78.0,12.0,4.0,,1.0
+401873010,2026-10-23,4427095,DeMario Douglas,New England Patriots,,,23.0,3.0,,
+401873010,2026-10-23,4431452,Drake Maye,New England Patriots,321.0,26.0,,,2.0,1.0
+401873010,2026-10-23,4695193,Efton Chism III,New England Patriots,,,16.0,1.0,,
+401873010,2026-10-23,4831959,Eli Raridon,New England Patriots,,,56.0,3.0,,
+401873010,2026-10-23,3046439,Hunter Henry,New England Patriots,,,71.0,7.0,,
+401873010,2026-10-23,2973405,Kalif Raymond,Chicago Bears,,,0.0,0.0,,
+401873010,2026-10-23,4613202,Kyle Williams,New England Patriots,,,0.0,0.0,,
+401873010,2026-10-23,4685278,Luther Burden III,Chicago Bears,,7.0,130.0,4.0,,0.0
+401873010,2026-10-23,4569173,Rhamondre Stevenson,New England Patriots,,22.0,93.0,5.0,,0.0
+401873010,2026-10-23,4431299,Rome Odunze,Chicago Bears,,,69.0,4.0,,
+401873010,2026-10-23,4426386,Roschon Johnson,Chicago Bears,,13.0,,,,0.0
+401873010,2026-10-23,4432710,TreVeyon Henderson,New England Patriots,,9.0,14.0,2.0,,0.0
+401873011,2026-10-25,8439,Aaron Rodgers,Pittsburgh Steelers,212.0,6.0,,,1.0,0.0
+401873011,2026-10-25,3054850,Alvin Kamara,New Orleans Saints,,5.0,57.0,7.0,,0.0
+401873011,2026-10-25,4698597,Barion Brown,New Orleans Saints,,,57.0,3.0,,
+401873011,2026-10-25,4240577,Brandon Smith,Pittsburgh Steelers,,,24.0,2.0,,
+401873011,2026-10-25,4879276,Bryce Lance,New Orleans Saints,,,12.0,2.0,,
+401873011,2026-10-25,4361370,Chris Olave,New Orleans Saints,,,56.0,6.0,,
+401873011,2026-10-25,4047650,DK Metcalf,Pittsburgh Steelers,,,56.0,2.0,,
+401873011,2026-10-25,4430802,Darnell Washington,Pittsburgh Steelers,,,4.0,1.0,,
+401873011,2026-10-25,4569559,Devaughn Vele,New Orleans Saints,,,54.0,5.0,,
+401873011,2026-10-25,4685261,Germie Bernard,Pittsburgh Steelers,,,27.0,3.0,,
+401873011,2026-10-25,4569987,Jaylen Warren,Pittsburgh Steelers,,101.0,36.0,3.0,,0.0
+401873011,2026-10-25,3929645,Juwan Johnson,New Orleans Saints,,,7.0,1.0,,
+401873011,2026-10-25,4599739,Kendre Miller,New Orleans Saints,,6.0,22.0,3.0,,0.0
+401873011,2026-10-25,4036131,Noah Fant,New Orleans Saints,,,11.0,2.0,,
+401873011,2026-10-25,4702559,Oscar Delp,New Orleans Saints,,,2.0,1.0,,
+401873011,2026-10-25,4361411,Pat Freiermuth,Pittsburgh Steelers,,,20.0,2.0,,
+401873011,2026-10-25,4038815,Rico Dowdle,Pittsburgh Steelers,,41.0,45.0,6.0,,0.0
+401873011,2026-10-25,4360689,Tyler Shough,New Orleans Saints,278.0,7.0,,,1.0,0.0
+401873012,2026-10-25,4362238,Chase Brown,Cincinnati Bengals,,39.0,19.0,4.0,,0.0
+401873012,2026-10-25,3043078,Derrick Henry,Baltimore Ravens,,45.0,4.0,1.0,,0.0
+401873012,2026-10-25,4384852,Dohnte Meyers,Cincinnati Bengals,,,0.0,0.0,,
+401873012,2026-10-25,3127310,Drew Sample,Cincinnati Bengals,,,24.0,2.0,,
+401873012,2026-10-25,4427834,Erick All Jr.,Cincinnati Bengals,,,26.0,3.0,,
+401873012,2026-10-25,4870847,Ja'Kobi Lane,Baltimore Ravens,,,25.0,3.0,,
+401873012,2026-10-25,4362628,Ja'Marr Chase,Cincinnati Bengals,,,62.0,5.0,,
+401873012,2026-10-25,3915511,Joe Burrow,Cincinnati Bengals,292.0,12.0,,,4.0,0.0
+401873012,2026-10-25,4876132,Josh Cuevas,Baltimore Ravens,,,35.0,2.0,,
+401873012,2026-10-25,4038441,Justice Hill,Baltimore Ravens,,7.0,26.0,3.0,,0.0
+401873012,2026-10-25,4690143,LaJohntay Wester,Baltimore Ravens,,,15.0,1.0,,
+401873012,2026-10-25,3116365,Mark Andrews,Baltimore Ravens,,,23.0,3.0,,
+401873012,2026-10-25,3116164,Mike Gesicki,Cincinnati Bengals,,,6.0,1.0,,
+401873012,2026-10-25,4690070,Mitchell Tinsley,Cincinnati Bengals,,,7.0,1.0,,
+401873012,2026-10-25,4690013,Rasheen Ali,Baltimore Ravens,,19.0,,,,0.0
+401873012,2026-10-25,4360939,Rashod Bateman,Baltimore Ravens,,,33.0,2.0,,
+401873012,2026-10-25,3116389,Samaje Perine,Cincinnati Bengals,,16.0,,,,1.0
+401873012,2026-10-25,4429299,Tahj Brooks,Cincinnati Bengals,,6.0,,,,0.0
+401873012,2026-10-25,4239993,Tee Higgins,Cincinnati Bengals,,,148.0,6.0,,
+401873012,2026-10-25,4035671,Tyler Huntley,Baltimore Ravens,298.0,12.0,,,1.0,0.0
+401873012,2026-10-25,4429615,Zay Flowers,Baltimore Ravens,,,137.0,8.0,,
+401873013,2026-10-25,4688380,Cam Ward,Tennessee Titans,181.0,5.0,,,0.0,0.0
+401873013,2026-10-25,4871023,Carnell Tate,Tennessee Titans,,,69.0,5.0,,
+401873013,2026-10-25,4431268,Chimere Dike,Tennessee Titans,,,0.0,0.0,,
+401873013,2026-10-25,4361516,Daniel Bellinger,Tennessee Titans,,,4.0,1.0,,
+401873013,2026-10-25,4832800,Denzel Boston,Cleveland Browns,,,27.0,3.0,,
+401873013,2026-10-25,3122840,Deshaun Watson,Cleveland Browns,308.0,19.0,,,0.0,1.0
+401873013,2026-10-25,5081397,Dylan Sampson,Cleveland Browns,,45.0,32.0,3.0,,0.0
+401873013,2026-10-25,4883647,Elic Ayomanor,Tennessee Titans,,,44.0,3.0,,
+401873013,2026-10-25,4686728,Gunnar Helm,Tennessee Titans,,,24.0,3.0,,
+401873013,2026-10-25,5083076,Harold Fannin Jr.,Cleveland Browns,,,91.0,6.0,,
+401873013,2026-10-25,4241463,Jerry Jeudy,Cleveland Browns,,,21.0,4.0,,
+401873013,2026-10-25,4870653,KC Concepcion,Cleveland Browns,,23.0,129.0,8.0,,0.0
+401873013,2026-10-25,4240657,Michael Carter,Tennessee Titans,,7.0,7.0,1.0,,0.0
+401873013,2026-10-25,4685702,Quinshon Judkins,Cleveland Browns,,96.0,8.0,1.0,,2.0
+401873013,2026-10-25,3916148,Tony Pollard,Tennessee Titans,,129.0,26.0,3.0,,3.0
+401873013,2026-10-25,4569587,Wan'Dale Robinson,Tennessee Titans,,,7.0,4.0,,
+401873014,2026-10-25,3042519,Aaron Jones Sr.,Minnesota Vikings,,26.0,0.0,1.0,,0.0
+401873014,2026-10-25,3917792,Daniel Jones,Indianapolis Colts,108.0,13.0,,,0.0,0.0
+401873014,2026-10-25,4683151,Deion Burks,Indianapolis Colts,,,11.0,1.0,,
+401873014,2026-10-25,4722908,Drew Ogletree,Indianapolis Colts,,,12.0,2.0,,
+401873014,2026-10-25,4708049,Gavin Bartholomew,Minnesota Vikings,,,17.0,1.0,,
+401873014,2026-10-25,3886598,Jauan Jennings,Minnesota Vikings,,,34.0,2.0,,
+401873014,2026-10-25,4242335,Jonathan Taylor,Indianapolis Colts,,95.0,15.0,2.0,,1.0
+401873014,2026-10-25,4429205,Jordan Addison,Minnesota Vikings,,3.0,20.0,2.0,,0.0
+401873014,2026-10-25,4360569,Jordan Mason,Minnesota Vikings,,68.0,0.0,0.0,,0.0
+401873014,2026-10-25,4688813,Josh Downs,Indianapolis Colts,,,18.0,2.0,,
+401873014,2026-10-25,4262921,Justin Jefferson,Minnesota Vikings,,,44.0,4.0,,
+401873014,2026-10-25,15818,Keenan Allen,Indianapolis Colts,,,31.0,3.0,,
+401873014,2026-10-25,3917315,Kyler Murray,Minnesota Vikings,150.0,39.0,,,1.0,0.0
+401873014,2026-10-25,3051889,Laquon Treadwell,Indianapolis Colts,,,19.0,2.0,,
+401873014,2026-10-25,4878695,Max Bredeson,Minnesota Vikings,,,0.0,0.0,,
+401873014,2026-10-25,2998565,Mo Alie-Cox,Indianapolis Colts,,,0.0,0.0,,
+401873014,2026-10-25,4686468,Seth McGowan,Indianapolis Colts,,46.0,2.0,1.0,,0.0
+401873014,2026-10-25,4036133,T.J. Hockenson,Minnesota Vikings,,,35.0,4.0,,
+401873014,2026-10-25,4565185,Tai Felton,Minnesota Vikings,,,0.0,0.0,,
+401873014,2026-10-25,4362523,Will Mallory,Indianapolis Colts,,,0.0,0.0,,
+401873015,2026-10-25,4597500,Adonai Mitchell,New York Jets,,,0.0,0.0,,
+401873015,2026-10-25,3125107,Andrew Beck,New York Jets,,,,,,0.0
+401873015,2026-10-25,4685247,Braelon Allen,New York Jets,,104.0,30.0,6.0,,0.0
+401873015,2026-10-25,4869645,Caleb Douglas,Miami Dolphins,,,70.0,2.0,,
+401873015,2026-10-25,4869961,Chris Bell,Miami Dolphins,,,25.0,3.0,,
+401873015,2026-10-25,4569618,Garrett Wilson,New York Jets,,,26.0,2.0,,
+401873015,2026-10-25,15864,Geno Smith,New York Jets,287.0,0.0,,,3.0,0.0
+401873015,2026-10-25,4367209,Greg Dulcich,Miami Dolphins,,,86.0,5.0,,
+401873015,2026-10-25,4695404,Isaiah Davis,New York Jets,,5.0,49.0,3.0,,0.0
+401873015,2026-10-25,4682745,Jaylen Wright,Miami Dolphins,,8.0,0.0,0.0,,0.0
+401873015,2026-10-25,4241410,Jelani Woods,New York Jets,,,,1.0,,
+401873015,2026-10-25,5083315,Kenyon Sadiq,New York Jets,,,6.0,1.0,,
+401873015,2026-10-25,4685307,Kevin Coleman Jr.,Miami Dolphins,,,0.0,0.0,,
+401873015,2026-10-25,4569603,Malik Washington,Miami Dolphins,,8.0,27.0,3.0,,0.0
+401873015,2026-10-25,4242512,Malik Willis,Miami Dolphins,208.0,37.0,,,2.0,1.0
+401873015,2026-10-25,4808766,Mason Taylor,New York Jets,,,62.0,5.0,,
+401873015,2026-10-25,4711533,Ollie Gordon II,Miami Dolphins,,103.0,0.0,1.0,,1.0
+401873015,2026-10-25,4723820,Omar Cooper Jr.,New York Jets,,,115.0,5.0,,
+401873015,2026-10-25,4714379,Seydou Traore,Miami Dolphins,,,0.0,0.0,,
+401873016,2026-10-25,4432577,C.J. Stroud,Houston Texans,153.0,4.0,,,2.0,0.0
+401873016,2026-10-25,4426496,Cade Stover,Houston Texans,,0.0,,1.0,,0.0
+401873016,2026-10-25,4696981,Cam Skattebo,New York Giants,,124.0,,1.0,,1.0
+401873016,2026-10-25,3117256,Dalton Schultz,Houston Texans,,,45.0,5.0,,
+401873016,2026-10-25,4040655,Darnell Mooney,New York Giants,,3.0,4.0,1.0,,0.0
+401873016,2026-10-25,4040761,Devin Singletary,New York Giants,,41.0,14.0,3.0,,1.0
+401873016,2026-10-25,4361050,Isaiah Likely,New York Giants,,,12.0,2.0,,
+401873016,2026-10-25,4433970,J.J. McCarthy,New York Giants,252.0,1.0,,,0.0,0.0
+401873016,2026-10-25,2969939,Jameis Winston,New York Giants,,4.0,,,,1.0
+401873016,2026-10-25,4586312,Jaylin Noel,Houston Texans,,,,2.0,,
+401873016,2026-10-25,4429022,Kayshon Boutte,Houston Texans,,,25.0,1.0,,
+401873016,2026-10-25,4682648,Malachi Fields,New York Giants,,,83.0,4.0,,
+401873016,2026-10-25,4595348,Malik Nabers,New York Giants,,,111.0,7.0,,
+401873016,2026-10-25,4432708,Marvin Harrison Jr.,Houston Texans,,,6.0,1.0,,
+401873016,2026-10-25,4258173,Nico Collins,Houston Texans,,,6.0,2.0,,
+401873016,2026-10-25,4366031,Tank Dell,Houston Texans,,2.0,43.0,1.0,,0.0
+401873016,2026-10-25,4590292,Thomas Fidone II,New York Giants,,,29.0,1.0,,
+401873016,2026-10-25,4360516,Tyrone Tracy Jr.,New York Giants,,15.0,2.0,1.0,,1.0
+401873016,2026-10-25,4429059,Woody Marks,Houston Texans,,66.0,15.0,1.0,,0.0
+401873016,2026-10-25,4686422,Xavier Hutchinson,Houston Texans,,12.0,17.0,3.0,,0.0
+401873017,2026-10-25,3043275,Austin Hooper,Atlanta Falcons,,,21.0,2.0,,
+401873017,2026-10-25,4430807,Bijan Robinson,Atlanta Falcons,,63.0,59.0,5.0,,0.0
+401873017,2026-10-25,16731,Brandin Cooks,San Francisco 49ers,,,13.0,1.0,,
+401873017,2026-10-25,4361741,Brock Purdy,San Francisco 49ers,288.0,5.0,,,1.0,0.0
+401873017,2026-10-25,4035020,Charlie Woerner,Atlanta Falcons,,3.0,9.0,1.0,,0.0
+401873017,2026-10-25,4369886,Chris Blair,Atlanta Falcons,,,0.0,0.0,,
+401873017,2026-10-25,3117251,Christian McCaffrey,San Francisco 49ers,,39.0,61.0,6.0,,1.0
+401873017,2026-10-25,4426502,Drake London,Atlanta Falcons,,,66.0,7.0,,
+401873017,2026-10-25,3040151,George Kittle,San Francisco 49ers,,,88.0,8.0,,
+401873017,2026-10-25,4575665,Jacob Cowing,San Francisco 49ers,,10.0,38.0,3.0,,0.0
+401873017,2026-10-25,4361409,Jahan Dotson,Atlanta Falcons,,,6.0,1.0,,
+401873017,2026-10-25,4685397,Jordan James,San Francisco 49ers,,6.0,11.0,1.0,,0.0
+401873017,2026-10-25,4431466,Jordan Watkins,San Francisco 49ers,,,56.0,3.0,,
+401873017,2026-10-25,4696044,Kaelon Black,San Francisco 49ers,,63.0,,1.0,,1.0
+401873017,2026-10-25,4035886,Khalil Herbert,Atlanta Falcons,,9.0,19.0,1.0,,0.0
+401873017,2026-10-25,16002,Kyle Juszczyk,San Francisco 49ers,,,11.0,3.0,,
+401873017,2026-10-25,4360248,Kyle Pitts Sr.,Atlanta Falcons,,,22.0,5.0,,
+401873017,2026-10-25,4040612,Luke Farrell,San Francisco 49ers,,,14.0,1.0,,
+401873017,2026-10-25,4360423,Michael Penix Jr.,Atlanta Falcons,213.0,,,,3.0,0.0
+401873017,2026-10-25,4249624,Nick Muse,Atlanta Falcons,,,2.0,2.0,,
+401873017,2026-10-25,4870612,Zachariah Branch,Atlanta Falcons,,8.0,9.0,1.0,,0.0
+401873018,2026-10-25,4709392,Anthony Tyus III,Carolina Panthers,,23.0,,,,1.0
+401873018,2026-10-25,3052587,Baker Mayfield,Tampa Bay Buccaneers,64.0,1.0,,,1.0,0.0
+401873018,2026-10-25,4685720,Bryce Young,Carolina Panthers,163.0,9.0,,,1.0,0.0
+401873018,2026-10-25,4360763,Brycen Tremayne,Carolina Panthers,,,0.0,0.0,,
+401873018,2026-10-25,4596448,Bucky Irving,Tampa Bay Buccaneers,,106.0,4.0,1.0,,2.0
+401873018,2026-10-25,4243331,Cade Otton,Tampa Bay Buccaneers,,,0.0,0.0,,
+401873018,2026-10-25,3116165,Chris Godwin Jr.,Tampa Bay Buccaneers,,,27.0,4.0,,
+401873018,2026-10-25,4241416,Chuba Hubbard,Carolina Panthers,,33.0,27.0,4.0,,0.0
+401873018,2026-10-25,2576925,Darren Waller,Carolina Panthers,,,50.0,1.0,,
+401873018,2026-10-25,4212909,David Moore,Carolina Panthers,,,0.0,0.0,,
+401873018,2026-10-25,4695883,Jalen Coker,Carolina Panthers,,,9.0,1.0,,
+401873018,2026-10-25,4596472,Jalon Daniels,Tampa Bay Buccaneers,,,,,,0.0
+401873018,2026-10-25,4567096,John Metchie III,Carolina Panthers,,,20.0,2.0,,
+401873018,2026-10-25,4371733,Kenny Gainwell,Tampa Bay Buccaneers,,88.0,,,,0.0
+401873018,2026-10-25,4240703,Kenny Pickett,Carolina Panthers,47.0,15.0,,,0.0,0.0
+401873018,2026-10-25,4683243,Mitchell Evans,Carolina Panthers,,,39.0,2.0,,
+401873018,2026-10-25,4430871,Sean Tucker,Tampa Bay Buccaneers,,52.0,,,,1.0
+401873018,2026-10-25,5220680,Ted Hurst III,Tampa Bay Buccaneers,,,0.0,0.0,,
+401873018,2026-10-25,4685472,Tetairoa McMillan,Carolina Panthers,,,40.0,4.0,,
+401873018,2026-10-25,4608810,Tez Johnson,Tampa Bay Buccaneers,,14.0,33.0,2.0,,0.0
+401873018,2026-10-25,4372780,Tommy Tremble,Carolina Panthers,,,8.0,1.0,,
+401873018,2026-10-25,4685350,Trevor Etienne,Carolina Panthers,,8.0,17.0,2.0,,0.0
+401873019,2026-10-25,3911853,Adam Trautman,Denver Broncos,,,0.0,0.0,,
+401873019,2026-10-25,4427728,Bam Knight,Arizona Cardinals,,48.0,15.0,3.0,,0.0
+401873019,2026-10-25,4426338,Bo Nix,Denver Broncos,222.0,73.0,,,1.0,1.0
+401873019,2026-10-25,3128429,Courtland Sutton,Denver Broncos,,,45.0,3.0,,
+401873019,2026-10-25,4426844,Elijah Higgins,Arizona Cardinals,,,17.0,3.0,,
+401873019,2026-10-25,3051876,Evan Engram,Denver Broncos,,,2.0,1.0,,
+401873019,2026-10-25,4241985,J.K. Dobbins,Denver Broncos,,23.0,,,,1.0
+401873019,2026-10-25,2578570,Jacoby Brissett,Arizona Cardinals,272.0,16.0,,,1.0,0.0
+401873019,2026-10-25,4692835,Jalen Brooks,Arizona Cardinals,,,35.0,1.0,,
+401873019,2026-10-25,4372016,Jaylen Waddle,Denver Broncos,,,48.0,4.0,,
+401873019,2026-10-25,4702555,Jonah Coleman,Denver Broncos,,54.0,15.0,2.0,,0.0
+401873019,2026-10-25,3045523,Kendrick Bourne,Arizona Cardinals,,,9.0,3.0,,
+401873019,2026-10-25,4039057,Lil'Jordan Humphrey,Denver Broncos,,,5.0,1.0,,
+401873019,2026-10-25,4686472,Marvin Mims Jr.,Denver Broncos,,3.0,53.0,2.0,,0.0
+401873019,2026-10-25,4360761,Michael Wilson,Arizona Cardinals,,11.0,55.0,4.0,,0.0
+401873019,2026-10-25,4568490,RJ Harvey,Denver Broncos,,6.0,54.0,2.0,,0.0
+401873019,2026-10-25,4361307,Trey McBride,Arizona Cardinals,,,111.0,10.0,,
+401873019,2026-10-25,4431280,Troy Franklin,Denver Broncos,,,0.0,0.0,,
+401873019,2026-10-25,4373626,Tyler Allgeier,Arizona Cardinals,,19.0,30.0,3.0,,0.0
+401873020,2026-10-25,4374302,Amon-Ra St. Brown,Detroit Lions,,,153.0,9.0,,0.0
+401873020,2026-10-25,4259305,Bo Melton,Green Bay Packers,,,4.0,1.0,,
+401873020,2026-10-25,4248528,Christian Watson,Green Bay Packers,,,57.0,5.0,,
+401873020,2026-10-25,5123663,Isaac TeSlaa,Detroit Lions,,,10.0,1.0,,
+401873020,2026-10-25,4429795,Jahmyr Gibbs,Detroit Lions,,116.0,27.0,5.0,,0.0
+401873020,2026-10-25,4426388,Jameson Williams,Detroit Lions,,,91.0,5.0,,
+401873020,2026-10-25,3046779,Jared Goff,Detroit Lions,303.0,,,,2.0,0.0
+401873020,2026-10-25,3054212,Jonnu Smith,Green Bay Packers,,,9.0,1.0,,
+401873020,2026-10-25,4036378,Jordan Love,Green Bay Packers,274.0,,,,2.0,
+401873020,2026-10-25,4047365,Josh Jacobs,Green Bay Packers,,36.0,55.0,5.0,,0.0
+401873020,2026-10-25,4429023,MarShawn Lloyd,Green Bay Packers,,20.0,15.0,2.0,,0.0
+401873020,2026-10-25,4431346,Mark Redman,Green Bay Packers,,,0.0,0.0,,
+401873020,2026-10-25,4701936,Matthew Golden,Green Bay Packers,,,39.0,6.0,,
+401873020,2026-10-25,4430027,Sam LaPorta,Detroit Lions,,,18.0,1.0,,
+401873020,2026-10-25,4431487,Savion Williams,Green Bay Packers,,4.0,47.0,3.0,,0.0
+401873020,2026-10-25,4912274,Sione Vaki,Detroit Lions,,5.0,,,,0.0
+401873020,2026-10-25,4572680,Tucker Kraft,Green Bay Packers,,,48.0,4.0,,
+401873020,2026-10-25,3915486,Tyler Conklin,Detroit Lions,,,4.0,1.0,,
+401873021,2026-10-25,3686689,AJ Cole,Las Vegas Raiders,13.0,,,,0.0,
+401873021,2026-10-25,4890973,Ashton Jeanty,Las Vegas Raiders,,15.0,61.0,8.0,,0.0
+401873021,2026-10-25,4429096,Blake Corum,Los Angeles Rams,,93.0,8.0,1.0,,1.0
+401873021,2026-10-25,4432665,Brock Bowers,Las Vegas Raiders,,,73.0,6.0,,
+401873021,2026-10-25,4241983,Cody White,Las Vegas Raiders,,,4.0,1.0,,
+401873021,2026-10-25,4242557,Colby Parkinson,Los Angeles Rams,,,48.0,5.0,,
+401873021,2026-10-25,4241961,Connor Heyward,Las Vegas Raiders,,,13.0,1.0,,
+401873021,2026-10-25,4426553,Davis Allen,Los Angeles Rams,,,20.0,4.0,,
+401873021,2026-10-25,4045305,Ian Thomas,Las Vegas Raiders,,,8.0,1.0,,
+401873021,2026-10-25,4382466,Jalen Nailor,Las Vegas Raiders,,,14.0,2.0,,
+401873021,2026-10-25,14880,Kirk Cousins,Las Vegas Raiders,295.0,6.0,,,2.0,0.0
+401873021,2026-10-25,4710855,Konata Mumpfield,Los Angeles Rams,,,15.0,1.0,,
+401873021,2026-10-25,4430737,Kyren Williams,Los Angeles Rams,,99.0,22.0,2.0,,1.0
+401873021,2026-10-25,5150247,Malik Benson,Las Vegas Raiders,,,0.0,0.0,,
+401873021,2026-10-25,12483,Matthew Stafford,Los Angeles Rams,195.0,,,,3.0,0.0
+401873021,2026-10-25,4429086,Michael Mayer,Las Vegas Raiders,,,32.0,3.0,,
+401873021,2026-10-25,4686658,Mike Washington Jr.,Las Vegas Raiders,,27.0,0.0,0.0,,0.0
+401873021,2026-10-25,4426515,Puka Nacua,Los Angeles Rams,,10.0,68.0,8.0,,0.0
+401873021,2026-10-25,4428718,Tre Tucker,Las Vegas Raiders,,,103.0,5.0,,
+401873021,2026-10-25,2573401,Tyler Higbee,Los Angeles Rams,,,14.0,2.0,,
+401873022,2026-10-26,4576297,AJ Barner,Seattle Seahawks,,4.0,42.0,4.0,,0.0
+401873022,2026-10-26,5093923,Andrew Armstrong,Kansas City Chiefs,,,3.0,1.0,,
+401873022,2026-10-26,2977187,Cooper Kupp,Seattle Seahawks,,,20.0,2.0,,
+401873022,2026-10-26,4912218,Cyrus Allen,Kansas City Chiefs,,,18.0,1.0,,
+401873022,2026-10-26,4887558,Emanuel Wilson,Seattle Seahawks,,100.0,15.0,1.0,,1.0
+401873022,2026-10-26,4832955,Emmett Johnson,Kansas City Chiefs,,,17.0,2.0,,
+401873022,2026-10-26,2975863,Eric Saubert,Seattle Seahawks,,,17.0,1.0,,
+401873022,2026-10-26,4429835,George Holani,Seattle Seahawks,,11.0,12.0,1.0,,0.0
+401873022,2026-10-26,5082630,Jalen Royals,Kansas City Chiefs,,,0.0,0.0,,
+401873022,2026-10-26,4430878,Jaxon Smith-Njigba,Seattle Seahawks,,13.0,150.0,9.0,,0.0
+401873022,2026-10-26,3118892,Justin Watson,Kansas City Chiefs,,,7.0,1.0,,
+401873022,2026-10-26,4567048,Kenneth Walker III,Kansas City Chiefs,,36.0,21.0,4.0,,0.0
+401873022,2026-10-26,4240472,Noah Gray,Kansas City Chiefs,,,44.0,3.0,,
+401873022,2026-10-26,3139477,Patrick Mahomes,Kansas City Chiefs,165.0,14.0,,,0.0,0.0
+401873022,2026-10-26,4032473,Rashid Shaheed,Seattle Seahawks,,,1.0,2.0,,
+401873022,2026-10-26,3912547,Sam Darnold,Seattle Seahawks,257.0,17.0,,,1.0,0.0
+401873022,2026-10-26,4597703,Tory Horton,Seattle Seahawks,,,0.0,0.0,,
+401873022,2026-10-26,15847,Travis Kelce,Kansas City Chiefs,,,44.0,4.0,,
+401873022,2026-10-26,4035693,Velus Jones Jr.,Seattle Seahawks,,8.0,,,,0.0
+401873022,2026-10-26,4683062,Xavier Worthy,Kansas City Chiefs,,,11.0,3.0,,
+401873009,2026-10-27,4360967,Brevyn Spann-Ford,Dallas Cowboys,,,11.0,2.0,,
+401873009,2026-10-27,4241389,CeeDee Lamb,Dallas Cowboys,,,74.0,5.0,,
+401873009,2026-10-27,2577417,Dak Prescott,Dallas Cowboys,212.0,8.0,,,3.0,0.0
+401873009,2026-10-27,3121023,Dallas Goedert,Philadelphia Eagles,,,48.0,5.0,,
+401873009,2026-10-27,4360238,Dameon Pierce,Philadelphia Eagles,,47.0,1.0,1.0,,1.0
+401873009,2026-10-27,4715355,Darius Cooper,Philadelphia Eagles,,,17.0,1.0,,
+401873009,2026-10-27,4431574,Eli Stowers,Philadelphia Eagles,,,0.0,0.0,,
+401873009,2026-10-27,4241555,Elijah Mitchell,Philadelphia Eagles,,11.0,23.0,3.0,,0.0
+401873009,2026-10-27,4372414,Elijah Moore,Philadelphia Eagles,,,16.0,2.0,,
+401873009,2026-10-27,4426354,George Pickens,Dallas Cowboys,,,57.0,4.0,,
+401873009,2026-10-27,4241372,Hollywood Brown,Philadelphia Eagles,,,30.0,2.0,,
+401873009,2026-10-27,4383396,Hunter Luepke,Dallas Cowboys,,3.0,,,,0.0
+401873009,2026-10-27,4242355,Jake Ferguson,Dallas Cowboys,,,0.0,0.0,,
+401873009,2026-10-27,4361579,Javonte Williams,Dallas Cowboys,,155.0,,,,1.0
+401873009,2026-10-27,4426485,Jonathan Mingo,Dallas Cowboys,,,0.0,0.0,,
+401873009,2026-10-27,4870795,Makai Lemon,Philadelphia Eagles,,,67.0,7.0,,
+401873009,2026-10-27,5083754,Ryan Flournoy,Dallas Cowboys,,,70.0,4.0,,
+401873009,2026-10-27,3929630,Saquon Barkley,Philadelphia Eagles,,62.0,9.0,2.0,,1.0
+401873009,2026-10-27,4685201,Tanner McKee,Philadelphia Eagles,211.0,1.0,,,1.0,0.0
+401873009,2026-10-27,4429676,Tyler Goodson,Dallas Cowboys,,38.0,,,,0.0
