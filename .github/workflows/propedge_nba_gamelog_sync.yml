@@ -8,6 +8,7 @@ on:
     paths:
       - 'sync_final_boxscores.py'
       - 'track_model.py'
+      - 'test_nba_identity_guard.py'
       - '.github/workflows/propedge_nba_gamelog_sync.yml'
 permissions:
   contents: write
