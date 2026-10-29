@@ -92,6 +92,29 @@ def main():
         "holdout_baseline":summarize(test),"holdout_filtered":summarize(held),
         "validated":False,
         "limitations":"Overlapping players/games and a short historical period; forward holdout required before deployment."}}
+    # Strict paired evaluation: only predictions saved before the game, never backfilled.
+    paired=[r for r in rows if r.get("shadow_minutes_projection") is not None
+            and r.get("projection") is not None and r.get("actual") is not None]
+    shadow_groups=collections.defaultdict(list)
+    for r in paired:
+        try:
+            a=float(r["actual"]);p=float(r["projection"]);q=float(r["shadow_minutes_projection"])
+            if not all(math.isfinite(x) for x in (a,p,q)):continue
+            shadow_groups[str(r.get("market") or "unknown")].append((r,a,p,q))
+        except (ValueError,TypeError):continue
+    shadow_report={}
+    for market,group in sorted(shadow_groups.items()):
+        base_mae=sum(abs(p-a) for _,a,p,q in group)/len(group)
+        shadow_mae=sum(abs(q-a) for _,a,p,q in group)/len(group)
+        # Same captured side/line and odds; this measures forecast error only.
+        # A different side decision requires a separately frozen candidate bet.
+        shadow_report[market]={"paired_predictions":len(group),
+            "production_mae":round(base_mae,5),"minutes_shadow_mae":round(shadow_mae,5),
+            "mae_improvement":round(base_mae-shadow_mae,5)}
+    report["minutes_shadow"]={"status":"CAPTURE_TIME_PAIRED_AUDIT",
+        "paired_total":sum(len(v) for v in shadow_groups.values()),
+        "by_market":shadow_report,"production_unchanged":True,
+        "validated":False,"note":"Only newly captured predictions with saved shadow values count. No retroactive candidate forecasts or unverified ROI."}
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
     OUTPUT.write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
     print(json.dumps({"overall":report["overall"],"challenger":report["exploratory_challenger"]},indent=2))
