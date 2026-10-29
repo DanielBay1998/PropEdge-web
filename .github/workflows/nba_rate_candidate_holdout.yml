@@ -1,0 +1,29 @@
+name: NBA rate candidate chronological holdout
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'nba_rate_candidate_holdout.py'
+      - '.github/workflows/nba_rate_candidate_holdout.yml'
+  schedule:
+    - cron: '16 13 * * *'
+permissions:
+  contents: write
+jobs:
+  holdout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Evaluate historical rate candidates
+        run: |
+          python -m py_compile nba_rate_candidate_holdout.py
+          python nba_rate_candidate_holdout.py
+      - name: Publish report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/nba_rate_candidate_holdout.json
+          git diff --cached --quiet || (git commit -m "Update NBA rate candidate holdout" && git push)
