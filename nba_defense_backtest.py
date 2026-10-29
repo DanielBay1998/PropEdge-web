@@ -1,4 +1,4 @@
-"""Chronological defense ablation: no future games or target stats used for features."""
+"""Chronological defense ablation: strict pre-game features and held-out evaluation."""
 import json
 from pathlib import Path
 from collections import defaultdict
