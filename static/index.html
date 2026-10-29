@@ -676,4 +676,23 @@ document.getElementById('resetFilters').onclick=()=>{sideSort='strength';sideDir
 document.querySelectorAll('.filter button').forEach(b=>b.addEventListener('click',()=>{document.getElementById('sideMarket').value=b.dataset.market}));
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSide()});
 document.getElementById('sidebarStatus').textContent='Live board · sorting by strength';
+</script><script id="propedge-terminal-metrics">
+(function(){
+ const menu=document.getElementById('terminalMenu');
+ const legacy=document.getElementById('sidebarToggle');
+ if(menu&&legacy)menu.addEventListener('click',()=>legacy.click());
+ function refreshMetrics(){
+   const b=typeof board!=='undefined'?board:null;
+   if(!b)return;
+   const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value};
+   set('kpiSignals',Array.isArray(b.signals)?b.signals.length.toLocaleString():'—');
+   set('kpiPlayers',Number.isFinite(Number(b.players))?Number(b.players).toLocaleString():'—');
+   set('kpiQuotes',Number.isFinite(Number(b.quotes))?Number(b.quotes).toLocaleString():'—');
+   set('kpiFeed',b.error?'ERROR':b.live?'LIVE':'WAIT');
+   set('kpiUpdated',b.as_of?'Checked '+new Date(b.as_of).toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}):'Awaiting refresh');
+ }
+ const notice=document.getElementById('notice');
+ if(notice){new MutationObserver(refreshMetrics).observe(notice,{childList:true,characterData:true,subtree:true})}
+ refreshMetrics();
+})();
 </script></body></html>
