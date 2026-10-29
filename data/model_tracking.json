@@ -11,9 +11,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594445+00:00"
   },
   {
     "id": "524520|dariusgarland|AST|UNDER|7.5",
@@ -59,9 +59,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594460+00:00"
   },
   {
     "id": "524537|christianbraun|3PM|UNDER|1.5",
@@ -107,9 +107,9 @@
     "book": "betmgm",
     "odds": -145,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594468+00:00"
   },
   {
     "id": "524540|tylerherro|AST|OVER|4.5",
@@ -123,9 +123,9 @@
     "book": "betmgm",
     "odds": -111,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.594473+00:00"
   },
   {
     "id": "524540|kevindurant|REB|OVER|5.5",
@@ -139,9 +139,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594478+00:00"
   },
   {
     "id": "524538|lameloball|AST|UNDER|7.5",
@@ -155,9 +155,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594482+00:00"
   },
   {
     "id": "524537|saddiqbey|PTS|OVER|11.5",
@@ -187,9 +187,9 @@
     "book": "betmgm",
     "odds": -135,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.594487+00:00"
   },
   {
     "id": "524540|ryanrollins|3PM|OVER|1.5",
@@ -203,9 +203,9 @@
     "book": "betrivers",
     "odds": -159,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.594491+00:00"
   },
   {
     "id": "524519|ajaymitchell|3PM|UNDER|1.5",
@@ -219,9 +219,9 @@
     "book": "betmgm",
     "odds": -225,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594495+00:00"
   },
   {
     "id": "524537|jeremiahfears|AST|OVER|2.5",
@@ -251,9 +251,9 @@
     "book": "betmgm",
     "odds": -118,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594500+00:00"
   },
   {
     "id": "524537|jeremiahfears|PTS|OVER|11.5",
@@ -283,9 +283,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594504+00:00"
   },
   {
     "id": "524540|kylekuzma|AST|OVER|2.5",
@@ -299,9 +299,9 @@
     "book": "betmgm",
     "odds": -155,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594508+00:00"
   },
   {
     "id": "524540|tarieason|REB|UNDER|6.5",
@@ -315,9 +315,9 @@
     "book": "betmgm",
     "odds": 105,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.594512+00:00"
   },
   {
     "id": "524538|draymondgreen|AST|OVER|5.5",
@@ -331,9 +331,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594516+00:00"
   },
   {
     "id": "524520|jakelaravia|PTS|UNDER|8.5",
@@ -363,9 +363,9 @@
     "book": "betrivers",
     "odds": -125,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594522+00:00"
   },
   {
     "id": "524539|joshgiddey|AST|OVER|7.5",
@@ -379,9 +379,9 @@
     "book": "betrivers",
     "odds": -118,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.594526+00:00"
   },
   {
     "id": "524540|tylerherro|REB|OVER|4.5",
@@ -395,9 +395,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594529+00:00"
   },
   {
     "id": "524537|christianbraun|REB|OVER|4.5",
@@ -427,9 +427,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.594533+00:00"
   },
   {
     "id": "524540|clintcapela|REB|UNDER|7.5",
@@ -443,9 +443,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594537+00:00"
   },
   {
     "id": "524519|jaredmccain|REB|UNDER|3.5",
@@ -459,9 +459,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594541+00:00"
   },
   {
     "id": "524537|jamalmurray|3PM|OVER|2.5",
@@ -523,9 +523,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594550+00:00"
   },
   {
     "id": "524537|derikqueen|PTS|OVER|10.5",
@@ -555,9 +555,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 17.0,
+    "graded_at": "2026-10-29T04:15:33.594554+00:00"
   },
   {
     "id": "524538|lameloball|PTS|UNDER|22.5",
@@ -571,9 +571,9 @@
     "book": "betrivers",
     "odds": -136,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594558+00:00"
   },
   {
     "id": "524537|demarderozan|PTS|OVER|14.5",
@@ -603,9 +603,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594562+00:00"
   },
   {
     "id": "524539|joshgiddey|PTS|OVER|10.5",
@@ -619,9 +619,9 @@
     "book": "betrivers",
     "odds": -121,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594566+00:00"
   },
   {
     "id": "524537|zionwilliamson|PTS|OVER|18.5",
@@ -651,9 +651,9 @@
     "book": "betrivers",
     "odds": -200,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594571+00:00"
   },
   {
     "id": "524540|tarieason|3PM|UNDER|1.5",
@@ -667,9 +667,9 @@
     "book": "betmgm",
     "odds": -210,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594575+00:00"
   },
   {
     "id": "524537|saddiqbey|AST|OVER|1.5",
@@ -699,9 +699,9 @@
     "book": "betmgm",
     "odds": 105,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594578+00:00"
   },
   {
     "id": "524537|saddiqbey|REB|OVER|3.5",
@@ -747,9 +747,9 @@
     "book": "betrivers",
     "odds": -127,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594582+00:00"
   },
   {
     "id": "524520|quentingrimes|PTS|UNDER|12.5",
@@ -779,9 +779,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594588+00:00"
   },
   {
     "id": "524538|draymondgreen|PTS|UNDER|7.5",
@@ -795,9 +795,9 @@
     "book": "betrivers",
     "odds": -122,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594592+00:00"
   },
   {
     "id": "524539|jalensmith|PTS|OVER|10.5",
@@ -811,9 +811,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 17.0,
+    "graded_at": "2026-10-29T04:15:33.594596+00:00"
   },
   {
     "id": "524538|ayodosunmu|PTS|UNDER|16.5",
@@ -827,9 +827,9 @@
     "book": "betrivers",
     "odds": -136,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 17.0,
+    "graded_at": "2026-10-29T04:15:33.594600+00:00"
   },
   {
     "id": "524538|draymondgreen|REB|UNDER|5.5",
@@ -843,9 +843,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.594603+00:00"
   },
   {
     "id": "524541|acebailey|AST|OVER|1.5",
@@ -859,9 +859,9 @@
     "book": "betrivers",
     "odds": -165,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.594607+00:00"
   },
   {
     "id": "524539|oganunoby|AST|OVER|1.5",
@@ -875,9 +875,9 @@
     "book": "betmgm",
     "odds": -165,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594611+00:00"
   },
   {
     "id": "524519|kenrichwilliams|PTS|UNDER|8.5",
@@ -891,9 +891,9 @@
     "book": "betrivers",
     "odds": -132,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.594615+00:00"
   },
   {
     "id": "524537|demarderozan|AST|OVER|2.5",
@@ -939,9 +939,9 @@
     "book": "bovada",
     "odds": 120,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594619+00:00"
   },
   {
     "id": "524520|isaiahjackson|REB|UNDER|7.5",
@@ -1003,9 +1003,9 @@
     "book": "betmgm",
     "odds": -135,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594627+00:00"
   },
   {
     "id": "524520|derrickjones|PTS|UNDER|11.5",
@@ -1035,9 +1035,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.594633+00:00"
   },
   {
     "id": "524538|jadenmcdaniels|PTS|UNDER|16.5",
@@ -1051,9 +1051,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.594637+00:00"
   },
   {
     "id": "524520|walkerkessler|REB|UNDER|10.5",
@@ -1083,9 +1083,9 @@
     "book": "betmgm",
     "odds": -125,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594643+00:00"
   },
   {
     "id": "524540|clintcapela|PTS|UNDER|6.5",
@@ -1099,9 +1099,9 @@
     "book": "betrivers",
     "odds": -121,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594646+00:00"
   },
   {
     "id": "524538|terrenceshannon|REB|UNDER|3.5",
@@ -1115,9 +1115,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594650+00:00"
   },
   {
     "id": "524520|brooklopez|PTS|OVER|10.5",
@@ -1147,9 +1147,9 @@
     "book": "bovada",
     "odds": -130,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594656+00:00"
   },
   {
     "id": "524538|jonathankuminga|PRA|UNDER|23.5",
@@ -1163,9 +1163,9 @@
     "book": "betrivers",
     "odds": -141,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 28.0,
+    "graded_at": "2026-10-29T04:15:33.594663+00:00"
   },
   {
     "id": "524519|cooperflagg|AST|UNDER|6.5",
@@ -1179,9 +1179,9 @@
     "book": "betmgm",
     "odds": -155,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594667+00:00"
   },
   {
     "id": "524538|stephencurry|AST|UNDER|4.5",
@@ -1195,9 +1195,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594671+00:00"
   },
   {
     "id": "524537|treymurphyiii|REB|OVER|4.5",
@@ -1227,9 +1227,9 @@
     "book": "betrivers",
     "odds": -117,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T04:15:33.594676+00:00"
   },
   {
     "id": "524520|austinreaves|PTS|UNDER|28.5",
@@ -1259,9 +1259,9 @@
     "book": "betmgm",
     "odds": -145,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.594682+00:00"
   },
   {
     "id": "524520|isaiahjackson|PTS|UNDER|9.5",
@@ -1291,9 +1291,9 @@
     "book": "betrivers",
     "odds": -117,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T04:15:33.594688+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|PTS|UNDER|31.5",
@@ -1307,9 +1307,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 21.0,
+    "graded_at": "2026-10-29T04:15:33.594692+00:00"
   },
   {
     "id": "524541|jaxsonhayes|REB|UNDER|5.5",
@@ -1323,9 +1323,9 @@
     "book": "betrivers",
     "odds": -120,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.594698+00:00"
   },
   {
     "id": "524537|treymurphyiii|PTS|OVER|17.5",
@@ -1403,9 +1403,9 @@
     "book": "betmgm",
     "odds": -155,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594704+00:00"
   },
   {
     "id": "524540|ryanrollins|REB|OVER|3.5",
@@ -1419,9 +1419,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594708+00:00"
   },
   {
     "id": "524541|isaiahcollier|AST|OVER|5.5",
@@ -1435,9 +1435,9 @@
     "book": "courtside",
     "odds": -117,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594712+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|PTS|UNDER|10.5",
@@ -1451,9 +1451,9 @@
     "book": "bovada",
     "odds": -130,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594716+00:00"
   },
   {
     "id": "524520|quentingrimes|PRA|UNDER|20.5",
@@ -1499,9 +1499,9 @@
     "book": "betrivers",
     "odds": -125,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594723+00:00"
   },
   {
     "id": "524520|austinreaves|REB|UNDER|4.5",
@@ -1531,9 +1531,9 @@
     "book": "betmgm",
     "odds": -130,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.594730+00:00"
   },
   {
     "id": "524539|jalenbrunson|PTS|UNDER|26.5",
@@ -1547,9 +1547,9 @@
     "book": "betmgm",
     "odds": -110,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 38.0,
+    "graded_at": "2026-10-29T04:15:33.594734+00:00"
   },
   {
     "id": "524520|walkerkessler|PTS|OVER|13.5",
@@ -1595,9 +1595,9 @@
     "book": "betrivers",
     "odds": -106,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594741+00:00"
   },
   {
     "id": "524537|treymurphyiii|PRA|OVER|25.5",
@@ -1643,9 +1643,9 @@
     "book": "betrivers",
     "odds": -143,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.594747+00:00"
   },
   {
     "id": "524539|milesmcbride|PTS|OVER|6.5",
@@ -1659,9 +1659,9 @@
     "book": "bovada",
     "odds": -110,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594751+00:00"
   },
   {
     "id": "524538|terrenceshannon|PTS|UNDER|13.5",
@@ -1675,9 +1675,9 @@
     "book": "betrivers",
     "odds": -113,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.594757+00:00"
   },
   {
     "id": "524520|kobesanders|REB|UNDER|2.5",
@@ -1707,9 +1707,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T04:15:33.594763+00:00"
   },
   {
     "id": "524520|dariusgarland|PRA|UNDER|34.5",
@@ -1739,9 +1739,9 @@
     "book": "betrivers",
     "odds": -107,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.594768+00:00"
   },
   {
     "id": "524540|mylesturner|PTS|UNDER|10.5",
@@ -1755,9 +1755,9 @@
     "book": "bovada",
     "odds": -130,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594772+00:00"
   },
   {
     "id": "524537|demarderozan|PRA|OVER|20.5",
@@ -1787,9 +1787,9 @@
     "book": "betrivers",
     "odds": -110,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 46.0,
+    "graded_at": "2026-10-29T04:15:33.594776+00:00"
   },
   {
     "id": "524519|kenrichwilliams|AST|UNDER|1.5",
@@ -1803,9 +1803,9 @@
     "book": "betmgm",
     "odds": -175,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.594780+00:00"
   },
   {
     "id": "524537|bennedictmathurin|PTS|OVER|8.5",
@@ -1835,9 +1835,9 @@
     "book": "courtside",
     "odds": -121,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594784+00:00"
   },
   {
     "id": "524520|quentingrimes|AST|UNDER|3.5",
@@ -1867,9 +1867,9 @@
     "book": "courtside",
     "odds": -122,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.594790+00:00"
   },
   {
     "id": "524539|matasbuzelis|REB|OVER|4.5",
@@ -1883,9 +1883,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594793+00:00"
   },
   {
     "id": "524520|dariusgarland|REB|UNDER|2.5",
@@ -1915,9 +1915,9 @@
     "book": "betrivers",
     "odds": -106,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594799+00:00"
   },
   {
     "id": "524538|jonathankuminga|PTS|UNDER|14.5",
@@ -1931,9 +1931,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.594802+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|AST|UNDER|3.5",
@@ -1947,9 +1947,9 @@
     "book": "betrivers",
     "odds": -148,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594806+00:00"
   },
   {
     "id": "524520|krisdunn|PTS|UNDER|8.5",
@@ -1995,9 +1995,9 @@
     "book": "bovada",
     "odds": -110,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 29.0,
+    "graded_at": "2026-10-29T04:15:33.594814+00:00"
   },
   {
     "id": "524540|jaimejaquez|PRA|OVER|23.5",
@@ -2011,9 +2011,9 @@
     "book": "betrivers",
     "odds": -113,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T04:15:33.594818+00:00"
   },
   {
     "id": "524539|joshgiddey|PRA|OVER|24.5",
@@ -2027,9 +2027,9 @@
     "book": "bovada",
     "odds": -120,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 29.0,
+    "graded_at": "2026-10-29T04:15:33.594822+00:00"
   },
   {
     "id": "524540|kelelware|REB|OVER|7.5",
@@ -2043,9 +2043,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594826+00:00"
   },
   {
     "id": "524538|rudygobert|PTS|UNDER|10.5",
@@ -2059,9 +2059,9 @@
     "book": "bovada",
     "odds": -130,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594830+00:00"
   },
   {
     "id": "524538|alhorford|3PM|OVER|0.5",
@@ -2075,9 +2075,9 @@
     "book": "courtside",
     "odds": -211,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.594834+00:00"
   },
   {
     "id": "524519|jaredmccain|AST|UNDER|2.5",
@@ -2091,9 +2091,9 @@
     "book": "betrivers",
     "odds": -110,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594837+00:00"
   },
   {
     "id": "524540|jabarismith|AST|OVER|1.5",
@@ -2107,9 +2107,9 @@
     "book": "courtside",
     "odds": -145,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594841+00:00"
   },
   {
     "id": "524538|alhorford|PTS|OVER|5.5",
@@ -2123,9 +2123,9 @@
     "book": "courtside",
     "odds": 110,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594845+00:00"
   },
   {
     "id": "524519|jaredmccain|PTS|UNDER|16.5",
@@ -2139,9 +2139,9 @@
     "book": "betrivers",
     "odds": -117,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594849+00:00"
   },
   {
     "id": "524519|ajaymitchell|PTS|UNDER|18.5",
@@ -2155,9 +2155,9 @@
     "book": "betrivers",
     "odds": -118,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 29.0,
+    "graded_at": "2026-10-29T04:15:33.594852+00:00"
   },
   {
     "id": "524538|jadenmcdaniels|PRA|UNDER|24.5",
@@ -2171,9 +2171,9 @@
     "book": "bovada",
     "odds": -105,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 30.0,
+    "graded_at": "2026-10-29T04:15:33.594857+00:00"
   },
   {
     "id": "524519|kenrichwilliams|REB|UNDER|5.5",
@@ -2187,9 +2187,9 @@
     "book": "bovada",
     "odds": -150,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594860+00:00"
   },
   {
     "id": "524519|kenrichwilliams|PRA|UNDER|14.5",
@@ -2203,9 +2203,9 @@
     "book": "bovada",
     "odds": 100,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594865+00:00"
   },
   {
     "id": "524537|saddiqbey|PRA|OVER|17.5",
@@ -2235,9 +2235,9 @@
     "book": "bovada",
     "odds": -110,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T04:15:33.594869+00:00"
   },
   {
     "id": "524520|kobesanders|PRA|UNDER|16.5",
@@ -2267,9 +2267,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.594874+00:00"
   },
   {
     "id": "524519|ajaymitchell|PTS|UNDER|17.5",
@@ -2283,9 +2283,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 29.0,
+    "graded_at": "2026-10-29T04:15:33.594878+00:00"
   },
   {
     "id": "524519|ajaymitchell|PRA|UNDER|25.5",
@@ -2299,9 +2299,9 @@
     "book": "bovada",
     "odds": -110,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 36.0,
+    "graded_at": "2026-10-29T04:15:33.594882+00:00"
   },
   {
     "id": "524537|dejountemurray|REB|OVER|4.5",
@@ -2331,9 +2331,9 @@
     "book": "dst_propbuilder",
     "odds": -105,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.594888+00:00"
   },
   {
     "id": "524540|jabarismith|PTS|OVER|15.5",
@@ -2347,9 +2347,9 @@
     "book": "betrivers",
     "odds": -127,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T04:15:33.594892+00:00"
   },
   {
     "id": "524537|derikqueen|PRA|OVER|21.5",
@@ -2379,9 +2379,9 @@
     "book": "bovada",
     "odds": -120,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594895+00:00"
   },
   {
     "id": "524537|jeremiahfears|PRA|OVER|17.5",
@@ -2459,9 +2459,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.594903+00:00"
   },
   {
     "id": "524540|jabarismith|REB|UNDER|7.5",
@@ -2475,9 +2475,9 @@
     "book": "betrivers",
     "odds": -150,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594908+00:00"
   },
   {
     "id": "524540|kevindurant|3PM|OVER|1.5",
@@ -2491,9 +2491,9 @@
     "book": "betrivers",
     "odds": -205,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594912+00:00"
   },
   {
     "id": "524519|jaredmccain|PRA|UNDER|23.5",
@@ -2507,9 +2507,9 @@
     "book": "betrivers",
     "odds": -137,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T04:15:33.594916+00:00"
   },
   {
     "id": "524539|mikalbridges|PTS|UNDER|12.5",
@@ -2523,9 +2523,9 @@
     "book": "bovada",
     "odds": -115,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594919+00:00"
   },
   {
     "id": "524540|kelelware|REB|OVER|6.5",
@@ -2539,9 +2539,9 @@
     "book": "bovada",
     "odds": -135,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.594923+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|REB|UNDER|10.5",
@@ -2555,9 +2555,9 @@
     "book": "betrivers",
     "odds": -132,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T04:15:33.594927+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|PTS|UNDER|9.5",
@@ -2571,9 +2571,9 @@
     "book": "betmgm",
     "odds": 105,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.594931+00:00"
   },
   {
     "id": "524538|lameloball|PRA|UNDER|35.5",
@@ -2587,9 +2587,9 @@
     "book": "betrivers",
     "odds": -137,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.594935+00:00"
   },
   {
     "id": "524520|derrickjones|PRA|UNDER|18.5",
@@ -2619,9 +2619,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594941+00:00"
   },
   {
     "id": "524538|lameloball|PRA|UNDER|34.5",
@@ -2635,9 +2635,9 @@
     "book": "dst_propbuilder",
     "odds": -109,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.594945+00:00"
   },
   {
     "id": "524537|nikolajokic|PTS|UNDER|27.5",
@@ -2683,9 +2683,9 @@
     "book": "betrivers",
     "odds": -195,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.594951+00:00"
   },
   {
     "id": "524541|devinvassell|3PM|OVER|1.5",
@@ -2699,9 +2699,9 @@
     "book": "betmgm",
     "odds": -200,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.594955+00:00"
   },
   {
     "id": "524520|kobesanders|REB|UNDER|3.5",
@@ -2731,9 +2731,9 @@
     "book": "betmgm",
     "odds": 105,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.594960+00:00"
   },
   {
     "id": "524520|kobesanders|PTS|UNDER|10.5",
@@ -2779,9 +2779,9 @@
     "book": "betrivers",
     "odds": -180,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594968+00:00"
   },
   {
     "id": "524520|dariusgarland|PTS|UNDER|24.5",
@@ -2811,9 +2811,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T04:15:33.594974+00:00"
   },
   {
     "id": "524539|trejones|REB|OVER|1.5",
@@ -2827,9 +2827,9 @@
     "book": "fanatics",
     "odds": -190,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.594978+00:00"
   },
   {
     "id": "524537|jeremiahfears|3PM|OVER|0.5",
@@ -2891,9 +2891,9 @@
     "book": "betrivers",
     "odds": -175,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.594983+00:00"
   },
   {
     "id": "524537|derikqueen|AST|UNDER|3.5",
@@ -2923,9 +2923,9 @@
     "book": "betrivers",
     "odds": -118,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 36.0,
+    "graded_at": "2026-10-29T04:15:33.594988+00:00"
   },
   {
     "id": "524540|jaimejaquez|PTS|OVER|13.5",
@@ -2939,9 +2939,9 @@
     "book": "fanatics",
     "odds": -130,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.594992+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|PRA|UNDER|23.5",
@@ -2955,9 +2955,9 @@
     "book": "betrivers",
     "odds": -117,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 27.0,
+    "graded_at": "2026-10-29T04:15:33.594996+00:00"
   },
   {
     "id": "524541|dylanharper|AST|OVER|3.5",
@@ -2971,9 +2971,9 @@
     "book": "dabble",
     "odds": -120,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595000+00:00"
   },
   {
     "id": "524540|kelelware|PTS|OVER|9.5",
@@ -2987,9 +2987,9 @@
     "book": "dst_propbuilder",
     "odds": -112,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.595004+00:00"
   },
   {
     "id": "524537|derikqueen|PRA|OVER|20.5",
@@ -3051,9 +3051,9 @@
     "book": "dst_propbuilder",
     "odds": 104,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595012+00:00"
   },
   {
     "id": "524520|austinreaves|PTS|UNDER|27.5",
@@ -3083,9 +3083,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.595017+00:00"
   },
   {
     "id": "524540|jabarismith|3PM|OVER|1.5",
@@ -3099,9 +3099,9 @@
     "book": "betrivers",
     "odds": -186,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.595021+00:00"
   },
   {
     "id": "524519|kenrichwilliams|3PM|UNDER|1.5",
@@ -3115,9 +3115,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.595024+00:00"
   },
   {
     "id": "524538|brandinpodziemski|3PM|OVER|1.5",
@@ -3131,9 +3131,9 @@
     "book": "betmgm",
     "odds": -185,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595028+00:00"
   },
   {
     "id": "524538|lameloball|REB|UNDER|5.5",
@@ -3147,9 +3147,9 @@
     "book": "betmgm",
     "odds": -155,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595032+00:00"
   },
   {
     "id": "524537|jeremiahfears|PRA|OVER|16.5",
@@ -3179,9 +3179,9 @@
     "book": "dabble",
     "odds": -101,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595035+00:00"
   },
   {
     "id": "524541|isaiahcollier|PRA|OVER|17.5",
@@ -3195,9 +3195,9 @@
     "book": "courtside",
     "odds": -124,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.595040+00:00"
   },
   {
     "id": "524539|joshgiddey|REB|OVER|5.5",
@@ -3211,9 +3211,9 @@
     "book": "fanatics",
     "odds": -150,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595043+00:00"
   },
   {
     "id": "524520|collinsexton|AST|UNDER|3.5",
@@ -3243,9 +3243,9 @@
     "book": "betrivers",
     "odds": -132,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 30.0,
+    "graded_at": "2026-10-29T04:15:33.595049+00:00"
   },
   {
     "id": "524520|derrickjones|PRA|UNDER|17.5",
@@ -3275,9 +3275,9 @@
     "book": "dst_propbuilder",
     "odds": -109,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T04:15:33.595055+00:00"
   },
   {
     "id": "524539|andredrummond|REB|OVER|6.5",
@@ -3291,9 +3291,9 @@
     "book": "dabble",
     "odds": 116,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.595059+00:00"
   },
   {
     "id": "524541|keyontegeorge|AST|UNDER|6.5",
@@ -3307,9 +3307,9 @@
     "book": "bovada",
     "odds": -150,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.595063+00:00"
   },
   {
     "id": "524540|clintcapela|PTS|UNDER|7.5",
@@ -3323,9 +3323,9 @@
     "book": "dst_propbuilder",
     "odds": -152,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T04:15:33.595066+00:00"
   },
   {
     "id": "524537|jamalmurray|REB|OVER|3.5",
@@ -3355,9 +3355,9 @@
     "book": "bovada",
     "odds": -165,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595070+00:00"
   },
   {
     "id": "524540|ryanrollins|AST|OVER|3.5",
@@ -3371,9 +3371,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.595073+00:00"
   },
   {
     "id": "524541|keldonjohnson|REB|OVER|3.5",
@@ -3387,9 +3387,9 @@
     "book": "dabble",
     "odds": -139,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.595077+00:00"
   },
   {
     "id": "524540|kasparasjakucionis|AST|OVER|2.5",
@@ -3403,9 +3403,9 @@
     "book": "fanduel",
     "odds": -180,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.595080+00:00"
   },
   {
     "id": "524519|maxchristie|3PM|UNDER|2.5",
@@ -3419,9 +3419,9 @@
     "book": "betmgm",
     "odds": -200,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.595086+00:00"
   },
   {
     "id": "524541|keldonjohnson|PTS|OVER|9.5",
@@ -3435,9 +3435,9 @@
     "book": "dabble",
     "odds": -114,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.595089+00:00"
   },
   {
     "id": "524537|zionwilliamson|AST|UNDER|3.5",
@@ -3499,9 +3499,9 @@
     "book": "dst_propbuilder",
     "odds": -141,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.595095+00:00"
   },
   {
     "id": "524520|jakelaravia|PRA|UNDER|15.5",
@@ -3531,9 +3531,9 @@
     "book": "dabble",
     "odds": 112,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.595100+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|REB|OVER|3.5",
@@ -3547,9 +3547,9 @@
     "book": "kalshi",
     "odds": -170,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.595104+00:00"
   },
   {
     "id": "524520|sandromamukelashvili|REB|UNDER|5.5",
@@ -3579,9 +3579,9 @@
     "book": "kalshi",
     "odds": -122,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595109+00:00"
   },
   {
     "id": "524541|isaiahcollier|PTS|OVER|9.5",
@@ -3595,9 +3595,9 @@
     "book": "dabble",
     "odds": 107,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.595112+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|PTS|UNDER|32.5",
@@ -3611,9 +3611,9 @@
     "book": "onexbet",
     "odds": -120,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 21.0,
+    "graded_at": "2026-10-29T04:15:33.595116+00:00"
   },
   {
     "id": "524539|karlanthonytowns|REB|UNDER|13.5",
@@ -3627,9 +3627,9 @@
     "book": "kalshi",
     "odds": -144,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T04:15:33.595120+00:00"
   },
   {
     "id": "524540|kylekuzma|3PM|OVER|0.5",
@@ -3643,9 +3643,9 @@
     "book": "kalshi",
     "odds": -257,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595124+00:00"
   },
   {
     "id": "524540|ajgreen|3PM|OVER|1.5",
@@ -3659,9 +3659,9 @@
     "book": "dabble",
     "odds": -122,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.595127+00:00"
   },
   {
     "id": "524540|ajgreen|REB|OVER|1.5",
@@ -3675,9 +3675,9 @@
     "book": "sportzino",
     "odds": -125,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.595130+00:00"
   },
   {
     "id": "524538|draymondgreen|3PM|OVER|0.5",
@@ -3691,9 +3691,9 @@
     "book": "betmgm",
     "odds": -235,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595134+00:00"
   },
   {
     "id": "524519|jaredmccain|AST|UNDER|3.5",
@@ -3707,9 +3707,9 @@
     "book": "kalshi",
     "odds": -285,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595137+00:00"
   },
   {
     "id": "524540|kasparasjakucionis|3PM|OVER|0.5",
@@ -3723,9 +3723,9 @@
     "book": "hardrock",
     "odds": -225,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595141+00:00"
   },
   {
     "id": "524540|ajgreen|PTS|OVER|6.5",
@@ -3739,9 +3739,9 @@
     "book": "dabble",
     "odds": 137,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T04:15:33.595144+00:00"
   },
   {
     "id": "524537|herbertjones|3PM|OVER|0.5",
@@ -3771,9 +3771,9 @@
     "book": "kalshi",
     "odds": -138,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T04:15:33.595148+00:00"
   },
   {
     "id": "525120|jamorant|AST|OVER|4.5",
@@ -3979,9 +3979,9 @@
     "book": "dabble",
     "odds": -137,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T04:15:33.595171+00:00"
   },
   {
     "id": "524538|terrenceshannon|PTS|UNDER|14.5",
@@ -3995,9 +3995,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 19.0,
+    "graded_at": "2026-10-29T04:15:33.595174+00:00"
   },
   {
     "id": "524539|andredrummond|REB|OVER|5.5",
@@ -4011,9 +4011,9 @@
     "book": "kalshi",
     "odds": -133,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T04:15:33.595178+00:00"
   },
   {
     "id": "525120|zachedey|PRA|OVER|16.5",
@@ -4043,9 +4043,9 @@
     "book": "kalshi",
     "odds": -127,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T04:15:33.595183+00:00"
   },
   {
     "id": "524538|terrenceshannon|PRA|UNDER|19.5",
@@ -4059,9 +4059,9 @@
     "book": "betrivers",
     "odds": -136,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 27.0,
+    "graded_at": "2026-10-29T04:15:33.595188+00:00"
   },
   {
     "id": "525120|zachedey|REB|OVER|7.5",
@@ -4107,9 +4107,9 @@
     "book": "bovada",
     "odds": -165,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595193+00:00"
   },
   {
     "id": "525120|donovanclingan|PTS|OVER|9.5",
@@ -4139,9 +4139,9 @@
     "book": "kalshi",
     "odds": -426,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T04:15:33.595207+00:00"
   },
   {
     "id": "524541|deaaronfox|AST|OVER|5.5",
@@ -4155,9 +4155,9 @@
     "book": "kalshi",
     "odds": -163,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595211+00:00"
   },
   {
     "id": "524519|isaiahhartenstein|PRA|UNDER|24.5",
@@ -4171,9 +4171,9 @@
     "book": "dabble",
     "odds": -111,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 27.0,
+    "graded_at": "2026-10-29T04:15:33.595215+00:00"
   },
   {
     "id": "524519|maxchristie|AST|UNDER|2.5",
@@ -4187,9 +4187,9 @@
     "book": "prophetx",
     "odds": -230,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.595219+00:00"
   },
   {
     "id": "524520|brooklopez|PTS|OVER|11.5",
@@ -4219,9 +4219,9 @@
     "book": "betmgm",
     "odds": -175,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.595224+00:00"
   },
   {
     "id": "524541|jaxsonhayes|PTS|OVER|8.5",
@@ -4235,9 +4235,9 @@
     "book": "dabble",
     "odds": 119,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T04:15:33.595228+00:00"
   },
   {
     "id": "524541|stephoncastle|AST|OVER|5.5",
@@ -4251,9 +4251,9 @@
     "book": "kalshi",
     "odds": -138,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595231+00:00"
   },
   {
     "id": "524540|tarieason|PRA|UNDER|20.5",
@@ -4267,9 +4267,9 @@
     "book": "dabble",
     "odds": -101,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 15.0,
+    "graded_at": "2026-10-29T04:15:33.595236+00:00"
   },
   {
     "id": "524540|reedsheppard|PTS|OVER|10.5",
@@ -4283,9 +4283,9 @@
     "book": "dabble",
     "odds": -120,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.595239+00:00"
   },
   {
     "id": "524520|matissethybulle|PTS|OVER|6.5",
@@ -4363,9 +4363,9 @@
     "book": "dabble",
     "odds": 115,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595248+00:00"
   },
   {
     "id": "524539|trejones|REB|UNDER|3.5",
@@ -4379,9 +4379,9 @@
     "book": "kalshi",
     "odds": -567,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595252+00:00"
   },
   {
     "id": "524539|matasbuzelis|PRA|OVER|20.5",
@@ -4395,9 +4395,9 @@
     "book": "dabble",
     "odds": 104,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T04:15:33.595256+00:00"
   },
   {
     "id": "524520|dariusgarland|PRA|UNDER|35.5",
@@ -4427,9 +4427,9 @@
     "book": "fanduel",
     "odds": -122,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T04:15:33.595262+00:00"
   },
   {
     "id": "524541|devinvassell|REB|OVER|3.5",
@@ -4443,9 +4443,9 @@
     "book": "kalshi",
     "odds": -144,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.595265+00:00"
   },
   {
     "id": "524520|sandromamukelashvili|PTS|OVER|9.5",
@@ -4475,9 +4475,9 @@
     "book": "pinnacle",
     "odds": 111,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T04:15:33.595271+00:00"
   },
   {
     "id": "525120|jaylenwells|PRA|OVER|16.5",
@@ -4539,9 +4539,9 @@
     "book": "dabble",
     "odds": 108,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595279+00:00"
   },
   {
     "id": "524541|deaaronfox|PTS|OVER|14.5",
@@ -4555,9 +4555,9 @@
     "book": "kalshi",
     "odds": -138,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 14.0,
+    "graded_at": "2026-10-29T04:15:33.595283+00:00"
   },
   {
     "id": "524539|matasbuzelis|PTS|OVER|14.5",
@@ -4571,9 +4571,9 @@
     "book": "draftkings",
     "odds": -102,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 17.0,
+    "graded_at": "2026-10-29T04:15:33.595287+00:00"
   },
   {
     "id": "524537|dejountemurray|PTS|OVER|16.5",
@@ -4603,9 +4603,9 @@
     "book": "betrivers",
     "odds": -143,
     "game": "New York Knicks @ Chicago Bulls",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595291+00:00"
   },
   {
     "id": "524537|derikqueen|PTS|OVER|11.5",
@@ -4635,9 +4635,9 @@
     "book": "betmgm",
     "odds": -110,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T04:15:33.595296+00:00"
   },
   {
     "id": "524538|joanberinger|PTS|OVER|5.5",
@@ -4651,9 +4651,9 @@
     "book": "dabble",
     "odds": -118,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 7.0,
+    "graded_at": "2026-10-29T04:15:33.595300+00:00"
   },
   {
     "id": "524541|dylanharper|PRA|UNDER|26.5",
@@ -4667,9 +4667,9 @@
     "book": "betrivers",
     "odds": -136,
     "game": "San Antonio Spurs @ Utah Jazz",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 26.0,
+    "graded_at": "2026-10-29T04:15:33.595304+00:00"
   },
   {
     "id": "524519|danielgafford|PRA|UNDER|19.5",
@@ -4683,9 +4683,9 @@
     "book": "dabble",
     "odds": -108,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 20.0,
+    "graded_at": "2026-10-29T04:15:33.595309+00:00"
   },
   {
     "id": "524540|ryanrollins|PTS|OVER|14.5",
@@ -4699,9 +4699,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Houston Rockets @ Milwaukee Bucks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T04:15:33.595312+00:00"
   },
   {
     "id": "524519|shaigilgeousalexander|PRA|UNDER|41.5",
@@ -4715,9 +4715,9 @@
     "book": "betrivers",
     "odds": -114,
     "game": "Oklahoma City Thunder @ Dallas Mavericks",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 29.0,
+    "graded_at": "2026-10-29T04:15:33.595316+00:00"
   },
   {
     "id": "524538|draymondgreen|PRA|UNDER|19.5",
@@ -4731,9 +4731,9 @@
     "book": "betrivers",
     "odds": -143,
     "game": "Golden State Warriors @ Minnesota Timberwolves",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T04:15:33.595320+00:00"
   },
   {
     "id": "524520|isaiahjackson|REB|UNDER|6.5",
@@ -5227,6 +5227,662 @@
     "book": "dabble",
     "odds": 100,
     "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jarrettallen|PTS|OVER|12.5",
+    "captured_at": "2026-10-29T04:15:33.477237+00:00",
+    "event_id": "525118",
+    "player": "Jarrett Allen",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 12.5,
+    "projection": 15.23,
+    "book": "dabble",
+    "odds": 111,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|PTS|OVER|17.5",
+    "captured_at": "2026-10-29T04:15:33.477263+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 17.5,
+    "projection": 20.79,
+    "book": "dabble",
+    "odds": -104,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|donovanmitchell|AST|OVER|4.5",
+    "captured_at": "2026-10-29T04:15:33.477277+00:00",
+    "event_id": "525118",
+    "player": "Donovan Mitchell",
+    "market": "AST",
+    "side": "OVER",
+    "line": 4.5,
+    "projection": 5.32,
+    "book": "dabble",
+    "odds": -120,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jamesharden|AST|OVER|6.5",
+    "captured_at": "2026-10-29T04:15:33.477290+00:00",
+    "event_id": "525118",
+    "player": "James Harden",
+    "market": "AST",
+    "side": "OVER",
+    "line": 6.5,
+    "projection": 7.62,
+    "book": "dabble",
+    "odds": 104,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|donovanmitchell|PTS|OVER|23.5",
+    "captured_at": "2026-10-29T04:15:33.477302+00:00",
+    "event_id": "525118",
+    "player": "Donovan Mitchell",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 23.5,
+    "projection": 26.74,
+    "book": "dabble",
+    "odds": -102,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|dysondaniels|PTS|OVER|11.5",
+    "captured_at": "2026-10-29T04:15:33.477313+00:00",
+    "event_id": "525118",
+    "player": "Dyson Daniels",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 11.5,
+    "projection": 12.93,
+    "book": "dabble",
+    "odds": 106,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|aaronwiggins|PTS|UNDER|11.5",
+    "captured_at": "2026-10-29T04:15:33.477325+00:00",
+    "event_id": "525118",
+    "player": "Aaron Wiggins",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 11.5,
+    "projection": 10.12,
+    "book": "dabble",
+    "odds": 103,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|evanmobley|PTS|OVER|16.5",
+    "captured_at": "2026-10-29T04:15:33.477336+00:00",
+    "event_id": "525118",
+    "player": "Evan Mobley",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 16.5,
+    "projection": 18.08,
+    "book": "dabble",
+    "odds": -106,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|3PM|OVER|2.5",
+    "captured_at": "2026-10-29T04:15:33.477356+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "3PM",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.38,
+    "book": "dabble",
+    "odds": -139,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|dysondaniels|REB|OVER|5.5",
+    "captured_at": "2026-10-29T04:15:33.477378+00:00",
+    "event_id": "525118",
+    "player": "Dyson Daniels",
+    "market": "REB",
+    "side": "OVER",
+    "line": 5.5,
+    "projection": 6.43,
+    "book": "dabble",
+    "odds": -127,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jamesharden|PTS|OVER|16.5",
+    "captured_at": "2026-10-29T04:15:33.477389+00:00",
+    "event_id": "525118",
+    "player": "James Harden",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 16.5,
+    "projection": 18.84,
+    "book": "dabble",
+    "odds": -110,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|cjmccollum|PTS|OVER|16.5",
+    "captured_at": "2026-10-29T04:15:33.477400+00:00",
+    "event_id": "525118",
+    "player": "CJ McCollum",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 16.5,
+    "projection": 18.51,
+    "book": "dabble",
+    "odds": 107,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jamesharden|REB|OVER|3.5",
+    "captured_at": "2026-10-29T04:15:33.477503+00:00",
+    "event_id": "525118",
+    "player": "James Harden",
+    "market": "REB",
+    "side": "OVER",
+    "line": 3.5,
+    "projection": 5.06,
+    "book": "dabble",
+    "odds": -139,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|sammerrill|3PM|OVER|1.5",
+    "captured_at": "2026-10-29T04:15:33.477533+00:00",
+    "event_id": "525118",
+    "player": "Sam Merrill",
+    "market": "3PM",
+    "side": "OVER",
+    "line": 1.5,
+    "projection": 2.08,
+    "book": "dabble",
+    "odds": -128,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|cjmccollum|AST|OVER|2.5",
+    "captured_at": "2026-10-29T04:15:33.477581+00:00",
+    "event_id": "525118",
+    "player": "CJ McCollum",
+    "market": "AST",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.29,
+    "book": "dabble",
+    "odds": -104,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jaylontyson|PTS|OVER|8.5",
+    "captured_at": "2026-10-29T04:15:33.477592+00:00",
+    "event_id": "525118",
+    "player": "Jaylon Tyson",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 8.5,
+    "projection": 10.94,
+    "book": "dabble",
+    "odds": 107,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|sammerrill|PTS|OVER|8.5",
+    "captured_at": "2026-10-29T04:15:33.477612+00:00",
+    "event_id": "525118",
+    "player": "Sam Merrill",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 8.5,
+    "projection": 10.46,
+    "book": "dabble",
+    "odds": 111,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|domantassabonis|AST|UNDER|6.5",
+    "captured_at": "2026-10-29T04:15:33.477633+00:00",
+    "event_id": "525119",
+    "player": "Domantas Sabonis",
+    "market": "AST",
+    "side": "UNDER",
+    "line": 6.5,
+    "projection": 5.19,
+    "book": "dabble",
+    "odds": 105,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|PRA|OVER|24.5",
+    "captured_at": "2026-10-29T04:15:33.477652+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 24.5,
+    "projection": 28.31,
+    "book": "dabble",
+    "odds": 110,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|evanmobley|AST|UNDER|3.5",
+    "captured_at": "2026-10-29T04:15:33.477664+00:00",
+    "event_id": "525118",
+    "player": "Evan Mobley",
+    "market": "AST",
+    "side": "UNDER",
+    "line": 3.5,
+    "projection": 2.96,
+    "book": "dabble",
+    "odds": 103,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jamesharden|PRA|OVER|27.5",
+    "captured_at": "2026-10-29T04:15:33.477675+00:00",
+    "event_id": "525118",
+    "player": "James Harden",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 27.5,
+    "projection": 31.52,
+    "book": "dabble",
+    "odds": -104,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|donovanmitchell|REB|OVER|4.5",
+    "captured_at": "2026-10-29T04:15:33.477686+00:00",
+    "event_id": "525118",
+    "player": "Donovan Mitchell",
+    "market": "REB",
+    "side": "OVER",
+    "line": 4.5,
+    "projection": 5.07,
+    "book": "dabble",
+    "odds": -102,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|donovanmitchell|PRA|OVER|33.5",
+    "captured_at": "2026-10-29T04:15:33.477707+00:00",
+    "event_id": "525118",
+    "player": "Donovan Mitchell",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 33.5,
+    "projection": 37.12,
+    "book": "dabble",
+    "odds": 101,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zachlavine|PTS|UNDER|22.5",
+    "captured_at": "2026-10-29T04:15:33.477719+00:00",
+    "event_id": "525119",
+    "player": "Zach LaVine",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 22.5,
+    "projection": 20.35,
+    "book": "dabble",
+    "odds": 103,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jocklandale|PTS|OVER|7.5",
+    "captured_at": "2026-10-29T04:15:33.477730+00:00",
+    "event_id": "525118",
+    "player": "Jock Landale",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 7.5,
+    "projection": 8.21,
+    "book": "dabble",
+    "odds": 103,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|scoothenderson|REB|OVER|1.5",
+    "captured_at": "2026-10-29T04:15:33.477741+00:00",
+    "event_id": "525120",
+    "player": "Scoot Henderson",
+    "market": "REB",
+    "side": "OVER",
+    "line": 1.5,
+    "projection": 2.43,
+    "book": "bet99",
+    "odds": -155,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|nickeilalexanderwalker|AST|OVER|2.5",
+    "captured_at": "2026-10-29T04:15:33.477753+00:00",
+    "event_id": "525118",
+    "player": "Nickeil Alexander-Walker",
+    "market": "AST",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 4.02,
+    "book": "sportzino",
+    "odds": -180,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|jrueholiday|PTS|OVER|11.5",
+    "captured_at": "2026-10-29T04:15:33.477764+00:00",
+    "event_id": "525120",
+    "player": "Jrue Holiday",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 11.5,
+    "projection": 16.56,
+    "book": "fanatics",
+    "odds": -130,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|peytonwatson|AST|OVER|1.5",
+    "captured_at": "2026-10-29T04:15:33.477776+00:00",
+    "event_id": "525118",
+    "player": "Peyton Watson",
+    "market": "AST",
+    "side": "OVER",
+    "line": 1.5,
+    "projection": 2.15,
+    "book": "sportzino",
+    "odds": -165,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|sammerrill|PRA|OVER|12.5",
+    "captured_at": "2026-10-29T04:15:33.477787+00:00",
+    "event_id": "525118",
+    "player": "Sam Merrill",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 12.5,
+    "projection": 16.24,
+    "book": "dabble",
+    "odds": 101,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zachlavine|AST|UNDER|3.5",
+    "captured_at": "2026-10-29T04:15:33.477798+00:00",
+    "event_id": "525119",
+    "player": "Zach LaVine",
+    "market": "AST",
+    "side": "UNDER",
+    "line": 3.5,
+    "projection": 2.6,
+    "book": "dabble",
+    "odds": -128,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|cedriccoward|REB|OVER|5.5",
+    "captured_at": "2026-10-29T04:15:33.477810+00:00",
+    "event_id": "525120",
+    "player": "Cedric Coward",
+    "market": "REB",
+    "side": "OVER",
+    "line": 5.5,
+    "projection": 6.74,
+    "book": "fanatics",
+    "odds": -150,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zionwilliamson|AST|UNDER|3.5",
+    "captured_at": "2026-10-29T04:15:33.477823+00:00",
+    "event_id": "525119",
+    "player": "Zion Williamson",
+    "market": "AST",
+    "side": "UNDER",
+    "line": 3.5,
+    "projection": 2.72,
+    "book": "dabble",
+    "odds": -132,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jaylontyson|PRA|OVER|14.5",
+    "captured_at": "2026-10-29T04:15:33.477835+00:00",
+    "event_id": "525118",
+    "player": "Jaylon Tyson",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 14.5,
+    "projection": 17.7,
+    "book": "dabble",
+    "odds": 101,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|treymurphyiii|3PM|OVER|2.5",
+    "captured_at": "2026-10-29T04:15:33.477847+00:00",
+    "event_id": "525119",
+    "player": "Trey Murphy III",
+    "market": "3PM",
+    "side": "OVER",
+    "line": 2.5,
+    "projection": 3.04,
+    "book": "dabble",
+    "odds": -119,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525120|sidycissoko|PRA|UNDER|9.5",
+    "captured_at": "2026-10-29T04:15:33.477867+00:00",
+    "event_id": "525120",
+    "player": "Sidy Cissoko",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 9.5,
+    "projection": 8.16,
+    "book": "bet99",
+    "odds": -125,
+    "game": "Memphis Grizzlies @ Portland Trail Blazers",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|aaronwiggins|PRA|UNDER|16.5",
+    "captured_at": "2026-10-29T04:15:33.477878+00:00",
+    "event_id": "525118",
+    "player": "Aaron Wiggins",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 16.5,
+    "projection": 14.18,
+    "book": "dabble",
+    "odds": -101,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|zachlavine|PRA|UNDER|29.5",
+    "captured_at": "2026-10-29T04:15:33.477890+00:00",
+    "event_id": "525119",
+    "player": "Zach LaVine",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 29.5,
+    "projection": 25.77,
+    "book": "dabble",
+    "odds": -105,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|cjmccollum|PRA|OVER|21.5",
+    "captured_at": "2026-10-29T04:15:33.477901+00:00",
+    "event_id": "525118",
+    "player": "CJ McCollum",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 21.5,
+    "projection": 24.14,
+    "book": "dabble",
+    "odds": -104,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525119|domantassabonis|PRA|UNDER|38.5",
+    "captured_at": "2026-10-29T04:15:33.477914+00:00",
+    "event_id": "525119",
+    "player": "Domantas Sabonis",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 38.5,
+    "projection": 34.76,
+    "book": "dabble",
+    "odds": 100,
+    "game": "Sacramento Kings @ New Orleans Pelicans",
+    "status": "pending",
+    "actual": null,
+    "graded_at": null
+  },
+  {
+    "id": "525118|jarrettallen|PRA|OVER|22.5",
+    "captured_at": "2026-10-29T04:15:33.477925+00:00",
+    "event_id": "525118",
+    "player": "Jarrett Allen",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 22.5,
+    "projection": 24.56,
+    "book": "dabble",
+    "odds": -105,
+    "game": "Cleveland Cavaliers @ Atlanta Hawks",
     "status": "pending",
     "actual": null,
     "graded_at": null
