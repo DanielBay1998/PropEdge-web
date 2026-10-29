@@ -54,6 +54,10 @@ def run():
             "payout":odds/100 if odds>0 else 100/abs(odds),"forecasts":forecasts})
     def model_breakdown(group):
         return {k:metrics([{"prediction":r["forecasts"][k],"actual":r["actual"]} for r in group]) for k in FIELDS}
+    # Only compare immutable pregame forecasts after outcomes have settled.
+    context_comparison={"status":"AWAITING_SETTLED_PROSPECTIVE_CAPTURES",
+                        "eligible":0,"consensus_mae":None,"adjusted_mae":None,
+                        "production_promoted":False}
     points=[r for r in graded if r["market"]=="PTS"]
     dates=sorted({r["date"] for r in points})
     # Grouping by observed volatility is descriptive only, not a tuned confidence policy.
@@ -61,7 +65,7 @@ def run():
     report={"status":"RESEARCH_ONLY_PENDING_MORE_GRADED_DATES" if len(dates)<20 else "RESEARCH_ONLY_DESCRIPTIVE",
       "total_complete_pregame_snapshots":len(complete),"graded_eligible":len(graded),
       "excluded":dict(excluded),"points_graded":len(points),"points_capture_dates":dates,
-      "overall":model_breakdown(graded),
+      "overall":model_breakdown(graded),"context_comparison":context_comparison,
       "by_market":{m:model_breakdown([r for r in graded if r["market"]==m]) for m in ("PTS","REB","AST","3PM","PRA")},
       "captured_bet_outcomes":margin_stats(graded),
       "points_volatility_exploratory":{"median_cutoff":round(threshold,4) if threshold is not None else None,
