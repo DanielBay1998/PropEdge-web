@@ -27,7 +27,7 @@ def load(paths):
                 except (ValueError,TypeError,KeyError):continue
                 stats["PRA"]=sum(stats[k] for k in ("PTS","REB","AST"))
                 key=(day,str(r.get("Game ID","")))
-                games[name][key]={"date":day,"minutes":mins,**stats}
+                games[name][key]={"date":day,"minutes":mins,"team":str(r.get("Team") or "").strip().casefold(),"game_id":str(r.get("Game ID") or ""),**stats}
     return {name:sorted(rows.values(),key=lambda x:x["date"]) for name,rows in games.items()}
 
 def predict(history):
@@ -58,7 +58,7 @@ def predict(history):
             baseline=0.4*baseline+0.6*minutes_estimate
         # Guard against extreme historical projections when a new role has
         # emerged in at least four current-season observations.
-        current=[r for r in long if str(r.get("date","")).startswith("2026")]
+        current=[r for r in long if str(r.get("date",""))>="20261020"]
         if len(current)>=4:
             current_mean=sum(r[k] for r in current[-8:])/len(current[-8:])
             baseline=0.65*baseline+0.35*current_mean
