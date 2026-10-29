@@ -3,7 +3,7 @@
 Only grade the originally captured side at its actually recorded odds.
 Consensus reversal is not assigned invented opposite-side prices.
 """
-import json,math,datetime
+import json,math,datetime,statistics
 from collections import defaultdict,Counter
 from pathlib import Path
 from nba_challenger_model import load,predict,MARKETS
@@ -28,6 +28,26 @@ def summary(rows,mode):
     return {"eligible_bets":n,"wins":wins,"losses":losses,"pushes":pushes,
             "flat_stake_roi_pct":round(100*profit/n,2) if n else None,
             "mean_absolute_error_on_all_matched":round(error/len(rows),4) if rows else None}
+
+def error_profile(rows,model):
+    if not rows:return {"n":0}
+    errors=[abs(r[model]-r["actual"]) for r in rows]
+    signed=[r[model]-r["actual"] for r in rows]
+    ordered=sorted(errors)
+    def percentile(p):
+        return round(ordered[min(len(ordered)-1,math.ceil(p*len(ordered))-1)],3)
+    return {"n":len(rows),
+            "mae":round(statistics.mean(errors),3),
+            "median_absolute_error":round(statistics.median(errors),3),
+            "p75_absolute_error":percentile(.75),
+            "p90_absolute_error":percentile(.9),
+            "maximum_absolute_error":round(max(errors),3),
+            "mean_signed_error_projection_minus_actual":round(statistics.mean(signed),3),
+            "within_0_5_pct":round(100*sum(e<=.5 for e in errors)/len(errors),2),
+            "within_1_pct":round(100*sum(e<=1 for e in errors)/len(errors),2),
+            "within_2_pct":round(100*sum(e<=2 for e in errors)/len(errors),2),
+            "within_3_pct":round(100*sum(e<=3 for e in errors)/len(errors),2),
+            "within_5_pct":round(100*sum(e<=5 for e in errors)/len(errors),2)}
 
 def run():
     history=load(PATHS)
@@ -59,13 +79,21 @@ def run():
             excluded["invalid_prediction"]+=1;continue
         matched.append({"date":date,"market":market,"line":line,"actual":actual,"side":side,
                         "payout":odds/100 if odds>0 else 100/abs(odds),
-                        "primary":primary,"consensus":consensus})
+                        "primary":primary,"challenger":challenger,"v4":v4,"consensus":consensus,"player":r.get("player"),"game":r.get("game")})
     dates=sorted({r["date"] for r in matched})
     report={"status":"RETROSPECTIVE_RESEARCH_ONLY_NOT_PROSPECTIVE",
             "matched":len(matched),"capture_dates":dates,"excluded":dict(excluded),
             "overall":{m:summary(matched,m) for m in ("primary","consensus")},
             "by_market":{market:{m:summary([r for r in matched if r["market"]==market],m) for m in ("primary","consensus")} for market in MARKETS},
             "by_date":{day:{m:summary([r for r in matched if r["date"]==day],m) for m in ("primary","consensus")} for day in dates},
+            "error_analysis":{
+                "overall":{m:error_profile(matched,m) for m in ("primary","challenger","v4","consensus")},
+                "by_market":{market:{m:error_profile([r for r in matched if r["market"]==market],m) for m in ("primary","challenger","v4","consensus")} for market in MARKETS},
+                "by_capture_date":{day:{m:error_profile([r for r in matched if r["date"]==day],m) for m in ("primary","challenger","v4","consensus")} for day in dates},
+                "consensus_better_than_primary_count":sum(abs(r["consensus"]-r["actual"])<abs(r["primary"]-r["actual"]) for r in matched),
+                "consensus_worse_than_primary_count":sum(abs(r["consensus"]-r["actual"])>abs(r["primary"]-r["actual"]) for r in matched),
+                "worst_consensus_misses":[{"player":r["player"],"game":r["game"],"date":r["date"],"market":r["market"],"actual":r["actual"],"primary":round(r["primary"],2),"challenger":round(r["challenger"],2),"v4":round(r["v4"],2),"consensus":round(r["consensus"],2),"absolute_miss":round(abs(r["consensus"]-r["actual"]),2)} for r in sorted(matched,key=lambda r:abs(r["consensus"]-r["actual"]),reverse=True)[:15]]
+            },
             "limitations":["V4 coefficients were trained using games through coefficient timestamp, which can overlap these retrospective test dates: this is IN-SAMPLE and cannot justify production promotion.",
                            "Opposite-side sportsbook prices were not captured; only originally captured side can be evaluated.",
                            "Consensus predictions were reconstructed retrospectively, not stored before games.",
