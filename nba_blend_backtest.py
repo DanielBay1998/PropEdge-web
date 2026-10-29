@@ -50,4 +50,6 @@ def run():
     (ROOT/"reports").mkdir(exist_ok=True)
     (ROOT/"reports/nba_blend_comparison.json").write_text(json.dumps(result,indent=2)+"\n")
     print(json.dumps(result,indent=2))
+    if matched==0:
+        raise SystemExit("No matched graded picks with challenger history; cannot compare models")
 if __name__=="__main__":run()
