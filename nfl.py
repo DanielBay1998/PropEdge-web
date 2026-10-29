@@ -44,7 +44,14 @@ def games(date:str=""):
   except ValueError:raise HTTPException(400,"Use YYYYMMDD")
   if abs((d-today).days)>14:raise HTTPException(400,"Date outside 14-day window")
  else:d=today
- try:return {"date":d.strftime("%Y%m%d"),"games":cached("games"+d.isoformat(),120,lambda:schedule(d.strftime("%Y%m%d"))),"source":"ESPN"}
+ try:
+  if not date:
+   week=[]
+   for offset in range(0,8):
+    day=today+datetime.timedelta(days=offset)
+    week.extend(cached("games"+day.isoformat(),120,lambda day=day:schedule(day.strftime("%Y%m%d"))))
+   return {"date":d.strftime("%Y%m%d"),"games":week,"source":"ESPN","range":"next 8 days"}
+  return {"date":d.strftime("%Y%m%d"),"games":cached("games"+d.isoformat(),120,lambda:schedule(d.strftime("%Y%m%d"))),"source":"ESPN"}
  except Exception:return {"date":d.strftime("%Y%m%d"),"games":[],"error":"NFL schedule temporarily unavailable"}
 def parse_boxscore(event_id):
  data=espn("summary?event="+str(event_id))
@@ -80,6 +87,7 @@ def game_stats(event_id:str):
  except Exception:return {"event_id":event_id,"players":[],"error":"Verified boxscore unavailable"}
 def odds_board():
  from nfl_model import summary, canon
+ from nfl_research import athlete_photo
  model=summary()
  projections=model["projections"]
  validation=model["validation"]
@@ -136,7 +144,7 @@ def odds_board():
    audit=validation.get(code,{})
    validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved"))
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
-   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"edge":edge,"sample_games":(info or {}).get("samples",0),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
+   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
    if validated and edge is not None and edge>0:
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
@@ -164,3 +172,17 @@ def performance():
 def historical_model():
  from nfl_model import summary
  return summary()
+
+@router.get("/player/{player_name}")
+def player_research(player_name:str):
+ from nfl_research import profile,athlete_photo
+ if len(player_name)>100:raise HTTPException(400,"Invalid player name")
+ result=profile(player_name)
+ if result.get("found"):result["photo"]=athlete_photo(result.get("player_id"))
+ return result
+
+@router.get("/teams")
+def nfl_teams():
+ from nfl_research import team_directory
+ try:return {"teams":cached("nfl_teams",86400,team_directory)}
+ except Exception:return {"teams":{},"error":"Team metadata unavailable"}

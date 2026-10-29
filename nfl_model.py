@@ -20,7 +20,7 @@ def history():
     v=float(row.get(market,""))
     if math.isfinite(v) and v>=0:stats[market]=v
    except (ValueError,TypeError):pass
-  if stats:out.append({"date":date,"event_id":row.get("event_id"),"player":row["player"],"key":canon(row["player"]),"team":row.get("team"),"stats":stats})
+  if stats:out.append({"date":date,"event_id":row.get("event_id"),"player_id":row.get("player_id"),"player":row["player"],"key":canon(row["player"]),"team":row.get("team"),"stats":stats})
  return sorted(out,key=lambda r:(r["date"],r["event_id"] or ""))
 def predict(rows,market):
  values=[r["stats"][market] for r in rows if market in r["stats"]]
@@ -48,16 +48,27 @@ def evaluate(rows):
   n=len(e["model"]);mae=sum(e["model"])/n if n else None;bm=sum(e["baseline"])/n if n else None
   summary[m]={"samples":n,"model_mae":round(mae,3) if n else None,"baseline_mae":round(bm,3) if n else None,"improved":bool(n>=100 and mae<bm)}
  return summary
+def season_of(day):return day.year if day.month>=7 else day.year-1
+def season_predict(games,market):
+ current=season_of(games[-1]["date"])
+ this=[r for r in games if season_of(r["date"])==current and market in r["stats"]]
+ prior=[r for r in games if season_of(r["date"])==current-1 and market in r["stats"]]
+ if len(this)>=4:return predict(this,market)
+ if len(this)>=2 and len(prior)>=4:
+  current_est=predict(this,market) if len(this)>=4 else sum(r["stats"][market] for r in this)/len(this)
+  previous=predict(prior,market)
+  return round((len(this)*current_est+2*previous)/(len(this)+2),2)
+ return predict(games,market)
 def projections(rows):
  groups=defaultdict(list)
  for row in rows:groups[row["key"]].append(row)
  result={}
  for name,games in groups.items():
-  market={m:predict(games,m) for m in FIELDS}
+  market={m:season_predict(games,m) for m in FIELDS}
   if any(v is not None for v in market.values()):
-   result[name]={"player":games[-1]["player"],"team":games[-1]["team"],"samples":len(games),"date":games[-1]["date"].isoformat(),"markets":market,
+   result[name]={"player":games[-1]["player"],"team":games[-1]["team"],"player_id":games[-1].get("player_id"),"season_games":sum(season_of(g["date"])==season_of(games[-1]["date"]) for g in games),"samples":len(games),"date":games[-1]["date"].isoformat(),"markets":market,
                  "recent":[{"date":g["date"].isoformat(),**g["stats"]} for g in games[-10:]]}
  return result
 def summary():
  rows=history();validation=evaluate(rows)
- return {"history_rows":len(rows),"players":len(set(r["key"] for r in rows)),"validation":validation,"projections":projections(rows),"method":"Weighted last-eight completed games; walk-forward evaluation against prior-game career sample mean. Descriptive only, no probability calibration.","as_of":max((r["date"].isoformat() for r in rows),default=None)}
+ return {"history_rows":len(rows),"players":len(set(r["key"] for r in rows)),"validation":validation,"projections":projections(rows),"method":"Current-season weighted recent games with prior-season shrinkage for small samples; walk-forward evaluation of the base weighted model against prior-game career sample mean. Descriptive only, no probability calibration.","as_of":max((r["date"].isoformat() for r in rows),default=None)}

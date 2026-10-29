@@ -1,0 +1,34 @@
+name: NFL parity validation
+on:
+  pull_request:
+    paths: ['nfl.py','nfl_model.py','nfl_research.py','static/nfl.html','.github/workflows/nfl_parity.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl.py nfl_model.py nfl_research.py server.py track_nfl.py
+      - name: Verify 2026 player data, NFL routes and NBA isolation
+        run: |
+          python - <<'PY'
+          from nfl_research import profile
+          from nfl_model import summary
+          from nfl import router
+          from server import app
+          from pathlib import Path
+          p=profile('Bryce Young')
+          assert p['found'] and p['season']==2026
+          assert p['markets']['PASS_TD']['season_avg'] is not None
+          assert p['player_id']
+          assert summary()['history_rows']>=7000
+          assert any(r.path=='/api/nfl/player/{player_name}' for r in router.routes)
+          assert any(getattr(r,'path',None)=='/api/board' for r in app.routes)
+          html=Path('static/nfl.html').read_text()
+          for term in ('headshot','teamlogo','openPlayer','renderParlay','wirePlayers'):
+           assert term in html,term
+          print('NFL 2026 profile:',p['player'],p['games'])
+          PY
