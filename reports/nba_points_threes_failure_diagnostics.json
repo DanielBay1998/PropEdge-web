@@ -1,0 +1,391 @@
+{
+  "status": "DESCRIPTIVE_ONLY_NO_RULE_SELECTION",
+  "capture_dates": [
+    "20261028",
+    "20261029"
+  ],
+  "matched": 108,
+  "excluded": {
+    "identity_review": 15
+  },
+  "markets": {
+    "PTS": {
+      "overall": {
+        "n": 79,
+        "wins": 32,
+        "losses": 47,
+        "roi_pct": -24.55,
+        "mean_model_error": 1.4,
+        "mean_absolute_error": 5.76,
+        "large_losses_gt5": 15,
+        "mean_loss_margin": 4.27
+      },
+      "over": {
+        "n": 44,
+        "wins": 13,
+        "losses": 31,
+        "roi_pct": -45.0,
+        "mean_model_error": 3.43,
+        "mean_absolute_error": 4.84,
+        "large_losses_gt5": 8,
+        "mean_loss_margin": 3.73
+      },
+      "under": {
+        "n": 35,
+        "wins": 19,
+        "losses": 16,
+        "roi_pct": 1.15,
+        "mean_model_error": -1.16,
+        "mean_absolute_error": 6.92,
+        "large_losses_gt5": 7,
+        "mean_loss_margin": 5.31
+      },
+      "recent_stat_above_projection": {
+        "n": 38,
+        "wins": 10,
+        "losses": 28,
+        "roi_pct": -51.41,
+        "mean_model_error": -1.01,
+        "mean_absolute_error": 5.86,
+        "large_losses_gt5": 9,
+        "mean_loss_margin": 4.39
+      },
+      "recent_stat_at_or_below_projection": {
+        "n": 41,
+        "wins": 22,
+        "losses": 19,
+        "roi_pct": 0.34,
+        "mean_model_error": 3.63,
+        "mean_absolute_error": 5.67,
+        "large_losses_gt5": 6,
+        "mean_loss_margin": 4.08
+      },
+      "largest_losses": [
+        {
+          "player": "Trey Murphy III",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 17.5,
+          "actual": 6.0,
+          "projection": 18.99,
+          "margin": -11.5,
+          "recent_minutes": 33.6,
+          "recent_stat": 15.6
+        },
+        {
+          "player": "Jalen Brunson",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 26.5,
+          "actual": 38.0,
+          "projection": 23.48,
+          "margin": -11.5,
+          "recent_minutes": 34.0,
+          "recent_stat": 24.0
+        },
+        {
+          "player": "Ajay Mitchell",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 17.5,
+          "actual": 29.0,
+          "projection": 13.63,
+          "margin": -11.5,
+          "recent_minutes": 24.6,
+          "recent_stat": 14.2
+        },
+        {
+          "player": "Quentin Grimes",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 12.5,
+          "actual": 23.0,
+          "projection": 9.88,
+          "margin": -10.5,
+          "recent_minutes": 25.0,
+          "recent_stat": 9.6
+        },
+        {
+          "player": "Ajay Mitchell",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 18.5,
+          "actual": 29.0,
+          "projection": 13.63,
+          "margin": -10.5,
+          "recent_minutes": 24.6,
+          "recent_stat": 14.2
+        },
+        {
+          "player": "Ryan Rollins",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 14.5,
+          "actual": 4.0,
+          "projection": 15.94,
+          "margin": -10.5,
+          "recent_minutes": 29.6,
+          "recent_stat": 15.4
+        },
+        {
+          "player": "Ryan Rollins",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 13.5,
+          "actual": 4.0,
+          "projection": 15.94,
+          "margin": -9.5,
+          "recent_minutes": 29.6,
+          "recent_stat": 15.4
+        },
+        {
+          "player": "Quentin Grimes",
+          "date": "20261029",
+          "side": "UNDER",
+          "line": 13.5,
+          "actual": 23.0,
+          "projection": 9.88,
+          "margin": -9.5,
+          "recent_minutes": 27.0,
+          "recent_stat": 10.2
+        },
+        {
+          "player": "DeMar DeRozan",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 14.5,
+          "actual": 6.0,
+          "projection": 16.6,
+          "margin": -8.5,
+          "recent_minutes": 22.8,
+          "recent_stat": 13.8
+        },
+        {
+          "player": "Jaxson Hayes",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 9.5,
+          "actual": 2.0,
+          "projection": 10.36,
+          "margin": -7.5,
+          "recent_minutes": 23.8,
+          "recent_stat": 13.2
+        },
+        {
+          "player": "Jaxson Hayes",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 8.5,
+          "actual": 2.0,
+          "projection": 10.36,
+          "margin": -6.5,
+          "recent_minutes": 23.8,
+          "recent_stat": 13.2
+        },
+        {
+          "player": "Dejounte Murray",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 16.5,
+          "actual": 10.0,
+          "projection": 18.45,
+          "margin": -6.5,
+          "recent_minutes": 31.0,
+          "recent_stat": 17.8
+        }
+      ]
+    },
+    "3PM": {
+      "overall": {
+        "n": 29,
+        "wins": 12,
+        "losses": 17,
+        "roi_pct": -34.43,
+        "mean_model_error": 0.15,
+        "mean_absolute_error": 1.38,
+        "large_losses_gt5": 0,
+        "mean_loss_margin": 0.85
+      },
+      "over": {
+        "n": 21,
+        "wins": 8,
+        "losses": 13,
+        "roi_pct": -39.02,
+        "mean_model_error": 0.51,
+        "mean_absolute_error": 1.32,
+        "large_losses_gt5": 0,
+        "mean_loss_margin": 0.65
+      },
+      "under": {
+        "n": 8,
+        "wins": 4,
+        "losses": 4,
+        "roi_pct": -22.41,
+        "mean_model_error": -0.8,
+        "mean_absolute_error": 1.55,
+        "large_losses_gt5": 0,
+        "mean_loss_margin": 1.5
+      },
+      "recent_stat_above_projection": {
+        "n": 7,
+        "wins": 3,
+        "losses": 4,
+        "roi_pct": -30.03,
+        "mean_model_error": 0.93,
+        "mean_absolute_error": 1.39,
+        "large_losses_gt5": 0,
+        "mean_loss_margin": 0.75
+      },
+      "recent_stat_at_or_below_projection": {
+        "n": 22,
+        "wins": 9,
+        "losses": 13,
+        "roi_pct": -35.83,
+        "mean_model_error": -0.1,
+        "mean_absolute_error": 1.38,
+        "large_losses_gt5": 0,
+        "mean_loss_margin": 0.88
+      },
+      "largest_losses": [
+        {
+          "player": "Jalen Brunson",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 2.5,
+          "actual": 6.0,
+          "projection": 1.68,
+          "margin": -3.5,
+          "recent_minutes": 34.0,
+          "recent_stat": 1.2
+        },
+        {
+          "player": "Christian Braun",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 1.5,
+          "actual": 3.0,
+          "projection": 0.97,
+          "margin": -1.5,
+          "recent_minutes": 34.8,
+          "recent_stat": 0.4
+        },
+        {
+          "player": "Ryan Rollins",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 0.0,
+          "projection": 2.35,
+          "margin": -1.5,
+          "recent_minutes": 29.6,
+          "recent_stat": 1.8
+        },
+        {
+          "player": "Brandin Podziemski",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 0.0,
+          "projection": 2.17,
+          "margin": -1.5,
+          "recent_minutes": 28.6,
+          "recent_stat": 2.2
+        },
+        {
+          "player": "Saddiq Bey",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 1.0,
+          "projection": 2.54,
+          "margin": -0.5,
+          "recent_minutes": 27.8,
+          "recent_stat": 2.2
+        },
+        {
+          "player": "Ace Bailey",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 1.0,
+          "projection": 2.13,
+          "margin": -0.5,
+          "recent_minutes": 27.6,
+          "recent_stat": 1.6
+        },
+        {
+          "player": "Ajay Mitchell",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 1.5,
+          "actual": 2.0,
+          "projection": 0.75,
+          "margin": -0.5,
+          "recent_minutes": 24.6,
+          "recent_stat": 0.4
+        },
+        {
+          "player": "Miles McBride",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 1.0,
+          "projection": 2.1,
+          "margin": -0.5,
+          "recent_minutes": 19.6,
+          "recent_stat": 2.4
+        },
+        {
+          "player": "Trey Murphy III",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 2.5,
+          "actual": 2.0,
+          "projection": 3.04,
+          "margin": -0.5,
+          "recent_minutes": 33.6,
+          "recent_stat": 1.8
+        },
+        {
+          "player": "Al Horford",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 0.5,
+          "actual": 0.0,
+          "projection": 1.67,
+          "margin": -0.5,
+          "recent_minutes": 18.4,
+          "recent_stat": 1.4
+        },
+        {
+          "player": "Devin Vassell",
+          "date": "20261028",
+          "side": "OVER",
+          "line": 1.5,
+          "actual": 1.0,
+          "projection": 2.24,
+          "margin": -0.5,
+          "recent_minutes": 30.8,
+          "recent_stat": 2.2
+        },
+        {
+          "player": "Max Christie",
+          "date": "20261028",
+          "side": "UNDER",
+          "line": 2.5,
+          "actual": 3.0,
+          "projection": 1.89,
+          "margin": -0.5,
+          "recent_minutes": 26.4,
+          "recent_stat": 1.8
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Single/few capture dates; not an independent prospective test.",
+    "Recent minutes and recent boxscore stats are historical proxies, not injuries, lineup, usage or shot volume.",
+    "Subgroup performance is exploratory, not a validated betting filter.",
+    "Recorded projection may differ from reconstructed consensus; no production changes."
+  ]
+}
