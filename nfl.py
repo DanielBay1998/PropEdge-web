@@ -158,9 +158,9 @@ def odds_board():
     if validation.get(code,{}).get("model")=="opponent_adjusted" and projected is not None and advanced.get("defense_games",0)>=4:projection=projected
    context=for_prop(context_rows,str(event["id"]),(info or {}).get("player_id"),(info or {}).get("team"),event.get("commence_time") or event.get("start_time"))
    audit=validation.get(code,{})
-   validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved") and not injury_block(context))
+   validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved") and not injury_block(context) and team_verified)
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
-   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"verified_context":context,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
+   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"verified_context":context,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"team_verified":team_verified,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
    # An exchange-only quote is not independent confirmation by two sportsbooks.
    conventional_books={bk for bk in q["books"] if bk not in ("kalshi","polymarket_us","polymarket","prophetx","novig")}
@@ -168,7 +168,7 @@ def odds_board():
    volatility=advanced.get("last5_std") if isinstance(advanced,dict) else None
    plausible=bool(volatility is not None and isinstance(volatility,(int,float)) and volatility>0 and abs(edge or 0)<=max(10.0,1.5*volatility))
    record["pick_eligible"]=bool(len(conventional_books)>=2 and plausible)
-   record["pick_exclusion_reason"]=("Fewer than two conventional sportsbooks" if len(conventional_books)<2 else "Projection gap exceeds volatility review threshold" if not plausible else None)
+   record["pick_exclusion_reason"]=("Player team does not match scheduled game" if not team_verified else "Fewer than two conventional sportsbooks" if len(conventional_books)<2 else "Projection gap exceeds volatility review threshold" if not plausible else None)
    if validated and record["pick_eligible"] and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
     if available:
@@ -179,6 +179,12 @@ def odds_board():
      best=max(available,key=lambda bp:bp[1])
      base["top_picks"].append({**record,"book":best[0],"odds":best[1]})
  base["verified"]=bool(base["props"])
+ # Keep the best line for each player/market/side/event; other lines remain in All Props.
+ unique={}
+ for p in base["top_picks"]:
+  k=(p["event_id"],canon(p["player"]),p["market"],p["side"])
+  if k not in unique or p["edge"]>unique[k]["edge"]:unique[k]=p
+ base["top_picks"]=list(unique.values())
  base["top_picks"].sort(key=lambda p:p["edge"],reverse=True)
  base["model_ready"]=bool(base["top_picks"])
  if not base["props"]:base["error"]="No independently confirmed NFL main lines available. NFL picks remain unavailable."

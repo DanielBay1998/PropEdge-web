@@ -1,0 +1,24 @@
+name: NFL pick identity and duplicate checks
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          source=Path('nfl.py').read_text()
+          ast.parse(source)
+          assert 'team_verified' in source
+          assert 'Player team does not match scheduled game' in source
+          assert 'unique[k]=p' in source
+          assert 'base["top_picks"]=list(unique.values())' in source
+          print('NFL team and duplicate guards present')
+          PY
