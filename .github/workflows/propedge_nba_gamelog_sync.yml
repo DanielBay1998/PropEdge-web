@@ -27,7 +27,7 @@ jobs:
       - name: Append completed ESPN boxscores only
         run: python sync_final_boxscores.py
       - name: Grade saved pregame predictions against completed games
-        run: PROPEDGE_GRADE_ONLY=1 python track_model.py
+        run: PROPEDGE_CAPTURE_IF_DUE=1 python track_model.py
       - name: Commit validated game logs and grades
         run: |
           set -euo pipefail
@@ -38,6 +38,17 @@ jobs:
             git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
             git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
           else
             echo 'No new final boxscores or grades'
+          fi
+      - name: Request Render refresh when deployment hook is configured
+        if: ${{ success() && steps.commit.outputs.changed == 'true' }}
+        env:
+          RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "${RENDER_DEPLOY_HOOK_URL:-}" ]; then
+            curl --fail --silent --show-error --max-time 20 -X POST "$RENDER_DEPLOY_HOOK_URL"
+          else
+            echo 'No Render deploy hook configured; relying on connected GitHub auto-deploy'
           fi
