@@ -1,0 +1,29 @@
+name: NBA Context Holdout
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_context_ablation_holdout.py
+      - .github/workflows/nba_context_ablation_holdout.yml
+  schedule:
+    - cron: '26 13 * * *'
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run historical context backtest
+        run: |
+          python -m py_compile nba_context_ablation_holdout.py
+          python nba_context_ablation_holdout.py
+      - name: Commit report
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add reports/nba_context_ablation_holdout.json
+          git diff --cached --quiet || (git commit -m 'Update NBA context holdout report' && git push)
