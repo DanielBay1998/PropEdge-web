@@ -606,6 +606,31 @@ def refresh():
             conservative.append(signal)
         signals=conservative
         base["small_sample_role_filtered"]=role_rejections
+        # Early-season role uncertainty: do not rank a large projection leap as
+        # a qualified pick until more actual regular-season games exist.
+        # This is a conservative eligibility gate, not a probability estimate.
+        early_safe=[]
+        early_rejected=0
+        for signal in signals:
+            current=sorted((g for g in logs.get(canonical_player(signal.get("player")),[])
+                            if g.get("season")=="current"),
+                           key=lambda g:g.get("date",""),reverse=True)[:8]
+            market=signal.get("market")
+            projection=number(signal.get("projection"))
+            if 3<=len(current)<=5 and projection is not None and market in ("PTS","REB","AST","3PM","PRA"):
+                values=[sum(g[k] for k in ("PTS","REB","AST")) if market=="PRA"
+                        else g.get(market) for g in current]
+                if all(v is not None for v in values):
+                    observed=sum(values)/len(values)
+                    # Compare like-for-like production, not the betting line.
+                    if observed>0 and abs(projection-observed)/observed>=0.25:
+                        signal["qualification_reason"]="Small-sample role uncertainty: projection differs by at least 25% from observed season production"
+                        early_rejected+=1
+                        continue
+            early_safe.append(signal)
+        signals=early_safe
+        base["early_season_uncertainty_filtered"]=early_rejected
+        base["early_season_uncertainty_mode"]="CONSERVATIVE_NOT_BACKTESTED"
         # Fail closed on stale or mismatched player-to-game identities.
         # Historical team alone cannot verify a new-season trade.
         identity_checked=[]
