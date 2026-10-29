@@ -13,9 +13,20 @@ def run():
  rows={(r["Game ID"],r["Player"].lower()):r for r in existing if r.get("Game ID") and r.get("Player")}
  today=datetime.datetime.now(datetime.timezone.utc).date()
  checked=0;completed=0;added=0
- for offset in range(0,4):
-  date=today-datetime.timedelta(days=offset)
-  day=date.strftime("%Y%m%d")
+ days={(today-datetime.timedelta(days=i)).strftime("%Y%m%d") for i in range(4)}
+ tracking=FILE.parent/"model_tracking.json"
+ if tracking.exists():
+  try:
+   pending=json.loads(tracking.read_text(encoding="utf-8"))
+   for item in pending:
+    if item.get("status")!="pending":continue
+    captured=datetime.datetime.fromisoformat(item["captured_at"].replace("Z","+00:00")).date()
+    for shift in (-1,0,1,2):
+     d=captured+datetime.timedelta(days=shift)
+     if d<=today and (today-d).days<=7:days.add(d.strftime("%Y%m%d"))
+  except (ValueError,KeyError,TypeError) as exc:print("Pending date discovery failed",type(exc).__name__,flush=True)
+ print("Checking scoreboard dates",",".join(sorted(days)),flush=True)
+ for day in sorted(days):
   try:events=get("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+day).get("events",[])
   except Exception as e:print("Scoreboard fetch failed",day,type(e).__name__,flush=True);continue
   for event in events:
@@ -49,6 +60,7 @@ def run():
     print("Skipping incomplete boxscore",eid,"valid players",len(new),flush=True)
     continue
    completed+=1
+   print("Imported final",day,eid,"teams",",".join(sorted({r["Team"] for r in new})),"players",len(new),flush=True)
    for record in new:
     key=(record["Game ID"],record["Player"].lower())
     if key not in rows:rows[key]=record;added+=1
