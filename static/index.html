@@ -31,6 +31,28 @@
 .parlay-leg b{white-space:nowrap;font-size:13px;color:#a1f5c7}
 .parlay-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;border-top:1px solid #345a59;padding-top:12px}
 .parlay-copy{border:1px solid #65d9ac;background:#1c5b4c;color:#e6fff2;border-radius:10px;padding:10px 13px;font-weight:800;font-size:12px;cursor:pointer}
+
+#gameplayersView{max-width:940px;margin:auto}
+#gameplayersView>h2{font-size:clamp(21px,5vw,30px);line-height:1.2;margin:15px 0 8px}
+#gameplayersView>.sectionintro{font-size:12px;line-height:1.4;color:#95aa9f;margin-bottom:12px}
+#gameplayersView .coverage-disclosure{background:#10251f!important;border:1px solid #274b3c!important;border-radius:12px;margin:8px 0 14px}
+#gameplayersView .coverage-disclosure>summary{padding:10px 12px}
+#gameplayersView .coverage-title{color:#86dcb4;font-size:10px;letter-spacing:1px}
+#gameplayersView .roster-dashboard{padding:7px 0 10px}
+#gameplayersView .roster-eyebrow{font-size:10px;color:#78cda3;letter-spacing:1.5px}
+#gameplayersView .roster-heading{margin:6px 0;display:flex;align-items:center;justify-content:space-between;gap:8px}
+#gameplayersView .roster-heading strong{font-size:25px}
+#gameplayersView .roster-heading>span{font-size:11px;background:#153b2e;color:#9be2ba;border:1px solid #28664b;padding:7px 9px;border-radius:9px;white-space:nowrap}
+#gameplayersView .roster-subline{font-size:11px;color:#8ca79d;line-height:1.4;margin-bottom:10px}
+#gameplayersView .roster-search{background:#0d211c!important;border:1px solid #305243!important;border-radius:11px!important;padding:11px 13px!important;font-size:14px!important;min-height:42px!important}
+#gameplayersView .roster-list{gap:7px}
+#gameplayersView .roster-list>.playergroup{background:#11231f!important;border:1px solid #29473b!important;box-shadow:none!important;border-radius:12px!important;padding:8px 11px!important}
+#gameplayersView .roster-list>.playergroup[open]{background:#142c24!important;border-color:#4a9871!important}
+#gameplayersView .roster-list>.playergroup>summary{min-height:48px;gap:10px}
+#gameplayersView .roster-list .avatar{width:42px!important;height:45px!important;border-radius:9px!important}
+#gameplayersView .roster-list .player-group-name{font-size:14px!important}
+#gameplayersView .roster-list .player-group-name>.secondary{font-size:11px!important;color:#9aafa6!important}
+@media(max-width:740px){#gameplayersView .roster-list{grid-template-columns:1fr;gap:6px}#gameplayersView .roster-list>.playergroup{padding:7px 10px!important}}
 </style><style id="propedge29-compact">.side-grid{gap:7px!important}.side-quote{min-height:0!important;padding:10px!important;gap:4px!important}.side-quote .strength-wheel,.side-quote svg{width:48px!important;height:48px!important}.paired-line{padding:10px!important}.paired-heading{margin-bottom:7px!important}.market-panel>summary{padding:12px!important}.recent-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:10px;color:#b8cbd8;font-size:12px}.recent-summary span{background:#14293a;border-radius:7px;padding:7px}.recent-summary b{color:#80e7bc}.recent-results{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-top:8px;color:#a9c0d1}.recent-results small{width:100%}.recent-chip{border:1px solid #37566a;border-radius:7px;padding:5px 9px;color:#f2f7fc;font-weight:700;font-size:12px}.recent-note{display:block;margin-top:7px;color:#90a6b7;font-size:10px;line-height:1.4}.side-quote small{font-size:11px!important;line-height:1.3}.side-quote>span{font-size:12px!important}@media(max-width:430px){.side-quote{padding:8px!important}.paired-heading b{font-size:15px}}</style><style id="propedge30-charts">
 /* Keep score centered, readable and unobstructed on small iPhones. */
 .side-quote .wheel{width:62px!important;height:62px!important;padding:6px!important;margin:5px 0 0!important;align-self:flex-start;box-sizing:border-box;overflow:hidden}
@@ -737,16 +759,16 @@ function canonicalDisplayName(name){
  const cleaned=String(name||'').replace(/\s*\((?:ATL|BOS|BKN|CHA|CHI|CLE|DAL|DEN|DET|GSW|HOU|IND|LAC|LAL|MEM|MIA|MIL|MIN|NOP|NYK|OKC|ORL|PHI|PHX|POR|SAC|SAS|TOR|UTA|WAS)\)$/i,'').trim();
  const lower=cleaned.toLowerCase().replace(/[’‘\u02bc'`´]/g,'');return ({'airious bailey':'Ace Bailey','airious ace bailey':'Ace Bailey','deaaron fox':"De'Aaron Fox"})[lower]||cleaned;
 }
-function playerIdentityKey(row){return String(row.player_key||canonicalDisplayName(row.player)).toLowerCase().replace(/[’‘\u02bc'`´]/g,'').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim()}
+function playerIdentityKey(row){return canonicalDisplayName(row.player).toLowerCase().replace(/[^a-z0-9]/g,'')}
 function showGamePlayers(g){
  selectedMatch=g;const container=$('gamePlayers');$('gamePlayersTitle').textContent=g.away.name+' @ '+g.home.name;
  const a=teamCode(g.away.name,g.away.abbreviation),b=teamCode(g.home.name,g.home.abbreviation);
  const rows=(board.game_props||[]).filter(s=>{const p=String(s.game||'').split(/\s+@\s+/);return p.length===2&&teamCode(p[0])===a&&teamCode(p[1])===b});
  const coverage=(board.game_coverage||[]).find(c=>{const p=String(c.game||'').split(/\s+@\s+/);return p.length===2&&teamCode(p[0])===a&&teamCode(p[1])===b});
- const coverageHTML=coverage?`<details class="coverage-disclosure"><summary><span class="coverage-title">◉ SPORTSBOOK COVERAGE</span><span class="coverage-count">${coverage.sportsbook_count} books · ${coverage.players_with_lines} players</span><span class="coverage-chevron">⌄</span></summary><div class="coverage-details"><p>${coverage.captured_directions} captured directions · ${coverage.players_without_model} players without matching models.</p><p><b>Sources:</b> ${escapeHTML((coverage.sportsbooks||[]).join(' · ')||'None returned')}</p><p>Only returned standard main lines are displayed; this is not a complete roster. ${coverage.odds_request_succeeded?'Odds request succeeded.':'Odds request failed or incomplete.'}</p></div></details>`:'';
+ const coverageHTML=coverage?`<details class="coverage-disclosure"><summary><span class="coverage-title">◉ LINE COVERAGE</span><span class="coverage-count">${coverage.sportsbook_count} books · ${coverage.players_with_lines} players</span><span class="coverage-chevron">⌄</span></summary><div class="coverage-details"><p>${coverage.captured_directions} captured directions · ${coverage.players_without_model} players without matching models.</p><p><b>Sources:</b> ${escapeHTML((coverage.sportsbooks||[]).join(' · ')||'None returned')}</p><p>Only returned standard main lines are displayed; this is not a complete roster. ${coverage.odds_request_succeeded?'Odds request succeeded.':'Odds request failed or incomplete.'}</p></div></details>`:'';
  if(!rows.length){container.innerHTML=coverageHTML+'<p class="empty">No captured prop lines for this game in the current odds refresh. This does not prove no props exist.</p>'}
  else {const groups=new Map();rows.forEach(r=>{const key=playerIdentityKey(r);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
- container.innerHTML=coverageHTML+`<div class="roster-dashboard"><div class="roster-eyebrow">PLAYER MARKETS</div><div class="roster-heading"><strong>${groups.size} Players</strong><span>${rows.filter(r=>r.qualified).length} qualifying sides</span></div><div class="roster-subline">${rows.length} captured directions · Research inventory, not guaranteed current offerings</div><input class="roster-search" id="rosterSearch" type="search" placeholder="Search players…" aria-label="Search players" autocomplete="off"></div><div class="roster-list">`+[...groups].sort((x,y)=>x[0].localeCompare(y[0])).map(([key,props])=>{
+ container.innerHTML=coverageHTML+`<div class="roster-dashboard"><div class="roster-eyebrow">MATCHUP PLAYER PROPS</div><div class="roster-heading"><strong>${groups.size} Players</strong><span>${rows.filter(r=>r.qualified).length} model signals</span></div><div class="roster-subline">${rows.length} captured directions · Research inventory, not guaranteed current offerings</div><input class="roster-search" id="rosterSearch" type="search" placeholder="Search players…" aria-label="Search players" autocomplete="off"></div><div class="roster-list">`+[...groups].sort((x,y)=>x[0].localeCompare(y[0])).map(([key,props])=>{
  const name=canonicalDisplayName(props.find(p=>p.model_status==='matched')?.player||props[0].player);
  const displayProps=props.map(p=>({...p,player:name}));
  const markets=new Map();displayProps.forEach(r=>{if(!markets.has(r.market))markets.set(r.market,[]);markets.get(r.market).push(r)});
