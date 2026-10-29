@@ -8,6 +8,8 @@ on:
     paths:
       - 'sync_final_boxscores.py'
       - 'track_model.py'
+      - 'minutes_shadow_capture.py'
+      - 'evaluate_nba_model.py'
       - 'test_nba_identity_guard.py'
       - 'evaluate_nba_model.py'
       - '.github/workflows/propedge_nba_gamelog_sync.yml'
