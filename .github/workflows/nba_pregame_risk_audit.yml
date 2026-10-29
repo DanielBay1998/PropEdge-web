@@ -1,0 +1,28 @@
+name: NBA pregame minutes risk audit
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'nba_pregame_risk_audit.py'
+  schedule:
+    - cron: '41 12 * * *'
+permissions:
+  contents: write
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run pregame-only minutes diagnostics
+        run: |
+          python -m py_compile nba_pregame_risk_audit.py
+          python nba_pregame_risk_audit.py
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/nba_pregame_risk_audit.json
+          git diff --cached --quiet || (git commit -m "Update NBA pregame minutes risk research" && git push)
