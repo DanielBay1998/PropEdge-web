@@ -8,6 +8,8 @@ ROOT=Path(__file__).resolve().parent
 def run():
     history=load([str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),
                   str(ROOT/"data/nba_2026_27.csv")])
+    opponent_games=load_team_games([str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),
+                                    str(ROOT/"data/nba_2026_27.csv")])
     tracking=json.loads((ROOT/"data/model_tracking.json").read_text())
     totals={name:{"n":0,"wins":0,"losses":0,"pushes":0,"absolute_error":0.0}
             for name in ("primary","challenger","blend")}
