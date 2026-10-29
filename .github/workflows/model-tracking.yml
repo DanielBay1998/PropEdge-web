@@ -1,13 +1,6 @@
 name: Model performance tracking
 on:
-  schedule:
-    - cron: '*/30 * * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/model-tracking.yml'
-      - 'track_model.py'
 permissions:
   contents: write
 concurrency:
