@@ -1,0 +1,152 @@
+{
+  "status": "RETROSPECTIVE_RESEARCH_ONLY",
+  "matched": 252,
+  "dates": [
+    "20261028"
+  ],
+  "excluded": {
+    "identity_review": 36,
+    "pending": 191,
+    "history_or_game_missing": 6
+  },
+  "overall": {
+    "consensus": {
+      "matched": 252,
+      "eligible": 252,
+      "wins": 130,
+      "losses": 122,
+      "pushes": 0,
+      "roi_pct": -8.55,
+      "mae": 3.889,
+      "large_losses_over_5": 27
+    },
+    "adjusted": {
+      "matched": 252,
+      "eligible": 251,
+      "wins": 130,
+      "losses": 121,
+      "pushes": 0,
+      "roi_pct": -8.18,
+      "mae": 3.8909,
+      "large_losses_over_5": 27
+    }
+  },
+  "markets": {
+    "PTS": {
+      "consensus": {
+        "matched": 77,
+        "eligible": 77,
+        "wins": 32,
+        "losses": 45,
+        "pushes": 0,
+        "roi_pct": -22.6,
+        "mae": 5.639,
+        "large_losses_over_5": 14
+      },
+      "adjusted": {
+        "matched": 77,
+        "eligible": 76,
+        "wins": 32,
+        "losses": 44,
+        "pushes": 0,
+        "roi_pct": -21.58,
+        "mae": 5.6567,
+        "large_losses_over_5": 14
+      }
+    },
+    "REB": {
+      "consensus": {
+        "matched": 61,
+        "eligible": 61,
+        "wins": 34,
+        "losses": 27,
+        "pushes": 0,
+        "roi_pct": -3.32,
+        "mae": 2.4298,
+        "large_losses_over_5": 3
+      },
+      "adjusted": {
+        "matched": 61,
+        "eligible": 61,
+        "wins": 34,
+        "losses": 27,
+        "pushes": 0,
+        "roi_pct": -3.32,
+        "mae": 2.4148,
+        "large_losses_over_5": 3
+      }
+    },
+    "AST": {
+      "consensus": {
+        "matched": 41,
+        "eligible": 41,
+        "wins": 26,
+        "losses": 15,
+        "pushes": 0,
+        "roi_pct": 8.8,
+        "mae": 1.7177,
+        "large_losses_over_5": 0
+      },
+      "adjusted": {
+        "matched": 41,
+        "eligible": 41,
+        "wins": 26,
+        "losses": 15,
+        "pushes": 0,
+        "roi_pct": 8.8,
+        "mae": 1.7191,
+        "large_losses_over_5": 0
+      }
+    },
+    "3PM": {
+      "consensus": {
+        "matched": 29,
+        "eligible": 29,
+        "wins": 12,
+        "losses": 17,
+        "pushes": 0,
+        "roi_pct": -34.43,
+        "mae": 1.3582,
+        "large_losses_over_5": 0
+      },
+      "adjusted": {
+        "matched": 29,
+        "eligible": 29,
+        "wins": 12,
+        "losses": 17,
+        "pushes": 0,
+        "roi_pct": -34.43,
+        "mae": 1.3583,
+        "large_losses_over_5": 0
+      }
+    },
+    "PRA": {
+      "consensus": {
+        "matched": 44,
+        "eligible": 44,
+        "wins": 26,
+        "losses": 18,
+        "pushes": 0,
+        "roi_pct": 9.68,
+        "mae": 6.5405,
+        "large_losses_over_5": 10
+      },
+      "adjusted": {
+        "matched": 44,
+        "eligible": 44,
+        "wins": 26,
+        "losses": 18,
+        "pushes": 0,
+        "roi_pct": 9.68,
+        "mae": 6.5401,
+        "large_losses_over_5": 10
+      }
+    }
+  },
+  "limitations": [
+    "Historical game matching does not independently verify captured matchup identity.",
+    "V4 coefficients overlap captured dates; results are not independent holdout.",
+    "Only original captured sides and odds are scored.",
+    "No opposite-side hypothetical bets or production changes."
+  ]
+}
