@@ -2,7 +2,6 @@
 import datetime,math,statistics
 from collections import defaultdict
 from nfl_model import history,canon,FIELDS
-from nfl import espn
 def profile(player,market=None):
  rows=[r for r in history() if r["key"]==canon(player)]
  if not rows:return {"player":player,"found":False}
@@ -23,6 +22,7 @@ def athlete_photo(player_id):
  if not player_id:return None
  return "https://a.espncdn.com/i/headshots/nfl/players/full/"+str(player_id)+".png"
 def team_directory():
+ from nfl import espn
  data=espn("teams?limit=40")
  out={}
  for sport in data.get("sports",[]):
