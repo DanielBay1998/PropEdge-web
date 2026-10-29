@@ -31,7 +31,10 @@ def main():
    name=str(p.get("displayName") or p.get("fullName") or "").strip().casefold()
    position=p.get("position") or {}
    pos=(position.get("abbreviation","") if isinstance(position,dict) else str(position)).upper()
-   if pos in ("G","F","G-F","F-G","F-C","C-F"):continue
+   if pos=="G":pos="SG"
+   elif pos=="F":pos="SF"
+   elif pos in ("G-F","F-G"):pos="SF"
+   elif pos in ("F-C","C-F"):pos="PF"
    if name and pos in ("PG","SG","SF","PF","C"):
     positions[name]=pos;roster_count+=1
  print("Roster coverage",successful_teams,"teams,",len(positions),"players")
@@ -93,7 +96,7 @@ def main():
  "season":"2026-27","historical_season":"2025-26",
  "blend_method":"20 prior equivalent player appearances per position and stat, with all verified current-season appearances; current weight rises automatically",
  "metric":"opposing player boxscore stat per appearance, grouped by listed roster position",
- "warning":"Historical player positions use current roster assignments; traded players and small samples can distort allowances. Not defender assignments or per-possession rating.",
+ "warning":"Generic ESPN roster G/F roles mapped to SG/SF and hybrid roles to SF/PF as positional proxies. Historical player positions use current roster assignments; traded players and small samples can distort allowances. Not defender assignments or per-possession rating.",
  "fetched_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"teams":out,"position_players":len(positions),"player_positions":positions}
  path=ROOT/"data"/"nba_dvp_2026_27.json";path.write_text(json.dumps(result,indent=2)+"\n")
  print("DvP teams",len(out),"roster players",len(positions))
