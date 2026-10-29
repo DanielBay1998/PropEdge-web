@@ -123,7 +123,7 @@ def odds_board():
   except (TypeError,ValueError):continue
   if dt.tzinfo is None:continue
   if now<dt<now+datetime.timedelta(days=7):upcoming.append(e)
- for event in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:16]:
+ for event in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:4]:
   try:response=client.get_odds("americanfootball_nfl",event_id=event["id"],markets=list(MARKETS))
   except Exception:continue
   if not isinstance(response,dict):continue
