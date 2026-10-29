@@ -550,6 +550,32 @@ def refresh():
                 analysis_cache[k]=temp["analysis"]
             row["analysis"]=analysis_cache[k]
         for signal in signals:add_game_analysis(signal,logs)
+        # Current-season sanity guard: do not promote large edges that rely on
+        # materially higher production than recent observed games.
+        # This is a conservative data-quality screen, NOT calibrated EV.
+        screened=[]
+        rejected=0
+        for signal in signals:
+            rows=[g for g in logs.get(canonical_player(signal.get("player")),[])
+                  if g.get("season")=="current"]
+            rows=sorted(rows,key=lambda g:g.get("date",""),reverse=True)[:8]
+            market=signal.get("market")
+            if len(rows)>=4 and market in ("PTS","REB","AST","3PM","PRA"):
+                values=[sum(g[k] for k in ("PTS","REB","AST")) if market=="PRA"
+                        else g.get(market) for g in rows]
+                if all(v is not None for v in values):
+                    avg=sum(values)/len(values)
+                    signal["current_season_avg"]=round(avg,2)
+                    signal["current_season_sample"]=len(values)
+                    proj=number(signal.get("projection"))
+                    if proj is not None and proj>avg*1.4+2 and signal.get("side")=="OVER":
+                        signal["qualification_reason"]="Projection substantially exceeds observed current-season production"
+                        rejected+=1
+                        continue
+            screened.append(signal)
+        signals=screened
+        base["current_season_sanity_filtered"]=rejected
+        base["current_season_sanity_mode"]="DESCRIPTIVE_GUARD_NOT_BACKTESTED"
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
