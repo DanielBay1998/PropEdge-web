@@ -29,7 +29,7 @@ jobs:
            def __init__(self,key):pass
            def get_events(self,sport):return [{'id':'future','commence_time':(datetime.datetime.now(datetime.timezone.utc)+datetime.timedelta(days=2)).isoformat(),'home_team':'Denver Broncos','away_team':'Kansas City Chiefs'}]
            def get_odds(self,*a,**kw):
-            return {'bookmakers':[{'key':name,'markets':[{'key':'player_rushing_yards','outcomes':[{'name':'Over','description':'Kenneth Walker III','point':84.5,'price':-110}]}]} for name in ['pinnacle','betrivers']]}
+            return {'bookmakers':[{'key':name,'markets':[{'key':'player_rush_yds','outcomes':[{'name':'Over','description':'Kenneth Walker III','point':84.5,'price':-110}]}]} for name in ['pinnacle','betrivers']]}
           sys.modules['propline']=types.SimpleNamespace(PropLine=FakePropLine)
           os.environ['PROPLINE_API_KEY']='fixture'
           try:
