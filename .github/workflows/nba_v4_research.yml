@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - nba_v4_baseline_audit.py
+      - nba_v4_duplicate_audit.py
+      - nba_v4_calibration_audit.py
       - '.github/workflows/nba_v4_research.yml'
 jobs:
   audit:
@@ -17,10 +19,17 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile research script
-        run: python -m py_compile nba_v4_baseline_audit.py nba_challenger_model.py
+        run: python -m py_compile nba_v4_baseline_audit.py nba_v4_duplicate_audit.py nba_v4_calibration_audit.py nba_challenger_model.py
       - name: Data quality and chronological ridge research
         run: python nba_v4_baseline_audit.py
+      - name: Investigate duplicate player dates
+        run: python nba_v4_duplicate_audit.py
+      - name: Calibrate validation residual intervals and test coverage
+        run: python nba_v4_calibration_audit.py
       - uses: actions/upload-artifact@v4
         with:
           name: nba-v4-research-audit
-          path: reports/nba_v4_baseline_audit.json
+          path: |
+            reports/nba_v4_baseline_audit.json
+            reports/nba_v4_duplicate_audit.json
+            reports/nba_v4_calibration_audit.json
