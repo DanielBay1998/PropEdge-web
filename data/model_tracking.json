@@ -43,9 +43,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.598851+00:00"
   },
   {
     "id": "524541|acebailey|3PM|OVER|1.5",
@@ -75,9 +75,9 @@
     "book": "betmgm",
     "odds": -165,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T02:22:45.598868+00:00"
   },
   {
     "id": "524520|austinreaves|AST|UNDER|7.5",
@@ -171,9 +171,9 @@
     "book": "betmgm",
     "odds": -115,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 9.0,
+    "graded_at": "2026-10-29T02:22:45.598882+00:00"
   },
   {
     "id": "524539|trejones|PTS|OVER|8.5",
@@ -235,9 +235,9 @@
     "book": "betmgm",
     "odds": -120,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T02:22:45.598892+00:00"
   },
   {
     "id": "524539|landryshamet|3PM|OVER|1.5",
@@ -267,9 +267,9 @@
     "book": "betmgm",
     "odds": -110,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T02:22:45.598898+00:00"
   },
   {
     "id": "524541|acebailey|REB|OVER|5.5",
@@ -411,9 +411,9 @@
     "book": "betmgm",
     "odds": -135,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T02:22:45.598916+00:00"
   },
   {
     "id": "524519|danielgafford|REB|UNDER|7.5",
@@ -475,9 +475,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T02:22:45.598925+00:00"
   },
   {
     "id": "524520|jakelaravia|3PM|UNDER|1.5",
@@ -539,9 +539,9 @@
     "book": "betrivers",
     "odds": -125,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T02:22:45.598935+00:00"
   },
   {
     "id": "524539|matasbuzelis|PTS|OVER|13.5",
@@ -587,9 +587,9 @@
     "book": "betmgm",
     "odds": -110,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T02:22:45.598943+00:00"
   },
   {
     "id": "524538|rudygobert|REB|OVER|11.5",
@@ -635,9 +635,9 @@
     "book": "betrivers",
     "odds": -132,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 25.0,
+    "graded_at": "2026-10-29T02:22:45.598951+00:00"
   },
   {
     "id": "524540|jaimejaquez|3PM|OVER|0.5",
@@ -683,9 +683,9 @@
     "book": "betmgm",
     "odds": 105,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T02:22:45.598958+00:00"
   },
   {
     "id": "524539|milesmcbride|3PM|OVER|1.5",
@@ -715,9 +715,9 @@
     "book": "betmgm",
     "odds": -140,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T02:22:45.598964+00:00"
   },
   {
     "id": "524537|jamalmurray|REB|OVER|4.5",
@@ -731,9 +731,9 @@
     "book": "betmgm",
     "odds": 100,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.598968+00:00"
   },
   {
     "id": "524540|tarieason|PTS|UNDER|12.5",
@@ -907,9 +907,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T02:22:45.598989+00:00"
   },
   {
     "id": "524537|treymurphyiii|3PM|OVER|2.5",
@@ -923,9 +923,9 @@
     "book": "betrivers",
     "odds": 107,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T02:22:45.598993+00:00"
   },
   {
     "id": "524538|lameloball|REB|UNDER|4.5",
@@ -971,9 +971,9 @@
     "book": "betrivers",
     "odds": -152,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T02:22:45.599000+00:00"
   },
   {
     "id": "524520|brooklopez|REB|OVER|4.5",
@@ -1211,9 +1211,9 @@
     "book": "betrivers",
     "odds": -137,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.599029+00:00"
   },
   {
     "id": "524541|acebailey|PRA|OVER|21.5",
@@ -1339,9 +1339,9 @@
     "book": "betrivers",
     "odds": -106,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T02:22:45.599044+00:00"
   },
   {
     "id": "524537|jeremiahfears|REB|OVER|2.5",
@@ -1355,9 +1355,9 @@
     "book": "betmgm",
     "odds": -160,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T02:22:45.599048+00:00"
   },
   {
     "id": "524537|treymurphyiii|AST|OVER|2.5",
@@ -1371,9 +1371,9 @@
     "book": "betrivers",
     "odds": -155,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 3.0,
+    "graded_at": "2026-10-29T02:22:45.599052+00:00"
   },
   {
     "id": "524520|walkerkessler|AST|OVER|1.5",
@@ -1483,9 +1483,9 @@
     "book": "betmgm",
     "odds": -150,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 12.0,
+    "graded_at": "2026-10-29T02:22:45.599066+00:00"
   },
   {
     "id": "524539|mikalbridges|PRA|UNDER|18.5",
@@ -1611,9 +1611,9 @@
     "book": "betrivers",
     "odds": -108,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T02:22:45.599085+00:00"
   },
   {
     "id": "524520|kobesanders|PTS|UNDER|11.5",
@@ -1771,9 +1771,9 @@
     "book": "betrivers",
     "odds": -105,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 13.0,
+    "graded_at": "2026-10-29T02:22:45.599106+00:00"
   },
   {
     "id": "524539|jalenbrunson|PRA|UNDER|36.5",
@@ -1819,9 +1819,9 @@
     "book": "dabble",
     "odds": -108,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T02:22:45.599113+00:00"
   },
   {
     "id": "524538|alhorford|REB|OVER|3.5",
@@ -2219,9 +2219,9 @@
     "book": "betrivers",
     "odds": -106,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 12.0,
+    "graded_at": "2026-10-29T02:22:45.599157+00:00"
   },
   {
     "id": "524539|trejones|PRA|OVER|14.5",
@@ -2315,9 +2315,9 @@
     "book": "betrivers",
     "odds": -143,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 8.0,
+    "graded_at": "2026-10-29T02:22:45.599169+00:00"
   },
   {
     "id": "524541|keldonjohnson|PTS|OVER|10.5",
@@ -2363,9 +2363,9 @@
     "book": "betrivers",
     "odds": -109,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 24.0,
+    "graded_at": "2026-10-29T02:22:45.599177+00:00"
   },
   {
     "id": "524519|jaredmccain|PTS|UNDER|17.5",
@@ -2395,9 +2395,9 @@
     "book": "bovada",
     "odds": -120,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T02:22:45.599183+00:00"
   },
   {
     "id": "524520|quentingrimes|REB|UNDER|4.5",
@@ -2443,9 +2443,9 @@
     "book": "dst_propbuilder",
     "odds": -149,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 5.0,
+    "graded_at": "2026-10-29T02:22:45.599190+00:00"
   },
   {
     "id": "524538|jadenmcdaniels|REB|UNDER|5.5",
@@ -2651,9 +2651,9 @@
     "book": "bovada",
     "odds": -115,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 21.0,
+    "graded_at": "2026-10-29T02:22:45.599214+00:00"
   },
   {
     "id": "524520|krisdunn|PRA|UNDER|17.5",
@@ -2843,9 +2843,9 @@
     "book": "betrivers",
     "odds": -230,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.599235+00:00"
   },
   {
     "id": "524537|saddiqbey|PRA|OVER|16.5",
@@ -2859,9 +2859,9 @@
     "book": "bovada",
     "odds": -125,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 12.0,
+    "graded_at": "2026-10-29T02:22:45.599240+00:00"
   },
   {
     "id": "524520|kobesanders|PRA|UNDER|17.5",
@@ -2907,9 +2907,9 @@
     "book": "dabble",
     "odds": 126,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.599247+00:00"
   },
   {
     "id": "524519|ajaymitchell|PRA|UNDER|26.5",
@@ -3003,9 +3003,9 @@
     "book": "fanatics",
     "odds": -120,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 24.0,
+    "graded_at": "2026-10-29T02:22:45.599259+00:00"
   },
   {
     "id": "524520|jakelaravia|REB|UNDER|4.5",
@@ -3163,9 +3163,9 @@
     "book": "dst_propbuilder",
     "odds": -125,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T02:22:45.599278+00:00"
   },
   {
     "id": "524540|kasparasjakucionis|PTS|OVER|6.5",
@@ -3339,9 +3339,9 @@
     "book": "kalshi",
     "odds": -144,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 1.0,
+    "graded_at": "2026-10-29T02:22:45.599299+00:00"
   },
   {
     "id": "524519|jaredmccain|3PM|UNDER|3.5",
@@ -3451,9 +3451,9 @@
     "book": "kalshi",
     "odds": -233,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T02:22:45.599313+00:00"
   },
   {
     "id": "524520|isaiahjackson|PTS|UNDER|10.5",
@@ -3483,9 +3483,9 @@
     "book": "dabble",
     "odds": -132,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 6.0,
+    "graded_at": "2026-10-29T02:22:45.599319+00:00"
   },
   {
     "id": "524540|kasparasjakucionis|REB|UNDER|3.5",
@@ -3755,9 +3755,9 @@
     "book": "sportzino",
     "odds": -165,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 0.0,
+    "graded_at": "2026-10-29T02:22:45.599349+00:00"
   },
   {
     "id": "524541|stephoncastle|3PM|OVER|1.5",
@@ -3867,9 +3867,9 @@
     "book": "dabble",
     "odds": -123,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "win",
+    "actual": 4.0,
+    "graded_at": "2026-10-29T02:22:45.599366+00:00"
   },
   {
     "id": "525120|toumanicamara|3PM|OVER|2.5",
@@ -4091,9 +4091,9 @@
     "book": "dabble",
     "odds": -105,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 2.0,
+    "graded_at": "2026-10-29T02:22:45.599392+00:00"
   },
   {
     "id": "524540|kevindurant|AST|OVER|3.5",
@@ -4347,9 +4347,9 @@
     "book": "betrivers",
     "odds": 100,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 18.0,
+    "graded_at": "2026-10-29T02:22:45.599423+00:00"
   },
   {
     "id": "524538|deanthonymelton|PTS|OVER|9.5",
@@ -4587,9 +4587,9 @@
     "book": "betrivers",
     "odds": -127,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 10.0,
+    "graded_at": "2026-10-29T02:22:45.599453+00:00"
   },
   {
     "id": "524539|joshhart|REB|UNDER|8.5",
@@ -4619,9 +4619,9 @@
     "book": "betmgm",
     "odds": -105,
     "game": "Denver Nuggets @ New Orleans Pelicans",
-    "status": "pending",
-    "actual": null,
-    "graded_at": null
+    "status": "loss",
+    "actual": 11.0,
+    "graded_at": "2026-10-29T02:22:45.599458+00:00"
   },
   {
     "id": "524538|lameloball|PTS|UNDER|21.5",
