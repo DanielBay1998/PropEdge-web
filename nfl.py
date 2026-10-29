@@ -168,7 +168,7 @@ def odds_board():
    volatility=advanced.get("last5_std") if isinstance(advanced,dict) else None
    plausible=bool(volatility is not None and isinstance(volatility,(int,float)) and volatility>0 and abs(edge or 0)<=max(10.0,1.5*volatility))
    record["pick_eligible"]=bool(len(conventional_books)>=2 and plausible)
-   record["pick_exclusion_reason"]=("Fewer than two conventional sportsbooks" if len(conventional_books)<2 else "Projection gap exceeds volatility review threshold" if not plausible else None)
+   record["pick_exclusion_reason"]=("Player team does not match scheduled game" if not team_verified else "Fewer than two conventional sportsbooks" if len(conventional_books)<2 else "Projection gap exceeds volatility review threshold" if not plausible else None)
    if validated and record["pick_eligible"] and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
     if available:
