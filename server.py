@@ -576,6 +576,28 @@ def refresh():
         signals=screened
         base["current_season_sanity_filtered"]=rejected
         base["current_season_sanity_mode"]="DESCRIPTIVE_GUARD_NOT_BACKTESTED"
+        # For very small current-season samples, flag aggressive projections
+        # rather than assuming the historical baseline still reflects the role.
+        conservative=[]
+        role_rejections=0
+        for signal in signals:
+            current=sorted((g for g in logs.get(canonical_player(signal.get("player")),[])
+                            if g.get("season")=="current"),
+                           key=lambda g:g.get("date",""),reverse=True)[:8]
+            if len(current)>=3 and signal.get("side")=="OVER":
+                market=signal.get("market")
+                if market in ("PTS","REB","AST","3PM","PRA"):
+                    actual=[sum(g[k] for k in ("PTS","REB","AST")) if market=="PRA"
+                            else g.get(market) for g in current]
+                    if all(v is not None for v in actual):
+                        recent_mean=sum(actual)/len(actual)
+                        projection=number(signal.get("projection"))
+                        if projection is not None and projection>recent_mean*1.35+0.5:
+                            role_rejections+=1
+                            continue
+            conservative.append(signal)
+        signals=conservative
+        base["small_sample_role_filtered"]=role_rejections
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
