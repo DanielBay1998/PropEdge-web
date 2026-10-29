@@ -95,6 +95,7 @@ def odds_board():
  except Exception as e:
   base["error"]="NFL provider events unavailable: "+type(e).__name__
   return base
+ if isinstance(events,dict):events=events.get("events") or events.get("data") or []
  if not isinstance(events,list):
   base["error"]="NFL provider returned unexpected event format"
   return base
@@ -116,7 +117,7 @@ def odds_board():
    if not bk or bk in ("prizepicks","underdog","pick6"):continue
    for market in book.get("markets") or []:
     code=MARKETS.get(market.get("key"))
-    if not code or market.get("line_type")!="main":continue
+    if not code or market.get("line_type") not in (None,"main"):continue
     if str(market.get("period") or "").lower() not in ("","full","full_game","game"):continue
     for o in market.get("outcomes") or []:
      side=str(o.get("name") or "").upper()
