@@ -15,9 +15,10 @@ on:
       - static/index.html
       - nba_challenger_model.py
       - evaluate_capture_history.py
+      - backfill_historical_nba.py
       - data/model_tracking.json
       - data/nba_2026_27.csv
-      - data/propedge_historical_2025_26_minutes.csv
+      - 'data/propedge_historical_*_minutes.csv'
 jobs:
   compare:
     runs-on: ubuntu-latest
