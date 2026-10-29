@@ -1,0 +1,148 @@
+{
+  "status": "RESEARCH_ONLY_PENDING_MORE_GRADED_DATES",
+  "total_complete_pregame_snapshots": 55,
+  "graded_eligible": 0,
+  "excluded": {
+    "pending": 55
+  },
+  "points_graded": 0,
+  "points_capture_dates": [],
+  "overall": {
+    "primary": {
+      "n": 0
+    },
+    "challenger": {
+      "n": 0
+    },
+    "v4": {
+      "n": 0
+    },
+    "consensus": {
+      "n": 0
+    }
+  },
+  "by_market": {
+    "PTS": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    },
+    "REB": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    },
+    "AST": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    },
+    "3PM": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    },
+    "PRA": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    }
+  },
+  "captured_bet_outcomes": {
+    "n": 0,
+    "wins": 0,
+    "losses": 0,
+    "pushes": 0,
+    "losses_within_0_5": 0,
+    "losses_within_1": 0,
+    "losses_within_2": 0,
+    "losses_over_5": 0,
+    "mean_loss_margin": null,
+    "captured_side_flat_stake_roi_pct": null,
+    "roi_note": "ROI of originally captured bets only; not ROI of hypothetical consensus selections"
+  },
+  "points_volatility_exploratory": {
+    "median_cutoff": null,
+    "high": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    },
+    "low": {
+      "primary": {
+        "n": 0
+      },
+      "challenger": {
+        "n": 0
+      },
+      "v4": {
+        "n": 0
+      },
+      "consensus": {
+        "n": 0
+      }
+    }
+  },
+  "holdout_ready": false,
+  "limitations": [
+    "Only forecasts stored before games count; older retrospective reconstructions excluded.",
+    "A minimum of 20 independent capture dates is required before chronological calibration/holdout claims.",
+    "Volatility median calculated on graded data is exploratory, not an out-of-sample threshold.",
+    "Captured-side ROI does not establish consensus-selected betting profitability.",
+    "No production projection, confidence score, or betting filter changes."
+  ]
+}
