@@ -13,12 +13,12 @@ jobs:
       - name: Inspect live API and reproduce NFL board with provider fixture
         run: |
           python - <<'PY'
-          import urllib.request,urllib.error,time,json,os,sys,types,traceback
+          import urllib.request,urllib.error,time,json,os,sys,types,traceback,datetime
           for path in ['/healthz','/api/nfl/board']:
            try:
             start=time.monotonic()
             with urllib.request.urlopen('https://propedge-custom.onrender.com'+path,timeout=50) as r:
-             body=r.read(1000000)
+             body=r.read()
              print('LIVE',path,r.status,'seconds',round(time.monotonic()-start,2),'bytes',len(body),flush=True)
              if path.endswith('/board'):
               data=json.loads(body)
