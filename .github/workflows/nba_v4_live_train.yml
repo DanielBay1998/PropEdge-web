@@ -1,5 +1,9 @@
 name: Train NBA V4 live coefficients
 on:
+  push:
+    paths:
+      - 'nba_v4_live_train.py'
+      - '.github/workflows/nba_v4_live_train.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 11 * * *'
