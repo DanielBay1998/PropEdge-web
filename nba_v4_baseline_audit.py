@@ -5,7 +5,8 @@ Uses standard library only and strictly prior player games.
 import json,math,statistics
 from collections import Counter
 from pathlib import Path
-from nba_challenger_model import load,MARKETS,predict
+from nba_challenger_model import MARKETS,predict
+from nba_v4_clean_history import load
 ROOT=Path(__file__).resolve().parent
 PATHS=[str(ROOT/"data"/f"propedge_historical_{s}_minutes.csv") for s in ("2023_24","2024_25","2025_26")]+[str(ROOT/"data/nba_2026_27.csv")]
 
