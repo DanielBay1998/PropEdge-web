@@ -360,21 +360,42 @@ def refresh():
         except Exception as challenger_error:
             base["challenger_status"]="SHADOW_UNAVAILABLE"
             base["challenger_error"]=type(challenger_error).__name__
-        # Research consensus: only independently available live estimates are used.
-        # V4 remains an offline audit and must not be represented as a live forecast.
+        # V4 coefficients are trained offline from completed games only.
+        # Missing/stale coefficients are never fabricated or presented as V4.
+        v4_coefficients={}
+        v4_meta={}
+        try:
+            from nba_v4_baseline_audit import features as v4_features, estimate as v4_estimate
+            from nba_challenger_model import load as v4_load
+            v4_path=ROOT/"data/nba_v4_live_coefficients.json"
+            v4_meta=json.loads(v4_path.read_text()) if v4_path.exists() else {}
+            v4_coefficients=v4_meta.get("markets",{})
+            v4_histories=v4_load([str(ROOT/"data"/f"propedge_historical_{season}_minutes.csv") for season in ("2023_24","2024_25","2025_26")]+[str(ROOT/"data/nba_2026_27.csv")]) if v4_coefficients else {}
+        except (OSError,ValueError,ImportError,KeyError,TypeError) as v4_error:
+            base["v4_error"]=type(v4_error).__name__
+            v4_coefficients={}
+            v4_histories={}
         for signal in signals:
             primary=number(signal.get("projection"))
             challenger=number(signal.get("challenger_projection"))
-            signal["consensus_components"]={"primary":primary,"challenger":challenger,"v4":None}
-            if primary is not None and challenger is not None and primary>=0 and challenger>=0:
-                signal["consensus_projection"]=round(0.5*primary+0.5*challenger,2)
-                signal["consensus_method"]="TWO_MODEL_EQUAL_WEIGHT_RESEARCH"
-                signal["consensus_model_count"]=2
-            else:
-                signal["consensus_projection"]=primary
-                signal["consensus_method"]="PRIMARY_ONLY_FALLBACK"
-                signal["consensus_model_count"]=1
-        base["consensus_status"]="RESEARCH_ONLY_V4_NOT_LIVE"
+            v4=None
+            market=signal.get("market")
+            history=v4_histories.get(norm(signal.get("player")),[])
+            params=v4_coefficients.get(market)
+            if params and len(history)>=8:
+                try:
+                    v4=v4_estimate((params["weights"],params["means"],params["scales"]),v4_features(history,market))
+                    if not math.isfinite(v4):v4=None
+                except (KeyError,ValueError,TypeError,ZeroDivisionError):
+                    v4=None
+            signal["v4_projection"]=round(v4,2) if v4 is not None else None
+            signal["consensus_components"]={"primary":primary,"challenger":challenger,"v4":signal["v4_projection"]}
+            valid=[x for x in (primary,challenger,v4) if x is not None and math.isfinite(x) and x>=0]
+            signal["consensus_projection"]=round(sum(valid)/len(valid),2) if valid else None
+            signal["consensus_model_count"]=len(valid)
+            signal["consensus_method"]="THREE_MODEL_EQUAL_WEIGHT_RESEARCH" if len(valid)==3 else "PARTIAL_MODEL_RESEARCH"
+        base["consensus_status"]="RESEARCH_ONLY_NOT_PRODUCTION"
+        base["v4_trained_at"]=v4_meta.get("as_of_utc")
         # Paired retrospective comparison (230 graded picks, one capture date)
         # found primary MAE 3.844, challenger 4.174, blend 3.980.
         # Keep the better-performing primary as the production projection.
