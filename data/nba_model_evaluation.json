@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T16:54:03.855516+00:00",
+  "generated_at": "2026-10-29T16:54:25.263135+00:00",
   "source": "saved pregame predictions with settled outcomes",
   "production_unchanged": true,
   "total_records": 419,
@@ -470,5 +470,13 @@
     },
     "validated": false,
     "limitations": "Overlapping players/games and a short historical period; forward holdout required before deployment."
+  },
+  "minutes_shadow": {
+    "status": "CAPTURE_TIME_PAIRED_AUDIT",
+    "paired_total": 0,
+    "by_market": {},
+    "production_unchanged": true,
+    "validated": false,
+    "note": "Only newly captured predictions with saved shadow values count. No retroactive candidate forecasts or unverified ROI."
   }
 }
