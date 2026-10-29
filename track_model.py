@@ -146,6 +146,34 @@ def run():
    r["graded_at"]=today().isoformat()
    graded_now+=1
   except (ValueError,KeyError,TypeError):pass
+ # Preserve unresolved predictions, but flag demonstrably incorrect identities.
+ # A player's boxscore on a different completed game on the capture date
+ # is evidence of an incorrect event assignment, not a losing wager.
+ invalid_assignments={}
+ for r in pending:
+  if r["status"]!="pending":continue
+  try: capture_date=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00")).date()
+  except (ValueError,KeyError,TypeError):continue
+  player_key=canonical(r.get("player"))
+  recorded={canonical(t) for t in str(r.get("game") or "").split(" @ ")}
+  if len(recorded)!=2:continue
+  other=[]
+  for (eid,p),row in by_game.items():
+   if p!=player_key:continue
+   try: game_date=datetime.datetime.strptime(str(row.get("Date") or "").replace("-",""),"%Y%m%d").date()
+   except ValueError:continue
+   if -1 <= (game_date-capture_date).days <= 2 and canonical(row.get("Team")) not in recorded:
+    other.append((eid,str(row.get("Team") or ""),str(row.get("Date") or "")))
+  if other:
+   r["validation_status"]="invalid_matchup_review"
+   r["validation_reason"]="Player appears in completed boxscore for a different team in capture window; verify game identity before grading"
+   r["validation_evidence"]=[{"game_id":eid,"team":team,"date":date} for eid,team,date in other[:5]]
+   invalid_assignments[r["id"]]=r["validation_evidence"]
+  else:
+   r.pop("validation_status",None)
+   r.pop("validation_reason",None)
+   r.pop("validation_evidence",None)
+ print("Identity audit:",len(invalid_assignments),"pending predictions flagged for review; no automatic grades assigned",flush=True)
  print("Pending matchup audit:",json.dumps(unmatched_games,sort_keys=True),"missing player rows:",json.dumps(missing_players,sort_keys=True),flush=True)
  print("Grading audit:",len(pending),"pending;",len(days),"scoreboard dates;",len(scoreboard),"completed matchups;",graded_now,"new grades; game-log rows",len(by_game),flush=True)
  DATA.parent.mkdir(parents=True,exist_ok=True)
