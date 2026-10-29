@@ -651,7 +651,21 @@ def refresh():
         signals=identity_checked
         base["identity_filtered_signals"]=identity_filtered
         base["identity_guard"]="LATEST_CURRENT_SEASON_PLAYER_TEAM_MATCH_REQUIRED"
-        signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
+        # Research-backed selection assistance from settled historical bets.
+        # This is a PRIORITY LABEL, not a trained win probability or a
+        # replacement for the primary/challenger projection disagreement veto.
+        # Do not hide other markets or change eligibility from this small sample.
+        for signal in signals:
+            market=signal.get("market")
+            if market in ("AST","PRA"):
+                signal["historical_priority"]="RESEARCH_PRIORITY"
+                signal["historical_priority_reason"]="Assists and PRA were positive ROI in the initial 294-pick audit and selected in an exploratory chronological holdout; not forward validated."
+            else:
+                signal["historical_priority"]="RESEARCH_CAUTION"
+                signal["historical_priority_reason"]="This market was not selected by the exploratory historical filter; review carefully, not a proven negative expectation."
+            signal["historical_priority_validated"]=False
+        base["historical_priority_mode"]="ASSISTIVE_RANKING_NOT_VALIDATED"
+        signals.sort(key=lambda s:(s["historical_priority"]=="RESEARCH_PRIORITY",s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
             base["error"]=(f"Partial live feed: {successful} of {len(upcoming)} games succeeded; "
