@@ -1,0 +1,33 @@
+name: NFL defensive feature validation
+on:
+  pull_request:
+    paths: ['nfl_features.py','nfl_model.py','nfl.py','static/nfl.html','.github/workflows/nfl_features.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl_features.py nfl_model.py nfl.py server.py
+      - run: |
+          python - <<'PY'
+          from nfl_model import history,summary
+          from nfl_features import team_context,features,adjusted
+          from server import app
+          rows=history()
+          assert len(rows)>7000
+          index=team_context(rows)
+          assert index,'Missing opponent game mappings'
+          r=next(r for r in rows if r['stats'].get('PASS_YDS') is not None)
+          player=[x for x in rows if x['key']==r['key']]
+          f=features(player,'PASS_YDS')
+          assert f['available'] and 'last5_std' in f and 'season_mean' in f
+          model=summary()
+          for market,audit in model['validation'].items():
+           if audit['improved']:assert audit['model_mae']<audit['baseline_mae']
+          assert any(getattr(r,'path','')=='/api/board' for r in app.routes)
+          print('Defense metrics',len(index),'validation',model['validation'])
+          PY
