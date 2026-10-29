@@ -44,6 +44,10 @@ def main():
                 game_day = datetime.datetime.strptime(next(iter(dates)), "%Y%m%d").date()
                 if not -1 <= (game_day - captured).days <= 2:
                     continue
+                # Prefer exact game identity when the odds feed uses ESPN IDs.
+                recorded_id = str(record.get("event_id") or "")
+                if recorded_id and recorded_id in games and game_id != recorded_id:
+                    continue
                 found = [p for p in players if normalize(p.get("Player")) == normalize(record["player"])]
                 if len(found) == 1:
                     matches.append((game_id, found[0]))
@@ -80,11 +84,16 @@ def main():
                 "wins": sum(r["status"] == "win" for r in graded),
                 "losses": sum(r["status"] == "loss" for r in graded),
                 "roi_pct": round(100 * profit / len(graded), 2) if graded else None}
+    settled_dates = sorted({r["captured_at"][:10] for r in records if r.get("status") in ("win", "loss", "push")})
     report = {"status": "PROSPECTIVE_LIVE_PRIMARY_RESEARCH",
               "newly_graded": changed, "overall": summarize(records),
               "assists_pra": summarize([r for r in records if r.get("market") in ("AST", "PRA")]),
               "other_markets": summarize([r for r in records if r.get("market") not in ("AST", "PRA")]),
               "capture_dates": sorted({r["captured_at"][:10] for r in records}),
+              "settled_capture_dates": settled_dates,
+              "promotion_gate": "RESEARCH_ONLY_INSUFFICIENT_DATES" if len(settled_dates) < 10 else "REQUIRES_OUT_OF_SAMPLE_REVIEW",
+              "by_market": {m: summarize([r for r in records if r.get("market") == m]) for m in ("PTS", "REB", "AST", "3PM", "PRA")},
+              "by_capture_date": {d: summarize([r for r in records if r["captured_at"][:10] == d]) for d in sorted({r["captured_at"][:10] for r in records})},
               "note": "These are live primary forecasts, not independent V4 forecasts."}
     destination = ROOT / "reports/nba_v4_prospective_roi.json"
     destination.parent.mkdir(exist_ok=True)
