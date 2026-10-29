@@ -324,6 +324,35 @@ def refresh():
             if gap<max(0.5,0.08*max(line,1)):continue
             event_stats[str(eid)]["qualified_signals"]+=1
             signals.append({"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or "").strip()),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+        # Shadow challenger: connected to live NBA board, but never changes
+        # production projections, qualifying picks, odds, or ranking.
+        # Historical minutes are used only where genuinely available.
+        try:
+            from nba_challenger_model import predict as challenger_predict
+            challenger_logs=load_game_logs()
+            challenger_cache={}
+            for signal in signals:
+                player_key=canonical_player(signal.get("player"))
+                if player_key not in challenger_cache:
+                    player_history=[]
+                    for game_row in reversed(challenger_logs.get(player_key,[])):
+                        minute_value=game_row.get("MIN")
+                        player_history.append({
+                            "date":game_row["date"],
+                            "minutes":minute_value if minute_value is not None and 1<=minute_value<=60 else None,
+                            **{k:game_row[k] for k in ("PTS","REB","AST","3PM")},
+                        })
+                    for game_row in player_history:
+                        game_row["PRA"]=game_row["PTS"]+game_row["REB"]+game_row["AST"]
+                    challenger_cache[player_key]=challenger_predict(player_history)
+                challenger=challenger_cache[player_key]
+                market=signal.get("market")
+                signal["challenger_projection"]=round(challenger[market],2) if challenger and market in challenger else None
+                signal["challenger_status"]="SHADOW_NOT_VALIDATED" if challenger else "INSUFFICIENT_HISTORY"
+            base["challenger_status"]="SHADOW_CONNECTED_NOT_VALIDATED"
+        except Exception as challenger_error:
+            base["challenger_status"]="SHADOW_UNAVAILABLE"
+            base["challenger_error"]=type(challenger_error).__name__
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
