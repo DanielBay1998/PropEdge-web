@@ -80,6 +80,7 @@ def run():
      info["players"].add(player)
     if row.get("Date"):game_dates.add(str(row["Date"]).replace("-",""))
  scoreboard={}
+ scoreboard_days_ok=set()
  pending=[r for r in records if r["status"]=="pending"]
  capture_days=set()
  for r in pending:
@@ -94,6 +95,7 @@ def run():
   try:
    req=urllib.request.Request("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+day,headers={"User-Agent":"PropEdge-ModelTracker/1.0"})
    with urllib.request.urlopen(req,timeout=20) as resp:data=json.load(resp)
+   scoreboard_days_ok.add(day)
    for e in data.get("events",[]):
     if not ((e.get("status") or {}).get("type") or {}).get("completed"):continue
     comp=(e.get("competitions") or [{}])[0]
@@ -160,6 +162,7 @@ def run():
  # A player's boxscore on a different completed game on the capture date
  # is evidence of an incorrect event assignment, not a losing wager.
  invalid_assignments={}
+ invalid_games={}
  for r in pending:
   if r["status"]!="pending":continue
   try: capture_date=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00")).date()
@@ -174,15 +177,29 @@ def run():
    except ValueError:continue
    if -1 <= (game_date-capture_date).days <= 2 and canonical(row.get("Team")) not in recorded:
     other.append((eid,str(row.get("Team") or ""),str(row.get("Date") or "")))
-  if other:
+  # If all capture-window scoreboards were fetched successfully and no
+  # completed game has the recorded matchup, quarantine stale records
+  # for manual event-ID reconciliation rather than inventing a grade.
+  eligible_days={(capture_date+datetime.timedelta(days=i)).strftime("%Y%m%d") for i in (-1,0,1,2)}
+  game_key="@".join(canonical(t) for t in str(r.get("game") or "").split(" @ "))
+  completed_match=any(day in eligible_days for day,eid in scoreboard.get(game_key,[]))
+  stale=(today().date()-capture_date).days>3
+  fully_checked=bool(eligible_days & scoreboard_days_ok) and all(
+   d in scoreboard_days_ok for d in eligible_days if d<=today().strftime("%Y%m%d"))
+  if stale and fully_checked and not completed_match:
+   invalid_games[r["id"]]=r.get("game")
+   r["validation_status"]="unmatched_completed_schedule"
+   r["validation_reason"]="No completed ESPN fixture for recorded matchup in fully checked capture window; verify source event ID"
+  elif other:
    r["validation_status"]="invalid_matchup_review"
    r["validation_reason"]="Player appears in completed boxscore for a different team in capture window; verify game identity before grading"
    r["validation_evidence"]=[{"game_id":eid,"team":team,"date":date} for eid,team,date in other[:5]]
    invalid_assignments[r["id"]]=r["validation_evidence"]
-  else:
+  elif not (stale and fully_checked and not completed_match):
    r.pop("validation_status",None)
    r.pop("validation_reason",None)
    r.pop("validation_evidence",None)
+ print("Schedule audit:",len(invalid_games),"stale predictions without matching completed fixture",flush=True)
  print("Identity audit:",len(invalid_assignments),"pending predictions flagged for review; no automatic grades assigned",flush=True)
  print("Pending matchup audit:",json.dumps(unmatched_games,sort_keys=True),"missing player rows:",json.dumps(missing_players,sort_keys=True),flush=True)
  print("Grading audit:",len(pending),"pending;",len(days),"scoreboard dates;",len(scoreboard),"completed matchups;",graded_now,"new grades; game-log rows",len(by_game),flush=True)
