@@ -186,6 +186,9 @@ def odds_board():
      best=max(available,key=lambda bp:bp[1])
      base["top_picks"].append({**record,"book":best[0],"odds":best[1]})
  base["verified"]=bool(base["props"])
+ # Keep the iPhone response bounded; full raw odds should not be shipped as multi-MB JSON.
+ base["total_props_before_limit"]=len(base["props"])
+ base["props"]=sorted(base["props"],key=lambda p:(p["projection"] is None,-abs(p["edge"] or 0)))[:350]
  # Keep the best line for each player/market/side/event; other lines remain in All Props.
  unique={}
  for p in base["top_picks"]:
