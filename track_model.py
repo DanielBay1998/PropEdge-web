@@ -15,7 +15,9 @@ def today():return datetime.datetime.now(datetime.timezone.utc)
 def run():
  records=json.loads(DATA.read_text()) if DATA.exists() else []
  board=None
- for attempt in range(5):
+ if os.getenv("PROPEDGE_GRADE_ONLY")=="1":
+  print("Grade-only mode: skipping live odds board request",flush=True)
+ for attempt in range(0 if os.getenv("PROPEDGE_GRADE_ONLY")=="1" else 5):
   try:
    req=urllib.request.Request(SITE+"/api/board",headers={"User-Agent":"PropEdge-ModelTracker/1.0","Cache-Control":"no-cache"})
    with urllib.request.urlopen(req,timeout=90) as resp: board=json.load(resp)
