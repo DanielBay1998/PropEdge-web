@@ -10,6 +10,8 @@ from fastapi.staticfiles import StaticFiles
 
 ROOT=Path(__file__).resolve().parent
 app=FastAPI(title="PropEdge Live Validated")
+from nfl import router as nfl_router
+app.include_router(nfl_router)
 app.mount("/static",StaticFiles(directory=str(ROOT/"static")),name="static")
 MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA"}
 _cache={"until":0,"result":None};_lock=threading.Lock()
@@ -687,6 +689,9 @@ def board():
             _cache["until"]=time.monotonic()+(900 if limited else (300 if _cache["result"].get("error") else 600))
         return _cache["result"]
 
+
+@app.get("/nfl")
+def nfl_home():return HTMLResponse((ROOT/"static"/"nfl.html").read_text(encoding="utf-8"))
 
 @app.get("/healthz")
 def health():return {"status":"ok"}
