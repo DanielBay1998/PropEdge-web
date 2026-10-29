@@ -123,8 +123,14 @@ def odds_board():
   except (TypeError,ValueError):continue
   if dt.tzinfo is None:continue
   if now<dt<now+datetime.timedelta(days=7):upcoming.append(e)
- for event in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:4]:
-  try:response=client.get_odds("americanfootball_nfl",event_id=event["id"],markets=list(MARKETS))
+ from concurrent.futures import ThreadPoolExecutor,wait
+ pool=ThreadPoolExecutor(max_workers=4)
+ futures={pool.submit(client.get_odds,"americanfootball_nfl",event_id=e["id"],markets=list(MARKETS)):e for e in sorted(upcoming,key=lambda x:str(x.get("commence_time") or ""))[:8]}
+ done,pending=wait(futures,timeout=12)
+ pool.shutdown(wait=False,cancel_futures=True)
+ for task in done:
+  event=futures[task]
+  try:response=task.result()
   except Exception:continue
   if not isinstance(response,dict):continue
   quotes=defaultdict(lambda:{"books":set(),"prices":{}})
