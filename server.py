@@ -164,9 +164,9 @@ def add_game_analysis(signal,logs):
     signal['analysis']={
         'current':summarize(current),
         'previous_season':summarize(historical),
-        'last5':summarize(rows[:5]),'last10':summarize(rows[:10]),'last20':summarize(rows[:20]),
+        'last5':summarize(current[:5]),'last10':summarize(current[:10]),'last20':summarize(current[:20]),
         'recent_games':[{'date':r['date'],'season':r['season'],'stat':val(r),'minutes':r['MIN']}
-                        for r in rows[:10]],
+                        for r in current[:20]],
         'sample_warning':('No regular-season current-year game logs available.' if not current else
                           'Only '+str(len(current))+' current-season regular-season games available.' if len(current)<5 else None),
         'minutes_warning':'Current-season source does not include minutes; displayed minute averages use historical records only.',
