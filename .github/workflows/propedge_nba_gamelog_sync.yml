@@ -38,11 +38,12 @@ jobs:
             git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
             git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
           else
             echo 'No new final boxscores or grades'
           fi
       - name: Request Render refresh when deployment hook is configured
-        if: ${{ success() }}
+        if: ${{ success() && steps.commit.outputs.changed == 'true' }}
         env:
           RENDER_DEPLOY_HOOK_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: |
