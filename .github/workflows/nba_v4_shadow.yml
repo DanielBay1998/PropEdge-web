@@ -1,0 +1,27 @@
+name: NBA prospective shadow capture
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,37 * * * *'
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m py_compile nba_v4_shadow_selections.py
+      - run: python nba_v4_shadow_selections.py
+      - name: Persist immutable snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nba_v4_shadow_selections.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record prospective NBA shadow selections"
+            git pull --rebase
+            git push
+          fi
