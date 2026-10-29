@@ -40,49 +40,64 @@ def run():
      "projection":signal.get("projection"),"book":signal.get("book"),
      "odds":signal.get("odds"),"game":signal.get("game"),"status":"pending",
      "actual":None,"graded_at":None})
- # Reconcile provider event IDs to ESPN IDs by a unique, completed matchup.
- scoreboard={}
- try:
-  dates={datetime.datetime.fromisoformat(r["captured_at"]).strftime("%Y%m%d") for r in records if r["status"]=="pending"}
-  for day in dates:
-   for delta in (0,1):
-    d=(datetime.datetime.strptime(day,"%Y%m%d")+datetime.timedelta(days=delta)).strftime("%Y%m%d")
-    with urllib.request.urlopen("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+d,timeout=20) as resp:
-     data=json.load(resp)
-    for e in data.get("events",[]):
-     comp=(e.get("competitions") or [{}])[0]
-     teams=comp.get("competitors") or []
-     away=next((t for t in teams if t.get("homeAway")=="away"),{})
-     home=next((t for t in teams if t.get("homeAway")=="home"),{})
-     an=(away.get("team") or {}).get("displayName") or ""
-     hn=(home.get("team") or {}).get("displayName") or ""
-     if ((e.get("status") or {}).get("type") or {}).get("completed"):
-      scoreboard.setdefault(canonical(an)+"@"+canonical(hn),set()).add(str(e.get("id")))
- except Exception as exc:print("Scoreboard reconciliation unavailable:",type(exc).__name__)
+ # Match only completed ESPN games to the exact game-log ID.
+ # The original tracker used capture UTC date as game date and swallowed a
+ # scoreboard exception for the entire batch. Use the actual log dates and
+ # isolate network failures per scoreboard day.
  logs=ROOT/"data"/"nba_2026_27.csv"
+ by_game={}
+ game_dates=set()
  if logs.exists():
   with logs.open(encoding="utf-8-sig",newline="") as handle:
-   rows=list(csv.DictReader(handle))
-  by_game={}
-  for row in rows:
-   eid=str(row.get("Game ID") or "").strip()
-   player=canonical(row.get("Player"))
-   if eid and player:by_game[(eid,player)]=row
-  for r in records:
-   if r["status"]!="pending":continue
-   teams=str(r.get("game") or "").split(" @ ")
-   match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
-   ids=scoreboard.get(match,set())
-   if len(ids)!=1:continue
-   row=by_game.get((next(iter(ids)),canonical(r["player"])))
-   if not row:continue
-   try:
-    actual=sum(float(row[k]) for k in ("PTS","REB","AST")) if r["market"]=="PRA" else float(row[r["market"]])
-    if actual<0:continue
-    r["actual"]=actual
-    r["status"]="push" if actual==float(r["line"]) else ("win" if (actual>float(r["line"]))==(r["side"]=="OVER") else "loss")
-    r["graded_at"]=today().isoformat()
-   except (ValueError,KeyError,TypeError):pass
+   for row in csv.DictReader(handle):
+    eid=str(row.get("Game ID") or "").strip()
+    player=canonical(row.get("Player"))
+    if eid and player:by_game[(eid,player)]=row
+    if row.get("Date"):game_dates.add(str(row["Date"]).replace("-",""))
+ scoreboard={}
+ pending=[r for r in records if r["status"]=="pending"]
+ capture_days=set()
+ for r in pending:
+  try:
+   captured=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00"))
+   for offset in (-1,0,1,2):
+    capture_days.add((captured+datetime.timedelta(days=offset)).strftime("%Y%m%d"))
+  except (ValueError,KeyError,TypeError):continue
+ # Restrict requests to dates that actually have local game logs.
+ days=sorted(capture_days & game_dates)
+ for day in days:
+  try:
+   req=urllib.request.Request("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+day,headers={"User-Agent":"PropEdge-ModelTracker/1.0"})
+   with urllib.request.urlopen(req,timeout=20) as resp:data=json.load(resp)
+   for e in data.get("events",[]):
+    if not ((e.get("status") or {}).get("type") or {}).get("completed"):continue
+    comp=(e.get("competitions") or [{}])[0]
+    teams=comp.get("competitors") or []
+    away=next((t for t in teams if t.get("homeAway")=="away"),{})
+    home=next((t for t in teams if t.get("homeAway")=="home"),{})
+    an=(away.get("team") or {}).get("displayName") or ""
+    hn=(home.get("team") or {}).get("displayName") or ""
+    key=canonical(an)+"@"+canonical(hn)
+    scoreboard.setdefault(key,set()).add(str(e.get("id")))
+  except Exception as exc:
+   print("Scoreboard unavailable for",day,type(exc).__name__,flush=True)
+ graded_now=0
+ for r in pending:
+  teams=str(r.get("game") or "").split(" @ ")
+  match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
+  ids=scoreboard.get(match,set())
+  if len(ids)!=1:continue
+  row=by_game.get((next(iter(ids)),canonical(r["player"])))
+  if not row:continue
+  try:
+   actual=sum(float(row[k]) for k in ("PTS","REB","AST")) if r["market"]=="PRA" else float(row[r["market"]])
+   if actual<0:continue
+   r["actual"]=actual
+   r["status"]="push" if actual==float(r["line"]) else ("win" if (actual>float(r["line"]))==(r["side"]=="OVER") else "loss")
+   r["graded_at"]=today().isoformat()
+   graded_now+=1
+  except (ValueError,KeyError,TypeError):pass
+ print("Grading audit:",len(pending),"pending;",len(days),"scoreboard dates;",len(scoreboard),"completed matchups;",graded_now,"new grades; game-log rows",len(by_game),flush=True)
  DATA.parent.mkdir(parents=True,exist_ok=True)
  DATA.write_text(json.dumps(records,indent=2,ensure_ascii=False)+"\n")
  print(f"Tracking {len(records)} snapshots; {sum(r['status']!='pending' for r in records)} graded")
