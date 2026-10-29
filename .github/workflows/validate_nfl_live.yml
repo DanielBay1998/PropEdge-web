@@ -1,0 +1,32 @@
+name: Validate NFL live model
+on:
+  pull_request:
+    paths: ['nfl.py','nfl_model.py','sync_nfl_history.py','track_nfl.py','static/nfl.html','.github/workflows/validate_nfl_live.yml']
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl.py nfl_model.py sync_nfl_history.py track_nfl.py server.py
+      - name: Check model wiring and NBA isolation
+        run: |
+          python - <<'PY'
+          from nfl import odds_board,router
+          from nfl_model import summary
+          from server import app
+          from pathlib import Path
+          m=summary()
+          assert m['history_rows']>0, 'NFL historical rows missing'
+          assert any(r.path=='/api/nfl/board' for r in router.routes)
+          assert any(getattr(r,'path',None)=='/api/board' for r in app.routes)
+          s=Path('nfl.py').read_text()
+          assert 'model_validated' in s and 'top_picks' in s
+          assert '[:35]' not in Path('sync_nfl_history.py').read_text()
+          assert 'Projection:' in Path('static/nfl.html').read_text()
+          print('NFL historical rows:',m['history_rows'])
+          print('NFL walk-forward:',m['validation'])
+          PY
