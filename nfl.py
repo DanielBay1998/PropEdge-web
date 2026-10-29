@@ -162,7 +162,14 @@ def odds_board():
    edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
    record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"advanced_metrics":advanced,"verified_context":context,"opponent":opponent,"edge":edge,"sample_games":(info or {}).get("samples",0),"season_games":(info or {}).get("season_games",0),"player_id":(info or {}).get("player_id"),"player_photo":athlete_photo((info or {}).get("player_id")),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
    base["props"].append(record)
-   if validated and edge is not None and edge>0 and record.get("commence_time"):
+   # An exchange-only quote is not independent confirmation by two sportsbooks.
+   conventional_books={bk for bk in q["books"] if bk not in ("kalshi","polymarket_us","polymarket","prophetx","novig")}
+   # Extreme gaps relative to recent player volatility require review, not an automatic pick.
+   volatility=advanced.get("last5_std") if isinstance(advanced,dict) else None
+   plausible=bool(volatility is not None and isinstance(volatility,(int,float)) and volatility>0 and abs(edge or 0)<=max(10.0,1.5*volatility))
+   record["pick_eligible"]=bool(len(conventional_books)>=2 and plausible)
+   record["pick_exclusion_reason"]=("Fewer than two conventional sportsbooks" if len(conventional_books)<2 else "Projection gap exceeds volatility review threshold" if not plausible else None)
+   if validated and record["pick_eligible"] and edge is not None and edge>0 and record.get("commence_time"):
     available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
     if available:
      try:
