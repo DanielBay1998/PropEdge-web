@@ -6,6 +6,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Check NFL card rendering helpers
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html=Path("static/nfl.html").read_text()
+          assert "function verifiedContext(p)" in html
+          assert "function propCard(p)" in html
+          assert "verifiedContext(p)+" in html
+          print("NFL verified context renderer defined")
+          PY
       - name: Check deployed NFL endpoint status and response
         run: |
           python - <<'PY'
