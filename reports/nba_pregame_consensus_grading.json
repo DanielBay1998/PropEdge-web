@@ -21,6 +21,15 @@
       "n": 0
     }
   },
+  "context_comparison": {
+    "status": "AWAITING_SETTLED_PROSPECTIVE_CAPTURES",
+    "eligible": 0,
+    "independent_capture_dates": 0,
+    "consensus_mae": null,
+    "adjusted_mae": null,
+    "note": "Historical challenger-trained weights; not independently fitted to consensus. Requires separate validation before promotion.",
+    "production_promoted": false
+  },
   "by_market": {
     "PTS": {
       "primary": {
