@@ -181,6 +181,32 @@ def add_game_analysis(signal,logs):
     }
     return signal
 
+def verified_nba_schedule(days=3):
+    """Authoritative ESPN scoreboard fixtures; fail closed if unavailable."""
+    import urllib.request
+    now=datetime.now(timezone.utc)
+    fixtures=set()
+    checked=0
+    for offset in range(-1,days):
+        day=(now+timedelta(days=offset)).strftime("%Y%m%d")
+        url="https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+day
+        try:
+            req=urllib.request.Request(url,headers={"User-Agent":"PropEdge-Schedule-Verification/1.0"})
+            with urllib.request.urlopen(req,timeout=6) as resp:data=json.load(resp)
+            checked+=1
+            for event in data.get("events",[]):
+                comp=(event.get("competitions") or [{}])[0]
+                teams=comp.get("competitors") or []
+                away=next((x for x in teams if x.get("homeAway")=="away"),{})
+                home=next((x for x in teams if x.get("homeAway")=="home"),{})
+                a=(away.get("team") or {}).get("displayName")
+                h=(home.get("team") or {}).get("displayName")
+                if a and h:
+                    fixtures.add((norm(a),norm(h)))
+        except Exception as exc:
+            logging.warning("NBA schedule verification unavailable for %s: %s",day,type(exc).__name__)
+    return fixtures,checked
+
 def refresh():
     now=datetime.now(timezone.utc).isoformat()
     base={"signals":[],"live":False,"verified":False,"as_of":now,"players":0,"quotes":0,"error":None,"event_diagnostics":[],"total_signals":0,"game_props":[],"game_prop_rows":0,"game_coverage":[],"data_freshness":projection_freshness()}
@@ -224,6 +250,20 @@ def refresh():
                             continue
                 except ValueError:continue
             upcoming.append(event)
+        # A sportsbook event feed is not proof a matchup is on the NBA schedule.
+        # Check ESPN before requesting props; never feature unmatched or unverified games.
+        official_fixtures,schedule_days_checked=verified_nba_schedule()
+        base["official_schedule_days_checked"]=schedule_days_checked
+        base["official_schedule_fixture_count"]=len(official_fixtures)
+        if not official_fixtures:
+            base["error"]="Official NBA schedule unavailable; withholding picks until games can be verified."
+            base["schedule_guard"]="FAIL_CLOSED_ESPN"
+            return base
+        unchecked=len(upcoming)
+        upcoming=[e for e in upcoming if
+                  (norm(e.get("away_team")),norm(e.get("home_team"))) in official_fixtures]
+        base["official_schedule_events_filtered"]=unchecked-len(upcoming)
+        base["schedule_guard"]="ESPN_FIXTURE_MATCH_REQUIRED"
         upcoming=sorted(upcoming,key=lambda e: str(e.get("commence_time") or e.get("start_time") or "9999"))
         base["events_available_in_window"]=len(upcoming)
         base["events_skipped_outside_window"]=skipped_outside_window
