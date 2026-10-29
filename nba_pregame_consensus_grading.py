@@ -55,8 +55,34 @@ def run():
     def model_breakdown(group):
         return {k:metrics([{"prediction":r["forecasts"][k],"actual":r["actual"]} for r in group]) for k in FIELDS}
     # Only compare immutable pregame forecasts after outcomes have settled.
-    context_comparison={"status":"AWAITING_SETTLED_PROSPECTIVE_CAPTURES",
-                        "eligible":0,"consensus_mae":None,"adjusted_mae":None,
+    context_report_path=ROOT/"reports/nba_context_holdout.json"
+    context_models=json.loads(context_report_path.read_text()).get("markets",{}) if context_report_path.exists() else {}
+    paired=[]
+    for r in complete:
+        if r.get("status") not in ("win","loss","push") or r.get("validation_status") in ("invalid_matchup_review","unmatched_completed_schedule"):
+            continue
+        m=context_models.get(r.get("market"),{})
+        ctx=r.get("pregame_advanced_metrics")
+        if not isinstance(ctx,dict) or m.get("status")!="holdout_evaluated" or not m.get("improved"):
+            continue
+        rest=ctx.get("rest_days")
+        b2b=ctx.get("back_to_back")
+        if rest is None or b2b is None:continue
+        try:
+            actual=float(r["actual"])
+            consensus=float(r["pregame_consensus_projection"])
+            weights=m["weights"]
+            correction=weights["intercept"]+weights["weights"]["rest"]*(min(float(rest),5)-weights["means"]["rest"])+weights["weights"]["b2b"]*(float(b2b)-weights["means"]["b2b"])
+            adjusted=max(0,consensus+correction)
+            if all(math.isfinite(v) for v in (actual,consensus,adjusted)):
+                paired.append((str(r.get("captured_at",""))[:10],actual,consensus,adjusted))
+        except (KeyError,ValueError,TypeError):continue
+    dates={r[0] for r in paired}
+    context_comparison={"status":"DESCRIPTIVE_NOT_PRODUCTION_ELIGIBLE" if len(dates)>=20 else "AWAITING_SETTLED_PROSPECTIVE_CAPTURES",
+                        "eligible":len(paired),"independent_capture_dates":len(dates),
+                        "consensus_mae":round(statistics.mean(abs(a-b) for _,a,b,_ in paired),4) if paired else None,
+                        "adjusted_mae":round(statistics.mean(abs(a-c) for _,a,_,c in paired),4) if paired else None,
+                        "note":"Historical challenger-trained weights; not independently fitted to consensus. Requires separate validation before promotion.",
                         "production_promoted":False}
     points=[r for r in graded if r["market"]=="PTS"]
     dates=sorted({r["date"] for r in points})
