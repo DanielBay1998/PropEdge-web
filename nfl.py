@@ -79,8 +79,12 @@ def game_stats(event_id:str):
  try:return {"event_id":event_id,"players":cached("stats"+event_id,600,lambda:parse_boxscore(event_id))}
  except Exception:return {"event_id":event_id,"players":[],"error":"Verified boxscore unavailable"}
 def odds_board():
+ from nfl_model import summary, canon
+ model=summary()
+ projections=model["projections"]
+ validation=model["validation"]
  key=os.getenv("PROPLINE_API_KEY","").strip()
- base={"props":[],"top_picks":[],"as_of":datetime.datetime.now(datetime.timezone.utc).isoformat(),"verified":False,"model_ready":False}
+ base={"props":[],"top_picks":[],"as_of":datetime.datetime.now(datetime.timezone.utc).isoformat(),"verified":False,"model_ready":False,"model":{"history_rows":model["history_rows"],"validation":validation,"as_of":model["as_of"]}}
  if not key:
   base["error"]="PropLine key unavailable; no live NFL lines."
   return base
@@ -126,8 +130,21 @@ def odds_board():
      q["books"].add(bk);q["prices"][bk]=o.get("price")
   for (player,code,side,line),q in quotes.items():
    if len(q["books"])<2:continue
-   base["props"].append({"event_id":str(event["id"]),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":None,"edge":None,"status":"verified line; model pending"})
+   info=projections.get(canon(player))
+   projection=(info or {}).get("markets",{}).get(code)
+   audit=validation.get(code,{})
+   validated=bool(projection is not None and info["samples"]>=6 and audit.get("improved"))
+   edge=round((projection-line) if side=="OVER" else (line-projection),2) if projection is not None else None
+   record={"event_id":str(event["id"]),"commence_time":event.get("commence_time") or event.get("start_time"),"game":str(event.get("away_team") or "")+" @ "+str(event.get("home_team") or ""),"player":(info or {}).get("player") or player.title(),"market":code,"side":side,"line":line,"books":sorted(q["books"]),"prices":q["prices"],"projection":projection,"edge":edge,"sample_games":(info or {}).get("samples",0),"model_validated":validated,"status":"historical model validated" if validated else "provisional research"}
+   base["props"].append(record)
+   if validated and edge is not None and edge>0:
+    available=[(bk,price) for bk,price in q["prices"].items() if isinstance(price,(int,float)) and (price>=100 or price<=-100)]
+    if available:
+     best=max(available,key=lambda bp:bp[1])
+     base["top_picks"].append({**record,"book":best[0],"odds":best[1]})
  base["verified"]=bool(base["props"])
+ base["top_picks"].sort(key=lambda p:p["edge"],reverse=True)
+ base["model_ready"]=bool(base["top_picks"])
  if not base["props"]:base["error"]="No independently confirmed NFL main lines available. NFL picks remain unavailable."
  return base
 @router.get("/board")
