@@ -148,6 +148,7 @@ def odds_board():
   for (player,code,side,line),q in quotes.items():
    if len(q["books"])<2:continue
    info=projections.get(canon(player))
+   team_verified=bool(info and str(info.get("team") or "").strip().casefold() in (str(event.get("home_team") or "").strip().casefold(),str(event.get("away_team") or "").strip().casefold()))
    projection=(info or {}).get("markets",{}).get(code)
    opponent=next((t for t in (str(event.get("away_team") or ""),str(event.get("home_team") or "")) if t and t!=(info or {}).get("team")),None)
    advanced={}
