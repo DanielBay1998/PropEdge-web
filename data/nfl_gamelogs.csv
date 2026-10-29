@@ -4703,6 +4703,28 @@ event_id,date,player_id,player,team,PASS_YDS,RUSH_YDS,REC_YDS,REC,PASS_TD,RUSH_T
 401772804,2025-12-22,4432710,TreVeyon Henderson,New England Patriots,,3.0,9.0,1.0,,0.0
 401772804,2025-12-22,4035671,Tyler Huntley,Baltimore Ravens,65.0,2.0,,,0.0,0.0
 401772804,2025-12-22,4429615,Zay Flowers,Baltimore Ravens,,18.0,84.0,7.0,,1.0
+401772824,2025-12-23,4360078,Alec Pierce,Indianapolis Colts,,,86.0,4.0,,
+401772824,2025-12-23,2576336,Ameer Abdullah,Indianapolis Colts,,,4.0,1.0,,
+401772824,2025-12-23,4241474,Brian Robinson Jr.,San Francisco 49ers,,20.0,0.0,0.0,,0.0
+401772824,2025-12-23,4361741,Brock Purdy,San Francisco 49ers,295.0,11.0,,,5.0,0.0
+401772824,2025-12-23,3117251,Christian McCaffrey,San Francisco 49ers,,117.0,29.0,6.0,,0.0
+401772824,2025-12-23,4578436,Coleman Owen,Indianapolis Colts,,,0.0,0.0,,
+401772824,2025-12-23,3043116,Demarcus Robinson,San Francisco 49ers,,,23.0,2.0,,
+401772824,2025-12-23,4722908,Drew Ogletree,Indianapolis Colts,,,11.0,1.0,,
+401772824,2025-12-23,3040151,George Kittle,San Francisco 49ers,,,115.0,7.0,,
+401772824,2025-12-23,4259147,Jake Tonges,San Francisco 49ers,,,7.0,1.0,,
+401772824,2025-12-23,3886598,Jauan Jennings,San Francisco 49ers,,,71.0,5.0,,
+401772824,2025-12-23,4242335,Jonathan Taylor,Indianapolis Colts,,46.0,33.0,3.0,,1.0
+401772824,2025-12-23,4688813,Josh Downs,Indianapolis Colts,,3.0,65.0,5.0,,0.0
+401772824,2025-12-23,3045523,Kendrick Bourne,San Francisco 49ers,,,27.0,3.0,,
+401772824,2025-12-23,4241464,Mac Jones,San Francisco 49ers,,,,,,0.0
+401772824,2025-12-23,4035687,Michael Pittman Jr.,Indianapolis Colts,,,32.0,4.0,,
+401772824,2025-12-23,2998565,Mo Alie-Cox,Indianapolis Colts,,,16.0,2.0,,
+401772824,2025-12-23,5529,Philip Rivers,Indianapolis Colts,277.0,,,,2.0,
+401772824,2025-12-23,4683423,Riley Leonard,Indianapolis Colts,0.0,,,,0.0,
+401772824,2025-12-23,4430191,Skyy Moore,San Francisco 49ers,,,23.0,1.0,,
+401772824,2025-12-23,4429676,Tyler Goodson,Indianapolis Colts,,9.0,,,,0.0
+401772824,2025-12-23,4431459,Tyler Warren,Indianapolis Colts,,,30.0,3.0,,
 401772710,2025-12-25,4690923,Ben Sinnott,Washington Commanders,,,29.0,3.0,,
 401772710,2025-12-25,4360967,Brevyn Spann-Ford,Dallas Cowboys,,,31.0,1.0,,
 401772710,2025-12-25,4241389,CeeDee Lamb,Dallas Cowboys,,,46.0,5.0,,
@@ -4802,6 +4824,32 @@ event_id,date,player_id,player,team,PASS_YDS,RUSH_YDS,REC_YDS,REC,PASS_TD,RUSH_T
 401772807,2025-12-28,3914397,Scotty Miller,Pittsburgh Steelers,,,25.0,3.0,,
 401772807,2025-12-28,4432762,Shedeur Sanders,Cleveland Browns,186.0,20.0,,,1.0,0.0
 401772807,2025-12-28,4035222,Trayveon Williams,Cleveland Browns,,10.0,,,,0.0
+401772808,2025-12-28,4597500,Adonai Mitchell,New York Jets,,,22.0,3.0,,
+401772808,2025-12-28,4429105,Arian Smith,New York Jets,,,5.0,1.0,,
+401772808,2025-12-28,3043275,Austin Hooper,New England Patriots,,,11.0,2.0,,
+401772808,2025-12-28,4427982,Austin McNamara,New York Jets,3.0,,,,0.0,
+401772808,2025-12-28,4429435,Brady Cook,New York Jets,152.0,1.0,,,0.0,0.0
+401772808,2025-12-28,4427366,Breece Hall,New York Jets,,111.0,18.0,2.0,,1.0
+401772808,2025-12-28,3139602,D'Ernest Johnson,New England Patriots,,5.0,,,,0.0
+401772808,2025-12-28,4427095,DeMario Douglas,New England Patriots,,,10.0,1.0,,
+401772808,2025-12-28,4431452,Drake Maye,New England Patriots,256.0,22.0,,,5.0,0.0
+401772808,2025-12-28,4695193,Efton Chism III,New England Patriots,,,40.0,2.0,,
+401772808,2025-12-28,3046439,Hunter Henry,New England Patriots,,,49.0,3.0,,
+401772808,2025-12-28,4695404,Isaiah Davis,New York Jets,,11.0,9.0,1.0,,0.0
+401772808,2025-12-28,4569371,Isaiah Williams,New York Jets,,5.0,30.0,4.0,,0.0
+401772808,2025-12-28,4241410,Jelani Woods,New York Jets,,,4.0,1.0,,
+401772808,2025-12-28,4361372,Jeremy Ruckert,New York Jets,,,2.0,1.0,,
+401772808,2025-12-28,4567096,John Metchie III,New York Jets,,,41.0,3.0,,
+401772808,2025-12-28,3044720,Joshua Dobbs,New England Patriots,30.0,,,,0.0,0.0
+401772808,2025-12-28,4035537,Kene Nwangwu,New York Jets,,31.0,,,,0.0
+401772808,2025-12-28,4035886,Khalil Herbert,New York Jets,,5.0,0.0,0.0,,0.0
+401772808,2025-12-28,4613202,Kyle Williams,New England Patriots,,,20.0,3.0,,
+401772808,2025-12-28,4692024,Malachi Moore,New York Jets,,,3.0,1.0,,
+401772808,2025-12-28,4569173,Rhamondre Stevenson,New England Patriots,,47.0,55.0,5.0,,1.0
+401772808,2025-12-28,2976212,Stefon Diggs,New England Patriots,,,101.0,6.0,,
+401772808,2025-12-28,4250764,Stone Smartt,New York Jets,,,18.0,2.0,,
+401772808,2025-12-28,4432710,TreVeyon Henderson,New England Patriots,,82.0,,,,0.0
+401772808,2025-12-28,2310331,Tyler Johnson,New York Jets,,,3.0,1.0,,
 401772809,2025-12-28,4569682,Audric Estime,New Orleans Saints,,94.0,4.0,1.0,,1.0
 401772809,2025-12-28,4688380,Cam Ward,Tennessee Titans,251.0,10.0,,,2.0,0.0
 401772809,2025-12-28,4360635,Chig Okonkwo,Tennessee Titans,,,55.0,3.0,,
