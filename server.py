@@ -377,6 +377,7 @@ def refresh():
         signals=agreed
         base["challenger_filtered_signals"]=original_count-len(signals)
         base["challenger_filter_mode"]="DISAGREEMENT_VETO_RESEARCH_UNVALIDATED"
+        base["challenger_model_version"]="minutes_rate_current_role_v2"
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
