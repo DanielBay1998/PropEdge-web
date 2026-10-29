@@ -93,7 +93,7 @@ def main():
         "validated":False,
         "limitations":"Overlapping players/games and a short historical period; forward holdout required before deployment."}}
     OUTPUT.parent.mkdir(parents=True,exist_ok=True)
-    OUTPUT.write_text(json.dumps(report,indent=2,allow_nan=False)+"\\n")
+    OUTPUT.write_text(json.dumps(report,indent=2,allow_nan=False)+"\n")
     print(json.dumps({"overall":report["overall"],"challenger":report["exploratory_challenger"]},indent=2))
 
 if __name__=="__main__":main()
