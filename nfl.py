@@ -90,6 +90,8 @@ def odds_board():
  from nfl_research import athlete_photo
  from nfl_features import team_context,adjusted,features
  from nfl_model import history
+ from nfl_context import records,for_prop,injury_block
+ context_rows=records()
  history_rows=history()
  player_history_index=defaultdict(list)
  for player_row in history_rows:player_history_index[player_row["key"]].append(player_row)
