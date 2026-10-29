@@ -25,11 +25,15 @@ jobs:
           python-version: '3.11'
       - name: Syntax and leakage regression tests
         run: |
-          python -m py_compile server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py
+          python -m py_compile server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py nba_defense_backtest.py
           python -m unittest -v test_nba_matchup_features.py
+      - name: Walk-forward defensive feature backtest
+        run: python nba_defense_backtest.py
       - name: Compare predictions
         run: python nba_blend_backtest.py
       - uses: actions/upload-artifact@v4
         with:
           name: nba-blend-backtest
-          path: reports/nba_blend_comparison.json
+          path: |
+            reports/nba_blend_comparison.json
+            reports/nba_defense_backtest.json
