@@ -11,6 +11,10 @@ SITE=os.getenv("PROPEDGE_SITE","https://propedge-custom.onrender.com").rstrip("/
 def canonical(s):
  import re
  return re.sub(r"[^a-z0-9]","",str(s or "").lower().replace("jr.",""))
+def team_key(name):
+ key=canonical(name)
+ aliases={"losangelesclippers":"laclippers","losangelesclipper":"laclippers"}
+ return aliases.get(key,key)
 def today():return datetime.datetime.now(datetime.timezone.utc)
 def run():
  records=json.loads(DATA.read_text()) if DATA.exists() else []
@@ -49,8 +53,8 @@ def run():
     print("Capture rejected: unverified player/team identity",player,event,flush=True)
     continue
    matchup=str(signal.get("game") or "").split(" @ ")
-   latest=canonical(signal.get("identity_latest_team"))
-   if len(matchup)!=2 or not latest or latest not in {canonical(t) for t in matchup}:
+   latest=team_key(signal.get("identity_latest_team"))
+   if len(matchup)!=2 or not latest or latest not in {team_key(t) for t in matchup}:
     print("Capture rejected: mismatched player/team identity",player,event,flush=True)
     continue
    key="|".join([event,canonical(player),market,side,str(line)])
@@ -76,7 +80,7 @@ def run():
     if eid and player:
      by_game[(eid,player)]=row
      info=local_games.setdefault(eid,{"date":str(row.get("Date") or "").replace("-",""),"teams":set(),"players":set()})
-     if row.get("Team"):info["teams"].add(canonical(row["Team"]))
+     if row.get("Team"):info["teams"].add(team_key(row["Team"]))
      info["players"].add(player)
     if row.get("Date"):game_dates.add(str(row["Date"]).replace("-",""))
  scoreboard={}
@@ -104,7 +108,7 @@ def run():
     home=next((t for t in teams if t.get("homeAway")=="home"),{})
     an=(away.get("team") or {}).get("displayName") or ""
     hn=(home.get("team") or {}).get("displayName") or ""
-    key=canonical(an)+"@"+canonical(hn)
+    key=team_key(an)+"@"+team_key(hn)
     scoreboard.setdefault(key,[]).append((day,str(e.get("id"))))
   except Exception as exc:
    print("Scoreboard unavailable for",day,type(exc).__name__,flush=True)
@@ -115,9 +119,9 @@ def run():
   for r in pending:
    teams=str(r.get("game") or "").split(" @ ")
    if len(teams)!=2:continue
-   pair={canonical(teams[0]),canonical(teams[1])}
+   pair={team_key(teams[0]),team_key(teams[1])}
    if pair!=info["teams"]:continue
-   key=canonical(teams[0])+"@"+canonical(teams[1])
+   key=team_key(teams[0])+"@"+team_key(teams[1])
    candidate=(info["date"],eid)
    if candidate not in scoreboard.setdefault(key,[]):scoreboard[key].append(candidate)
  graded_now=0
@@ -125,7 +129,7 @@ def run():
  missing_players={}
  for r in pending:
   teams=str(r.get("game") or "").split(" @ ")
-  match=canonical(teams[0])+"@"+canonical(teams[1]) if len(teams)==2 else ""
+  match=team_key(teams[0])+"@"+team_key(teams[1]) if len(teams)==2 else ""
   # A matchup may occur on multiple dates. Only use a completed game
   # within the capture window, and require a unique player boxscore.
   try:
@@ -144,7 +148,7 @@ def run():
    unmatched_games[match]=unmatched_games.get(match,0)+1
    continue
   row=matching[0] if len(matching)==1 else None
-  if row and canonical(row.get("Team")) not in {canonical(t) for t in teams}:
+  if row and team_key(row.get("Team")) not in {team_key(t) for t in teams}:
    missing_players["team mismatch: "+r["player"]]=missing_players.get("team mismatch: "+r["player"],0)+1
    continue
   if not row:
@@ -168,20 +172,20 @@ def run():
   try: capture_date=datetime.datetime.fromisoformat(r["captured_at"].replace("Z","+00:00")).date()
   except (ValueError,KeyError,TypeError):continue
   player_key=canonical(r.get("player"))
-  recorded={canonical(t) for t in str(r.get("game") or "").split(" @ ")}
+  recorded={team_key(t) for t in str(r.get("game") or "").split(" @ ")}
   if len(recorded)!=2:continue
   other=[]
   for (eid,p),row in by_game.items():
    if p!=player_key:continue
    try: game_date=datetime.datetime.strptime(str(row.get("Date") or "").replace("-",""),"%Y%m%d").date()
    except ValueError:continue
-   if -1 <= (game_date-capture_date).days <= 7 and canonical(row.get("Team")) not in recorded:
+   if -1 <= (game_date-capture_date).days <= 7 and team_key(row.get("Team")) not in recorded:
     other.append((eid,str(row.get("Team") or ""),str(row.get("Date") or "")))
   # If all capture-window scoreboards were fetched successfully and no
   # completed game has the recorded matchup, quarantine stale records
   # for manual event-ID reconciliation rather than inventing a grade.
   eligible_days={(capture_date+datetime.timedelta(days=i)).strftime("%Y%m%d") for i in range(-1,8)}
-  game_key="@".join(canonical(t) for t in str(r.get("game") or "").split(" @ "))
+  game_key="@".join(team_key(t) for t in str(r.get("game") or "").split(" @ "))
   completed_match=any(day in eligible_days for day,eid in scoreboard.get(game_key,[]))
   stale=(today().date()-capture_date).days>8
   fully_checked=bool(eligible_days & scoreboard_days_ok) and all(
