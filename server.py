@@ -617,6 +617,23 @@ def refresh():
             conservative.append(signal)
         signals=conservative
         base["small_sample_role_filtered"]=role_rejections
+        # Fail closed on stale or mismatched player-to-game identities.
+        # Historical team alone cannot verify a new-season trade.
+        identity_checked=[]
+        identity_filtered=0
+        for signal in signals:
+            player_rows=logs.get(canonical_player(signal.get("player")),[])
+            matchup={norm(t) for t in str(signal.get("game") or "").split(" @ ")}
+            current_rows=[g for g in player_rows if g.get("season")=="current"]
+            observed_teams={norm(g.get("team")) for g in current_rows if g.get("team")}
+            if len(matchup)!=2 or not current_rows or not (observed_teams & matchup):
+                identity_filtered+=1
+                continue
+            signal["identity_verified_by_current_season_logs"]=True
+            identity_checked.append(signal)
+        signals=identity_checked
+        base["identity_filtered_signals"]=identity_filtered
+        base["identity_guard"]="CURRENT_SEASON_PLAYER_TEAM_MATCH_REQUIRED"
         signals.sort(key=lambda s:(s["book_count"],s["gap"]/max(s["line"],1)),reverse=True)
         base.update(signals=signals, total_signals=len(signals), event_diagnostics=list(event_stats.values()), live=True,verified=(len(failures)==0 and base["events_skipped_by_cap"]==0))
         if failures or base["events_skipped_by_cap"]:
