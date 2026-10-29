@@ -1,0 +1,38 @@
+name: Validate NFL workspace
+on:
+  pull_request:
+    paths:
+      - 'nfl.py'
+      - 'server.py'
+      - 'static/nfl.html'
+      - 'static/index.html'
+      - '.github/workflows/validate_nfl.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'nfl.py'
+      - 'server.py'
+      - 'static/nfl.html'
+      - '.github/workflows/validate_nfl.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install -r requirements.txt
+      - run: python -m py_compile nfl.py server.py track_model.py
+      - name: Verify separate routes and static page
+        run: |
+          python - <<'PY'
+          from server import app
+          from pathlib import Path
+          paths={r.path for r in app.routes}
+          assert {'/nfl','/api/nfl/games','/api/nfl/board','/api/nfl/performance','/api/nfl/game/{event_id}/stats','/api/board','/api/model-performance'}<=paths
+          page=Path('static/nfl.html').read_text()
+          assert all(x in page for x in ('Top Picks','All Props','Research','Model Tracking','Parlay Builder','Games'))
+          assert 'href="/nfl"' in Path('static/index.html').read_text()
+          print('NFL and NBA routes and navigation verified')
+          PY
