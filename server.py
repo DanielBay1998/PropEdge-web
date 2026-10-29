@@ -360,6 +360,21 @@ def refresh():
         except Exception as challenger_error:
             base["challenger_status"]="SHADOW_UNAVAILABLE"
             base["challenger_error"]=type(challenger_error).__name__
+        # Research consensus: only independently available live estimates are used.
+        # V4 remains an offline audit and must not be represented as a live forecast.
+        for signal in signals:
+            primary=number(signal.get("projection"))
+            challenger=number(signal.get("challenger_projection"))
+            signal["consensus_components"]={"primary":primary,"challenger":challenger,"v4":None}
+            if primary is not None and challenger is not None and primary>=0 and challenger>=0:
+                signal["consensus_projection"]=round(0.5*primary+0.5*challenger,2)
+                signal["consensus_method"]="TWO_MODEL_EQUAL_WEIGHT_RESEARCH"
+                signal["consensus_model_count"]=2
+            else:
+                signal["consensus_projection"]=primary
+                signal["consensus_method"]="PRIMARY_ONLY_FALLBACK"
+                signal["consensus_model_count"]=1
+        base["consensus_status"]="RESEARCH_ONLY_V4_NOT_LIVE"
         # Paired retrospective comparison (230 graded picks, one capture date)
         # found primary MAE 3.844, challenger 4.174, blend 3.980.
         # Keep the better-performing primary as the production projection.
