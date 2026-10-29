@@ -5,6 +5,7 @@ Never retroactively modify captured projection, line, or side.
 """
 import csv,json,urllib.request,urllib.error,datetime,os,time
 from minutes_shadow_capture import load_history,candidate
+from nba_pregame_consensus_capture import history_for_capture,snapshot
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 DATA=ROOT/"data"/"model_tracking.json"
@@ -42,6 +43,11 @@ def run():
   if attempt<attempts-1:time.sleep(15*(attempt+1))
  if board and board.get("live") and not board.get("error"):
   shadow_history=load_history(today().strftime("%Y%m%d"))
+  consensus_history=history_for_capture(today().strftime("%Y%m%d"))
+  try:
+   consensus_coefficients=json.loads((ROOT/"data/nba_v4_live_coefficients.json").read_text())
+  except (OSError,ValueError):
+   consensus_coefficients={}
   for signal in board.get("signals",[]):
    event=str(signal.get("event_id") or "")
    market=str(signal.get("market") or "")
@@ -66,11 +72,12 @@ def run():
    key="|".join([capture_day,event,canonical(player),market,side,str(line)])
    if any(r.get("id")==key for r in records):continue
    shadow=candidate(signal,shadow_history)
+   consensus_shadow=snapshot(signal,captured,consensus_history,consensus_coefficients)
    records.append({"id":key,"captured_at":captured.isoformat(),"event_id":event,
      "player":player,"market":market,"side":side,"line":line,
      "projection":signal.get("projection"),"book":signal.get("book"),
      "odds":signal.get("odds"),"game":signal.get("game"),"status":"pending",
-     "actual":None,"graded_at":None,**(shadow or {})})
+     "actual":None,"graded_at":None,**(shadow or {}),**consensus_shadow})
  # Match only completed ESPN games to the exact game-log ID.
  # The original tracker used capture UTC date as game date and swallowed a
  # scoreboard exception for the entire batch. Use the actual log dates and
