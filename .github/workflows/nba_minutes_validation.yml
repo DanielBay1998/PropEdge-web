@@ -1,0 +1,28 @@
+name: NBA Minutes Walk-forward Validation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'minutes_walkforward_backtest.py'
+      - '.github/workflows/nba_minutes_validation.yml'
+  schedule:
+    - cron: '17 13 * * *'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install pandas numpy
+      - name: Walk-forward development and holdout evaluation
+        run: python minutes_walkforward_backtest.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nba-minutes-walkforward-validation
+          path: reports/minutes_walkforward_*.csv
+          if-no-files-found: warn
