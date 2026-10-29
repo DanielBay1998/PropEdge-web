@@ -1,0 +1,14 @@
+name: NFL page speed check
+on:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: python -m py_compile nfl.py nfl_model.py server.py
+      - run: python -c "from nfl_model import summary; assert summary() is summary(); print('cache verified')"

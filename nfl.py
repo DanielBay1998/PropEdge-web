@@ -91,6 +91,8 @@ def odds_board():
  from nfl_features import team_context,adjusted,features
  from nfl_model import history
  history_rows=history()
+ player_history_index=defaultdict(list)
+ for player_row in history_rows:player_history_index[player_row["key"]].append(player_row)
  feature_index=team_context(history_rows)
  model=summary()
  projections=model["projections"]
@@ -148,7 +150,7 @@ def odds_board():
    opponent=next((t for t in (str(event.get("away_team") or ""),str(event.get("home_team") or "")) if t and t!=(info or {}).get("team")),None)
    advanced={}
    if info and code in ("PASS_YDS","RUSH_YDS","REC_YDS","REC","PASS_TD","RUSH_TD"):
-    player_history=[r for r in history_rows if r["key"]==canon(player)]
+    player_history=player_history_index.get(canon(player),[])
     kickoff_date=datetime.datetime.fromisoformat(str(event.get("commence_time") or event.get("start_time")).replace("Z","+00:00")).date()
     projected,advanced=adjusted(player_history,code,opponent,kickoff_date,feature_index)
     if validation.get(code,{}).get("model")=="opponent_adjusted" and projected is not None and advanced.get("defense_games",0)>=4:projection=projected

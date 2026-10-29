@@ -1,5 +1,6 @@
 """NFL-only, walk-forward historical model. Never train on future results."""
 import csv,datetime,json,math
+from functools import lru_cache
 from collections import defaultdict
 from pathlib import Path
 ROOT=Path(__file__).resolve().parent
@@ -108,6 +109,11 @@ def projections(rows,validation=None):
    result[name]={"player":games[-1]["player"],"team":games[-1]["team"],"player_id":games[-1].get("player_id"),"season_games":sum(season_of(g["date"])==season_of(games[-1]["date"]) for g in games),"samples":len(games),"date":games[-1]["date"].isoformat(),"markets":market,
                  "recent":[{"date":g["date"].isoformat(),**g["stats"]} for g in games[-10:]]}
  return result
-def summary():
+@lru_cache(maxsize=2)
+def _summary_for_version(version):
  rows=history();validation=evaluate(rows)
  return {"history_rows":len(rows),"players":len(set(r["key"] for r in rows)),"validation":validation,"projections":projections(rows,validation),"method":"Candidate forecasts (career, season, last-five, weighted recent) chosen using earlier chronological games and evaluated on a later untouched 40% holdout. No probability calibration.","as_of":max((r["date"].isoformat() for r in rows),default=None)}
+
+def summary():
+ # Recompute the costly chronological backtest only after the game-log file changes.
+ return _summary_for_version(HISTORY.stat().st_mtime_ns if HISTORY.exists() else 0)
