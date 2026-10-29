@@ -8,6 +8,7 @@ on:
       - nba_defense_backtest.py
       - nba_minutes_backtest.py
       - test_nba_matchup_features.py
+      - test_nba_identity_guard.py
       - server.py
       - static/index.html
       - nba_challenger_model.py
@@ -26,7 +27,7 @@ jobs:
           python-version: '3.11'
       - name: Syntax and leakage regression tests
         run: |
-          python -m py_compile server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py nba_defense_backtest.py nba_minutes_backtest.py
+          python -m py_compile test_nba_identity_guard.py server.py nba_challenger_model.py nba_matchup_features.py nba_blend_backtest.py nba_defense_backtest.py nba_minutes_backtest.py
           python -m unittest -v test_nba_matchup_features.py
       - name: Walk-forward defensive feature backtest
         run: python nba_defense_backtest.py
