@@ -4,7 +4,8 @@ coverage on later untouched test data. Does not use sportsbook lines or odds.
 """
 import json,math
 from pathlib import Path
-from nba_v4_baseline_audit import ROOT,PATHS,MARKETS,load,predict,features,fit,estimate
+from nba_v4_baseline_audit import ROOT,PATHS,MARKETS,predict,features,fit,estimate
+from nba_v4_clean_history import load
 
 def run():
     histories=load(PATHS); examples=[]
