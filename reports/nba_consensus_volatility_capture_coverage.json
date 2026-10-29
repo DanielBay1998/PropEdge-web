@@ -1,0 +1,27 @@
+{
+  "status": "INSUFFICIENT_CAPTURE_DATES_FOR_CONSENSUS_HOLDOUT",
+  "verified_at": "2026-10-29",
+  "source": "data/model_tracking.json",
+  "total_tracking_rows": 485,
+  "graded_points_rows_before_history_checks": 79,
+  "distinct_capture_dates": [
+    "20261028",
+    "20261029"
+  ],
+  "graded_points_by_date": {
+    "20261028": 77,
+    "20261029": 2
+  },
+  "conclusion": "Cannot perform an independent chronological three-model consensus confidence holdout from two capture dates.",
+  "next_requirements": [
+    "Persist all three model forecasts and consensus at pregame capture time",
+    "Accumulate at least 10 distinct calibration dates and 10 later holdout dates",
+    "Retain original captured odds and grade results after games",
+    "Keep production models unchanged until validated"
+  ],
+  "caveats": [
+    "Historical eligibility and identity checks may further reduce sample.",
+    "Retrospectively reconstructed V4 consensus is not a verified pregame forecast.",
+    "This is a direct tracking-data coverage audit, not a completed model accuracy holdout."
+  ]
+}
