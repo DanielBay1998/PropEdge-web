@@ -1,0 +1,17 @@
+{
+  "status": "AGGREGATE_RECONSTRUCTION_NOT_PLAYER_LEVEL_RUN",
+  "source": "reports/nba_scoring_volatility_holdout.json",
+  "method": "Validation group miss rates used as predicted holdout risks; holdout group miss rates and counts used to estimate Brier scores from rounded aggregate percentages.",
+  "holdout_n": 15335,
+  "constant_risk_brier_approx": 0.236258,
+  "volatility_risk_brier_approx": 0.229509,
+  "brier_improvement_approx": 0.006749,
+  "relative_improvement_pct_approx": 2.86,
+  "limitations": [
+    "Rounded source percentages make results approximate.",
+    "Not a fresh execution of nba_volatility_risk_calibration.py.",
+    "Historical challenger model only, not production three-model consensus.",
+    "No matched sportsbook odds or ROI.",
+    "No live model changes."
+  ]
+}
