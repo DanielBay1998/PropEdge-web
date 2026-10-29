@@ -7,7 +7,7 @@ from nba_matchup_features import load_team_games,prior_allowances
 
 ROOT=Path(__file__).resolve().parent
 def run():
-    paths=[str(ROOT/"data/propedge_historical_2025_26_minutes.csv"),str(ROOT/"data/nba_2026_27.csv")]
+    paths=[*[str(ROOT/"data"/f"propedge_historical_{season}_minutes.csv") for season in ("2023_24","2024_25","2025_26")],str(ROOT/"data/nba_2026_27.csv")]
     histories=load(paths)
     opponents=load_team_games(paths)
     # Date-specific league baseline from prior games only; prevents scale drift.
