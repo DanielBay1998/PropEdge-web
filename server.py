@@ -393,6 +393,10 @@ def refresh():
             valid=[x for x in (primary,challenger,v4) if x is not None and math.isfinite(x) and x>=0]
             signal["consensus_projection"]=round(sum(valid)/len(valid),2) if valid else None
             signal["consensus_model_count"]=len(valid)
+            line=number(signal.get("line"))
+            consensus=signal["consensus_projection"]
+            signal["consensus_edge"]=round(consensus-line,2) if consensus is not None and line is not None else None
+            signal["consensus_side"]="OVER" if signal["consensus_edge"] is not None and signal["consensus_edge"]>0 else ("UNDER" if signal["consensus_edge"] is not None and signal["consensus_edge"]<0 else None)
             signal["consensus_method"]="THREE_MODEL_EQUAL_WEIGHT_RESEARCH" if len(valid)==3 else "PARTIAL_MODEL_RESEARCH"
         base["consensus_status"]="RESEARCH_ONLY_NOT_PRODUCTION"
         base["v4_trained_at"]=v4_meta.get("as_of_utc")
