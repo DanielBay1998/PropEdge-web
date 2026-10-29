@@ -19,6 +19,25 @@ def snapshot(signal,captured,histories,coefficients):
         return result
     recent=[g["PTS"] for g in prior[-12:]]
     result["pregame_points_volatility_12"]=round(statistics.pstdev(recent),5)
+    # Pregame feature provenance: only facts observed before capture.
+    # A feature is never marked available when the source lacks it.
+    latest=prior[-1]
+    last_day=datetime.datetime.strptime(latest["date"],"%Y%m%d").date()
+    rest=(captured.date()-last_day).days-1
+    matchup=str(signal.get("game") or "").split(" @ ")
+    latest_team=str(latest.get("team") or "").casefold().strip()
+    home=(latest_team==matchup[1].casefold().strip()) if len(matchup)==2 and latest_team else None
+    away=(latest_team==matchup[0].casefold().strip()) if len(matchup)==2 and latest_team else None
+    if home is False and away is False:home=None
+    minute_values=[g["minutes"] for g in prior[-5:] if g.get("minutes") is not None]
+    context={"minutes":round(statistics.mean(minute_values),3) if minute_values else None,
+             "usage_rate":None,"pace":None,"opponent_defense":None,
+             "rest_days":rest if rest>=0 else None,
+             "back_to_back":rest==0 if rest>=0 else None,
+             "home":home,"travel_miles":None,"team_total":None}
+    result["pregame_advanced_metrics"]=context
+    result["pregame_advanced_metrics_coverage"]={k:v is not None for k,v in context.items()}
+
     challenger=predict(prior)
     if challenger is None:
         result["consensus_capture_status"]="challenger_unavailable"
