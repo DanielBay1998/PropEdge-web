@@ -16,7 +16,7 @@ def latest_team_matches(logs, player, matchup):
 
 class IdentityTests(unittest.TestCase):
     def test_traded_player_old_team_is_rejected(self):
-        logs={"example player":[{"season":"current","team":"Atlanta Hawks"},{"season":"current","team":"Portland Trail Blazers"}]}
+        logs={"exampleplayer":[{"season":"current","team":"Atlanta Hawks"},{"season":"current","team":"Portland Trail Blazers"}]}
         self.assertFalse(latest_team_matches(logs,"example player","Portland Trail Blazers @ Memphis Grizzlies"))
         self.assertTrue(latest_team_matches(logs,"example player","Atlanta Hawks @ Memphis Grizzlies"))
     def test_historical_only_is_rejected(self):
