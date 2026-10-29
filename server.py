@@ -865,6 +865,17 @@ def availability_context():
     _injury_cache.update(until=now+600,data=result)
     return result
 
+@app.get("/api/nba-defense-position")
+def nba_defense_position():
+    path=ROOT/"data"/"nba_dvp_2026_27.json"
+    if not path.exists():return {"available":False,"teams":{},"reason":"Position-specific verified dataset not synced"}
+    try:
+        data=json.loads(path.read_text())
+        age=(datetime.now(timezone.utc)-datetime.fromisoformat(data["fetched_at"])).total_seconds()/3600
+        return {**data,"available":True,"stale":age>36,"age_hours":round(age,1)}
+    except (ValueError,KeyError,OSError,TypeError):
+        return {"available":False,"teams":{},"reason":"Invalid dataset"}
+
 @app.get("/api/nba-defense")
 def nba_defense():
     """Last verified official NBA.com team defensive ratings; no fabricated fallback."""
