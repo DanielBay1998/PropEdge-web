@@ -17,11 +17,13 @@ jobs:
         with:
           python-version: '3.11'
       - run: python track_model.py
+      - name: Calculate paired accuracy trends
+        run: python nba_accuracy_trends.py
       - name: Commit immutable pick snapshots and grades
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/model_tracking.json
+          git add data/model_tracking.json reports/nba_accuracy_trends.json
           if ! git diff --cached --quiet; then
             git commit -m "Update model performance tracking"
             git pull --rebase origin main
