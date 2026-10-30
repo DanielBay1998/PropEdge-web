@@ -119,6 +119,50 @@ def run():
             "counterfactual_over_adjusted_forecast": summary(adjusted),
             "note": "Forecast MAE counterfactual only; side-specific bet performance cannot be inferred from this. No production changes.",
         }
+    # Retrospective side-specific eligibility replay on immutable pregame captures.
+    # These are captured offered bets, NOT a full universe of available lines.
+    side_trials = {}
+    for market, rule in candidate_rules.items():
+        seen_bets = set()
+        rows = []
+        for r in records:
+            if (r.get("market") != market or r.get("side") != "OVER"
+                    or r.get("status") not in ("win", "loss", "push")
+                    or r.get("consensus_capture_status") != "complete"
+                    or r.get("validation_status") in EXCLUDED):
+                continue
+            original = number(r.get("pregame_primary_projection"))
+            line = number(r.get("line"))
+            actual = number(r.get("actual"))
+            if original is None or line is None or actual is None:
+                continue
+            key = (str(r.get("event_id")), str(r.get("player")).lower(), market, line)
+            if key in seen_bets:
+                continue
+            seen_bets.add(key)
+            # Both policies use the same predeclared minimum edge, and the
+            # same immutable pregame projection; only the correction differs.
+            min_edge = max(0.5, 0.08 * max(line, 1))
+            old_qualifies = original - line >= min_edge
+            new_qualifies = max(0.0, original - rule["over_subtract"]) - line >= min_edge
+            rows.append({"old": old_qualifies, "new": new_qualifies,
+                         "win": actual > line, "loss": actual < line,
+                         "push": actual == line})
+        def graded(subset):
+            settled = [r for r in subset if not r["push"]]
+            return {"qualified": len(subset), "settled": len(settled),
+                    "wins": sum(r["win"] for r in settled),
+                    "losses": sum(r["loss"] for r in settled),
+                    "hit_rate_pct": round(100 * sum(r["win"] for r in settled) / len(settled), 2) if settled else None}
+        side_trials[market] = {
+            "status": "RETROSPECTIVE_CAPTURED_BETS_ONLY_NOT_HOLDOUT",
+            "candidate_over_subtract": rule["over_subtract"],
+            "minimum_edge_rule": "max(0.5, 8% of line)",
+            "original_policy": graded([r for r in rows if r["old"]]),
+            "adjusted_policy": graded([r for r in rows if r["new"]]),
+            "filtered_by_adjustment": graded([r for r in rows if r["old"] and not r["new"]]),
+            "note": "Same pregame captures and offered lines; does not model sportsbook odds, ROI, new bets, or future results. Do not promote without chronological holdout.",
+        }
     report = {
         "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -127,6 +171,7 @@ def run():
         "excluded": dict(excluded),
         "overall": compare(eligible),
         "market_calibration_trials": calibration_trials,
+        "market_over_side_trials": side_trials,
         "by_market": {m: compare([r for r in eligible if r["market"] == m]) for m in MARKETS},
         "last_7_days": compare(window(7)),
         "last_30_days": compare(window(30)),
