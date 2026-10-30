@@ -1,6 +1,6 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-10-30T04:31:11.534053+00:00",
+  "generated_at": "2026-10-30T04:55:11.517133+00:00",
   "eligible_paired_snapshots": 78,
   "independent_capture_dates": 2,
   "excluded": {
@@ -49,6 +49,60 @@
       "within_1_pct": 26.92,
       "within_2_pct": 42.31,
       "within_5_pct": 67.95
+    }
+  },
+  "market_calibration_trials": {
+    "REB": {
+      "status": "SHADOW_ONLY_NOT_PRODUCTION",
+      "candidate_over_subtract": 0.5,
+      "candidate_under_subtract": 0.0,
+      "baseline_primary": {
+        "n": 16,
+        "independent_capture_dates": 2,
+        "mae": 2.4937,
+        "bias": 0.8225,
+        "median_absolute_error": 2.045,
+        "within_1_pct": 31.25,
+        "within_2_pct": 37.5,
+        "within_5_pct": 81.25
+      },
+      "counterfactual_over_adjusted_forecast": {
+        "n": 16,
+        "independent_capture_dates": 2,
+        "mae": 2.5137,
+        "bias": 0.3225,
+        "median_absolute_error": 1.825,
+        "within_1_pct": 37.5,
+        "within_2_pct": 50.0,
+        "within_5_pct": 81.25
+      },
+      "note": "Forecast MAE counterfactual only; side-specific bet performance cannot be inferred from this. No production changes."
+    },
+    "3PM": {
+      "status": "SHADOW_ONLY_NOT_PRODUCTION",
+      "candidate_over_subtract": 0.75,
+      "candidate_under_subtract": 0.0,
+      "baseline_primary": {
+        "n": 7,
+        "independent_capture_dates": 2,
+        "mae": 1.2171,
+        "bias": 1.0914,
+        "median_absolute_error": 1.0,
+        "within_1_pct": 57.14,
+        "within_2_pct": 71.43,
+        "within_5_pct": 100.0
+      },
+      "counterfactual_over_adjusted_forecast": {
+        "n": 7,
+        "independent_capture_dates": 2,
+        "mae": 0.8529,
+        "bias": 0.3414,
+        "median_absolute_error": 0.6,
+        "within_1_pct": 57.14,
+        "within_2_pct": 100.0,
+        "within_5_pct": 100.0
+      },
+      "note": "Forecast MAE counterfactual only; side-specific bet performance cannot be inferred from this. No production changes."
     }
   },
   "by_market": {
