@@ -472,34 +472,45 @@ def refresh():
         base["challenger_filtered_signals"]=original_count-len(signals)
         base["challenger_filter_mode"]="DISAGREEMENT_VETO_RESEARCH_UNVALIDATED"
         base["challenger_model_version"]="minutes_rate_current_role_v2"
-        # Temporary conservative PTS protection based on prospective capture bias.
-        # Preserve all three raw forecasts and immutable pregame research fields.
-        # Apply a modest 1.5-point downward adjustment to the displayed PTS
-        # production projection only; do not claim this is holdout-validated.
-        # Suppress PTS OVER recommendations until a separate forward holdout
-        # demonstrates adequate calibration. Other markets remain unchanged.
+        # Immediate PTS production recalibration, based on prospective observed
+        # positive bias across all four models. V4 has the lowest paired PTS
+        # MAE so favor it when available, while preserving original forecasts.
+        # The adjustment is provisional and must be measured prospectively.
         pts_before=len(signals)
         protected=[]
         for signal in signals:
             if signal.get("market")!="PTS":
                 protected.append(signal)
                 continue
-            old=number(signal.get("projection"))
-            if old is not None:
-                signal["unadjusted_primary_projection"]=old
-                signal["projection"]=round(max(0.0,old-1.5),2)
-                signal["projection_method"]="PTS_TEMPORARY_BIAS_GUARD_MINUS_1_5"
-                signal["gap"]=round(abs(signal["projection"]-float(signal["line"])),2)
+            primary=number(signal.get("projection"))
+            v4=number(signal.get("v4_projection"))
+            line=number(signal.get("line"))
+            if primary is None or line is None:
+                continue
+            signal["unadjusted_primary_projection"]=primary
+            # V4 led PTS paired MAE (6.28 vs 6.61 primary), but has only
+            # two capture dates. Blend to avoid a wholesale model switch.
+            baseline=(0.7*v4+0.3*primary) if v4 is not None and v4>=0 else primary
+            # Shrink observed ~2.9-point overprediction to a conservative
+            # two-point correction, rather than fitting the full small sample.
+            adjusted=round(max(0.0,baseline-2.0),2)
+            signal["projection"]=adjusted
+            signal["projection_method"]="PTS_V4_WEIGHTED_BIAS_CALIBRATION_PROVISIONAL"
+            signal["pts_calibration_components"]={"primary":primary,"v4":v4,"v4_weight":0.7 if v4 is not None and v4>=0 else 0.0,"bias_correction":2.0}
+            signal["gap"]=round(abs(adjusted-line),2)
+            # Candidate was selected with an older projection. Recheck
+            # direction and margin instead of leaving stale qualifying bets.
+            threshold=max(0.5,0.08*max(line,1))
             if signal.get("side")=="OVER":
-                signal["qualification_reason"]="PTS OVER suspended pending independent forward validation"
+                signal["qualification_reason"]="PTS OVER temporarily suspended: unvalidated overprediction"
                 continue
-            # UNDER requires the adjusted model to remain below the book line
-            # by at least the same threshold as initial candidate qualification.
-            if old is None or signal["projection"]>=float(signal["line"])-max(0.5,0.08*max(float(signal["line"]),1)):
+            if adjusted>line-threshold:
                 continue
+            signal["calibrated_edge"]=round(line-adjusted,2)
             protected.append(signal)
         signals=protected
-        base["pts_bias_guard"]="PTS_OVER_SUSPENDED_UNDER_MINUS_1_5_UNVALIDATED"
+        base["pts_calibration"]="V4_70_PRIMARY_30_MINUS_2_POINTS_PROVISIONAL"
+        base["pts_over_status"]="SUSPENDED_PENDING_FORWARD_VALIDATION"
         base["pts_signals_removed_by_guard"]=pts_before-len(signals)
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
