@@ -1044,6 +1044,23 @@ def model_performance():
             "priced_graded":len(priced_v),
             "flat_profit_units":round(pnl,3),
             "flat_roi_pct":round(100*pnl/len(priced_v),1) if priced_v else None}
+    pending_audit={}
+    for r in rows:
+        if r.get("status")!="pending":continue
+        reason=str(r.get("validation_status") or "awaiting_final_or_matching_boxscore")
+        pending_audit[reason]=pending_audit.get(reason,0)+1
+    model_disagreement={}
+    for market in ("PTS","REB","AST","3PM","PRA"):
+        sample=[r for r in completed if r.get("market")==market
+                and number(r.get("pregame_primary_projection")) is not None
+                and number(r.get("pregame_challenger_projection")) is not None
+                and number(r.get("actual")) is not None]
+        if not sample:continue
+        baseline=sum(abs(float(r["pregame_primary_projection"])-float(r["actual"])) for r in sample)/len(sample)
+        challenger=sum(abs(float(r["pregame_challenger_projection"])-float(r["actual"])) for r in sample)/len(sample)
+        model_disagreement[market]={"paired":len(sample),"primary_mae":round(baseline,3),
+            "challenger_mae":round(challenger,3),
+            "note":"Descriptive paired results; not an independent holdout."}
     # Distinct, date-scoped snapshots of the actual captured pregame picks.
     # Do not conflate this with historical experimental simulations.
     windows={}
@@ -1067,7 +1084,7 @@ def model_performance():
             "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
             "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
             "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
-            "by_market":by_market,"by_model_version":version_stats,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
+            "by_market":by_market,"by_model_version":version_stats,"pending_audit":pending_audit,"paired_projection_audit":model_disagreement,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
 # Supplemental injury/lineup research. Never infer a confirmed starter or silently
