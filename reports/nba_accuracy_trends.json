@@ -1,0 +1,179 @@
+{
+  "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
+  "generated_at": "2026-10-30T04:21:18.684Z",
+  "eligible_paired_snapshots": 0,
+  "independent_capture_dates": 0,
+  "excluded": {
+    "incomplete_pregame_model_snapshot": 258,
+    "identity_review": 36,
+    "ungraded": 410
+  },
+  "overall": {
+    "primary": {
+      "n": 0,
+      "mae": null,
+      "bias": null,
+      "independent_capture_dates": 0
+    },
+    "challenger": {
+      "n": 0,
+      "mae": null,
+      "bias": null,
+      "independent_capture_dates": 0
+    },
+    "v4": {
+      "n": 0,
+      "mae": null,
+      "bias": null,
+      "independent_capture_dates": 0
+    },
+    "consensus": {
+      "n": 0,
+      "mae": null,
+      "bias": null,
+      "independent_capture_dates": 0
+    }
+  },
+  "by_market": {
+    "PTS": {
+      "primary": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "challenger": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "v4": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "consensus": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      }
+    },
+    "REB": {
+      "primary": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "challenger": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "v4": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "consensus": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      }
+    },
+    "AST": {
+      "primary": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "challenger": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "v4": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "consensus": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      }
+    },
+    "3PM": {
+      "primary": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "challenger": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "v4": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "consensus": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      }
+    },
+    "PRA": {
+      "primary": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "challenger": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "v4": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      },
+      "consensus": {
+        "n": 0,
+        "mae": null,
+        "bias": null,
+        "independent_capture_dates": 0
+      }
+    }
+  },
+  "by_capture_date": {},
+  "earlier_vs_later": {
+    "status": "INSUFFICIENT_DATES"
+  },
+  "notes": [
+    "Paired immutable pregame captures only",
+    "Lower MAE better",
+    "Across-market error units differ",
+    "Descriptive not causal"
+  ]
+}
