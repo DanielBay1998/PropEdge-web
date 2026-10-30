@@ -42,7 +42,7 @@ def candidate(signal,groups):
   else:stat=number(r.get(market))
   if stat is not None and stat>=0:valid.append((minutes,stat))
  valid=valid[-20:]
- if len(valid)<3:return None
+ if len(valid)<8:return None
  last5=valid[-5:];last10=valid[-10:]
  # Robust recent-role minutes: median protects against single overtime games
  # while recent usage changes still influence the estimate.
@@ -53,12 +53,16 @@ def candidate(signal,groups):
  long_role=statistics.median(long_minutes)
  projected_minutes=max(8,min(42,.65*recent_role+.35*long_role))
  minutes_spread=statistics.pstdev(recent_minutes) if len(recent_minutes)>1 else 0.0
+ # High role instability is a reason to abstain, not to force an adjustment.
+ if minutes_spread>8 or recent_role<12:return None
  rate_recent=sum(v/m for m,v in last10)/len(last10)
  rate_long=sum(v/m for m,v in valid)/len(valid)
  minute_based=projected_minutes*(.65*rate_recent+.35*rate_long)
  recent=sum(v for m,v in last10)/len(last10)
  adjusted_recent=.75*recent+.25*minute_based
- raw=.8*baseline+.2*adjusted_recent
+ # Shrink uncertain minute-rate estimates toward the incumbent projection.
+ confidence=min(1.0,(len(valid)-7)/13)*max(0.25,1-minutes_spread/12)
+ raw=(1-.2*confidence)*baseline+(.2*confidence)*adjusted_recent
  cap=max(1,baseline*.15)
  projection=max(0,min(baseline+cap,max(baseline-cap,raw)))
- return {"shadow_minutes_projection":round(projection,5),"shadow_projected_minutes":round(projected_minutes,3),"shadow_minutes_samples":len(valid),"shadow_minutes_volatility":round(minutes_spread,3),"shadow_model":"minutes_v2_robust_role_capture_time"}
+ return {"shadow_minutes_projection":round(projection,5),"shadow_projected_minutes":round(projected_minutes,3),"shadow_minutes_samples":len(valid),"shadow_minutes_volatility":round(minutes_spread,3),"shadow_minutes_confidence":round(confidence,3),"shadow_model":"minutes_v2_robust_role_capture_time"}
