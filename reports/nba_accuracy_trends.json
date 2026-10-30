@@ -1,6 +1,6 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-10-30T04:55:11.517133+00:00",
+  "generated_at": "2026-10-30T04:56:41.151248+00:00",
   "eligible_paired_snapshots": 78,
   "independent_capture_dates": 2,
   "excluded": {
@@ -103,6 +103,62 @@
         "within_5_pct": 100.0
       },
       "note": "Forecast MAE counterfactual only; side-specific bet performance cannot be inferred from this. No production changes."
+    }
+  },
+  "market_over_side_trials": {
+    "REB": {
+      "status": "RETROSPECTIVE_CAPTURED_BETS_ONLY_NOT_HOLDOUT",
+      "candidate_over_subtract": 0.5,
+      "minimum_edge_rule": "max(0.5, 8% of line)",
+      "original_policy": {
+        "qualified": 8,
+        "settled": 8,
+        "wins": 2,
+        "losses": 6,
+        "hit_rate_pct": 25.0
+      },
+      "adjusted_policy": {
+        "qualified": 2,
+        "settled": 2,
+        "wins": 1,
+        "losses": 1,
+        "hit_rate_pct": 50.0
+      },
+      "filtered_by_adjustment": {
+        "qualified": 6,
+        "settled": 6,
+        "wins": 1,
+        "losses": 5,
+        "hit_rate_pct": 16.67
+      },
+      "note": "Same pregame captures and offered lines; does not model sportsbook odds, ROI, new bets, or future results. Do not promote without chronological holdout."
+    },
+    "3PM": {
+      "status": "RETROSPECTIVE_CAPTURED_BETS_ONLY_NOT_HOLDOUT",
+      "candidate_over_subtract": 0.75,
+      "minimum_edge_rule": "max(0.5, 8% of line)",
+      "original_policy": {
+        "qualified": 7,
+        "settled": 7,
+        "wins": 3,
+        "losses": 4,
+        "hit_rate_pct": 42.86
+      },
+      "adjusted_policy": {
+        "qualified": 1,
+        "settled": 1,
+        "wins": 1,
+        "losses": 0,
+        "hit_rate_pct": 100.0
+      },
+      "filtered_by_adjustment": {
+        "qualified": 6,
+        "settled": 6,
+        "wins": 2,
+        "losses": 4,
+        "hit_rate_pct": 33.33
+      },
+      "note": "Same pregame captures and offered lines; does not model sportsbook odds, ROI, new bets, or future results. Do not promote without chronological holdout."
     }
   },
   "by_market": {
