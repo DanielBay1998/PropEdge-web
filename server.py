@@ -493,10 +493,11 @@ def refresh():
             baseline=(0.7*v4+0.3*primary) if v4 is not None and v4>=0 else primary
             # Shrink observed ~2.9-point overprediction to a conservative
             # two-point correction, rather than fitting the full small sample.
-            adjusted=round(max(0.0,baseline-2.0),2)
+            is_over=signal.get("side")=="OVER"
+            adjusted=round(max(0.0,baseline-2.0),2) if is_over else round(primary,2)
             signal["projection"]=adjusted
-            signal["projection_method"]="PTS_V4_WEIGHTED_BIAS_CALIBRATION_PROVISIONAL"
-            signal["pts_calibration_components"]={"primary":primary,"v4":v4,"v4_weight":0.7 if v4 is not None and v4>=0 else 0.0,"bias_correction":2.0}
+            signal["projection_method"]="PTS_OVER_V4_WEIGHTED_MINUS_2_PROVISIONAL" if is_over else "PTS_UNDER_ORIGINAL_PRIMARY"
+            signal["pts_calibration_components"]={"primary":primary,"v4":v4,"v4_weight":0.7 if v4 is not None and v4>=0 else 0.0,"bias_correction":2.0 if is_over else 0.0}
             signal["gap"]=round(abs(adjusted-line),2)
             # Candidate was selected with an older projection. Recheck
             # direction and margin instead of leaving stale qualifying bets.
@@ -509,7 +510,7 @@ def refresh():
             signal["qualification_reason"]="PTS calibrated edge; provisional, not validated"
             protected.append(signal)
         signals=protected
-        base["pts_calibration"]="V4_70_PRIMARY_30_MINUS_2_POINTS_PROVISIONAL"
+        base["pts_calibration"]="OVER_V4_70_PRIMARY_30_MINUS_2_UNDER_PRIMARY_UNCHANGED"
         base["pts_over_status"]="AVAILABLE_IF_CALIBRATED_EDGE_QUALIFIES_PROVISIONAL"
         base["pts_signals_removed_by_guard"]=pts_before-len(signals)
         # Availability guardrail: a reported OUT player is not an actionable pick.
