@@ -1026,6 +1026,24 @@ def model_performance():
             "mean_absolute_error":mae,"priced_graded":len(priced),
             "flat_profit_units":round(profit,3) if priced else None,
             "flat_roi_pct":round(100*profit/len(priced),1) if priced else None}
+    versions={}
+    for row in rows:
+        key=str(row.get("production_model_version") or "legacy_unversioned")
+        versions.setdefault(key,[]).append(row)
+    version_stats={}
+    for key,items in versions.items():
+        settled=[r for r in items if r.get("status") in ("win","loss","push")]
+        wins_v=sum(r["status"]=="win" for r in settled)
+        losses_v=sum(r["status"]=="loss" for r in settled)
+        priced_v=[r for r in settled if number(r.get("odds")) is not None and abs(float(r["odds"]))>=100]
+        pnl=sum((float(r["odds"])/100 if float(r["odds"])>0 else 100/abs(float(r["odds"]))) if r["status"]=="win" else (-1 if r["status"]=="loss" else 0) for r in priced_v)
+        version_stats[key]={"captured":len(items),"graded":len(settled),
+            "pending":sum(r.get("status")=="pending" for r in items),
+            "wins":wins_v,"losses":losses_v,
+            "hit_rate":round(100*wins_v/(wins_v+losses_v),1) if wins_v+losses_v else None,
+            "priced_graded":len(priced_v),
+            "flat_profit_units":round(pnl,3),
+            "flat_roi_pct":round(100*pnl/len(priced_v),1) if priced_v else None}
     # Distinct, date-scoped snapshots of the actual captured pregame picks.
     # Do not conflate this with historical experimental simulations.
     windows={}
@@ -1049,7 +1067,7 @@ def model_performance():
             "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
             "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
             "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
-            "by_market":by_market,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
+            "by_market":by_market,"by_model_version":version_stats,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
 # Supplemental injury/lineup research. Never infer a confirmed starter or silently
