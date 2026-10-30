@@ -501,16 +501,16 @@ def refresh():
             # Candidate was selected with an older projection. Recheck
             # direction and margin instead of leaving stale qualifying bets.
             threshold=max(0.5,0.08*max(line,1))
-            if signal.get("side")=="OVER":
-                signal["qualification_reason"]="PTS OVER temporarily suspended: unvalidated overprediction"
+            direction=1 if signal.get("side")=="OVER" else -1
+            edge=direction*(adjusted-line)
+            if edge<threshold:
                 continue
-            if adjusted>line-threshold:
-                continue
-            signal["calibrated_edge"]=round(line-adjusted,2)
+            signal["calibrated_edge"]=round(edge,2)
+            signal["qualification_reason"]="PTS calibrated edge; provisional, not validated"
             protected.append(signal)
         signals=protected
         base["pts_calibration"]="V4_70_PRIMARY_30_MINUS_2_POINTS_PROVISIONAL"
-        base["pts_over_status"]="SUSPENDED_PENDING_FORWARD_VALIDATION"
+        base["pts_over_status"]="AVAILABLE_IF_CALIBRATED_EDGE_QUALIFIES_PROVISIONAL"
         base["pts_signals_removed_by_guard"]=pts_before-len(signals)
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
