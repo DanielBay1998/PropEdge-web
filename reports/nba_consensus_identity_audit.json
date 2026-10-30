@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 219,
+  "total": 293,
   "counts": {
-    "verified_from_available_logs": 219
+    "verified_from_available_logs": 293
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -1980,6 +1980,672 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261030|135373|tyresemaxey|AST|OVER|4.5",
+      "player": "Tyrese Maxey",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135556|joshgiddey|AST|OVER|7.5",
+      "player": "Josh Giddey",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261030|135553|trejohnson|PRA|OVER|12.5",
+      "player": "Tre Johnson",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135553|sionjames|AST|UNDER|3.5",
+      "player": "Sion James",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|dennisschroder|PRA|UNDER|23.5",
+      "player": "Dennis Schroder",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135374|deanthonymelton|PRA|OVER|14.5",
+      "player": "De'Anthony Melton",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135441|giannisantetokounmpo|PRA|UNDER|47.5",
+      "player": "Giannis Antetokounmpo",
+      "game": "Indiana Pacers @ Miami Heat",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "miamiheat"
+    },
+    {
+      "id": "20261030|135553|graysonallen|PRA|UNDER|23.5",
+      "player": "Grayson Allen",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|alexsarr|AST|OVER|1.5",
+      "player": "Alex Sarr",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135556|matasbuzelis|AST|OVER|1.5",
+      "player": "Matas Buzelis",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261030|135373|jaylenbrown|PRA|OVER|27.5",
+      "player": "Jaylen Brown",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135373|lebronjames|AST|OVER|5.5",
+      "player": "LeBron James",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135374|quentingrimes|PRA|OVER|13.5",
+      "player": "Quentin Grimes",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135373|joelembiid|AST|OVER|3.5",
+      "player": "Joel Embiid",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135553|sionjames|PRA|UNDER|13.5",
+      "player": "Sion James",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|bilalcoulibaly|PRA|OVER|13.5",
+      "player": "Bilal Coulibaly",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135373|tyresemaxey|PRA|OVER|31.5",
+      "player": "Tyrese Maxey",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135374|draymondgreen|AST|OVER|5.5",
+      "player": "Draymond Green",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135374|sandromamukelashvili|PRA|OVER|15.5",
+      "player": "Sandro Mamukelashvili",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135557|demarderozan|PRA|OVER|18.5",
+      "player": "DeMar DeRozan",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135374|ziairewilliams|PRA|OVER|13.5",
+      "player": "Ziaire Williams",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135373|landryshamet|PRA|OVER|11.5",
+      "player": "Landry Shamet",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261030|135553|brandonmiller|PRA|UNDER|36.5",
+      "player": "Brandon Miller",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|nazreid|PRA|UNDER|27.5",
+      "player": "Naz Reid",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135374|matissethybulle|PRA|OVER|10.5",
+      "player": "Matisse Thybulle",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135373|lebronjames|AST|OVER|6.5",
+      "player": "LeBron James",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135556|samhauser|PRA|OVER|13.5",
+      "player": "Sam Hauser",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261030|135373|lebronjames|PRA|OVER|28.5",
+      "player": "LeBron James",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135374|deanthonymelton|PRA|OVER|15.5",
+      "player": "De'Anthony Melton",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135557|jamalmurray|PRA|OVER|33.5",
+      "player": "Jamal Murray",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135374|draymondgreen|PRA|UNDER|19.5",
+      "player": "Draymond Green",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135553|traeyoung|3PM|UNDER|2.5",
+      "player": "Trae Young",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135374|deanthonymelton|PTS|OVER|9.5",
+      "player": "De'Anthony Melton",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135557|aarongordon|REB|OVER|5.5",
+      "player": "Aaron Gordon",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135557|jamalmurray|PTS|OVER|22.5",
+      "player": "Jamal Murray",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135553|trejohnson|PTS|OVER|9.5",
+      "player": "Tre Johnson",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135556|matasbuzelis|PTS|OVER|13.5",
+      "player": "Matas Buzelis",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261030|135556|jalensmith|REB|OVER|6.5",
+      "player": "Jalen Smith",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261030|135553|brandonmiller|PTS|UNDER|27.5",
+      "player": "Brandon Miller",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|nazreid|PTS|UNDER|16.5",
+      "player": "Naz Reid",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135441|aaronnesmith|PTS|OVER|12.5",
+      "player": "Aaron Nesmith",
+      "game": "Indiana Pacers @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "indianapacers"
+    },
+    {
+      "id": "20261030|135556|jaysontatum|PTS|UNDER|27.5",
+      "player": "Jayson Tatum",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261030|135373|jaylenbrown|PTS|OVER|18.5",
+      "player": "Jaylen Brown",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135373|vjedgecombe|REB|OVER|5.5",
+      "player": "VJ Edgecombe",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135373|tyresemaxey|PTS|OVER|23.5",
+      "player": "Tyrese Maxey",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135373|joelembiid|PTS|OVER|22.5",
+      "player": "Joel Embiid",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135441|giannisantetokounmpo|PTS|UNDER|29.5",
+      "player": "Giannis Antetokounmpo",
+      "game": "Indiana Pacers @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "miamiheat"
+    },
+    {
+      "id": "20261030|135553|dennisschroder|3PM|UNDER|1.5",
+      "player": "Dennis Schroder",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|brandonmiller|3PM|OVER|2.5",
+      "player": "Brandon Miller",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135373|jaylenbrown|REB|OVER|5.5",
+      "player": "Jaylen Brown",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135553|dennisschroder|PTS|UNDER|14.5",
+      "player": "Dennis Schroder",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|graysonallen|3PM|UNDER|3.5",
+      "player": "Grayson Allen",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135374|austinreaves|REB|UNDER|4.5",
+      "player": "Austin Reaves",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135557|jamalmurray|REB|OVER|4.5",
+      "player": "Jamal Murray",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135553|alexsarr|PTS|OVER|10.5",
+      "player": "Alex Sarr",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135373|jalenbrunson|PTS|UNDER|27.5",
+      "player": "Jalen Brunson",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261030|135557|jamalmurray|3PM|OVER|2.5",
+      "player": "Jamal Murray",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135553|bilalcoulibaly|PTS|OVER|8.5",
+      "player": "Bilal Coulibaly",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261030|135374|matissethybulle|PTS|OVER|6.5",
+      "player": "Matisse Thybulle",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135553|graysonallen|REB|UNDER|3.5",
+      "player": "Grayson Allen",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135553|moussadiabate|REB|UNDER|10.5",
+      "player": "Moussa Diabate",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135556|neemiasqueta|PTS|OVER|8.5",
+      "player": "Neemias Queta",
+      "game": "Chicago Bulls @ Boston Celtics",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261030|135374|quentingrimes|PTS|OVER|7.5",
+      "player": "Quentin Grimes",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135373|landryshamet|3PM|OVER|1.5",
+      "player": "Landry Shamet",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261030|135373|milesmcbride|PTS|OVER|5.5",
+      "player": "Miles McBride",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261030|135374|deanthonymelton|REB|OVER|2.5",
+      "player": "De'Anthony Melton",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261030|135553|sionjames|3PM|UNDER|1.5",
+      "player": "Sion James",
+      "game": "Charlotte Hornets @ Washington Wizards",
+      "market": "3PM",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261030|135557|christianbraun|REB|OVER|3.5",
+      "player": "Christian Braun",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261030|135374|quentingrimes|REB|OVER|2.5",
+      "player": "Quentin Grimes",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135373|landryshamet|PTS|OVER|7.5",
+      "player": "Landry Shamet",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261030|135373|tyresemaxey|REB|OVER|3.5",
+      "player": "Tyrese Maxey",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261030|135374|ziairewilliams|PTS|OVER|9.5",
+      "player": "Ziaire Williams",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135374|sandromamukelashvili|PTS|OVER|9.5",
+      "player": "Sandro Mamukelashvili",
+      "game": "Los Angeles Lakers @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261030|135557|demarderozan|PTS|OVER|13.5",
+      "player": "DeMar DeRozan",
+      "game": "Denver Nuggets @ Phoenix Suns",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
     }
   ]
 }
