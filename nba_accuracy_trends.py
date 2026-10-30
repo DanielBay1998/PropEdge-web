@@ -99,6 +99,26 @@ def run():
                 "change_in_mae_later_minus_earlier": {
                     name: round(compare(late)[name]["mae"] - compare(early)[name]["mae"], 4)
                     for name in MODELS}}
+    # Fixed, provisional market-specific challengers; never tune on evaluation outcomes.
+    # Preserve live production projections and original pregame snapshots.
+    candidate_rules = {
+        "REB": {"over_subtract": 0.5, "under_subtract": 0.0},
+        "3PM": {"over_subtract": 0.75, "under_subtract": 0.0},
+    }
+    calibration_trials = {}
+    for market, rule in candidate_rules.items():
+        subset = [r for r in eligible if r["market"] == market]
+        baseline = [{"projection": r["forecasts"]["primary"], "actual": r["actual"], "date": r["date"]} for r in subset]
+        adjusted = [{"projection": max(0.0, r["forecasts"]["primary"] - rule["over_subtract"]),
+                     "actual": r["actual"], "date": r["date"]} for r in subset]
+        calibration_trials[market] = {
+            "status": "SHADOW_ONLY_NOT_PRODUCTION",
+            "candidate_over_subtract": rule["over_subtract"],
+            "candidate_under_subtract": rule["under_subtract"],
+            "baseline_primary": summary(baseline),
+            "counterfactual_over_adjusted_forecast": summary(adjusted),
+            "note": "Forecast MAE counterfactual only; side-specific bet performance cannot be inferred from this. No production changes.",
+        }
     report = {
         "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -106,6 +126,7 @@ def run():
         "independent_capture_dates": len(dates),
         "excluded": dict(excluded),
         "overall": compare(eligible),
+        "market_calibration_trials": calibration_trials,
         "by_market": {m: compare([r for r in eligible if r["market"] == m]) for m in MARKETS},
         "last_7_days": compare(window(7)),
         "last_30_days": compare(window(30)),
