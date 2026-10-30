@@ -84,7 +84,7 @@ def run():
      "odds":signal.get("odds"),"game":signal.get("game"),
      "production_projection_method":signal.get("projection_method"),
      "production_calibration":signal.get("calibration_components") or signal.get("pts_calibration_components"),
-     "production_model_version":("calibrated_2026_10_30" if signal.get("projection_method") in ("PTS_OVER_V4_WEIGHTED_MINUS_2_PROVISIONAL","PTS_UNDER_ORIGINAL_PRIMARY","REB_OVER_PROVISIONAL_BIAS_CORRECTION","3PM_OVER_PROVISIONAL_BIAS_CORRECTION") else "primary_legacy_or_unversioned"),
+     "production_model_version":("calibrated_2026_10_30" if signal.get("projection_method") in ("PTS_OVER_V4_WEIGHTED_MINUS_2_PROVISIONAL","REB_OVER_PROVISIONAL_BIAS_CORRECTION","3PM_OVER_PROVISIONAL_BIAS_CORRECTION") else "baseline_2026_10_30"),
      "status":"pending",
      "actual":None,"graded_at":None,**(shadow or {}),**consensus_shadow})
  # Match only completed ESPN games to the exact game-log ID.
