@@ -27,7 +27,7 @@ def run():
   for r in records:
    try:timestamps.append(datetime.datetime.fromisoformat(str(r["captured_at"]).replace("Z","+00:00")))
    except (ValueError,KeyError,TypeError):pass
-  grade_only=bool(timestamps and (today()-max(timestamps)).total_seconds()<1800)
+  grade_only=bool(timestamps and (today()-max(timestamps)).total_seconds()<1800 and any(r.get("production_model_version") for r in records if r.get("captured_at")==max(records,key=lambda x:x.get("captured_at","")).get("captured_at")))
  if grade_only:print("Grade-only mode: skipping live odds board request",flush=True)
  # Scheduled sync must always reach grading even when the live odds board is slow.
  attempts=1 if os.getenv("PROPEDGE_CAPTURE_IF_DUE")=="1" else 5
