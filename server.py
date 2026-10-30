@@ -925,6 +925,14 @@ def research_backtests():
     return {"reports":reports,"production_model_affected":False,
             "note":"Retrospective research uses absence proxies and trailing averages, not saved production model predictions."}
 
+@app.get("/api/nba-accuracy-trends")
+def nba_accuracy_trends():
+    path = ROOT / "reports" / "nba_accuracy_trends.json"
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {"status": "REPORT_UNAVAILABLE", "eligible_paired_snapshots": 0}
+
 @app.get("/api/model-performance")
 def model_performance():
     path=ROOT/"data"/"model_tracking.json"
