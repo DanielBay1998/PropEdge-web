@@ -43,13 +43,15 @@ jobs:
         run: python nba_consensus_identity_audit.py
       - name: Grade immutable pregame consensus research snapshots
         run: python nba_pregame_consensus_grading.py
+      - name: Refresh paired prospective accuracy report
+        run: python nba_accuracy_trends.py
       - name: Commit validated game logs and grades
         id: commit
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/nba_2026_27.csv data/model_tracking.json data/nba_model_evaluation.json reports/nba_pregame_consensus_grading.json reports/nba_consensus_identity_audit.json reports/nba_context_holdout.json
+          git add data/nba_2026_27.csv data/model_tracking.json data/nba_model_evaluation.json reports/nba_pregame_consensus_grading.json reports/nba_consensus_identity_audit.json reports/nba_context_holdout.json reports/nba_accuracy_trends.json
           if ! git diff --cached --quiet; then
             git commit -m 'Sync final NBA boxscores and model grades'
             git pull --rebase origin main
