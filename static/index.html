@@ -959,7 +959,7 @@ function renderGames(){
  $('matchupFilters').innerHTML='<button data-matchup="ALL" class="'+(selectedGame==='ALL'?'active':'')+'">All games</button>'+groups.map(name=>{const parts=String(name).split(/\s+@\s+/);const away=teamCode(parts[0]),home=teamCode(parts[1]);const logo=code=>code?'<img src="https://a.espncdn.com/i/teamlogos/nba/500/'+({UTA:'utah',NOP:'no',NYK:'ny',SAS:'sa',GSW:'gs',WAS:'wsh'}[code]||code.toLowerCase())+'.png" alt="'+escapeHTML(code)+'" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'inline\'"/><span class="pe-logo-fallback" style="display:none">'+escapeHTML(code)+'</span>':'<span class="pe-logo-fallback">?</span>';return `<button data-matchup="${escapeHTML(name)}" class="${selectedGame===name?'active':''}" aria-label="${escapeHTML(name)}" title="${escapeHTML(name)}"><span class="pe-matchup-logos">${logo(away)}<small>@</small>${logo(home)}</span></button>`}).join('');
  $('matchupFilters').querySelectorAll('button').forEach(b=>b.onclick=()=>{selectedGame=b.dataset.matchup;$('matchupFilters').querySelectorAll('button').forEach(tab=>{const active=tab.dataset.matchup===selectedGame;tab.classList.toggle('active',active);tab.setAttribute('aria-pressed',String(active))});render()});
 }
-async function loadGames(){try{const r=await fetch('/api/games?date='+chicagoDate(selectedDateOffset),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);schedule=await r.json()}catch(e){schedule={date:chicagoDate(selectedDateOffset),games:[],error:'Could not load the full NBA schedule'}}renderGames()}
+async function loadGames(){try{const r=await fetch('/api/games?date='+chicagoDate(selectedDateOffset),{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);schedule=await r.json()}catch(e){schedule={date:chicagoDate(selectedDateOffset),games:[],error:'Could not load the full NBA schedule'}}renderGames();renderAllPropsGames()}
 function changeDate(delta){selectedDateOffset=Math.max(-7,Math.min(7,delta));schedule={date:chicagoDate(selectedDateOffset),games:[]};renderGames();loadGames()}
 $('prevDate').onclick=()=>changeDate(selectedDateOffset-1);$('nextDate').onclick=()=>changeDate(selectedDateOffset+1);$('todayDate').onclick=()=>changeDate(0);$('tomorrowDate').onclick=()=>changeDate(1);
 function attach(container){container.querySelectorAll('[data-card]').forEach(el=>{function toggle(){const detail=el.querySelector('.detail');detail.classList.toggle('hidden');el.setAttribute('aria-expanded',String(!detail.classList.contains('hidden')))}el.addEventListener('click',toggle);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}})})}
@@ -1055,7 +1055,8 @@ function attachAllPropsPicks(){
 }
 function renderAllPropsGames(){
  const signals=(board.signals||[]).filter(p=>p.game);
- const groups=[...new Set(signals.map(p=>p.game))].sort();
+ const fixtureGames=(schedule.games||[]).map(g=>g.away?.name&&g.home?.name?g.away.name+' @ '+g.home.name:null).filter(Boolean);
+ const groups=[...new Set([...fixtureGames,...signals.map(p=>p.game)])].filter(Boolean).sort();
  if(selectedPropsGame!=='ALL'&&!groups.includes(selectedPropsGame))selectedPropsGame='ALL';
  const tabs=$('peGameTabs');if(!tabs)return;
  $('peGameCount').textContent=groups.length+' matchups';
