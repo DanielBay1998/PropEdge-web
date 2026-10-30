@@ -539,6 +539,37 @@ def refresh():
         base["reb_3pm_calibration"]="REB_OVER_MINUS_0_5_3PM_OVER_MINUS_0_75_UNDERS_UNCHANGED_PROVISIONAL"
         base["pts_over_status"]="AVAILABLE_IF_CALIBRATED_EDGE_QUALIFIES_PROVISIONAL"
         base["pts_signals_removed_by_guard"]=pts_before-len(signals)
+        # Production v2: robust minutes/usage overlay using only completed
+        # historical games; no inferred injury, pace, or opponent inputs.
+        # Preserve the original forecast for prospective attribution.
+        from minutes_shadow_capture import load_history as _minutes_history, candidate as _minutes_candidate
+        _history=_minutes_history(datetime.now(timezone.utc).strftime("%Y%m%d"))
+        _v2=[]
+        for signal in signals:
+            original=number(signal.get("projection"))
+            line=number(signal.get("line"))
+            if original is None or line is None:continue
+            shadow=_minutes_candidate(signal,_history)
+            if shadow is None:
+                signal["minutes_v2_status"]="INSUFFICIENT_MINUTES_HISTORY"
+                _v2.append(signal)
+                continue
+            v2=number(shadow.get("shadow_minutes_projection"))
+            if v2 is None:continue
+            signal["pre_minutes_v2_projection"]=original
+            signal["projection"]=round(v2,2)
+            signal["minutes_v2_components"]=shadow
+            signal["projection_method"]="PRODUCTION_MINUTES_V2_ROBUST_ROLE"
+            direction=1 if signal.get("side")=="OVER" else -1
+            edge=direction*(signal["projection"]-line)
+            signal["gap"]=round(abs(edge),2)
+            signal["calibrated_edge"]=round(edge,2)
+            if edge<max(0.5,0.08*max(line,1)):
+                continue
+            _v2.append(signal)
+        signals=_v2
+        base["production_minutes_overlay"]="minutes_v2_robust_role"
+        base["production_minutes_note"]="Historical minutes and usage only; no unverified injury or opponent adjustment"
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
