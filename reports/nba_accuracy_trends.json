@@ -1,6 +1,6 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-10-30T05:10:56.942883+00:00",
+  "generated_at": "2026-10-30T05:11:39.657994+00:00",
   "eligible_paired_snapshots": 78,
   "independent_capture_dates": 2,
   "excluded": {
@@ -49,6 +49,43 @@
       "within_1_pct": 26.92,
       "within_2_pct": 42.31,
       "within_5_pct": 67.95
+    }
+  },
+  "input_reliability_diagnostics": {
+    "PTS": {
+      "sample_count": 19,
+      "independent_capture_dates": 2,
+      "primary_bias": 3.1663,
+      "v4_bias": 2.8924,
+      "status": "INSUFFICIENT_FOR_PRODUCTION_PROMOTION"
+    },
+    "REB": {
+      "sample_count": 16,
+      "independent_capture_dates": 2,
+      "primary_bias": 0.8225,
+      "v4_bias": 0.8542,
+      "status": "INSUFFICIENT_FOR_PRODUCTION_PROMOTION"
+    },
+    "AST": {
+      "sample_count": 19,
+      "independent_capture_dates": 2,
+      "primary_bias": 0.4532,
+      "v4_bias": 0.2775,
+      "status": "INSUFFICIENT_FOR_PRODUCTION_PROMOTION"
+    },
+    "3PM": {
+      "sample_count": 7,
+      "independent_capture_dates": 2,
+      "primary_bias": 1.0914,
+      "v4_bias": 0.9463,
+      "status": "INSUFFICIENT_FOR_PRODUCTION_PROMOTION"
+    },
+    "PRA": {
+      "sample_count": 17,
+      "independent_capture_dates": 2,
+      "primary_bias": 0.8965,
+      "v4_bias": 0.7396,
+      "status": "INSUFFICIENT_FOR_PRODUCTION_PROMOTION"
     }
   },
   "market_calibration_trials": {
