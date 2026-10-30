@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-30T05:02:46.271445+00:00",
+  "generated_at": "2026-10-30T05:08:02.711742+00:00",
   "source": "saved pregame predictions with settled outcomes",
   "production_unchanged": true,
-  "total_records": 778,
+  "total_records": 814,
   "settled_records": 575,
   "deduplicated_settled": 448,
-  "pending": 203,
+  "pending": 239,
   "overall": {
     "bets": 448,
     "wins": 229,
