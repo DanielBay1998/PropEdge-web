@@ -163,6 +163,18 @@ def run():
             "filtered_by_adjustment": graded([r for r in rows if r["old"] and not r["new"]]),
             "note": "Same pregame captures and offered lines; does not model sportsbook odds, ROI, new bets, or future results. Do not promote without chronological holdout.",
         }
+    # Diagnostic-only model input reliability by market and capture date.
+    # No retrospective fit is promoted to live production.
+    market_diagnostics={}
+    for market in MARKETS:
+        subset=[r for r in eligible if r["market"]==market]
+        market_diagnostics[market]={
+            "sample_count":len(subset),
+            "independent_capture_dates":len({r["date"] for r in subset}),
+            "primary_bias":summary([{"projection":r["forecasts"]["primary"],"actual":r["actual"],"date":r["date"]} for r in subset])["bias"],
+            "v4_bias":summary([{"projection":r["forecasts"]["v4"],"actual":r["actual"],"date":r["date"]} for r in subset])["bias"],
+            "status":"INSUFFICIENT_FOR_PRODUCTION_PROMOTION" if len({r["date"] for r in subset})<5 else "REQUIRES_CHRONOLOGICAL_HOLDOUT",
+        }
     report = {
         "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -170,6 +182,7 @@ def run():
         "independent_capture_dates": len(dates),
         "excluded": dict(excluded),
         "overall": compare(eligible),
+        "input_reliability_diagnostics": market_diagnostics,
         "market_calibration_trials": calibration_trials,
         "market_over_side_trials": side_trials,
         "by_market": {m: compare([r for r in eligible if r["market"] == m]) for m in MARKETS},
