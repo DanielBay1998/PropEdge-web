@@ -12,6 +12,7 @@ on:
       - 'evaluate_nba_model.py'
       - 'test_nba_identity_guard.py'
       - 'evaluate_nba_model.py'
+      - 'nba_accuracy_trends.py'
       - '.github/workflows/propedge_nba_gamelog_sync.yml'
 permissions:
   contents: write
