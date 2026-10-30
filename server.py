@@ -479,6 +479,31 @@ def refresh():
         pts_before=len(signals)
         protected=[]
         for signal in signals:
+            if signal.get("market") in ("REB", "3PM"):
+                # Provisional correction; UNDER forecasts remain unchanged.
+                market=signal["market"]
+                if signal.get("side")!="OVER":
+                    protected.append(signal)
+                    continue
+                primary=number(signal.get("projection"))
+                line=number(signal.get("line"))
+                if primary is None or line is None:
+                    continue
+                correction=0.5 if market=="REB" else 0.75
+                adjusted=round(max(0.0,primary-correction),2)
+                threshold=max(0.5,0.08*max(line,1))
+                edge=adjusted-line
+                if edge<threshold:
+                    continue
+                signal["unadjusted_primary_projection"]=primary
+                signal["projection"]=adjusted
+                signal["projection_method"]=market+"_OVER_PROVISIONAL_BIAS_CORRECTION"
+                signal["calibration_components"]={"primary":primary,"bias_correction":correction}
+                signal["gap"]=round(abs(edge),2)
+                signal["calibrated_edge"]=round(edge,2)
+                signal["qualification_reason"]=market+" calibrated OVER edge; provisional"
+                protected.append(signal)
+                continue
             if signal.get("market")!="PTS":
                 protected.append(signal)
                 continue
@@ -511,6 +536,7 @@ def refresh():
             protected.append(signal)
         signals=protected
         base["pts_calibration"]="OVER_V4_70_PRIMARY_30_MINUS_2_UNDER_PRIMARY_UNCHANGED"
+        base["reb_3pm_calibration"]="REB_OVER_MINUS_0_5_3PM_OVER_MINUS_0_75_UNDERS_UNCHANGED_PROVISIONAL"
         base["pts_over_status"]="AVAILABLE_IF_CALIBRATED_EDGE_QUALIFIES_PROVISIONAL"
         base["pts_signals_removed_by_guard"]=pts_before-len(signals)
         # Availability guardrail: a reported OUT player is not an actionable pick.
