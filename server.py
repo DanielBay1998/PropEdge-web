@@ -472,6 +472,35 @@ def refresh():
         base["challenger_filtered_signals"]=original_count-len(signals)
         base["challenger_filter_mode"]="DISAGREEMENT_VETO_RESEARCH_UNVALIDATED"
         base["challenger_model_version"]="minutes_rate_current_role_v2"
+        # Temporary conservative PTS protection based on prospective capture bias.
+        # Preserve all three raw forecasts and immutable pregame research fields.
+        # Apply a modest 1.5-point downward adjustment to the displayed PTS
+        # production projection only; do not claim this is holdout-validated.
+        # Suppress PTS OVER recommendations until a separate forward holdout
+        # demonstrates adequate calibration. Other markets remain unchanged.
+        pts_before=len(signals)
+        protected=[]
+        for signal in signals:
+            if signal.get("market")!="PTS":
+                protected.append(signal)
+                continue
+            old=number(signal.get("projection"))
+            if old is not None:
+                signal["unadjusted_primary_projection"]=old
+                signal["projection"]=round(max(0.0,old-1.5),2)
+                signal["projection_method"]="PTS_TEMPORARY_BIAS_GUARD_MINUS_1_5"
+                signal["gap"]=round(abs(signal["projection"]-float(signal["line"])),2)
+            if signal.get("side")=="OVER":
+                signal["qualification_reason"]="PTS OVER suspended pending independent forward validation"
+                continue
+            # UNDER requires the adjusted model to remain below the book line
+            # by at least the same threshold as initial candidate qualification.
+            if old is None or signal["projection"]>=float(signal["line"])-max(0.5,0.08*max(float(signal["line"]),1)):
+                continue
+            protected.append(signal)
+        signals=protected
+        base["pts_bias_guard"]="PTS_OVER_SUSPENDED_UNDER_MINUS_1_5_UNVALIDATED"
+        base["pts_signals_removed_by_guard"]=pts_before-len(signals)
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
