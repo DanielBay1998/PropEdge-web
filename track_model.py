@@ -32,7 +32,12 @@ def run():
    if not r.get("production_model_version"):continue
    try:versioned_times.append(datetime.datetime.fromisoformat(str(r["captured_at"]).replace("Z","+00:00")))
    except (ValueError,KeyError,TypeError):continue
-  grade_only=bool(versioned_times and (today()-max(versioned_times)).total_seconds()<1800)
+  release_times=[]
+  for r in records:
+   if r.get("production_model_version")!="production_minutes_v2_2026_10_30":continue
+   try:release_times.append(datetime.datetime.fromisoformat(str(r["captured_at"]).replace("Z","+00:00")))
+   except (ValueError,KeyError,TypeError):pass
+  grade_only=bool(release_times and (today()-max(release_times)).total_seconds()<1800)
  if grade_only:print("Grade-only mode: skipping live odds board request",flush=True)
  # Scheduled sync must always reach grading even when the live odds board is slow.
  attempts=1 if os.getenv("PROPEDGE_CAPTURE_IF_DUE")=="1" else 5
