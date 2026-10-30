@@ -44,7 +44,15 @@ def candidate(signal,groups):
  valid=valid[-20:]
  if len(valid)<3:return None
  last5=valid[-5:];last10=valid[-10:]
- projected_minutes=max(8,min(42,.7*sum(m for m,v in last5)/len(last5)+.3*sum(m for m,v in valid)/len(valid)))
+ # Robust recent-role minutes: median protects against single overtime games
+ # while recent usage changes still influence the estimate.
+ import statistics
+ recent_minutes=[m for m,v in last5]
+ long_minutes=[m for m,v in valid]
+ recent_role=statistics.median(recent_minutes)
+ long_role=statistics.median(long_minutes)
+ projected_minutes=max(8,min(42,.65*recent_role+.35*long_role))
+ minutes_spread=statistics.pstdev(recent_minutes) if len(recent_minutes)>1 else 0.0
  rate_recent=sum(v/m for m,v in last10)/len(last10)
  rate_long=sum(v/m for m,v in valid)/len(valid)
  minute_based=projected_minutes*(.65*rate_recent+.35*rate_long)
@@ -53,4 +61,4 @@ def candidate(signal,groups):
  raw=.8*baseline+.2*adjusted_recent
  cap=max(1,baseline*.15)
  projection=max(0,min(baseline+cap,max(baseline-cap,raw)))
- return {"shadow_minutes_projection":round(projection,5),"shadow_projected_minutes":round(projected_minutes,3),"shadow_minutes_samples":len(valid),"shadow_model":"minutes_v1_capture_time"}
+ return {"shadow_minutes_projection":round(projection,5),"shadow_projected_minutes":round(projected_minutes,3),"shadow_minutes_samples":len(valid),"shadow_minutes_volatility":round(minutes_spread,3),"shadow_model":"minutes_v2_robust_role_capture_time"}
