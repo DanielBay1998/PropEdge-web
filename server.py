@@ -440,6 +440,8 @@ def refresh():
             signal["consensus_method"]="THREE_MODEL_EQUAL_WEIGHT_RESEARCH" if len(valid)==3 else "PARTIAL_MODEL_RESEARCH"
         # New distribution engine is evaluated alongside live signals only.
         # Never use uncalibrated probabilities for ranking or qualifying bets.
+        distribution_logs={}
+        distribution_cache={}
         try:
             from nba_distribution_engine import project as distribution_project, simulate as distribution_simulate
             distribution_logs=load_game_logs()
@@ -511,7 +513,7 @@ def refresh():
             # Current-season role correction: prior-season minutes can overstate
             # bench-player opportunities. Shrink toward observed current role.
             # External projections are comparison benchmarks, not copied targets.
-            current_role=[g for g in logs.get(canonical_player(signal.get("player")),[])
+            current_role=[g for g in distribution_logs.get(canonical_player(signal.get("player")),[])
                           if g.get("season")=="current" and number(g.get("MIN")) is not None
                           and number(g.get("MIN"))>=5]
             current_role=sorted(current_role,key=lambda g:g.get("date",""),reverse=True)[:8]
