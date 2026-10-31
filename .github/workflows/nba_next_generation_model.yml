@@ -5,6 +5,7 @@ on:
     paths:
       - nba_distribution_engine.py
       - nba_minutes_rate_candidate_comparison.py
+      - nba_distribution_chronological_holdout.py
       - .github/workflows/nba_next_generation_model.yml
 permissions:
   contents: read
@@ -32,6 +33,8 @@ jobs:
           assert abs(output["over_probability"]+output["under_probability"]+output["push_probability"]-1)<1e-9
           print("Simulation smoke tests passed; no profitability claim.")
           PY
+      - name: Run distribution versus challenger chronological holdout
+        run: python nba_distribution_chronological_holdout.py
       - name: Run chronological minutes-rate challenger comparison
         run: python nba_minutes_rate_candidate_comparison.py
       - name: Run existing opponent-defense chronological holdout
@@ -41,6 +44,7 @@ jobs:
         with:
           name: nba-next-generation-model-evaluation
           path: |
+            reports/nba_distribution_chronological_holdout.json
             reports/nba_minutes_rate_candidate_comparison.json
             reports/nba_context_ablation_holdout.json
       - name: Guard production
