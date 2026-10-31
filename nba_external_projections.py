@@ -58,21 +58,42 @@ def fetch_dropcoverage(day):
             "source":"Drop Coverage","players":players}
 
 def fetch_dropcoverage_full(day):
-    """Optional public full-board endpoint; fail closed if access, date, or schema changes."""
-    url=os.getenv("DROP_COVERAGE_FULL_URL","").strip()
-    if not url or not url.startswith("https://"):
-        return {"status":"NOT_CONFIGURED","source":"Drop Coverage Full","players":{}}
+    """Read the publisher's temporarily open full-board endpoint; never infer missing projections."""
+    import re
+    url=os.getenv("DROP_COVERAGE_FULL_URL","https://gpupsgkyyldqyfemtjml.supabase.co/functions/v1/data?name=projections").strip()
+    token=os.getenv("DROP_COVERAGE_PUBLIC_TOKEN","").strip()
+    if not token:
+        # The publisher explicitly documents its public browser key in its site source.
+        # Only discover a public anon JWT; never use service_role or member credentials.
+        try:
+            request=urllib.request.Request("https://thedropcoverage.com/",headers={"User-Agent":"Mozilla/5.0"})
+            with urllib.request.urlopen(request,timeout=8) as response:
+                html=response.read(700000).decode("utf-8","replace")
+            candidates=re.findall(r"eyJ[A-Za-z0-9_-]{70,}\\.[A-Za-z0-9_-]+\\.[A-Za-z0-9_-]+",html)
+            for candidate in candidates:
+                try:
+                    import base64
+                    claims=json.loads(base64.urlsafe_b64decode(candidate.split(".")[1]+"==="))
+                    if claims.get("role")=="anon" and claims.get("iss")=="supabase":
+                        token=candidate;break
+                except Exception:continue
+        except Exception:
+            pass
+    if not token:
+        return {"status":"PUBLIC_TOKEN_UNAVAILABLE","source":"Drop Coverage Full","players":{}}
     try:
-        request=urllib.request.Request(url,headers={"User-Agent":"PropEdge/1.0","Accept":"application/json"})
+        request=urllib.request.Request(url,headers={"User-Agent":"PropEdge/1.0","Accept":"application/json",
+            "Authorization":"Bearer "+token,"apikey":token})
         with urllib.request.urlopen(request,timeout=12) as response:
             payload=json.load(response)
     except Exception as exc:
         return {"status":"UNAVAILABLE","source":"Drop Coverage Full","error":type(exc).__name__,"players":{}}
     if not isinstance(payload,dict):
         return {"status":"INVALID_RESPONSE","source":"Drop Coverage Full","players":{}}
-    if str(payload.get("slate_date",""))!=day:
+    slate=str(payload.get("slate_date") or payload.get("date") or "")
+    if slate!=day:
         return {"status":"STALE_OR_INVALID","source":"Drop Coverage Full","players":{}}
-    rows=payload.get("rows")
+    rows=payload.get("rows") or payload.get("projections")
     if not isinstance(rows,list):
         return {"status":"INVALID_RESPONSE","source":"Drop Coverage Full","players":{}}
     players={}
