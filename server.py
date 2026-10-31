@@ -631,7 +631,7 @@ def refresh():
         for signal in signals:
             attach_availability(signal)
             scenario=signal.get("injury_scenario")
-            if not scenario or signal.get("injury_status","").casefold()=="out":
+            if not scenario or str(signal.get("injury_status") or "").casefold()=="out":
                 continue
             if signal.get("projection_method")!="PRODUCTION_V3_OPPORTUNITY_MINUTES_DISTRIBUTION":
                 continue
