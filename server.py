@@ -508,9 +508,29 @@ def refresh():
             if price is None or price==0 or price < -130 or price > 250:
                 rejected+=1
                 continue
+            # Current-season role correction: prior-season minutes can overstate
+            # bench-player opportunities. Shrink toward observed current role.
+            # External projections are comparison benchmarks, not copied targets.
+            current_role=[g for g in logs.get(canonical_player(signal.get("player")),[])
+                          if g.get("season")=="current" and number(g.get("MIN")) is not None
+                          and number(g.get("MIN"))>=5]
+            current_role=sorted(current_role,key=lambda g:g.get("date",""),reverse=True)[:8]
+            if len(current_role)>=4 and number(signal.get("distribution_minutes")):
+                observed_minutes=sum(number(g["MIN"]) for g in current_role)/len(current_role)
+                historical_minutes=number(signal["distribution_minutes"])
+                role_minutes=round(0.8*observed_minutes+0.2*historical_minutes,2)
+                if historical_minutes>role_minutes:
+                    before=estimate
+                    estimate=round(estimate*role_minutes/historical_minutes,2)
+                    signal["current_role_adjustment"]={"current_games":len(current_role),
+                        "current_avg_minutes":round(observed_minutes,2),
+                        "historical_projected_minutes":historical_minutes,
+                        "role_adjusted_minutes":role_minutes,
+                        "projection_before":before,"projection_after":estimate,
+                        "method":"80% current-season minutes / 20% historical projection; unvalidated"}
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
-            signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate}
+            signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment")}
             direction=1 if signal.get("side")=="OVER" else -1
             edge=direction*(estimate-line)
             threshold=max(0.5,0.08*max(line,1))
