@@ -438,6 +438,40 @@ def refresh():
             signal["consensus_edge"]=round(consensus-line,2) if consensus is not None and line is not None else None
             signal["consensus_side"]="OVER" if signal["consensus_edge"] is not None and signal["consensus_edge"]>0 else ("UNDER" if signal["consensus_edge"] is not None and signal["consensus_edge"]<0 else None)
             signal["consensus_method"]="THREE_MODEL_EQUAL_WEIGHT_RESEARCH" if len(valid)==3 else "PARTIAL_MODEL_RESEARCH"
+        # New distribution engine is evaluated alongside live signals only.
+        # Never use uncalibrated probabilities for ranking or qualifying bets.
+        try:
+            from nba_distribution_engine import project as distribution_project, simulate as distribution_simulate
+            distribution_logs=load_game_logs()
+            distribution_cache={}
+            for signal in signals:
+                player_key=canonical_player(signal.get("player"))
+                if player_key not in distribution_cache:
+                    history=[]
+                    for game_row in reversed(distribution_logs.get(player_key,[])):
+                        minutes=game_row.get("MIN")
+                        if minutes is None or minutes<8:
+                            continue
+                        item={"minutes":minutes}
+                        item.update({k:game_row[k] for k in ("PTS","REB","AST","3PM")})
+                        item["PRA"]=item["PTS"]+item["REB"]+item["AST"]
+                        history.append(item)
+                    distribution_cache[player_key]=(history,distribution_project(history))
+                history,estimate=distribution_cache[player_key]
+                signal["distribution_status"]="INSUFFICIENT_HISTORY"
+                if estimate is None:
+                    continue
+                # Only one quoted side is available on each qualifying signal.
+                # Do not invent the opposite-side odds or report EV.
+                market=signal.get("market")
+                signal["distribution_projection"]=round(estimate["projections"][market],2)
+                signal["distribution_minutes"]=round(estimate["minutes"],2)
+                signal["distribution_status"]="SHADOW_UNCALIBRATED"
+            base["distribution_status"]="SHADOW_ONLY_NO_PRODUCTION_RANKING"
+        except Exception as distribution_error:
+            logging.warning("NBA distribution shadow unavailable: %s",type(distribution_error).__name__)
+            base["distribution_status"]="SHADOW_UNAVAILABLE"
+            base["distribution_error"]=type(distribution_error).__name__
         base["consensus_status"]="RESEARCH_ONLY_NOT_PRODUCTION"
         base["v4_trained_at"]=v4_meta.get("as_of_utc")
         # Paired retrospective comparison (230 graded picks, one capture date)
