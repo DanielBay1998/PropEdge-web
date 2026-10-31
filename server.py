@@ -605,7 +605,37 @@ def refresh():
                                          "No injury entry returned; availability not independently verified")
             row['injury_scenario']=injury_scenario(row.get('player'),row.get('game'),row.get('market'),number(row.get('projection'))) if status.casefold()!='out' else None
             return row
-        for signal in signals:attach_availability(signal)
+        # Verified teammate-absence context: use observed on/off game samples,
+        # shrink and cap effect. Never infer minutes or invent lineup confirmations.
+        injury_adjusted=0
+        for signal in signals:
+            attach_availability(signal)
+            scenario=signal.get("injury_scenario")
+            if not scenario or signal.get("injury_status","").casefold()=="out":
+                continue
+            if signal.get("projection_method")!="PRODUCTION_V3_OPPORTUNITY_MINUTES_DISTRIBUTION":
+                continue
+            if scenario.get("with_games",0)<5 or scenario.get("without_games",0)<5:
+                continue
+            # This is a scenario conditioned on a teammate's current OUT status,
+            # not an established causal injury effect.
+            original=number(signal.get("projection"))
+            line=number(signal.get("line"))
+            estimate=number(scenario.get("projection"))
+            if original is None or line is None or estimate is None:
+                continue
+            direction=1 if signal.get("side")=="OVER" else -1
+            signal["pre_injury_projection"]=original
+            signal["projection"]=estimate
+            signal["gap"]=round(abs(estimate-line),2)
+            signal["calibrated_edge"]=round(direction*(estimate-line),2)
+            signal["projection_method"]="PRODUCTION_V3_OBSERVED_TEAMMATE_ON_OFF"
+            signal["injury_adjustment_status"]="OBSERVED_SMALL_SAMPLE_SHRUNK_NOT_CAUSAL"
+            injury_adjusted+=1
+        signals=[s for s in signals if s.get("calibrated_edge") is None or
+                 s["calibrated_edge"]>=max(.5,.08*max(number(s.get("line")) or 1,1))]
+        base["production_injury_context_adjusted"]=injury_adjusted
+
         excluded=[r for r in signals if (r.get("injury_status") or "").casefold()=="out"]
         signals=[r for r in signals if (r.get("injury_status") or "").casefold()!="out"]
         base["injury_excluded_signals"]=len(excluded)
