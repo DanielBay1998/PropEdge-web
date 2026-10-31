@@ -487,10 +487,12 @@ def refresh():
         except (OSError,ValueError,KeyError,TypeError):pass
         from nba_v3_context import matchup_factor
         # One authenticated daily feed per refresh; never fabricate coverage.
-        from nba_external_projections import fetch_sportsdataio,normalize as external_player_key
+        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,normalize as external_player_key
         from zoneinfo import ZoneInfo
         external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
         external_board=fetch_sportsdataio(external_day)
+        if not external_board.get("players"):
+            external_board=fetch_dropcoverage(external_day)
         base["external_projection_status"]=external_board.get("status")
         base["external_projection_source"]=external_board.get("source")
         base["external_projection_players"]=len(external_board.get("players",{}))
@@ -611,7 +613,7 @@ def refresh():
                 difference=abs(estimate-external_value)
                 tolerance=max(0.75,0.12*max(external_value,1))
                 signal["external_projection_comparison"]={
-                    "source":"SportsDataIO","projection":external_value,
+                    "source":external_board.get("source"),"projection":external_value,
                     "difference":round(difference,2),"tolerance":round(tolerance,2),
                     "status":"MATCH" if difference<=tolerance else "DISAGREEMENT"}
                 if difference>tolerance:
