@@ -5,161 +5,161 @@
     "20261029",
     "20261030"
   ],
-  "eligible": 486,
+  "eligible": 711,
   "excluded": {
     "identity_review": 36,
-    "pending": 239,
+    "pending": 14,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 486,
-    "wins": 234,
-    "losses": 252,
-    "win_rate_pct": 48.15,
-    "flat_roi_pct": -13.06,
-    "avg_loss_margin": 3.81,
-    "losses_more_than_5": 75
+    "n": 711,
+    "wins": 346,
+    "losses": 365,
+    "win_rate_pct": 48.66,
+    "flat_roi_pct": -10.8,
+    "avg_loss_margin": 3.89,
+    "losses_more_than_5": 109
   },
   "by_market": {
     "PTS": {
-      "n": 148,
-      "wins": 60,
-      "losses": 88,
-      "win_rate_pct": 40.54,
-      "flat_roi_pct": -23.85,
-      "avg_loss_margin": 4.95,
-      "losses_more_than_5": 39
+      "n": 217,
+      "wins": 93,
+      "losses": 124,
+      "win_rate_pct": 42.86,
+      "flat_roi_pct": -18.18,
+      "avg_loss_margin": 4.9,
+      "losses_more_than_5": 53
     },
     "PRA": {
-      "n": 108,
-      "wins": 55,
-      "losses": 53,
-      "win_rate_pct": 50.93,
-      "flat_roi_pct": -3.87,
-      "avg_loss_margin": 6.03,
-      "losses_more_than_5": 31
+      "n": 163,
+      "wins": 80,
+      "losses": 83,
+      "win_rate_pct": 49.08,
+      "flat_roi_pct": -6.53,
+      "avg_loss_margin": 6.32,
+      "losses_more_than_5": 49
     },
     "AST": {
-      "n": 83,
-      "wins": 44,
-      "losses": 39,
-      "win_rate_pct": 53.01,
-      "flat_roi_pct": -6.15,
-      "avg_loss_margin": 1.45,
+      "n": 119,
+      "wins": 61,
+      "losses": 58,
+      "win_rate_pct": 51.26,
+      "flat_roi_pct": -8.65,
+      "avg_loss_margin": 1.5,
       "losses_more_than_5": 0
     },
     "REB": {
-      "n": 99,
-      "wins": 53,
-      "losses": 46,
-      "win_rate_pct": 53.54,
-      "flat_roi_pct": -7.75,
-      "avg_loss_margin": 2.7,
-      "losses_more_than_5": 5
+      "n": 144,
+      "wins": 79,
+      "losses": 65,
+      "win_rate_pct": 54.86,
+      "flat_roi_pct": -3.41,
+      "avg_loss_margin": 2.61,
+      "losses_more_than_5": 7
     },
     "3PM": {
-      "n": 48,
-      "wins": 22,
-      "losses": 26,
-      "win_rate_pct": 45.83,
-      "flat_roi_pct": -23.32,
-      "avg_loss_margin": 0.92,
+      "n": 68,
+      "wins": 33,
+      "losses": 35,
+      "win_rate_pct": 48.53,
+      "flat_roi_pct": -16.92,
+      "avg_loss_margin": 0.84,
       "losses_more_than_5": 0
     }
   },
   "minutes_risk_groups": {
     "recent_minutes_drop_at_least_4": {
-      "n": 87,
-      "wins": 53,
-      "losses": 34,
-      "win_rate_pct": 60.92,
-      "flat_roi_pct": 12.8,
-      "avg_loss_margin": 2.38,
+      "n": 91,
+      "wins": 54,
+      "losses": 37,
+      "win_rate_pct": 59.34,
+      "flat_roi_pct": 10.04,
+      "avg_loss_margin": 2.39,
       "losses_more_than_5": 6
     },
     "recent_minutes_increase_at_least_4": {
-      "n": 72,
-      "wins": 28,
-      "losses": 44,
-      "win_rate_pct": 38.89,
-      "flat_roi_pct": -31.0,
-      "avg_loss_margin": 4.86,
-      "losses_more_than_5": 15
+      "n": 114,
+      "wins": 57,
+      "losses": 57,
+      "win_rate_pct": 50.0,
+      "flat_roi_pct": -8.55,
+      "avg_loss_margin": 4.57,
+      "losses_more_than_5": 19
     },
     "stable_recent_minutes": {
-      "n": 327,
-      "wins": 153,
-      "losses": 174,
-      "win_rate_pct": 46.79,
-      "flat_roi_pct": -15.99,
-      "avg_loss_margin": 3.82,
-      "losses_more_than_5": 54
+      "n": 506,
+      "wins": 235,
+      "losses": 271,
+      "win_rate_pct": 46.44,
+      "flat_roi_pct": -15.06,
+      "avg_loss_margin": 3.95,
+      "losses_more_than_5": 84
     },
     "volatile_minutes_std_at_least_7": {
-      "n": 103,
-      "wins": 55,
-      "losses": 48,
-      "win_rate_pct": 53.4,
-      "flat_roi_pct": -2.94,
-      "avg_loss_margin": 3.79,
-      "losses_more_than_5": 16
+      "n": 129,
+      "wins": 74,
+      "losses": 55,
+      "win_rate_pct": 57.36,
+      "flat_roi_pct": 5.78,
+      "avg_loss_margin": 3.66,
+      "losses_more_than_5": 17
     },
     "stable_minutes_std_below_7": {
-      "n": 383,
-      "wins": 179,
-      "losses": 204,
+      "n": 582,
+      "wins": 272,
+      "losses": 310,
       "win_rate_pct": 46.74,
-      "flat_roi_pct": -15.78,
-      "avg_loss_margin": 3.81,
-      "losses_more_than_5": 59
+      "flat_roi_pct": -14.48,
+      "avg_loss_margin": 3.93,
+      "losses_more_than_5": 92
     },
     "projected_minutes_below_22": {
-      "n": 87,
-      "wins": 49,
-      "losses": 38,
-      "win_rate_pct": 56.32,
-      "flat_roi_pct": -0.01,
-      "avg_loss_margin": 2.05,
-      "losses_more_than_5": 3
+      "n": 112,
+      "wins": 62,
+      "losses": 50,
+      "win_rate_pct": 55.36,
+      "flat_roi_pct": 0.17,
+      "avg_loss_margin": 2.26,
+      "losses_more_than_5": 4
     },
     "projected_minutes_22_plus": {
-      "n": 399,
-      "wins": 185,
-      "losses": 214,
-      "win_rate_pct": 46.37,
-      "flat_roi_pct": -15.9,
-      "avg_loss_margin": 4.12,
-      "losses_more_than_5": 72
+      "n": 599,
+      "wins": 284,
+      "losses": 315,
+      "win_rate_pct": 47.41,
+      "flat_roi_pct": -12.85,
+      "avg_loss_margin": 4.14,
+      "losses_more_than_5": 105
     }
   },
   "by_market_minutes_risk": {
     "PTS": {
       "recent_drop_4_plus": {
-        "n": 24,
-        "wins": 12,
-        "losses": 12,
-        "win_rate_pct": 50.0,
-        "flat_roi_pct": -4.76,
-        "avg_loss_margin": 2.83,
+        "n": 27,
+        "wins": 13,
+        "losses": 14,
+        "win_rate_pct": 48.15,
+        "flat_roi_pct": -7.94,
+        "avg_loss_margin": 2.86,
         "losses_more_than_5": 3
       },
       "volatile_7_plus": {
-        "n": 32,
-        "wins": 14,
-        "losses": 18,
-        "win_rate_pct": 43.75,
-        "flat_roi_pct": -16.57,
-        "avg_loss_margin": 4.06,
+        "n": 39,
+        "wins": 19,
+        "losses": 20,
+        "win_rate_pct": 48.72,
+        "flat_roi_pct": -6.08,
+        "avg_loss_margin": 3.85,
         "losses_more_than_5": 6
       },
       "other": {
-        "n": 98,
-        "wins": 36,
-        "losses": 62,
-        "win_rate_pct": 36.73,
-        "flat_roi_pct": -31.24,
-        "avg_loss_margin": 5.42,
-        "losses_more_than_5": 30
+        "n": 157,
+        "wins": 63,
+        "losses": 94,
+        "win_rate_pct": 40.13,
+        "flat_roi_pct": -23.37,
+        "avg_loss_margin": 5.3,
+        "losses_more_than_5": 44
       }
     },
     "PRA": {
@@ -173,26 +173,52 @@
         "losses_more_than_5": 2
       },
       "volatile_7_plus": {
-        "n": 26,
-        "wins": 15,
-        "losses": 11,
-        "win_rate_pct": 57.69,
-        "flat_roi_pct": 8.78,
-        "avg_loss_margin": 5.77,
-        "losses_more_than_5": 7
+        "n": 33,
+        "wins": 21,
+        "losses": 12,
+        "win_rate_pct": 63.64,
+        "flat_roi_pct": 21.52,
+        "avg_loss_margin": 6.0,
+        "losses_more_than_5": 8
       },
       "other": {
-        "n": 65,
-        "wins": 30,
-        "losses": 35,
-        "win_rate_pct": 46.15,
-        "flat_roi_pct": -12.94,
-        "avg_loss_margin": 6.53,
-        "losses_more_than_5": 22
+        "n": 113,
+        "wins": 49,
+        "losses": 64,
+        "win_rate_pct": 43.36,
+        "flat_roi_pct": -17.42,
+        "avg_loss_margin": 6.64,
+        "losses_more_than_5": 39
       }
     }
   },
   "largest_losses": [
+    {
+      "player": "Scottie Barnes",
+      "game": "Orlando Magic @ Toronto Raptors",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 20.5,
+      "actual": 41.0,
+      "loss_margin": 20.5,
+      "projected_minutes": 30.55,
+      "actual_minutes": 39.0,
+      "recent_minutes_change": 1.92,
+      "minutes_volatility": 4.05
+    },
+    {
+      "player": "Scottie Barnes",
+      "game": "Orlando Magic @ Toronto Raptors",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 33.5,
+      "actual": 51.0,
+      "loss_margin": 17.5,
+      "projected_minutes": 30.55,
+      "actual_minutes": 39.0,
+      "recent_minutes_change": 1.92,
+      "minutes_volatility": 4.05
+    },
     {
       "player": "Trey Murphy III",
       "game": "Denver Nuggets @ New Orleans Pelicans",
@@ -244,6 +270,19 @@
       "actual_minutes": null,
       "recent_minutes_change": 8.25,
       "minutes_volatility": 6.13
+    },
+    {
+      "player": "Joel Embiid",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PTS",
+      "side": "OVER",
+      "line": 22.5,
+      "actual": 10.0,
+      "loss_margin": 12.5,
+      "projected_minutes": 35.28,
+      "actual_minutes": 33.0,
+      "recent_minutes_change": 2.75,
+      "minutes_volatility": 3.73
     },
     {
       "player": "Trey Murphy III",
@@ -376,82 +415,43 @@
       "minutes_volatility": 4.62
     },
     {
-      "player": "Quentin Grimes",
-      "game": "Los Angeles Lakers @ Los Angeles Clippers",
-      "market": "PTS",
-      "side": "UNDER",
-      "line": 12.5,
-      "actual": 23.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.62,
-      "actual_minutes": 38.0,
-      "recent_minutes_change": -0.58,
-      "minutes_volatility": 4.99
-    },
-    {
-      "player": "Quentin Grimes",
-      "game": "Los Angeles Lakers @ Los Angeles Clippers",
+      "player": "Giannis Antetokounmpo",
+      "game": "Indiana Pacers @ Miami Heat",
       "market": "PRA",
       "side": "UNDER",
-      "line": 20.5,
-      "actual": 31.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.62,
-      "actual_minutes": 38.0,
-      "recent_minutes_change": -0.58,
-      "minutes_volatility": 4.99
-    },
-    {
-      "player": "Ajay Mitchell",
-      "game": "Oklahoma City Thunder @ Dallas Mavericks",
-      "market": "PTS",
-      "side": "UNDER",
-      "line": 18.5,
-      "actual": 29.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.42,
-      "actual_minutes": 28.0,
-      "recent_minutes_change": 1.25,
-      "minutes_volatility": 4.68
-    },
-    {
-      "player": "Ajay Mitchell",
-      "game": "Oklahoma City Thunder @ Dallas Mavericks",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 25.5,
-      "actual": 36.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.42,
-      "actual_minutes": 28.0,
-      "recent_minutes_change": 1.25,
-      "minutes_volatility": 4.68
-    },
-    {
-      "player": "Ryan Rollins",
-      "game": "Houston Rockets @ Milwaukee Bucks",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 14.5,
-      "actual": 4.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 29.59,
-      "actual_minutes": 17.0,
-      "recent_minutes_change": 0.75,
-      "minutes_volatility": 4.29
-    },
-    {
-      "player": "CJ McCollum",
-      "game": "Cleveland Cavaliers @ Atlanta Hawks",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 15.5,
-      "actual": 5.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 26.34,
+      "line": 47.5,
+      "actual": 59.0,
+      "loss_margin": 11.5,
+      "projected_minutes": 30.81,
       "actual_minutes": 31.0,
-      "recent_minutes_change": -1.42,
-      "minutes_volatility": 4.57
+      "recent_minutes_change": 2.33,
+      "minutes_volatility": 4.27
+    },
+    {
+      "player": "Landry Shamet",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "side": "OVER",
+      "line": 11.5,
+      "actual": 0.0,
+      "loss_margin": 11.5,
+      "projected_minutes": 24.75,
+      "actual_minutes": 16.0,
+      "recent_minutes_change": 4.17,
+      "minutes_volatility": 5.58
+    },
+    {
+      "player": "Joel Embiid",
+      "game": "New York Knicks @ Philadelphia 76ers",
+      "market": "PRA",
+      "side": "OVER",
+      "line": 35.5,
+      "actual": 24.0,
+      "loss_margin": 11.5,
+      "projected_minutes": 35.28,
+      "actual_minutes": 33.0,
+      "recent_minutes_change": 2.75,
+      "minutes_volatility": 3.73
     }
   ],
   "decision": "INSUFFICIENT_INDEPENDENT_DATES",
