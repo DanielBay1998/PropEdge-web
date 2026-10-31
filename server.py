@@ -581,6 +581,22 @@ def refresh():
                             "recent_average":round(recent_avg,2),"projection_before":estimate,
                             "projection_after":round(upper,2),"method":"Conservative current-season over cap; unvalidated"}
                         estimate=round(upper,2)
+            # Cross-model agreement: use available independent internal models
+            # as a provisional disagreement screen, not as external consensus.
+            comparison=[number(signal.get(k)) for k in ("challenger_projection","v4_projection","unadjusted_primary_projection")]
+            comparison=sorted(x for x in comparison if x is not None and x>=0)
+            if len(comparison)>=2:
+                mid=len(comparison)//2
+                median=(comparison[mid] if len(comparison)%2 else (comparison[mid-1]+comparison[mid])/2)
+                difference=abs(estimate-median)
+                tolerance=max(1.0,0.15*max(median,1))
+                signal["cross_model_agreement"]={"comparison_models":len(comparison),
+                    "median":round(median,2),"absolute_difference":round(difference,2),
+                    "tolerance":round(tolerance,2),"within_tolerance":difference<=tolerance,
+                    "status":"INTERNAL_ONLY_EXTERNAL_CONSENSUS_NOT_VERIFIED"}
+                if difference>tolerance:
+                    rejected+=1
+                    continue
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
             signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
