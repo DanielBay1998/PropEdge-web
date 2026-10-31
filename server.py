@@ -629,9 +629,9 @@ def refresh():
                     rejected+=1
                     continue
             else:
-                # Do not advertise unverified picks as externally agreed.
-                rejected+=1
-                continue
+                # Keep internally modeled picks visible but clearly mark them
+                # as NOT externally verified; do not invent agreement.
+                signal["external_projection_comparison"]["status"]="NOT_EXTERNALLY_VERIFIED"
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
             signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
