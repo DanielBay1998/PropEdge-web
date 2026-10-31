@@ -474,136 +474,51 @@ def refresh():
             base["distribution_error"]=type(distribution_error).__name__
         base["consensus_status"]="RESEARCH_ONLY_NOT_PRODUCTION"
         base["v4_trained_at"]=v4_meta.get("as_of_utc")
-        # Paired retrospective comparison (230 graded picks, one capture date)
-        # found primary MAE 3.844, challenger 4.174, blend 3.980.
-        # Keep the better-performing primary as the production projection.
+        # Production v3: independent opportunity/minutes-based projections.
+        # Uses the chronologically held-out distribution candidate rather than
+        # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
+        # Preserve original projections for grading and audit attribution.
+        production=[]
+        replaced=0
+        missing=0
+        rejected=0
         for signal in signals:
-            signal["original_projection"]=signal.get("projection")
-            signal["projection_method"]="PRIMARY_RETAINED_AFTER_RETROSPECTIVE_COMPARISON"
-        base["projection_method"]="PRIMARY_RETAINED_AFTER_RETROSPECTIVE_COMPARISON"
-        # Conservative production integration: use the challenger only as a
-        # disagreement veto. Never claim its unvalidated estimate is a win
-        # probability; never replace the independently sourced sportsbook line.
-        # Requiring agreement is safer than blindly promoting a new projection.
-        original_count=len(signals)
-        agreed=[]
-        for signal in signals:
-            candidate=signal.get("challenger_projection")
-            if candidate is None:
-                signal["model_agreement"]="UNKNOWN_HISTORY"
-                agreed.append(signal)
-                continue
-            direction=1 if signal["side"]=="OVER" else -1
-            challenger_edge=direction*(candidate-signal["line"])
-            signal["challenger_edge"]=round(challenger_edge,2)
-            signal["model_agreement"]="AGREE" if challenger_edge>0 else "DISAGREE"
-            if challenger_edge<=0:
-                signal["qualification_reason"]="Challenger projection disagrees with production side"
-                continue
-            # Keep existing validated production projection and edge unchanged.
-            agreed.append(signal)
-        signals=agreed
-        base["challenger_filtered_signals"]=original_count-len(signals)
-        base["challenger_filter_mode"]="DISAGREEMENT_VETO_RESEARCH_UNVALIDATED"
-        base["challenger_model_version"]="minutes_rate_current_role_v2"
-        # Immediate PTS production recalibration, based on prospective observed
-        # positive bias across all four models. V4 has the lowest paired PTS
-        # MAE so favor it when available, while preserving original forecasts.
-        # The adjustment is provisional and must be measured prospectively.
-        pts_before=len(signals)
-        protected=[]
-        for signal in signals:
-            if signal.get("market") in ("REB", "3PM"):
-                # Provisional correction; UNDER forecasts remain unchanged.
-                market=signal["market"]
-                if signal.get("side")!="OVER":
-                    protected.append(signal)
-                    continue
-                primary=number(signal.get("projection"))
-                line=number(signal.get("line"))
-                if primary is None or line is None:
-                    continue
-                correction=0.5 if market=="REB" else 0.75
-                adjusted=round(max(0.0,primary-correction),2)
-                threshold=max(0.5,0.08*max(line,1))
-                edge=adjusted-line
-                if edge<threshold:
-                    continue
-                signal["unadjusted_primary_projection"]=primary
-                signal["projection"]=adjusted
-                signal["projection_method"]=market+"_OVER_PROVISIONAL_BIAS_CORRECTION"
-                signal["calibration_components"]={"primary":primary,"bias_correction":correction}
-                signal["gap"]=round(abs(edge),2)
-                signal["calibrated_edge"]=round(edge,2)
-                signal["qualification_reason"]=market+" calibrated OVER edge; provisional"
-                protected.append(signal)
-                continue
-            if signal.get("market")!="PTS":
-                protected.append(signal)
-                continue
-            primary=number(signal.get("projection"))
-            v4=number(signal.get("v4_projection"))
+            signal["legacy_projection"]=signal.get("projection")
+            estimate=number(signal.get("distribution_projection"))
             line=number(signal.get("line"))
-            if primary is None or line is None:
+            if estimate is None or line is None:
+                missing+=1
+                # No validated minutes input: do not fabricate a v3 projection.
+                signal["projection_method"]="LEGACY_FALLBACK_MISSING_MINUTES_HISTORY"
+                production.append(signal)
                 continue
-            signal["unadjusted_primary_projection"]=primary
-            # V4 led PTS paired MAE (6.28 vs 6.61 primary), but has only
-            # two capture dates. Blend to avoid a wholesale model switch.
-            baseline=(0.7*v4+0.3*primary) if v4 is not None and v4>=0 else primary
-            # Shrink observed ~2.9-point overprediction to a conservative
-            # two-point correction, rather than fitting the full small sample.
-            is_over=signal.get("side")=="OVER"
-            adjusted=round(max(0.0,baseline-2.0),2) if is_over else round(primary,2)
-            signal["projection"]=adjusted
-            signal["projection_method"]="PTS_OVER_V4_WEIGHTED_MINUS_2_PROVISIONAL" if is_over else "PTS_UNDER_ORIGINAL_PRIMARY"
-            signal["pts_calibration_components"]={"primary":primary,"v4":v4,"v4_weight":0.7 if v4 is not None and v4>=0 else 0.0,"bias_correction":2.0 if is_over else 0.0}
-            signal["gap"]=round(abs(adjusted-line),2)
-            # Candidate was selected with an older projection. Recheck
-            # direction and margin instead of leaving stale qualifying bets.
+            # A quoted sportsbook price is necessary for a pick; reject
+            # extreme prices so the ranking isn't dominated by heavy favorites.
+            price=number(signal.get("odds"))
+            if price is None or price==0 or price < -130 or price > 250:
+                rejected+=1
+                continue
+            direction=1 if signal.get("side")=="OVER" else -1
+            edge=direction*(estimate-line)
             threshold=max(0.5,0.08*max(line,1))
-            direction=1 if signal.get("side")=="OVER" else -1
-            edge=direction*(adjusted-line)
             if edge<threshold:
+                rejected+=1
                 continue
+            signal["projection"]=estimate
+            signal["gap"]=round(edge,2)
             signal["calibrated_edge"]=round(edge,2)
-            signal["qualification_reason"]="PTS calibrated edge; provisional, not validated"
-            protected.append(signal)
-        signals=protected
-        base["pts_calibration"]="OVER_V4_70_PRIMARY_30_MINUS_2_UNDER_PRIMARY_UNCHANGED"
-        base["reb_3pm_calibration"]="REB_OVER_MINUS_0_5_3PM_OVER_MINUS_0_75_UNDERS_UNCHANGED_PROVISIONAL"
-        base["pts_over_status"]="AVAILABLE_IF_CALIBRATED_EDGE_QUALIFIES_PROVISIONAL"
-        base["pts_signals_removed_by_guard"]=pts_before-len(signals)
-        # Production v2: robust minutes/usage overlay using only completed
-        # historical games; no inferred injury, pace, or opponent inputs.
-        # Preserve the original forecast for prospective attribution.
-        from minutes_shadow_capture import load_history as _minutes_history, candidate as _minutes_candidate
-        _history=_minutes_history(datetime.now(timezone.utc).strftime("%Y%m%d"))
-        _v2=[]
-        for signal in signals:
-            original=number(signal.get("projection"))
-            line=number(signal.get("line"))
-            if original is None or line is None:continue
-            shadow=_minutes_candidate(signal,_history)
-            if shadow is None:
-                signal["minutes_v2_status"]="INSUFFICIENT_MINUTES_HISTORY"
-                _v2.append(signal)
-                continue
-            v2=number(shadow.get("shadow_minutes_projection"))
-            if v2 is None:continue
-            signal["pre_minutes_v2_projection"]=original
-            signal["projection"]=round(v2,2)
-            signal["minutes_v2_components"]=shadow
-            signal["projection_method"]="PRODUCTION_MINUTES_V2_ROBUST_ROLE"
-            direction=1 if signal.get("side")=="OVER" else -1
-            edge=direction*(signal["projection"]-line)
-            signal["gap"]=round(abs(edge),2)
-            signal["calibrated_edge"]=round(edge,2)
-            if edge<max(0.5,0.08*max(line,1)):
-                continue
-            _v2.append(signal)
-        signals=_v2
-        base["production_minutes_overlay"]="minutes_v2_robust_role"
-        base["production_minutes_note"]="Historical minutes and usage only; no unverified injury or opponent adjustment"
+            signal["projection_method"]="PRODUCTION_V3_OPPORTUNITY_MINUTES_DISTRIBUTION"
+            signal["qualification_reason"]="V3 minutes-rate edge, not calibrated win probability"
+            signal["distribution_status"]="PRODUCTION_POINT_PROJECTION_UNCALIBRATED_PROBABILITIES"
+            replaced+=1
+            production.append(signal)
+        signals=production
+        base["projection_method"]="V3_OPPORTUNITY_MINUTES_DISTRIBUTION_WITH_LEGACY_FALLBACK"
+        base["production_model"]="nba_distribution_v3"
+        base["production_model_replaced"]=replaced
+        base["production_model_fallback"]=missing
+        base["production_model_rejected"]=rejected
+        base["production_model_warning"]="New projection is holdout-improved versus challenger only; odds EV and win probabilities not validated."
         # Availability guardrail: a reported OUT player is not an actionable pick.
         # Questionable/doubtful/probable statuses remain visible with warnings.
         # Never adjust statistical projections from an uncalibrated injury assumption.
