@@ -2,21 +2,21 @@
   "status": "PROSPECTIVE_LIVE_PRIMARY_RESEARCH",
   "newly_graded": 0,
   "overall": {
-    "captured": 414,
+    "captured": 444,
     "graded": 87,
     "wins": 35,
     "losses": 52,
     "roi_pct": -28.73
   },
   "assists_pra": {
-    "captured": 195,
+    "captured": 213,
     "graded": 35,
     "wins": 15,
     "losses": 20,
     "roi_pct": -20.77
   },
   "other_markets": {
-    "captured": 219,
+    "captured": 231,
     "graded": 52,
     "wins": 20,
     "losses": 32,
@@ -24,7 +24,8 @@
   },
   "capture_dates": [
     "2026-10-29",
-    "2026-10-30"
+    "2026-10-30",
+    "2026-10-31"
   ],
   "settled_capture_dates": [
     "2026-10-29",
@@ -33,35 +34,35 @@
   "promotion_gate": "RESEARCH_ONLY_INSUFFICIENT_DATES",
   "by_market": {
     "PTS": {
-      "captured": 112,
+      "captured": 115,
       "graded": 25,
       "wins": 9,
       "losses": 16,
       "roi_pct": -37.35
     },
     "REB": {
-      "captured": 83,
+      "captured": 91,
       "graded": 17,
       "wins": 6,
       "losses": 11,
       "roi_pct": -41.34
     },
     "AST": {
-      "captured": 72,
+      "captured": 80,
       "graded": 17,
       "wins": 7,
       "losses": 10,
       "roi_pct": -24.14
     },
     "3PM": {
-      "captured": 24,
+      "captured": 25,
       "graded": 10,
       "wins": 5,
       "losses": 5,
       "roi_pct": -13.58
     },
     "PRA": {
-      "captured": 123,
+      "captured": 133,
       "graded": 18,
       "wins": 8,
       "losses": 10,
@@ -82,6 +83,13 @@
       "wins": 7,
       "losses": 8,
       "roi_pct": -13.36
+    },
+    "2026-10-31": {
+      "captured": 30,
+      "graded": 0,
+      "wins": 0,
+      "losses": 0,
+      "roi_pct": null
     }
   },
   "note": "These are live primary forecasts, not independent V4 forecasts."
