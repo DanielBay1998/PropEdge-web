@@ -486,6 +486,14 @@ def refresh():
             if (datetime.now(timezone.utc)-stamp).total_seconds()>129600:matchup_snapshot={}
         except (OSError,ValueError,KeyError,TypeError):pass
         from nba_v3_context import matchup_factor
+        # One authenticated daily feed per refresh; never fabricate coverage.
+        from nba_external_projections import fetch_sportsdataio,normalize as external_player_key
+        from zoneinfo import ZoneInfo
+        external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
+        external_board=fetch_sportsdataio(external_day)
+        base["external_projection_status"]=external_board.get("status")
+        base["external_projection_source"]=external_board.get("source")
+        base["external_projection_players"]=len(external_board.get("players",{}))
         # Production v3: independent opportunity/minutes-based projections.
         # Uses the chronologically held-out distribution candidate rather than
         # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
@@ -597,6 +605,20 @@ def refresh():
                 if difference>tolerance:
                     rejected+=1
                     continue
+            external_row=external_board.get("players",{}).get(external_player_key(signal.get("player")))
+            external_value=number(external_row.get(signal.get("market"))) if external_row else None
+            if external_value is not None:
+                difference=abs(estimate-external_value)
+                tolerance=max(0.75,0.12*max(external_value,1))
+                signal["external_projection_comparison"]={
+                    "source":"SportsDataIO","projection":external_value,
+                    "difference":round(difference,2),"tolerance":round(tolerance,2),
+                    "status":"MATCH" if difference<=tolerance else "DISAGREEMENT"}
+                if difference>tolerance:
+                    rejected+=1
+                    continue
+            else:
+                signal["external_projection_comparison"]={"status":"NO_VERIFIED_EXTERNAL_PROJECTION"}
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
             signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
