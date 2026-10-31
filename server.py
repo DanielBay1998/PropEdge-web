@@ -776,6 +776,12 @@ def refresh():
                 signal["v3_projection_breakdown"]["injury_adjustment_pct"]=scenario.get("adjustment_pct")
                 signal["v3_projection_breakdown"]["injury_teammate"]=scenario.get("teammate")
                 signal["v3_projection_breakdown"]["final_projection"]=estimate
+            if signal.get("v3_projection_breakdown"):
+                audit=signal["v3_projection_breakdown"]
+                audit["pre_injury_projection"]=original
+                audit["injury_change"]=round(estimate-original,2)
+                audit["injury_adjustment_pct_actual"]=round(100*(estimate/original-1),2) if original else None
+                audit["final_projection"]=estimate
             signal["pre_injury_projection"]=original
             signal["projection"]=estimate
             signal["gap"]=round(abs(estimate-line),2)
