@@ -561,6 +561,26 @@ def refresh():
                             break
             except (ValueError,TypeError,OSError,KeyError) as exc:
                 logging.warning("External minutes comparison skipped: %s",type(exc).__name__)
+            # Apply the same current-season opportunity guard across the full slate.
+            # Missing current-season minutes must not imply a confident OVER.
+            if signal.get("side")=="OVER" and not signal.get("current_role_adjustment") and not signal.get("external_minutes_comparison"):
+                current_games=[g for g in distribution_logs.get(canonical_player(signal.get("player")),[])
+                               if g.get("season")=="current"]
+                current_games=sorted(current_games,key=lambda g:g.get("date",""),reverse=True)[:8]
+                stat=signal.get("market")
+                observed=[(sum(number(g.get(k)) or 0 for k in ("PTS","REB","AST")) if stat=="PRA"
+                           else number(g.get(stat))) for g in current_games]
+                observed=[v for v in observed if v is not None]
+                if len(observed)>=4:
+                    recent_avg=sum(observed)/len(observed)
+                    # Shrink excessive point projections toward actual current-season
+                    # production. Do not lift unders or invent missing minutes.
+                    upper=recent_avg*1.12+0.25
+                    if estimate>upper:
+                        signal["current_production_guard"]={"games":len(observed),
+                            "recent_average":round(recent_avg,2),"projection_before":estimate,
+                            "projection_after":round(upper,2),"method":"Conservative current-season over cap; unvalidated"}
+                        estimate=round(upper,2)
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
             signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
