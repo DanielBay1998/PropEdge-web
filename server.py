@@ -474,6 +474,14 @@ def refresh():
             base["distribution_error"]=type(distribution_error).__name__
         base["consensus_status"]="RESEARCH_ONLY_NOT_PRODUCTION"
         base["v4_trained_at"]=v4_meta.get("as_of_utc")
+        # Position-specific defensive matchup adjustments from verified ESPN data.
+        matchup_snapshot={}
+        try:
+            matchup_snapshot=json.loads((ROOT/"data"/"nba_dvp_2026_27.json").read_text())
+            stamp=datetime.fromisoformat(matchup_snapshot["fetched_at"].replace("Z","+00:00"))
+            if (datetime.now(timezone.utc)-stamp).total_seconds()>129600:matchup_snapshot={}
+        except (OSError,ValueError,KeyError,TypeError):pass
+        from nba_v3_context import matchup_factor
         # Production v3: independent opportunity/minutes-based projections.
         # Uses the chronologically held-out distribution candidate rather than
         # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
@@ -498,6 +506,8 @@ def refresh():
             if price is None or price==0 or price < -130 or price > 250:
                 rejected+=1
                 continue
+            estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
+            if context:signal["matchup_context"]=context
             direction=1 if signal.get("side")=="OVER" else -1
             edge=direction*(estimate-line)
             threshold=max(0.5,0.08*max(line,1))
