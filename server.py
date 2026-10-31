@@ -487,11 +487,11 @@ def refresh():
         except (OSError,ValueError,KeyError,TypeError):pass
         from nba_v3_context import matchup_factor
         # One authenticated daily feed per refresh; never fabricate coverage.
-        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,fetch_public_propedge,normalize as external_player_key
+        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,normalize as external_player_key
         from zoneinfo import ZoneInfo
         external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
         external_boards=[]
-        for source_name,fetcher in (("SportsDataIO",fetch_sportsdataio),("Drop Coverage",fetch_dropcoverage),("propedge.today",fetch_public_propedge)):
+        for source_name,fetcher in (("SportsDataIO",fetch_sportsdataio),("Drop Coverage",fetch_dropcoverage)):
             try:
                 board=fetcher(external_day)
                 if not isinstance(board,dict):
@@ -504,6 +504,7 @@ def refresh():
         base["external_projection_status"]="MULTI_SOURCE_READY" if len(verified_boards)>=2 else "INSUFFICIENT_INDEPENDENT_SOURCES"
         base["external_projection_sources"]=[{"name":b.get("source"),"status":b.get("status"),"players":len(b.get("players",{}))} for b in external_boards]
         base["external_projection_players"]=len(set().union(*(set(b.get("players",{})) for b in verified_boards))) if verified_boards else 0
+        base["external_projection_player_markets"]=sum(len(v) for b in verified_boards for v in b.get("players",{}).values())
         # Production v3: independent opportunity/minutes-based projections.
         # Uses the chronologically held-out distribution candidate rather than
         # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
