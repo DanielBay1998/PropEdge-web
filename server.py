@@ -625,7 +625,9 @@ def refresh():
                 if value is not None:
                     external_values.append({"source":board["source"],"value":value})
             signal["external_projection_comparison"]={"status":"INSUFFICIENT_SOURCES",
-                "sources":external_values,"required_sources":2}
+                "sources":external_values,"required_sources":2,
+                "available_feeds":[{"name":b.get("source"),"status":b.get("status")} for b in external_boards],
+                "reason":"NO_MATCHING_PLAYER_MARKET" if verified_boards and not external_values else "LESS_THAN_TWO_INDEPENDENT_PROJECTIONS"}
             if len(external_values)>=2:
                 values=sorted(item["value"] for item in external_values)
                 n=len(values)
