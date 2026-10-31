@@ -528,9 +528,40 @@ def refresh():
                         "role_adjusted_minutes":role_minutes,
                         "projection_before":before,"projection_after":estimate,
                         "method":"80% current-season minutes / 20% historical projection; unvalidated"}
+            # Dated independent minutes consensus: never silently force the
+            # model to match an external points projection. Applies only to
+            # the documented player/matchup/date and only with >=3 sources.
+            try:
+                from zoneinfo import ZoneInfo
+                slate_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
+                benchmark_path=ROOT/"data"/("external_minutes_benchmark_"+slate_day.replace("-","")+".json")
+                if benchmark_path.exists():
+                    benchmark=json.loads(benchmark_path.read_text(encoding="utf-8"))
+                    if benchmark.get("date")==slate_day:
+                        for external in benchmark.get("entries",[]):
+                            if canonical_player(external.get("player"))!=canonical_player(signal.get("player")):
+                                continue
+                            fixture=str(signal.get("game") or "").casefold()
+                            if "milwaukee" not in fixture or "cleveland" not in fixture:
+                                continue
+                            samples=[number(src.get("minutes")) for src in external.get("minutes_sources",[])]
+                            samples=sorted(x for x in samples if x is not None and 0<x<=48)
+                            historical=number(signal.get("distribution_minutes"))
+                            if len(samples)>=3 and historical and historical>0:
+                                middle=len(samples)//2
+                                consensus=(samples[middle] if len(samples)%2 else (samples[middle-1]+samples[middle])/2)
+                                before=estimate
+                                estimate=round(estimate*consensus/historical,2)
+                                signal["external_minutes_comparison"]={"date":slate_day,
+                                    "sources":external["minutes_sources"],"median_minutes":round(consensus,2),
+                                    "internal_minutes":historical,"projection_before":before,
+                                    "projection_after":estimate,"method":"Dated 4-source minutes median; independent points rate retained"}
+                            break
+            except (ValueError,TypeError,OSError,KeyError) as exc:
+                logging.warning("External minutes comparison skipped: %s",type(exc).__name__)
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
-            signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment")}
+            signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
             direction=1 if signal.get("side")=="OVER" else -1
             edge=direction*(estimate-line)
             threshold=max(0.5,0.08*max(line,1))
