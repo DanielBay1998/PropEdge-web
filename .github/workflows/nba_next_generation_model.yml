@@ -23,7 +23,7 @@ jobs:
           python - <<'PY'
           from nba_distribution_engine import american_profit,expected_value,project,simulate
           assert abs(american_profit(-110)-100/110)<1e-9
-          assert abs(expected_value(.55,-110))<.02
+          assert abs(expected_value(.55,-110)-.05)<1e-9
           prior=[{"minutes":30.0,"PTS":15+i%7,"REB":5+i%4,"AST":3+i%3,"3PM":1+i%3,"PRA":24+i%7} for i in range(30)]
           result=project(prior)
           assert result is not None
