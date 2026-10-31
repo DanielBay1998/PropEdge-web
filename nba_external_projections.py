@@ -49,9 +49,33 @@ def fetch_dropcoverage(day):
     for row in payload.get("rows",[]):
         if not isinstance(row,dict):continue
         value=row.get("proj")
+        if value is None:continue
         market=str(row.get("stat","")).upper()
         if market not in ("PTS","REB","AST","3PM","PRA") or not isinstance(value,(int,float)) or isinstance(value,bool) or value<0:continue
         name=normalize(row.get("player",""))
         if name:players.setdefault(name,{})[market]=round(float(value),2)
     return {"status":"VERIFIED_PARTIAL" if players else "NO_PUBLIC_PROJECTIONS",
             "source":"Drop Coverage","players":players}
+
+def fetch_public_propedge(day):
+    """Independent third-party service sharing a name; fail closed on unknown schema."""
+    url="https://propedge.today/api/projections?sport=NBA"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"PropEdgeComparison/1.0"}),timeout=10) as response:
+            payload=json.load(response)
+    except Exception as exc:
+        return {"status":"UNAVAILABLE","source":"propedge.today (unaffiliated)","error":type(exc).__name__,"players":{}}
+    if not isinstance(payload,dict) or payload.get("slate_date")!=day:
+        return {"status":"UNVERIFIED_DATE","source":"propedge.today (unaffiliated)","players":{}}
+    rows=payload.get("projections")
+    if not isinstance(rows,list):
+        return {"status":"UNVERIFIED_SCHEMA","source":"propedge.today (unaffiliated)","players":{}}
+    players={}
+    for row in rows:
+        if not isinstance(row,dict):continue
+        name=normalize(row.get("player"))
+        market=str(row.get("market","")).upper()
+        value=row.get("projection")
+        if name and market in ("PTS","REB","AST","3PM","PRA") and isinstance(value,(float,int)) and not isinstance(value,bool) and value>=0:
+            players.setdefault(name,{})[market]=round(float(value),2)
+    return {"status":"VERIFIED_PARTIAL" if players else "EMPTY","source":"propedge.today (unaffiliated)","players":players}
