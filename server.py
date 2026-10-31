@@ -523,6 +523,16 @@ def refresh():
             replaced+=1
             production.append(signal)
         signals=production
+        # Empirical distribution estimates are explicitly uncalibrated;
+        # use only to expose uncertainty, never to rank by invented confidence.
+        from nba_v3_probability import empirical_probability
+        for signal in production:
+            if signal.get("projection_method")!="PRODUCTION_V3_OPPORTUNITY_MINUTES_DISTRIBUTION":
+                continue
+            history=distribution_cache.get(canonical_player(signal.get("player")),(None,None))[0]
+            if history:
+                estimate=empirical_probability(history,signal.get("market"),signal.get("line"),signal.get("projection"),signal.get("side"))
+                if estimate:signal["distribution_estimate"]=estimate
         base["projection_method"]="V3_OPPORTUNITY_MINUTES_DISTRIBUTION_WITH_LEGACY_FALLBACK"
         base["production_model"]="nba_distribution_v3"
         base["production_model_replaced"]=replaced
