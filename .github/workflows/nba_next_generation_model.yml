@@ -1,0 +1,47 @@
+name: NBA Next Generation Model Evaluation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - nba_distribution_engine.py
+      - nba_minutes_rate_candidate_comparison.py
+      - .github/workflows/nba_next_generation_model.yml
+permissions:
+  contents: read
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate next-generation engine
+        run: |
+          python -m py_compile nba_distribution_engine.py nba_minutes_rate_candidate_comparison.py
+          python - <<'PY'
+          from nba_distribution_engine import american_profit,expected_value,project,simulate
+          assert abs(american_profit(-110)-100/110)<1e-9
+          assert abs(expected_value(.55,-110))<.02
+          prior=[{"minutes":30.0,"PTS":15+i%7,"REB":5+i%4,"AST":3+i%3,"3PM":1+i%3,"PRA":24+i%7} for i in range(30)]
+          result=project(prior)
+          assert result is not None
+          output=simulate(prior,result,"PTS",18.5,-110,-110,n=2000)
+          assert output["status"]=="UNCALIBRATED_RESEARCH_ONLY"
+          assert abs(output["over_probability"]+output["under_probability"]+output["push_probability"]-1)<1e-9
+          print("Simulation smoke tests passed; no profitability claim.")
+          PY
+      - name: Run chronological minutes-rate challenger comparison
+        run: python nba_minutes_rate_candidate_comparison.py
+      - name: Run existing opponent-defense chronological holdout
+        run: python nba_context_ablation_holdout.py
+      - name: Upload evaluation reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: nba-next-generation-model-evaluation
+          path: |
+            reports/nba_minutes_rate_candidate_comparison.json
+            reports/nba_context_ablation_holdout.json
+      - name: Guard production
+        run: echo "Research-only evaluation. No automatic production promotion."
