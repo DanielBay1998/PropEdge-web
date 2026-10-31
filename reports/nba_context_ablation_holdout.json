@@ -1,131 +1,131 @@
 {
   "status": "RESEARCH_ONLY_NOT_PROMOTED",
   "split": {
-    "validation_from": "20250327",
-    "holdout_from": "20260109"
+    "validation_from": "20250328",
+    "holdout_from": "20260111"
   },
-  "validation_examples": 62615,
-  "holdout_examples": 68200,
+  "validation_examples": 63365,
+  "holdout_examples": 67920,
   "markets": {
     "PTS": {
-      "validation_n": 12523,
-      "test_n": 13640,
+      "validation_n": 12673,
+      "test_n": 13584,
       "selected_on_validation": "defense_0.45",
       "validation_mae": {
-        "challenger": 4.9655,
-        "defense_0.15": 4.9623,
-        "defense_0.3": 4.9602,
-        "defense_0.45": 4.9593,
-        "role_0.25": 4.9655,
-        "role_0.5": 4.9752
+        "challenger": 4.9553,
+        "defense_0.15": 4.9521,
+        "defense_0.3": 4.9501,
+        "defense_0.45": 4.9492,
+        "role_0.25": 4.9545,
+        "role_0.5": 4.9635
       },
       "test_mae": {
-        "challenger": 4.8696,
-        "defense_0.15": 4.8646,
-        "defense_0.3": 4.861,
-        "defense_0.45": 4.8585,
-        "role_0.25": 4.8729,
-        "role_0.5": 4.8852
+        "challenger": 4.8896,
+        "defense_0.15": 4.8846,
+        "defense_0.3": 4.8809,
+        "defense_0.45": 4.8783,
+        "role_0.25": 4.8937,
+        "role_0.5": 4.907
       },
-      "selected_test_mae": 4.8585,
-      "challenger_test_mae": 4.8696,
-      "improvement": 0.0111
+      "selected_test_mae": 4.8783,
+      "challenger_test_mae": 4.8896,
+      "improvement": 0.0113
     },
     "REB": {
-      "validation_n": 12523,
-      "test_n": 13640,
+      "validation_n": 12673,
+      "test_n": 13584,
       "selected_on_validation": "defense_0.45",
       "validation_mae": {
-        "challenger": 2.0199,
-        "defense_0.15": 2.0175,
-        "defense_0.3": 2.0156,
-        "defense_0.45": 2.0143,
-        "role_0.25": 2.0202,
-        "role_0.5": 2.0241
+        "challenger": 2.0172,
+        "defense_0.15": 2.0148,
+        "defense_0.3": 2.0129,
+        "defense_0.45": 2.0115,
+        "role_0.25": 2.0174,
+        "role_0.5": 2.0212
       },
       "test_mae": {
-        "challenger": 1.9756,
-        "defense_0.15": 1.9731,
-        "defense_0.3": 1.9712,
-        "defense_0.45": 1.9698,
-        "role_0.25": 1.9767,
-        "role_0.5": 1.9813
+        "challenger": 1.976,
+        "defense_0.15": 1.9737,
+        "defense_0.3": 1.9719,
+        "defense_0.45": 1.9708,
+        "role_0.25": 1.9773,
+        "role_0.5": 1.9822
       },
-      "selected_test_mae": 1.9698,
-      "challenger_test_mae": 1.9756,
-      "improvement": 0.0058
+      "selected_test_mae": 1.9708,
+      "challenger_test_mae": 1.976,
+      "improvement": 0.0052
     },
     "AST": {
-      "validation_n": 12523,
-      "test_n": 13640,
+      "validation_n": 12673,
+      "test_n": 13584,
       "selected_on_validation": "defense_0.45",
       "validation_mae": {
-        "challenger": 1.4231,
+        "challenger": 1.423,
         "defense_0.15": 1.4215,
-        "defense_0.3": 1.4204,
-        "defense_0.45": 1.4198,
+        "defense_0.3": 1.4205,
+        "defense_0.45": 1.4199,
         "role_0.25": 1.4217,
         "role_0.5": 1.4224
       },
       "test_mae": {
-        "challenger": 1.4494,
-        "defense_0.15": 1.4474,
-        "defense_0.3": 1.446,
-        "defense_0.45": 1.445,
-        "role_0.25": 1.4479,
-        "role_0.5": 1.4484
+        "challenger": 1.4507,
+        "defense_0.15": 1.4486,
+        "defense_0.3": 1.4471,
+        "defense_0.45": 1.4461,
+        "role_0.25": 1.4491,
+        "role_0.5": 1.4494
       },
-      "selected_test_mae": 1.445,
-      "challenger_test_mae": 1.4494,
-      "improvement": 0.0044
+      "selected_test_mae": 1.4461,
+      "challenger_test_mae": 1.4507,
+      "improvement": 0.0046
     },
     "3PM": {
-      "validation_n": 12523,
-      "test_n": 13640,
+      "validation_n": 12673,
+      "test_n": 13584,
       "selected_on_validation": "defense_0.45",
       "validation_mae": {
-        "challenger": 0.9616,
-        "defense_0.15": 0.9607,
-        "defense_0.3": 0.9601,
+        "challenger": 0.9618,
+        "defense_0.15": 0.9609,
+        "defense_0.3": 0.9603,
         "defense_0.45": 0.9599,
-        "role_0.25": 0.9619,
-        "role_0.5": 0.9628
+        "role_0.25": 0.9621,
+        "role_0.5": 0.963
       },
       "test_mae": {
-        "challenger": 0.9484,
-        "defense_0.15": 0.9478,
-        "defense_0.3": 0.9475,
-        "defense_0.45": 0.9473,
-        "role_0.25": 0.9484,
-        "role_0.5": 0.949
+        "challenger": 0.9489,
+        "defense_0.15": 0.9483,
+        "defense_0.3": 0.948,
+        "defense_0.45": 0.948,
+        "role_0.25": 0.9489,
+        "role_0.5": 0.9496
       },
-      "selected_test_mae": 0.9473,
-      "challenger_test_mae": 0.9484,
-      "improvement": 0.0011
+      "selected_test_mae": 0.948,
+      "challenger_test_mae": 0.9489,
+      "improvement": 0.0009
     },
     "PRA": {
-      "validation_n": 12523,
-      "test_n": 13640,
+      "validation_n": 12673,
+      "test_n": 13584,
       "selected_on_validation": "defense_0.45",
       "validation_mae": {
-        "challenger": 6.4812,
-        "defense_0.15": 6.4741,
-        "defense_0.3": 6.4696,
-        "defense_0.45": 6.467,
-        "role_0.25": 6.4823,
-        "role_0.5": 6.5022
+        "challenger": 6.4689,
+        "defense_0.15": 6.4619,
+        "defense_0.3": 6.4575,
+        "defense_0.45": 6.4551,
+        "role_0.25": 6.4694,
+        "role_0.5": 6.4887
       },
       "test_mae": {
-        "challenger": 6.3744,
-        "defense_0.15": 6.3634,
-        "defense_0.3": 6.3552,
-        "defense_0.45": 6.3493,
-        "role_0.25": 6.376,
-        "role_0.5": 6.3979
+        "challenger": 6.4021,
+        "defense_0.15": 6.3911,
+        "defense_0.3": 6.3829,
+        "defense_0.45": 6.3769,
+        "role_0.25": 6.4045,
+        "role_0.5": 6.4268
       },
-      "selected_test_mae": 6.3493,
-      "challenger_test_mae": 6.3744,
-      "improvement": 0.0251
+      "selected_test_mae": 6.3769,
+      "challenger_test_mae": 6.4021,
+      "improvement": 0.0252
     }
   },
   "limitations": [
