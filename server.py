@@ -466,6 +466,8 @@ def refresh():
                 market=signal.get("market")
                 signal["distribution_projection"]=round(estimate["projections"][market],2)
                 signal["distribution_minutes"]=round(estimate["minutes"],2)
+                signal["distribution_per_minute"]=round(estimate["projections"][market]/estimate["minutes"],4) if estimate["minutes"] else None
+                signal["distribution_history_games"]=len(history)
                 signal["distribution_status"]="SHADOW_UNCALIBRATED"
             base["distribution_status"]="SHADOW_ONLY_NO_PRODUCTION_RANKING"
         except Exception as distribution_error:
@@ -508,6 +510,7 @@ def refresh():
                 continue
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
+            signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate}
             direction=1 if signal.get("side")=="OVER" else -1
             edge=direction*(estimate-line)
             threshold=max(0.5,0.08*max(line,1))
@@ -645,6 +648,10 @@ def refresh():
             if original is None or line is None or estimate is None:
                 continue
             direction=1 if signal.get("side")=="OVER" else -1
+            if signal.get("v3_projection_breakdown"):
+                signal["v3_projection_breakdown"]["injury_adjustment_pct"]=scenario.get("adjustment_pct")
+                signal["v3_projection_breakdown"]["injury_teammate"]=scenario.get("teammate")
+                signal["v3_projection_breakdown"]["final_projection"]=estimate
             signal["pre_injury_projection"]=original
             signal["projection"]=estimate
             signal["gap"]=round(abs(estimate-line),2)
