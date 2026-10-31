@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 329,
+  "total": 395,
   "counts": {
-    "verified_from_available_logs": 329
+    "verified_from_available_logs": 395
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -2970,6 +2970,600 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261031|543826|kevindurant|AST|OVER|3.5",
+      "player": "Kevin Durant",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543834|stephoncastle|AST|OVER|5.5",
+      "player": "Stephon Castle",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261031|543834|jadenmcdaniels|AST|OVER|2.5",
+      "player": "Jaden McDaniels",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "minnesotatimberwolves"
+    },
+    {
+      "id": "20261031|543826|jaredmccain|PRA|UNDER|20.5",
+      "player": "Jared McCain",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261031|543848|brandonmiller|PRA|UNDER|35.5",
+      "player": "Brandon Miller",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543833|saddiqbey|PRA|OVER|18.5",
+      "player": "Saddiq Bey",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543826|ajaymitchell|PRA|UNDER|26.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261031|543826|kevindurant|PRA|OVER|31.5",
+      "player": "Kevin Durant",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543848|dennisschroder|PRA|UNDER|23.5",
+      "player": "Dennis Schroder",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543833|jeremiahfears|PRA|OVER|19.5",
+      "player": "Jeremiah Fears",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543848|nazreid|PRA|UNDER|28.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543834|stephoncastle|PRA|OVER|27.5",
+      "player": "Stephon Castle",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261031|543826|jabarismith|PRA|OVER|22.5",
+      "player": "Jabari Smith Jr.",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543833|jeremiahfears|PRA|OVER|20.5",
+      "player": "Jeremiah Fears",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543848|nazreid|PRA|UNDER|27.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|adembona|PRA|UNDER|14.5",
+      "player": "Adem Bona",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261031|543848|sionjames|AST|UNDER|3.5",
+      "player": "Sion James",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543826|amenthompson|PRA|OVER|27.5",
+      "player": "Amen Thompson",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543825|sammerrill|PRA|OVER|13.5",
+      "player": "Sam Merrill",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261031|543848|sionjames|PRA|UNDER|13.5",
+      "player": "Sion James",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|nazreid|PRA|UNDER|29.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543825|kelelware|PRA|OVER|16.5",
+      "player": "Kel'el Ware",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261031|543834|keldonjohnson|PRA|OVER|16.5",
+      "player": "Keldon Johnson",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261031|543833|aaronwiggins|PRA|UNDER|18.5",
+      "player": "Aaron Wiggins",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261031|543826|ajaymitchell|PRA|UNDER|25.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261031|543834|dylanharper|PRA|UNDER|27.5",
+      "player": "Dylan Harper",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261031|543833|saddiqbey|PRA|OVER|17.5",
+      "player": "Saddiq Bey",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543848|moussadiabate|PRA|UNDER|22.5",
+      "player": "Moussa Diabate",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543825|jaimejaquez|PRA|OVER|23.5",
+      "player": "Jaime Jaquez Jr.",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261031|543848|brandonmiller|PRA|UNDER|34.5",
+      "player": "Brandon Miller",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|dennisschroder|PRA|UNDER|22.5",
+      "player": "Dennis Schroder",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543825|kelelware|PTS|OVER|9.5",
+      "player": "Kel'el Ware",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261031|543835|preciousachiuwa|PTS|OVER|12.5",
+      "player": "Precious Achiuwa",
+      "game": "Sacramento Kings @ Memphis Grizzlies",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261031|543826|tarieason|REB|OVER|5.5",
+      "player": "Tari Eason",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543834|rudygobert|REB|OVER|10.5",
+      "player": "Rudy Gobert",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "minnesotatimberwolves"
+    },
+    {
+      "id": "20261031|543825|tylerherro|REB|OVER|4.5",
+      "player": "Tyler Herro",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261031|543848|adembona|PTS|UNDER|6.5",
+      "player": "Adem Bona",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261031|543833|jalenjohnson|PTS|UNDER|22.5",
+      "player": "Jalen Johnson",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261031|543826|ajaymitchell|PTS|UNDER|18.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261031|543835|jaylenwells|PTS|OVER|12.5",
+      "player": "Jaylen Wells",
+      "game": "Sacramento Kings @ Memphis Grizzlies",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "memphisgrizzlies"
+    },
+    {
+      "id": "20261031|543834|terrenceshannon|REB|UNDER|3.5",
+      "player": "Terrence Shannon Jr.",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "minnesotatimberwolves"
+    },
+    {
+      "id": "20261031|543833|saddiqbey|PTS|OVER|12.5",
+      "player": "Saddiq Bey",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543833|aaronwiggins|PTS|UNDER|12.5",
+      "player": "Aaron Wiggins",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261031|543848|adembona|REB|UNDER|6.5",
+      "player": "Adem Bona",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261031|543848|dennisschroder|PTS|UNDER|14.5",
+      "player": "Dennis Schroder",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|nazreid|PTS|UNDER|17.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|moussadiabate|REB|UNDER|10.5",
+      "player": "Moussa Diabate",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543826|amenthompson|PTS|OVER|16.5",
+      "player": "Amen Thompson",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543848|brandonmiller|PTS|UNDER|25.5",
+      "player": "Brandon Miller",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543826|jabarismith|PTS|OVER|14.5",
+      "player": "Jabari Smith Jr.",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543833|derikqueen|PTS|OVER|10.5",
+      "player": "Derik Queen",
+      "game": "Atlanta Hawks @ New Orleans Pelicans",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "neworleanspelicans"
+    },
+    {
+      "id": "20261031|543848|graysonallen|PTS|OVER|12.5",
+      "player": "Grayson Allen",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|brandonmiller|PTS|UNDER|26.5",
+      "player": "Brandon Miller",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543825|donovanmitchell|PTS|OVER|23.5",
+      "player": "Donovan Mitchell",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261031|543826|amenthompson|PTS|OVER|15.5",
+      "player": "Amen Thompson",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543825|kasparasjakucionis|PTS|OVER|6.5",
+      "player": "Kasparas Jakucionis",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261031|543848|nazreid|PTS|UNDER|18.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|sionjames|PTS|UNDER|6.5",
+      "player": "Sion James",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543835|tyjerome|PTS|OVER|21.5",
+      "player": "Ty Jerome",
+      "game": "Sacramento Kings @ Memphis Grizzlies",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "memphisgrizzlies"
+    },
+    {
+      "id": "20261031|543826|kevindurant|PTS|OVER|22.5",
+      "player": "Kevin Durant",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543826|jabarismith|PTS|OVER|15.5",
+      "player": "Jabari Smith Jr.",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261031|543826|ajaymitchell|PTS|UNDER|17.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261031|543834|deaaronfox|PTS|OVER|14.5",
+      "player": "De'Aaron Fox",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261031|543825|sammerrill|PTS|OVER|8.5",
+      "player": "Sam Merrill",
+      "game": "Cleveland Cavaliers @ Milwaukee Bucks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261031|543848|dennisschroder|PTS|UNDER|13.5",
+      "player": "Dennis Schroder",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261031|543848|nazreid|PTS|UNDER|16.5",
+      "player": "Naz Reid",
+      "game": "Philadelphia 76ers @ Charlotte Hornets",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "charlottehornets"
     }
   ]
 }
