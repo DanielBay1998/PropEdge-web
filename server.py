@@ -487,15 +487,14 @@ def refresh():
         except (OSError,ValueError,KeyError,TypeError):pass
         from nba_v3_context import matchup_factor
         # One authenticated daily feed per refresh; never fabricate coverage.
-        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,normalize as external_player_key
+        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,fetch_public_propedge,normalize as external_player_key
         from zoneinfo import ZoneInfo
         external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
-        external_board=fetch_sportsdataio(external_day)
-        if not external_board.get("players"):
-            external_board=fetch_dropcoverage(external_day)
-        base["external_projection_status"]=external_board.get("status")
-        base["external_projection_source"]=external_board.get("source")
-        base["external_projection_players"]=len(external_board.get("players",{}))
+        external_boards=[fetch_sportsdataio(external_day),fetch_dropcoverage(external_day),fetch_public_propedge(external_day)]
+        verified_boards=[board for board in external_boards if board.get("status") in ("VERIFIED","VERIFIED_PARTIAL") and board.get("players")]
+        base["external_projection_status"]="MULTI_SOURCE_READY" if len(verified_boards)>=2 else "INSUFFICIENT_INDEPENDENT_SOURCES"
+        base["external_projection_sources"]=[{"name":b.get("source"),"status":b.get("status"),"players":len(b.get("players",{}))} for b in external_boards]
+        base["external_projection_players"]=len(set().union(*(set(b.get("players",{})) for b in verified_boards))) if verified_boards else 0
         # Production v3: independent opportunity/minutes-based projections.
         # Uses the chronologically held-out distribution candidate rather than
         # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
@@ -607,20 +606,32 @@ def refresh():
                 if difference>tolerance:
                     rejected+=1
                     continue
-            external_row=external_board.get("players",{}).get(external_player_key(signal.get("player")))
-            external_value=number(external_row.get(signal.get("market"))) if external_row else None
-            if external_value is not None:
-                difference=abs(estimate-external_value)
-                tolerance=max(0.75,0.12*max(external_value,1))
-                signal["external_projection_comparison"]={
-                    "source":external_board.get("source"),"projection":external_value,
-                    "difference":round(difference,2),"tolerance":round(tolerance,2),
-                    "status":"MATCH" if difference<=tolerance else "DISAGREEMENT"}
+            market=signal.get("market")
+            name=external_player_key(signal.get("player"))
+            external_values=[]
+            for board in verified_boards:
+                row=board.get("players",{}).get(name,{})
+                value=number(row.get(market))
+                if value is not None:
+                    external_values.append({"source":board["source"],"value":value})
+            signal["external_projection_comparison"]={"status":"INSUFFICIENT_SOURCES",
+                "sources":external_values,"required_sources":2}
+            if len(external_values)>=2:
+                values=sorted(item["value"] for item in external_values)
+                n=len(values)
+                consensus=(values[n//2] if n%2 else (values[n//2-1]+values[n//2])/2)
+                difference=abs(estimate-consensus)
+                tolerance=max(0.75,0.12*max(consensus,1))
+                signal["external_projection_comparison"]={"status":"MATCH" if difference<=tolerance else "DISAGREEMENT",
+                    "sources":external_values,"consensus":round(consensus,2),
+                    "difference":round(difference,2),"tolerance":round(tolerance,2)}
                 if difference>tolerance:
                     rejected+=1
                     continue
             else:
-                signal["external_projection_comparison"]={"status":"NO_VERIFIED_EXTERNAL_PROJECTION"}
+                # Do not advertise unverified picks as externally agreed.
+                rejected+=1
+                continue
             estimate,context=matchup_factor(signal,estimate,matchup_snapshot)
             if context:signal["matchup_context"]=context
             signal["v3_projection_breakdown"]={"projected_minutes":signal.get("distribution_minutes"),"stat_per_minute":signal.get("distribution_per_minute"),"history_games":signal.get("distribution_history_games"),"base_projection":signal.get("distribution_projection"),"matchup_factor":context.get("factor") if context else None,"matchup_source":context.get("source") if context else None,"pre_injury_projection":estimate,"current_role_adjustment":signal.get("current_role_adjustment"),"external_minutes_comparison":signal.get("external_minutes_comparison")}
