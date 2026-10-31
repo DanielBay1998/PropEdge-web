@@ -808,6 +808,20 @@ def refresh():
             signal["calibrated_edge"]=round(direction*(estimate-line),2)
             signal["projection_method"]="PRODUCTION_V3_OBSERVED_TEAMMATE_ON_OFF"
             signal["injury_adjustment_status"]="OBSERVED_SMALL_SAMPLE_SHRUNK_NOT_CAUSAL"
+            # Re-evaluate agreement using the final, displayed post-injury number.
+            comparison=signal.get("external_projection_comparison") or {}
+            values=[number(item.get("value")) for item in comparison.get("sources",[]) if isinstance(item,dict)]
+            values=sorted(v for v in values if v is not None)
+            if values:
+                mid=len(values)//2
+                consensus=values[mid] if len(values)%2 else (values[mid-1]+values[mid])/2
+                delta=round(estimate-consensus,2)
+                tolerance=max(.75,.12*max(consensus,1))
+                comparison.update({"consensus":round(consensus,2),"difference":round(abs(delta),2),
+                    "signed_difference":delta,"tolerance":round(tolerance,2),
+                    "compared_projection":"FINAL_POST_INJURY",
+                    "status":("MATCH" if abs(delta)<=tolerance else "DISAGREEMENT") if len(values)>=2 else "NOT_EXTERNALLY_VERIFIED"})
+                signal["external_projection_comparison"]=comparison
             injury_adjusted+=1
         signals=[s for s in signals if s.get("calibrated_edge") is None or
                  s["calibrated_edge"]>=max(.5,.08*max(number(s.get("line")) or 1,1))]
