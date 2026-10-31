@@ -1383,12 +1383,26 @@ def board():
             _cache["result"]["retry_after_seconds"]=int(_rate_limit["until"]-now)
             return _cache["result"]
         if now>=_cache["until"]:
-            _cache["result"]=refresh()
+            previous=_cache["result"]
+            try:
+                updated=refresh()
+                if not isinstance(updated,dict):
+                    raise TypeError("NBA refresh returned non-object")
+                if updated.get("error") and isinstance(previous,dict) and not previous.get("error") and previous.get("signals"):
+                    logging.warning("NBA refresh failed; retaining last successful board: %s",str(updated.get("error"))[:200])
+                    _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest refresh failed; showing previous verified board"}
+                else:
+                    _cache["result"]=updated
+            except Exception:
+                logging.exception("NBA board refresh failed")
+                if isinstance(previous,dict) and not previous.get("error") and previous.get("signals"):
+                    _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest refresh failed; showing previous verified board"}
+                else:
+                    _cache["result"]={"signals":[],"live":False,"verified":False,
+                        "error":"NBA refresh temporarily unavailable; retrying automatically",
+                        "coverage":"unavailable"}
             limited=_rate_limit["until"]>time.monotonic()
-            # Pro-capacity optimization: one server-wide full-slate refresh at most
-            # every 10 minutes, shared by every visitor and the tracking worker.
-            # On errors, avoid rapid polling that burns the daily request budget.
-            _cache["until"]=time.monotonic()+(900 if limited else (300 if _cache["result"].get("error") else 600))
+            _cache["until"]=time.monotonic()+(900 if limited else (300 if _cache["result"].get("error") or _cache["result"].get("stale") else 600))
         return _cache["result"]
 
 
