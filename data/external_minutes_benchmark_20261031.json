@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-31",
+  "entries": [
+    {
+      "player": "AJ Green",
+      "team": "MIL",
+      "opponent": "CLE",
+      "minutes_sources": [
+        {
+          "name": "numberFire",
+          "minutes": 16.63,
+          "points_projection": 6.7,
+          "url": "https://numberfire.com/external/widgets/nba/game-projections/milwaukee-bucks?date=2026-10-31"
+        },
+        {
+          "name": "Steezanomics",
+          "minutes": 15,
+          "url": "https://steezanomics.com/lab/nba/minutes/aj-green-2/"
+        },
+        {
+          "name": "NBA House",
+          "minutes": 15,
+          "url": "https://www.nbahouse.net/minutes/2026-10-31"
+        },
+        {
+          "name": "HoopVantage",
+          "minutes": 19,
+          "url": "https://hoopvantage.com/prediction/cavaliers-vs-bucks-2026-10-31-401909900"
+        }
+      ]
+    }
+  ]
+}
