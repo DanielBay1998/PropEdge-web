@@ -57,6 +57,38 @@ def fetch_dropcoverage(day):
     return {"status":"VERIFIED_PARTIAL" if players else "NO_PUBLIC_PROJECTIONS",
             "source":"Drop Coverage","players":players}
 
+def fetch_dropcoverage_full(day):
+    """Optional public full-board endpoint; fail closed if access, date, or schema changes."""
+    url=os.getenv("DROP_COVERAGE_FULL_URL","").strip()
+    if not url or not url.startswith("https://"):
+        return {"status":"NOT_CONFIGURED","source":"Drop Coverage Full","players":{}}
+    try:
+        request=urllib.request.Request(url,headers={"User-Agent":"PropEdge/1.0","Accept":"application/json"})
+        with urllib.request.urlopen(request,timeout=12) as response:
+            payload=json.load(response)
+    except Exception as exc:
+        return {"status":"UNAVAILABLE","source":"Drop Coverage Full","error":type(exc).__name__,"players":{}}
+    if not isinstance(payload,dict):
+        return {"status":"INVALID_RESPONSE","source":"Drop Coverage Full","players":{}}
+    if str(payload.get("slate_date",""))!=day:
+        return {"status":"STALE_OR_INVALID","source":"Drop Coverage Full","players":{}}
+    rows=payload.get("rows")
+    if not isinstance(rows,list):
+        return {"status":"INVALID_RESPONSE","source":"Drop Coverage Full","players":{}}
+    players={}
+    for row in rows:
+        if not isinstance(row,dict):continue
+        name=normalize(row.get("player",""))
+        market=str(row.get("stat","")).upper()
+        value=row.get("proj")
+        if name and market in ("PTS","REB","AST","3PM","PRA") and isinstance(value,(int,float)) and not isinstance(value,bool) and 0<=value<=200:
+            players.setdefault(name,{})[market]=round(float(value),2)
+    for stats in players.values():
+        if "PRA" not in stats and all(k in stats for k in ("PTS","REB","AST")):
+            stats["PRA"]=round(stats["PTS"]+stats["REB"]+stats["AST"],2)
+    return {"status":"VERIFIED" if players else "EMPTY","source":"Drop Coverage Full",
+            "players":players,"fetched_at":datetime.now(timezone.utc).isoformat()}
+
 def fetch_public_propedge(day):
     """Independent third-party service sharing a name; fail closed on unknown schema."""
     url="https://propedge.today/api/projections?sport=NBA"
