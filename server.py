@@ -505,6 +505,11 @@ def refresh():
         base["external_projection_sources"]=[{"name":b.get("source"),"status":b.get("status"),"players":len(b.get("players",{}))} for b in external_boards]
         base["external_projection_players"]=len(set().union(*(set(b.get("players",{})) for b in verified_boards))) if verified_boards else 0
         base["external_projection_player_markets"]=sum(len(v) for b in verified_boards for v in b.get("players",{}).values())
+        # Coverage is an observed match count, not a claim of full-slate access.
+        base["external_projection_coverage"]={"source_players":base["external_projection_players"],
+            "source_player_markets":base["external_projection_player_markets"],
+            "matched_signals":0,"signals_checked":0,"two_source_matches":0}
+
         # Production v3: independent opportunity/minutes-based projections.
         # Uses the chronologically held-out distribution candidate rather than
         # the old arbitrary OVER deductions, three-way consensus, or v2 overlay.
@@ -624,6 +629,9 @@ def refresh():
                 value=number(row.get(market))
                 if value is not None:
                     external_values.append({"source":board["source"],"value":value})
+            base["external_projection_coverage"]["signals_checked"]+=1
+            if external_values:base["external_projection_coverage"]["matched_signals"]+=1
+            if len(external_values)>=2:base["external_projection_coverage"]["two_source_matches"]+=1
             signal["external_projection_comparison"]={"status":"INSUFFICIENT_SOURCES",
                 "sources":external_values,"required_sources":2,
                 "available_feeds":[{"name":b.get("source"),"status":b.get("status")} for b in external_boards],
