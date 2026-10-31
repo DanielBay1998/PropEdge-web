@@ -490,7 +490,16 @@ def refresh():
         from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,fetch_public_propedge,normalize as external_player_key
         from zoneinfo import ZoneInfo
         external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
-        external_boards=[fetch_sportsdataio(external_day),fetch_dropcoverage(external_day),fetch_public_propedge(external_day)]
+        external_boards=[]
+        for source_name,fetcher in (("SportsDataIO",fetch_sportsdataio),("Drop Coverage",fetch_dropcoverage),("propedge.today",fetch_public_propedge)):
+            try:
+                board=fetcher(external_day)
+                if not isinstance(board,dict):
+                    raise TypeError("invalid external board")
+                external_boards.append(board)
+            except Exception as exc:
+                logging.warning("Optional NBA external provider %s failed: %s",source_name,type(exc).__name__)
+                external_boards.append({"source":source_name,"status":"UNAVAILABLE","players":{}})
         verified_boards=[board for board in external_boards if board.get("status") in ("VERIFIED","VERIFIED_PARTIAL") and board.get("players")]
         base["external_projection_status"]="MULTI_SOURCE_READY" if len(verified_boards)>=2 else "INSUFFICIENT_INDEPENDENT_SOURCES"
         base["external_projection_sources"]=[{"name":b.get("source"),"status":b.get("status"),"players":len(b.get("players",{}))} for b in external_boards]
