@@ -34,3 +34,24 @@ def fetch_sportsdataio(day):
         if values:players[normalize(name)]=values
     return {"status":"VERIFIED" if players else "EMPTY","source":"SportsDataIO",
             "fetched_at":datetime.now(timezone.utc).isoformat(),"players":players}
+
+def fetch_dropcoverage(day):
+    """Public JSON: only accept explicitly published projections, not lines."""
+    url="https://thedropcoverage.com/data/projections.json"
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"PropEdge/1.0"}),timeout=10) as response:
+            payload=json.load(response)
+    except Exception as exc:
+        return {"status":"UNAVAILABLE","source":"Drop Coverage","error":type(exc).__name__,"players":{}}
+    if not isinstance(payload,dict) or str(payload.get("slate_date"))!=day:
+        return {"status":"STALE_OR_INVALID","source":"Drop Coverage","players":{}}
+    players={}
+    for row in payload.get("rows",[]):
+        if not isinstance(row,dict):continue
+        value=row.get("proj")
+        market=str(row.get("stat","")).upper()
+        if market not in ("PTS","REB","AST","3PM","PRA") or not isinstance(value,(int,float)) or isinstance(value,bool) or value<0:continue
+        name=normalize(row.get("player",""))
+        if name:players.setdefault(name,{})[market]=round(float(value),2)
+    return {"status":"VERIFIED_PARTIAL" if players else "NO_PUBLIC_PROJECTIONS",
+            "source":"Drop Coverage","players":players}
