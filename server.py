@@ -487,11 +487,11 @@ def refresh():
         except (OSError,ValueError,KeyError,TypeError):pass
         from nba_v3_context import matchup_factor
         # One authenticated daily feed per refresh; never fabricate coverage.
-        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,normalize as external_player_key
+        from nba_external_projections import fetch_sportsdataio,fetch_dropcoverage,fetch_dropcoverage_full,normalize as external_player_key
         from zoneinfo import ZoneInfo
         external_day=datetime.now(ZoneInfo("America/Chicago")).strftime("%Y-%m-%d")
         external_boards=[]
-        for source_name,fetcher in (("SportsDataIO",fetch_sportsdataio),("Drop Coverage",fetch_dropcoverage)):
+        for source_name,fetcher in (("SportsDataIO",fetch_sportsdataio),("Drop Coverage Full",fetch_dropcoverage_full),("Drop Coverage",fetch_dropcoverage)):
             try:
                 board=fetcher(external_day)
                 if not isinstance(board,dict):
@@ -625,6 +625,8 @@ def refresh():
             name=external_player_key(signal.get("player"))
             external_values=[]
             for board in verified_boards:
+                if board.get("source")=="Drop Coverage" and any(x.get("source")=="Drop Coverage Full" for x in external_values):
+                    continue  # same publisher is not an independent second model
                 row=board.get("players",{}).get(name,{})
                 value=number(row.get(market))
                 if value is not None:
