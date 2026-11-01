@@ -8269,7 +8269,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.92,
-    "status": "pending"
+    "status": "win",
+    "actual": 4.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.652754+00:00"
   },
   {
     "key": "2026-10-31|543833|dyson daniels|AST|OVER|4.5",
@@ -8354,7 +8357,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.25,
-    "status": "pending"
+    "status": "loss",
+    "actual": 17.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.664060+00:00"
   },
   {
     "key": "2026-10-31|543847|jaxson hayes|PRA|UNDER|18.5",
@@ -8371,7 +8377,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.48,
-    "status": "pending"
+    "status": "win",
+    "actual": 16.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.666336+00:00"
   },
   {
     "key": "2026-10-31|543835|zach edey|AST|OVER|0.5",
@@ -8422,7 +8431,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.73,
-    "status": "pending"
+    "status": "loss",
+    "actual": 1.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.673176+00:00"
   },
   {
     "key": "2026-10-31|543833|jock landale|PRA|OVER|13.5",
@@ -8456,7 +8468,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.47,
-    "status": "pending"
+    "status": "win",
+    "actual": 20.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.677692+00:00"
   },
   {
     "key": "2026-10-31|543833|aaron wiggins|PRA|UNDER|18.5",
@@ -8541,7 +8556,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.49,
-    "status": "pending"
+    "status": "win",
+    "actual": 13.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.688956+00:00"
   },
   {
     "key": "2026-10-31|543847|donovan clingan|REB|UNDER|11.5",
@@ -8558,7 +8576,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.02,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.691246+00:00"
   },
   {
     "key": "2026-10-31|543833|saddiq bey|PTS|OVER|11.5",
@@ -8643,7 +8664,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.73,
-    "status": "pending"
+    "status": "win",
+    "actual": 7.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.702568+00:00"
   },
   {
     "key": "2026-10-31|543835|cedric coward|PTS|UNDER|15.5",
@@ -8677,7 +8701,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.14,
-    "status": "pending"
+    "status": "win",
+    "actual": 13.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.707089+00:00"
   },
   {
     "key": "2026-10-31|543847|lauri markkanen|REB|UNDER|6.5",
@@ -8694,7 +8721,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.62,
-    "status": "pending"
+    "status": "win",
+    "actual": 6.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.709431+00:00"
   },
   {
     "key": "2026-10-31|543833|onyeka okongwu|REB|UNDER|7.5",
@@ -8728,7 +8758,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.02,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.713929+00:00"
   },
   {
     "key": "2026-10-31|543847|jaxson hayes|REB|UNDER|6.5",
@@ -8745,7 +8778,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.87,
-    "status": "pending"
+    "status": "loss",
+    "actual": 7.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.716233+00:00"
   },
   {
     "key": "2026-10-31|543834|de'aaron fox|AST|OVER|5.5",
@@ -9272,7 +9308,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.47,
-    "status": "pending"
+    "status": "win",
+    "actual": 20.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.785781+00:00"
   },
   {
     "key": "2026-10-31|543833|zion williamson|PRA|UNDER|30.5",
@@ -9408,7 +9447,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.47,
-    "status": "pending"
+    "status": "win",
+    "actual": 20.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.803780+00:00"
   },
   {
     "key": "2026-10-31|543834|jaden mcdaniels|PRA|UNDER|25.5",
@@ -9493,7 +9535,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.11,
-    "status": "pending"
+    "status": "loss",
+    "actual": 2.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.815063+00:00"
   },
   {
     "key": "2026-10-31|543825|sam merrill|PRA|OVER|13.5",
@@ -9731,7 +9776,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.52,
-    "status": "pending"
+    "status": "win",
+    "actual": 3.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.846689+00:00"
   },
   {
     "key": "2026-10-31|543826|kevin durant|AST|OVER|2.5",
@@ -9935,7 +9983,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.07,
-    "status": "pending"
+    "status": "loss",
+    "actual": 18.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.873701+00:00"
   },
   {
     "key": "2026-10-31|543834|rudy gobert|PRA|OVER|19.5",
@@ -10054,7 +10105,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.14,
-    "status": "pending"
+    "status": "win",
+    "actual": 13.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.889922+00:00"
   },
   {
     "key": "2026-10-31|543826|ajay mitchell|3PM|UNDER|1.5",
@@ -10241,7 +10295,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.96,
-    "status": "pending"
+    "status": "win",
+    "actual": 3.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.914672+00:00"
   },
   {
     "key": "2026-10-31|543848|brandon miller|PTS|UNDER|27.5",
@@ -10683,7 +10740,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.52,
-    "status": "pending"
+    "status": "win",
+    "actual": 4.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.973406+00:00"
   },
   {
     "key": "2026-10-31|543825|aj green|REB|OVER|1.5",
@@ -10734,7 +10794,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.18,
-    "status": "pending"
+    "status": "win",
+    "actual": 3.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:20.980196+00:00"
   },
   {
     "key": "2026-10-31|543825|kasparas jakucionis|REB|UNDER|3.5",
@@ -10938,7 +11001,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.11,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:21.007494+00:00"
   },
   {
     "key": "2026-10-31|543847|isaiah collier|PRA|OVER|17.5",
@@ -10955,7 +11021,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.36,
-    "status": "pending"
+    "status": "loss",
+    "actual": 13.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:21.009809+00:00"
   },
   {
     "key": "2026-10-31|543848|lebron james|AST|OVER|6.5",
@@ -11210,7 +11279,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.98,
-    "status": "pending"
+    "status": "loss",
+    "actual": 1.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:21.043682+00:00"
   },
   {
     "key": "2026-10-31|543847|deni avdija|3PM|UNDER|2.5",
@@ -11227,7 +11299,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.94,
-    "status": "pending"
+    "status": "win",
+    "actual": 2.0,
+    "completed_game_id": "401909896",
+    "graded_at": "2026-11-01T02:07:21.045966+00:00"
   },
   {
     "key": "2026-10-31|543834|stephon castle|REB|OVER|4.5",
@@ -12094,6 +12169,261 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.51,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|andrew nembhard|PRA|UNDER|32.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Andrew Nembhard",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 32.5,
+    "projection": 27.75,
+    "odds": 103.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 4.75,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|moritz wagner|PRA|UNDER|16.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Moritz Wagner",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 16.5,
+    "projection": 14.45,
+    "odds": -102.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 2.05,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|nolan traore|PRA|UNDER|17.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Nolan Traore",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PRA",
+    "side": "UNDER",
+    "line": 17.5,
+    "projection": 15.81,
+    "odds": 100.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 1.69,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|obi toppin|PTS|OVER|12.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Obi Toppin",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 12.5,
+    "projection": 17.12,
+    "odds": 107.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 4.62,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543827|mitchell robinson|PTS|OVER|5.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543827",
+    "player": "Mitchell Robinson",
+    "game": "Boston Celtics @ Orlando Magic",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 5.5,
+    "projection": 7.37,
+    "odds": -114.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.87,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|jay huff|REB|UNDER|4.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Jay Huff",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 4.5,
+    "projection": 3.46,
+    "odds": -120.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.04,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543827|paul george|REB|OVER|4.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543827",
+    "player": "Paul George",
+    "game": "Boston Celtics @ Orlando Magic",
+    "market": "REB",
+    "side": "OVER",
+    "line": 4.5,
+    "projection": 5.5,
+    "odds": 106.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.0,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543827|derrick white|PTS|UNDER|14.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543827",
+    "player": "Derrick White",
+    "game": "Boston Celtics @ Orlando Magic",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 14.5,
+    "projection": 12.15,
+    "odds": 103.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 2.35,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|andrew nembhard|PTS|UNDER|19.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Andrew Nembhard",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PTS",
+    "side": "UNDER",
+    "line": 19.5,
+    "projection": 16.73,
+    "odds": 109.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 2.77,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|moritz wagner|REB|UNDER|4.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Moritz Wagner",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 4.5,
+    "projection": 3.97,
+    "odds": -101.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 0.53,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|jay huff|PTS|OVER|7.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Jay Huff",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 7.5,
+    "projection": 8.99,
+    "odds": 113.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.49,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543827|wendell carter jr.|PTS|OVER|11.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543827",
+    "player": "Wendell Carter Jr.",
+    "game": "Boston Celtics @ Orlando Magic",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 11.5,
+    "projection": 13.37,
+    "odds": 106.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.87,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543827|tristan da silva|PTS|OVER|10.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543827",
+    "player": "Tristan da Silva",
+    "game": "Boston Celtics @ Orlando Magic",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 10.5,
+    "projection": 12.19,
+    "odds": 112.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.69,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|kelly oubre jr.|REB|UNDER|4.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Kelly Oubre Jr.",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 4.5,
+    "projection": 3.8,
+    "odds": -123.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 0.7,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-01|543814|day'ron sharpe|REB|UNDER|8.5",
+    "captured_at": "2026-11-01T02:07:20.143607+00:00",
+    "event_id": "543814",
+    "player": "Day'Ron Sharpe",
+    "game": "Brooklyn Nets @ Indiana Pacers",
+    "market": "REB",
+    "side": "UNDER",
+    "line": 8.5,
+    "projection": 7.69,
+    "odds": -114.0,
+    "book": "dabble",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 0.81,
     "status": "pending"
   }
 ]
