@@ -1,68 +1,69 @@
 {
   "status": "RESEARCH_ONLY_NO_PRODUCTION_CHANGE",
-  "eligible": 572,
+  "eligible": 636,
   "capture_dates": [
     "20261028",
     "20261029",
-    "20261030"
+    "20261030",
+    "20261031"
   ],
   "excluded": {
     "identity_review": 36,
     "missing_or_ambiguous_actual_minutes": 139,
-    "pending": 14,
+    "pending": 16,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 572,
-    "wins": 283,
-    "losses": 289,
-    "roi_pct": -10.04,
-    "average_losing_margin": 3.84,
-    "large_losses_over_5": 83,
-    "mean_absolute_minutes_error": 4.38,
-    "mean_abs_minutes_component": 1.8,
-    "mean_abs_rate_component": 3.67,
-    "minutes_dominant_losses": 54,
-    "rate_dominant_losses": 235
+    "n": 636,
+    "wins": 328,
+    "losses": 308,
+    "roi_pct": -5.89,
+    "average_losing_margin": 4.01,
+    "large_losses_over_5": 94,
+    "mean_absolute_minutes_error": 4.43,
+    "mean_abs_minutes_component": 1.9,
+    "mean_abs_rate_component": 3.89,
+    "minutes_dominant_losses": 63,
+    "rate_dominant_losses": 245
   },
   "by_market": {
     "PTS": {
-      "n": 172,
-      "wins": 74,
-      "losses": 98,
-      "roi_pct": -18.13,
-      "average_losing_margin": 4.8,
-      "large_losses_over_5": 40,
-      "mean_absolute_minutes_error": 4.59,
-      "mean_abs_minutes_component": 2.24,
-      "mean_abs_rate_component": 4.87,
-      "minutes_dominant_losses": 25,
-      "rate_dominant_losses": 73
+      "n": 200,
+      "wins": 93,
+      "losses": 107,
+      "roi_pct": -11.77,
+      "average_losing_margin": 4.9,
+      "large_losses_over_5": 46,
+      "mean_absolute_minutes_error": 4.6,
+      "mean_abs_minutes_component": 2.25,
+      "mean_abs_rate_component": 5.02,
+      "minutes_dominant_losses": 28,
+      "rate_dominant_losses": 79
     },
     "REB": {
-      "n": 121,
-      "wins": 69,
-      "losses": 52,
-      "roi_pct": 0.69,
-      "average_losing_margin": 2.65,
+      "n": 126,
+      "wins": 72,
+      "losses": 54,
+      "roi_pct": 1.3,
+      "average_losing_margin": 2.63,
       "large_losses_over_5": 5,
-      "mean_absolute_minutes_error": 4.16,
-      "mean_abs_minutes_component": 0.86,
-      "mean_abs_rate_component": 2.33,
-      "minutes_dominant_losses": 6,
-      "rate_dominant_losses": 46
+      "mean_absolute_minutes_error": 4.21,
+      "mean_abs_minutes_component": 0.87,
+      "mean_abs_rate_component": 2.27,
+      "minutes_dominant_losses": 7,
+      "rate_dominant_losses": 47
     },
     "AST": {
-      "n": 95,
-      "wins": 50,
-      "losses": 45,
-      "roi_pct": -7.97,
+      "n": 99,
+      "wins": 53,
+      "losses": 46,
+      "roi_pct": -6.23,
       "average_losing_margin": 1.37,
       "large_losses_over_5": 0,
-      "mean_absolute_minutes_error": 3.99,
-      "mean_abs_minutes_component": 0.56,
-      "mean_abs_rate_component": 1.63,
-      "minutes_dominant_losses": 4,
+      "mean_absolute_minutes_error": 4.14,
+      "mean_abs_minutes_component": 0.59,
+      "mean_abs_rate_component": 1.6,
+      "minutes_dominant_losses": 5,
       "rate_dominant_losses": 41
     },
     "3PM": {
@@ -79,57 +80,57 @@
       "rate_dominant_losses": 25
     },
     "PRA": {
-      "n": 131,
-      "wins": 64,
-      "losses": 67,
-      "roi_pct": -7.3,
-      "average_losing_margin": 6.22,
-      "large_losses_over_5": 38,
-      "mean_absolute_minutes_error": 4.55,
-      "mean_abs_minutes_component": 3.61,
-      "mean_abs_rate_component": 5.81,
-      "minutes_dominant_losses": 17,
-      "rate_dominant_losses": 50
+      "n": 158,
+      "wins": 84,
+      "losses": 74,
+      "roi_pct": 0.36,
+      "average_losing_margin": 6.53,
+      "large_losses_over_5": 43,
+      "mean_absolute_minutes_error": 4.57,
+      "mean_abs_minutes_component": 3.64,
+      "mean_abs_rate_component": 6.11,
+      "minutes_dominant_losses": 21,
+      "rate_dominant_losses": 53
     }
   },
   "by_cause": {
     "minutes_dominant": {
-      "n": 143,
-      "wins": 89,
-      "losses": 54,
-      "roi_pct": 13.01,
-      "average_losing_margin": 3.13,
-      "large_losses_over_5": 12,
-      "mean_absolute_minutes_error": 6.36,
-      "mean_abs_minutes_component": 3.13,
-      "mean_abs_rate_component": 1.64,
-      "minutes_dominant_losses": 54,
+      "n": 162,
+      "wins": 99,
+      "losses": 63,
+      "roi_pct": 11.27,
+      "average_losing_margin": 3.45,
+      "large_losses_over_5": 16,
+      "mean_absolute_minutes_error": 6.45,
+      "mean_abs_minutes_component": 3.2,
+      "mean_abs_rate_component": 1.73,
+      "minutes_dominant_losses": 63,
       "rate_dominant_losses": 0
     },
     "production_rate_dominant": {
-      "n": 429,
-      "wins": 194,
-      "losses": 235,
-      "roi_pct": -17.72,
-      "average_losing_margin": 4.0,
-      "large_losses_over_5": 71,
-      "mean_absolute_minutes_error": 3.72,
-      "mean_abs_minutes_component": 1.36,
-      "mean_abs_rate_component": 4.34,
+      "n": 474,
+      "wins": 229,
+      "losses": 245,
+      "roi_pct": -11.75,
+      "average_losing_margin": 4.15,
+      "large_losses_over_5": 78,
+      "mean_absolute_minutes_error": 3.75,
+      "mean_abs_minutes_component": 1.46,
+      "mean_abs_rate_component": 4.63,
       "minutes_dominant_losses": 0,
-      "rate_dominant_losses": 235
+      "rate_dominant_losses": 245
     }
   },
   "points_and_pra_large_losses": {
     "PTS": {
-      "n": 40,
-      "minutes_dominant": 4,
-      "rate_dominant": 36
+      "n": 46,
+      "minutes_dominant": 6,
+      "rate_dominant": 40
     },
     "PRA": {
-      "n": 38,
-      "minutes_dominant": 7,
-      "rate_dominant": 31
+      "n": 43,
+      "minutes_dominant": 9,
+      "rate_dominant": 34
     }
   },
   "largest_losses": [
@@ -162,6 +163,20 @@
       "dominant_cause": "production_rate_dominant"
     },
     {
+      "player": "Stephon Castle",
+      "game": "Minnesota Timberwolves @ San Antonio Spurs",
+      "market": "PRA",
+      "side": "OVER",
+      "line": 27.5,
+      "actual": 10.0,
+      "loss_margin": 17.5,
+      "projected_minutes": 31.22,
+      "actual_minutes": 22.0,
+      "minutes_component": -9.08,
+      "rate_component": -11.67,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
       "player": "Trey Murphy III",
       "game": "Denver Nuggets @ New Orleans Pelicans",
       "market": "PRA",
@@ -173,6 +188,20 @@
       "actual_minutes": 30.0,
       "minutes_component": -3.1,
       "rate_component": -12.07,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
+      "player": "Amen Thompson",
+      "game": "Oklahoma City Thunder @ Houston Rockets",
+      "market": "PRA",
+      "side": "OVER",
+      "line": 27.5,
+      "actual": 12.0,
+      "loss_margin": 15.5,
+      "projected_minutes": 35.55,
+      "actual_minutes": 28.0,
+      "minutes_component": -6.74,
+      "rate_component": -12.97,
       "dominant_cause": "production_rate_dominant"
     },
     {
@@ -453,34 +482,6 @@
       "actual_minutes": 31.0,
       "minutes_component": 0.28,
       "rate_component": 14.63,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "DeMar DeRozan",
-      "game": "Denver Nuggets @ Phoenix Suns",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 13.5,
-      "actual": 3.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.75,
-      "actual_minutes": 24.0,
-      "minutes_component": -0.45,
-      "rate_component": -11.57,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "Max Christie",
-      "game": "Houston Rockets @ Dallas Mavericks",
-      "market": "PRA",
-      "side": "OVER",
-      "line": 13.5,
-      "actual": 3.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 27.87,
-      "actual_minutes": 18.0,
-      "minutes_component": -6.28,
-      "rate_component": -8.46,
       "dominant_cause": "production_rate_dominant"
     }
   ],
