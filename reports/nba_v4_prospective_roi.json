@@ -1,26 +1,26 @@
 {
   "status": "PROSPECTIVE_LIVE_PRIMARY_RESEARCH",
-  "newly_graded": 11,
+  "newly_graded": 20,
   "overall": {
-    "captured": 790,
-    "graded": 627,
-    "wins": 327,
-    "losses": 300,
-    "roi_pct": -5.97
+    "captured": 937,
+    "graded": 647,
+    "wins": 335,
+    "losses": 312,
+    "roi_pct": -6.55
   },
   "assists_pra": {
-    "captured": 381,
-    "graded": 306,
-    "wins": 157,
-    "losses": 149,
-    "roi_pct": -7.63
+    "captured": 445,
+    "graded": 315,
+    "wins": 162,
+    "losses": 153,
+    "roi_pct": -7.29
   },
   "other_markets": {
-    "captured": 409,
-    "graded": 321,
-    "wins": 170,
-    "losses": 151,
-    "roi_pct": -4.38
+    "captured": 492,
+    "graded": 332,
+    "wins": 173,
+    "losses": 159,
+    "roi_pct": -5.85
   },
   "capture_dates": [
     "2026-10-29",
@@ -38,39 +38,39 @@
   "promotion_gate": "RESEARCH_ONLY_INSUFFICIENT_DATES",
   "by_market": {
     "PTS": {
-      "captured": 229,
-      "graded": 165,
-      "wins": 83,
-      "losses": 82,
-      "roi_pct": -5.27
+      "captured": 288,
+      "graded": 172,
+      "wins": 84,
+      "losses": 88,
+      "roi_pct": -7.96
     },
     "REB": {
-      "captured": 141,
-      "graded": 121,
-      "wins": 66,
-      "losses": 55,
-      "roi_pct": -4.74
+      "captured": 164,
+      "graded": 125,
+      "wins": 68,
+      "losses": 57,
+      "roi_pct": -4.87
     },
     "AST": {
-      "captured": 128,
+      "captured": 139,
       "graded": 116,
       "wins": 62,
       "losses": 54,
       "roi_pct": -10.08
     },
     "3PM": {
-      "captured": 39,
+      "captured": 40,
       "graded": 35,
       "wins": 21,
       "losses": 14,
       "roi_pct": 1.02
     },
     "PRA": {
-      "captured": 253,
-      "graded": 190,
-      "wins": 95,
-      "losses": 95,
-      "roi_pct": -6.14
+      "captured": 306,
+      "graded": 199,
+      "wins": 100,
+      "losses": 99,
+      "roi_pct": -5.67
     }
   },
   "by_capture_date": {
@@ -97,13 +97,13 @@
     },
     "2026-11-01": {
       "captured": 63,
-      "graded": 11,
-      "wins": 5,
-      "losses": 6,
-      "roi_pct": -10.82
+      "graded": 31,
+      "wins": 13,
+      "losses": 18,
+      "roi_pct": -19.87
     },
     "2026-11-02": {
-      "captured": 86,
+      "captured": 233,
       "graded": 0,
       "wins": 0,
       "losses": 0,
