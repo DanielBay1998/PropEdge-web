@@ -1264,6 +1264,34 @@ def model_performance():
         model_disagreement[market]={"paired":len(sample),"primary_mae":round(baseline,3),
             "challenger_mae":round(challenger,3),
             "note":"Descriptive paired results; not an independent holdout."}
+    # Fair same-pick comparison: only evaluate model forecasts captured before tipoff.
+    # This does NOT compare win rates of different bet-selection cohorts.
+    paired_versions={}
+    projection_fields={
+        "primary":"pregame_primary_projection",
+        "challenger":"pregame_challenger_projection",
+        "v4":"pregame_v4_projection",
+        "baseline":"pregame_baseline_projection",
+        "calibrated":"pregame_calibrated_projection",
+    }
+    paired_rows=[r for r in completed if number(r.get("actual")) is not None]
+    for left,right in (("primary","challenger"),("baseline","calibrated"),("primary","v4")):
+        left_key,right_key=projection_fields[left],projection_fields[right]
+        common=[r for r in paired_rows if number(r.get(left_key)) is not None
+                and number(r.get(right_key)) is not None]
+        if not common:
+            paired_versions[left+"_vs_"+right]={"paired":0,"status":"INSUFFICIENT_SAVED_PREGAME_PROJECTIONS"}
+            continue
+        left_errors=[abs(float(r[left_key])-float(r["actual"])) for r in common]
+        right_errors=[abs(float(r[right_key])-float(r["actual"])) for r in common]
+        paired_versions[left+"_vs_"+right]={
+            "paired":len(common),
+            "left_mae":round(sum(left_errors)/len(common),3),
+            "right_mae":round(sum(right_errors)/len(common),3),
+            "left_better":sum(a<b for a,b in zip(left_errors,right_errors)),
+            "right_better":sum(b<a for a,b in zip(left_errors,right_errors)),
+            "ties":sum(a==b for a,b in zip(left_errors,right_errors)),
+            "status":"DESCRIPTIVE_PAIRED_NOT_INDEPENDENT_HOLDOUT"}
     # Distinct, date-scoped snapshots of the actual captured pregame picks.
     # Do not conflate this with historical experimental simulations.
     windows={}
@@ -1287,7 +1315,7 @@ def model_performance():
             "graded":len(completed),"wins":wins,"losses":losses,"pushes":pushes,
             "hit_rate":round(100*wins/(wins+losses),1) if wins+losses else None,
             "mean_absolute_error":round(sum(errors)/len(errors),2) if errors else None,
-            "by_market":by_market,"by_model_version":version_stats,"pending_audit":pending_audit,"paired_projection_audit":model_disagreement,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
+            "by_market":by_market,"by_model_version":version_stats,"pending_audit":pending_audit,"paired_projection_audit":model_disagreement,"paired_version_audit":paired_versions,"market_ranking_ready":sum(r.get("status") in ("win","loss") for r in rows)>=100,"windows":windows,"recent":list(reversed(rows[-60:])),
             "note":"Tracked pregame signals only. Grading requires completed ESPN games and matching player game logs. Pending is not a loss; no results are backfilled."}
 
 # Supplemental injury/lineup research. Never infer a confirmed starter or silently
