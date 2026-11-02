@@ -99,7 +99,7 @@
         "losses": 35,
         "pushes": 0,
         "flat_stake_roi_pct": -15.87,
-        "mean_absolute_error_on_all_matched": 1.1726
+        "mean_absolute_error_on_all_matched": 1.1727
       }
     },
     "PRA": {
@@ -117,7 +117,7 @@
         "losses": 97,
         "pushes": 0,
         "flat_stake_roi_pct": 0.15,
-        "mean_absolute_error_on_all_matched": 6.987
+        "mean_absolute_error_on_all_matched": 6.9871
       }
     }
   },
@@ -155,7 +155,7 @@
         "losses": 125,
         "pushes": 0,
         "flat_stake_roi_pct": -14.51,
-        "mean_absolute_error_on_all_matched": 4.5239
+        "mean_absolute_error_on_all_matched": 4.524
       }
     },
     "20261030": {
@@ -290,26 +290,26 @@
         "average_loss_margin": 2.56
       },
       "consensus_edge_1_to_2": {
-        "n": 208,
+        "n": 209,
         "wins": 97,
-        "losses": 111,
-        "win_rate_pct": 46.63,
-        "flat_roi_pct": -15.89,
+        "losses": 112,
+        "win_rate_pct": 46.41,
+        "flat_roi_pct": -16.29,
         "losses_within_0_5": 23,
-        "losses_within_2": 42,
+        "losses_within_2": 43,
         "losses_more_than_5": 40,
-        "average_loss_margin": 4.02
+        "average_loss_margin": 4.0
       },
       "consensus_edge_2_to_4": {
-        "n": 205,
+        "n": 204,
         "wins": 107,
-        "losses": 98,
-        "win_rate_pct": 52.2,
-        "flat_roi_pct": -1.24,
+        "losses": 97,
+        "win_rate_pct": 52.45,
+        "flat_roi_pct": -0.75,
         "losses_within_0_5": 9,
-        "losses_within_2": 21,
+        "losses_within_2": 20,
         "losses_more_than_5": 42,
-        "average_loss_margin": 5.32
+        "average_loss_margin": 5.36
       },
       "consensus_edge_4_plus": {
         "n": 86,
@@ -348,26 +348,26 @@
           "average_loss_margin": 5.41
         },
         "consensus_edge_1_to_2": {
-          "n": 82,
+          "n": 83,
           "wins": 33,
-          "losses": 49,
-          "win_rate_pct": 40.24,
-          "flat_roi_pct": -23.32,
+          "losses": 50,
+          "win_rate_pct": 39.76,
+          "flat_roi_pct": -24.24,
           "losses_within_0_5": 7,
-          "losses_within_2": 15,
+          "losses_within_2": 16,
           "losses_more_than_5": 24,
-          "average_loss_margin": 4.77
+          "average_loss_margin": 4.7
         },
         "consensus_edge_2_to_4": {
-          "n": 109,
+          "n": 108,
           "wins": 57,
-          "losses": 52,
-          "win_rate_pct": 52.29,
-          "flat_roi_pct": -0.99,
+          "losses": 51,
+          "win_rate_pct": 52.78,
+          "flat_roi_pct": -0.07,
           "losses_within_0_5": 6,
-          "losses_within_2": 14,
+          "losses_within_2": 13,
           "losses_more_than_5": 21,
-          "average_loss_margin": 4.85
+          "average_loss_margin": 4.91
         },
         "consensus_edge_4_plus": {
           "n": 24,
@@ -599,8 +599,8 @@
         "line": 27.5,
         "actual": 12.0,
         "loss_margin": 15.5,
-        "consensus": 30.65,
-        "consensus_edge_on_pick": 3.15
+        "consensus": 30.66,
+        "consensus_edge_on_pick": 3.16
       },
       {
         "player": "Aaron Wiggins",
@@ -764,8 +764,8 @@
         "line": 47.5,
         "actual": 59.0,
         "loss_margin": 11.5,
-        "consensus": 41.13,
-        "consensus_edge_on_pick": 6.37
+        "consensus": 41.14,
+        "consensus_edge_on_pick": 6.36
       }
     ],
     "limitations": [
@@ -1066,8 +1066,8 @@
         "mae": 4.376,
         "median_absolute_error": 2.921,
         "p75_absolute_error": 6.39,
-        "p90_absolute_error": 10.439,
-        "maximum_absolute_error": 24.163,
+        "p90_absolute_error": 10.438,
+        "maximum_absolute_error": 24.162,
         "mean_signed_error_projection_minus_actual": 0.629,
         "within_0_5_pct": 9.78,
         "within_1_pct": 19.08,
@@ -1123,10 +1123,10 @@
         "v4": {
           "n": 261,
           "mae": 5.828,
-          "median_absolute_error": 5.375,
-          "p75_absolute_error": 8.612,
-          "p90_absolute_error": 11.484,
-          "maximum_absolute_error": 24.163,
+          "median_absolute_error": 5.374,
+          "p75_absolute_error": 8.614,
+          "p90_absolute_error": 11.483,
+          "maximum_absolute_error": 24.162,
           "mean_signed_error_projection_minus_actual": 1.439,
           "within_0_5_pct": 3.45,
           "within_1_pct": 8.05,
@@ -1138,7 +1138,7 @@
           "n": 261,
           "mae": 5.876,
           "median_absolute_error": 5.26,
-          "p75_absolute_error": 8.576,
+          "p75_absolute_error": 8.575,
           "p90_absolute_error": 11.966,
           "maximum_absolute_error": 23.628,
           "mean_signed_error_projection_minus_actual": 1.577,
@@ -1184,7 +1184,7 @@
           "median_absolute_error": 2.114,
           "p75_absolute_error": 3.631,
           "p90_absolute_error": 5.034,
-          "maximum_absolute_error": 8.553,
+          "maximum_absolute_error": 8.552,
           "mean_signed_error_projection_minus_actual": -0.216,
           "within_0_5_pct": 16.98,
           "within_1_pct": 30.82,
@@ -1255,7 +1255,7 @@
           "mae": 1.823,
           "median_absolute_error": 1.574,
           "p75_absolute_error": 2.639,
-          "p90_absolute_error": 3.55,
+          "p90_absolute_error": 3.549,
           "maximum_absolute_error": 5.24,
           "mean_signed_error_projection_minus_actual": 0.325,
           "within_0_5_pct": 12.03,
@@ -1355,11 +1355,11 @@
         "v4": {
           "n": 206,
           "mae": 6.873,
-          "median_absolute_error": 6.062,
-          "p75_absolute_error": 9.735,
-          "p90_absolute_error": 13.39,
-          "maximum_absolute_error": 21.52,
-          "mean_signed_error_projection_minus_actual": 0.624,
+          "median_absolute_error": 6.063,
+          "p75_absolute_error": 9.734,
+          "p90_absolute_error": 13.389,
+          "maximum_absolute_error": 21.517,
+          "mean_signed_error_projection_minus_actual": 0.625,
           "within_0_5_pct": 2.91,
           "within_1_pct": 4.85,
           "within_2_pct": 17.96,
@@ -1369,10 +1369,10 @@
         "consensus": {
           "n": 206,
           "mae": 6.987,
-          "median_absolute_error": 6.586,
+          "median_absolute_error": 6.587,
           "p75_absolute_error": 9.842,
-          "p90_absolute_error": 13.435,
-          "maximum_absolute_error": 21.532,
+          "p90_absolute_error": 13.436,
+          "maximum_absolute_error": 21.531,
           "mean_signed_error_projection_minus_actual": 0.846,
           "within_0_5_pct": 3.4,
           "within_1_pct": 5.34,
@@ -1415,10 +1415,10 @@
         "v4": {
           "n": 268,
           "mae": 3.889,
-          "median_absolute_error": 2.571,
-          "p75_absolute_error": 5.891,
-          "p90_absolute_error": 8.993,
-          "maximum_absolute_error": 16.632,
+          "median_absolute_error": 2.572,
+          "p75_absolute_error": 5.89,
+          "p90_absolute_error": 8.994,
+          "maximum_absolute_error": 16.631,
           "mean_signed_error_projection_minus_actual": 0.696,
           "within_0_5_pct": 11.19,
           "within_1_pct": 21.27,
@@ -1473,10 +1473,10 @@
         "v4": {
           "n": 232,
           "mae": 4.377,
-          "median_absolute_error": 2.989,
-          "p75_absolute_error": 6.666,
-          "p90_absolute_error": 9.903,
-          "maximum_absolute_error": 20.238,
+          "median_absolute_error": 2.987,
+          "p75_absolute_error": 6.667,
+          "p90_absolute_error": 9.905,
+          "maximum_absolute_error": 20.234,
           "mean_signed_error_projection_minus_actual": 0.564,
           "within_0_5_pct": 7.33,
           "within_1_pct": 17.67,
@@ -1488,9 +1488,9 @@
           "n": 232,
           "mae": 4.524,
           "median_absolute_error": 3.214,
-          "p75_absolute_error": 7.434,
-          "p90_absolute_error": 10.281,
-          "maximum_absolute_error": 17.866,
+          "p75_absolute_error": 7.435,
+          "p90_absolute_error": 10.282,
+          "maximum_absolute_error": 17.864,
           "mean_signed_error_projection_minus_actual": 0.78,
           "within_0_5_pct": 7.76,
           "within_1_pct": 15.52,
@@ -1531,10 +1531,10 @@
         "v4": {
           "n": 264,
           "mae": 4.411,
-          "median_absolute_error": 2.961,
-          "p75_absolute_error": 6.21,
+          "median_absolute_error": 2.96,
+          "p75_absolute_error": 6.211,
           "p90_absolute_error": 10.703,
-          "maximum_absolute_error": 24.163,
+          "maximum_absolute_error": 24.162,
           "mean_signed_error_projection_minus_actual": 0.51,
           "within_0_5_pct": 10.61,
           "within_1_pct": 20.08,
@@ -1546,7 +1546,7 @@
           "n": 264,
           "mae": 4.417,
           "median_absolute_error": 2.863,
-          "p75_absolute_error": 6.435,
+          "p75_absolute_error": 6.436,
           "p90_absolute_error": 11.535,
           "maximum_absolute_error": 23.628,
           "mean_signed_error_projection_minus_actual": 0.683,
@@ -1592,8 +1592,8 @@
           "median_absolute_error": 5.503,
           "p75_absolute_error": 8.995,
           "p90_absolute_error": 13.344,
-          "maximum_absolute_error": 19.575,
-          "mean_signed_error_projection_minus_actual": 1.074,
+          "maximum_absolute_error": 19.577,
+          "mean_signed_error_projection_minus_actual": 1.075,
           "within_0_5_pct": 9.38,
           "within_1_pct": 10.94,
           "within_2_pct": 26.56,
@@ -1604,9 +1604,9 @@
           "n": 64,
           "mae": 6.341,
           "median_absolute_error": 5.511,
-          "p75_absolute_error": 9.896,
+          "p75_absolute_error": 9.897,
           "p90_absolute_error": 13.093,
-          "maximum_absolute_error": 19.94,
+          "maximum_absolute_error": 19.941,
           "mean_signed_error_projection_minus_actual": 1.299,
           "within_0_5_pct": 10.94,
           "within_1_pct": 14.06,
@@ -1616,8 +1616,8 @@
         }
       }
     },
-    "consensus_better_than_primary_count": 492,
-    "consensus_worse_than_primary_count": 336,
+    "consensus_better_than_primary_count": 493,
+    "consensus_worse_than_primary_count": 335,
     "worst_consensus_misses": [
       {
         "player": "Scottie Barnes",
@@ -1663,7 +1663,7 @@
         "actual": 44.0,
         "primary": 24.71,
         "challenger": 24.75,
-        "v4": 24.88,
+        "v4": 24.89,
         "consensus": 24.78,
         "absolute_miss": 19.22
       },
@@ -1676,8 +1676,8 @@
         "primary": 30.64,
         "challenger": 30.9,
         "v4": 30.43,
-        "consensus": 30.65,
-        "absolute_miss": 18.65
+        "consensus": 30.66,
+        "absolute_miss": 18.66
       },
       {
         "player": "Giannis Antetokounmpo",
@@ -1687,9 +1687,9 @@
         "actual": 59.0,
         "primary": 41.72,
         "challenger": 42.92,
-        "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "v4": 38.77,
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Giannis Antetokounmpo",
@@ -1699,9 +1699,9 @@
         "actual": 59.0,
         "primary": 41.72,
         "challenger": 42.92,
-        "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "v4": 38.77,
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Giannis Antetokounmpo",
@@ -1711,9 +1711,9 @@
         "actual": 59.0,
         "primary": 41.72,
         "challenger": 42.92,
-        "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "v4": 38.77,
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Jamal Murray",
