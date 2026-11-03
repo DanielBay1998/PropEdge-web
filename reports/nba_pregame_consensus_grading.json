@@ -62,7 +62,7 @@
     "eligible": 328,
     "independent_capture_dates": 2,
     "consensus_mae": 4.8654,
-    "adjusted_mae": 4.8536,
+    "adjusted_mae": 4.8537,
     "note": "Historical challenger-trained weights; not independently fitted to consensus. Requires separate validation before promotion.",
     "production_promoted": false
   },
