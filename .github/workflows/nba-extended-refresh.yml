@@ -1,5 +1,9 @@
 name: Refresh NBA extended game logs
 on:
+  push:
+    paths:
+      - 'scripts/refresh_nba_extended.py'
+      - '.github/workflows/nba-extended-refresh.yml'
   workflow_dispatch:
   schedule:
     - cron: '30 11 * * *'
