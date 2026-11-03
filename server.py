@@ -1219,7 +1219,7 @@ def nba_accuracy_trends():
 @app.get("/api/prizepicks-performance")
 def prizepicks_performance():
     """Verified PrizePicks-only results; never mix traditional sportsbook picks."""
-    path=ROOT/"data"/"model_tracking.json"
+    path=ROOT/"data"/"prizepicks_nba_tracking.json"
     try: rows=json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
     except (OSError,ValueError): rows=[]
     captured=[r for r in rows if norm(r.get("book"))=="prizepicks"
@@ -1227,7 +1227,7 @@ def prizepicks_performance():
               and number(r.get("projection")) is not None]
     valid=[r for r in captured if r.get("status") in {"win","loss","push"}
            and number(r.get("actual")) is not None
-           and r.get("validation_status") not in {"invalid_matchup_review","invalid","rejected"}]
+           and r.get("grading_source")=="NBA extended box score, unique player/date"]
     def summary(items):
         w=sum(r["status"]=="win" for r in items)
         l=sum(r["status"]=="loss" for r in items)
