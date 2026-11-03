@@ -43,6 +43,62 @@ def fetch(season):
             last=e
             if attempt<2: time.sleep(4*(attempt+1))
     raise RuntimeError(f"{season} fetch failed: {last}")
+def fetch_espn(season):
+    """ESPN public scoreboard + game summaries; independently sourced fallback."""
+    import json, urllib.request
+    from datetime import date, timedelta
+    start_year=int(season[:4])
+    start=date(start_year,10,1)
+    end=min(date(start_year+1,7,1),datetime.now(timezone.utc).date())
+    if end<start: return []
+    def get(url):
+        request=urllib.request.Request(url,headers={"User-Agent":"Mozilla/5.0 (compatible; PropEdge/1.0)","Accept":"application/json"})
+        with urllib.request.urlopen(request,timeout=22) as response:
+            return json.load(response)
+    results=[]
+    seen=set()
+    day=start
+    failures=0
+    while day<=end:
+        try:
+            board=get("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates="+day.strftime("%Y%m%d")+"&limit=30")
+            for event in board.get("events",[]):
+                eid=str(event.get("id",""))
+                if not eid or eid in seen: continue
+                seen.add(eid)
+                if not any(c.get("type",{}).get("abbreviation")=="STD" for c in event.get("competitions",[])):
+                    continue
+                summary=get("https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event="+eid)
+                for team in summary.get("boxscore",{}).get("players",[]):
+                    abbreviation=team.get("team",{}).get("abbreviation","")
+                    for group in team.get("statistics",[]):
+                        labels=group.get("labels",[])
+                        for athlete in group.get("athletes",[]):
+                            if not athlete.get("didPlay",True): continue
+                            values=dict(zip(labels,athlete.get("stats",[])))
+                            person=athlete.get("athlete",{})
+                            if not person.get("id"):continue
+                            row={"GAME_ID":eid,"GAME_DATE":day.isoformat(),"PLAYER_ID":person["id"],
+                                 "PLAYER_NAME":person.get("displayName",""),"TEAM_ABBREVIATION":abbreviation}
+                            mapping={"MIN":"MIN","PTS":"PTS","REB":"REB","AST":"AST","OREB":"OREB","DREB":"DREB","STL":"STL","BLK":"BLK","TO":"TOV"}
+                            for src,dest in mapping.items():row[dest]=values.get(src,"")
+                            for src,made,attempted in (("FG","FGM","FGA"),("3PT","FG3M","FG3A"),("FT","FTM","FTA")):
+                                value=str(values.get(src,""))
+                                if "-" in value:
+                                    parts=value.split("-",1)
+                                    row[made],row[attempted]=parts
+                            if row.get("FGA") is not None and row.get("FG3A") is not None:
+                                results.append(normalize(row,season))
+            failures=0
+        except Exception as exc:
+            failures+=1
+            print("ESPN fallback date failed:",day,type(exc).__name__,flush=True)
+            if failures>=10:raise RuntimeError("ESPN fallback repeatedly unavailable") from exc
+        day+=timedelta(days=1)
+        time.sleep(0.08)
+    if len(results)<100:raise RuntimeError("ESPN fallback insufficient player-game records")
+    return results
+
 def main():
     merged={}
     if OUT.exists():
@@ -51,7 +107,11 @@ def main():
                 if row.get("GAME_ID") and row.get("PLAYER_ID"):
                     merged[(row.get("SEASON"),row["GAME_ID"],row["PLAYER_ID"])]=row
     for season in SEASONS:
-        fresh=fetch(season)
+        try:
+            fresh=fetch(season)
+        except Exception as exc:
+            print(f"NBA.com unavailable for {season}: {type(exc).__name__}; trying ESPN",flush=True)
+            fresh=fetch_espn(season)
         for row in fresh: merged[(row["SEASON"],str(row["GAME_ID"]),str(row["PLAYER_ID"]))]=row
         print(f"{season}: {len(fresh)} player-game rows")
         time.sleep(2)
