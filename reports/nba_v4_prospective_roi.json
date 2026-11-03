@@ -1,26 +1,26 @@
 {
   "status": "PROSPECTIVE_LIVE_PRIMARY_RESEARCH",
-  "newly_graded": 290,
+  "newly_graded": 4,
   "overall": {
-    "captured": 1042,
-    "graded": 980,
-    "wins": 509,
+    "captured": 1065,
+    "graded": 984,
+    "wins": 513,
     "losses": 471,
-    "roi_pct": -4.77
+    "roi_pct": -4.34
   },
   "assists_pra": {
-    "captured": 496,
-    "graded": 464,
-    "wins": 239,
+    "captured": 504,
+    "graded": 466,
+    "wins": 241,
     "losses": 225,
-    "roi_pct": -5.63
+    "roi_pct": -5.18
   },
   "other_markets": {
-    "captured": 546,
-    "graded": 516,
-    "wins": 270,
+    "captured": 561,
+    "graded": 518,
+    "wins": 272,
     "losses": 246,
-    "roi_pct": -3.99
+    "roi_pct": -3.59
   },
   "capture_dates": [
     "2026-10-29",
@@ -41,25 +41,25 @@
   "promotion_gate": "RESEARCH_ONLY_INSUFFICIENT_DATES",
   "by_market": {
     "PTS": {
-      "captured": 335,
-      "graded": 315,
-      "wins": 156,
+      "captured": 342,
+      "graded": 317,
+      "wins": 158,
       "losses": 159,
-      "roi_pct": -6.9
+      "roi_pct": -6.23
     },
     "REB": {
-      "captured": 170,
+      "captured": 178,
       "graded": 161,
       "wins": 88,
       "losses": 73,
       "roi_pct": -2.66
     },
     "AST": {
-      "captured": 152,
-      "graded": 140,
-      "wins": 75,
+      "captured": 155,
+      "graded": 141,
+      "wins": 76,
       "losses": 65,
-      "roi_pct": -7.69
+      "roi_pct": -6.93
     },
     "3PM": {
       "captured": 41,
@@ -69,11 +69,11 @@
       "roi_pct": 13.57
     },
     "PRA": {
-      "captured": 344,
-      "graded": 324,
-      "wins": 164,
+      "captured": 349,
+      "graded": 325,
+      "wins": 165,
       "losses": 160,
-      "roi_pct": -4.74
+      "roi_pct": -4.42
     }
   },
   "by_capture_date": {
@@ -113,11 +113,11 @@
       "roi_pct": -2.59
     },
     "2026-11-03": {
-      "captured": 34,
-      "graded": 11,
-      "wins": 5,
+      "captured": 57,
+      "graded": 15,
+      "wins": 9,
       "losses": 6,
-      "roi_pct": -14.7
+      "roi_pct": 15.89
     }
   },
   "note": "These are live primary forecasts, not independent V4 forecasts."
