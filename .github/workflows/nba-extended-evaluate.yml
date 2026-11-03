@@ -1,0 +1,30 @@
+name: Evaluate NBA extended markets
+on:
+  push:
+    paths:
+      - 'scripts/evaluate_nba_extended.py'
+      - 'data/nba_extended_gamelogs.csv'
+      - '.github/workflows/nba-extended-evaluate.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python scripts/evaluate_nba_extended.py
+      - name: Save research projections and evaluation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nba_extended_backtest.json data/nba_extended_projections.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Update chronological extended-market projections and backtest"
+            git pull --rebase
+            git push
+          fi
