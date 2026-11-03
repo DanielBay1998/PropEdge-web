@@ -1,0 +1,68 @@
+{
+  "model": "EXTENDED_RESEARCH_V1",
+  "method": "chronological prior-game minutes-normalized weighted rates",
+  "regular_season_starts": {
+    "2025-26": "2025-10-21",
+    "2026-27": "2026-10-20"
+  },
+  "eligible_player_seasons": 1030,
+  "projections": 8591,
+  "markets": {
+    "FGA": {
+      "holdout_predictions": 23490,
+      "mae": 2.928,
+      "bias": 0.063
+    },
+    "FGM": {
+      "holdout_predictions": 23490,
+      "mae": 1.866,
+      "bias": -0.012
+    },
+    "2PA": {
+      "holdout_predictions": 23490,
+      "mae": 2.098,
+      "bias": 0.015
+    },
+    "2PM": {
+      "holdout_predictions": 23490,
+      "mae": 1.47,
+      "bias": -0.013
+    },
+    "FTA": {
+      "holdout_predictions": 23490,
+      "mae": 1.713,
+      "bias": 0.021
+    },
+    "FTM": {
+      "holdout_predictions": 23490,
+      "mae": 1.412,
+      "bias": 0.014
+    },
+    "TOV": {
+      "holdout_predictions": 23490,
+      "mae": 0.96,
+      "bias": 0.041
+    },
+    "STL": {
+      "holdout_predictions": 23490,
+      "mae": 0.77,
+      "bias": 0.013
+    },
+    "BLK": {
+      "holdout_predictions": 23490,
+      "mae": 0.532,
+      "bias": 0.003
+    },
+    "OREB": {
+      "holdout_predictions": 23490,
+      "mae": 0.908,
+      "bias": 0.017
+    },
+    "DREB": {
+      "holdout_predictions": 23490,
+      "mae": 1.645,
+      "bias": 0.038
+    }
+  },
+  "warning": "Research only. No PrizePicks lines, hit rates, or ROI validated."
+}
