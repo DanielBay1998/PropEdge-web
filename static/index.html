@@ -1103,7 +1103,6 @@ function attachAllPropsPicks(){
  root.querySelectorAll('[data-player-dashboard]').forEach(button=>button.onclick=()=>{const i=Number(button.dataset.playerDashboard);if(Number.isInteger(i)&&window.peVisibleAllProps?.[i])openPlayerDashboard(window.peVisibleAllProps[i])});
  root.querySelectorAll('[data-pick-toggle]').forEach(button=>button.onclick=()=>{const detail=root.querySelector('#top-pick-detail-'+button.dataset.pickToggle);if(!detail)return;const open=detail.classList.toggle('hidden')===false;button.setAttribute('aria-expanded',String(open));button.innerHTML=open?'Hide analysis <span>⌃</span>':'View analysis <span>⌄</span>';if(open){let chart=detail.querySelector('.pe-inline-chart');if(!chart){chart=document.createElement('section');chart.className='pe-inline-chart';detail.prepend(chart)}if(!chart.dataset.loaded){chart.dataset.loaded='1';const i=Number(button.dataset.pickToggle);const pick=button.closest('#allcards')?window.peVisibleAllProps?.[i]:window.peVisiblePicks?.[i];if(pick)peInlineGameChart(pick,chart)}}});
 }
-const sameMatchup=(a,b)=>{const x=String(a||'').split(/\s+@\s+/),y=String(b||'').split(/\s+@\s+/);return x.length===2&&y.length===2&&teamCode(x[0])===teamCode(y[0])&&teamCode(x[1])===teamCode(y[1])};
 function sameMatchup(a,b){
  const x=String(a||'').split(/\s+@\s+/),y=String(b||'').split(/\s+@\s+/);
  if(x.length!==2||y.length!==2)return false;
