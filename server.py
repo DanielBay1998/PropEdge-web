@@ -13,7 +13,7 @@ app=FastAPI(title="PropEdge Live Validated")
 from nfl import router as nfl_router
 app.include_router(nfl_router)
 app.mount("/static",StaticFiles(directory=str(ROOT/"static")),name="static")
-MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA"}
+MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA","player_field_goals_attempted":"FGA","player_field_goals_made":"FGM","player_two_point_field_goals_made":"2PM","player_two_point_field_goals_attempted":"2PA","player_free_throws_made":"FTM","player_free_throws_attempted":"FTA","player_turnovers":"TOV","player_steals":"STL","player_blocks":"BLK","player_offensive_rebounds":"OREB","player_defensive_rebounds":"DREB"}
 _cache={"until":0,"result":None};_lock=threading.Lock()
 _rate_limit={"until":0,"failures":0}
 class ProviderRateLimited(Exception):pass
