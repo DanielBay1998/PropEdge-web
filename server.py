@@ -14,6 +14,23 @@ from nfl import router as nfl_router
 app.include_router(nfl_router)
 app.mount("/static",StaticFiles(directory=str(ROOT/"static")),name="static")
 MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA","player_field_goals_attempted":"FGA","player_field_goals_made":"FGM","player_two_point_field_goals_made":"2PM","player_two_point_field_goals_attempted":"2PA","player_free_throws_made":"FTM","player_free_throws_attempted":"FTA","player_turnovers":"TOV","player_steals":"STL","player_blocks":"BLK","player_offensive_rebounds":"OREB","player_defensive_rebounds":"DREB"}
+def extended_research_projections():
+    """Latest current-season research projections, never promoted to qualified picks."""
+    path=ROOT/"data"/"nba_extended_projections.csv"
+    result={}
+    if not path.exists():return result
+    with path.open(encoding="utf-8-sig",newline="") as handle:
+        for row in csv.DictReader(handle):
+            if row.get("season")!="2026-27":continue
+            player=canonical_player(row.get("player"))
+            code=row.get("market")
+            estimate=number(row.get("projection"))
+            if player and code and estimate is not None:
+                key=(player,code)
+                if key not in result or row.get("last_game","")>result[key]["last_game"]:
+                    result[key]={"projection":estimate,"last_game":row.get("last_game",""),"games":row.get("games"),"model":"EXTENDED_RESEARCH_V1"}
+    return result
+
 _cache={"until":0,"result":None};_lock=threading.Lock()
 _rate_limit={"until":0,"failures":0}
 class ProviderRateLimited(Exception):pass
@@ -222,7 +239,7 @@ def refresh():
         except Exception as exc:
             if is_rate_limited(exc):raise ProviderRateLimited() from exc
             raise
-        model=projections();base["players"]=len({p for p,m in model})
+        model=projections();extended_model=extended_research_projections();base["extended_research_player_markets"]=len(extended_model);base["players"]=len({p for p,m in model})
         exploratory=early_sample_estimates(load_game_logs(),model)
         provisional=provisional_projections(load_game_logs(),model)
         candidates=defaultdict(list)
@@ -836,6 +853,8 @@ def refresh():
         for (eid,player,code,side,line),inv in raw_props.items():
             m=model.get((player,code))
             proj=number(m.get("ShadowProjection")) if m else None
+            research=extended_model.get((player,code)) if m is None else None
+            if proj is None and research is not None:proj=research["projection"]
             gap=(proj-line if side=="over" else line-proj) if proj is not None else None
             sample=exploratory.get((player,code)) if proj is None else None
             provisional_row=provisional.get((player,code)) if proj is None else None
@@ -845,13 +864,14 @@ def refresh():
                            "market":code,"side":side.upper(),"line":line,"projection":round(proj,2) if proj is not None else None,
                            "gap":round(gap,2) if gap is not None else None,"book":books[0] if books else "",
                            "books":books,"book_count":len(books),"source_names":sorted(inv["raw_names"]),"qualified":(eid,player,code,side,line) in qualified_keys,
-                           "model_status":"matched" if proj is not None else "early_sample" if sample else "unmatched",
+                           "model_status":"extended_research" if research else "matched" if proj is not None else "early_sample" if sample else "unmatched",
+                           "projection_method":"EXTENDED_RESEARCH_V1" if research else None,"research_only":bool(research),
                            "early_sample_estimate":sample["estimate"] if sample else None,
                            "early_sample_games":sample["games"] if sample else None,
                            "provisional_projection":provisional_row["projection"] if provisional_row else None,
                            "provisional_model":provisional_row["method"] if provisional_row else None,
                            "provisional_games":provisional_row["games"] if provisional_row else None,
-                           "qualification_reason":("Qualifies" if (eid,player,code,side,line) in qualified_keys else
+                           "qualification_reason":("Research projection only; PrizePicks hit rate not validated" if research else "Qualifies" if (eid,player,code,side,line) in qualified_keys else
                                "Experimental projection only; not validated or eligible for qualifying picks" if provisional_row else
                                "Early-season average only; not a validated model or qualifying pick" if sample else
                                "No matching eligible model projection" if proj is None else
