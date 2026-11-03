@@ -10,8 +10,6 @@ from fastapi.staticfiles import StaticFiles
 
 ROOT=Path(__file__).resolve().parent
 app=FastAPI(title="PropEdge Live Validated")
-from nfl import router as nfl_router
-app.include_router(nfl_router)
 app.mount("/static",StaticFiles(directory=str(ROOT/"static")),name="static")
 MARKETS={"player_points":"PTS","player_rebounds":"REB","player_assists":"AST","player_threes":"3PM","player_points_rebounds_assists":"PRA","player_field_goals_attempted":"FGA","player_field_goals_made":"FGM","player_two_point_field_goals_made":"2PM","player_two_point_field_goals_attempted":"2PA","player_free_throws_made":"FTM","player_free_throws_attempted":"FTA","player_turnovers":"TOV","player_steals":"STL","player_blocks":"BLK","player_offensive_rebounds":"OREB","player_defensive_rebounds":"DREB"}
 def extended_research_projections():
@@ -1475,7 +1473,7 @@ def board():
         return _cache["result"]
 
 
-@app.get("/nfl")
+@app.get("/nfl-decommissioned")
 def nfl_home():return HTMLResponse((ROOT/"static"/"nfl.html").read_text(encoding="utf-8"))
 
 @app.get("/healthz")
