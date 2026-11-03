@@ -315,10 +315,10 @@ def refresh():
                 game=f'{event.get("away_team", "Away")} @ {event.get("home_team", "Home")}'
                 for book in odds.get("bookmakers",[]):
                     bk=norm(book.get("key"))
-                    if not bk or bk in {"prizepicks","underdog","pick6"}:continue
+                    if bk!="prizepicks":continue
                     for market in book.get("markets",[]):
                         code=MARKETS.get(market.get("key"))
-                        if not code or market.get("line_type")!="main":continue
+                        if not code or norm(market.get("line_type")) not in {"","main","standard"}:continue
                         period=norm(market.get("period"))
                         if period not in {"","full","full_game","game"}:continue
                         for o in market.get("outcomes",[]):
@@ -361,16 +361,15 @@ def refresh():
         for (eid,player,code,side,line),quotes in candidates.items():
             event_stats[str(eid)]["candidate_groups"]+=1
             distinct={q[0] for q in quotes}
-            # Two independent books must quote the exact same standard main line.
-            # DFS platforms are not counted as independent sportsbook confirmations.
-            sportsbooks=distinct-{"prizepicks","underdog","pick6"}
-            if len(sportsbooks)<2:continue
+            # PrizePicks-only: require an observed standard PrizePicks line.
+            sportsbooks=distinct & {"prizepicks"}
+            if not sportsbooks:continue
             # Require a minimum absolute gap; do not call this EV/probability.
             q=next((q for q in quotes if q[0] in sportsbooks),quotes[0])
             bk,o,game,m,proj,gap=q
             if gap<max(0.5,0.08*max(line,1)):continue
             event_stats[str(eid)]["qualified_signals"]+=1
-            signals.append({"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or "").strip()),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"live main-line feed","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
+            signals.append({"player":re.sub(r"\s*\([A-Z]{2,3}\)$", "", str(m.get("ResolvedPlayer") or "").strip()),"market":code,"side":side.upper(),"line":line,"projection":round(proj,2),"gap":round(gap,2),"book":bk,"books":sorted(distinct),"book_count":len(sportsbooks),"game":game,"odds":o.get("price"),"history":m.get("HistoricalGames"),"current":m.get("CurrentGames"),"minutes":m.get("ProjectedMinutes"),"source":"PrizePicks standard line","event_id":eid,"verified":True,"coverage":"partial" if failures else "complete"})
         # Shadow challenger: connected to live NBA board, but never changes
         # production projections, qualifying picks, odds, or ranking.
         # Historical minutes are used only where genuinely available.
@@ -528,12 +527,8 @@ def refresh():
                 signal["projection_method"]="LEGACY_FALLBACK_MISSING_MINUTES_HISTORY"
                 production.append(signal)
                 continue
-            # A quoted sportsbook price is necessary for a pick; reject
-            # extreme prices so the ranking isn't dominated by heavy favorites.
-            price=number(signal.get("odds"))
-            if price is None or price==0 or price < -130 or price > 250:
-                rejected+=1
-                continue
+            # PrizePicks standard Higher/Lower lines do not require sportsbook odds.
+            # Preserve the observed line without manufacturing a -110 price.
             # Current-season role correction: prior-season minutes can overstate
             # bench-player opportunities. Shrink toward observed current role.
             # External projections are comparison benchmarks, not copied targets.
