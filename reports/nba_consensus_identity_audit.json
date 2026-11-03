@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 395,
+  "total": 443,
   "counts": {
-    "verified_from_available_logs": 395
+    "verified_from_available_logs": 443
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -3564,6 +3564,438 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "charlottehornets"
+    },
+    {
+      "id": "20261103|543729|jaylenbrown|AST|OVER|3.5",
+      "player": "Jaylen Brown",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|anferneesimons|PRA|OVER|12.5",
+      "player": "Anfernee Simons",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|ausarthompson|AST|OVER|3.5",
+      "player": "Ausar Thompson",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261103|543729|vjedgecombe|PRA|OVER|18.5",
+      "player": "VJ Edgecombe",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|joelembiid|AST|OVER|3.5",
+      "player": "Joel Embiid",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|danissjenkins|PRA|OVER|16.5",
+      "player": "Daniss Jenkins",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261103|543729|jaylenbrown|PRA|OVER|28.5",
+      "player": "Jaylen Brown",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543734|peytonwatson|PRA|OVER|17.5",
+      "player": "Peyton Watson",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543729|lebronjames|PRA|OVER|27.5",
+      "player": "LeBron James",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|tyresemaxey|AST|OVER|4.5",
+      "player": "Tyrese Maxey",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|lebronjames|AST|OVER|6.5",
+      "player": "LeBron James",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|tyresemaxey|PRA|OVER|31.5",
+      "player": "Tyrese Maxey",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|joelembiid|PRA|OVER|30.5",
+      "player": "Joel Embiid",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543734|donovanmitchell|AST|OVER|4.5",
+      "player": "Donovan Mitchell",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543730|jalenjohnson|AST|OVER|6.5",
+      "player": "Jalen Johnson",
+      "game": "Atlanta Hawks @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261103|543732|kylekuzma|PRA|OVER|16.5",
+      "player": "Kyle Kuzma",
+      "game": "Milwaukee Bucks @ Boston Celtics",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261103|543734|sammerrill|PRA|OVER|12.5",
+      "player": "Sam Merrill",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543734|jarrettallen|PRA|OVER|23.5",
+      "player": "Jarrett Allen",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543731|mikalbridges|PRA|UNDER|15.5",
+      "player": "Mikal Bridges",
+      "game": "Chicago Bulls @ New York Knicks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261103|543734|ajaymitchell|PRA|UNDER|27.5",
+      "player": "Ajay Mitchell",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261103|543734|jamesharden|PRA|OVER|27.5",
+      "player": "James Harden",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543729|danissjenkins|REB|OVER|2.5",
+      "player": "Daniss Jenkins",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261103|543729|anferneesimons|PTS|OVER|9.5",
+      "player": "Anfernee Simons",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|vjedgecombe|PTS|OVER|10.5",
+      "player": "VJ Edgecombe",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543734|peytonwatson|REB|OVER|3.5",
+      "player": "Peyton Watson",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543729|lebronjames|PTS|OVER|14.5",
+      "player": "LeBron James",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543734|peytonwatson|PTS|OVER|11.5",
+      "player": "Peyton Watson",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543729|jaylenbrown|REB|OVER|5.5",
+      "player": "Jaylen Brown",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|tyresemaxey|PTS|OVER|22.5",
+      "player": "Tyrese Maxey",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|danissjenkins|PTS|OVER|9.5",
+      "player": "Daniss Jenkins",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261103|543729|vjedgecombe|REB|OVER|5.5",
+      "player": "VJ Edgecombe",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543731|mikalbridges|PTS|UNDER|10.5",
+      "player": "Mikal Bridges",
+      "game": "Chicago Bulls @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261103|543729|jaylenbrown|PTS|OVER|19.5",
+      "player": "Jaylen Brown",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543732|kylekuzma|PTS|OVER|9.5",
+      "player": "Kyle Kuzma",
+      "game": "Milwaukee Bucks @ Boston Celtics",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261103|543729|joelembiid|REB|OVER|7.5",
+      "player": "Joel Embiid",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543729|joelembiid|PTS|OVER|19.5",
+      "player": "Joel Embiid",
+      "game": "Philadelphia 76ers @ Detroit Pistons",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "philadelphia76ers"
+    },
+    {
+      "id": "20261103|543731|matasbuzelis|REB|OVER|4.5",
+      "player": "Matas Buzelis",
+      "game": "Chicago Bulls @ New York Knicks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261103|543732|jaimejaquez|REB|OVER|4.5",
+      "player": "Jaime Jaquez Jr.",
+      "game": "Milwaukee Bucks @ Boston Celtics",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261103|543734|evanmobley|PTS|OVER|16.5",
+      "player": "Evan Mobley",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543734|ajaymitchell|PTS|UNDER|19.5",
+      "player": "Ajay Mitchell",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261103|543734|jamesharden|PTS|OVER|16.5",
+      "player": "James Harden",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543730|onyekaokongwu|REB|UNDER|8.5",
+      "player": "Onyeka Okongwu",
+      "game": "Atlanta Hawks @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261103|543734|kenrichwilliams|REB|UNDER|5.5",
+      "player": "Kenrich Williams",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261103|543734|sammerrill|PTS|OVER|8.5",
+      "player": "Sam Merrill",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "clevelandcavaliers"
+    },
+    {
+      "id": "20261103|543734|isaiahhartenstein|PTS|UNDER|10.5",
+      "player": "Isaiah Hartenstein",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261103|543734|jaylinwilliams|PTS|UNDER|6.5",
+      "player": "Jaylin Williams",
+      "game": "Cleveland Cavaliers @ Oklahoma City Thunder",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261103|543730|anthonydavis|REB|UNDER|11.5",
+      "player": "Anthony Davis",
+      "game": "Atlanta Hawks @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261103|543731|oganunoby|PTS|UNDER|18.5",
+      "player": "OG Anunoby",
+      "game": "Chicago Bulls @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
     }
   ]
 }
