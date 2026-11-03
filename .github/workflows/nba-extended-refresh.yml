@@ -1,0 +1,27 @@
+name: Refresh NBA extended game logs
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 11 * * *'
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install 'nba_api>=1.4,<2'
+      - run: python scripts/refresh_nba_extended.py
+      - name: Commit verified data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/nba_extended_gamelogs.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh NBA extended regular-season game logs"
+            git push
+          fi
