@@ -1473,9 +1473,6 @@ def board():
         return _cache["result"]
 
 
-@app.get("/nfl-decommissioned")
-def nfl_home():return HTMLResponse((ROOT/"static"/"nfl.html").read_text(encoding="utf-8"))
-
 @app.get("/healthz")
 def health():return {"status":"ok"}
 
