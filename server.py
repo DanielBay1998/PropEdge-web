@@ -1218,6 +1218,32 @@ def nba_accuracy_trends():
     except (OSError, ValueError):
         return {"status": "REPORT_UNAVAILABLE", "eligible_paired_snapshots": 0}
 
+@app.get("/api/prizepicks-performance")
+def prizepicks_performance():
+    """Verified PrizePicks-only results; never mix traditional sportsbook picks."""
+    path=ROOT/"data"/"model_tracking.json"
+    try: rows=json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    except (OSError,ValueError): rows=[]
+    captured=[r for r in rows if norm(r.get("book"))=="prizepicks"
+              and number(r.get("line")) is not None
+              and number(r.get("projection")) is not None]
+    valid=[r for r in captured if r.get("status") in {"win","loss","push"}
+           and number(r.get("actual")) is not None
+           and r.get("validation_status") not in {"invalid_matchup_review","invalid","rejected"}]
+    def summary(items):
+        w=sum(r["status"]=="win" for r in items)
+        l=sum(r["status"]=="loss" for r in items)
+        p=sum(r["status"]=="push" for r in items)
+        return {"wins":w,"losses":l,"pushes":p,"graded":len(items),
+                "hit_rate_pct":round(100*w/(w+l),2) if w+l else None}
+    by_market={market:summary([r for r in valid if r.get("market")==market])
+               for market in sorted({r.get("market") for r in captured if r.get("market")})}
+    return {"source":"captured PrizePicks standard lines only",
+            "status":"VERIFIED" if valid else "NO_VERIFIED_PRIZEPICKS_RESULTS",
+            "captured":len(captured),"pending":sum(r.get("status")=="pending" for r in captured),
+            "overall":summary(valid),"by_market":by_market,
+            "note":"Hit rate excludes pushes and invalid matches; no ROI without documented PrizePicks payout terms."}
+
 @app.get("/api/model-performance")
 def model_performance():
     path=ROOT/"data"/"model_tracking.json"
