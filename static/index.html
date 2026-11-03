@@ -1104,6 +1104,7 @@ function attachAllPropsPicks(){
  root.querySelectorAll('[data-pick-toggle]').forEach(button=>button.onclick=()=>{const detail=root.querySelector('#top-pick-detail-'+button.dataset.pickToggle);if(!detail)return;const open=detail.classList.toggle('hidden')===false;button.setAttribute('aria-expanded',String(open));button.innerHTML=open?'Hide analysis <span>⌃</span>':'View analysis <span>⌄</span>';if(open){let chart=detail.querySelector('.pe-inline-chart');if(!chart){chart=document.createElement('section');chart.className='pe-inline-chart';detail.prepend(chart)}if(!chart.dataset.loaded){chart.dataset.loaded='1';const i=Number(button.dataset.pickToggle);const pick=button.closest('#allcards')?window.peVisibleAllProps?.[i]:window.peVisiblePicks?.[i];if(pick)peInlineGameChart(pick,chart)}}});
 }
 function renderAllPropsGames(){
+ const sameMatchup=(a,b)=>{const x=String(a||'').split(/\s+@\s+/),y=String(b||'').split(/\s+@\s+/);return x.length===2&&y.length===2&&teamCode(x[0])===teamCode(y[0])&&teamCode(x[1])===teamCode(y[1])};
  const signals=(board.game_props||[]).filter(p=>p.game);
  const fixtureGames=(schedule.games||[]).map(g=>g.away?.name&&g.home?.name?g.away.name+' @ '+g.home.name:null).filter(Boolean);
  const groups=[...new Set([...fixtureGames,...signals.map(p=>p.game)])].filter(Boolean).sort();
@@ -1113,7 +1114,7 @@ function renderAllPropsGames(){
  const button=(name,label)=>'<button type="button" class="pe-game-tab '+(selectedPropsGame===name?'active':'')+'" data-game="'+escapeHTML(name)+'">'+escapeHTML(label)+'</button>';
  tabs.innerHTML=button('ALL','All games')+groups.map(g=>button(g,g)).join('');
  tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{selectedPropsGame=b.dataset.game;render()});
- const sameMatchup=(a,b)=>{const x=String(a||'').split(/\s+@\s+/),y=String(b||'').split(/\s+@\s+/);return x.length===2&&y.length===2&&teamCode(x[0])===teamCode(y[0])&&teamCode(x[1])===teamCode(y[1])};const subset=selectedPropsGame==='ALL'?signals:signals.filter(p=>sameMatchup(p.game,selectedPropsGame));
+ const subset=selectedPropsGame==='ALL'?signals:signals.filter(p=>sameMatchup(p.game,selectedPropsGame));
  const qualified=subset.filter(p=>p.qualified===true).length;
  $('peSelectedGame').innerHTML='<strong>'+escapeHTML(selectedPropsGame==='ALL'?'All NBA matchups':selectedPropsGame)+'</strong><span>'+qualified+' qualified picks · '+new Set(subset.map(p=>playerIdentityKey(p))).size+' players</span>';
 }
