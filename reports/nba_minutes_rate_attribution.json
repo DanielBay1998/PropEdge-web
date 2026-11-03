@@ -9,8 +9,8 @@
   ],
   "excluded": {
     "identity_review": 36,
-    "missing_or_ambiguous_actual_minutes": 139,
-    "pending": 16,
+    "missing_or_ambiguous_actual_minutes": 151,
+    "pending": 52,
     "duplicate_same_line": 53
   },
   "overall": {
