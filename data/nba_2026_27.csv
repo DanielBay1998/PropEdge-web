@@ -3327,3 +3327,297 @@ Game ID,Date,Player,Team,PTS,REB,AST,3PM,MIN
 401909923,20261104,Bilal Coulibaly,Washington Wizards,6,2,2,0,23
 401909923,20261104,Will Riley,Washington Wizards,0,0,0,0,13
 401909923,20261104,Tre Johnson,Washington Wizards,3,2,0,1,14
+401909922,20261104,LeBron James,Philadelphia 76ers,13,10,8,1,33
+401909922,20261104,Joel Embiid,Philadelphia 76ers,26,15,2,0,33
+401909922,20261104,Jaylen Brown,Philadelphia 76ers,30,7,1,3,37
+401909922,20261104,Tyrese Maxey,Philadelphia 76ers,19,1,7,3,34
+401909922,20261104,VJ Edgecombe,Philadelphia 76ers,11,6,3,1,35
+401909922,20261104,Dean Wade,Philadelphia 76ers,3,5,1,0,22
+401909922,20261104,Adem Bona,Philadelphia 76ers,5,2,1,0,15
+401909922,20261104,Kentavious Caldwell-Pope,Philadelphia 76ers,5,1,0,1,21
+401909922,20261104,Anfernee Simons,Philadelphia 76ers,0,1,0,0,10
+401909922,20261104,Duncan Robinson,Detroit Pistons,27,1,2,7,37
+401909922,20261104,John Collins,Detroit Pistons,16,1,0,0,26
+401909922,20261104,Paul Reed,Detroit Pistons,8,7,4,0,30
+401909922,20261104,Cade Cunningham,Detroit Pistons,26,7,11,1,40
+401909922,20261104,Ausar Thompson,Detroit Pistons,11,17,3,0,34
+401909922,20261104,Tolu Smith,Detroit Pistons,1,1,0,0,5
+401909922,20261104,Ronald Holland II,Detroit Pistons,3,2,0,1,12
+401909922,20261104,Javonte Green,Detroit Pistons,1,3,1,0,15
+401909922,20261104,Kevin Huerter,Detroit Pistons,8,1,0,2,20
+401909922,20261104,Daniss Jenkins,Detroit Pistons,5,1,4,1,21
+401909924,20261104,Kyle Kuzma,Milwaukee Bucks,6,5,4,1,27
+401909924,20261104,Jaime Jaquez Jr.,Milwaukee Bucks,18,2,2,4,31
+401909924,20261104,Myles Turner,Milwaukee Bucks,12,9,6,4,36
+401909924,20261104,Tyler Herro,Milwaukee Bucks,25,5,3,4,33
+401909924,20261104,Brayden Burries,Milwaukee Bucks,9,5,3,0,22
+401909924,20261104,Ousmane Dieng,Milwaukee Bucks,0,0,0,0,2
+401909924,20261104,Nate Ament,Milwaukee Bucks,9,2,0,2,18
+401909924,20261104,Jericho Sims,Milwaukee Bucks,0,0,0,0,1
+401909924,20261104,Kel'el Ware,Milwaukee Bucks,2,5,1,0,16
+401909924,20261104,AJ Green,Milwaukee Bucks,5,2,3,1,20
+401909924,20261104,Ryan Rollins,Milwaukee Bucks,13,9,5,2,24
+401909924,20261104,Kasparas Jakucionis,Milwaukee Bucks,3,1,1,1,12
+401909924,20261104,Paul George,Boston Celtics,25,3,5,5,35
+401909924,20261104,Sam Hauser,Boston Celtics,11,2,0,3,30
+401909924,20261104,Neemias Queta,Boston Celtics,9,12,3,0,29
+401909924,20261104,Derrick White,Boston Celtics,24,4,7,1,36
+401909924,20261104,Hugo Gonzalez,Boston Celtics,4,2,0,0,14
+401909924,20261104,Luka Garza,Boston Celtics,11,5,2,3,18
+401909924,20261104,Mitchell Robinson,Boston Celtics,3,10,1,0,20
+401909924,20261104,Payton Pritchard,Boston Celtics,10,1,5,0,18
+401909924,20261104,Baylor Scheierman,Boston Celtics,9,11,1,3,29
+401909924,20261104,Jordan Walsh,Boston Celtics,3,4,0,1,12
+401909925,20261104,Moussa Diabate,Charlotte Hornets,7,6,2,0,29
+401909925,20261104,Brandon Miller,Charlotte Hornets,10,4,1,1,26
+401909925,20261104,Naz Reid,Charlotte Hornets,28,9,2,2,36
+401909925,20261104,Coby White,Charlotte Hornets,4,5,2,0,18
+401909925,20261104,Kon Knueppel,Charlotte Hornets,3,0,0,0,6
+401909925,20261104,Royce O'Neale,Charlotte Hornets,0,3,2,0,18
+401909925,20261104,Tidjane Salaun,Charlotte Hornets,9,1,0,3,10
+401909925,20261104,Ryan Kalkbrenner,Charlotte Hornets,6,4,2,0,19
+401909925,20261104,Dennis Schroder,Charlotte Hornets,5,5,4,1,20
+401909925,20261104,Grayson Allen,Charlotte Hornets,22,2,4,5,27
+401909925,20261104,Sion James,Charlotte Hornets,10,2,1,0,31
+401909925,20261104,Julius Randle,Brooklyn Nets,22,3,4,2,31
+401909925,20261104,Michael Porter Jr.,Brooklyn Nets,26,10,0,4,38
+401909925,20261104,Chaney Johnson,Brooklyn Nets,0,2,1,0,9
+401909925,20261104,Day'Ron Sharpe,Brooklyn Nets,6,5,8,0,27
+401909925,20261104,Nolan Traore,Brooklyn Nets,16,4,2,2,27
+401909925,20261104,Josh Minott,Brooklyn Nets,0,1,0,0,6
+401909925,20261104,Noah Clowney,Brooklyn Nets,7,1,1,1,17
+401909925,20261104,Danny Wolf,Brooklyn Nets,12,5,3,2,19
+401909925,20261104,Moritz Wagner,Brooklyn Nets,6,1,0,0,20
+401909925,20261104,Terance Mann,Brooklyn Nets,0,2,2,0,16
+401909925,20261104,Keon Ellis,Brooklyn Nets,1,2,0,0,10
+401909925,20261104,Mikel Brown Jr.,Brooklyn Nets,18,2,4,3,20
+401909926,20261104,Jalen Smith,Chicago Bulls,3,2,0,1,7
+401909926,20261104,Matas Buzelis,Chicago Bulls,12,5,3,1,26
+401909926,20261104,Caleb Wilson,Chicago Bulls,5,5,0,1,22
+401909926,20261104,Norman Powell,Chicago Bulls,12,1,1,0,22
+401909926,20261104,Josh Giddey,Chicago Bulls,10,1,6,1,27
+401909926,20261104,Zach Collins,Chicago Bulls,3,1,3,0,14
+401909926,20261104,Patrick Williams,Chicago Bulls,4,0,2,0,20
+401909926,20261104,Isaac Okoro,Chicago Bulls,6,1,0,0,15
+401909926,20261104,Leonard Miller,Chicago Bulls,4,6,3,0,19
+401909926,20261104,Noa Essengue,Chicago Bulls,6,3,0,0,14
+401909926,20261104,Buddy Hield,Chicago Bulls,7,1,1,1,8
+401909926,20261104,Tre Jones,Chicago Bulls,14,3,4,1,18
+401909926,20261104,Jordan Hawkins,Chicago Bulls,2,1,0,0,7
+401909926,20261104,Dailyn Swain,Chicago Bulls,3,1,1,0,7
+401909926,20261104,Jaylin Sellers,Chicago Bulls,14,3,1,4,14
+401909926,20261104,OG Anunoby,New York Knicks,18,5,2,1,24
+401909926,20261104,Karl-Anthony Towns,New York Knicks,17,12,1,2,25
+401909926,20261104,Mikal Bridges,New York Knicks,7,4,4,1,22
+401909926,20261104,Landry Shamet,New York Knicks,7,2,2,1,25
+401909926,20261104,Jalen Brunson,New York Knicks,33,2,4,5,28
+401909926,20261104,Dalton Knecht,New York Knicks,10,7,1,2,16
+401909926,20261104,Pacome Dadiet,New York Knicks,4,0,0,0,9
+401909926,20261104,Mohamed Diawara,New York Knicks,8,6,4,1,21
+401909926,20261104,Andre Drummond,New York Knicks,6,9,0,0,12
+401909926,20261104,James Wiseman,New York Knicks,8,8,0,0,10
+401909926,20261104,Jordan Clarkson,New York Knicks,10,1,1,2,15
+401909926,20261104,Jose Alvarado,New York Knicks,0,0,2,0,9
+401909926,20261104,Miles McBride,New York Knicks,7,1,1,2,11
+401909926,20261104,Tyler Kolek,New York Knicks,0,0,5,0,11
+401909927,20261104,Pascal Siakam,Indiana Pacers,20,4,2,2,30
+401909927,20261104,Ivica Zubac,Indiana Pacers,1,4,2,0,19
+401909927,20261104,Andrew Nembhard,Indiana Pacers,22,2,5,2,38
+401909927,20261104,Aaron Nesmith,Indiana Pacers,16,2,2,2,30
+401909927,20261104,Braden Smith,Indiana Pacers,10,1,5,0,24
+401909927,20261104,Larry Nance Jr.,Indiana Pacers,4,4,1,0,14
+401909927,20261104,Obi Toppin,Indiana Pacers,11,5,1,1,19
+401909927,20261104,Jalen Slawson,Indiana Pacers,2,2,1,0,6
+401909927,20261104,Jarace Walker,Indiana Pacers,2,8,1,0,17
+401909927,20261104,Jay Huff,Indiana Pacers,6,3,1,2,14
+401909927,20261104,Kobe Brown,Indiana Pacers,0,1,0,0,7
+401909927,20261104,Quenton Jackson,Indiana Pacers,13,7,2,3,22
+401909927,20261104,Cedric Coward,Memphis Grizzlies,23,9,4,4,33
+401909927,20261104,Cameron Boozer,Memphis Grizzlies,10,6,4,2,33
+401909927,20261104,Jaylen Wells,Memphis Grizzlies,0,1,3,0,21
+401909927,20261104,Zach Edey,Memphis Grizzlies,11,13,1,0,25
+401909927,20261104,Ty Jerome,Memphis Grizzlies,23,4,3,2,29
+401909927,20261104,Jerami Grant,Memphis Grizzlies,11,1,2,2,24
+401909927,20261104,Kris Murray,Memphis Grizzlies,5,1,1,1,15
+401909927,20261104,Olivier-Maxence Prosper,Memphis Grizzlies,4,3,1,0,7
+401909927,20261104,GG Jackson,Memphis Grizzlies,1,2,0,0,7
+401909927,20261104,Isaiah Stewart,Memphis Grizzlies,6,1,0,0,10
+401909927,20261104,Quinten Post,Memphis Grizzlies,2,1,0,0,11
+401909927,20261104,Cam Spencer,Memphis Grizzlies,7,6,9,1,24
+401909928,20261104,Lauri Markkanen,Utah Jazz,21,10,4,5,39
+401909928,20261104,Jaxson Hayes,Utah Jazz,2,7,1,0,21
+401909928,20261104,Keyonte George,Utah Jazz,39,2,9,2,44
+401909928,20261104,Ace Bailey,Utah Jazz,15,5,1,1,35
+401909928,20261104,Darryn Peterson,Utah Jazz,7,2,7,0,30
+401909928,20261104,Brice Sensabaugh,Utah Jazz,6,2,0,1,12
+401909928,20261104,Mo Bamba,Utah Jazz,7,10,1,0,15
+401909928,20261104,Svi Mykhailiuk,Utah Jazz,6,3,0,0,17
+401909928,20261104,Josh Okogie,Utah Jazz,3,6,1,1,26
+401909928,20261104,Josh Green,Utah Jazz,7,1,0,1,23
+401909928,20261104,Isaiah Collier,Utah Jazz,0,1,0,0,3
+401909928,20261104,Herbert Jones,New Orleans Pelicans,2,5,1,0,37
+401909928,20261104,Zion Williamson,New Orleans Pelicans,23,4,2,0,38
+401909928,20261104,Karlo Matkovic,New Orleans Pelicans,5,4,2,1,21
+401909928,20261104,Dejounte Murray,New Orleans Pelicans,20,8,4,1,45
+401909928,20261104,Jeremiah Fears,New Orleans Pelicans,19,6,2,1,34
+401909928,20261104,Saddiq Bey,New Orleans Pelicans,22,4,3,2,29
+401909928,20261104,Trendon Watford,New Orleans Pelicans,7,3,2,0,20
+401909928,20261104,Derik Queen,New Orleans Pelicans,20,9,6,0,27
+401909928,20261104,Bennedict Mathurin,New Orleans Pelicans,2,5,1,0,15
+401909929,20261104,Jarrett Allen,Cleveland Cavaliers,0,1,0,0,7
+401909929,20261104,Evan Mobley,Cleveland Cavaliers,16,10,3,1,33
+401909929,20261104,James Harden,Cleveland Cavaliers,19,9,6,3,35
+401909929,20261104,Donovan Mitchell,Cleveland Cavaliers,27,3,6,5,33
+401909929,20261104,Tyrese Proctor,Cleveland Cavaliers,11,1,0,2,22
+401909929,20261104,Mario Hezonja,Cleveland Cavaliers,12,8,1,2,23
+401909929,20261104,Tristan Enaruna,Cleveland Cavaliers,4,4,1,0,16
+401909929,20261104,Thomas Bryant,Cleveland Cavaliers,8,0,0,1,13
+401909929,20261104,Sam Merrill,Cleveland Cavaliers,10,7,1,2,27
+401909929,20261104,Craig Porter Jr.,Cleveland Cavaliers,0,1,1,0,14
+401909929,20261104,Meleek Thomas,Cleveland Cavaliers,9,1,0,3,18
+401909929,20261104,Isaiah Hartenstein,Oklahoma City Thunder,3,12,4,0,26
+401909929,20261104,Aday Mara,Oklahoma City Thunder,9,5,2,0,25
+401909929,20261104,Kenrich Williams,Oklahoma City Thunder,13,4,2,3,29
+401909929,20261104,Shai Gilgeous-Alexander,Oklahoma City Thunder,42,4,8,5,35
+401909929,20261104,Ajay Mitchell,Oklahoma City Thunder,23,7,4,1,32
+401909929,20261104,Alex Caruso,Oklahoma City Thunder,7,4,3,1,20
+401909929,20261104,Micah Peavy,Oklahoma City Thunder,2,9,1,0,26
+401909929,20261104,Jared McCain,Oklahoma City Thunder,9,1,0,1,25
+401909929,20261104,Josh Dix,Oklahoma City Thunder,0,0,0,0,0
+401909929,20261104,Bennett Stirtz,Oklahoma City Thunder,16,1,1,4,22
+401909930,20261104,Jaden McDaniels,Minnesota Timberwolves,14,8,4,0,37
+401909930,20261104,Jonathan Kuminga,Minnesota Timberwolves,16,8,5,4,32
+401909930,20261104,Rudy Gobert,Minnesota Timberwolves,8,11,2,0,33
+401909930,20261104,Ayo Dosunmu,Minnesota Timberwolves,21,1,6,0,34
+401909930,20261104,LaMelo Ball,Minnesota Timberwolves,20,2,6,4,31
+401909930,20261104,Trey Lyles,Minnesota Timberwolves,5,2,0,1,20
+401909930,20261104,Joan Beringer,Minnesota Timberwolves,4,7,0,0,13
+401909930,20261104,Jaylen Clark,Minnesota Timberwolves,10,4,1,2,25
+401909930,20261104,Bones Hyland,Minnesota Timberwolves,19,2,4,4,16
+401909930,20261104,Kevin Durant,Houston Rockets,21,5,2,2,35
+401909930,20261104,Jabari Smith Jr.,Houston Rockets,11,4,2,2,35
+401909930,20261104,Alperen Sengun,Houston Rockets,17,12,10,0,39
+401909930,20261104,Fred VanVleet,Houston Rockets,18,3,3,4,30
+401909930,20261104,Amen Thompson,Houston Rockets,11,8,1,0,32
+401909930,20261104,Tari Eason,Houston Rockets,9,6,1,1,24
+401909930,20261104,Oscar Tshiebwe,Houston Rockets,2,0,0,0,2
+401909930,20261104,Marcus Smart,Houston Rockets,4,1,1,1,18
+401909930,20261104,Bogdan Bogdanovic,Houston Rockets,0,0,0,0,5
+401909930,20261104,Reed Sheppard,Houston Rockets,14,2,2,3,21
+401909931,20261104,RJ Barrett,Toronto Raptors,22,5,3,3,33
+401909931,20261104,Scottie Barnes,Toronto Raptors,17,6,6,1,32
+401909931,20261104,Collin Murray-Boyles,Toronto Raptors,13,3,2,1,23
+401909931,20261104,Immanuel Quickley,Toronto Raptors,13,1,7,2,32
+401909931,20261104,Ja'Kobe Walter,Toronto Raptors,8,1,2,1,27
+401909931,20261104,Kyle Anderson,Toronto Raptors,2,0,1,0,4
+401909931,20261104,Trayce Jackson-Davis,Toronto Raptors,1,0,0,0,4
+401909931,20261104,Jamison Battle,Toronto Raptors,9,1,0,2,19
+401909931,20261104,Allen Graves,Toronto Raptors,5,1,1,1,14
+401909931,20261104,Jakob Poeltl,Toronto Raptors,8,5,1,0,19
+401909931,20261104,Jamal Shead,Toronto Raptors,3,3,6,1,20
+401909931,20261104,Jaden Bradley,Toronto Raptors,2,1,0,0,4
+401909931,20261104,Alijah Martin,Toronto Raptors,6,1,0,0,9
+401909931,20261104,Aaron Gordon,Denver Nuggets,17,1,0,1,25
+401909931,20261104,Cameron Johnson,Denver Nuggets,12,2,2,4,30
+401909931,20261104,Nikola Jokic,Denver Nuggets,32,10,11,0,30
+401909931,20261104,Jamal Murray,Denver Nuggets,14,5,7,2,28
+401909931,20261104,Christian Braun,Denver Nuggets,11,3,3,1,28
+401909931,20261104,Alpha Diallo,Denver Nuggets,0,0,0,0,4
+401909931,20261104,Marvin Bagley III,Denver Nuggets,10,2,2,0,14
+401909931,20261104,Zeke Nnaji,Denver Nuggets,2,0,0,0,4
+401909931,20261104,DaRon Holmes II,Denver Nuggets,0,1,0,0,4
+401909931,20261104,Bryce Hopkins,Denver Nuggets,18,4,1,1,28
+401909931,20261104,Trevon Brazile,Denver Nuggets,6,7,1,0,23
+401909931,20261104,Tyus Jones,Denver Nuggets,6,1,8,0,18
+401909931,20261104,Ryan Nembhard,Denver Nuggets,0,0,0,0,4
+401909932,20261104,Toumani Camara,Portland Trail Blazers,11,4,2,1,32
+401909932,20261104,Deni Avdija,Portland Trail Blazers,21,7,12,1,35
+401909932,20261104,Donovan Clingan,Portland Trail Blazers,24,11,1,1,29
+401909932,20261104,Damian Lillard,Portland Trail Blazers,25,3,5,2,33
+401909932,20261104,Scoot Henderson,Portland Trail Blazers,9,2,1,1,22
+401909932,20261104,Robert Williams III,Portland Trail Blazers,9,8,1,0,16
+401909932,20261104,Micah Potter,Portland Trail Blazers,4,1,0,1,2
+401909932,20261104,Branden Carlson,Portland Trail Blazers,2,0,0,0,3
+401909932,20261104,Yang Hansen,Portland Trail Blazers,0,0,0,0,2
+401909932,20261104,Jrue Holiday,Portland Trail Blazers,15,4,0,5,28
+401909932,20261104,Vit Krejci,Portland Trail Blazers,5,3,2,1,12
+401909932,20261104,Chris Youngblood,Portland Trail Blazers,0,0,1,0,4
+401909932,20261104,Sidy Cissoko,Portland Trail Blazers,7,4,4,1,21
+401909932,20261104,Dillon Brooks,Phoenix Suns,15,6,2,0,35
+401909932,20261104,Miles Bridges,Phoenix Suns,18,7,5,4,31
+401909932,20261104,Khaman Maluach,Phoenix Suns,6,6,2,0,16
+401909932,20261104,Devin Booker,Phoenix Suns,33,1,2,2,34
+401909932,20261104,Jalen Green,Phoenix Suns,22,2,2,2,32
+401909932,20261104,Oso Ighodaro,Phoenix Suns,9,7,7,0,23
+401909932,20261104,Ryan Dunn,Phoenix Suns,2,6,2,0,18
+401909932,20261104,Koa Peat,Phoenix Suns,2,1,0,0,3
+401909932,20261104,Duop Reath,Phoenix Suns,7,0,0,1,7
+401909932,20261104,Luke Kennard,Phoenix Suns,0,0,1,0,14
+401909932,20261104,Collin Gillespie,Phoenix Suns,2,3,2,0,23
+401909932,20261104,Jamaree Bouyea,Phoenix Suns,3,0,0,1,3
+401909932,20261104,Pat Spencer,Phoenix Suns,0,0,2,0,3
+401909933,20261104,Daniel Gafford,Dallas Mavericks,2,4,1,0,18
+401909933,20261104,P.J. Washington,Dallas Mavericks,21,10,3,3,39
+401909933,20261104,Cooper Flagg,Dallas Mavericks,19,10,5,0,40
+401909933,20261104,Zaccharie Risacher,Dallas Mavericks,2,1,2,0,18
+401909933,20261104,Kyrie Irving,Dallas Mavericks,29,7,5,5,36
+401909933,20261104,Caleb Martin,Dallas Mavericks,0,3,2,0,20
+401909933,20261104,Naji Marshall,Dallas Mavericks,22,5,3,3,26
+401909933,20261104,Morez Johnson Jr.,Dallas Mavericks,8,3,1,1,18
+401909933,20261104,Marcus Sasser,Dallas Mavericks,0,1,2,0,5
+401909933,20261104,Walter Clayton Jr.,Dallas Mavericks,8,6,5,2,21
+401909933,20261104,Victor Wembanyama,San Antonio Spurs,52,24,2,1,34
+401909933,20261104,De'Aaron Fox,San Antonio Spurs,10,3,4,0,33
+401909933,20261104,Devin Vassell,San Antonio Spurs,2,7,4,0,36
+401909933,20261104,Stephon Castle,San Antonio Spurs,17,10,3,2,35
+401909933,20261104,Dylan Harper,San Antonio Spurs,21,5,0,1,36
+401909933,20261104,Harrison Barnes,San Antonio Spurs,4,2,0,1,13
+401909933,20261104,Keldon Johnson,San Antonio Spurs,4,5,2,0,19
+401909933,20261104,Julian Champagnie,San Antonio Spurs,0,4,3,0,21
+401909933,20261104,Luke Kornet,San Antonio Spurs,2,1,2,0,14
+401909934,20261104,Jake LaRavia,Los Angeles Lakers,9,2,2,2,21
+401909934,20261104,Walker Kessler,Los Angeles Lakers,15,8,0,0,29
+401909934,20261104,Matisse Thybulle,Los Angeles Lakers,3,1,2,1,23
+401909934,20261104,Luka Doncic,Los Angeles Lakers,40,9,7,6,35
+401909934,20261104,Austin Reaves,Los Angeles Lakers,21,3,4,1,37
+401909934,20261104,Kevon Looney,Los Angeles Lakers,0,0,0,0,0
+401909934,20261104,Jarred Vanderbilt,Los Angeles Lakers,0,1,0,0,7
+401909934,20261104,Sandro Mamukelashvili,Los Angeles Lakers,2,6,1,0,19
+401909934,20261104,Ziaire Williams,Los Angeles Lakers,10,4,1,1,23
+401909934,20261104,Lawson Lovering,Los Angeles Lakers,0,0,0,0,1
+401909934,20261104,Collin Sexton,Los Angeles Lakers,10,3,1,1,16
+401909934,20261104,Quentin Grimes,Los Angeles Lakers,6,1,1,0,25
+401909934,20261104,Bronny James,Los Angeles Lakers,0,0,0,0,1
+401909934,20261104,Jaden Hardy,Los Angeles Lakers,0,0,1,0,1
+401909934,20261104,Cameron Carr,Los Angeles Lakers,0,0,0,0,1
+401909934,20261104,Domantas Sabonis,Sacramento Kings,16,17,1,0,35
+401909934,20261104,De'Andre Hunter,Sacramento Kings,14,2,2,1,38
+401909934,20261104,Precious Achiuwa,Sacramento Kings,7,3,1,1,17
+401909934,20261104,Zach LaVine,Sacramento Kings,21,4,1,3,35
+401909934,20261104,Darius Acuff Jr.,Sacramento Kings,22,3,12,3,42
+401909934,20261104,Leaky Black,Sacramento Kings,3,6,1,0,22
+401909934,20261104,Dylan Cardwell,Sacramento Kings,4,6,0,0,13
+401909934,20261104,Malik Monk,Sacramento Kings,13,2,3,3,24
+401909934,20261104,Nique Clifford,Sacramento Kings,0,2,0,0,3
+401909934,20261104,Emanuel Sharp,Sacramento Kings,3,1,2,1,10
+401909935,20261104,Giannis Antetokounmpo,Miami Heat,27,14,6,0,41
+401909935,20261104,Andrew Wiggins,Miami Heat,3,4,1,1,23
+401909935,20261104,Bam Adebayo,Miami Heat,35,10,4,1,41
+401909935,20261104,Klay Thompson,Miami Heat,30,5,3,8,35
+401909935,20261104,Davion Mitchell,Miami Heat,11,2,10,0,43
+401909935,20261104,Bobby Portis,Miami Heat,4,10,5,0,18
+401909935,20261104,Simone Fontecchio,Miami Heat,0,0,0,0,5
+401909935,20261104,Tim Hardaway Jr.,Miami Heat,0,0,0,0,7
+401909935,20261104,Pelle Larsson,Miami Heat,7,3,4,0,35
+401909935,20261104,Ryan Conwell,Miami Heat,0,2,2,0,17
+401909935,20261104,Derrick Jones Jr.,LA Clippers,12,8,1,2,37
+401909935,20261104,Rui Hachimura,LA Clippers,21,9,7,1,37
+401909935,20261104,Brook Lopez,LA Clippers,20,8,1,2,35
+401909935,20261104,Kris Dunn,LA Clippers,5,5,3,1,35
+401909935,20261104,Darius Garland,LA Clippers,26,1,7,4,39
+401909935,20261104,Isaiah Jackson,LA Clippers,2,4,2,0,13
+401909935,20261104,Baba Miller,LA Clippers,2,1,1,0,6
+401909935,20261104,Max Strus,LA Clippers,9,5,5,3,23
+401909935,20261104,Kobe Sanders,LA Clippers,4,2,1,0,18
+401909935,20261104,Gradey Dick,LA Clippers,4,2,1,0,7
+401909935,20261104,Keaton Wagler,LA Clippers,11,2,1,3,16
