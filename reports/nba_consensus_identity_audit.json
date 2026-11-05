@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 443,
+  "total": 455,
   "counts": {
-    "verified_from_available_logs": 443
+    "verified_from_available_logs": 455
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -3996,6 +3996,114 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261105|543450|ziairewilliams|PRA|OVER|11.5",
+      "player": "Ziaire Williams",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|quentingrimes|PRA|OVER|12.5",
+      "player": "Quentin Grimes",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|matissethybulle|PRA|OVER|9.5",
+      "player": "Matisse Thybulle",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|sandromamukelashvili|PRA|OVER|15.5",
+      "player": "Sandro Mamukelashvili",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|preciousachiuwa|PRA|OVER|18.5",
+      "player": "Precious Achiuwa",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261105|543450|quentingrimes|PTS|OVER|7.5",
+      "player": "Quentin Grimes",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|ziairewilliams|PTS|OVER|8.5",
+      "player": "Ziaire Williams",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|domantassabonis|PTS|OVER|13.5",
+      "player": "Domantas Sabonis",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261105|543450|preciousachiuwa|PTS|OVER|9.5",
+      "player": "Precious Achiuwa",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261105|543450|matissethybulle|PTS|OVER|6.5",
+      "player": "Matisse Thybulle",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|sandromamukelashvili|PTS|OVER|9.5",
+      "player": "Sandro Mamukelashvili",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
+    },
+    {
+      "id": "20261105|543450|walkerkessler|PTS|OVER|12.5",
+      "player": "Walker Kessler",
+      "game": "Los Angeles Lakers @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "losangeleslakers"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "status": "RESEARCH_ONLY_PENDING_MORE_GRADED_DATES",
-  "total_complete_pregame_snapshots": 443,
-  "graded_eligible": 395,
+  "total_complete_pregame_snapshots": 455,
+  "graded_eligible": 397,
   "excluded": {
-    "pending": 48
+    "pending": 58
   },
   "points_graded": 131,
   "points_capture_dates": [
@@ -14,56 +14,56 @@
   ],
   "overall": {
     "primary": {
-      "n": 395,
-      "mae": 4.6758,
-      "bias": 0.83,
+      "n": 397,
+      "mae": 4.6748,
+      "bias": 0.8054,
       "median_absolute_error": 3.24,
-      "within_1_pct": 18.23,
-      "within_2_pct": 34.68,
+      "within_1_pct": 18.39,
+      "within_2_pct": 34.76,
       "within_3_pct": 48.61,
-      "within_5_pct": 65.06,
-      "miss_over_5_pct": 34.94
+      "within_5_pct": 64.99,
+      "miss_over_5_pct": 35.01
     },
     "challenger": {
-      "n": 395,
-      "mae": 4.6689,
-      "bias": 0.884,
+      "n": 397,
+      "mae": 4.667,
+      "bias": 0.858,
       "median_absolute_error": 3.095,
-      "within_1_pct": 16.96,
-      "within_2_pct": 34.68,
-      "within_3_pct": 49.11,
-      "within_5_pct": 64.56,
-      "miss_over_5_pct": 35.44
+      "within_1_pct": 17.13,
+      "within_2_pct": 34.76,
+      "within_3_pct": 49.12,
+      "within_5_pct": 64.48,
+      "miss_over_5_pct": 35.52
     },
     "v4": {
-      "n": 395,
-      "mae": 4.6433,
-      "bias": 0.5755,
+      "n": 397,
+      "mae": 4.6437,
+      "bias": 0.5488,
       "median_absolute_error": 3.1256,
-      "within_1_pct": 20.0,
-      "within_2_pct": 35.95,
-      "within_3_pct": 49.11,
-      "within_5_pct": 65.32,
-      "miss_over_5_pct": 34.68
+      "within_1_pct": 20.15,
+      "within_2_pct": 36.02,
+      "within_3_pct": 49.12,
+      "within_5_pct": 65.24,
+      "miss_over_5_pct": 34.76
     },
     "consensus": {
-      "n": 395,
-      "mae": 4.6472,
-      "bias": 0.7632,
+      "n": 397,
+      "mae": 4.6458,
+      "bias": 0.7374,
       "median_absolute_error": 3.0739,
-      "within_1_pct": 17.22,
-      "within_2_pct": 36.2,
-      "within_3_pct": 49.11,
-      "within_5_pct": 65.32,
-      "miss_over_5_pct": 34.68
+      "within_1_pct": 17.38,
+      "within_2_pct": 36.27,
+      "within_3_pct": 49.12,
+      "within_5_pct": 65.24,
+      "miss_over_5_pct": 34.76
     }
   },
   "context_comparison": {
     "status": "AWAITING_SETTLED_PROSPECTIVE_CAPTURES",
-    "eligible": 340,
+    "eligible": 342,
     "independent_capture_dates": 3,
-    "consensus_mae": 4.8151,
-    "adjusted_mae": 4.8063,
+    "consensus_mae": 4.8124,
+    "adjusted_mae": 4.8036,
     "note": "Historical challenger-trained weights; not independently fitted to consensus. Requires separate validation before promotion.",
     "production_promoted": false
   },
@@ -116,48 +116,48 @@
     },
     "REB": {
       "primary": {
-        "n": 67,
-        "mae": 2.3627,
-        "bias": -0.0069,
+        "n": 69,
+        "mae": 2.4238,
+        "bias": -0.1241,
         "median_absolute_error": 2.04,
-        "within_1_pct": 26.87,
-        "within_2_pct": 46.27,
-        "within_3_pct": 71.64,
-        "within_5_pct": 88.06,
-        "miss_over_5_pct": 11.94
+        "within_1_pct": 27.54,
+        "within_2_pct": 46.38,
+        "within_3_pct": 71.01,
+        "within_5_pct": 86.96,
+        "miss_over_5_pct": 13.04
       },
       "challenger": {
-        "n": 67,
-        "mae": 2.3306,
-        "bias": 0.0287,
+        "n": 69,
+        "mae": 2.387,
+        "bias": -0.0962,
         "median_absolute_error": 2.052,
-        "within_1_pct": 26.87,
-        "within_2_pct": 46.27,
-        "within_3_pct": 70.15,
-        "within_5_pct": 91.04,
-        "miss_over_5_pct": 8.96
+        "within_1_pct": 27.54,
+        "within_2_pct": 46.38,
+        "within_3_pct": 69.57,
+        "within_5_pct": 89.86,
+        "miss_over_5_pct": 10.14
       },
       "v4": {
-        "n": 67,
-        "mae": 2.4114,
-        "bias": -0.1833,
+        "n": 69,
+        "mae": 2.4787,
+        "bias": -0.3151,
         "median_absolute_error": 2.1115,
-        "within_1_pct": 25.37,
-        "within_2_pct": 43.28,
-        "within_3_pct": 70.15,
-        "within_5_pct": 89.55,
-        "miss_over_5_pct": 10.45
+        "within_1_pct": 26.09,
+        "within_2_pct": 43.48,
+        "within_3_pct": 69.57,
+        "within_5_pct": 88.41,
+        "miss_over_5_pct": 11.59
       },
       "consensus": {
-        "n": 67,
-        "mae": 2.3584,
-        "bias": -0.0538,
+        "n": 69,
+        "mae": 2.4162,
+        "bias": -0.1784,
         "median_absolute_error": 2.0512,
-        "within_1_pct": 26.87,
-        "within_2_pct": 44.78,
-        "within_3_pct": 67.16,
-        "within_5_pct": 91.04,
-        "miss_over_5_pct": 8.96
+        "within_1_pct": 27.54,
+        "within_2_pct": 44.93,
+        "within_3_pct": 66.67,
+        "within_5_pct": 89.86,
+        "miss_over_5_pct": 10.14
       }
     },
     "AST": {
@@ -300,16 +300,16 @@
     }
   },
   "captured_bet_outcomes": {
-    "n": 395,
-    "wins": 205,
-    "losses": 190,
+    "n": 397,
+    "wins": 206,
+    "losses": 191,
     "pushes": 0,
     "losses_within_0_5": 40,
     "losses_within_1": 40,
     "losses_within_2": 71,
-    "losses_over_5": 66,
-    "mean_loss_margin": 4.305,
-    "captured_side_flat_stake_roi_pct": -2.92,
+    "losses_over_5": 67,
+    "mean_loss_margin": 4.322,
+    "captured_side_flat_stake_roi_pct": -2.9,
     "roi_note": "ROI of originally captured bets only; not ROI of hypothetical consensus selections"
   },
   "points_volatility_exploratory": {
