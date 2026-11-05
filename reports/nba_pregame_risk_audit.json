@@ -5,59 +5,60 @@
     "20261029",
     "20261030",
     "20261031",
-    "20261103"
+    "20261103",
+    "20261105"
   ],
-  "eligible": 787,
+  "eligible": 831,
   "excluded": {
     "identity_review": 36,
-    "pending": 52,
+    "pending": 20,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 787,
-    "wins": 397,
-    "losses": 390,
-    "win_rate_pct": 50.44,
-    "flat_roi_pct": -7.22,
-    "avg_loss_margin": 3.99,
-    "losses_more_than_5": 120
+    "n": 831,
+    "wins": 418,
+    "losses": 413,
+    "win_rate_pct": 50.3,
+    "flat_roi_pct": -7.08,
+    "avg_loss_margin": 4.01,
+    "losses_more_than_5": 127
   },
   "by_market": {
     "PTS": {
-      "n": 251,
-      "wins": 114,
-      "losses": 137,
-      "win_rate_pct": 45.42,
-      "flat_roi_pct": -13.47,
-      "avg_loss_margin": 4.86,
-      "losses_more_than_5": 59
+      "n": 268,
+      "wins": 122,
+      "losses": 146,
+      "win_rate_pct": 45.52,
+      "flat_roi_pct": -12.99,
+      "avg_loss_margin": 4.82,
+      "losses_more_than_5": 61
     },
     "PRA": {
-      "n": 194,
-      "wins": 102,
-      "losses": 92,
-      "win_rate_pct": 52.58,
-      "flat_roi_pct": -0.26,
-      "avg_loss_margin": 6.49,
-      "losses_more_than_5": 54
+      "n": 208,
+      "wins": 108,
+      "losses": 100,
+      "win_rate_pct": 51.92,
+      "flat_roi_pct": -1.21,
+      "avg_loss_margin": 6.43,
+      "losses_more_than_5": 58
     },
     "AST": {
-      "n": 124,
-      "wins": 65,
-      "losses": 59,
-      "win_rate_pct": 52.42,
-      "flat_roi_pct": -6.37,
+      "n": 129,
+      "wins": 67,
+      "losses": 62,
+      "win_rate_pct": 51.94,
+      "flat_roi_pct": -6.9,
       "avg_loss_margin": 1.5,
       "losses_more_than_5": 0
     },
     "REB": {
-      "n": 150,
-      "wins": 83,
-      "losses": 67,
-      "win_rate_pct": 55.33,
-      "flat_roi_pct": -2.07,
-      "avg_loss_margin": 2.59,
-      "losses_more_than_5": 7
+      "n": 158,
+      "wins": 88,
+      "losses": 70,
+      "win_rate_pct": 55.7,
+      "flat_roi_pct": -0.7,
+      "avg_loss_margin": 2.64,
+      "losses_more_than_5": 8
     },
     "3PM": {
       "n": 68,
@@ -71,13 +72,13 @@
   },
   "minutes_risk_groups": {
     "recent_minutes_drop_at_least_4": {
-      "n": 93,
-      "wins": 56,
-      "losses": 37,
-      "win_rate_pct": 60.22,
-      "flat_roi_pct": 11.73,
-      "avg_loss_margin": 2.39,
-      "losses_more_than_5": 6
+      "n": 97,
+      "wins": 58,
+      "losses": 39,
+      "win_rate_pct": 59.79,
+      "flat_roi_pct": 11.25,
+      "avg_loss_margin": 2.53,
+      "losses_more_than_5": 7
     },
     "recent_minutes_increase_at_least_4": {
       "n": 131,
@@ -89,31 +90,31 @@
       "losses_more_than_5": 19
     },
     "stable_recent_minutes": {
-      "n": 563,
-      "wins": 269,
-      "losses": 294,
-      "win_rate_pct": 47.78,
-      "flat_roi_pct": -12.38,
-      "avg_loss_margin": 4.09,
-      "losses_more_than_5": 95
+      "n": 603,
+      "wins": 288,
+      "losses": 315,
+      "win_rate_pct": 47.76,
+      "flat_roi_pct": -11.89,
+      "avg_loss_margin": 4.1,
+      "losses_more_than_5": 101
     },
     "volatile_minutes_std_at_least_7": {
-      "n": 146,
-      "wins": 88,
-      "losses": 58,
-      "win_rate_pct": 60.27,
-      "flat_roi_pct": 11.68,
-      "avg_loss_margin": 3.67,
-      "losses_more_than_5": 18
+      "n": 150,
+      "wins": 90,
+      "losses": 60,
+      "win_rate_pct": 60.0,
+      "flat_roi_pct": 11.36,
+      "avg_loss_margin": 3.72,
+      "losses_more_than_5": 19
     },
     "stable_minutes_std_below_7": {
-      "n": 641,
-      "wins": 309,
-      "losses": 332,
-      "win_rate_pct": 48.21,
-      "flat_roi_pct": -11.52,
-      "avg_loss_margin": 4.04,
-      "losses_more_than_5": 102
+      "n": 681,
+      "wins": 328,
+      "losses": 353,
+      "win_rate_pct": 48.16,
+      "flat_roi_pct": -11.14,
+      "avg_loss_margin": 4.06,
+      "losses_more_than_5": 108
     },
     "projected_minutes_below_22": {
       "n": 119,
@@ -125,72 +126,72 @@
       "losses_more_than_5": 4
     },
     "projected_minutes_22_plus": {
-      "n": 668,
-      "wins": 328,
-      "losses": 340,
-      "win_rate_pct": 49.1,
-      "flat_roi_pct": -9.51,
-      "avg_loss_margin": 4.24,
-      "losses_more_than_5": 116
+      "n": 712,
+      "wins": 349,
+      "losses": 363,
+      "win_rate_pct": 49.02,
+      "flat_roi_pct": -9.21,
+      "avg_loss_margin": 4.25,
+      "losses_more_than_5": 123
     }
   },
   "by_market_minutes_risk": {
     "PTS": {
       "recent_drop_4_plus": {
-        "n": 27,
-        "wins": 13,
-        "losses": 14,
-        "win_rate_pct": 48.15,
-        "flat_roi_pct": -7.94,
-        "avg_loss_margin": 2.86,
+        "n": 29,
+        "wins": 14,
+        "losses": 15,
+        "win_rate_pct": 48.28,
+        "flat_roi_pct": -7.39,
+        "avg_loss_margin": 2.83,
         "losses_more_than_5": 3
       },
       "volatile_7_plus": {
-        "n": 46,
-        "wins": 24,
-        "losses": 22,
-        "win_rate_pct": 52.17,
-        "flat_roi_pct": 0.54,
-        "avg_loss_margin": 3.91,
+        "n": 48,
+        "wins": 25,
+        "losses": 23,
+        "win_rate_pct": 52.08,
+        "flat_roi_pct": 0.52,
+        "avg_loss_margin": 3.85,
         "losses_more_than_5": 7
       },
       "other": {
-        "n": 184,
-        "wins": 79,
-        "losses": 105,
-        "win_rate_pct": 42.93,
-        "flat_roi_pct": -18.3,
-        "avg_loss_margin": 5.21,
-        "losses_more_than_5": 49
+        "n": 199,
+        "wins": 86,
+        "losses": 113,
+        "win_rate_pct": 43.22,
+        "flat_roi_pct": -17.43,
+        "avg_loss_margin": 5.15,
+        "losses_more_than_5": 51
       }
     },
     "PRA": {
       "recent_drop_4_plus": {
-        "n": 24,
-        "wins": 16,
-        "losses": 8,
-        "win_rate_pct": 66.67,
-        "flat_roi_pct": 25.42,
-        "avg_loss_margin": 3.5,
-        "losses_more_than_5": 2
+        "n": 26,
+        "wins": 17,
+        "losses": 9,
+        "win_rate_pct": 65.38,
+        "flat_roi_pct": 23.46,
+        "avg_loss_margin": 3.94,
+        "losses_more_than_5": 3
       },
       "volatile_7_plus": {
-        "n": 40,
-        "wins": 28,
-        "losses": 12,
-        "win_rate_pct": 70.0,
-        "flat_roi_pct": 33.16,
-        "avg_loss_margin": 6.0,
-        "losses_more_than_5": 8
+        "n": 42,
+        "wins": 29,
+        "losses": 13,
+        "win_rate_pct": 69.05,
+        "flat_roi_pct": 31.58,
+        "avg_loss_margin": 6.12,
+        "losses_more_than_5": 9
       },
       "other": {
-        "n": 137,
-        "wins": 64,
-        "losses": 73,
-        "win_rate_pct": 46.72,
-        "flat_roi_pct": -11.47,
-        "avg_loss_margin": 6.82,
-        "losses_more_than_5": 44
+        "n": 149,
+        "wins": 69,
+        "losses": 80,
+        "win_rate_pct": 46.31,
+        "flat_roi_pct": -11.89,
+        "avg_loss_margin": 6.7,
+        "losses_more_than_5": 47
       }
     }
   },
