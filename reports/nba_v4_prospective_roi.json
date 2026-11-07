@@ -1,22 +1,22 @@
 {
   "status": "PROSPECTIVE_LIVE_PRIMARY_RESEARCH",
-  "newly_graded": 279,
+  "newly_graded": 0,
   "overall": {
-    "captured": 1699,
+    "captured": 1714,
     "graded": 1565,
     "wins": 751,
     "losses": 812,
     "roi_pct": -9.38
   },
   "assists_pra": {
-    "captured": 789,
+    "captured": 797,
     "graded": 731,
     "wins": 342,
     "losses": 388,
     "roi_pct": -11.86
   },
   "other_markets": {
-    "captured": 910,
+    "captured": 917,
     "graded": 834,
     "wins": 409,
     "losses": 424,
@@ -49,7 +49,7 @@
   "promotion_gate": "REQUIRES_OUT_OF_SAMPLE_REVIEW",
   "by_market": {
     "PTS": {
-      "captured": 608,
+      "captured": 614,
       "graded": 556,
       "wins": 258,
       "losses": 298,
@@ -63,21 +63,21 @@
       "roi_pct": -2.79
     },
     "AST": {
-      "captured": 213,
+      "captured": 214,
       "graded": 193,
       "wins": 100,
       "losses": 92,
       "roi_pct": -6.61
     },
     "3PM": {
-      "captured": 51,
+      "captured": 52,
       "graded": 48,
       "wins": 30,
       "losses": 18,
       "roi_pct": 11.31
     },
     "PRA": {
-      "captured": 576,
+      "captured": 583,
       "graded": 538,
       "wins": 242,
       "losses": 296,
@@ -149,7 +149,7 @@
       "roi_pct": -29.47
     },
     "2026-11-07": {
-      "captured": 177,
+      "captured": 192,
       "graded": 103,
       "wins": 38,
       "losses": 65,
