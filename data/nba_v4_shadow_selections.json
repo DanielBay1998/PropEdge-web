@@ -34650,7 +34650,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.8,
-    "status": "pending"
+    "status": "loss",
+    "actual": 9.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:29.949393+00:00"
   },
   {
     "key": "2026-11-08|633775|jaylen brown|PRA|OVER|31.5",
@@ -34667,7 +34670,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.02,
-    "status": "pending"
+    "status": "win",
+    "actual": 40.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:29.954094+00:00"
   },
   {
     "key": "2026-11-08|633775|vj edgecombe|PRA|OVER|21.5",
@@ -34684,7 +34690,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.67,
-    "status": "pending"
+    "status": "win",
+    "actual": 22.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:29.958761+00:00"
   },
   {
     "key": "2026-11-08|633073|jabari smith jr.|PRA|OVER|22.5",
@@ -34878,7 +34887,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.0,
-    "status": "pending"
+    "status": "loss",
+    "actual": 3.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:29.968165+00:00"
   },
   {
     "key": "2026-11-08|633073|devin booker|PTS|OVER|23.5",
@@ -34935,7 +34947,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.44,
-    "status": "pending"
+    "status": "win",
+    "actual": 19.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:29.972813+00:00"
   },
   {
     "key": "2026-11-08|633776|jake laravia|REB|OVER|3.5",
@@ -35077,7 +35092,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.76,
-    "status": "pending"
+    "status": "win",
+    "actual": 13.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:30.001311+00:00"
   },
   {
     "key": "2026-11-08|633073|jabari smith jr.|PTS|OVER|14.5",
@@ -35114,7 +35132,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.74,
-    "status": "pending"
+    "status": "win",
+    "actual": 29.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:30.006850+00:00"
   },
   {
     "key": "2026-11-08|633066|scoot henderson|PTS|UNDER|12.0",
@@ -35412,7 +35433,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.02,
-    "status": "pending"
+    "status": "win",
+    "actual": 40.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:30.072079+00:00"
   },
   {
     "key": "2026-11-08|633780|precious achiuwa|PTS|OVER|8.5",
@@ -35497,7 +35521,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.7,
-    "status": "pending"
+    "status": "loss",
+    "actual": 6.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:30.095138+00:00"
   },
   {
     "key": "2026-11-08|633779|ryan rollins|PTS|OVER|9.5",
@@ -35752,7 +35779,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.33,
-    "status": "pending"
+    "status": "loss",
+    "actual": 2.0,
+    "completed_game_id": "401909945",
+    "graded_at": "2026-11-08T23:58:30.164432+00:00"
   },
   {
     "key": "2026-11-08|633779|kyle kuzma|PRA|OVER|16.5",
@@ -36126,6 +36156,125 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.0,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633777|brice sensabaugh|PRA|OVER|11.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633777",
+    "player": "Brice Sensabaugh",
+    "game": "Utah Jazz @ Minnesota Timberwolves",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 11.5,
+    "projection": 16.08,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 4.58,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633777|isaiah collier|PRA|OVER|12.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633777",
+    "player": "Isaiah Collier",
+    "game": "Utah Jazz @ Minnesota Timberwolves",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 12.5,
+    "projection": 17.05,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 4.55,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633778|noah clowney|PRA|OVER|10.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633778",
+    "player": "Noah Clowney",
+    "game": "Brooklyn Nets @ Dallas Mavericks",
+    "market": "PRA",
+    "side": "OVER",
+    "line": 10.5,
+    "projection": 11.57,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "assists_pra",
+    "edge": 1.07,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633777|brice sensabaugh|PTS|OVER|7.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633777",
+    "player": "Brice Sensabaugh",
+    "game": "Utah Jazz @ Minnesota Timberwolves",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 7.5,
+    "projection": 11.78,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 4.28,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633780|domantas sabonis|PTS|OVER|13.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633780",
+    "player": "Domantas Sabonis",
+    "game": "Miami Heat @ Sacramento Kings",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 13.5,
+    "projection": 16.28,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 2.78,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633780|precious achiuwa|PTS|OVER|9.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633780",
+    "player": "Precious Achiuwa",
+    "game": "Miami Heat @ Sacramento Kings",
+    "market": "PTS",
+    "side": "OVER",
+    "line": 9.5,
+    "projection": 11.45,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 1.95,
+    "status": "pending"
+  },
+  {
+    "key": "2026-11-08|633778|noah clowney|REB|OVER|3.5",
+    "captured_at": "2026-11-08T23:58:29.453197+00:00",
+    "event_id": "633778",
+    "player": "Noah Clowney",
+    "game": "Brooklyn Nets @ Dallas Mavericks",
+    "market": "REB",
+    "side": "OVER",
+    "line": 3.5,
+    "projection": 4.14,
+    "odds": 100.0,
+    "book": "prizepicks",
+    "model_version": "live_primary",
+    "research_group": "other_market",
+    "edge": 0.64,
     "status": "pending"
   }
 ]
