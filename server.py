@@ -1440,37 +1440,56 @@ def nba_defense():
     except (OSError,ValueError,KeyError,TypeError):
         return {"available":False,"reason":"Defensive ratings snapshot invalid.","teams":{}}
 
+def _refresh_board_background():
+    """Refresh without holding up HTTP requests or the NBA navigation."""
+    try:
+        updated=refresh()
+        if not isinstance(updated,dict):
+            raise TypeError("NBA refresh returned non-object")
+        with _lock:
+            previous=_cache["result"]
+            if updated.get("error") and isinstance(previous,dict) and not previous.get("error") and previous.get("game_props"):
+                _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest PrizePicks refresh failed; showing previous snapshot"}
+            else:
+                _cache["result"]=updated
+            limited=_rate_limit["until"]>time.monotonic()
+            _cache["until"]=time.monotonic()+(900 if limited else (300 if updated.get("error") else 600))
+    except Exception:
+        logging.exception("NBA board background refresh failed")
+        with _lock:
+            previous=_cache["result"]
+            if isinstance(previous,dict) and not previous.get("error") and previous.get("game_props"):
+                _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest PrizePicks refresh failed"}
+            else:
+                _cache["result"]={"signals":[],"game_props":[],"live":False,"verified":False,
+                                  "error":"NBA feed temporarily unavailable; retrying automatically"}
+            _cache["until"]=time.monotonic()+90
+    finally:
+        with _lock:
+            _cache["refreshing"]=False
+
+
 @app.get("/api/board")
 def board():
     with _lock:
         now=time.monotonic()
         if now<_rate_limit["until"]:
-            if _cache["result"] is None or not _cache["result"].get("error"):
-                _cache["result"]={"signals":[],"live":False,"verified":False,"error":"Live odds provider rate limited; waiting for cooldown. No picks shown.","coverage":"unavailable"}
-            _cache["result"]["retry_after_seconds"]=int(_rate_limit["until"]-now)
-            return _cache["result"]
-        if now>=_cache["until"]:
-            previous=_cache["result"]
-            try:
-                updated=refresh()
-                if not isinstance(updated,dict):
-                    raise TypeError("NBA refresh returned non-object")
-                if updated.get("error") and isinstance(previous,dict) and not previous.get("error") and previous.get("signals"):
-                    logging.warning("NBA refresh failed; retaining last successful board: %s",str(updated.get("error"))[:200])
-                    _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest refresh failed; showing previous verified board"}
-                else:
-                    _cache["result"]=updated
-            except Exception:
-                logging.exception("NBA board refresh failed")
-                if isinstance(previous,dict) and not previous.get("error") and previous.get("signals"):
-                    _cache["result"]={**previous,"stale":True,"refresh_warning":"Latest refresh failed; showing previous verified board"}
-                else:
-                    _cache["result"]={"signals":[],"live":False,"verified":False,
-                        "error":"NBA refresh temporarily unavailable; retrying automatically",
-                        "coverage":"unavailable"}
-            limited=_rate_limit["until"]>time.monotonic()
-            _cache["until"]=time.monotonic()+(900 if limited else (300 if _cache["result"].get("error") or _cache["result"].get("stale") else 600))
-        return _cache["result"]
+            result=_cache.get("result")
+            if isinstance(result,dict) and result.get("game_props"):
+                return {**result,"stale":True,"refresh_warning":"Provider rate limited"}
+            return {"signals":[],"game_props":[],"live":False,"verified":False,
+                    "error":"PrizePicks provider rate limited; retry later",
+                    "retry_after_seconds":int(_rate_limit["until"]-now)}
+        if now>=_cache["until"] and not _cache.get("refreshing",False):
+            _cache["refreshing"]=True
+            _cache["until"]=now+120
+            threading.Thread(target=_refresh_board_background,daemon=True,name="nba-board-refresh").start()
+        result=_cache.get("result")
+        if result is None:
+            return {"signals":[],"game_props":[],"live":False,"verified":False,
+                    "refreshing":True,"error":None,"as_of":None,"players":0,"quotes":0,
+                    "events_checked":0,"events_succeeded":0,"events_failed":0}
+        return {**result,"refreshing":bool(_cache.get("refreshing",False))}
 
 
 @app.get("/healthz")
