@@ -1,112 +1,112 @@
 {
   "status": "RESEARCH_ONLY_NO_PROMOTION",
   "split": {
-    "train_before": "20250329",
-    "validation_before": "20260116",
-    "test_from": "20260116"
+    "train_before": "20250330",
+    "validation_before": "20260117",
+    "test_from": "20260117"
   },
-  "training_examples": 212520,
-  "validation_examples": 73985,
-  "test_examples": 78500,
+  "training_examples": 213220,
+  "validation_examples": 73870,
+  "test_examples": 78735,
   "markets": {
     "PTS": {
-      "validation_n": 14797,
-      "test_n": 15700,
+      "validation_n": 14774,
+      "test_n": 15747,
       "selected_on_validation": "challenger",
       "validation_mae": {
-        "challenger": 4.8431,
-        "rate_0.25": 4.9187,
-        "rate_0.5": 4.9541,
-        "rate_0.75": 5.0161
+        "challenger": 4.84,
+        "rate_0.25": 4.9153,
+        "rate_0.5": 4.9504,
+        "rate_0.75": 5.012
       },
       "holdout_mae": {
-        "challenger": 4.8483,
-        "rate_0.25": 4.9337,
-        "rate_0.5": 4.9647,
-        "rate_0.75": 5.0195
+        "challenger": 4.8514,
+        "rate_0.25": 4.9378,
+        "rate_0.5": 4.9683,
+        "rate_0.75": 5.0224
       },
-      "selected_holdout_mae": 4.8483,
-      "challenger_holdout_mae": 4.8483,
+      "selected_holdout_mae": 4.8514,
+      "challenger_holdout_mae": 4.8514,
       "holdout_improvement": 0.0
     },
     "REB": {
-      "validation_n": 14797,
-      "test_n": 15700,
+      "validation_n": 14774,
+      "test_n": 15747,
       "selected_on_validation": "challenger",
       "validation_mae": {
-        "challenger": 1.9944,
-        "rate_0.25": 2.0332,
-        "rate_0.5": 2.0524,
-        "rate_0.75": 2.0818
+        "challenger": 1.9934,
+        "rate_0.25": 2.0328,
+        "rate_0.5": 2.0523,
+        "rate_0.75": 2.082
       },
       "holdout_mae": {
-        "challenger": 1.9683,
-        "rate_0.25": 2.0119,
-        "rate_0.5": 2.0255,
-        "rate_0.75": 2.0496
+        "challenger": 1.9692,
+        "rate_0.25": 2.0126,
+        "rate_0.5": 2.0261,
+        "rate_0.75": 2.0501
       },
-      "selected_holdout_mae": 1.9683,
-      "challenger_holdout_mae": 1.9683,
+      "selected_holdout_mae": 1.9692,
+      "challenger_holdout_mae": 1.9692,
       "holdout_improvement": 0.0
     },
     "AST": {
-      "validation_n": 14797,
-      "test_n": 15700,
+      "validation_n": 14774,
+      "test_n": 15747,
       "selected_on_validation": "challenger",
       "validation_mae": {
-        "challenger": 1.3842,
-        "rate_0.25": 1.4007,
-        "rate_0.5": 1.4088,
-        "rate_0.75": 1.4258
+        "challenger": 1.3843,
+        "rate_0.25": 1.4008,
+        "rate_0.5": 1.4092,
+        "rate_0.75": 1.4263
       },
       "holdout_mae": {
-        "challenger": 1.4206,
-        "rate_0.25": 1.4433,
-        "rate_0.5": 1.4545,
-        "rate_0.75": 1.4747
+        "challenger": 1.42,
+        "rate_0.25": 1.4429,
+        "rate_0.5": 1.454,
+        "rate_0.75": 1.4741
       },
-      "selected_holdout_mae": 1.4206,
-      "challenger_holdout_mae": 1.4206,
+      "selected_holdout_mae": 1.42,
+      "challenger_holdout_mae": 1.42,
       "holdout_improvement": 0.0
     },
     "3PM": {
-      "validation_n": 14797,
-      "test_n": 15700,
+      "validation_n": 14774,
+      "test_n": 15747,
       "selected_on_validation": "challenger",
       "validation_mae": {
-        "challenger": 0.9329,
-        "rate_0.25": 0.9467,
-        "rate_0.5": 0.9559,
-        "rate_0.75": 0.9699
+        "challenger": 0.9311,
+        "rate_0.25": 0.9447,
+        "rate_0.5": 0.9539,
+        "rate_0.75": 0.9678
       },
       "holdout_mae": {
-        "challenger": 0.9216,
-        "rate_0.25": 0.9329,
-        "rate_0.5": 0.9402,
-        "rate_0.75": 0.953
+        "challenger": 0.9223,
+        "rate_0.25": 0.9337,
+        "rate_0.5": 0.9411,
+        "rate_0.75": 0.954
       },
-      "selected_holdout_mae": 0.9216,
-      "challenger_holdout_mae": 0.9216,
+      "selected_holdout_mae": 0.9223,
+      "challenger_holdout_mae": 0.9223,
       "holdout_improvement": 0.0
     },
     "PRA": {
-      "validation_n": 14797,
-      "test_n": 15700,
+      "validation_n": 14774,
+      "test_n": 15747,
       "selected_on_validation": "challenger",
       "validation_mae": {
-        "challenger": 6.4059,
-        "rate_0.25": 6.5226,
-        "rate_0.5": 6.5563,
-        "rate_0.75": 6.6167
+        "challenger": 6.3934,
+        "rate_0.25": 6.5105,
+        "rate_0.5": 6.5443,
+        "rate_0.75": 6.6045
       },
       "holdout_mae": {
-        "challenger": 6.4306,
-        "rate_0.25": 6.5648,
-        "rate_0.5": 6.5899,
-        "rate_0.75": 6.6412
+        "challenger": 6.4357,
+        "rate_0.25": 6.5722,
+        "rate_0.5": 6.5964,
+        "rate_0.75": 6.6469
       },
-      "selected_holdout_mae": 6.4306,
-      "challenger_holdout_mae": 6.4306,
+      "selected_holdout_mae": 6.4357,
+      "challenger_holdout_mae": 6.4357,
       "holdout_improvement": 0.0
     }
   },
