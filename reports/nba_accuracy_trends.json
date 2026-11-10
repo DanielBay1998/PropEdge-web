@@ -1,6 +1,6 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-11-09T20:43:42.717096+00:00",
+  "generated_at": "2026-11-10T02:56:12.642371+00:00",
   "eligible_paired_snapshots": 392,
   "independent_capture_dates": 5,
   "excluded": {
@@ -412,44 +412,44 @@
   },
   "last_7_days": {
     "primary": {
-      "n": 56,
-      "independent_capture_dates": 2,
-      "mae": 4.4886,
-      "bias": 2.6668,
-      "median_absolute_error": 3.735,
-      "within_1_pct": 12.5,
-      "within_2_pct": 30.36,
-      "within_5_pct": 64.29
+      "n": 12,
+      "independent_capture_dates": 1,
+      "mae": 5.1058,
+      "bias": 4.9925,
+      "median_absolute_error": 4.955,
+      "within_1_pct": 16.67,
+      "within_2_pct": 33.33,
+      "within_5_pct": 58.33
     },
     "challenger": {
-      "n": 56,
-      "independent_capture_dates": 2,
-      "mae": 4.3488,
-      "bias": 2.2593,
-      "median_absolute_error": 3.996,
-      "within_1_pct": 14.29,
-      "within_2_pct": 32.14,
-      "within_5_pct": 66.07
+      "n": 12,
+      "independent_capture_dates": 1,
+      "mae": 5.004,
+      "bias": 4.774,
+      "median_absolute_error": 5.149,
+      "within_1_pct": 16.67,
+      "within_2_pct": 33.33,
+      "within_5_pct": 41.67
     },
     "v4": {
-      "n": 56,
-      "independent_capture_dates": 2,
-      "mae": 4.6139,
-      "bias": 2.3433,
-      "median_absolute_error": 4.0671,
-      "within_1_pct": 14.29,
-      "within_2_pct": 26.79,
-      "within_5_pct": 64.29
+      "n": 12,
+      "independent_capture_dates": 1,
+      "mae": 5.6117,
+      "bias": 5.1713,
+      "median_absolute_error": 5.7771,
+      "within_1_pct": 8.33,
+      "within_2_pct": 25.0,
+      "within_5_pct": 41.67
     },
     "consensus": {
-      "n": 56,
-      "independent_capture_dates": 2,
-      "mae": 4.4706,
-      "bias": 2.4232,
-      "median_absolute_error": 3.8938,
-      "within_1_pct": 10.71,
-      "within_2_pct": 32.14,
-      "within_5_pct": 62.5
+      "n": 12,
+      "independent_capture_dates": 1,
+      "mae": 5.2026,
+      "bias": 4.9793,
+      "median_absolute_error": 5.4278,
+      "within_1_pct": 8.33,
+      "within_2_pct": 33.33,
+      "within_5_pct": 41.67
     }
   },
   "last_30_days": {
