@@ -10,10 +10,10 @@
     "PTS": {
       "status": "holdout_evaluated",
       "train_n": 50721,
-      "holdout_n": 22864,
+      "holdout_n": 22952,
       "holdout_start": "20251129",
       "baseline_mae": 4.7614,
-      "adjusted_mae": 4.7218,
+      "adjusted_mae": 4.7216,
       "improved": true,
       "weights": {
         "intercept": -0.15161254707122898,
@@ -31,10 +31,10 @@
     "REB": {
       "status": "holdout_evaluated",
       "train_n": 50721,
-      "holdout_n": 22864,
+      "holdout_n": 22952,
       "holdout_start": "20251129",
-      "baseline_mae": 1.9492,
-      "adjusted_mae": 1.9294,
+      "baseline_mae": 1.9507,
+      "adjusted_mae": 1.931,
       "improved": true,
       "weights": {
         "intercept": -0.09876672384219407,
@@ -52,10 +52,10 @@
     "AST": {
       "status": "holdout_evaluated",
       "train_n": 50721,
-      "holdout_n": 22864,
+      "holdout_n": 22952,
       "holdout_start": "20251129",
-      "baseline_mae": 1.3888,
-      "adjusted_mae": 1.3782,
+      "baseline_mae": 1.3891,
+      "adjusted_mae": 1.3785,
       "improved": true,
       "weights": {
         "intercept": -0.028673882612723373,
@@ -73,10 +73,10 @@
     "3PM": {
       "status": "holdout_evaluated",
       "train_n": 50721,
-      "holdout_n": 22864,
+      "holdout_n": 22952,
       "holdout_start": "20251129",
-      "baseline_mae": 0.9145,
-      "adjusted_mae": 0.9094,
+      "baseline_mae": 0.9141,
+      "adjusted_mae": 0.909,
       "improved": true,
       "weights": {
         "intercept": -0.015430354291121804,
@@ -94,10 +94,10 @@
     "PRA": {
       "status": "holdout_evaluated",
       "train_n": 50721,
-      "holdout_n": 22864,
+      "holdout_n": 22952,
       "holdout_start": "20251129",
-      "baseline_mae": 6.3091,
-      "adjusted_mae": 6.2411,
+      "baseline_mae": 6.309,
+      "adjusted_mae": 6.2408,
       "improved": true,
       "weights": {
         "intercept": -0.2790531535261473,
