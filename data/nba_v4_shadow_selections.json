@@ -36547,7 +36547,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 7.05,
-    "status": "pending"
+    "status": "win",
+    "actual": 36.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.653256+00:00"
   },
   {
     "key": "2026-11-09|641569|marcus smart|PRA|OVER|9.5",
@@ -36649,7 +36652,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.82,
-    "status": "pending"
+    "status": "win",
+    "actual": 2.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.682886+00:00"
   },
   {
     "key": "2026-11-09|641572|cj mccollum|PRA|OVER|18.5",
@@ -36666,7 +36672,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.31,
-    "status": "pending"
+    "status": "win",
+    "actual": 25.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.687896+00:00"
   },
   {
     "key": "2026-11-09|641564|stephon castle|AST|OVER|5.5",
@@ -36700,7 +36709,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.89,
-    "status": "pending"
+    "status": "win",
+    "actual": 58.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.697772+00:00"
   },
   {
     "key": "2026-11-09|641567|jakob poeltl|PRA|UNDER|19.5",
@@ -36717,7 +36729,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.99,
-    "status": "pending"
+    "status": "loss",
+    "actual": 28.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.702714+00:00"
   },
   {
     "key": "2026-11-09|641567|rj barrett|PRA|UNDER|36.5",
@@ -36734,7 +36749,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.66,
-    "status": "pending"
+    "status": "win",
+    "actual": 24.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.707735+00:00"
   },
   {
     "key": "2026-11-09|641567|scottie barnes|PRA|UNDER|37.5",
@@ -36768,7 +36786,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.69,
-    "status": "pending"
+    "status": "win",
+    "actual": 35.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.717715+00:00"
   },
   {
     "key": "2026-11-09|641569|jabari smith jr.|PRA|OVER|23.5",
@@ -36819,7 +36840,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.71,
-    "status": "pending"
+    "status": "win",
+    "actual": 35.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.732499+00:00"
   },
   {
     "key": "2026-11-09|641564|devin vassell|PRA|OVER|17.5",
@@ -36853,7 +36877,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.54,
-    "status": "pending"
+    "status": "win",
+    "actual": 27.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.742381+00:00"
   },
   {
     "key": "2026-11-09|641569|christian braun|PRA|OVER|17.5",
@@ -36904,7 +36931,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.31,
-    "status": "pending"
+    "status": "win",
+    "actual": 6.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.757220+00:00"
   },
   {
     "key": "2026-11-09|641564|dillon brooks|3PM|OVER|1.5",
@@ -36938,7 +36968,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.11,
-    "status": "pending"
+    "status": "win",
+    "actual": 12.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.767083+00:00"
   },
   {
     "key": "2026-11-09|641564|oso ighodaro|REB|OVER|4.5",
@@ -36972,7 +37005,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.54,
-    "status": "pending"
+    "status": "win",
+    "actual": 23.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.776936+00:00"
   },
   {
     "key": "2026-11-09|641569|reed sheppard|PTS|OVER|8.5",
@@ -37023,7 +37059,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.39,
-    "status": "pending"
+    "status": "loss",
+    "actual": 8.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.791692+00:00"
   },
   {
     "key": "2026-11-09|641560|draymond green|PTS|UNDER|6.5",
@@ -37074,7 +37113,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.86,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.806518+00:00"
   },
   {
     "key": "2026-11-09|641572|luguentz dort|PTS|OVER|7.5",
@@ -37091,7 +37133,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.77,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.811523+00:00"
   },
   {
     "key": "2026-11-09|641564|devin booker|PTS|OVER|23.5",
@@ -37125,7 +37170,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.12,
-    "status": "pending"
+    "status": "win",
+    "actual": 6.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.821420+00:00"
   },
   {
     "key": "2026-11-09|641569|aaron gordon|REB|OVER|4.5",
@@ -37159,7 +37207,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.43,
-    "status": "pending"
+    "status": "loss",
+    "actual": 8.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.831265+00:00"
   },
   {
     "key": "2026-11-09|641569|jamal murray|PTS|OVER|20.5",
@@ -37193,7 +37244,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.57,
-    "status": "pending"
+    "status": "win",
+    "actual": 20.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.841094+00:00"
   },
   {
     "key": "2026-11-09|641567|jaylen wells|PTS|OVER|9.5",
@@ -37210,7 +37264,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.73,
-    "status": "pending"
+    "status": "win",
+    "actual": 14.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.846067+00:00"
   },
   {
     "key": "2026-11-09|641569|christian braun|REB|OVER|3.5",
@@ -37244,7 +37301,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.94,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.855962+00:00"
   },
   {
     "key": "2026-11-09|641564|devin vassell|PTS|OVER|10.5",
@@ -37278,7 +37338,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.09,
-    "status": "pending"
+    "status": "win",
+    "actual": 44.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.865863+00:00"
   },
   {
     "key": "2026-11-09|641574|ausar thompson|PTS|UNDER|10.5",
@@ -37295,7 +37358,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.51,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.871015+00:00"
   },
   {
     "key": "2026-11-09|641567|jakob poeltl|PTS|UNDER|10.5",
@@ -37312,7 +37378,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.49,
-    "status": "pending"
+    "status": "loss",
+    "actual": 18.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.876089+00:00"
   },
   {
     "key": "2026-11-09|641567|collin murray-boyles|PTS|UNDER|12.5",
@@ -37363,7 +37432,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.98,
-    "status": "pending"
+    "status": "win",
+    "actual": 27.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.891292+00:00"
   },
   {
     "key": "2026-11-09|641567|scottie barnes|PTS|UNDER|23.5",
@@ -37397,7 +37469,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.61,
-    "status": "pending"
+    "status": "win",
+    "actual": 21.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.901304+00:00"
   },
   {
     "key": "2026-11-09|641567|rj barrett|PTS|UNDER|25.5",
@@ -37414,7 +37489,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.23,
-    "status": "pending"
+    "status": "win",
+    "actual": 19.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:42.906359+00:00"
   },
   {
     "key": "2026-11-09|641564|dylan harper|REB|UNDER|5.5",
@@ -37448,7 +37526,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.05,
-    "status": "pending"
+    "status": "win",
+    "actual": 17.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.916314+00:00"
   },
   {
     "key": "2026-11-09|641572|cj mccollum|PTS|OVER|12.5",
@@ -37465,7 +37546,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.45,
-    "status": "pending"
+    "status": "win",
+    "actual": 21.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.921292+00:00"
   },
   {
     "key": "2026-11-09|641569|christian braun|PTS|OVER|11.5",
@@ -37516,7 +37600,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.78,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:42.936133+00:00"
   },
   {
     "key": "2026-11-09|641560|jeremiah fears|PRA|OVER|22.5",
@@ -37635,7 +37722,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.01,
-    "status": "pending"
+    "status": "loss",
+    "actual": 9.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.970900+00:00"
   },
   {
     "key": "2026-11-09|641560|derik queen|PRA|OVER|17.5",
@@ -37669,7 +37759,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.21,
-    "status": "pending"
+    "status": "loss",
+    "actual": 14.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:42.981031+00:00"
   },
   {
     "key": "2026-11-09|641560|de'anthony melton|PRA|OVER|14.5",
@@ -37703,7 +37796,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.82,
-    "status": "pending"
+    "status": "win",
+    "actual": 34.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:42.991001+00:00"
   },
   {
     "key": "2026-11-09|641560|draymond green|AST|OVER|6.0",
@@ -37754,7 +37850,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 5.47,
-    "status": "pending"
+    "status": "loss",
+    "actual": 42.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.006096+00:00"
   },
   {
     "key": "2026-11-09|641573|grayson allen|PRA|UNDER|23.5",
@@ -37771,7 +37870,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.03,
-    "status": "pending"
+    "status": "loss",
+    "actual": 37.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.011211+00:00"
   },
   {
     "key": "2026-11-09|641567|jerami grant|PRA|OVER|13.5",
@@ -37788,7 +37890,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.3,
-    "status": "pending"
+    "status": "win",
+    "actual": 22.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.016264+00:00"
   },
   {
     "key": "2026-11-09|641572|ziaire williams|PRA|OVER|12.5",
@@ -37805,7 +37910,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.04,
-    "status": "pending"
+    "status": "win",
+    "actual": 16.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.021297+00:00"
   },
   {
     "key": "2026-11-09|641564|devin vassell|PRA|OVER|16.5",
@@ -37856,7 +37964,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.69,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.036379+00:00"
   },
   {
     "key": "2026-11-09|641560|trey murphy iii|PRA|OVER|23.5",
@@ -37941,7 +38052,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.99,
-    "status": "pending"
+    "status": "loss",
+    "actual": 28.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.061466+00:00"
   },
   {
     "key": "2026-11-09|641573|sion james|PRA|UNDER|14.5",
@@ -37958,7 +38072,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.48,
-    "status": "pending"
+    "status": "loss",
+    "actual": 19.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.066569+00:00"
   },
   {
     "key": "2026-11-09|641574|anthony davis|PRA|OVER|32.5",
@@ -37975,7 +38092,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.89,
-    "status": "pending"
+    "status": "win",
+    "actual": 58.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.071645+00:00"
   },
   {
     "key": "2026-11-09|641573|jarrett allen|PRA|OVER|21.5",
@@ -37992,7 +38112,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.88,
-    "status": "pending"
+    "status": "loss",
+    "actual": 20.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.076683+00:00"
   },
   {
     "key": "2026-11-09|641567|scottie barnes|PRA|UNDER|36.5",
@@ -38094,7 +38217,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.71,
-    "status": "pending"
+    "status": "loss",
+    "actual": 10.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.107064+00:00"
   },
   {
     "key": "2026-11-09|641560|derik queen|PTS|OVER|9.5",
@@ -38179,7 +38305,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.14,
-    "status": "pending"
+    "status": "win",
+    "actual": 3.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.133332+00:00"
   },
   {
     "key": "2026-11-09|641564|oso ighodaro|REB|OVER|5.0",
@@ -38213,7 +38342,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.27,
-    "status": "pending"
+    "status": "push",
+    "actual": 6.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.143257+00:00"
   },
   {
     "key": "2026-11-09|641564|keldon johnson|REB|OVER|4.5",
@@ -38264,7 +38396,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.38,
-    "status": "pending"
+    "status": "loss",
+    "actual": 25.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.158061+00:00"
   },
   {
     "key": "2026-11-09|641567|cam spencer|PTS|OVER|8.5",
@@ -38281,7 +38416,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.53,
-    "status": "pending"
+    "status": "loss",
+    "actual": 7.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.163054+00:00"
   },
   {
     "key": "2026-11-09|641564|miles bridges|REB|OVER|6.0",
@@ -38315,7 +38453,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.6,
-    "status": "pending"
+    "status": "loss",
+    "actual": 27.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.172914+00:00"
   },
   {
     "key": "2026-11-09|641572|nickeil alexander-walker|PTS|OVER|20.0",
@@ -38332,7 +38473,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.07,
-    "status": "pending"
+    "status": "push",
+    "actual": 20.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.177875+00:00"
   },
   {
     "key": "2026-11-09|641574|cade cunningham|PTS|UNDER|26.5",
@@ -38349,7 +38493,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 4.05,
-    "status": "pending"
+    "status": "win",
+    "actual": 17.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.182878+00:00"
   },
   {
     "key": "2026-11-09|641572|sandro mamukelashvili|REB|OVER|4.0",
@@ -38366,7 +38513,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.61,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.187866+00:00"
   },
   {
     "key": "2026-11-09|641572|onyeka okongwu|REB|OVER|7.0",
@@ -38383,7 +38533,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.04,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.192829+00:00"
   },
   {
     "key": "2026-11-09|641568|andrew nembhard|PTS|OVER|15.5",
@@ -38434,7 +38587,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.13,
-    "status": "pending"
+    "status": "loss",
+    "actual": 13.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.207682+00:00"
   },
   {
     "key": "2026-11-09|641567|jakob poeltl|REB|UNDER|7.0",
@@ -38451,7 +38607,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.93,
-    "status": "pending"
+    "status": "loss",
+    "actual": 8.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.212883+00:00"
   },
   {
     "key": "2026-11-09|646675|paul george|REB|OVER|4.5",
@@ -38485,7 +38644,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.58,
-    "status": "pending"
+    "status": "loss",
+    "actual": 12.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.222794+00:00"
   },
   {
     "key": "2026-11-09|641560|trey murphy iii|PTS|OVER|15.5",
@@ -38519,7 +38681,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.23,
-    "status": "pending"
+    "status": "win",
+    "actual": 14.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.233512+00:00"
   },
   {
     "key": "2026-11-09|641560|de'anthony melton|PTS|OVER|9.5",
@@ -38553,7 +38718,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.26,
-    "status": "pending"
+    "status": "win",
+    "actual": 17.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.243938+00:00"
   },
   {
     "key": "2026-11-09|646675|tyrese maxey|PTS|OVER|23.5",
@@ -38604,7 +38772,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.09,
-    "status": "pending"
+    "status": "win",
+    "actual": 44.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.259408+00:00"
   },
   {
     "key": "2026-11-09|641568|pascal siakam|PTS|OVER|20.0",
@@ -38706,7 +38877,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.78,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.288912+00:00"
   },
   {
     "key": "2026-11-10|641567|jamal shead|PRA|UNDER|23.5",
@@ -38723,7 +38897,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 10.13,
-    "status": "pending"
+    "status": "loss",
+    "actual": 33.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.293944+00:00"
   },
   {
     "key": "2026-11-10|641569|demar derozan|AST|OVER|2.5",
@@ -38757,7 +38934,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 5.21,
-    "status": "pending"
+    "status": "win",
+    "actual": 14.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.303820+00:00"
   },
   {
     "key": "2026-11-10|641569|reed sheppard|PRA|OVER|12.5",
@@ -38791,7 +38971,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.6,
-    "status": "pending"
+    "status": "win",
+    "actual": 2.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.313755+00:00"
   },
   {
     "key": "2026-11-10|641567|cam spencer|AST|OVER|4.5",
@@ -38808,7 +38991,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.43,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.318761+00:00"
   },
   {
     "key": "2026-11-10|641568|obi toppin|PRA|OVER|17.5",
@@ -38842,7 +39028,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.38,
-    "status": "pending"
+    "status": "loss",
+    "actual": 26.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.328675+00:00"
   },
   {
     "key": "2026-11-10|646675|jaylen brown|AST|OVER|3.5",
@@ -39012,7 +39201,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.31,
-    "status": "pending"
+    "status": "loss",
+    "actual": 26.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.378839+00:00"
   },
   {
     "key": "2026-11-10|641560|de'anthony melton|PRA|OVER|14.5",
@@ -39063,7 +39255,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 4.86,
-    "status": "pending"
+    "status": "loss",
+    "actual": 28.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.393781+00:00"
   },
   {
     "key": "2026-11-10|641568|andrew nembhard|AST|OVER|6.5",
@@ -39097,7 +39292,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 6.47,
-    "status": "pending"
+    "status": "loss",
+    "actual": 42.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.403695+00:00"
   },
   {
     "key": "2026-11-10|641560|brandon williams|AST|OVER|2.5",
@@ -39131,7 +39329,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.27,
-    "status": "pending"
+    "status": "loss",
+    "actual": 13.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.413573+00:00"
   },
   {
     "key": "2026-11-10|641573|grayson allen|PRA|UNDER|24.5",
@@ -39148,7 +39349,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 5.03,
-    "status": "pending"
+    "status": "loss",
+    "actual": 37.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.418587+00:00"
   },
   {
     "key": "2026-11-10|642879|mikal bridges|PRA|UNDER|16.5",
@@ -39216,7 +39420,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.82,
-    "status": "pending"
+    "status": "win",
+    "actual": 18.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.438286+00:00"
   },
   {
     "key": "2026-11-10|641573|grayson allen|AST|UNDER|3.5",
@@ -39233,7 +39440,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.6,
-    "status": "pending"
+    "status": "loss",
+    "actual": 6.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.443298+00:00"
   },
   {
     "key": "2026-11-10|641568|daniel gafford|PRA|OVER|16.5",
@@ -39267,7 +39477,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 5.7,
-    "status": "pending"
+    "status": "win",
+    "actual": 24.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.453361+00:00"
   },
   {
     "key": "2026-11-10|641569|christian braun|PRA|OVER|16.5",
@@ -39301,7 +39514,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 0.69,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.463333+00:00"
   },
   {
     "key": "2026-11-10|641569|jamal murray|AST|OVER|5.5",
@@ -39335,7 +39551,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.48,
-    "status": "pending"
+    "status": "win",
+    "actual": 25.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.473147+00:00"
   },
   {
     "key": "2026-11-10|641569|aaron gordon|PRA|OVER|19.5",
@@ -39488,7 +39707,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.3,
-    "status": "pending"
+    "status": "win",
+    "actual": 22.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.517233+00:00"
   },
   {
     "key": "2026-11-10|641574|anthony davis|PRA|OVER|32.5",
@@ -39505,7 +39727,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.89,
-    "status": "pending"
+    "status": "win",
+    "actual": 58.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.522361+00:00"
   },
   {
     "key": "2026-11-10|641567|ty jerome|PRA|OVER|30.5",
@@ -39522,7 +39747,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 2.71,
-    "status": "pending"
+    "status": "win",
+    "actual": 35.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.527315+00:00"
   },
   {
     "key": "2026-11-10|641573|jarrett allen|PRA|OVER|21.5",
@@ -39539,7 +39767,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 1.88,
-    "status": "pending"
+    "status": "loss",
+    "actual": 20.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.532349+00:00"
   },
   {
     "key": "2026-11-10|641574|cade cunningham|PRA|UNDER|40.5",
@@ -39556,7 +39787,10 @@
     "model_version": "live_primary",
     "research_group": "assists_pra",
     "edge": 3.54,
-    "status": "pending"
+    "status": "win",
+    "actual": 27.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.537317+00:00"
   },
   {
     "key": "2026-11-10|646675|anfernee simons|PTS|OVER|6.5",
@@ -39590,7 +39824,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.89,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.547106+00:00"
   },
   {
     "key": "2026-11-10|641567|jamal shead|PTS|UNDER|11.5",
@@ -39607,7 +39844,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 5.93,
-    "status": "pending"
+    "status": "loss",
+    "actual": 20.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.552091+00:00"
   },
   {
     "key": "2026-11-10|641574|paul reed|PTS|OVER|10.5",
@@ -39624,7 +39864,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 5.05,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.557010+00:00"
   },
   {
     "key": "2026-11-10|646675|anfernee simons|3PM|OVER|1.5",
@@ -39692,7 +39935,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 4.55,
-    "status": "pending"
+    "status": "win",
+    "actual": 2.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.576632+00:00"
   },
   {
     "key": "2026-11-10|641574|deandre ayton|PTS|OVER|4.5",
@@ -39709,7 +39955,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.76,
-    "status": "pending"
+    "status": "loss",
+    "actual": 2.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.581616+00:00"
   },
   {
     "key": "2026-11-10|641567|jamison battle|PTS|UNDER|10.5",
@@ -39726,7 +39975,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 4.04,
-    "status": "pending"
+    "status": "loss",
+    "actual": 18.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.586587+00:00"
   },
   {
     "key": "2026-11-10|646675|sam hauser|PTS|OVER|5.5",
@@ -39777,7 +40029,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.84,
-    "status": "pending"
+    "status": "win",
+    "actual": 2.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.601267+00:00"
   },
   {
     "key": "2026-11-10|641574|tre johnson|PTS|OVER|7.5",
@@ -39794,7 +40049,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.46,
-    "status": "pending"
+    "status": "loss",
+    "actual": 2.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.606182+00:00"
   },
   {
     "key": "2026-11-10|641568|obi toppin|PTS|OVER|11.5",
@@ -39845,7 +40103,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.71,
-    "status": "pending"
+    "status": "loss",
+    "actual": 10.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.621028+00:00"
   },
   {
     "key": "2026-11-10|641568|ivica zubac|PTS|UNDER|11.5",
@@ -39879,7 +40140,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.05,
-    "status": "pending"
+    "status": "loss",
+    "actual": 15.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.630862+00:00"
   },
   {
     "key": "2026-11-10|641560|herbert jones|PTS|UNDER|9.5",
@@ -39981,7 +40245,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.94,
-    "status": "pending"
+    "status": "loss",
+    "actual": 8.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.660079+00:00"
   },
   {
     "key": "2026-11-10|646675|sam hauser|REB|OVER|2.5",
@@ -40032,7 +40299,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.86,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.674964+00:00"
   },
   {
     "key": "2026-11-10|646675|vj edgecombe|PTS|OVER|11.5",
@@ -40083,7 +40353,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.51,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.689775+00:00"
   },
   {
     "key": "2026-11-10|641574|alex sarr|REB|OVER|6.0",
@@ -40100,7 +40373,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.42,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.694714+00:00"
   },
   {
     "key": "2026-11-10|641572|luguentz dort|PTS|OVER|7.5",
@@ -40117,7 +40393,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.77,
-    "status": "pending"
+    "status": "loss",
+    "actual": 4.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.699667+00:00"
   },
   {
     "key": "2026-11-10|641572|collin sexton|PTS|UNDER|14.5",
@@ -40134,7 +40413,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.42,
-    "status": "pending"
+    "status": "loss",
+    "actual": 18.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.704592+00:00"
   },
   {
     "key": "2026-11-10|641573|naz reid|PTS|UNDER|19.5",
@@ -40151,7 +40433,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 4.38,
-    "status": "pending"
+    "status": "loss",
+    "actual": 25.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.709532+00:00"
   },
   {
     "key": "2026-11-10|641564|oso ighodaro|REB|OVER|5.0",
@@ -40202,7 +40487,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.72,
-    "status": "pending"
+    "status": "push",
+    "actual": 8.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.724252+00:00"
   },
   {
     "key": "2026-11-10|641569|christian braun|PTS|OVER|10.5",
@@ -40270,7 +40558,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.53,
-    "status": "pending"
+    "status": "loss",
+    "actual": 7.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.743768+00:00"
   },
   {
     "key": "2026-11-10|641567|ja'kobe walter|PTS|UNDER|14.5",
@@ -40287,7 +40578,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.58,
-    "status": "pending"
+    "status": "win",
+    "actual": 12.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.748708+00:00"
   },
   {
     "key": "2026-11-10|641564|miles bridges|REB|OVER|6.0",
@@ -40338,7 +40632,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.64,
-    "status": "pending"
+    "status": "win",
+    "actual": 3.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.763415+00:00"
   },
   {
     "key": "2026-11-10|641573|grayson allen|PTS|UNDER|16.5",
@@ -40355,7 +40652,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.6,
-    "status": "pending"
+    "status": "loss",
+    "actual": 27.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.768365+00:00"
   },
   {
     "key": "2026-11-10|641560|dejounte murray|PTS|UNDER|18.0",
@@ -40406,7 +40706,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.07,
-    "status": "pending"
+    "status": "push",
+    "actual": 20.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.783066+00:00"
   },
   {
     "key": "2026-11-10|641572|onyeka okongwu|REB|OVER|7.0",
@@ -40423,7 +40726,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.04,
-    "status": "pending"
+    "status": "win",
+    "actual": 9.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.788160+00:00"
   },
   {
     "key": "2026-11-10|646675|jaylen brown|PTS|OVER|21.5",
@@ -40474,7 +40780,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.69,
-    "status": "pending"
+    "status": "loss",
+    "actual": 18.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.802905+00:00"
   },
   {
     "key": "2026-11-10|641574|ausar thompson|PTS|UNDER|10.5",
@@ -40491,7 +40800,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.51,
-    "status": "pending"
+    "status": "win",
+    "actual": 8.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.807849+00:00"
   },
   {
     "key": "2026-11-10|641564|miles bridges|PTS|OVER|14.5",
@@ -40525,7 +40837,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.98,
-    "status": "pending"
+    "status": "win",
+    "actual": 27.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.817690+00:00"
   },
   {
     "key": "2026-11-10|641573|naz reid|REB|UNDER|8.5",
@@ -40542,7 +40857,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.13,
-    "status": "pending"
+    "status": "loss",
+    "actual": 13.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.822615+00:00"
   },
   {
     "key": "2026-11-10|641569|jamal murray|PTS|OVER|21.5",
@@ -40610,7 +40928,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.23,
-    "status": "pending"
+    "status": "win",
+    "actual": 14.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.842191+00:00"
   },
   {
     "key": "2026-11-10|646675|lebron james|PTS|OVER|15.5",
@@ -40661,7 +40982,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.26,
-    "status": "pending"
+    "status": "win",
+    "actual": 17.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.857003+00:00"
   },
   {
     "key": "2026-11-10|641567|rj barrett|PTS|UNDER|25.5",
@@ -40678,7 +41002,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.06,
-    "status": "pending"
+    "status": "win",
+    "actual": 19.0,
+    "completed_game_id": "401909955",
+    "graded_at": "2026-11-10T07:41:43.861963+00:00"
   },
   {
     "key": "2026-11-10|641574|cade cunningham|PTS|UNDER|25.5",
@@ -40695,7 +41022,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 3.05,
-    "status": "pending"
+    "status": "win",
+    "actual": 17.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.866947+00:00"
   },
   {
     "key": "2026-11-10|641573|evan mobley|PTS|OVER|16.5",
@@ -40712,7 +41042,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.97,
-    "status": "pending"
+    "status": "loss",
+    "actual": 9.0,
+    "completed_game_id": "401909953",
+    "graded_at": "2026-11-10T07:41:43.872007+00:00"
   },
   {
     "key": "2026-11-10|641572|dyson daniels|REB|OVER|6.5",
@@ -40729,7 +41062,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 0.77,
-    "status": "pending"
+    "status": "loss",
+    "actual": 6.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.876933+00:00"
   },
   {
     "key": "2026-11-10|641564|luke kornet|REB|UNDER|5.5",
@@ -40763,7 +41099,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.11,
-    "status": "pending"
+    "status": "win",
+    "actual": 12.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.886753+00:00"
   },
   {
     "key": "2026-11-10|646675|tyrese maxey|PTS|OVER|23.5",
@@ -40797,7 +41136,10 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 2.09,
-    "status": "pending"
+    "status": "win",
+    "actual": 44.0,
+    "completed_game_id": "401909954",
+    "graded_at": "2026-11-10T07:41:43.896583+00:00"
   },
   {
     "key": "2026-11-10|642879|jaime jaquez jr.|PTS|OVER|13.5",
@@ -40848,6 +41190,9 @@
     "model_version": "live_primary",
     "research_group": "other_market",
     "edge": 1.04,
-    "status": "pending"
+    "status": "win",
+    "actual": 21.0,
+    "completed_game_id": "401909952",
+    "graded_at": "2026-11-10T07:41:43.911321+00:00"
   }
 ]
