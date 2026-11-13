@@ -1,70 +1,71 @@
 {
   "status": "RESEARCH_ONLY_NO_PRODUCTION_CHANGE",
-  "eligible": 636,
+  "eligible": 684,
   "capture_dates": [
     "20261028",
     "20261029",
     "20261030",
-    "20261031"
+    "20261031",
+    "20261112"
   ],
   "excluded": {
     "identity_review": 36,
     "missing_or_ambiguous_actual_minutes": 195,
-    "pending": 68,
+    "pending": 20,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 636,
-    "wins": 328,
-    "losses": 308,
-    "roi_pct": -5.89,
-    "average_losing_margin": 4.01,
-    "large_losses_over_5": 94,
-    "mean_absolute_minutes_error": 4.43,
-    "mean_abs_minutes_component": 1.9,
-    "mean_abs_rate_component": 3.89,
-    "minutes_dominant_losses": 63,
-    "rate_dominant_losses": 245
+    "n": 684,
+    "wins": 359,
+    "losses": 325,
+    "roi_pct": -3.43,
+    "average_losing_margin": 4.15,
+    "large_losses_over_5": 100,
+    "mean_absolute_minutes_error": 4.59,
+    "mean_abs_minutes_component": 1.99,
+    "mean_abs_rate_component": 3.85,
+    "minutes_dominant_losses": 72,
+    "rate_dominant_losses": 253
   },
   "by_market": {
     "PTS": {
-      "n": 200,
-      "wins": 93,
-      "losses": 107,
-      "roi_pct": -11.77,
-      "average_losing_margin": 4.9,
-      "large_losses_over_5": 46,
-      "mean_absolute_minutes_error": 4.6,
-      "mean_abs_minutes_component": 2.25,
-      "mean_abs_rate_component": 5.02,
-      "minutes_dominant_losses": 28,
-      "rate_dominant_losses": 79
+      "n": 214,
+      "wins": 101,
+      "losses": 113,
+      "roi_pct": -10.06,
+      "average_losing_margin": 5.04,
+      "large_losses_over_5": 49,
+      "mean_absolute_minutes_error": 4.89,
+      "mean_abs_minutes_component": 2.39,
+      "mean_abs_rate_component": 5.01,
+      "minutes_dominant_losses": 31,
+      "rate_dominant_losses": 82
     },
     "REB": {
-      "n": 126,
-      "wins": 72,
-      "losses": 54,
-      "roi_pct": 1.3,
-      "average_losing_margin": 2.63,
+      "n": 135,
+      "wins": 77,
+      "losses": 58,
+      "roi_pct": 1.95,
+      "average_losing_margin": 2.62,
       "large_losses_over_5": 5,
-      "mean_absolute_minutes_error": 4.21,
-      "mean_abs_minutes_component": 0.87,
-      "mean_abs_rate_component": 2.27,
-      "minutes_dominant_losses": 7,
-      "rate_dominant_losses": 47
+      "mean_absolute_minutes_error": 4.39,
+      "mean_abs_minutes_component": 0.9,
+      "mean_abs_rate_component": 2.22,
+      "minutes_dominant_losses": 9,
+      "rate_dominant_losses": 49
     },
     "AST": {
-      "n": 99,
-      "wins": 53,
-      "losses": 46,
-      "roi_pct": -6.23,
-      "average_losing_margin": 1.37,
+      "n": 105,
+      "wins": 57,
+      "losses": 48,
+      "roi_pct": -3.97,
+      "average_losing_margin": 1.35,
       "large_losses_over_5": 0,
-      "mean_absolute_minutes_error": 4.14,
-      "mean_abs_minutes_component": 0.59,
-      "mean_abs_rate_component": 1.6,
+      "mean_absolute_minutes_error": 4.07,
+      "mean_abs_minutes_component": 0.57,
+      "mean_abs_rate_component": 1.57,
       "minutes_dominant_losses": 5,
-      "rate_dominant_losses": 41
+      "rate_dominant_losses": 43
     },
     "3PM": {
       "n": 53,
@@ -80,60 +81,88 @@
       "rate_dominant_losses": 25
     },
     "PRA": {
-      "n": 158,
-      "wins": 84,
-      "losses": 74,
-      "roi_pct": 0.36,
-      "average_losing_margin": 6.53,
-      "large_losses_over_5": 43,
-      "mean_absolute_minutes_error": 4.57,
-      "mean_abs_minutes_component": 3.64,
-      "mean_abs_rate_component": 6.11,
-      "minutes_dominant_losses": 21,
-      "rate_dominant_losses": 53
+      "n": 177,
+      "wins": 98,
+      "losses": 79,
+      "roi_pct": 5.41,
+      "average_losing_margin": 6.84,
+      "large_losses_over_5": 46,
+      "mean_absolute_minutes_error": 4.7,
+      "mean_abs_minutes_component": 3.69,
+      "mean_abs_rate_component": 5.86,
+      "minutes_dominant_losses": 25,
+      "rate_dominant_losses": 54
     }
   },
   "by_cause": {
     "minutes_dominant": {
-      "n": 162,
-      "wins": 99,
-      "losses": 63,
-      "roi_pct": 11.27,
-      "average_losing_margin": 3.45,
-      "large_losses_over_5": 16,
-      "mean_absolute_minutes_error": 6.45,
-      "mean_abs_minutes_component": 3.2,
-      "mean_abs_rate_component": 1.73,
-      "minutes_dominant_losses": 63,
+      "n": 183,
+      "wins": 111,
+      "losses": 72,
+      "roi_pct": 11.61,
+      "average_losing_margin": 3.92,
+      "large_losses_over_5": 19,
+      "mean_absolute_minutes_error": 6.79,
+      "mean_abs_minutes_component": 3.38,
+      "mean_abs_rate_component": 1.81,
+      "minutes_dominant_losses": 72,
       "rate_dominant_losses": 0
     },
     "production_rate_dominant": {
-      "n": 474,
-      "wins": 229,
-      "losses": 245,
-      "roi_pct": -11.75,
-      "average_losing_margin": 4.15,
-      "large_losses_over_5": 78,
-      "mean_absolute_minutes_error": 3.75,
-      "mean_abs_minutes_component": 1.46,
-      "mean_abs_rate_component": 4.63,
+      "n": 501,
+      "wins": 248,
+      "losses": 253,
+      "roi_pct": -8.92,
+      "average_losing_margin": 4.22,
+      "large_losses_over_5": 81,
+      "mean_absolute_minutes_error": 3.78,
+      "mean_abs_minutes_component": 1.49,
+      "mean_abs_rate_component": 4.6,
       "minutes_dominant_losses": 0,
-      "rate_dominant_losses": 245
+      "rate_dominant_losses": 253
     }
   },
   "points_and_pra_large_losses": {
     "PTS": {
-      "n": 46,
-      "minutes_dominant": 6,
-      "rate_dominant": 40
+      "n": 49,
+      "minutes_dominant": 7,
+      "rate_dominant": 42
     },
     "PRA": {
-      "n": 43,
-      "minutes_dominant": 9,
-      "rate_dominant": 34
+      "n": 46,
+      "minutes_dominant": 11,
+      "rate_dominant": 35
     }
   },
   "largest_losses": [
+    {
+      "player": "Cade Cunningham",
+      "game": "Detroit Pistons @ Washington Wizards",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 39.5,
+      "actual": 68.0,
+      "loss_margin": 28.5,
+      "projected_minutes": 31.97,
+      "actual_minutes": 48.0,
+      "minutes_component": 17.11,
+      "rate_component": 16.76,
+      "dominant_cause": "minutes_dominant"
+    },
+    {
+      "player": "Cade Cunningham",
+      "game": "Detroit Pistons @ Washington Wizards",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 24.5,
+      "actual": 52.0,
+      "loss_margin": 27.5,
+      "projected_minutes": 31.97,
+      "actual_minutes": 48.0,
+      "minutes_component": 10.95,
+      "rate_component": 19.21,
+      "dominant_cause": "production_rate_dominant"
+    },
     {
       "player": "Scottie Barnes",
       "game": "Orlando Magic @ Toronto Raptors",
@@ -175,6 +204,20 @@
       "minutes_component": -9.08,
       "rate_component": -11.67,
       "dominant_cause": "production_rate_dominant"
+    },
+    {
+      "player": "Ausar Thompson",
+      "game": "Detroit Pistons @ Washington Wizards",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 22.5,
+      "actual": 39.0,
+      "loss_margin": 16.5,
+      "projected_minutes": 27.13,
+      "actual_minutes": 43.0,
+      "minutes_component": 12.77,
+      "rate_component": 4.41,
+      "dominant_cause": "minutes_dominant"
     },
     {
       "player": "Trey Murphy III",
@@ -441,48 +484,6 @@
       "minutes_component": -7.72,
       "rate_component": -6.42,
       "dominant_cause": "minutes_dominant"
-    },
-    {
-      "player": "CJ McCollum",
-      "game": "Cleveland Cavaliers @ Atlanta Hawks",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 15.5,
-      "actual": 5.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 26.34,
-      "actual_minutes": 31.0,
-      "minutes_component": 3.06,
-      "rate_component": -15.36,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "De'Andre Hunter",
-      "game": "Sacramento Kings @ New Orleans Pelicans",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 19.5,
-      "actual": 30.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 25.65,
-      "actual_minutes": 37.0,
-      "minutes_component": 7.21,
-      "rate_component": 6.51,
-      "dominant_cause": "minutes_dominant"
-    },
-    {
-      "player": "Giannis Antetokounmpo",
-      "game": "Indiana Pacers @ Miami Heat",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 48.5,
-      "actual": 59.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 30.81,
-      "actual_minutes": 31.0,
-      "minutes_component": 0.28,
-      "rate_component": 14.63,
-      "dominant_cause": "production_rate_dominant"
     }
   ],
   "decision": "INSUFFICIENT_INDEPENDENT_DATES",
