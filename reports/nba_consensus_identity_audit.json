@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 503,
+  "total": 538,
   "counts": {
-    "verified_from_available_logs": 503
+    "verified_from_available_logs": 538
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -4536,6 +4536,321 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261115|682502|jamalshead|AST|OVER|4.5",
+      "player": "Jamal Shead",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261115|682502|jamalshead|PRA|OVER|12.5",
+      "player": "Jamal Shead",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261115|682503|reedsheppard|AST|UNDER|4.0",
+      "player": "Reed Sheppard",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682503|reedsheppard|PRA|UNDER|21.5",
+      "player": "Reed Sheppard",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682503|amenthompson|AST|UNDER|4.5",
+      "player": "Amen Thompson",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682503|kyshawngeorge|PRA|OVER|22.5",
+      "player": "Kyshawn George",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261115|682502|jakobpoeltl|PRA|OVER|15.5",
+      "player": "Jakob Poeltl",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261115|682501|mitchellrobinson|PRA|OVER|10.5",
+      "player": "Mitchell Robinson",
+      "game": "Dallas Mavericks @ Boston Celtics",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261115|682502|landryshamet|PRA|OVER|10.5",
+      "player": "Landry Shamet",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261115|682503|kyshawngeorge|AST|OVER|4.0",
+      "player": "Kyshawn George",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261115|682501|samhauser|PRA|OVER|10.5",
+      "player": "Sam Hauser",
+      "game": "Dallas Mavericks @ Boston Celtics",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261115|682502|jalenbrunson|AST|OVER|6.0",
+      "player": "Jalen Brunson",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261115|682503|amenthompson|PRA|UNDER|29.5",
+      "player": "Amen Thompson",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682505|preciousachiuwa|PRA|OVER|15.5",
+      "player": "Precious Achiuwa",
+      "game": "Oklahoma City Thunder @ Sacramento Kings",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261115|682503|tarieason|PRA|UNDER|19.5",
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682500|dylanharper|PRA|UNDER|28.5",
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261115|682502|jamisonbattle|PTS|OVER|5.5",
+      "player": "Jamison Battle",
+      "game": "New York Knicks @ Toronto Raptors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "torontoraptors"
+    },
+    {
+      "id": "20261115|682500|harrisonbarnes|PTS|OVER|5.5",
+      "player": "Harrison Barnes",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261115|682503|reedsheppard|PTS|UNDER|14.0",
+      "player": "Reed Sheppard",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682503|kyshawngeorge|PTS|OVER|14.5",
+      "player": "Kyshawn George",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261115|682500|acebailey|PTS|OVER|13.5",
+      "player": "Ace Bailey",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "utahjazz"
+    },
+    {
+      "id": "20261115|682503|alexsarr|PTS|OVER|10.5",
+      "player": "Alex Sarr",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261115|682500|lukekornet|PTS|UNDER|5.5",
+      "player": "Luke Kornet",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261115|682505|preciousachiuwa|PTS|OVER|8.5",
+      "player": "Precious Achiuwa",
+      "game": "Oklahoma City Thunder @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261115|682501|mitchellrobinson|REB|OVER|5.5",
+      "player": "Mitchell Robinson",
+      "game": "Dallas Mavericks @ Boston Celtics",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261115|682500|dylanharper|PTS|UNDER|18.5",
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261115|682501|cooperflagg|REB|OVER|6.0",
+      "player": "Cooper Flagg",
+      "game": "Dallas Mavericks @ Boston Celtics",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "dallasmavericks"
+    },
+    {
+      "id": "20261115|682503|tarieason|PTS|UNDER|11.5",
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682505|isaiahhartenstein|PTS|UNDER|10.5",
+      "player": "Isaiah Hartenstein",
+      "game": "Oklahoma City Thunder @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261115|682503|amenthompson|PTS|UNDER|17.5",
+      "player": "Amen Thompson",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "houstonrockets"
+    },
+    {
+      "id": "20261115|682505|domantassabonis|PTS|OVER|12.5",
+      "player": "Domantas Sabonis",
+      "game": "Oklahoma City Thunder @ Sacramento Kings",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sacramentokings"
+    },
+    {
+      "id": "20261115|682500|stephoncastle|REB|OVER|5.0",
+      "player": "Stephon Castle",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "sanantoniospurs"
+    },
+    {
+      "id": "20261115|682504|kylekuzma|REB|UNDER|5.0",
+      "player": "Kyle Kuzma",
+      "game": "Atlanta Hawks @ Milwaukee Bucks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "milwaukeebucks"
+    },
+    {
+      "id": "20261115|682500|acebailey|REB|OVER|5.0",
+      "player": "Ace Bailey",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "utahjazz"
+    },
+    {
+      "id": "20261115|682504|onyekaokongwu|REB|OVER|7.5",
+      "player": "Onyeka Okongwu",
+      "game": "Atlanta Hawks @ Milwaukee Bucks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
     }
   ]
 }

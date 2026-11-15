@@ -1,12 +1,12 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-11-15T17:24:12.793248+00:00",
+  "generated_at": "2026-11-15T21:55:01.774126+00:00",
   "eligible_paired_snapshots": 440,
   "independent_capture_dates": 6,
   "excluded": {
     "incomplete_pregame_model_snapshot": 445,
     "identity_review": 36,
-    "ungraded": 20,
+    "ungraded": 55,
     "duplicate_event_player_market_date": 47
   },
   "overall": {
