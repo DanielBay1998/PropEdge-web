@@ -1,6 +1,6 @@
 {
   "status": "RETROSPECTIVE_RESEARCH_ONLY_NOT_PROSPECTIVE",
-  "matched": 932,
+  "matched": 965,
   "capture_dates": [
     "20261028",
     "20261029",
@@ -8,83 +8,84 @@
     "20261031",
     "20261103",
     "20261105",
-    "20261112"
+    "20261112",
+    "20261115"
   ],
   "excluded": {
     "identity_review": 36,
-    "pending": 20
+    "pending": 22
   },
   "overall": {
     "primary": {
-      "eligible_bets": 932,
-      "wins": 471,
-      "losses": 461,
-      "pushes": 0,
-      "flat_stake_roi_pct": -6.21,
-      "mean_absolute_error_on_all_matched": 4.5278
+      "eligible_bets": 965,
+      "wins": 483,
+      "losses": 481,
+      "pushes": 1,
+      "flat_stake_roi_pct": -6.83,
+      "mean_absolute_error_on_all_matched": 4.6082
     },
     "consensus": {
-      "eligible_bets": 931,
-      "wins": 471,
-      "losses": 460,
-      "pushes": 0,
-      "flat_stake_roi_pct": -6.11,
-      "mean_absolute_error_on_all_matched": 4.4478
+      "eligible_bets": 964,
+      "wins": 483,
+      "losses": 480,
+      "pushes": 1,
+      "flat_stake_roi_pct": -6.73,
+      "mean_absolute_error_on_all_matched": 4.5269
     }
   },
   "by_market": {
     "PTS": {
       "primary": {
-        "eligible_bets": 298,
-        "wins": 135,
-        "losses": 163,
+        "eligible_bets": 310,
+        "wins": 139,
+        "losses": 171,
         "pushes": 0,
-        "flat_stake_roi_pct": -13.28,
-        "mean_absolute_error_on_all_matched": 5.9135
+        "flat_stake_roi_pct": -14.05,
+        "mean_absolute_error_on_all_matched": 6.021
       },
       "consensus": {
-        "eligible_bets": 297,
-        "wins": 135,
-        "losses": 162,
+        "eligible_bets": 309,
+        "wins": 139,
+        "losses": 170,
         "pushes": 0,
-        "flat_stake_roi_pct": -12.98,
-        "mean_absolute_error_on_all_matched": 5.7761
+        "flat_stake_roi_pct": -13.78,
+        "mean_absolute_error_on_all_matched": 5.8777
       }
     },
     "REB": {
       "primary": {
-        "eligible_bets": 177,
-        "wins": 97,
-        "losses": 80,
+        "eligible_bets": 183,
+        "wins": 100,
+        "losses": 83,
         "pushes": 0,
-        "flat_stake_roi_pct": -1.8,
-        "mean_absolute_error_on_all_matched": 2.3784
+        "flat_stake_roi_pct": -1.74,
+        "mean_absolute_error_on_all_matched": 2.3713
       },
       "consensus": {
-        "eligible_bets": 177,
-        "wins": 97,
-        "losses": 80,
+        "eligible_bets": 183,
+        "wins": 100,
+        "losses": 83,
         "pushes": 0,
-        "flat_stake_roi_pct": -1.8,
-        "mean_absolute_error_on_all_matched": 2.3511
+        "flat_stake_roi_pct": -1.74,
+        "mean_absolute_error_on_all_matched": 2.3492
       }
     },
     "AST": {
       "primary": {
-        "eligible_bets": 145,
-        "wins": 74,
-        "losses": 71,
-        "pushes": 0,
-        "flat_stake_roi_pct": -7.95,
-        "mean_absolute_error_on_all_matched": 1.8983
+        "eligible_bets": 150,
+        "wins": 75,
+        "losses": 74,
+        "pushes": 1,
+        "flat_stake_roi_pct": -9.01,
+        "mean_absolute_error_on_all_matched": 1.9343
       },
       "consensus": {
-        "eligible_bets": 145,
-        "wins": 74,
-        "losses": 71,
-        "pushes": 0,
-        "flat_stake_roi_pct": -7.95,
-        "mean_absolute_error_on_all_matched": 1.8256
+        "eligible_bets": 150,
+        "wins": 75,
+        "losses": 74,
+        "pushes": 1,
+        "flat_stake_roi_pct": -9.01,
+        "mean_absolute_error_on_all_matched": 1.8587
       }
     },
     "3PM": {
@@ -107,20 +108,20 @@
     },
     "PRA": {
       "primary": {
-        "eligible_bets": 243,
-        "wins": 131,
-        "losses": 112,
+        "eligible_bets": 253,
+        "wins": 135,
+        "losses": 118,
         "pushes": 0,
-        "flat_stake_roi_pct": 3.01,
-        "mean_absolute_error_on_all_matched": 6.9022
+        "flat_stake_roi_pct": 2.1,
+        "mean_absolute_error_on_all_matched": 7.0043
       },
       "consensus": {
-        "eligible_bets": 243,
-        "wins": 131,
-        "losses": 112,
+        "eligible_bets": 253,
+        "wins": 135,
+        "losses": 118,
         "pushes": 0,
-        "flat_stake_roi_pct": 3.01,
-        "mean_absolute_error_on_all_matched": 6.8408
+        "flat_stake_roi_pct": 2.1,
+        "mean_absolute_error_on_all_matched": 6.9437
       }
     }
   },
@@ -140,7 +141,7 @@
         "losses": 130,
         "pushes": 0,
         "flat_stake_roi_pct": -7.74,
-        "mean_absolute_error_on_all_matched": 3.8957
+        "mean_absolute_error_on_all_matched": 3.8956
       }
     },
     "20261029": {
@@ -158,7 +159,7 @@
         "losses": 125,
         "pushes": 0,
         "flat_stake_roi_pct": -14.51,
-        "mean_absolute_error_on_all_matched": 4.5238
+        "mean_absolute_error_on_all_matched": 4.5237
       }
     },
     "20261030": {
@@ -194,7 +195,7 @@
         "losses": 19,
         "pushes": 0,
         "flat_stake_roi_pct": 31.22,
-        "mean_absolute_error_on_all_matched": 6.3404
+        "mean_absolute_error_on_all_matched": 6.3403
       }
     },
     "20261103": {
@@ -230,7 +231,7 @@
         "losses": 8,
         "pushes": 0,
         "flat_stake_roi_pct": -33.33,
-        "mean_absolute_error_on_all_matched": 4.8703
+        "mean_absolute_error_on_all_matched": 4.8705
       }
     },
     "20261112": {
@@ -250,55 +251,73 @@
         "flat_stake_roi_pct": 29.17,
         "mean_absolute_error_on_all_matched": 4.8686
       }
+    },
+    "20261115": {
+      "primary": {
+        "eligible_bets": 33,
+        "wins": 12,
+        "losses": 20,
+        "pushes": 1,
+        "flat_stake_roi_pct": -24.24,
+        "mean_absolute_error_on_all_matched": 6.8794
+      },
+      "consensus": {
+        "eligible_bets": 33,
+        "wins": 12,
+        "losses": 20,
+        "pushes": 1,
+        "flat_stake_roi_pct": -24.24,
+        "mean_absolute_error_on_all_matched": 6.7614
+      }
     }
   },
   "losing_pick_diagnostics": {
-    "deduplicated_unique_picks": 879,
+    "deduplicated_unique_picks": 912,
     "duplicate_captures_removed": 53,
     "overall": {
-      "n": 879,
-      "wins": 449,
-      "losses": 430,
-      "win_rate_pct": 51.08,
-      "flat_roi_pct": -5.1,
-      "losses_within_0_5": 92,
-      "losses_within_2": 169,
-      "losses_more_than_5": 133,
-      "average_loss_margin": 4.11
+      "n": 912,
+      "wins": 461,
+      "losses": 450,
+      "win_rate_pct": 50.6,
+      "flat_roi_pct": -5.79,
+      "losses_within_0_5": 93,
+      "losses_within_2": 175,
+      "losses_more_than_5": 143,
+      "average_loss_margin": 4.19
     },
     "by_market": {
       "PTS": {
-        "n": 282,
-        "wins": 130,
-        "losses": 152,
-        "win_rate_pct": 46.1,
-        "flat_roi_pct": -11.63,
+        "n": 294,
+        "wins": 134,
+        "losses": 160,
+        "win_rate_pct": 45.58,
+        "flat_roi_pct": -12.52,
         "losses_within_0_5": 21,
-        "losses_within_2": 43,
-        "losses_more_than_5": 64,
-        "average_loss_margin": 4.93
+        "losses_within_2": 44,
+        "losses_more_than_5": 70,
+        "average_loss_margin": 5.04
       },
       "REB": {
-        "n": 167,
-        "wins": 93,
-        "losses": 74,
-        "win_rate_pct": 55.69,
+        "n": 173,
+        "wins": 96,
+        "losses": 77,
+        "win_rate_pct": 55.49,
         "flat_roi_pct": -0.06,
         "losses_within_0_5": 15,
-        "losses_within_2": 33,
+        "losses_within_2": 35,
         "losses_more_than_5": 8,
-        "average_loss_margin": 2.64
+        "average_loss_margin": 2.6
       },
       "AST": {
-        "n": 135,
-        "wins": 71,
-        "losses": 64,
-        "win_rate_pct": 52.59,
-        "flat_roi_pct": -5.11,
-        "losses_within_0_5": 26,
-        "losses_within_2": 47,
+        "n": 140,
+        "wins": 72,
+        "losses": 67,
+        "win_rate_pct": 51.8,
+        "flat_roi_pct": -6.35,
+        "losses_within_0_5": 27,
+        "losses_within_2": 49,
         "losses_more_than_5": 0,
-        "average_loss_margin": 1.48
+        "average_loss_margin": 1.49
       },
       "3PM": {
         "n": 68,
@@ -312,15 +331,15 @@
         "average_loss_margin": 0.84
       },
       "PRA": {
-        "n": 227,
-        "wins": 122,
-        "losses": 105,
-        "win_rate_pct": 53.74,
-        "flat_roi_pct": 2.86,
+        "n": 237,
+        "wins": 126,
+        "losses": 111,
+        "win_rate_pct": 53.16,
+        "flat_roi_pct": 1.89,
         "losses_within_0_5": 5,
-        "losses_within_2": 12,
-        "losses_more_than_5": 61,
-        "average_loss_margin": 6.67
+        "losses_within_2": 13,
+        "losses_more_than_5": 65,
+        "average_loss_margin": 6.75
       }
     },
     "by_consensus_edge_bucket": {
@@ -336,48 +355,48 @@
         "average_loss_margin": 12.5
       },
       "consensus_edge_0_to_1": {
-        "n": 289,
-        "wins": 141,
-        "losses": 148,
-        "win_rate_pct": 48.79,
-        "flat_roi_pct": -12.04,
+        "n": 296,
+        "wins": 145,
+        "losses": 150,
+        "win_rate_pct": 49.15,
+        "flat_roi_pct": -11.08,
         "losses_within_0_5": 51,
-        "losses_within_2": 89,
+        "losses_within_2": 91,
         "losses_more_than_5": 18,
-        "average_loss_margin": 2.54
+        "average_loss_margin": 2.52
       },
       "consensus_edge_1_to_2": {
-        "n": 252,
-        "wins": 120,
-        "losses": 132,
-        "win_rate_pct": 47.62,
-        "flat_roi_pct": -12.35,
+        "n": 259,
+        "wins": 122,
+        "losses": 137,
+        "win_rate_pct": 47.1,
+        "flat_roi_pct": -13.17,
         "losses_within_0_5": 25,
-        "losses_within_2": 49,
-        "losses_more_than_5": 46,
-        "average_loss_margin": 4.03
+        "losses_within_2": 51,
+        "losses_more_than_5": 47,
+        "average_loss_margin": 4.05
       },
       "consensus_edge_2_to_4": {
-        "n": 239,
-        "wins": 125,
-        "losses": 114,
-        "win_rate_pct": 52.3,
-        "flat_roi_pct": -0.32,
-        "losses_within_0_5": 12,
-        "losses_within_2": 27,
-        "losses_more_than_5": 47,
-        "average_loss_margin": 5.26
+        "n": 251,
+        "wins": 128,
+        "losses": 123,
+        "win_rate_pct": 51.0,
+        "flat_roi_pct": -2.7,
+        "losses_within_0_5": 13,
+        "losses_within_2": 29,
+        "losses_more_than_5": 53,
+        "average_loss_margin": 5.42
       },
       "consensus_edge_4_plus": {
-        "n": 98,
-        "wins": 63,
-        "losses": 35,
-        "win_rate_pct": 64.29,
-        "flat_roi_pct": 23.33,
+        "n": 105,
+        "wins": 66,
+        "losses": 39,
+        "win_rate_pct": 62.86,
+        "flat_roi_pct": 20.82,
         "losses_within_0_5": 4,
         "losses_within_2": 4,
-        "losses_more_than_5": 21,
-        "average_loss_margin": 7.07
+        "losses_more_than_5": 24,
+        "average_loss_margin": 6.99
       }
     },
     "by_market_and_consensus_edge_bucket": {
@@ -405,37 +424,37 @@
           "average_loss_margin": 5.28
         },
         "consensus_edge_1_to_2": {
-          "n": 95,
-          "wins": 38,
-          "losses": 57,
-          "win_rate_pct": 40.0,
-          "flat_roi_pct": -23.28,
+          "n": 99,
+          "wins": 40,
+          "losses": 59,
+          "win_rate_pct": 40.4,
+          "flat_roi_pct": -22.34,
           "losses_within_0_5": 8,
-          "losses_within_2": 17,
-          "losses_more_than_5": 26,
-          "average_loss_margin": 4.62
+          "losses_within_2": 18,
+          "losses_more_than_5": 27,
+          "average_loss_margin": 4.72
         },
         "consensus_edge_2_to_4": {
-          "n": 127,
-          "wins": 66,
-          "losses": 61,
-          "win_rate_pct": 51.97,
-          "flat_roi_pct": -0.85,
+          "n": 132,
+          "wins": 67,
+          "losses": 65,
+          "win_rate_pct": 50.76,
+          "flat_roi_pct": -3.09,
           "losses_within_0_5": 9,
           "losses_within_2": 18,
-          "losses_more_than_5": 24,
-          "average_loss_margin": 4.96
+          "losses_more_than_5": 28,
+          "average_loss_margin": 5.16
         },
         "consensus_edge_4_plus": {
-          "n": 26,
-          "wins": 16,
-          "losses": 10,
-          "win_rate_pct": 61.54,
-          "flat_roi_pct": 18.98,
+          "n": 29,
+          "wins": 17,
+          "losses": 12,
+          "win_rate_pct": 58.62,
+          "flat_roi_pct": 13.57,
           "losses_within_0_5": 2,
           "losses_within_2": 2,
-          "losses_more_than_5": 4,
-          "average_loss_margin": 4.9
+          "losses_more_than_5": 5,
+          "average_loss_margin": 4.83
         }
       },
       "REB": {
@@ -443,26 +462,26 @@
           "n": 0
         },
         "consensus_edge_0_to_1": {
-          "n": 91,
-          "wins": 47,
-          "losses": 44,
-          "win_rate_pct": 51.65,
-          "flat_roi_pct": -6.96,
+          "n": 96,
+          "wins": 50,
+          "losses": 46,
+          "win_rate_pct": 52.08,
+          "flat_roi_pct": -5.55,
           "losses_within_0_5": 7,
-          "losses_within_2": 22,
+          "losses_within_2": 24,
           "losses_more_than_5": 4,
-          "average_loss_margin": 2.58
+          "average_loss_margin": 2.51
         },
         "consensus_edge_1_to_2": {
-          "n": 65,
+          "n": 66,
           "wins": 41,
-          "losses": 24,
-          "win_rate_pct": 63.08,
-          "flat_roi_pct": 12.95,
+          "losses": 25,
+          "win_rate_pct": 62.12,
+          "flat_roi_pct": 11.24,
           "losses_within_0_5": 6,
           "losses_within_2": 9,
           "losses_more_than_5": 2,
-          "average_loss_margin": 2.56
+          "average_loss_margin": 2.58
         },
         "consensus_edge_2_to_4": {
           "n": 11,
@@ -484,37 +503,37 @@
           "n": 0
         },
         "consensus_edge_0_to_1": {
-          "n": 99,
-          "wins": 56,
+          "n": 101,
+          "wins": 57,
           "losses": 43,
-          "win_rate_pct": 56.57,
-          "flat_roi_pct": 2.21,
+          "win_rate_pct": 57.0,
+          "flat_roi_pct": 3.16,
           "losses_within_0_5": 19,
           "losses_within_2": 29,
           "losses_more_than_5": 0,
           "average_loss_margin": 1.57
         },
         "consensus_edge_1_to_2": {
-          "n": 34,
+          "n": 36,
           "wins": 15,
-          "losses": 19,
-          "win_rate_pct": 44.12,
-          "flat_roi_pct": -20.84,
+          "losses": 21,
+          "win_rate_pct": 41.67,
+          "flat_roi_pct": -25.24,
           "losses_within_0_5": 6,
-          "losses_within_2": 16,
+          "losses_within_2": 17,
           "losses_more_than_5": 0,
-          "average_loss_margin": 1.34
+          "average_loss_margin": 1.43
         },
         "consensus_edge_2_to_4": {
-          "n": 2,
+          "n": 3,
           "wins": 0,
-          "losses": 2,
+          "losses": 3,
           "win_rate_pct": 0.0,
           "flat_roi_pct": -100.0,
-          "losses_within_0_5": 1,
-          "losses_within_2": 2,
+          "losses_within_0_5": 2,
+          "losses_within_2": 3,
           "losses_more_than_5": 0,
-          "average_loss_margin": 1.0
+          "average_loss_margin": 0.83
         },
         "consensus_edge_4_plus": {
           "n": 0
@@ -580,25 +599,25 @@
           "average_loss_margin": 6.03
         },
         "consensus_edge_2_to_4": {
-          "n": 99,
-          "wins": 54,
-          "losses": 45,
-          "win_rate_pct": 54.55,
-          "flat_roi_pct": 4.54,
+          "n": 105,
+          "wins": 56,
+          "losses": 49,
+          "win_rate_pct": 53.33,
+          "flat_roi_pct": 2.38,
           "losses_within_0_5": 0,
-          "losses_within_2": 5,
-          "losses_more_than_5": 21,
-          "average_loss_margin": 6.12
+          "losses_within_2": 6,
+          "losses_more_than_5": 23,
+          "average_loss_margin": 6.3
         },
         "consensus_edge_4_plus": {
-          "n": 72,
-          "wins": 47,
-          "losses": 25,
-          "win_rate_pct": 65.28,
-          "flat_roi_pct": 24.9,
+          "n": 76,
+          "wins": 49,
+          "losses": 27,
+          "win_rate_pct": 64.47,
+          "flat_roi_pct": 23.59,
           "losses_within_0_5": 2,
           "losses_within_2": 2,
-          "losses_more_than_5": 17,
+          "losses_more_than_5": 19,
           "average_loss_margin": 7.94
         }
       }
@@ -693,6 +712,17 @@
         "consensus_edge_on_pick": 3.15
       },
       {
+        "player": "Dylan Harper",
+        "game": "San Antonio Spurs @ Utah Jazz",
+        "market": "PRA",
+        "side": "UNDER",
+        "line": 28.5,
+        "actual": 44.0,
+        "loss_margin": 15.5,
+        "consensus": 25.63,
+        "consensus_edge_on_pick": 2.87
+      },
+      {
         "player": "Aaron Wiggins",
         "game": "Cleveland Cavaliers @ Atlanta Hawks",
         "market": "PRA",
@@ -704,6 +734,28 @@
         "consensus_edge_on_pick": 0.75
       },
       {
+        "player": "Tari Eason",
+        "game": "Houston Rockets @ Washington Wizards",
+        "market": "PRA",
+        "side": "UNDER",
+        "line": 19.5,
+        "actual": 33.0,
+        "loss_margin": 13.5,
+        "consensus": 17.44,
+        "consensus_edge_on_pick": 2.06
+      },
+      {
+        "player": "Tari Eason",
+        "game": "Houston Rockets @ Washington Wizards",
+        "market": "PTS",
+        "side": "UNDER",
+        "line": 11.5,
+        "actual": 25.0,
+        "loss_margin": 13.5,
+        "consensus": 9.74,
+        "consensus_edge_on_pick": 1.76
+      },
+      {
         "player": "De'Andre Hunter",
         "game": "Sacramento Kings @ New Orleans Pelicans",
         "market": "PTS",
@@ -711,8 +763,8 @@
         "line": 11.5,
         "actual": 24.0,
         "loss_margin": 12.5,
-        "consensus": 10.83,
-        "consensus_edge_on_pick": 0.67
+        "consensus": 10.84,
+        "consensus_edge_on_pick": 0.66
       },
       {
         "player": "De'Andre Hunter",
@@ -735,6 +787,17 @@
         "loss_margin": 12.5,
         "consensus": 25.22,
         "consensus_edge_on_pick": 2.72
+      },
+      {
+        "player": "Dylan Harper",
+        "game": "San Antonio Spurs @ Utah Jazz",
+        "market": "PTS",
+        "side": "UNDER",
+        "line": 18.5,
+        "actual": 31.0,
+        "loss_margin": 12.5,
+        "consensus": 15.98,
+        "consensus_edge_on_pick": 2.52
       },
       {
         "player": "Trey Murphy III",
@@ -779,50 +842,6 @@
         "loss_margin": 11.5,
         "consensus": 17.29,
         "consensus_edge_on_pick": 2.21
-      },
-      {
-        "player": "CJ McCollum",
-        "game": "Cleveland Cavaliers @ Atlanta Hawks",
-        "market": "PTS",
-        "side": "OVER",
-        "line": 16.5,
-        "actual": 5.0,
-        "loss_margin": 11.5,
-        "consensus": 17.41,
-        "consensus_edge_on_pick": 0.91
-      },
-      {
-        "player": "De'Andre Hunter",
-        "game": "Sacramento Kings @ New Orleans Pelicans",
-        "market": "PRA",
-        "side": "UNDER",
-        "line": 18.5,
-        "actual": 30.0,
-        "loss_margin": 11.5,
-        "consensus": 16.56,
-        "consensus_edge_on_pick": 1.94
-      },
-      {
-        "player": "De'Andre Hunter",
-        "game": "Sacramento Kings @ New Orleans Pelicans",
-        "market": "PTS",
-        "side": "UNDER",
-        "line": 12.5,
-        "actual": 24.0,
-        "loss_margin": 11.5,
-        "consensus": 10.83,
-        "consensus_edge_on_pick": 1.67
-      },
-      {
-        "player": "De'Andre Hunter",
-        "game": "Sacramento Kings @ New Orleans Pelicans",
-        "market": "PRA",
-        "side": "UNDER",
-        "line": 18.5,
-        "actual": 30.0,
-        "loss_margin": 11.5,
-        "consensus": 17.75,
-        "consensus_edge_on_pick": 0.75
       }
     ],
     "limitations": [
@@ -834,50 +853,50 @@
   "betting_margins": {
     "overall": {
       "wins": {
-        "count": 471,
-        "average": 4.442,
-        "median": 2.5,
+        "count": 483,
+        "average": 4.479,
+        "median": 3.0,
         "within_0_5": 94,
         "within_1": 96,
-        "within_2": 174,
-        "within_3": 239,
-        "more_than_5": 151
+        "within_2": 176,
+        "within_3": 244,
+        "more_than_5": 155
       },
       "losses": {
-        "count": 461,
-        "average": 4.144,
+        "count": 481,
+        "average": 4.213,
         "median": 2.5,
-        "within_0_5": 97,
-        "within_1": 97,
-        "within_2": 182,
-        "within_3": 233,
-        "more_than_5": 145
+        "within_0_5": 98,
+        "within_1": 100,
+        "within_2": 188,
+        "within_3": 242,
+        "more_than_5": 155
       },
-      "pushes": 0,
+      "pushes": 1,
       "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
       "win_distance_definition": "Actual result beyond captured sportsbook line in chosen direction"
     },
     "by_market": {
       "PTS": {
         "wins": {
-          "count": 135,
-          "average": 6.1,
+          "count": 139,
+          "average": 6.129,
           "median": 5.5,
           "within_0_5": 10,
           "within_1": 10,
           "within_2": 25,
-          "within_3": 41,
-          "more_than_5": 69
+          "within_3": 42,
+          "more_than_5": 71
         },
         "losses": {
-          "count": 163,
-          "average": 5.034,
+          "count": 171,
+          "average": 5.132,
           "median": 3.5,
           "within_0_5": 22,
           "within_1": 22,
-          "within_2": 46,
-          "within_3": 67,
-          "more_than_5": 71
+          "within_2": 47,
+          "within_3": 68,
+          "more_than_5": 77
         },
         "pushes": 0,
         "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
@@ -885,23 +904,23 @@
       },
       "REB": {
         "wins": {
-          "count": 97,
-          "average": 2.16,
+          "count": 100,
+          "average": 2.175,
           "median": 1.5,
           "within_0_5": 31,
           "within_1": 32,
-          "within_2": 52,
-          "within_3": 74,
+          "within_2": 53,
+          "within_3": 76,
           "more_than_5": 9
         },
         "losses": {
-          "count": 80,
-          "average": 2.562,
+          "count": 83,
+          "average": 2.53,
           "median": 2.5,
           "within_0_5": 17,
-          "within_1": 17,
-          "within_2": 38,
-          "within_3": 49,
+          "within_1": 19,
+          "within_2": 40,
+          "within_3": 52,
           "more_than_5": 8
         },
         "pushes": 0,
@@ -910,26 +929,26 @@
       },
       "AST": {
         "wins": {
-          "count": 74,
-          "average": 1.98,
+          "count": 75,
+          "average": 1.993,
           "median": 1.5,
           "within_0_5": 22,
           "within_1": 23,
           "within_2": 45,
-          "within_3": 59,
+          "within_3": 60,
           "more_than_5": 5
         },
         "losses": {
-          "count": 71,
-          "average": 1.5,
+          "count": 74,
+          "average": 1.507,
           "median": 1.5,
-          "within_0_5": 28,
-          "within_1": 28,
-          "within_2": 52,
-          "within_3": 65,
+          "within_0_5": 29,
+          "within_1": 29,
+          "within_2": 54,
+          "within_3": 68,
           "more_than_5": 0
         },
-        "pushes": 0,
+        "pushes": 1,
         "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
         "win_distance_definition": "Actual result beyond captured sportsbook line in chosen direction"
       },
@@ -960,24 +979,24 @@
       },
       "PRA": {
         "wins": {
-          "count": 131,
-          "average": 6.615,
+          "count": 135,
+          "average": 6.656,
           "median": 5.5,
           "within_0_5": 14,
           "within_1": 14,
-          "within_2": 26,
-          "within_3": 34,
-          "more_than_5": 68
+          "within_2": 27,
+          "within_3": 35,
+          "more_than_5": 70
         },
         "losses": {
-          "count": 112,
-          "average": 6.688,
+          "count": 118,
+          "average": 6.763,
           "median": 5.5,
           "within_0_5": 5,
           "within_1": 5,
-          "within_2": 12,
-          "within_3": 18,
-          "more_than_5": 66
+          "within_2": 13,
+          "within_3": 20,
+          "more_than_5": 70
         },
         "pushes": 0,
         "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
@@ -1159,6 +1178,31 @@
         "pushes": 0,
         "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
         "win_distance_definition": "Actual result beyond captured sportsbook line in chosen direction"
+      },
+      "20261115": {
+        "wins": {
+          "count": 12,
+          "average": 5.958,
+          "median": 3.5,
+          "within_0_5": 0,
+          "within_1": 0,
+          "within_2": 2,
+          "within_3": 5,
+          "more_than_5": 4
+        },
+        "losses": {
+          "count": 20,
+          "average": 5.8,
+          "median": 4.5,
+          "within_0_5": 1,
+          "within_1": 3,
+          "within_2": 6,
+          "within_3": 9,
+          "more_than_5": 10
+        },
+        "pushes": 1,
+        "loss_distance_definition": "Actual result short of winning side of captured sportsbook line; not distance from model projection",
+        "win_distance_definition": "Actual result beyond captured sportsbook line in chosen direction"
       }
     },
     "note": "The same captured picks and sides were used for primary and consensus. Margins are realized betting outcomes, not a test of consensus-selected bets."
@@ -1166,235 +1210,235 @@
   "error_analysis": {
     "overall": {
       "primary": {
-        "n": 932,
-        "mae": 4.528,
-        "median_absolute_error": 3.105,
-        "p75_absolute_error": 6.71,
-        "p90_absolute_error": 10.81,
+        "n": 965,
+        "mae": 4.608,
+        "median_absolute_error": 3.23,
+        "p75_absolute_error": 6.82,
+        "p90_absolute_error": 10.94,
         "maximum_absolute_error": 33.23,
-        "mean_signed_error_projection_minus_actual": 0.758,
-        "within_0_5_pct": 10.09,
-        "within_1_pct": 19.21,
-        "within_2_pct": 35.62,
-        "within_3_pct": 49.46,
-        "within_5_pct": 67.6
+        "mean_signed_error_projection_minus_actual": 0.669,
+        "within_0_5_pct": 9.74,
+        "within_1_pct": 18.76,
+        "within_2_pct": 34.82,
+        "within_3_pct": 48.81,
+        "within_5_pct": 67.05
       },
       "challenger": {
-        "n": 932,
-        "mae": 4.456,
-        "median_absolute_error": 3.021,
-        "p75_absolute_error": 6.679,
-        "p90_absolute_error": 10.506,
+        "n": 965,
+        "mae": 4.533,
+        "median_absolute_error": 3.055,
+        "p75_absolute_error": 6.941,
+        "p90_absolute_error": 10.953,
         "maximum_absolute_error": 32.749,
-        "mean_signed_error_projection_minus_actual": 0.788,
-        "within_0_5_pct": 9.98,
-        "within_1_pct": 18.56,
-        "within_2_pct": 35.84,
-        "within_3_pct": 49.68,
-        "within_5_pct": 66.2
+        "mean_signed_error_projection_minus_actual": 0.688,
+        "within_0_5_pct": 9.64,
+        "within_1_pct": 18.13,
+        "within_2_pct": 35.13,
+        "within_3_pct": 49.12,
+        "within_5_pct": 65.8
       },
       "v4": {
-        "n": 932,
-        "mae": 4.414,
-        "median_absolute_error": 2.981,
-        "p75_absolute_error": 6.328,
-        "p90_absolute_error": 10.08,
-        "maximum_absolute_error": 35.72,
-        "mean_signed_error_projection_minus_actual": 0.572,
-        "within_0_5_pct": 9.44,
-        "within_1_pct": 18.78,
-        "within_2_pct": 36.8,
-        "within_3_pct": 50.54,
-        "within_5_pct": 66.52
+        "n": 965,
+        "mae": 4.492,
+        "median_absolute_error": 3.061,
+        "p75_absolute_error": 6.558,
+        "p90_absolute_error": 10.416,
+        "maximum_absolute_error": 35.722,
+        "mean_signed_error_projection_minus_actual": 0.478,
+        "within_0_5_pct": 9.22,
+        "within_1_pct": 18.24,
+        "within_2_pct": 36.17,
+        "within_3_pct": 49.84,
+        "within_5_pct": 66.01
       },
       "consensus": {
-        "n": 932,
-        "mae": 4.448,
-        "median_absolute_error": 2.979,
-        "p75_absolute_error": 6.437,
-        "p90_absolute_error": 10.286,
+        "n": 965,
+        "mae": 4.527,
+        "median_absolute_error": 3.05,
+        "p75_absolute_error": 6.699,
+        "p90_absolute_error": 10.696,
         "maximum_absolute_error": 33.9,
-        "mean_signed_error_projection_minus_actual": 0.706,
-        "within_0_5_pct": 9.87,
-        "within_1_pct": 18.03,
-        "within_2_pct": 36.91,
-        "within_3_pct": 50.21,
-        "within_5_pct": 66.74
+        "mean_signed_error_projection_minus_actual": 0.611,
+        "within_0_5_pct": 9.53,
+        "within_1_pct": 17.62,
+        "within_2_pct": 36.27,
+        "within_3_pct": 49.64,
+        "within_5_pct": 66.32
       }
     },
     "by_market": {
       "PTS": {
         "primary": {
-          "n": 298,
-          "mae": 5.913,
-          "median_absolute_error": 4.74,
-          "p75_absolute_error": 8.57,
+          "n": 310,
+          "mae": 6.021,
+          "median_absolute_error": 4.78,
+          "p75_absolute_error": 8.81,
           "p90_absolute_error": 12.4,
           "maximum_absolute_error": 30.93,
-          "mean_signed_error_projection_minus_actual": 1.501,
-          "within_0_5_pct": 3.02,
-          "within_1_pct": 8.72,
-          "within_2_pct": 19.46,
-          "within_3_pct": 30.87,
-          "within_5_pct": 53.69
+          "mean_signed_error_projection_minus_actual": 1.43,
+          "within_0_5_pct": 2.9,
+          "within_1_pct": 8.39,
+          "within_2_pct": 18.71,
+          "within_3_pct": 30.32,
+          "within_5_pct": 52.58
         },
         "challenger": {
-          "n": 298,
-          "mae": 5.727,
-          "median_absolute_error": 4.651,
-          "p75_absolute_error": 7.989,
-          "p90_absolute_error": 11.422,
+          "n": 310,
+          "mae": 5.824,
+          "median_absolute_error": 4.79,
+          "p75_absolute_error": 8.337,
+          "p90_absolute_error": 11.486,
           "maximum_absolute_error": 30.25,
-          "mean_signed_error_projection_minus_actual": 1.487,
-          "within_0_5_pct": 2.35,
-          "within_1_pct": 8.05,
-          "within_2_pct": 22.48,
-          "within_3_pct": 30.54,
-          "within_5_pct": 51.68
+          "mean_signed_error_projection_minus_actual": 1.397,
+          "within_0_5_pct": 2.26,
+          "within_1_pct": 7.74,
+          "within_2_pct": 21.94,
+          "within_3_pct": 30.32,
+          "within_5_pct": 50.65
         },
         "v4": {
-          "n": 298,
-          "mae": 5.754,
-          "median_absolute_error": 5.052,
-          "p75_absolute_error": 8.211,
-          "p90_absolute_error": 11.457,
-          "maximum_absolute_error": 32.007,
-          "mean_signed_error_projection_minus_actual": 1.289,
-          "within_0_5_pct": 3.69,
-          "within_1_pct": 8.05,
-          "within_2_pct": 22.48,
-          "within_3_pct": 32.21,
-          "within_5_pct": 49.33
+          "n": 310,
+          "mae": 5.852,
+          "median_absolute_error": 5.212,
+          "p75_absolute_error": 8.43,
+          "p90_absolute_error": 11.716,
+          "maximum_absolute_error": 32.009,
+          "mean_signed_error_projection_minus_actual": 1.205,
+          "within_0_5_pct": 3.55,
+          "within_1_pct": 7.74,
+          "within_2_pct": 21.94,
+          "within_3_pct": 31.61,
+          "within_5_pct": 48.39
         },
         "consensus": {
-          "n": 298,
-          "mae": 5.776,
-          "median_absolute_error": 4.676,
-          "p75_absolute_error": 8.518,
+          "n": 310,
+          "mae": 5.878,
+          "median_absolute_error": 4.845,
+          "p75_absolute_error": 8.543,
           "p90_absolute_error": 11.957,
-          "maximum_absolute_error": 31.062,
-          "mean_signed_error_projection_minus_actual": 1.426,
-          "within_0_5_pct": 4.03,
-          "within_1_pct": 7.72,
-          "within_2_pct": 21.14,
-          "within_3_pct": 31.54,
-          "within_5_pct": 52.01
+          "maximum_absolute_error": 31.063,
+          "mean_signed_error_projection_minus_actual": 1.344,
+          "within_0_5_pct": 3.87,
+          "within_1_pct": 7.42,
+          "within_2_pct": 20.65,
+          "within_3_pct": 31.29,
+          "within_5_pct": 50.97
         }
       },
       "REB": {
         "primary": {
-          "n": 177,
-          "mae": 2.378,
+          "n": 183,
+          "mae": 2.371,
           "median_absolute_error": 2.02,
           "p75_absolute_error": 3.72,
-          "p90_absolute_error": 5.2,
+          "p90_absolute_error": 5.15,
           "maximum_absolute_error": 8.63,
-          "mean_signed_error_projection_minus_actual": -0.138,
-          "within_0_5_pct": 23.16,
-          "within_1_pct": 31.07,
-          "within_2_pct": 48.02,
-          "within_3_pct": 68.36,
-          "within_5_pct": 88.14
+          "mean_signed_error_projection_minus_actual": -0.144,
+          "within_0_5_pct": 22.4,
+          "within_1_pct": 30.6,
+          "within_2_pct": 48.09,
+          "within_3_pct": 68.85,
+          "within_5_pct": 88.52
         },
         "challenger": {
-          "n": 177,
+          "n": 183,
           "mae": 2.339,
-          "median_absolute_error": 2.026,
+          "median_absolute_error": 2.047,
           "p75_absolute_error": 3.354,
-          "p90_absolute_error": 5.375,
+          "p90_absolute_error": 4.914,
           "maximum_absolute_error": 9.202,
-          "mean_signed_error_projection_minus_actual": -0.071,
-          "within_0_5_pct": 20.34,
-          "within_1_pct": 31.64,
-          "within_2_pct": 49.72,
-          "within_3_pct": 68.36,
-          "within_5_pct": 89.83
+          "mean_signed_error_projection_minus_actual": -0.078,
+          "within_0_5_pct": 19.67,
+          "within_1_pct": 31.15,
+          "within_2_pct": 49.18,
+          "within_3_pct": 68.85,
+          "within_5_pct": 90.16
         },
         "v4": {
-          "n": 177,
-          "mae": 2.391,
-          "median_absolute_error": 2.084,
-          "p75_absolute_error": 3.644,
-          "p90_absolute_error": 5.035,
-          "maximum_absolute_error": 8.859,
-          "mean_signed_error_projection_minus_actual": -0.247,
-          "within_0_5_pct": 16.38,
-          "within_1_pct": 31.07,
-          "within_2_pct": 48.59,
-          "within_3_pct": 67.8,
-          "within_5_pct": 89.83
+          "n": 183,
+          "mae": 2.39,
+          "median_absolute_error": 2.083,
+          "p75_absolute_error": 3.645,
+          "p90_absolute_error": 4.966,
+          "maximum_absolute_error": 8.86,
+          "mean_signed_error_projection_minus_actual": -0.255,
+          "within_0_5_pct": 15.85,
+          "within_1_pct": 30.05,
+          "within_2_pct": 48.63,
+          "within_3_pct": 67.76,
+          "within_5_pct": 90.16
         },
         "consensus": {
-          "n": 177,
-          "mae": 2.351,
+          "n": 183,
+          "mae": 2.349,
           "median_absolute_error": 1.955,
           "p75_absolute_error": 3.528,
-          "p90_absolute_error": 5.203,
-          "maximum_absolute_error": 8.588,
-          "mean_signed_error_projection_minus_actual": -0.152,
-          "within_0_5_pct": 19.77,
-          "within_1_pct": 31.07,
-          "within_2_pct": 50.28,
-          "within_3_pct": 66.1,
-          "within_5_pct": 89.83
+          "p90_absolute_error": 4.928,
+          "maximum_absolute_error": 8.589,
+          "mean_signed_error_projection_minus_actual": -0.159,
+          "within_0_5_pct": 19.13,
+          "within_1_pct": 30.6,
+          "within_2_pct": 50.27,
+          "within_3_pct": 66.67,
+          "within_5_pct": 90.16
         }
       },
       "AST": {
         "primary": {
-          "n": 145,
-          "mae": 1.898,
-          "median_absolute_error": 1.68,
-          "p75_absolute_error": 2.73,
+          "n": 150,
+          "mae": 1.934,
+          "median_absolute_error": 1.685,
+          "p75_absolute_error": 2.76,
           "p90_absolute_error": 4.01,
           "maximum_absolute_error": 5.72,
-          "mean_signed_error_projection_minus_actual": 0.326,
-          "within_0_5_pct": 13.1,
-          "within_1_pct": 31.72,
-          "within_2_pct": 59.31,
-          "within_3_pct": 80.0,
-          "within_5_pct": 97.93
+          "mean_signed_error_projection_minus_actual": 0.284,
+          "within_0_5_pct": 12.67,
+          "within_1_pct": 31.33,
+          "within_2_pct": 58.0,
+          "within_3_pct": 78.67,
+          "within_5_pct": 98.0
         },
         "challenger": {
-          "n": 145,
-          "mae": 1.838,
-          "median_absolute_error": 1.617,
-          "p75_absolute_error": 2.7,
-          "p90_absolute_error": 3.655,
+          "n": 150,
+          "mae": 1.87,
+          "median_absolute_error": 1.652,
+          "p75_absolute_error": 2.732,
+          "p90_absolute_error": 3.675,
           "maximum_absolute_error": 5.815,
-          "mean_signed_error_projection_minus_actual": 0.273,
-          "within_0_5_pct": 16.55,
-          "within_1_pct": 32.41,
-          "within_2_pct": 60.0,
-          "within_3_pct": 83.45,
-          "within_5_pct": 96.55
+          "mean_signed_error_projection_minus_actual": 0.227,
+          "within_0_5_pct": 16.0,
+          "within_1_pct": 32.0,
+          "within_2_pct": 58.67,
+          "within_3_pct": 82.0,
+          "within_5_pct": 96.67
         },
         "v4": {
-          "n": 145,
-          "mae": 1.755,
-          "median_absolute_error": 1.582,
-          "p75_absolute_error": 2.388,
-          "p90_absolute_error": 3.501,
+          "n": 150,
+          "mae": 1.786,
+          "median_absolute_error": 1.606,
+          "p75_absolute_error": 2.579,
+          "p90_absolute_error": 3.602,
           "maximum_absolute_error": 5.807,
-          "mean_signed_error_projection_minus_actual": 0.161,
-          "within_0_5_pct": 17.93,
-          "within_1_pct": 33.79,
-          "within_2_pct": 62.07,
-          "within_3_pct": 84.83,
-          "within_5_pct": 97.24
+          "mean_signed_error_projection_minus_actual": 0.107,
+          "within_0_5_pct": 18.0,
+          "within_1_pct": 33.33,
+          "within_2_pct": 60.67,
+          "within_3_pct": 84.0,
+          "within_5_pct": 97.33
         },
         "consensus": {
-          "n": 145,
-          "mae": 1.826,
-          "median_absolute_error": 1.576,
-          "p75_absolute_error": 2.641,
-          "p90_absolute_error": 3.647,
+          "n": 150,
+          "mae": 1.859,
+          "median_absolute_error": 1.594,
+          "p75_absolute_error": 2.676,
+          "p90_absolute_error": 3.729,
           "maximum_absolute_error": 5.781,
-          "mean_signed_error_projection_minus_actual": 0.253,
-          "within_0_5_pct": 13.1,
-          "within_1_pct": 32.41,
-          "within_2_pct": 60.0,
-          "within_3_pct": 85.52,
-          "within_5_pct": 97.24
+          "mean_signed_error_projection_minus_actual": 0.206,
+          "within_0_5_pct": 12.67,
+          "within_1_pct": 32.0,
+          "within_2_pct": 58.67,
+          "within_3_pct": 84.0,
+          "within_5_pct": 97.33
         }
       },
       "3PM": {
@@ -1429,7 +1473,7 @@
         "v4": {
           "n": 69,
           "mae": 1.135,
-          "median_absolute_error": 1.018,
+          "median_absolute_error": 1.017,
           "p75_absolute_error": 1.6,
           "p90_absolute_error": 2.199,
           "maximum_absolute_error": 4.356,
@@ -1442,12 +1486,12 @@
         },
         "consensus": {
           "n": 69,
-          "mae": 1.173,
+          "mae": 1.172,
           "median_absolute_error": 1.108,
           "p75_absolute_error": 1.578,
           "p90_absolute_error": 2.199,
           "maximum_absolute_error": 4.408,
-          "mean_signed_error_projection_minus_actual": 0.369,
+          "mean_signed_error_projection_minus_actual": 0.368,
           "within_0_5_pct": 24.64,
           "within_1_pct": 43.48,
           "within_2_pct": 81.16,
@@ -1457,60 +1501,60 @@
       },
       "PRA": {
         "primary": {
-          "n": 243,
-          "mae": 6.902,
-          "median_absolute_error": 6.04,
-          "p75_absolute_error": 9.63,
+          "n": 253,
+          "mae": 7.004,
+          "median_absolute_error": 6.06,
+          "p75_absolute_error": 9.7,
           "p90_absolute_error": 14.05,
           "maximum_absolute_error": 33.23,
-          "mean_signed_error_projection_minus_actual": 0.849,
-          "within_0_5_pct": 3.7,
-          "within_1_pct": 9.88,
-          "within_2_pct": 18.93,
-          "within_3_pct": 26.75,
-          "within_5_pct": 42.39
+          "mean_signed_error_projection_minus_actual": 0.616,
+          "within_0_5_pct": 3.56,
+          "within_1_pct": 9.49,
+          "within_2_pct": 18.18,
+          "within_3_pct": 26.09,
+          "within_5_pct": 41.9
         },
         "challenger": {
-          "n": 243,
-          "mae": 6.931,
+          "n": 253,
+          "mae": 7.031,
           "median_absolute_error": 6.59,
-          "p75_absolute_error": 9.811,
-          "p90_absolute_error": 13.078,
+          "p75_absolute_error": 9.88,
+          "p90_absolute_error": 13.155,
           "maximum_absolute_error": 32.749,
-          "mean_signed_error_projection_minus_actual": 0.973,
-          "within_0_5_pct": 3.29,
-          "within_1_pct": 7.41,
-          "within_2_pct": 14.81,
-          "within_3_pct": 25.51,
-          "within_5_pct": 39.09
+          "mean_signed_error_projection_minus_actual": 0.724,
+          "within_0_5_pct": 3.16,
+          "within_1_pct": 7.11,
+          "within_2_pct": 14.62,
+          "within_3_pct": 24.9,
+          "within_5_pct": 39.13
         },
         "v4": {
-          "n": 243,
-          "mae": 6.763,
-          "median_absolute_error": 5.943,
-          "p75_absolute_error": 8.956,
-          "p90_absolute_error": 13.353,
-          "maximum_absolute_error": 35.72,
-          "mean_signed_error_projection_minus_actual": 0.618,
-          "within_0_5_pct": 2.88,
-          "within_1_pct": 5.35,
-          "within_2_pct": 17.28,
-          "within_3_pct": 26.75,
-          "within_5_pct": 42.8
+          "n": 253,
+          "mae": 6.867,
+          "median_absolute_error": 5.978,
+          "p75_absolute_error": 9.639,
+          "p90_absolute_error": 13.518,
+          "maximum_absolute_error": 35.722,
+          "mean_signed_error_projection_minus_actual": 0.393,
+          "within_0_5_pct": 2.77,
+          "within_1_pct": 5.14,
+          "within_2_pct": 17.0,
+          "within_3_pct": 26.09,
+          "within_5_pct": 42.29
         },
         "consensus": {
-          "n": 243,
-          "mae": 6.841,
-          "median_absolute_error": 6.29,
-          "p75_absolute_error": 9.618,
-          "p90_absolute_error": 13.233,
+          "n": 253,
+          "mae": 6.944,
+          "median_absolute_error": 6.303,
+          "p75_absolute_error": 9.723,
+          "p90_absolute_error": 13.444,
           "maximum_absolute_error": 33.9,
-          "mean_signed_error_projection_minus_actual": 0.813,
-          "within_0_5_pct": 3.7,
-          "within_1_pct": 5.35,
-          "within_2_pct": 20.16,
-          "within_3_pct": 27.16,
-          "within_5_pct": 40.33
+          "mean_signed_error_projection_minus_actual": 0.578,
+          "within_0_5_pct": 3.56,
+          "within_1_pct": 5.14,
+          "within_2_pct": 19.76,
+          "within_3_pct": 26.48,
+          "within_5_pct": 40.32
         }
       }
     },
@@ -1548,8 +1592,8 @@
           "n": 268,
           "mae": 3.887,
           "median_absolute_error": 2.569,
-          "p75_absolute_error": 5.901,
-          "p90_absolute_error": 9.016,
+          "p75_absolute_error": 5.902,
+          "p90_absolute_error": 9.014,
           "maximum_absolute_error": 16.648,
           "mean_signed_error_projection_minus_actual": 0.687,
           "within_0_5_pct": 11.19,
@@ -1563,7 +1607,7 @@
           "mae": 3.896,
           "median_absolute_error": 2.589,
           "p75_absolute_error": 5.765,
-          "p90_absolute_error": 9.213,
+          "p90_absolute_error": 9.212,
           "maximum_absolute_error": 16.739,
           "mean_signed_error_projection_minus_actual": 0.701,
           "within_0_5_pct": 11.19,
@@ -1605,10 +1649,10 @@
         "v4": {
           "n": 232,
           "mae": 4.376,
-          "median_absolute_error": 2.981,
-          "p75_absolute_error": 6.668,
-          "p90_absolute_error": 9.893,
-          "maximum_absolute_error": 20.238,
+          "median_absolute_error": 2.984,
+          "p75_absolute_error": 6.667,
+          "p90_absolute_error": 9.892,
+          "maximum_absolute_error": 20.241,
           "mean_signed_error_projection_minus_actual": 0.555,
           "within_0_5_pct": 7.33,
           "within_1_pct": 17.67,
@@ -1619,10 +1663,10 @@
         "consensus": {
           "n": 232,
           "mae": 4.524,
-          "median_absolute_error": 3.214,
+          "median_absolute_error": 3.213,
           "p75_absolute_error": 7.428,
-          "p90_absolute_error": 10.278,
-          "maximum_absolute_error": 17.866,
+          "p90_absolute_error": 10.277,
+          "maximum_absolute_error": 17.867,
           "mean_signed_error_projection_minus_actual": 0.777,
           "within_0_5_pct": 7.76,
           "within_1_pct": 15.52,
@@ -1663,11 +1707,11 @@
         "v4": {
           "n": 264,
           "mae": 4.409,
-          "median_absolute_error": 2.959,
-          "p75_absolute_error": 6.24,
+          "median_absolute_error": 2.96,
+          "p75_absolute_error": 6.238,
           "p90_absolute_error": 10.683,
-          "maximum_absolute_error": 24.156,
-          "mean_signed_error_projection_minus_actual": 0.502,
+          "maximum_absolute_error": 24.158,
+          "mean_signed_error_projection_minus_actual": 0.501,
           "within_0_5_pct": 10.61,
           "within_1_pct": 19.7,
           "within_2_pct": 37.5,
@@ -1677,10 +1721,10 @@
         "consensus": {
           "n": 264,
           "mae": 4.417,
-          "median_absolute_error": 2.865,
-          "p75_absolute_error": 6.437,
+          "median_absolute_error": 2.864,
+          "p75_absolute_error": 6.436,
           "p90_absolute_error": 11.529,
-          "maximum_absolute_error": 23.626,
+          "maximum_absolute_error": 23.627,
           "mean_signed_error_projection_minus_actual": 0.681,
           "within_0_5_pct": 9.85,
           "within_1_pct": 17.8,
@@ -1720,12 +1764,12 @@
         },
         "v4": {
           "n": 64,
-          "mae": 6.271,
-          "median_absolute_error": 5.51,
+          "mae": 6.27,
+          "median_absolute_error": 5.508,
           "p75_absolute_error": 8.984,
-          "p90_absolute_error": 13.353,
-          "maximum_absolute_error": 19.554,
-          "mean_signed_error_projection_minus_actual": 1.067,
+          "p90_absolute_error": 13.355,
+          "maximum_absolute_error": 19.553,
+          "mean_signed_error_projection_minus_actual": 1.066,
           "within_0_5_pct": 9.38,
           "within_1_pct": 10.94,
           "within_2_pct": 26.56,
@@ -1736,7 +1780,7 @@
           "n": 64,
           "mae": 6.34,
           "median_absolute_error": 5.513,
-          "p75_absolute_error": 9.904,
+          "p75_absolute_error": 9.903,
           "p90_absolute_error": 13.096,
           "maximum_absolute_error": 19.933,
           "mean_signed_error_projection_minus_actual": 1.296,
@@ -1780,10 +1824,10 @@
           "n": 44,
           "mae": 4.337,
           "median_absolute_error": 3.919,
-          "p75_absolute_error": 5.805,
-          "p90_absolute_error": 8.494,
+          "p75_absolute_error": 5.804,
+          "p90_absolute_error": 8.49,
           "maximum_absolute_error": 16.51,
-          "mean_signed_error_projection_minus_actual": 1.561,
+          "mean_signed_error_projection_minus_actual": 1.56,
           "within_0_5_pct": 2.27,
           "within_1_pct": 13.64,
           "within_2_pct": 27.27,
@@ -1793,9 +1837,9 @@
         "consensus": {
           "n": 44,
           "mae": 4.269,
-          "median_absolute_error": 3.695,
+          "median_absolute_error": 3.696,
           "p75_absolute_error": 5.16,
-          "p90_absolute_error": 8.588,
+          "p90_absolute_error": 8.589,
           "maximum_absolute_error": 16.16,
           "mean_signed_error_projection_minus_actual": 1.722,
           "within_0_5_pct": 9.09,
@@ -1836,11 +1880,11 @@
         },
         "v4": {
           "n": 12,
-          "mae": 5.04,
+          "mae": 5.041,
           "median_absolute_error": 5.201,
-          "p75_absolute_error": 7.881,
+          "p75_absolute_error": 7.882,
           "p90_absolute_error": 8.253,
-          "maximum_absolute_error": 8.881,
+          "maximum_absolute_error": 8.882,
           "mean_signed_error_projection_minus_actual": 4.629,
           "within_0_5_pct": 0.0,
           "within_1_pct": 8.33,
@@ -1850,11 +1894,11 @@
         },
         "consensus": {
           "n": 12,
-          "mae": 4.87,
+          "mae": 4.871,
           "median_absolute_error": 4.998,
-          "p75_absolute_error": 8.273,
+          "p75_absolute_error": 8.274,
           "p90_absolute_error": 8.576,
-          "maximum_absolute_error": 9.122,
+          "maximum_absolute_error": 9.123,
           "mean_signed_error_projection_minus_actual": 4.598,
           "within_0_5_pct": 8.33,
           "within_1_pct": 8.33,
@@ -1894,11 +1938,11 @@
         },
         "v4": {
           "n": 48,
-          "mae": 5.013,
+          "mae": 5.014,
           "median_absolute_error": 3.079,
           "p75_absolute_error": 5.214,
-          "p90_absolute_error": 11.027,
-          "maximum_absolute_error": 35.72,
+          "p90_absolute_error": 11.029,
+          "maximum_absolute_error": 35.722,
           "mean_signed_error_projection_minus_actual": -2.189,
           "within_0_5_pct": 12.5,
           "within_1_pct": 22.92,
@@ -1911,7 +1955,7 @@
           "mae": 4.869,
           "median_absolute_error": 2.974,
           "p75_absolute_error": 4.726,
-          "p90_absolute_error": 10.983,
+          "p90_absolute_error": 10.984,
           "maximum_absolute_error": 33.9,
           "mean_signed_error_projection_minus_actual": -2.167,
           "within_0_5_pct": 12.5,
@@ -1920,10 +1964,68 @@
           "within_3_pct": 50.0,
           "within_5_pct": 75.0
         }
+      },
+      "20261115": {
+        "primary": {
+          "n": 33,
+          "mae": 6.879,
+          "median_absolute_error": 4.86,
+          "p75_absolute_error": 11.04,
+          "p90_absolute_error": 15.02,
+          "maximum_absolute_error": 18.02,
+          "mean_signed_error_projection_minus_actual": -1.849,
+          "within_0_5_pct": 0.0,
+          "within_1_pct": 6.06,
+          "within_2_pct": 12.12,
+          "within_3_pct": 30.3,
+          "within_5_pct": 51.52
+        },
+        "challenger": {
+          "n": 33,
+          "mae": 6.716,
+          "median_absolute_error": 4.698,
+          "p75_absolute_error": 10.676,
+          "p90_absolute_error": 15.106,
+          "maximum_absolute_error": 17.917,
+          "mean_signed_error_projection_minus_actual": -2.142,
+          "within_0_5_pct": 0.0,
+          "within_1_pct": 6.06,
+          "within_2_pct": 15.15,
+          "within_3_pct": 33.33,
+          "within_5_pct": 54.55
+        },
+        "v4": {
+          "n": 33,
+          "mae": 6.689,
+          "median_absolute_error": 4.956,
+          "p75_absolute_error": 9.5,
+          "p90_absolute_error": 15.236,
+          "maximum_absolute_error": 19.172,
+          "mean_signed_error_projection_minus_actual": -2.163,
+          "within_0_5_pct": 3.03,
+          "within_1_pct": 3.03,
+          "within_2_pct": 18.18,
+          "within_3_pct": 30.3,
+          "within_5_pct": 51.52
+        },
+        "consensus": {
+          "n": 33,
+          "mae": 6.761,
+          "median_absolute_error": 4.838,
+          "p75_absolute_error": 10.604,
+          "p90_absolute_error": 15.015,
+          "maximum_absolute_error": 18.37,
+          "mean_signed_error_projection_minus_actual": -2.051,
+          "within_0_5_pct": 0.0,
+          "within_1_pct": 6.06,
+          "within_2_pct": 18.18,
+          "within_3_pct": 33.33,
+          "within_5_pct": 54.55
+        }
       }
     },
-    "consensus_better_than_primary_count": 550,
-    "consensus_worse_than_primary_count": 382,
+    "consensus_better_than_primary_count": 566,
+    "consensus_worse_than_primary_count": 399,
     "worst_consensus_misses": [
       {
         "player": "Cade Cunningham",
@@ -2005,7 +2107,7 @@
         "actual": 30.0,
         "primary": 11.45,
         "challenger": 11.1,
-        "v4": 10.45,
+        "v4": 10.46,
         "consensus": 11.0,
         "absolute_miss": 19.0
       },
@@ -2020,6 +2122,18 @@
         "v4": 30.42,
         "consensus": 30.65,
         "absolute_miss": 18.65
+      },
+      {
+        "player": "Dylan Harper",
+        "game": "San Antonio Spurs @ Utah Jazz",
+        "date": "20261115",
+        "market": "PRA",
+        "actual": 44.0,
+        "primary": 25.98,
+        "challenger": 26.08,
+        "v4": 24.83,
+        "consensus": 25.63,
+        "absolute_miss": 18.37
       },
       {
         "player": "Ausar Thompson",
@@ -2077,7 +2191,7 @@
         "actual": 52.0,
         "primary": 36.43,
         "challenger": 34.18,
-        "v4": 34.03,
+        "v4": 34.02,
         "consensus": 34.88,
         "absolute_miss": 17.12
       },
@@ -2092,18 +2206,6 @@
         "v4": 26.05,
         "consensus": 26.74,
         "absolute_miss": 16.74
-      },
-      {
-        "player": "Anfernee Simons",
-        "game": "Philadelphia 76ers @ Detroit Pistons",
-        "date": "20261103",
-        "market": "PRA",
-        "actual": 1.0,
-        "primary": 17.35,
-        "challenger": 16.62,
-        "v4": 17.51,
-        "consensus": 17.16,
-        "absolute_miss": 16.16
       }
     ]
   },
