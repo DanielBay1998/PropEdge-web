@@ -1,71 +1,72 @@
 {
   "status": "RESEARCH_ONLY_NO_PRODUCTION_CHANGE",
-  "eligible": 684,
+  "eligible": 717,
   "capture_dates": [
     "20261028",
     "20261029",
     "20261030",
     "20261031",
-    "20261112"
+    "20261112",
+    "20261115"
   ],
   "excluded": {
     "identity_review": 36,
     "missing_or_ambiguous_actual_minutes": 195,
-    "pending": 20,
+    "pending": 22,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 684,
-    "wins": 359,
-    "losses": 325,
-    "roi_pct": -3.43,
-    "average_losing_margin": 4.15,
-    "large_losses_over_5": 100,
-    "mean_absolute_minutes_error": 4.59,
-    "mean_abs_minutes_component": 1.99,
-    "mean_abs_rate_component": 3.85,
-    "minutes_dominant_losses": 72,
-    "rate_dominant_losses": 253
+    "n": 717,
+    "wins": 371,
+    "losses": 345,
+    "roi_pct": -4.39,
+    "average_losing_margin": 4.25,
+    "large_losses_over_5": 110,
+    "mean_absolute_minutes_error": 4.61,
+    "mean_abs_minutes_component": 2.0,
+    "mean_abs_rate_component": 3.94,
+    "minutes_dominant_losses": 75,
+    "rate_dominant_losses": 270
   },
   "by_market": {
     "PTS": {
-      "n": 214,
-      "wins": 101,
-      "losses": 113,
-      "roi_pct": -10.06,
-      "average_losing_margin": 5.04,
-      "large_losses_over_5": 49,
-      "mean_absolute_minutes_error": 4.89,
-      "mean_abs_minutes_component": 2.39,
-      "mean_abs_rate_component": 5.01,
-      "minutes_dominant_losses": 31,
-      "rate_dominant_losses": 82
+      "n": 226,
+      "wins": 105,
+      "losses": 121,
+      "roi_pct": -11.3,
+      "average_losing_margin": 5.18,
+      "large_losses_over_5": 55,
+      "mean_absolute_minutes_error": 4.9,
+      "mean_abs_minutes_component": 2.38,
+      "mean_abs_rate_component": 5.09,
+      "minutes_dominant_losses": 33,
+      "rate_dominant_losses": 88
     },
     "REB": {
-      "n": 135,
-      "wins": 77,
-      "losses": 58,
-      "roi_pct": 1.95,
-      "average_losing_margin": 2.62,
+      "n": 141,
+      "wins": 80,
+      "losses": 61,
+      "roi_pct": 1.87,
+      "average_losing_margin": 2.57,
       "large_losses_over_5": 5,
-      "mean_absolute_minutes_error": 4.39,
-      "mean_abs_minutes_component": 0.9,
+      "mean_absolute_minutes_error": 4.4,
+      "mean_abs_minutes_component": 0.91,
       "mean_abs_rate_component": 2.22,
       "minutes_dominant_losses": 9,
-      "rate_dominant_losses": 49
+      "rate_dominant_losses": 52
     },
     "AST": {
-      "n": 105,
-      "wins": 57,
-      "losses": 48,
-      "roi_pct": -3.97,
-      "average_losing_margin": 1.35,
+      "n": 110,
+      "wins": 58,
+      "losses": 51,
+      "roi_pct": -5.61,
+      "average_losing_margin": 1.37,
       "large_losses_over_5": 0,
-      "mean_absolute_minutes_error": 4.07,
-      "mean_abs_minutes_component": 0.57,
-      "mean_abs_rate_component": 1.57,
+      "mean_absolute_minutes_error": 4.12,
+      "mean_abs_minutes_component": 0.58,
+      "mean_abs_rate_component": 1.61,
       "minutes_dominant_losses": 5,
-      "rate_dominant_losses": 43
+      "rate_dominant_losses": 46
     },
     "3PM": {
       "n": 53,
@@ -81,57 +82,57 @@
       "rate_dominant_losses": 25
     },
     "PRA": {
-      "n": 177,
-      "wins": 98,
-      "losses": 79,
-      "roi_pct": 5.41,
-      "average_losing_margin": 6.84,
-      "large_losses_over_5": 46,
-      "mean_absolute_minutes_error": 4.7,
-      "mean_abs_minutes_component": 3.69,
-      "mean_abs_rate_component": 5.86,
-      "minutes_dominant_losses": 25,
-      "rate_dominant_losses": 54
+      "n": 187,
+      "wins": 102,
+      "losses": 85,
+      "roi_pct": 4.05,
+      "average_losing_margin": 6.94,
+      "large_losses_over_5": 50,
+      "mean_absolute_minutes_error": 4.73,
+      "mean_abs_minutes_component": 3.68,
+      "mean_abs_rate_component": 5.99,
+      "minutes_dominant_losses": 26,
+      "rate_dominant_losses": 59
     }
   },
   "by_cause": {
     "minutes_dominant": {
-      "n": 183,
-      "wins": 111,
-      "losses": 72,
-      "roi_pct": 11.61,
-      "average_losing_margin": 3.92,
-      "large_losses_over_5": 19,
-      "mean_absolute_minutes_error": 6.79,
+      "n": 190,
+      "wins": 114,
+      "losses": 75,
+      "roi_pct": 11.19,
+      "average_losing_margin": 3.87,
+      "large_losses_over_5": 20,
+      "mean_absolute_minutes_error": 6.81,
       "mean_abs_minutes_component": 3.38,
-      "mean_abs_rate_component": 1.81,
-      "minutes_dominant_losses": 72,
+      "mean_abs_rate_component": 1.8,
+      "minutes_dominant_losses": 75,
       "rate_dominant_losses": 0
     },
     "production_rate_dominant": {
-      "n": 501,
-      "wins": 248,
-      "losses": 253,
-      "roi_pct": -8.92,
-      "average_losing_margin": 4.22,
-      "large_losses_over_5": 81,
-      "mean_absolute_minutes_error": 3.78,
-      "mean_abs_minutes_component": 1.49,
-      "mean_abs_rate_component": 4.6,
+      "n": 527,
+      "wins": 257,
+      "losses": 270,
+      "roi_pct": -10.0,
+      "average_losing_margin": 4.35,
+      "large_losses_over_5": 90,
+      "mean_absolute_minutes_error": 3.82,
+      "mean_abs_minutes_component": 1.5,
+      "mean_abs_rate_component": 4.71,
       "minutes_dominant_losses": 0,
-      "rate_dominant_losses": 253
+      "rate_dominant_losses": 270
     }
   },
   "points_and_pra_large_losses": {
     "PTS": {
-      "n": 49,
-      "minutes_dominant": 7,
-      "rate_dominant": 42
+      "n": 55,
+      "minutes_dominant": 8,
+      "rate_dominant": 47
     },
     "PRA": {
-      "n": 46,
+      "n": 50,
       "minutes_dominant": 11,
-      "rate_dominant": 35
+      "rate_dominant": 39
     }
   },
   "largest_losses": [
@@ -248,6 +249,20 @@
       "dominant_cause": "production_rate_dominant"
     },
     {
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 28.5,
+      "actual": 44.0,
+      "loss_margin": 15.5,
+      "projected_minutes": 29.5,
+      "actual_minutes": 34.0,
+      "minutes_component": 3.91,
+      "rate_component": 14.49,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
       "player": "Aaron Wiggins",
       "game": "Cleveland Cavaliers @ Atlanta Hawks",
       "market": "PRA",
@@ -259,6 +274,34 @@
       "actual_minutes": 24.0,
       "minutes_component": -0.42,
       "rate_component": 14.74,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 19.5,
+      "actual": 33.0,
+      "loss_margin": 13.5,
+      "projected_minutes": 24.92,
+      "actual_minutes": 30.0,
+      "minutes_component": 3.55,
+      "rate_component": 12.07,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 11.5,
+      "actual": 25.0,
+      "loss_margin": 13.5,
+      "projected_minutes": 24.92,
+      "actual_minutes": 30.0,
+      "minutes_component": 1.87,
+      "rate_component": 13.99,
       "dominant_cause": "production_rate_dominant"
     },
     {
@@ -287,6 +330,20 @@
       "actual_minutes": 33.0,
       "minutes_component": -1.71,
       "rate_component": -14.77,
+      "dominant_cause": "production_rate_dominant"
+    },
+    {
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 18.5,
+      "actual": 31.0,
+      "loss_margin": 12.5,
+      "projected_minutes": 29.5,
+      "actual_minutes": 34.0,
+      "minutes_component": 2.38,
+      "rate_component": 13.0,
       "dominant_cause": "production_rate_dominant"
     },
     {
@@ -428,62 +485,6 @@
       "minutes_component": 4.54,
       "rate_component": 10.1,
       "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "Quentin Grimes",
-      "game": "Los Angeles Lakers @ Los Angeles Clippers",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 20.5,
-      "actual": 31.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.62,
-      "actual_minutes": 38.0,
-      "minutes_component": 7.29,
-      "rate_component": 10.29,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "Ajay Mitchell",
-      "game": "Oklahoma City Thunder @ Dallas Mavericks",
-      "market": "PTS",
-      "side": "UNDER",
-      "line": 18.5,
-      "actual": 29.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.42,
-      "actual_minutes": 28.0,
-      "minutes_component": 1.78,
-      "rate_component": 15.07,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "Ajay Mitchell",
-      "game": "Oklahoma City Thunder @ Dallas Mavericks",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 25.5,
-      "actual": 36.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 24.42,
-      "actual_minutes": 28.0,
-      "minutes_component": 2.77,
-      "rate_component": 14.36,
-      "dominant_cause": "production_rate_dominant"
-    },
-    {
-      "player": "Ryan Rollins",
-      "game": "Houston Rockets @ Milwaukee Bucks",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 14.5,
-      "actual": 4.0,
-      "loss_margin": 10.5,
-      "projected_minutes": 29.59,
-      "actual_minutes": 17.0,
-      "minutes_component": -7.72,
-      "rate_component": -6.42,
-      "dominant_cause": "minutes_dominant"
     }
   ],
   "decision": "INSUFFICIENT_INDEPENDENT_DATES",
