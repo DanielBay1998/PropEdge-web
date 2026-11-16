@@ -7,58 +7,59 @@
     "20261031",
     "20261103",
     "20261105",
-    "20261112"
+    "20261112",
+    "20261115"
   ],
-  "eligible": 879,
+  "eligible": 912,
   "excluded": {
     "identity_review": 36,
-    "pending": 20,
+    "pending": 22,
     "duplicate_same_line": 53
   },
   "overall": {
-    "n": 879,
-    "wins": 449,
-    "losses": 430,
-    "win_rate_pct": 51.08,
-    "flat_roi_pct": -5.1,
-    "avg_loss_margin": 4.11,
-    "losses_more_than_5": 133
+    "n": 912,
+    "wins": 461,
+    "losses": 450,
+    "win_rate_pct": 50.6,
+    "flat_roi_pct": -5.79,
+    "avg_loss_margin": 4.19,
+    "losses_more_than_5": 143
   },
   "by_market": {
     "PTS": {
-      "n": 282,
-      "wins": 130,
-      "losses": 152,
-      "win_rate_pct": 46.1,
-      "flat_roi_pct": -11.63,
-      "avg_loss_margin": 4.93,
-      "losses_more_than_5": 64
+      "n": 294,
+      "wins": 134,
+      "losses": 160,
+      "win_rate_pct": 45.58,
+      "flat_roi_pct": -12.52,
+      "avg_loss_margin": 5.04,
+      "losses_more_than_5": 70
     },
     "PRA": {
-      "n": 227,
-      "wins": 122,
-      "losses": 105,
-      "win_rate_pct": 53.74,
-      "flat_roi_pct": 2.86,
-      "avg_loss_margin": 6.67,
-      "losses_more_than_5": 61
+      "n": 237,
+      "wins": 126,
+      "losses": 111,
+      "win_rate_pct": 53.16,
+      "flat_roi_pct": 1.89,
+      "avg_loss_margin": 6.75,
+      "losses_more_than_5": 65
     },
     "AST": {
-      "n": 135,
-      "wins": 71,
-      "losses": 64,
-      "win_rate_pct": 52.59,
-      "flat_roi_pct": -5.11,
-      "avg_loss_margin": 1.48,
+      "n": 140,
+      "wins": 72,
+      "losses": 67,
+      "win_rate_pct": 51.8,
+      "flat_roi_pct": -6.35,
+      "avg_loss_margin": 1.49,
       "losses_more_than_5": 0
     },
     "REB": {
-      "n": 167,
-      "wins": 93,
-      "losses": 74,
-      "win_rate_pct": 55.69,
+      "n": 173,
+      "wins": 96,
+      "losses": 77,
+      "win_rate_pct": 55.49,
       "flat_roi_pct": -0.06,
-      "avg_loss_margin": 2.64,
+      "avg_loss_margin": 2.6,
       "losses_more_than_5": 8
     },
     "3PM": {
@@ -82,22 +83,22 @@
       "losses_more_than_5": 7
     },
     "recent_minutes_increase_at_least_4": {
-      "n": 140,
-      "wins": 79,
-      "losses": 61,
-      "win_rate_pct": 56.43,
-      "flat_roi_pct": 4.97,
-      "avg_loss_margin": 4.39,
-      "losses_more_than_5": 19
+      "n": 143,
+      "wins": 81,
+      "losses": 62,
+      "win_rate_pct": 56.64,
+      "flat_roi_pct": 5.56,
+      "avg_loss_margin": 4.4,
+      "losses_more_than_5": 20
     },
     "stable_recent_minutes": {
-      "n": 639,
-      "wins": 309,
-      "losses": 330,
-      "win_rate_pct": 48.36,
-      "flat_roi_pct": -10.28,
-      "avg_loss_margin": 4.25,
-      "losses_more_than_5": 107
+      "n": 669,
+      "wins": 319,
+      "losses": 349,
+      "win_rate_pct": 47.75,
+      "flat_roi_pct": -11.16,
+      "avg_loss_margin": 4.34,
+      "losses_more_than_5": 116
     },
     "volatile_minutes_std_at_least_7": {
       "n": 154,
@@ -109,31 +110,31 @@
       "losses_more_than_5": 19
     },
     "stable_minutes_std_below_7": {
-      "n": 725,
-      "wins": 355,
-      "losses": 370,
-      "win_rate_pct": 48.97,
-      "flat_roi_pct": -9.08,
-      "avg_loss_margin": 4.18,
-      "losses_more_than_5": 114
+      "n": 758,
+      "wins": 367,
+      "losses": 390,
+      "win_rate_pct": 48.48,
+      "flat_roi_pct": -9.74,
+      "avg_loss_margin": 4.26,
+      "losses_more_than_5": 124
     },
     "projected_minutes_below_22": {
-      "n": 131,
-      "wins": 77,
-      "losses": 54,
-      "win_rate_pct": 58.78,
-      "flat_roi_pct": 8.19,
-      "avg_loss_margin": 2.39,
-      "losses_more_than_5": 6
+      "n": 139,
+      "wins": 81,
+      "losses": 58,
+      "win_rate_pct": 58.27,
+      "flat_roi_pct": 7.71,
+      "avg_loss_margin": 2.42,
+      "losses_more_than_5": 7
     },
     "projected_minutes_22_plus": {
-      "n": 748,
-      "wins": 372,
-      "losses": 376,
-      "win_rate_pct": 49.73,
-      "flat_roi_pct": -7.43,
-      "avg_loss_margin": 4.36,
-      "losses_more_than_5": 127
+      "n": 773,
+      "wins": 380,
+      "losses": 392,
+      "win_rate_pct": 49.22,
+      "flat_roi_pct": -8.22,
+      "avg_loss_margin": 4.45,
+      "losses_more_than_5": 136
     }
   },
   "by_market_minutes_risk": {
@@ -157,13 +158,13 @@
         "losses_more_than_5": 7
       },
       "other": {
-        "n": 213,
-        "wins": 94,
-        "losses": 119,
-        "win_rate_pct": 44.13,
-        "flat_roi_pct": -15.34,
-        "avg_loss_margin": 5.27,
-        "losses_more_than_5": 54
+        "n": 225,
+        "wins": 98,
+        "losses": 127,
+        "win_rate_pct": 43.56,
+        "flat_roi_pct": -16.3,
+        "avg_loss_margin": 5.39,
+        "losses_more_than_5": 60
       }
     },
     "PRA": {
@@ -186,13 +187,13 @@
         "losses_more_than_5": 9
       },
       "other": {
-        "n": 167,
-        "wins": 82,
-        "losses": 85,
-        "win_rate_pct": 49.1,
-        "flat_roi_pct": -5.82,
-        "avg_loss_margin": 6.98,
-        "losses_more_than_5": 50
+        "n": 177,
+        "wins": 86,
+        "losses": 91,
+        "win_rate_pct": 48.59,
+        "flat_roi_pct": -6.62,
+        "avg_loss_margin": 7.06,
+        "losses_more_than_5": 54
       }
     }
   },
@@ -302,6 +303,19 @@
       "minutes_volatility": 4.17
     },
     {
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 28.5,
+      "actual": 44.0,
+      "loss_margin": 15.5,
+      "projected_minutes": 29.5,
+      "actual_minutes": 34.0,
+      "recent_minutes_change": -2.17,
+      "minutes_volatility": 4.69
+    },
+    {
       "player": "Aaron Wiggins",
       "game": "Cleveland Cavaliers @ Atlanta Hawks",
       "market": "PRA",
@@ -313,6 +327,32 @@
       "actual_minutes": 24.0,
       "recent_minutes_change": 6.0,
       "minutes_volatility": 8.27
+    },
+    {
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PRA",
+      "side": "UNDER",
+      "line": 19.5,
+      "actual": 33.0,
+      "loss_margin": 13.5,
+      "projected_minutes": 24.92,
+      "actual_minutes": 30.0,
+      "recent_minutes_change": -1.58,
+      "minutes_volatility": 4.8
+    },
+    {
+      "player": "Tari Eason",
+      "game": "Houston Rockets @ Washington Wizards",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 11.5,
+      "actual": 25.0,
+      "loss_margin": 13.5,
+      "projected_minutes": 24.92,
+      "actual_minutes": 30.0,
+      "recent_minutes_change": -1.58,
+      "minutes_volatility": 4.8
     },
     {
       "player": "De'Andre Hunter",
@@ -352,6 +392,19 @@
       "actual_minutes": 33.0,
       "recent_minutes_change": 2.75,
       "minutes_volatility": 3.73
+    },
+    {
+      "player": "Dylan Harper",
+      "game": "San Antonio Spurs @ Utah Jazz",
+      "market": "PTS",
+      "side": "UNDER",
+      "line": 18.5,
+      "actual": 31.0,
+      "loss_margin": 12.5,
+      "projected_minutes": 29.5,
+      "actual_minutes": 34.0,
+      "recent_minutes_change": -2.17,
+      "minutes_volatility": 4.69
     },
     {
       "player": "Trey Murphy III",
@@ -404,58 +457,6 @@
       "actual_minutes": null,
       "recent_minutes_change": 1.25,
       "minutes_volatility": 5.98
-    },
-    {
-      "player": "CJ McCollum",
-      "game": "Cleveland Cavaliers @ Atlanta Hawks",
-      "market": "PTS",
-      "side": "OVER",
-      "line": 16.5,
-      "actual": 5.0,
-      "loss_margin": 11.5,
-      "projected_minutes": 26.34,
-      "actual_minutes": 31.0,
-      "recent_minutes_change": -1.42,
-      "minutes_volatility": 4.57
-    },
-    {
-      "player": "De'Andre Hunter",
-      "game": "Sacramento Kings @ New Orleans Pelicans",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 18.5,
-      "actual": 30.0,
-      "loss_margin": 11.5,
-      "projected_minutes": 25.65,
-      "actual_minutes": 37.0,
-      "recent_minutes_change": 4.75,
-      "minutes_volatility": 5.29
-    },
-    {
-      "player": "De'Andre Hunter",
-      "game": "Sacramento Kings @ New Orleans Pelicans",
-      "market": "PTS",
-      "side": "UNDER",
-      "line": 12.5,
-      "actual": 24.0,
-      "loss_margin": 11.5,
-      "projected_minutes": 25.65,
-      "actual_minutes": 37.0,
-      "recent_minutes_change": 4.75,
-      "minutes_volatility": 5.29
-    },
-    {
-      "player": "De'Andre Hunter",
-      "game": "Sacramento Kings @ New Orleans Pelicans",
-      "market": "PRA",
-      "side": "UNDER",
-      "line": 18.5,
-      "actual": 30.0,
-      "loss_margin": 11.5,
-      "projected_minutes": 27.38,
-      "actual_minutes": null,
-      "recent_minutes_change": 8.25,
-      "minutes_volatility": 6.13
     }
   ],
   "decision": "INSUFFICIENT_INDEPENDENT_DATES",
