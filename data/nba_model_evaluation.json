@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-11-16T01:28:40.383800+00:00",
+  "generated_at": "2026-11-16T08:19:21.434688+00:00",
   "source": "saved pregame predictions with settled outcomes",
   "production_unchanged": true,
   "total_records": 1023,
-  "settled_records": 979,
-  "deduplicated_settled": 813,
-  "pending": 44,
+  "settled_records": 1001,
+  "deduplicated_settled": 835,
+  "pending": 22,
   "overall": {
-    "bets": 813,
-    "wins": 426,
-    "losses": 387,
-    "pushes": 0,
-    "win_rate": 0.524,
-    "priced_bets": 813,
-    "net_units": -23.3329,
-    "roi": -0.0287,
-    "projection_bias": 0.8348,
-    "mae": 4.5716
+    "bets": 835,
+    "wins": 435,
+    "losses": 399,
+    "pushes": 1,
+    "win_rate": 0.5216,
+    "priced_bets": 835,
+    "net_units": -26.3329,
+    "roi": -0.0315,
+    "projection_bias": 0.7414,
+    "mae": 4.6381
   },
   "by_market": {
     "3PM": {
@@ -32,78 +32,78 @@
       "mae": 1.2377
     },
     "AST": {
-      "bets": 116,
-      "wins": 64,
-      "losses": 52,
-      "pushes": 0,
-      "win_rate": 0.5517,
-      "priced_bets": 116,
-      "net_units": -1.1395,
-      "roi": -0.0098,
-      "projection_bias": 0.3161,
-      "mae": 1.8318
+      "bets": 121,
+      "wins": 65,
+      "losses": 55,
+      "pushes": 1,
+      "win_rate": 0.5417,
+      "priced_bets": 121,
+      "net_units": -3.1395,
+      "roi": -0.0259,
+      "projection_bias": 0.2645,
+      "mae": 1.8792
     },
     "PRA": {
-      "bets": 217,
-      "wins": 119,
-      "losses": 98,
+      "bets": 224,
+      "wins": 123,
+      "losses": 101,
       "pushes": 0,
-      "win_rate": 0.5484,
-      "priced_bets": 217,
-      "net_units": 10.0529,
-      "roi": 0.0463,
-      "projection_bias": 1.0316,
-      "mae": 6.9184
+      "win_rate": 0.5491,
+      "priced_bets": 224,
+      "net_units": 11.0529,
+      "roi": 0.0493,
+      "projection_bias": 0.8189,
+      "mae": 7.009
     },
     "PTS": {
-      "bets": 265,
-      "wins": 124,
-      "losses": 141,
+      "bets": 273,
+      "wins": 127,
+      "losses": 146,
       "pushes": 0,
-      "win_rate": 0.4679,
-      "priced_bets": 265,
-      "net_units": -27.8596,
-      "roi": -0.1051,
-      "projection_bias": 1.6281,
-      "mae": 5.9063
+      "win_rate": 0.4652,
+      "priced_bets": 273,
+      "net_units": -29.8596,
+      "roi": -0.1094,
+      "projection_bias": 1.5437,
+      "mae": 5.9824
     },
     "REB": {
-      "bets": 159,
-      "wins": 91,
-      "losses": 68,
+      "bets": 161,
+      "wins": 92,
+      "losses": 69,
       "pushes": 0,
-      "win_rate": 0.5723,
-      "priced_bets": 159,
+      "win_rate": 0.5714,
+      "priced_bets": 161,
       "net_units": 5.0453,
-      "roi": 0.0317,
-      "projection_bias": -0.2015,
-      "mae": 2.3172
+      "roi": 0.0313,
+      "projection_bias": -0.2271,
+      "mae": 2.3165
     }
   },
   "by_side": {
     "OVER": {
-      "bets": 496,
-      "wins": 228,
-      "losses": 268,
-      "pushes": 0,
-      "win_rate": 0.4597,
-      "priced_bets": 496,
-      "net_units": -70.0498,
-      "roi": -0.1412,
-      "projection_bias": 2.1873,
-      "mae": 4.4854
+      "bets": 508,
+      "wins": 234,
+      "losses": 273,
+      "pushes": 1,
+      "win_rate": 0.4615,
+      "priced_bets": 508,
+      "net_units": -69.0498,
+      "roi": -0.1359,
+      "projection_bias": 2.1492,
+      "mae": 4.5318
     },
     "UNDER": {
-      "bets": 317,
-      "wins": 198,
-      "losses": 119,
+      "bets": 327,
+      "wins": 201,
+      "losses": 126,
       "pushes": 0,
-      "win_rate": 0.6246,
-      "priced_bets": 317,
-      "net_units": 46.7169,
-      "roi": 0.1474,
-      "projection_bias": -1.2813,
-      "mae": 4.7065
+      "win_rate": 0.6147,
+      "priced_bets": 327,
+      "net_units": 42.7169,
+      "roi": 0.1306,
+      "projection_bias": -1.4456,
+      "mae": 4.8034
     }
   },
   "by_book": {
@@ -288,16 +288,16 @@
       "mae": 4.78
     },
     "prizepicks": {
-      "bets": 115,
-      "wins": 61,
-      "losses": 54,
-      "pushes": 0,
-      "win_rate": 0.5304,
-      "priced_bets": 115,
-      "net_units": 7.0,
-      "roi": 0.0609,
-      "projection_bias": 0.4091,
-      "mae": 4.7888
+      "bets": 137,
+      "wins": 70,
+      "losses": 66,
+      "pushes": 1,
+      "win_rate": 0.5147,
+      "priced_bets": 137,
+      "net_units": 4.0,
+      "roi": 0.0292,
+      "projection_bias": -0.0918,
+      "mae": 5.1595
     },
     "prophetx": {
       "bets": 1,
@@ -325,6 +325,18 @@
     }
   },
   "by_game": {
+    "Atlanta Hawks @ Milwaukee Bucks": {
+      "bets": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.5,
+      "priced_bets": 2,
+      "net_units": 0.0,
+      "roi": 0.0,
+      "projection_bias": -2.26,
+      "mae": 2.26
+    },
     "Atlanta Hawks @ New Orleans Pelicans": {
       "bets": 9,
       "wins": 8,
@@ -541,6 +553,18 @@
       "projection_bias": 1.7321,
       "mae": 3.1887
     },
+    "Houston Rockets @ Washington Wizards": {
+      "bets": 12,
+      "wins": 3,
+      "losses": 8,
+      "pushes": 1,
+      "win_rate": 0.2727,
+      "priced_bets": 12,
+      "net_units": -5.0,
+      "roi": -0.4167,
+      "projection_bias": -5.0608,
+      "mae": 8.6242
+    },
     "Indiana Pacers @ Miami Heat": {
       "bets": 14,
       "wins": 5,
@@ -649,6 +673,18 @@
       "projection_bias": 2.77,
       "mae": 4.0655
     },
+    "New York Knicks @ Toronto Raptors": {
+      "bets": 6,
+      "wins": 4,
+      "losses": 2,
+      "pushes": 0,
+      "win_rate": 0.6667,
+      "priced_bets": 6,
+      "net_units": 2.0,
+      "roi": 0.3333,
+      "projection_bias": -0.5983,
+      "mae": 6.485
+    },
     "Oklahoma City Thunder @ Dallas Mavericks": {
       "bets": 37,
       "wins": 20,
@@ -672,6 +708,18 @@
       "roi": 0.1322,
       "projection_bias": 4.344,
       "mae": 10.372
+    },
+    "Oklahoma City Thunder @ Sacramento Kings": {
+      "bets": 2,
+      "wins": 1,
+      "losses": 1,
+      "pushes": 0,
+      "win_rate": 0.5,
+      "priced_bets": 2,
+      "net_units": 0.0,
+      "roi": 0.0,
+      "projection_bias": 4.61,
+      "mae": 4.61
     },
     "Orlando Magic @ Toronto Raptors": {
       "bets": 22,
@@ -760,70 +808,70 @@
   },
   "by_edge": {
     "0\u20130.99": {
-      "bets": 212,
-      "wins": 113,
-      "losses": 99,
-      "pushes": 0,
-      "win_rate": 0.533,
-      "priced_bets": 212,
-      "net_units": -10.6712,
-      "roi": -0.0503,
-      "projection_bias": 0.1555,
-      "mae": 1.9365
+      "bets": 216,
+      "wins": 115,
+      "losses": 100,
+      "pushes": 1,
+      "win_rate": 0.5349,
+      "priced_bets": 216,
+      "net_units": -9.6712,
+      "roi": -0.0448,
+      "projection_bias": 0.1252,
+      "mae": 1.935
     },
     "1\u20132.99": {
-      "bets": 399,
-      "wins": 197,
-      "losses": 202,
+      "bets": 407,
+      "wins": 199,
+      "losses": 208,
       "pushes": 0,
-      "win_rate": 0.4937,
-      "priced_bets": 399,
-      "net_units": -32.2305,
-      "roi": -0.0808,
-      "projection_bias": 0.9819,
-      "mae": 4.7515
+      "win_rate": 0.4889,
+      "priced_bets": 407,
+      "net_units": -36.2305,
+      "roi": -0.089,
+      "projection_bias": 0.8348,
+      "mae": 4.8312
     },
     "3+": {
-      "bets": 202,
-      "wins": 116,
-      "losses": 86,
+      "bets": 212,
+      "wins": 121,
+      "losses": 91,
       "pushes": 0,
-      "win_rate": 0.5743,
-      "priced_bets": 202,
+      "win_rate": 0.5708,
+      "priced_bets": 212,
       "net_units": 19.5687,
-      "roi": 0.0969,
-      "projection_bias": 1.2574,
-      "mae": 6.9818
+      "roi": 0.0923,
+      "projection_bias": 1.1901,
+      "mae": 7.0216
     }
   },
   "exploratory_challenger": {
     "method": "train-only profitable markets, minimum 20 train bets",
-    "train_count": 569,
-    "test_count": 244,
+    "train_count": 584,
+    "test_count": 251,
     "candidate_markets": [],
     "train": {
-      "bets": 569,
-      "wins": 288,
-      "losses": 281,
+      "bets": 584,
+      "wins": 299,
+      "losses": 285,
       "pushes": 0,
-      "win_rate": 0.5062,
-      "priced_bets": 569,
-      "net_units": -43.235,
-      "roi": -0.076,
-      "projection_bias": 0.7386,
-      "mae": 4.4049
+      "win_rate": 0.512,
+      "priced_bets": 584,
+      "net_units": -38.2729,
+      "roi": -0.0655,
+      "projection_bias": 0.7595,
+      "mae": 4.3741
     },
     "holdout_baseline": {
-      "bets": 244,
-      "wins": 138,
-      "losses": 106,
-      "pushes": 0,
-      "win_rate": 0.5656,
-      "priced_bets": 244,
-      "net_units": 19.9022,
-      "roi": 0.0816,
-      "projection_bias": 1.0594,
-      "mae": 4.9604
+      "bets": 251,
+      "wins": 136,
+      "losses": 114,
+      "pushes": 1,
+      "win_rate": 0.544,
+      "priced_bets": 251,
+      "net_units": 11.94,
+      "roi": 0.0476,
+      "projection_bias": 0.6995,
+      "mae": 5.2525
     },
     "holdout_filtered": {
       "bets": 0,
@@ -842,7 +890,7 @@
   },
   "minutes_shadow": {
     "status": "CAPTURE_TIME_PAIRED_AUDIT",
-    "paired_total": 390,
+    "paired_total": 412,
     "by_market": {
       "3PM": {
         "paired_predictions": 19,
@@ -851,28 +899,28 @@
         "mae_improvement": 0.0051
       },
       "AST": {
-        "paired_predictions": 51,
-        "production_mae": 1.79137,
-        "minutes_shadow_mae": 1.74065,
-        "mae_improvement": 0.05072
+        "paired_predictions": 56,
+        "production_mae": 1.89732,
+        "minutes_shadow_mae": 1.85095,
+        "mae_improvement": 0.04637
       },
       "PRA": {
-        "paired_predictions": 119,
-        "production_mae": 7.15966,
-        "minutes_shadow_mae": 7.13224,
-        "mae_improvement": 0.02742
+        "paired_predictions": 126,
+        "production_mae": 7.3073,
+        "minutes_shadow_mae": 7.27996,
+        "mae_improvement": 0.02734
       },
       "PTS": {
-        "paired_predictions": 132,
-        "production_mae": 5.78053,
-        "minutes_shadow_mae": 5.73666,
-        "mae_improvement": 0.04387
+        "paired_predictions": 140,
+        "production_mae": 5.936,
+        "minutes_shadow_mae": 5.89514,
+        "mae_improvement": 0.04086
       },
       "REB": {
-        "paired_predictions": 69,
-        "production_mae": 2.41594,
-        "minutes_shadow_mae": 2.417,
-        "mae_improvement": -0.00106
+        "paired_predictions": 71,
+        "production_mae": 2.41155,
+        "minutes_shadow_mae": 2.41134,
+        "mae_improvement": 0.00021
       }
     },
     "production_unchanged": true,
