@@ -1,9 +1,9 @@
 {
   "status": "RESEARCH_ONLY_PENDING_MORE_GRADED_DATES",
-  "total_complete_pregame_snapshots": 538,
+  "total_complete_pregame_snapshots": 613,
   "graded_eligible": 520,
   "excluded": {
-    "pending": 18
+    "pending": 93
   },
   "points_graded": 174,
   "points_capture_dates": [
@@ -66,7 +66,7 @@
     "eligible": 465,
     "independent_capture_dates": 6,
     "consensus_mae": 4.9528,
-    "adjusted_mae": 4.9404,
+    "adjusted_mae": 4.9405,
     "note": "Historical challenger-trained weights; not independently fitted to consensus. Requires separate validation before promotion.",
     "production_promoted": false
   },
