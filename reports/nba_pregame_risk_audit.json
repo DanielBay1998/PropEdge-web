@@ -13,7 +13,7 @@
   "eligible": 912,
   "excluded": {
     "identity_review": 36,
-    "pending": 22,
+    "pending": 137,
     "duplicate_same_line": 53
   },
   "overall": {
