@@ -5,1009 +5,8 @@
   "blend_method": "20 prior equivalent player appearances per position and stat, with all verified current-season appearances; current weight rises automatically",
   "metric": "opposing player boxscore stat per appearance, grouped by listed roster position",
   "warning": "Generic ESPN roster G/F roles mapped to SG/SF and hybrid roles to SF/PF as positional proxies. Historical player positions use current roster assignments; traded players and small samples can distort allowances. Not defender assignments or per-possession rating.",
-  "fetched_at": "2026-11-18T21:27:35.020166+00:00",
+  "fetched_at": "2026-11-19T04:14:24.256034+00:00",
   "teams": {
-    "Cleveland Cavaliers": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.96,
-          "prior_allowed": 11.97,
-          "current_allowed": 11.96,
-          "prior_player_games": 356,
-          "current_player_games": 79,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.8
-        },
-        "REB": {
-          "blended_allowed": 3.11,
-          "prior_allowed": 3.22,
-          "current_allowed": 3.08,
-          "prior_player_games": 356,
-          "current_player_games": 79,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.8
-        },
-        "AST": {
-          "blended_allowed": 3.26,
-          "prior_allowed": 3.39,
-          "current_allowed": 3.23,
-          "prior_player_games": 356,
-          "current_player_games": 79,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.8
-        },
-        "3PM": {
-          "blended_allowed": 1.64,
-          "prior_allowed": 1.7,
-          "current_allowed": 1.62,
-          "prior_player_games": 356,
-          "current_player_games": 79,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.8
-        },
-        "PRA": {
-          "blended_allowed": 18.33,
-          "prior_allowed": 18.58,
-          "current_allowed": 18.27,
-          "prior_player_games": 356,
-          "current_player_games": 79,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.8
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.13,
-          "prior_allowed": 11.28,
-          "current_allowed": 9.7,
-          "prior_player_games": 302,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "REB": {
-          "blended_allowed": 4.19,
-          "prior_allowed": 4.35,
-          "current_allowed": 4.13,
-          "prior_player_games": 302,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "AST": {
-          "blended_allowed": 2.02,
-          "prior_allowed": 2.07,
-          "current_allowed": 2.0,
-          "prior_player_games": 302,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "3PM": {
-          "blended_allowed": 1.15,
-          "prior_allowed": 1.31,
-          "current_allowed": 1.09,
-          "prior_player_games": 302,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "PRA": {
-          "blended_allowed": 16.34,
-          "prior_allowed": 17.71,
-          "current_allowed": 15.83,
-          "prior_player_games": 302,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.63,
-          "prior_allowed": 9.99,
-          "current_allowed": 11.17,
-          "prior_player_games": 124,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "REB": {
-          "blended_allowed": 7.79,
-          "prior_allowed": 6.98,
-          "current_allowed": 8.46,
-          "prior_player_games": 124,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "AST": {
-          "blended_allowed": 1.95,
-          "prior_allowed": 1.85,
-          "current_allowed": 2.04,
-          "prior_player_games": 124,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "3PM": {
-          "blended_allowed": 0.74,
-          "prior_allowed": 0.57,
-          "current_allowed": 0.88,
-          "prior_player_games": 124,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "PRA": {
-          "blended_allowed": 20.37,
-          "prior_allowed": 18.82,
-          "current_allowed": 21.67,
-          "prior_player_games": 124,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        }
-      }
-    },
-    "Portland Trail Blazers": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.09,
-          "prior_allowed": 11.29,
-          "current_allowed": 11.04,
-          "prior_player_games": 373,
-          "current_player_games": 76,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.2
-        },
-        "REB": {
-          "blended_allowed": 2.71,
-          "prior_allowed": 2.97,
-          "current_allowed": 2.64,
-          "prior_player_games": 373,
-          "current_player_games": 76,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.2
-        },
-        "AST": {
-          "blended_allowed": 2.44,
-          "prior_allowed": 3.03,
-          "current_allowed": 2.29,
-          "prior_player_games": 373,
-          "current_player_games": 76,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.2
-        },
-        "3PM": {
-          "blended_allowed": 1.33,
-          "prior_allowed": 1.42,
-          "current_allowed": 1.3,
-          "prior_player_games": 373,
-          "current_player_games": 76,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.2
-        },
-        "PRA": {
-          "blended_allowed": 16.25,
-          "prior_allowed": 17.29,
-          "current_allowed": 15.97,
-          "prior_player_games": 373,
-          "current_player_games": 76,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.2
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 9.27,
-          "prior_allowed": 11.77,
-          "current_allowed": 8.43,
-          "prior_player_games": 287,
-          "current_player_games": 60,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.0
-        },
-        "REB": {
-          "blended_allowed": 4.48,
-          "prior_allowed": 4.8,
-          "current_allowed": 4.37,
-          "prior_player_games": 287,
-          "current_player_games": 60,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.0
-        },
-        "AST": {
-          "blended_allowed": 1.93,
-          "prior_allowed": 2.22,
-          "current_allowed": 1.83,
-          "prior_player_games": 287,
-          "current_player_games": 60,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.0
-        },
-        "3PM": {
-          "blended_allowed": 1.02,
-          "prior_allowed": 1.23,
-          "current_allowed": 0.95,
-          "prior_player_games": 287,
-          "current_player_games": 60,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.0
-        },
-        "PRA": {
-          "blended_allowed": 15.67,
-          "prior_allowed": 18.8,
-          "current_allowed": 14.63,
-          "prior_player_games": 287,
-          "current_player_games": 60,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.0
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 11.02,
-          "prior_allowed": 12.15,
-          "current_allowed": 9.95,
-          "prior_player_games": 117,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "REB": {
-          "blended_allowed": 6.68,
-          "prior_allowed": 7.1,
-          "current_allowed": 6.29,
-          "prior_player_games": 117,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "AST": {
-          "blended_allowed": 2.05,
-          "prior_allowed": 2.15,
-          "current_allowed": 1.95,
-          "prior_player_games": 117,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "3PM": {
-          "blended_allowed": 0.6,
-          "prior_allowed": 0.79,
-          "current_allowed": 0.43,
-          "prior_player_games": 117,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "PRA": {
-          "blended_allowed": 19.76,
-          "prior_allowed": 21.4,
-          "current_allowed": 18.19,
-          "prior_player_games": 117,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        }
-      }
-    },
-    "LA Clippers": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.55,
-          "prior_allowed": 11.28,
-          "current_allowed": 11.62,
-          "prior_player_games": 373,
-          "current_player_games": 74,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.7
-        },
-        "REB": {
-          "blended_allowed": 2.88,
-          "prior_allowed": 2.96,
-          "current_allowed": 2.86,
-          "prior_player_games": 373,
-          "current_player_games": 74,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.7
-        },
-        "AST": {
-          "blended_allowed": 3.06,
-          "prior_allowed": 3.08,
-          "current_allowed": 3.05,
-          "prior_player_games": 373,
-          "current_player_games": 74,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.7
-        },
-        "3PM": {
-          "blended_allowed": 1.62,
-          "prior_allowed": 1.63,
-          "current_allowed": 1.62,
-          "prior_player_games": 373,
-          "current_player_games": 74,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.7
-        },
-        "PRA": {
-          "blended_allowed": 17.49,
-          "prior_allowed": 17.32,
-          "current_allowed": 17.54,
-          "prior_player_games": 373,
-          "current_player_games": 74,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.7
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 9.24,
-          "prior_allowed": 10.52,
-          "current_allowed": 8.75,
-          "prior_player_games": 307,
-          "current_player_games": 53,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 72.6
-        },
-        "REB": {
-          "blended_allowed": 4.3,
-          "prior_allowed": 4.25,
-          "current_allowed": 4.32,
-          "prior_player_games": 307,
-          "current_player_games": 53,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 72.6
-        },
-        "AST": {
-          "blended_allowed": 1.82,
-          "prior_allowed": 2.09,
-          "current_allowed": 1.72,
-          "prior_player_games": 307,
-          "current_player_games": 53,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 72.6
-        },
-        "3PM": {
-          "blended_allowed": 0.95,
-          "prior_allowed": 1.1,
-          "current_allowed": 0.89,
-          "prior_player_games": 307,
-          "current_player_games": 53,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 72.6
-        },
-        "PRA": {
-          "blended_allowed": 15.36,
-          "prior_allowed": 16.86,
-          "current_allowed": 14.79,
-          "prior_player_games": 307,
-          "current_player_games": 53,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 72.6
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 11.0,
-          "prior_allowed": 10.05,
-          "current_allowed": 12.12,
-          "prior_player_games": 140,
-          "current_player_games": 17,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 45.9
-        },
-        "REB": {
-          "blended_allowed": 6.97,
-          "prior_allowed": 6.34,
-          "current_allowed": 7.71,
-          "prior_player_games": 140,
-          "current_player_games": 17,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 45.9
-        },
-        "AST": {
-          "blended_allowed": 1.93,
-          "prior_allowed": 1.68,
-          "current_allowed": 2.24,
-          "prior_player_games": 140,
-          "current_player_games": 17,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 45.9
-        },
-        "3PM": {
-          "blended_allowed": 0.59,
-          "prior_allowed": 0.59,
-          "current_allowed": 0.59,
-          "prior_player_games": 140,
-          "current_player_games": 17,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 45.9
-        },
-        "PRA": {
-          "blended_allowed": 19.9,
-          "prior_allowed": 18.07,
-          "current_allowed": 22.06,
-          "prior_player_games": 140,
-          "current_player_games": 17,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 45.9
-        }
-      }
-    },
-    "Minnesota Timberwolves": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.51,
-          "prior_allowed": 11.11,
-          "current_allowed": 10.35,
-          "prior_player_games": 390,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "REB": {
-          "blended_allowed": 3.2,
-          "prior_allowed": 3.04,
-          "current_allowed": 3.25,
-          "prior_player_games": 390,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "AST": {
-          "blended_allowed": 2.73,
-          "prior_allowed": 2.99,
-          "current_allowed": 2.66,
-          "prior_player_games": 390,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "3PM": {
-          "blended_allowed": 1.37,
-          "prior_allowed": 1.35,
-          "current_allowed": 1.38,
-          "prior_player_games": 390,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "PRA": {
-          "blended_allowed": 16.44,
-          "prior_allowed": 17.13,
-          "current_allowed": 16.26,
-          "prior_player_games": 390,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 9.83,
-          "prior_allowed": 11.16,
-          "current_allowed": 9.41,
-          "prior_player_games": 292,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "REB": {
-          "blended_allowed": 4.17,
-          "prior_allowed": 4.52,
-          "current_allowed": 4.06,
-          "prior_player_games": 292,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "AST": {
-          "blended_allowed": 1.86,
-          "prior_allowed": 1.88,
-          "current_allowed": 1.86,
-          "prior_player_games": 292,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "3PM": {
-          "blended_allowed": 0.97,
-          "prior_allowed": 1.13,
-          "current_allowed": 0.92,
-          "prior_player_games": 292,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "PRA": {
-          "blended_allowed": 15.87,
-          "prior_allowed": 17.55,
-          "current_allowed": 15.33,
-          "prior_player_games": 292,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 7.97,
-          "prior_allowed": 10.68,
-          "current_allowed": 6.28,
-          "prior_player_games": 120,
-          "current_player_games": 32,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 61.5
-        },
-        "REB": {
-          "blended_allowed": 5.46,
-          "prior_allowed": 6.66,
-          "current_allowed": 4.72,
-          "prior_player_games": 120,
-          "current_player_games": 32,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 61.5
-        },
-        "AST": {
-          "blended_allowed": 1.73,
-          "prior_allowed": 2.2,
-          "current_allowed": 1.44,
-          "prior_player_games": 120,
-          "current_player_games": 32,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 61.5
-        },
-        "3PM": {
-          "blended_allowed": 0.51,
-          "prior_allowed": 0.67,
-          "current_allowed": 0.41,
-          "prior_player_games": 120,
-          "current_player_games": 32,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 61.5
-        },
-        "PRA": {
-          "blended_allowed": 15.17,
-          "prior_allowed": 19.53,
-          "current_allowed": 12.44,
-          "prior_player_games": 120,
-          "current_player_games": 32,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 61.5
-        }
-      }
-    },
-    "Atlanta Hawks": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.74,
-          "prior_allowed": 11.6,
-          "current_allowed": 10.46,
-          "prior_player_games": 382,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "REB": {
-          "blended_allowed": 3.0,
-          "prior_allowed": 3.26,
-          "current_allowed": 2.92,
-          "prior_player_games": 382,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "AST": {
-          "blended_allowed": 3.07,
-          "prior_allowed": 3.15,
-          "current_allowed": 3.05,
-          "prior_player_games": 382,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "3PM": {
-          "blended_allowed": 1.41,
-          "prior_allowed": 1.53,
-          "current_allowed": 1.37,
-          "prior_player_games": 382,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "PRA": {
-          "blended_allowed": 16.81,
-          "prior_allowed": 18.02,
-          "current_allowed": 16.43,
-          "prior_player_games": 382,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 11.78,
-          "prior_allowed": 11.11,
-          "current_allowed": 12.02,
-          "prior_player_games": 299,
-          "current_player_games": 57,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
-        },
-        "REB": {
-          "blended_allowed": 5.0,
-          "prior_allowed": 4.61,
-          "current_allowed": 5.14,
-          "prior_player_games": 299,
-          "current_player_games": 57,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
-        },
-        "AST": {
-          "blended_allowed": 2.16,
-          "prior_allowed": 2.07,
-          "current_allowed": 2.19,
-          "prior_player_games": 299,
-          "current_player_games": 57,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
-        },
-        "3PM": {
-          "blended_allowed": 1.33,
-          "prior_allowed": 1.16,
-          "current_allowed": 1.39,
-          "prior_player_games": 299,
-          "current_player_games": 57,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
-        },
-        "PRA": {
-          "blended_allowed": 18.95,
-          "prior_allowed": 17.79,
-          "current_allowed": 19.35,
-          "prior_player_games": 299,
-          "current_player_games": 57,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.75,
-          "prior_allowed": 10.67,
-          "current_allowed": 10.81,
-          "prior_player_games": 126,
-          "current_player_games": 26,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 56.5
-        },
-        "REB": {
-          "blended_allowed": 6.84,
-          "prior_allowed": 7.28,
-          "current_allowed": 6.5,
-          "prior_player_games": 126,
-          "current_player_games": 26,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 56.5
-        },
-        "AST": {
-          "blended_allowed": 2.41,
-          "prior_allowed": 1.94,
-          "current_allowed": 2.77,
-          "prior_player_games": 126,
-          "current_player_games": 26,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 56.5
-        },
-        "3PM": {
-          "blended_allowed": 0.48,
-          "prior_allowed": 0.55,
-          "current_allowed": 0.42,
-          "prior_player_games": 126,
-          "current_player_games": 26,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 56.5
-        },
-        "PRA": {
-          "blended_allowed": 19.99,
-          "prior_allowed": 19.88,
-          "current_allowed": 20.08,
-          "prior_player_games": 126,
-          "current_player_games": 26,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 56.5
-        }
-      }
-    },
-    "Utah Jazz": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 12.49,
-          "prior_allowed": 12.56,
-          "current_allowed": 12.47,
-          "prior_player_games": 369,
-          "current_player_games": 66,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.7
-        },
-        "REB": {
-          "blended_allowed": 3.31,
-          "prior_allowed": 3.28,
-          "current_allowed": 3.32,
-          "prior_player_games": 369,
-          "current_player_games": 66,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.7
-        },
-        "AST": {
-          "blended_allowed": 3.21,
-          "prior_allowed": 3.51,
-          "current_allowed": 3.12,
-          "prior_player_games": 369,
-          "current_player_games": 66,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.7
-        },
-        "3PM": {
-          "blended_allowed": 1.53,
-          "prior_allowed": 1.83,
-          "current_allowed": 1.44,
-          "prior_player_games": 369,
-          "current_player_games": 66,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.7
-        },
-        "PRA": {
-          "blended_allowed": 19.01,
-          "prior_allowed": 19.35,
-          "current_allowed": 18.91,
-          "prior_player_games": 369,
-          "current_player_games": 66,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.7
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.96,
-          "prior_allowed": 12.28,
-          "current_allowed": 10.58,
-          "prior_player_games": 267,
-          "current_player_games": 69,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.5
-        },
-        "REB": {
-          "blended_allowed": 4.53,
-          "prior_allowed": 4.75,
-          "current_allowed": 4.46,
-          "prior_player_games": 267,
-          "current_player_games": 69,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.5
-        },
-        "AST": {
-          "blended_allowed": 1.75,
-          "prior_allowed": 2.6,
-          "current_allowed": 1.51,
-          "prior_player_games": 267,
-          "current_player_games": 69,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.5
-        },
-        "3PM": {
-          "blended_allowed": 1.23,
-          "prior_allowed": 1.39,
-          "current_allowed": 1.19,
-          "prior_player_games": 267,
-          "current_player_games": 69,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.5
-        },
-        "PRA": {
-          "blended_allowed": 17.24,
-          "prior_allowed": 19.63,
-          "current_allowed": 16.55,
-          "prior_player_games": 267,
-          "current_player_games": 69,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.5
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 8.58,
-          "prior_allowed": 10.71,
-          "current_allowed": 7.1,
-          "prior_player_games": 128,
-          "current_player_games": 29,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 59.2
-        },
-        "REB": {
-          "blended_allowed": 5.78,
-          "prior_allowed": 6.7,
-          "current_allowed": 5.14,
-          "prior_player_games": 128,
-          "current_player_games": 29,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 59.2
-        },
-        "AST": {
-          "blended_allowed": 1.53,
-          "prior_allowed": 2.05,
-          "current_allowed": 1.17,
-          "prior_player_games": 128,
-          "current_player_games": 29,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 59.2
-        },
-        "3PM": {
-          "blended_allowed": 0.49,
-          "prior_allowed": 0.64,
-          "current_allowed": 0.38,
-          "prior_player_games": 128,
-          "current_player_games": 29,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 59.2
-        },
-        "PRA": {
-          "blended_allowed": 15.89,
-          "prior_allowed": 19.47,
-          "current_allowed": 13.41,
-          "prior_player_games": 128,
-          "current_player_games": 29,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 59.2
-        }
-      }
-    },
-    "Indiana Pacers": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.46,
-          "prior_allowed": 12.08,
-          "current_allowed": 11.27,
-          "prior_player_games": 382,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "REB": {
-          "blended_allowed": 3.18,
-          "prior_allowed": 3.41,
-          "current_allowed": 3.11,
-          "prior_player_games": 382,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "AST": {
-          "blended_allowed": 3.09,
-          "prior_allowed": 3.11,
-          "current_allowed": 3.08,
-          "prior_player_games": 382,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "3PM": {
-          "blended_allowed": 1.63,
-          "prior_allowed": 1.41,
-          "current_allowed": 1.7,
-          "prior_player_games": 382,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "PRA": {
-          "blended_allowed": 17.73,
-          "prior_allowed": 18.6,
-          "current_allowed": 17.45,
-          "prior_player_games": 382,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.15,
-          "prior_allowed": 10.95,
-          "current_allowed": 9.91,
-          "prior_player_games": 303,
-          "current_player_games": 67,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
-        },
-        "REB": {
-          "blended_allowed": 4.48,
-          "prior_allowed": 4.59,
-          "current_allowed": 4.45,
-          "prior_player_games": 303,
-          "current_player_games": 67,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
-        },
-        "AST": {
-          "blended_allowed": 1.99,
-          "prior_allowed": 1.92,
-          "current_allowed": 2.01,
-          "prior_player_games": 303,
-          "current_player_games": 67,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
-        },
-        "3PM": {
-          "blended_allowed": 1.16,
-          "prior_allowed": 1.11,
-          "current_allowed": 1.18,
-          "prior_player_games": 303,
-          "current_player_games": 67,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
-        },
-        "PRA": {
-          "blended_allowed": 16.62,
-          "prior_allowed": 17.46,
-          "current_allowed": 16.37,
-          "prior_player_games": 303,
-          "current_player_games": 67,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.58,
-          "prior_allowed": 11.31,
-          "current_allowed": 9.91,
-          "prior_player_games": 117,
-          "current_player_games": 22,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 52.4
-        },
-        "REB": {
-          "blended_allowed": 7.2,
-          "prior_allowed": 7.27,
-          "current_allowed": 7.14,
-          "prior_player_games": 117,
-          "current_player_games": 22,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 52.4
-        },
-        "AST": {
-          "blended_allowed": 1.82,
-          "prior_allowed": 2.07,
-          "current_allowed": 1.59,
-          "prior_player_games": 117,
-          "current_player_games": 22,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 52.4
-        },
-        "3PM": {
-          "blended_allowed": 0.48,
-          "prior_allowed": 0.5,
-          "current_allowed": 0.45,
-          "prior_player_games": 117,
-          "current_player_games": 22,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 52.4
-        },
-        "PRA": {
-          "blended_allowed": 19.6,
-          "prior_allowed": 20.65,
-          "current_allowed": 18.64,
-          "prior_player_games": 117,
-          "current_player_games": 22,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 52.4
-        }
-      }
-    },
     "Golden State Warriors": {
       "SG": {
         "PTS": {
@@ -1151,572 +150,143 @@
         }
       }
     },
-    "Milwaukee Bucks": {
+    "Brooklyn Nets": {
       "SG": {
         "PTS": {
-          "blended_allowed": 10.8,
-          "prior_allowed": 12.06,
-          "current_allowed": 10.47,
-          "prior_player_games": 378,
-          "current_player_games": 77,
+          "blended_allowed": 10.14,
+          "prior_allowed": 11.57,
+          "current_allowed": 9.76,
+          "prior_player_games": 372,
+          "current_player_games": 75,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "REB": {
-          "blended_allowed": 3.16,
-          "prior_allowed": 3.45,
-          "current_allowed": 3.08,
-          "prior_player_games": 378,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "AST": {
-          "blended_allowed": 3.08,
-          "prior_allowed": 3.33,
-          "current_allowed": 3.01,
-          "prior_player_games": 378,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "3PM": {
-          "blended_allowed": 1.55,
-          "prior_allowed": 1.74,
-          "current_allowed": 1.51,
-          "prior_player_games": 378,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        },
-        "PRA": {
-          "blended_allowed": 17.03,
-          "prior_allowed": 18.84,
-          "current_allowed": 16.56,
-          "prior_player_games": 378,
-          "current_player_games": 77,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.4
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.78,
-          "prior_allowed": 11.13,
-          "current_allowed": 10.66,
-          "prior_player_games": 289,
-          "current_player_games": 56,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
-        },
-        "REB": {
-          "blended_allowed": 4.61,
-          "prior_allowed": 4.5,
-          "current_allowed": 4.64,
-          "prior_player_games": 289,
-          "current_player_games": 56,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
-        },
-        "AST": {
-          "blended_allowed": 2.03,
-          "prior_allowed": 2.26,
-          "current_allowed": 1.95,
-          "prior_player_games": 289,
-          "current_player_games": 56,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
-        },
-        "3PM": {
-          "blended_allowed": 1.38,
-          "prior_allowed": 1.38,
-          "current_allowed": 1.38,
-          "prior_player_games": 289,
-          "current_player_games": 56,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
-        },
-        "PRA": {
-          "blended_allowed": 17.42,
-          "prior_allowed": 17.89,
-          "current_allowed": 17.25,
-          "prior_player_games": 289,
-          "current_player_games": 56,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.23,
-          "prior_allowed": 9.46,
-          "current_allowed": 10.84,
-          "prior_player_games": 123,
-          "current_player_games": 25,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 55.6
-        },
-        "REB": {
-          "blended_allowed": 6.93,
-          "prior_allowed": 6.19,
-          "current_allowed": 7.52,
-          "prior_player_games": 123,
-          "current_player_games": 25,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 55.6
-        },
-        "AST": {
-          "blended_allowed": 1.8,
-          "prior_allowed": 1.6,
-          "current_allowed": 1.96,
-          "prior_player_games": 123,
-          "current_player_games": 25,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 55.6
-        },
-        "3PM": {
-          "blended_allowed": 0.49,
-          "prior_allowed": 0.5,
-          "current_allowed": 0.48,
-          "prior_player_games": 123,
-          "current_player_games": 25,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 55.6
-        },
-        "PRA": {
-          "blended_allowed": 18.96,
-          "prior_allowed": 17.25,
-          "current_allowed": 20.32,
-          "prior_player_games": 123,
-          "current_player_games": 25,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 55.6
-        }
-      }
-    },
-    "Miami Heat": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 12.19,
-          "prior_allowed": 12.75,
-          "current_allowed": 12.05,
-          "prior_player_games": 373,
-          "current_player_games": 81,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.2
-        },
-        "REB": {
-          "blended_allowed": 3.19,
-          "prior_allowed": 3.73,
-          "current_allowed": 3.05,
-          "prior_player_games": 373,
-          "current_player_games": 81,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.2
-        },
-        "AST": {
-          "blended_allowed": 3.25,
-          "prior_allowed": 3.48,
-          "current_allowed": 3.2,
-          "prior_player_games": 373,
-          "current_player_games": 81,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.2
-        },
-        "3PM": {
-          "blended_allowed": 1.77,
-          "prior_allowed": 1.77,
-          "current_allowed": 1.77,
-          "prior_player_games": 373,
-          "current_player_games": 81,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.2
-        },
-        "PRA": {
-          "blended_allowed": 18.63,
-          "prior_allowed": 19.97,
-          "current_allowed": 18.3,
-          "prior_player_games": 373,
-          "current_player_games": 81,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.2
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 9.34,
-          "prior_allowed": 11.28,
-          "current_allowed": 8.68,
-          "prior_player_games": 290,
-          "current_player_games": 59,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.7
-        },
-        "REB": {
-          "blended_allowed": 4.59,
-          "prior_allowed": 4.78,
-          "current_allowed": 4.53,
-          "prior_player_games": 290,
-          "current_player_games": 59,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.7
-        },
-        "AST": {
-          "blended_allowed": 2.18,
-          "prior_allowed": 2.01,
-          "current_allowed": 2.24,
-          "prior_player_games": 290,
-          "current_player_games": 59,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.7
-        },
-        "3PM": {
-          "blended_allowed": 1.07,
-          "prior_allowed": 1.24,
-          "current_allowed": 1.02,
-          "prior_player_games": 290,
-          "current_player_games": 59,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.7
-        },
-        "PRA": {
-          "blended_allowed": 16.11,
-          "prior_allowed": 18.07,
-          "current_allowed": 15.44,
-          "prior_player_games": 290,
-          "current_player_games": 59,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.7
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.02,
-          "prior_allowed": 10.54,
-          "current_allowed": 9.47,
-          "prior_player_games": 123,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "REB": {
-          "blended_allowed": 6.65,
-          "prior_allowed": 6.82,
-          "current_allowed": 6.47,
-          "prior_player_games": 123,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "AST": {
-          "blended_allowed": 1.35,
-          "prior_allowed": 1.74,
-          "current_allowed": 0.95,
-          "prior_player_games": 123,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "3PM": {
-          "blended_allowed": 0.65,
-          "prior_allowed": 0.63,
-          "current_allowed": 0.68,
-          "prior_player_games": 123,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "PRA": {
-          "blended_allowed": 18.02,
-          "prior_allowed": 19.1,
-          "current_allowed": 16.89,
-          "prior_player_games": 123,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        }
-      }
-    },
-    "Los Angeles Lakers": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.09,
-          "prior_allowed": 11.37,
-          "current_allowed": 11.02,
-          "prior_player_games": 378,
-          "current_player_games": 85,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 81.0
-        },
-        "REB": {
-          "blended_allowed": 2.94,
-          "prior_allowed": 2.74,
-          "current_allowed": 2.99,
-          "prior_player_games": 378,
-          "current_player_games": 85,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 81.0
-        },
-        "AST": {
-          "blended_allowed": 3.13,
-          "prior_allowed": 3.32,
-          "current_allowed": 3.08,
-          "prior_player_games": 378,
-          "current_player_games": 85,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 81.0
-        },
-        "3PM": {
-          "blended_allowed": 1.62,
-          "prior_allowed": 1.49,
-          "current_allowed": 1.65,
-          "prior_player_games": 378,
-          "current_player_games": 85,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 81.0
-        },
-        "PRA": {
-          "blended_allowed": 17.16,
-          "prior_allowed": 17.42,
-          "current_allowed": 17.09,
-          "prior_player_games": 378,
-          "current_player_games": 85,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 81.0
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.27,
-          "prior_allowed": 11.97,
-          "current_allowed": 9.73,
-          "prior_player_games": 281,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "REB": {
-          "blended_allowed": 4.26,
-          "prior_allowed": 4.59,
-          "current_allowed": 4.16,
-          "prior_player_games": 281,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "AST": {
-          "blended_allowed": 1.98,
-          "prior_allowed": 2.16,
-          "current_allowed": 1.92,
-          "prior_player_games": 281,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "3PM": {
-          "blended_allowed": 1.19,
-          "prior_allowed": 1.31,
-          "current_allowed": 1.16,
-          "prior_player_games": 281,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "PRA": {
-          "blended_allowed": 16.51,
-          "prior_allowed": 18.72,
-          "current_allowed": 15.81,
-          "prior_player_games": 281,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 8.78,
-          "prior_allowed": 9.46,
-          "current_allowed": 8.1,
-          "prior_player_games": 128,
-          "current_player_games": 20,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 50.0
-        },
-        "REB": {
-          "blended_allowed": 5.78,
-          "prior_allowed": 6.27,
-          "current_allowed": 5.3,
-          "prior_player_games": 128,
-          "current_player_games": 20,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 50.0
-        },
-        "AST": {
-          "blended_allowed": 1.5,
-          "prior_allowed": 1.8,
-          "current_allowed": 1.2,
-          "prior_player_games": 128,
-          "current_player_games": 20,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 50.0
-        },
-        "3PM": {
-          "blended_allowed": 0.55,
-          "prior_allowed": 0.41,
-          "current_allowed": 0.7,
-          "prior_player_games": 128,
-          "current_player_games": 20,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 50.0
-        },
-        "PRA": {
-          "blended_allowed": 16.07,
-          "prior_allowed": 17.53,
-          "current_allowed": 14.6,
-          "prior_player_games": 128,
-          "current_player_games": 20,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 50.0
-        }
-      }
-    },
-    "Denver Nuggets": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 9.89,
-          "prior_allowed": 11.79,
-          "current_allowed": 9.29,
-          "prior_player_games": 362,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
+          "current_weight_pct": 78.9
         },
         "REB": {
           "blended_allowed": 2.77,
-          "prior_allowed": 3.1,
-          "current_allowed": 2.67,
-          "prior_player_games": 362,
-          "current_player_games": 63,
+          "prior_allowed": 3.25,
+          "current_allowed": 2.64,
+          "prior_player_games": 372,
+          "current_player_games": 75,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
+          "current_weight_pct": 78.9
         },
         "AST": {
-          "blended_allowed": 2.91,
-          "prior_allowed": 3.18,
-          "current_allowed": 2.83,
-          "prior_player_games": 362,
-          "current_player_games": 63,
+          "blended_allowed": 2.87,
+          "prior_allowed": 3.33,
+          "current_allowed": 2.75,
+          "prior_player_games": 372,
+          "current_player_games": 75,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
+          "current_weight_pct": 78.9
         },
         "3PM": {
-          "blended_allowed": 1.4,
-          "prior_allowed": 1.61,
-          "current_allowed": 1.33,
-          "prior_player_games": 362,
-          "current_player_games": 63,
+          "blended_allowed": 1.44,
+          "prior_allowed": 1.53,
+          "current_allowed": 1.41,
+          "prior_player_games": 372,
+          "current_player_games": 75,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
+          "current_weight_pct": 78.9
         },
         "PRA": {
-          "blended_allowed": 15.57,
-          "prior_allowed": 18.07,
-          "current_allowed": 14.78,
-          "prior_player_games": 362,
-          "current_player_games": 63,
+          "blended_allowed": 15.78,
+          "prior_allowed": 18.14,
+          "current_allowed": 15.15,
+          "prior_player_games": 372,
+          "current_player_games": 75,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
+          "current_weight_pct": 78.9
         }
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 11.55,
-          "prior_allowed": 12.63,
-          "current_allowed": 11.16,
-          "prior_player_games": 273,
-          "current_player_games": 55,
+          "blended_allowed": 11.02,
+          "prior_allowed": 11.02,
+          "current_allowed": 11.02,
+          "prior_player_games": 290,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.3
+          "current_weight_pct": 73.0
         },
         "REB": {
-          "blended_allowed": 4.13,
-          "prior_allowed": 4.85,
-          "current_allowed": 3.87,
-          "prior_player_games": 273,
-          "current_player_games": 55,
+          "blended_allowed": 4.42,
+          "prior_allowed": 4.34,
+          "current_allowed": 4.44,
+          "prior_player_games": 290,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.3
+          "current_weight_pct": 73.0
         },
         "AST": {
-          "blended_allowed": 2.34,
-          "prior_allowed": 2.66,
-          "current_allowed": 2.22,
-          "prior_player_games": 273,
-          "current_player_games": 55,
+          "blended_allowed": 2.08,
+          "prior_allowed": 2.1,
+          "current_allowed": 2.07,
+          "prior_player_games": 290,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.3
+          "current_weight_pct": 73.0
         },
         "3PM": {
-          "blended_allowed": 1.42,
-          "prior_allowed": 1.36,
-          "current_allowed": 1.44,
-          "prior_player_games": 273,
-          "current_player_games": 55,
+          "blended_allowed": 1.12,
+          "prior_allowed": 1.05,
+          "current_allowed": 1.15,
+          "prior_player_games": 290,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.3
+          "current_weight_pct": 73.0
         },
         "PRA": {
-          "blended_allowed": 18.02,
-          "prior_allowed": 20.14,
-          "current_allowed": 17.25,
-          "prior_player_games": 273,
-          "current_player_games": 55,
+          "blended_allowed": 17.51,
+          "prior_allowed": 17.46,
+          "current_allowed": 17.54,
+          "prior_player_games": 290,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.3
+          "current_weight_pct": 73.0
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 8.7,
-          "prior_allowed": 9.89,
-          "current_allowed": 7.57,
-          "prior_player_games": 126,
+          "blended_allowed": 10.54,
+          "prior_allowed": 11.36,
+          "current_allowed": 9.76,
+          "prior_player_games": 118,
           "current_player_games": 21,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 51.2
         },
         "REB": {
-          "blended_allowed": 6.75,
-          "prior_allowed": 6.34,
-          "current_allowed": 7.14,
-          "prior_player_games": 126,
+          "blended_allowed": 5.75,
+          "prior_allowed": 6.69,
+          "current_allowed": 4.86,
+          "prior_player_games": 118,
           "current_player_games": 21,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 51.2
         },
         "AST": {
-          "blended_allowed": 1.62,
-          "prior_allowed": 1.56,
+          "blended_allowed": 1.65,
+          "prior_allowed": 1.63,
           "current_allowed": 1.67,
-          "prior_player_games": 126,
+          "prior_player_games": 118,
           "current_player_games": 21,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 51.2
         },
         "3PM": {
-          "blended_allowed": 0.5,
-          "prior_allowed": 0.63,
-          "current_allowed": 0.38,
-          "prior_player_games": 126,
+          "blended_allowed": 0.58,
+          "prior_allowed": 0.45,
+          "current_allowed": 0.71,
+          "prior_player_games": 118,
           "current_player_games": 21,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 51.2
         },
         "PRA": {
-          "blended_allowed": 17.07,
-          "prior_allowed": 17.79,
-          "current_allowed": 16.38,
-          "prior_player_games": 126,
+          "blended_allowed": 17.94,
+          "prior_allowed": 19.69,
+          "current_allowed": 16.29,
+          "prior_player_games": 118,
           "current_player_games": 21,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 51.2
@@ -1866,718 +436,289 @@
         }
       }
     },
-    "New Orleans Pelicans": {
+    "Orlando Magic": {
       "SG": {
         "PTS": {
-          "blended_allowed": 12.37,
-          "prior_allowed": 12.71,
-          "current_allowed": 12.28,
-          "prior_player_games": 347,
+          "blended_allowed": 10.1,
+          "prior_allowed": 12.53,
+          "current_allowed": 9.43,
+          "prior_player_games": 376,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
         },
         "REB": {
-          "blended_allowed": 2.6,
-          "prior_allowed": 3.31,
-          "current_allowed": 2.4,
-          "prior_player_games": 347,
+          "blended_allowed": 2.89,
+          "prior_allowed": 3.33,
+          "current_allowed": 2.76,
+          "prior_player_games": 376,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
-        },
-        "AST": {
-          "blended_allowed": 3.28,
-          "prior_allowed": 3.38,
-          "current_allowed": 3.25,
-          "prior_player_games": 347,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "3PM": {
-          "blended_allowed": 1.61,
-          "prior_allowed": 1.86,
-          "current_allowed": 1.54,
-          "prior_player_games": 347,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "PRA": {
-          "blended_allowed": 18.25,
-          "prior_allowed": 19.4,
-          "current_allowed": 17.93,
-          "prior_player_games": 347,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.2,
-          "prior_allowed": 11.29,
-          "current_allowed": 9.9,
-          "prior_player_games": 288,
-          "current_player_games": 73,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.5
-        },
-        "REB": {
-          "blended_allowed": 5.0,
-          "prior_allowed": 4.8,
-          "current_allowed": 5.05,
-          "prior_player_games": 288,
-          "current_player_games": 73,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.5
-        },
-        "AST": {
-          "blended_allowed": 2.02,
-          "prior_allowed": 2.25,
-          "current_allowed": 1.96,
-          "prior_player_games": 288,
-          "current_player_games": 73,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.5
-        },
-        "3PM": {
-          "blended_allowed": 1.1,
-          "prior_allowed": 1.27,
-          "current_allowed": 1.05,
-          "prior_player_games": 288,
-          "current_player_games": 73,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.5
-        },
-        "PRA": {
-          "blended_allowed": 17.22,
-          "prior_allowed": 18.34,
-          "current_allowed": 16.92,
-          "prior_player_games": 288,
-          "current_player_games": 73,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.5
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 12.02,
-          "prior_allowed": 11.64,
-          "current_allowed": 12.42,
-          "prior_player_games": 125,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "REB": {
-          "blended_allowed": 7.32,
-          "prior_allowed": 7.58,
-          "current_allowed": 7.05,
-          "prior_player_games": 125,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "AST": {
-          "blended_allowed": 2.46,
-          "prior_allowed": 2.1,
-          "current_allowed": 2.84,
-          "prior_player_games": 125,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "3PM": {
-          "blended_allowed": 0.62,
-          "prior_allowed": 0.61,
-          "current_allowed": 0.63,
-          "prior_player_games": 125,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        },
-        "PRA": {
-          "blended_allowed": 21.81,
-          "prior_allowed": 21.32,
-          "current_allowed": 22.32,
-          "prior_player_games": 125,
-          "current_player_games": 19,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 48.7
-        }
-      }
-    },
-    "Memphis Grizzlies": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.16,
-          "prior_allowed": 12.26,
-          "current_allowed": 9.62,
-          "prior_player_games": 348,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "REB": {
-          "blended_allowed": 2.59,
-          "prior_allowed": 3.34,
-          "current_allowed": 2.4,
-          "prior_player_games": 348,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
         },
         "AST": {
           "blended_allowed": 2.69,
-          "prior_allowed": 3.4,
-          "current_allowed": 2.51,
-          "prior_player_games": 348,
-          "current_player_games": 78,
+          "prior_allowed": 3.15,
+          "current_allowed": 2.56,
+          "prior_player_games": 376,
+          "current_player_games": 72,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
+          "current_weight_pct": 78.3
         },
         "3PM": {
-          "blended_allowed": 1.27,
-          "prior_allowed": 1.67,
-          "current_allowed": 1.17,
-          "prior_player_games": 348,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "PRA": {
-          "blended_allowed": 15.44,
-          "prior_allowed": 19.0,
-          "current_allowed": 14.53,
-          "prior_player_games": 348,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 10.57,
-          "prior_allowed": 12.1,
-          "current_allowed": 10.09,
-          "prior_player_games": 272,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "REB": {
-          "blended_allowed": 4.4,
-          "prior_allowed": 5.04,
-          "current_allowed": 4.2,
-          "prior_player_games": 272,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "AST": {
-          "blended_allowed": 1.81,
-          "prior_allowed": 2.2,
-          "current_allowed": 1.69,
-          "prior_player_games": 272,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "3PM": {
-          "blended_allowed": 1.16,
-          "prior_allowed": 1.32,
-          "current_allowed": 1.11,
-          "prior_player_games": 272,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        },
-        "PRA": {
-          "blended_allowed": 16.78,
-          "prior_allowed": 19.33,
-          "current_allowed": 15.98,
-          "prior_player_games": 272,
-          "current_player_games": 64,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.2
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 9.49,
-          "prior_allowed": 10.66,
-          "current_allowed": 8.38,
-          "prior_player_games": 120,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "REB": {
-          "blended_allowed": 6.28,
-          "prior_allowed": 7.22,
-          "current_allowed": 5.38,
-          "prior_player_games": 120,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "AST": {
-          "blended_allowed": 2.21,
-          "prior_allowed": 2.23,
-          "current_allowed": 2.19,
-          "prior_player_games": 120,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "3PM": {
-          "blended_allowed": 0.52,
-          "prior_allowed": 0.57,
-          "current_allowed": 0.48,
-          "prior_player_games": 120,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "PRA": {
-          "blended_allowed": 17.98,
-          "prior_allowed": 20.12,
-          "current_allowed": 15.95,
-          "prior_player_games": 120,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        }
-      }
-    },
-    "Toronto Raptors": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.55,
-          "prior_allowed": 11.71,
-          "current_allowed": 10.27,
-          "prior_player_games": 379,
-          "current_player_games": 82,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.4
-        },
-        "REB": {
-          "blended_allowed": 2.76,
-          "prior_allowed": 3.0,
-          "current_allowed": 2.71,
-          "prior_player_games": 379,
-          "current_player_games": 82,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.4
-        },
-        "AST": {
-          "blended_allowed": 2.88,
-          "prior_allowed": 2.85,
-          "current_allowed": 2.89,
-          "prior_player_games": 379,
-          "current_player_games": 82,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.4
-        },
-        "3PM": {
-          "blended_allowed": 1.43,
+          "blended_allowed": 1.44,
           "prior_allowed": 1.55,
-          "current_allowed": 1.4,
-          "prior_player_games": 379,
-          "current_player_games": 82,
+          "current_allowed": 1.42,
+          "prior_player_games": 376,
+          "current_player_games": 72,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.4
+          "current_weight_pct": 78.3
         },
         "PRA": {
-          "blended_allowed": 16.2,
-          "prior_allowed": 17.56,
-          "current_allowed": 15.87,
-          "prior_player_games": 379,
-          "current_player_games": 82,
+          "blended_allowed": 15.68,
+          "prior_allowed": 19.02,
+          "current_allowed": 14.75,
+          "prior_player_games": 376,
+          "current_player_games": 72,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.4
+          "current_weight_pct": 78.3
         }
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 9.35,
-          "prior_allowed": 10.15,
-          "current_allowed": 9.07,
-          "prior_player_games": 287,
-          "current_player_games": 57,
+          "blended_allowed": 11.85,
+          "prior_allowed": 10.83,
+          "current_allowed": 12.25,
+          "prior_player_games": 279,
+          "current_player_games": 51,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
+          "current_weight_pct": 71.8
         },
         "REB": {
-          "blended_allowed": 3.76,
-          "prior_allowed": 4.44,
-          "current_allowed": 3.53,
-          "prior_player_games": 287,
-          "current_player_games": 57,
+          "blended_allowed": 4.31,
+          "prior_allowed": 4.29,
+          "current_allowed": 4.31,
+          "prior_player_games": 279,
+          "current_player_games": 51,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
+          "current_weight_pct": 71.8
         },
         "AST": {
-          "blended_allowed": 1.54,
-          "prior_allowed": 1.94,
-          "current_allowed": 1.4,
-          "prior_player_games": 287,
-          "current_player_games": 57,
+          "blended_allowed": 2.34,
+          "prior_allowed": 1.81,
+          "current_allowed": 2.55,
+          "prior_player_games": 279,
+          "current_player_games": 51,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
+          "current_weight_pct": 71.8
         },
         "3PM": {
-          "blended_allowed": 0.95,
-          "prior_allowed": 1.05,
-          "current_allowed": 0.91,
-          "prior_player_games": 287,
-          "current_player_games": 57,
+          "blended_allowed": 1.32,
+          "prior_allowed": 1.08,
+          "current_allowed": 1.41,
+          "prior_player_games": 279,
+          "current_player_games": 51,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
+          "current_weight_pct": 71.8
         },
         "PRA": {
-          "blended_allowed": 14.66,
-          "prior_allowed": 16.53,
-          "current_allowed": 14.0,
-          "prior_player_games": 287,
-          "current_player_games": 57,
+          "blended_allowed": 18.5,
+          "prior_allowed": 16.92,
+          "current_allowed": 19.12,
+          "prior_player_games": 279,
+          "current_player_games": 51,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.0
+          "current_weight_pct": 71.8
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 8.42,
-          "prior_allowed": 9.32,
-          "current_allowed": 7.79,
-          "prior_player_games": 130,
-          "current_player_games": 28,
+          "blended_allowed": 8.75,
+          "prior_allowed": 10.23,
+          "current_allowed": 7.33,
+          "prior_player_games": 127,
+          "current_player_games": 21,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 58.3
+          "current_weight_pct": 51.2
         },
         "REB": {
-          "blended_allowed": 6.37,
-          "prior_allowed": 6.79,
-          "current_allowed": 6.07,
-          "prior_player_games": 130,
-          "current_player_games": 28,
+          "blended_allowed": 6.32,
+          "prior_allowed": 6.96,
+          "current_allowed": 5.71,
+          "prior_player_games": 127,
+          "current_player_games": 21,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 58.3
+          "current_weight_pct": 51.2
         },
         "AST": {
-          "blended_allowed": 1.56,
-          "prior_allowed": 1.54,
-          "current_allowed": 1.57,
-          "prior_player_games": 130,
-          "current_player_games": 28,
+          "blended_allowed": 1.89,
+          "prior_allowed": 1.98,
+          "current_allowed": 1.81,
+          "prior_player_games": 127,
+          "current_player_games": 21,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 58.3
+          "current_weight_pct": 51.2
         },
         "3PM": {
           "blended_allowed": 0.42,
-          "prior_allowed": 0.51,
-          "current_allowed": 0.36,
-          "prior_player_games": 130,
-          "current_player_games": 28,
+          "prior_allowed": 0.41,
+          "current_allowed": 0.43,
+          "prior_player_games": 127,
+          "current_player_games": 21,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 58.3
+          "current_weight_pct": 51.2
         },
         "PRA": {
-          "blended_allowed": 16.35,
-          "prior_allowed": 17.65,
-          "current_allowed": 15.43,
-          "prior_player_games": 130,
-          "current_player_games": 28,
+          "blended_allowed": 16.96,
+          "prior_allowed": 19.17,
+          "current_allowed": 14.86,
+          "prior_player_games": 127,
+          "current_player_games": 21,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 58.3
+          "current_weight_pct": 51.2
         }
       }
     },
-    "Detroit Pistons": {
+    "Cleveland Cavaliers": {
       "SG": {
         "PTS": {
-          "blended_allowed": 10.21,
-          "prior_allowed": 11.55,
-          "current_allowed": 9.8,
-          "prior_player_games": 369,
-          "current_player_games": 65,
+          "blended_allowed": 11.96,
+          "prior_allowed": 11.97,
+          "current_allowed": 11.96,
+          "prior_player_games": 356,
+          "current_player_games": 79,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.5
+          "current_weight_pct": 79.8
         },
         "REB": {
-          "blended_allowed": 2.4,
-          "prior_allowed": 2.98,
-          "current_allowed": 2.22,
-          "prior_player_games": 369,
-          "current_player_games": 65,
+          "blended_allowed": 3.11,
+          "prior_allowed": 3.22,
+          "current_allowed": 3.08,
+          "prior_player_games": 356,
+          "current_player_games": 79,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.5
+          "current_weight_pct": 79.8
         },
         "AST": {
-          "blended_allowed": 2.66,
-          "prior_allowed": 2.84,
-          "current_allowed": 2.6,
-          "prior_player_games": 369,
-          "current_player_games": 65,
+          "blended_allowed": 3.26,
+          "prior_allowed": 3.39,
+          "current_allowed": 3.23,
+          "prior_player_games": 356,
+          "current_player_games": 79,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.5
+          "current_weight_pct": 79.8
         },
         "3PM": {
-          "blended_allowed": 1.35,
-          "prior_allowed": 1.46,
-          "current_allowed": 1.32,
-          "prior_player_games": 369,
-          "current_player_games": 65,
+          "blended_allowed": 1.64,
+          "prior_allowed": 1.7,
+          "current_allowed": 1.62,
+          "prior_player_games": 356,
+          "current_player_games": 79,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.5
+          "current_weight_pct": 79.8
         },
         "PRA": {
-          "blended_allowed": 15.26,
-          "prior_allowed": 17.37,
-          "current_allowed": 14.62,
-          "prior_player_games": 369,
-          "current_player_games": 65,
+          "blended_allowed": 18.33,
+          "prior_allowed": 18.58,
+          "current_allowed": 18.27,
+          "prior_player_games": 356,
+          "current_player_games": 79,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 76.5
+          "current_weight_pct": 79.8
         }
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 10.44,
-          "prior_allowed": 11.03,
-          "current_allowed": 10.23,
-          "prior_player_games": 277,
-          "current_player_games": 56,
+          "blended_allowed": 10.13,
+          "prior_allowed": 11.28,
+          "current_allowed": 9.7,
+          "prior_player_games": 302,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
+          "current_weight_pct": 73.0
         },
         "REB": {
-          "blended_allowed": 4.95,
-          "prior_allowed": 4.29,
-          "current_allowed": 5.18,
-          "prior_player_games": 277,
-          "current_player_games": 56,
+          "blended_allowed": 4.19,
+          "prior_allowed": 4.35,
+          "current_allowed": 4.13,
+          "prior_player_games": 302,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
+          "current_weight_pct": 73.0
         },
         "AST": {
-          "blended_allowed": 1.91,
-          "prior_allowed": 1.87,
-          "current_allowed": 1.93,
-          "prior_player_games": 277,
-          "current_player_games": 56,
+          "blended_allowed": 2.02,
+          "prior_allowed": 2.07,
+          "current_allowed": 2.0,
+          "prior_player_games": 302,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
+          "current_weight_pct": 73.0
         },
         "3PM": {
-          "blended_allowed": 1.1,
-          "prior_allowed": 1.27,
-          "current_allowed": 1.04,
-          "prior_player_games": 277,
-          "current_player_games": 56,
+          "blended_allowed": 1.15,
+          "prior_allowed": 1.31,
+          "current_allowed": 1.09,
+          "prior_player_games": 302,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
+          "current_weight_pct": 73.0
         },
         "PRA": {
-          "blended_allowed": 17.3,
-          "prior_allowed": 17.19,
-          "current_allowed": 17.34,
-          "prior_player_games": 277,
-          "current_player_games": 56,
+          "blended_allowed": 16.34,
+          "prior_allowed": 17.71,
+          "current_allowed": 15.83,
+          "prior_player_games": 302,
+          "current_player_games": 54,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.7
+          "current_weight_pct": 73.0
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 8.67,
-          "prior_allowed": 8.77,
-          "current_allowed": 8.58,
-          "prior_player_games": 131,
+          "blended_allowed": 10.63,
+          "prior_allowed": 9.99,
+          "current_allowed": 11.17,
+          "prior_player_games": 124,
           "current_player_games": 24,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 54.5
         },
         "REB": {
-          "blended_allowed": 6.39,
-          "prior_allowed": 6.11,
-          "current_allowed": 6.62,
-          "prior_player_games": 131,
+          "blended_allowed": 7.79,
+          "prior_allowed": 6.98,
+          "current_allowed": 8.46,
+          "prior_player_games": 124,
           "current_player_games": 24,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 54.5
-        },
-        "AST": {
-          "blended_allowed": 1.48,
-          "prior_allowed": 1.7,
-          "current_allowed": 1.29,
-          "prior_player_games": 131,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "3PM": {
-          "blended_allowed": 0.53,
-          "prior_allowed": 0.61,
-          "current_allowed": 0.46,
-          "prior_player_games": 131,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "PRA": {
-          "blended_allowed": 16.54,
-          "prior_allowed": 16.59,
-          "current_allowed": 16.5,
-          "prior_player_games": 131,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        }
-      }
-    },
-    "San Antonio Spurs": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.04,
-          "prior_allowed": 10.93,
-          "current_allowed": 9.83,
-          "prior_player_games": 385,
-          "current_player_games": 83,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
-        },
-        "REB": {
-          "blended_allowed": 3.37,
-          "prior_allowed": 3.1,
-          "current_allowed": 3.43,
-          "prior_player_games": 385,
-          "current_player_games": 83,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
-        },
-        "AST": {
-          "blended_allowed": 2.82,
-          "prior_allowed": 2.93,
-          "current_allowed": 2.8,
-          "prior_player_games": 385,
-          "current_player_games": 83,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
-        },
-        "3PM": {
-          "blended_allowed": 1.37,
-          "prior_allowed": 1.45,
-          "current_allowed": 1.35,
-          "prior_player_games": 385,
-          "current_player_games": 83,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
-        },
-        "PRA": {
-          "blended_allowed": 16.24,
-          "prior_allowed": 16.96,
-          "current_allowed": 16.06,
-          "prior_player_games": 385,
-          "current_player_games": 83,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 9.63,
-          "prior_allowed": 11.0,
-          "current_allowed": 9.19,
-          "prior_player_games": 288,
-          "current_player_games": 62,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.6
-        },
-        "REB": {
-          "blended_allowed": 4.13,
-          "prior_allowed": 4.47,
-          "current_allowed": 4.02,
-          "prior_player_games": 288,
-          "current_player_games": 62,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.6
         },
         "AST": {
           "blended_allowed": 1.95,
-          "prior_allowed": 2.18,
-          "current_allowed": 1.87,
-          "prior_player_games": 288,
-          "current_player_games": 62,
+          "prior_allowed": 1.85,
+          "current_allowed": 2.04,
+          "prior_player_games": 124,
+          "current_player_games": 24,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.6
+          "current_weight_pct": 54.5
         },
         "3PM": {
-          "blended_allowed": 1.07,
-          "prior_allowed": 1.28,
-          "current_allowed": 1.0,
-          "prior_player_games": 288,
-          "current_player_games": 62,
+          "blended_allowed": 0.74,
+          "prior_allowed": 0.57,
+          "current_allowed": 0.88,
+          "prior_player_games": 124,
+          "current_player_games": 24,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.6
+          "current_weight_pct": 54.5
         },
         "PRA": {
-          "blended_allowed": 15.71,
-          "prior_allowed": 17.65,
-          "current_allowed": 15.08,
-          "prior_player_games": 288,
-          "current_player_games": 62,
+          "blended_allowed": 20.37,
+          "prior_allowed": 18.82,
+          "current_allowed": 21.67,
+          "prior_player_games": 124,
+          "current_player_games": 24,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.6
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 9.49,
-          "prior_allowed": 10.3,
-          "current_allowed": 8.78,
-          "prior_player_games": 132,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "REB": {
-          "blended_allowed": 5.41,
-          "prior_allowed": 6.33,
-          "current_allowed": 4.61,
-          "prior_player_games": 132,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "AST": {
-          "blended_allowed": 1.76,
-          "prior_allowed": 2.08,
-          "current_allowed": 1.48,
-          "prior_player_games": 132,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "3PM": {
-          "blended_allowed": 0.57,
-          "prior_allowed": 0.67,
-          "current_allowed": 0.48,
-          "prior_player_games": 132,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "PRA": {
-          "blended_allowed": 16.65,
-          "prior_allowed": 18.7,
-          "current_allowed": 14.87,
-          "prior_player_games": 132,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
+          "current_weight_pct": 54.5
         }
       }
     },
@@ -2724,143 +865,286 @@
         }
       }
     },
-    "Philadelphia 76ers": {
+    "Denver Nuggets": {
       "SG": {
         "PTS": {
           "blended_allowed": 9.89,
-          "prior_allowed": 11.76,
-          "current_allowed": 9.45,
-          "prior_player_games": 381,
-          "current_player_games": 83,
+          "prior_allowed": 11.79,
+          "current_allowed": 9.29,
+          "prior_player_games": 362,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
+          "current_weight_pct": 75.9
         },
         "REB": {
-          "blended_allowed": 3.27,
-          "prior_allowed": 3.33,
-          "current_allowed": 3.25,
-          "prior_player_games": 381,
-          "current_player_games": 83,
+          "blended_allowed": 2.77,
+          "prior_allowed": 3.1,
+          "current_allowed": 2.67,
+          "prior_player_games": 362,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
+          "current_weight_pct": 75.9
         },
         "AST": {
-          "blended_allowed": 2.95,
-          "prior_allowed": 3.39,
-          "current_allowed": 2.84,
-          "prior_player_games": 381,
-          "current_player_games": 83,
+          "blended_allowed": 2.91,
+          "prior_allowed": 3.18,
+          "current_allowed": 2.83,
+          "prior_player_games": 362,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
+          "current_weight_pct": 75.9
         },
         "3PM": {
-          "blended_allowed": 1.18,
-          "prior_allowed": 1.56,
-          "current_allowed": 1.08,
-          "prior_player_games": 381,
-          "current_player_games": 83,
+          "blended_allowed": 1.4,
+          "prior_allowed": 1.61,
+          "current_allowed": 1.33,
+          "prior_player_games": 362,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
+          "current_weight_pct": 75.9
         },
         "PRA": {
-          "blended_allowed": 16.11,
-          "prior_allowed": 18.47,
-          "current_allowed": 15.54,
-          "prior_player_games": 381,
-          "current_player_games": 83,
+          "blended_allowed": 15.57,
+          "prior_allowed": 18.07,
+          "current_allowed": 14.78,
+          "prior_player_games": 362,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 80.6
+          "current_weight_pct": 75.9
         }
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 11.45,
-          "prior_allowed": 11.2,
-          "current_allowed": 11.53,
-          "prior_player_games": 289,
-          "current_player_games": 58,
+          "blended_allowed": 11.55,
+          "prior_allowed": 12.63,
+          "current_allowed": 11.16,
+          "prior_player_games": 273,
+          "current_player_games": 55,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.4
+          "current_weight_pct": 73.3
         },
         "REB": {
-          "blended_allowed": 4.65,
-          "prior_allowed": 4.74,
-          "current_allowed": 4.62,
-          "prior_player_games": 289,
-          "current_player_games": 58,
+          "blended_allowed": 4.13,
+          "prior_allowed": 4.85,
+          "current_allowed": 3.87,
+          "prior_player_games": 273,
+          "current_player_games": 55,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.4
+          "current_weight_pct": 73.3
         },
         "AST": {
-          "blended_allowed": 1.75,
-          "prior_allowed": 2.09,
-          "current_allowed": 1.64,
-          "prior_player_games": 289,
-          "current_player_games": 58,
+          "blended_allowed": 2.34,
+          "prior_allowed": 2.66,
+          "current_allowed": 2.22,
+          "prior_player_games": 273,
+          "current_player_games": 55,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.4
+          "current_weight_pct": 73.3
         },
         "3PM": {
-          "blended_allowed": 1.26,
-          "prior_allowed": 1.21,
-          "current_allowed": 1.28,
-          "prior_player_games": 289,
-          "current_player_games": 58,
+          "blended_allowed": 1.42,
+          "prior_allowed": 1.36,
+          "current_allowed": 1.44,
+          "prior_player_games": 273,
+          "current_player_games": 55,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.4
+          "current_weight_pct": 73.3
         },
         "PRA": {
-          "blended_allowed": 17.85,
-          "prior_allowed": 18.03,
-          "current_allowed": 17.79,
-          "prior_player_games": 289,
-          "current_player_games": 58,
+          "blended_allowed": 18.02,
+          "prior_allowed": 20.14,
+          "current_allowed": 17.25,
+          "prior_player_games": 273,
+          "current_player_games": 55,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 74.4
+          "current_weight_pct": 73.3
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 9.77,
-          "prior_allowed": 10.26,
-          "current_allowed": 9.35,
-          "prior_player_games": 128,
+          "blended_allowed": 8.7,
+          "prior_allowed": 9.89,
+          "current_allowed": 7.57,
+          "prior_player_games": 126,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "REB": {
+          "blended_allowed": 6.75,
+          "prior_allowed": 6.34,
+          "current_allowed": 7.14,
+          "prior_player_games": 126,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "AST": {
+          "blended_allowed": 1.62,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.67,
+          "prior_player_games": 126,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "3PM": {
+          "blended_allowed": 0.5,
+          "prior_allowed": 0.63,
+          "current_allowed": 0.38,
+          "prior_player_games": 126,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "PRA": {
+          "blended_allowed": 17.07,
+          "prior_allowed": 17.79,
+          "current_allowed": 16.38,
+          "prior_player_games": 126,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        }
+      }
+    },
+    "Washington Wizards": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.47,
+          "prior_allowed": 12.15,
+          "current_allowed": 11.29,
+          "prior_player_games": 370,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "REB": {
+          "blended_allowed": 3.29,
+          "prior_allowed": 3.41,
+          "current_allowed": 3.26,
+          "prior_player_games": 370,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "AST": {
+          "blended_allowed": 3.64,
+          "prior_allowed": 3.52,
+          "current_allowed": 3.67,
+          "prior_player_games": 370,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "3PM": {
+          "blended_allowed": 1.32,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.26,
+          "prior_player_games": 370,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "PRA": {
+          "blended_allowed": 18.39,
+          "prior_allowed": 19.08,
+          "current_allowed": 18.22,
+          "prior_player_games": 370,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 11.23,
+          "prior_allowed": 11.83,
+          "current_allowed": 11.03,
+          "prior_player_games": 289,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "REB": {
+          "blended_allowed": 4.83,
+          "prior_allowed": 4.9,
+          "current_allowed": 4.81,
+          "prior_player_games": 289,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "AST": {
+          "blended_allowed": 1.98,
+          "prior_allowed": 2.32,
+          "current_allowed": 1.87,
+          "prior_player_games": 289,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "3PM": {
+          "blended_allowed": 1.23,
+          "prior_allowed": 1.25,
+          "current_allowed": 1.22,
+          "prior_player_games": 289,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "PRA": {
+          "blended_allowed": 18.04,
+          "prior_allowed": 19.06,
+          "current_allowed": 17.71,
+          "prior_player_games": 289,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 10.58,
+          "prior_allowed": 12.25,
+          "current_allowed": 9.13,
+          "prior_player_games": 130,
           "current_player_games": 23,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 53.5
         },
         "REB": {
-          "blended_allowed": 6.54,
-          "prior_allowed": 6.81,
-          "current_allowed": 6.3,
-          "prior_player_games": 128,
+          "blended_allowed": 7.11,
+          "prior_allowed": 7.15,
+          "current_allowed": 7.09,
+          "prior_player_games": 130,
           "current_player_games": 23,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 53.5
         },
         "AST": {
-          "blended_allowed": 1.95,
-          "prior_allowed": 1.69,
-          "current_allowed": 2.17,
-          "prior_player_games": 128,
+          "blended_allowed": 1.74,
+          "prior_allowed": 1.9,
+          "current_allowed": 1.61,
+          "prior_player_games": 130,
           "current_player_games": 23,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 53.5
         },
         "3PM": {
-          "blended_allowed": 0.72,
-          "prior_allowed": 0.7,
-          "current_allowed": 0.74,
-          "prior_player_games": 128,
+          "blended_allowed": 0.67,
+          "prior_allowed": 0.75,
+          "current_allowed": 0.61,
+          "prior_player_games": 130,
           "current_player_games": 23,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 53.5
         },
         "PRA": {
-          "blended_allowed": 18.26,
-          "prior_allowed": 18.76,
+          "blended_allowed": 19.44,
+          "prior_allowed": 21.3,
           "current_allowed": 17.83,
-          "prior_player_games": 128,
+          "prior_player_games": 130,
           "current_player_games": 23,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 53.5
@@ -3007,6 +1291,1150 @@
           "current_player_games": 27,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 57.4
+        }
+      }
+    },
+    "Toronto Raptors": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.55,
+          "prior_allowed": 11.71,
+          "current_allowed": 10.27,
+          "prior_player_games": 379,
+          "current_player_games": 82,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.4
+        },
+        "REB": {
+          "blended_allowed": 2.76,
+          "prior_allowed": 3.0,
+          "current_allowed": 2.71,
+          "prior_player_games": 379,
+          "current_player_games": 82,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.4
+        },
+        "AST": {
+          "blended_allowed": 2.88,
+          "prior_allowed": 2.85,
+          "current_allowed": 2.89,
+          "prior_player_games": 379,
+          "current_player_games": 82,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.4
+        },
+        "3PM": {
+          "blended_allowed": 1.43,
+          "prior_allowed": 1.55,
+          "current_allowed": 1.4,
+          "prior_player_games": 379,
+          "current_player_games": 82,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.4
+        },
+        "PRA": {
+          "blended_allowed": 16.2,
+          "prior_allowed": 17.56,
+          "current_allowed": 15.87,
+          "prior_player_games": 379,
+          "current_player_games": 82,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.4
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.35,
+          "prior_allowed": 10.15,
+          "current_allowed": 9.07,
+          "prior_player_games": 287,
+          "current_player_games": 57,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.0
+        },
+        "REB": {
+          "blended_allowed": 3.76,
+          "prior_allowed": 4.44,
+          "current_allowed": 3.53,
+          "prior_player_games": 287,
+          "current_player_games": 57,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.0
+        },
+        "AST": {
+          "blended_allowed": 1.54,
+          "prior_allowed": 1.94,
+          "current_allowed": 1.4,
+          "prior_player_games": 287,
+          "current_player_games": 57,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.0
+        },
+        "3PM": {
+          "blended_allowed": 0.95,
+          "prior_allowed": 1.05,
+          "current_allowed": 0.91,
+          "prior_player_games": 287,
+          "current_player_games": 57,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.0
+        },
+        "PRA": {
+          "blended_allowed": 14.66,
+          "prior_allowed": 16.53,
+          "current_allowed": 14.0,
+          "prior_player_games": 287,
+          "current_player_games": 57,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.0
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 8.42,
+          "prior_allowed": 9.32,
+          "current_allowed": 7.79,
+          "prior_player_games": 130,
+          "current_player_games": 28,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 58.3
+        },
+        "REB": {
+          "blended_allowed": 6.37,
+          "prior_allowed": 6.79,
+          "current_allowed": 6.07,
+          "prior_player_games": 130,
+          "current_player_games": 28,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 58.3
+        },
+        "AST": {
+          "blended_allowed": 1.56,
+          "prior_allowed": 1.54,
+          "current_allowed": 1.57,
+          "prior_player_games": 130,
+          "current_player_games": 28,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 58.3
+        },
+        "3PM": {
+          "blended_allowed": 0.42,
+          "prior_allowed": 0.51,
+          "current_allowed": 0.36,
+          "prior_player_games": 130,
+          "current_player_games": 28,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 58.3
+        },
+        "PRA": {
+          "blended_allowed": 16.35,
+          "prior_allowed": 17.65,
+          "current_allowed": 15.43,
+          "prior_player_games": 130,
+          "current_player_games": 28,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 58.3
+        }
+      }
+    },
+    "Minnesota Timberwolves": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.51,
+          "prior_allowed": 11.11,
+          "current_allowed": 10.35,
+          "prior_player_games": 390,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "REB": {
+          "blended_allowed": 3.2,
+          "prior_allowed": 3.04,
+          "current_allowed": 3.25,
+          "prior_player_games": 390,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "AST": {
+          "blended_allowed": 2.73,
+          "prior_allowed": 2.99,
+          "current_allowed": 2.66,
+          "prior_player_games": 390,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "3PM": {
+          "blended_allowed": 1.37,
+          "prior_allowed": 1.35,
+          "current_allowed": 1.38,
+          "prior_player_games": 390,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "PRA": {
+          "blended_allowed": 16.44,
+          "prior_allowed": 17.13,
+          "current_allowed": 16.26,
+          "prior_player_games": 390,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.83,
+          "prior_allowed": 11.16,
+          "current_allowed": 9.41,
+          "prior_player_games": 292,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "REB": {
+          "blended_allowed": 4.17,
+          "prior_allowed": 4.52,
+          "current_allowed": 4.06,
+          "prior_player_games": 292,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "AST": {
+          "blended_allowed": 1.86,
+          "prior_allowed": 1.88,
+          "current_allowed": 1.86,
+          "prior_player_games": 292,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "3PM": {
+          "blended_allowed": 0.97,
+          "prior_allowed": 1.13,
+          "current_allowed": 0.92,
+          "prior_player_games": 292,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        },
+        "PRA": {
+          "blended_allowed": 15.87,
+          "prior_allowed": 17.55,
+          "current_allowed": 15.33,
+          "prior_player_games": 292,
+          "current_player_games": 63,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.9
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 7.97,
+          "prior_allowed": 10.68,
+          "current_allowed": 6.28,
+          "prior_player_games": 120,
+          "current_player_games": 32,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 61.5
+        },
+        "REB": {
+          "blended_allowed": 5.46,
+          "prior_allowed": 6.66,
+          "current_allowed": 4.72,
+          "prior_player_games": 120,
+          "current_player_games": 32,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 61.5
+        },
+        "AST": {
+          "blended_allowed": 1.73,
+          "prior_allowed": 2.2,
+          "current_allowed": 1.44,
+          "prior_player_games": 120,
+          "current_player_games": 32,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 61.5
+        },
+        "3PM": {
+          "blended_allowed": 0.51,
+          "prior_allowed": 0.67,
+          "current_allowed": 0.41,
+          "prior_player_games": 120,
+          "current_player_games": 32,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 61.5
+        },
+        "PRA": {
+          "blended_allowed": 15.17,
+          "prior_allowed": 19.53,
+          "current_allowed": 12.44,
+          "prior_player_games": 120,
+          "current_player_games": 32,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 61.5
+        }
+      }
+    },
+    "Boston Celtics": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 9.41,
+          "prior_allowed": 10.69,
+          "current_allowed": 9.06,
+          "prior_player_games": 382,
+          "current_player_games": 72,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.3
+        },
+        "REB": {
+          "blended_allowed": 2.81,
+          "prior_allowed": 3.07,
+          "current_allowed": 2.74,
+          "prior_player_games": 382,
+          "current_player_games": 72,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.3
+        },
+        "AST": {
+          "blended_allowed": 2.72,
+          "prior_allowed": 3.01,
+          "current_allowed": 2.64,
+          "prior_player_games": 382,
+          "current_player_games": 72,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.3
+        },
+        "3PM": {
+          "blended_allowed": 1.4,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.36,
+          "prior_player_games": 382,
+          "current_player_games": 72,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.3
+        },
+        "PRA": {
+          "blended_allowed": 14.94,
+          "prior_allowed": 16.77,
+          "current_allowed": 14.43,
+          "prior_player_games": 382,
+          "current_player_games": 72,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.3
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.39,
+          "prior_allowed": 10.33,
+          "current_allowed": 9.1,
+          "prior_player_games": 290,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "REB": {
+          "blended_allowed": 4.34,
+          "prior_allowed": 4.12,
+          "current_allowed": 4.4,
+          "prior_player_games": 290,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "AST": {
+          "blended_allowed": 1.9,
+          "prior_allowed": 1.83,
+          "current_allowed": 1.93,
+          "prior_player_games": 290,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "3PM": {
+          "blended_allowed": 1.34,
+          "prior_allowed": 1.32,
+          "current_allowed": 1.34,
+          "prior_player_games": 290,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "PRA": {
+          "blended_allowed": 15.63,
+          "prior_allowed": 16.29,
+          "current_allowed": 15.43,
+          "prior_player_games": 290,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 8.28,
+          "prior_allowed": 9.01,
+          "current_allowed": 7.67,
+          "prior_player_games": 135,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "REB": {
+          "blended_allowed": 5.26,
+          "prior_allowed": 6.03,
+          "current_allowed": 4.62,
+          "prior_player_games": 135,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "AST": {
+          "blended_allowed": 1.62,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.67,
+          "prior_player_games": 135,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "3PM": {
+          "blended_allowed": 0.63,
+          "prior_allowed": 0.7,
+          "current_allowed": 0.58,
+          "prior_player_games": 135,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "PRA": {
+          "blended_allowed": 15.16,
+          "prior_allowed": 16.59,
+          "current_allowed": 13.96,
+          "prior_player_games": 135,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        }
+      }
+    },
+    "Memphis Grizzlies": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.16,
+          "prior_allowed": 12.26,
+          "current_allowed": 9.62,
+          "prior_player_games": 348,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "REB": {
+          "blended_allowed": 2.59,
+          "prior_allowed": 3.34,
+          "current_allowed": 2.4,
+          "prior_player_games": 348,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "AST": {
+          "blended_allowed": 2.69,
+          "prior_allowed": 3.4,
+          "current_allowed": 2.51,
+          "prior_player_games": 348,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "3PM": {
+          "blended_allowed": 1.27,
+          "prior_allowed": 1.67,
+          "current_allowed": 1.17,
+          "prior_player_games": 348,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        },
+        "PRA": {
+          "blended_allowed": 15.44,
+          "prior_allowed": 19.0,
+          "current_allowed": 14.53,
+          "prior_player_games": 348,
+          "current_player_games": 78,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.6
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.57,
+          "prior_allowed": 12.1,
+          "current_allowed": 10.09,
+          "prior_player_games": 272,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "REB": {
+          "blended_allowed": 4.4,
+          "prior_allowed": 5.04,
+          "current_allowed": 4.2,
+          "prior_player_games": 272,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "AST": {
+          "blended_allowed": 1.81,
+          "prior_allowed": 2.2,
+          "current_allowed": 1.69,
+          "prior_player_games": 272,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "3PM": {
+          "blended_allowed": 1.16,
+          "prior_allowed": 1.32,
+          "current_allowed": 1.11,
+          "prior_player_games": 272,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "PRA": {
+          "blended_allowed": 16.78,
+          "prior_allowed": 19.33,
+          "current_allowed": 15.98,
+          "prior_player_games": 272,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 9.49,
+          "prior_allowed": 10.66,
+          "current_allowed": 8.38,
+          "prior_player_games": 120,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "REB": {
+          "blended_allowed": 6.28,
+          "prior_allowed": 7.22,
+          "current_allowed": 5.38,
+          "prior_player_games": 120,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "AST": {
+          "blended_allowed": 2.21,
+          "prior_allowed": 2.23,
+          "current_allowed": 2.19,
+          "prior_player_games": 120,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "3PM": {
+          "blended_allowed": 0.52,
+          "prior_allowed": 0.57,
+          "current_allowed": 0.48,
+          "prior_player_games": 120,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "PRA": {
+          "blended_allowed": 17.98,
+          "prior_allowed": 20.12,
+          "current_allowed": 15.95,
+          "prior_player_games": 120,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        }
+      }
+    },
+    "Chicago Bulls": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.38,
+          "prior_allowed": 11.7,
+          "current_allowed": 11.29,
+          "prior_player_games": 367,
+          "current_player_games": 75,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.9
+        },
+        "REB": {
+          "blended_allowed": 3.11,
+          "prior_allowed": 3.29,
+          "current_allowed": 3.07,
+          "prior_player_games": 367,
+          "current_player_games": 75,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.9
+        },
+        "AST": {
+          "blended_allowed": 3.08,
+          "prior_allowed": 3.4,
+          "current_allowed": 3.0,
+          "prior_player_games": 367,
+          "current_player_games": 75,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.9
+        },
+        "3PM": {
+          "blended_allowed": 1.55,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.55,
+          "prior_player_games": 367,
+          "current_player_games": 75,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.9
+        },
+        "PRA": {
+          "blended_allowed": 17.58,
+          "prior_allowed": 18.4,
+          "current_allowed": 17.36,
+          "prior_player_games": 367,
+          "current_player_games": 75,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.9
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 12.18,
+          "prior_allowed": 12.64,
+          "current_allowed": 11.98,
+          "prior_player_games": 276,
+          "current_player_games": 47,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 70.1
+        },
+        "REB": {
+          "blended_allowed": 4.81,
+          "prior_allowed": 4.91,
+          "current_allowed": 4.77,
+          "prior_player_games": 276,
+          "current_player_games": 47,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 70.1
+        },
+        "AST": {
+          "blended_allowed": 2.49,
+          "prior_allowed": 2.25,
+          "current_allowed": 2.6,
+          "prior_player_games": 276,
+          "current_player_games": 47,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 70.1
+        },
+        "3PM": {
+          "blended_allowed": 1.15,
+          "prior_allowed": 1.41,
+          "current_allowed": 1.04,
+          "prior_player_games": 276,
+          "current_player_games": 47,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 70.1
+        },
+        "PRA": {
+          "blended_allowed": 19.48,
+          "prior_allowed": 19.8,
+          "current_allowed": 19.34,
+          "prior_player_games": 276,
+          "current_player_games": 47,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 70.1
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 10.03,
+          "prior_allowed": 11.72,
+          "current_allowed": 8.73,
+          "prior_player_games": 126,
+          "current_player_games": 26,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 56.5
+        },
+        "REB": {
+          "blended_allowed": 6.66,
+          "prior_allowed": 6.91,
+          "current_allowed": 6.46,
+          "prior_player_games": 126,
+          "current_player_games": 26,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 56.5
+        },
+        "AST": {
+          "blended_allowed": 1.7,
+          "prior_allowed": 2.06,
+          "current_allowed": 1.42,
+          "prior_player_games": 126,
+          "current_player_games": 26,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 56.5
+        },
+        "3PM": {
+          "blended_allowed": 0.54,
+          "prior_allowed": 0.79,
+          "current_allowed": 0.35,
+          "prior_player_games": 126,
+          "current_player_games": 26,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 56.5
+        },
+        "PRA": {
+          "blended_allowed": 18.39,
+          "prior_allowed": 20.69,
+          "current_allowed": 16.62,
+          "prior_player_games": 126,
+          "current_player_games": 26,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 56.5
+        }
+      }
+    },
+    "Detroit Pistons": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.21,
+          "prior_allowed": 11.55,
+          "current_allowed": 9.8,
+          "prior_player_games": 369,
+          "current_player_games": 65,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.5
+        },
+        "REB": {
+          "blended_allowed": 2.4,
+          "prior_allowed": 2.98,
+          "current_allowed": 2.22,
+          "prior_player_games": 369,
+          "current_player_games": 65,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.5
+        },
+        "AST": {
+          "blended_allowed": 2.66,
+          "prior_allowed": 2.84,
+          "current_allowed": 2.6,
+          "prior_player_games": 369,
+          "current_player_games": 65,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.5
+        },
+        "3PM": {
+          "blended_allowed": 1.35,
+          "prior_allowed": 1.46,
+          "current_allowed": 1.32,
+          "prior_player_games": 369,
+          "current_player_games": 65,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.5
+        },
+        "PRA": {
+          "blended_allowed": 15.26,
+          "prior_allowed": 17.37,
+          "current_allowed": 14.62,
+          "prior_player_games": 369,
+          "current_player_games": 65,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.5
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.44,
+          "prior_allowed": 11.03,
+          "current_allowed": 10.23,
+          "prior_player_games": 277,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "REB": {
+          "blended_allowed": 4.95,
+          "prior_allowed": 4.29,
+          "current_allowed": 5.18,
+          "prior_player_games": 277,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "AST": {
+          "blended_allowed": 1.91,
+          "prior_allowed": 1.87,
+          "current_allowed": 1.93,
+          "prior_player_games": 277,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "3PM": {
+          "blended_allowed": 1.1,
+          "prior_allowed": 1.27,
+          "current_allowed": 1.04,
+          "prior_player_games": 277,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "PRA": {
+          "blended_allowed": 17.3,
+          "prior_allowed": 17.19,
+          "current_allowed": 17.34,
+          "prior_player_games": 277,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 8.67,
+          "prior_allowed": 8.77,
+          "current_allowed": 8.58,
+          "prior_player_games": 131,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "REB": {
+          "blended_allowed": 6.39,
+          "prior_allowed": 6.11,
+          "current_allowed": 6.62,
+          "prior_player_games": 131,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "AST": {
+          "blended_allowed": 1.48,
+          "prior_allowed": 1.7,
+          "current_allowed": 1.29,
+          "prior_player_games": 131,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "3PM": {
+          "blended_allowed": 0.53,
+          "prior_allowed": 0.61,
+          "current_allowed": 0.46,
+          "prior_player_games": 131,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        },
+        "PRA": {
+          "blended_allowed": 16.54,
+          "prior_allowed": 16.59,
+          "current_allowed": 16.5,
+          "prior_player_games": 131,
+          "current_player_games": 24,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 54.5
+        }
+      }
+    },
+    "Utah Jazz": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 12.49,
+          "prior_allowed": 12.56,
+          "current_allowed": 12.47,
+          "prior_player_games": 369,
+          "current_player_games": 66,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.7
+        },
+        "REB": {
+          "blended_allowed": 3.31,
+          "prior_allowed": 3.28,
+          "current_allowed": 3.32,
+          "prior_player_games": 369,
+          "current_player_games": 66,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.7
+        },
+        "AST": {
+          "blended_allowed": 3.21,
+          "prior_allowed": 3.51,
+          "current_allowed": 3.12,
+          "prior_player_games": 369,
+          "current_player_games": 66,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.7
+        },
+        "3PM": {
+          "blended_allowed": 1.53,
+          "prior_allowed": 1.83,
+          "current_allowed": 1.44,
+          "prior_player_games": 369,
+          "current_player_games": 66,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.7
+        },
+        "PRA": {
+          "blended_allowed": 19.01,
+          "prior_allowed": 19.35,
+          "current_allowed": 18.91,
+          "prior_player_games": 369,
+          "current_player_games": 66,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.7
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.96,
+          "prior_allowed": 12.28,
+          "current_allowed": 10.58,
+          "prior_player_games": 267,
+          "current_player_games": 69,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.5
+        },
+        "REB": {
+          "blended_allowed": 4.53,
+          "prior_allowed": 4.75,
+          "current_allowed": 4.46,
+          "prior_player_games": 267,
+          "current_player_games": 69,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.5
+        },
+        "AST": {
+          "blended_allowed": 1.75,
+          "prior_allowed": 2.6,
+          "current_allowed": 1.51,
+          "prior_player_games": 267,
+          "current_player_games": 69,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.5
+        },
+        "3PM": {
+          "blended_allowed": 1.23,
+          "prior_allowed": 1.39,
+          "current_allowed": 1.19,
+          "prior_player_games": 267,
+          "current_player_games": 69,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.5
+        },
+        "PRA": {
+          "blended_allowed": 17.24,
+          "prior_allowed": 19.63,
+          "current_allowed": 16.55,
+          "prior_player_games": 267,
+          "current_player_games": 69,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.5
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 8.58,
+          "prior_allowed": 10.71,
+          "current_allowed": 7.1,
+          "prior_player_games": 128,
+          "current_player_games": 29,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 59.2
+        },
+        "REB": {
+          "blended_allowed": 5.78,
+          "prior_allowed": 6.7,
+          "current_allowed": 5.14,
+          "prior_player_games": 128,
+          "current_player_games": 29,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 59.2
+        },
+        "AST": {
+          "blended_allowed": 1.53,
+          "prior_allowed": 2.05,
+          "current_allowed": 1.17,
+          "prior_player_games": 128,
+          "current_player_games": 29,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 59.2
+        },
+        "3PM": {
+          "blended_allowed": 0.49,
+          "prior_allowed": 0.64,
+          "current_allowed": 0.38,
+          "prior_player_games": 128,
+          "current_player_games": 29,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 59.2
+        },
+        "PRA": {
+          "blended_allowed": 15.89,
+          "prior_allowed": 19.47,
+          "current_allowed": 13.41,
+          "prior_player_games": 128,
+          "current_player_games": 29,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 59.2
+        }
+      }
+    },
+    "Los Angeles Lakers": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.09,
+          "prior_allowed": 11.37,
+          "current_allowed": 11.02,
+          "prior_player_games": 378,
+          "current_player_games": 85,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 81.0
+        },
+        "REB": {
+          "blended_allowed": 2.94,
+          "prior_allowed": 2.74,
+          "current_allowed": 2.99,
+          "prior_player_games": 378,
+          "current_player_games": 85,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 81.0
+        },
+        "AST": {
+          "blended_allowed": 3.13,
+          "prior_allowed": 3.32,
+          "current_allowed": 3.08,
+          "prior_player_games": 378,
+          "current_player_games": 85,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 81.0
+        },
+        "3PM": {
+          "blended_allowed": 1.62,
+          "prior_allowed": 1.49,
+          "current_allowed": 1.65,
+          "prior_player_games": 378,
+          "current_player_games": 85,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 81.0
+        },
+        "PRA": {
+          "blended_allowed": 17.16,
+          "prior_allowed": 17.42,
+          "current_allowed": 17.09,
+          "prior_player_games": 378,
+          "current_player_games": 85,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 81.0
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.27,
+          "prior_allowed": 11.97,
+          "current_allowed": 9.73,
+          "prior_player_games": 281,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "REB": {
+          "blended_allowed": 4.26,
+          "prior_allowed": 4.59,
+          "current_allowed": 4.16,
+          "prior_player_games": 281,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "AST": {
+          "blended_allowed": 1.98,
+          "prior_allowed": 2.16,
+          "current_allowed": 1.92,
+          "prior_player_games": 281,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "3PM": {
+          "blended_allowed": 1.19,
+          "prior_allowed": 1.31,
+          "current_allowed": 1.16,
+          "prior_player_games": 281,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "PRA": {
+          "blended_allowed": 16.51,
+          "prior_allowed": 18.72,
+          "current_allowed": 15.81,
+          "prior_player_games": 281,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 8.78,
+          "prior_allowed": 9.46,
+          "current_allowed": 8.1,
+          "prior_player_games": 128,
+          "current_player_games": 20,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 50.0
+        },
+        "REB": {
+          "blended_allowed": 5.78,
+          "prior_allowed": 6.27,
+          "current_allowed": 5.3,
+          "prior_player_games": 128,
+          "current_player_games": 20,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 50.0
+        },
+        "AST": {
+          "blended_allowed": 1.5,
+          "prior_allowed": 1.8,
+          "current_allowed": 1.2,
+          "prior_player_games": 128,
+          "current_player_games": 20,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 50.0
+        },
+        "3PM": {
+          "blended_allowed": 0.55,
+          "prior_allowed": 0.41,
+          "current_allowed": 0.7,
+          "prior_player_games": 128,
+          "current_player_games": 20,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 50.0
+        },
+        "PRA": {
+          "blended_allowed": 16.07,
+          "prior_allowed": 17.53,
+          "current_allowed": 14.6,
+          "prior_player_games": 128,
+          "current_player_games": 20,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 50.0
         }
       }
     },
@@ -3296,6 +2724,578 @@
         }
       }
     },
+    "LA Clippers": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.55,
+          "prior_allowed": 11.28,
+          "current_allowed": 11.62,
+          "prior_player_games": 373,
+          "current_player_games": 74,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.7
+        },
+        "REB": {
+          "blended_allowed": 2.88,
+          "prior_allowed": 2.96,
+          "current_allowed": 2.86,
+          "prior_player_games": 373,
+          "current_player_games": 74,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.7
+        },
+        "AST": {
+          "blended_allowed": 3.06,
+          "prior_allowed": 3.08,
+          "current_allowed": 3.05,
+          "prior_player_games": 373,
+          "current_player_games": 74,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.7
+        },
+        "3PM": {
+          "blended_allowed": 1.62,
+          "prior_allowed": 1.63,
+          "current_allowed": 1.62,
+          "prior_player_games": 373,
+          "current_player_games": 74,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.7
+        },
+        "PRA": {
+          "blended_allowed": 17.49,
+          "prior_allowed": 17.32,
+          "current_allowed": 17.54,
+          "prior_player_games": 373,
+          "current_player_games": 74,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 78.7
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.24,
+          "prior_allowed": 10.52,
+          "current_allowed": 8.75,
+          "prior_player_games": 307,
+          "current_player_games": 53,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 72.6
+        },
+        "REB": {
+          "blended_allowed": 4.3,
+          "prior_allowed": 4.25,
+          "current_allowed": 4.32,
+          "prior_player_games": 307,
+          "current_player_games": 53,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 72.6
+        },
+        "AST": {
+          "blended_allowed": 1.82,
+          "prior_allowed": 2.09,
+          "current_allowed": 1.72,
+          "prior_player_games": 307,
+          "current_player_games": 53,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 72.6
+        },
+        "3PM": {
+          "blended_allowed": 0.95,
+          "prior_allowed": 1.1,
+          "current_allowed": 0.89,
+          "prior_player_games": 307,
+          "current_player_games": 53,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 72.6
+        },
+        "PRA": {
+          "blended_allowed": 15.36,
+          "prior_allowed": 16.86,
+          "current_allowed": 14.79,
+          "prior_player_games": 307,
+          "current_player_games": 53,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 72.6
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 11.0,
+          "prior_allowed": 10.05,
+          "current_allowed": 12.12,
+          "prior_player_games": 140,
+          "current_player_games": 17,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 45.9
+        },
+        "REB": {
+          "blended_allowed": 6.97,
+          "prior_allowed": 6.34,
+          "current_allowed": 7.71,
+          "prior_player_games": 140,
+          "current_player_games": 17,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 45.9
+        },
+        "AST": {
+          "blended_allowed": 1.93,
+          "prior_allowed": 1.68,
+          "current_allowed": 2.24,
+          "prior_player_games": 140,
+          "current_player_games": 17,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 45.9
+        },
+        "3PM": {
+          "blended_allowed": 0.59,
+          "prior_allowed": 0.59,
+          "current_allowed": 0.59,
+          "prior_player_games": 140,
+          "current_player_games": 17,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 45.9
+        },
+        "PRA": {
+          "blended_allowed": 19.9,
+          "prior_allowed": 18.07,
+          "current_allowed": 22.06,
+          "prior_player_games": 140,
+          "current_player_games": 17,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 45.9
+        }
+      }
+    },
+    "San Antonio Spurs": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.04,
+          "prior_allowed": 10.93,
+          "current_allowed": 9.83,
+          "prior_player_games": 385,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "REB": {
+          "blended_allowed": 3.37,
+          "prior_allowed": 3.1,
+          "current_allowed": 3.43,
+          "prior_player_games": 385,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "AST": {
+          "blended_allowed": 2.82,
+          "prior_allowed": 2.93,
+          "current_allowed": 2.8,
+          "prior_player_games": 385,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "3PM": {
+          "blended_allowed": 1.37,
+          "prior_allowed": 1.45,
+          "current_allowed": 1.35,
+          "prior_player_games": 385,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "PRA": {
+          "blended_allowed": 16.24,
+          "prior_allowed": 16.96,
+          "current_allowed": 16.06,
+          "prior_player_games": 385,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.63,
+          "prior_allowed": 11.0,
+          "current_allowed": 9.19,
+          "prior_player_games": 288,
+          "current_player_games": 62,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.6
+        },
+        "REB": {
+          "blended_allowed": 4.13,
+          "prior_allowed": 4.47,
+          "current_allowed": 4.02,
+          "prior_player_games": 288,
+          "current_player_games": 62,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.6
+        },
+        "AST": {
+          "blended_allowed": 1.95,
+          "prior_allowed": 2.18,
+          "current_allowed": 1.87,
+          "prior_player_games": 288,
+          "current_player_games": 62,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.6
+        },
+        "3PM": {
+          "blended_allowed": 1.07,
+          "prior_allowed": 1.28,
+          "current_allowed": 1.0,
+          "prior_player_games": 288,
+          "current_player_games": 62,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.6
+        },
+        "PRA": {
+          "blended_allowed": 15.71,
+          "prior_allowed": 17.65,
+          "current_allowed": 15.08,
+          "prior_player_games": 288,
+          "current_player_games": 62,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.6
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 9.49,
+          "prior_allowed": 10.3,
+          "current_allowed": 8.78,
+          "prior_player_games": 132,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "REB": {
+          "blended_allowed": 5.41,
+          "prior_allowed": 6.33,
+          "current_allowed": 4.61,
+          "prior_player_games": 132,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "AST": {
+          "blended_allowed": 1.76,
+          "prior_allowed": 2.08,
+          "current_allowed": 1.48,
+          "prior_player_games": 132,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "3PM": {
+          "blended_allowed": 0.57,
+          "prior_allowed": 0.67,
+          "current_allowed": 0.48,
+          "prior_player_games": 132,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "PRA": {
+          "blended_allowed": 16.65,
+          "prior_allowed": 18.7,
+          "current_allowed": 14.87,
+          "prior_player_games": 132,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        }
+      }
+    },
+    "Miami Heat": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 12.19,
+          "prior_allowed": 12.75,
+          "current_allowed": 12.05,
+          "prior_player_games": 373,
+          "current_player_games": 81,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.2
+        },
+        "REB": {
+          "blended_allowed": 3.19,
+          "prior_allowed": 3.73,
+          "current_allowed": 3.05,
+          "prior_player_games": 373,
+          "current_player_games": 81,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.2
+        },
+        "AST": {
+          "blended_allowed": 3.25,
+          "prior_allowed": 3.48,
+          "current_allowed": 3.2,
+          "prior_player_games": 373,
+          "current_player_games": 81,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.2
+        },
+        "3PM": {
+          "blended_allowed": 1.77,
+          "prior_allowed": 1.77,
+          "current_allowed": 1.77,
+          "prior_player_games": 373,
+          "current_player_games": 81,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.2
+        },
+        "PRA": {
+          "blended_allowed": 18.63,
+          "prior_allowed": 19.97,
+          "current_allowed": 18.3,
+          "prior_player_games": 373,
+          "current_player_games": 81,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.2
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.34,
+          "prior_allowed": 11.28,
+          "current_allowed": 8.68,
+          "prior_player_games": 290,
+          "current_player_games": 59,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.7
+        },
+        "REB": {
+          "blended_allowed": 4.59,
+          "prior_allowed": 4.78,
+          "current_allowed": 4.53,
+          "prior_player_games": 290,
+          "current_player_games": 59,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.7
+        },
+        "AST": {
+          "blended_allowed": 2.18,
+          "prior_allowed": 2.01,
+          "current_allowed": 2.24,
+          "prior_player_games": 290,
+          "current_player_games": 59,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.7
+        },
+        "3PM": {
+          "blended_allowed": 1.07,
+          "prior_allowed": 1.24,
+          "current_allowed": 1.02,
+          "prior_player_games": 290,
+          "current_player_games": 59,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.7
+        },
+        "PRA": {
+          "blended_allowed": 16.11,
+          "prior_allowed": 18.07,
+          "current_allowed": 15.44,
+          "prior_player_games": 290,
+          "current_player_games": 59,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.7
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 10.02,
+          "prior_allowed": 10.54,
+          "current_allowed": 9.47,
+          "prior_player_games": 123,
+          "current_player_games": 19,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 48.7
+        },
+        "REB": {
+          "blended_allowed": 6.65,
+          "prior_allowed": 6.82,
+          "current_allowed": 6.47,
+          "prior_player_games": 123,
+          "current_player_games": 19,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 48.7
+        },
+        "AST": {
+          "blended_allowed": 1.35,
+          "prior_allowed": 1.74,
+          "current_allowed": 0.95,
+          "prior_player_games": 123,
+          "current_player_games": 19,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 48.7
+        },
+        "3PM": {
+          "blended_allowed": 0.65,
+          "prior_allowed": 0.63,
+          "current_allowed": 0.68,
+          "prior_player_games": 123,
+          "current_player_games": 19,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 48.7
+        },
+        "PRA": {
+          "blended_allowed": 18.02,
+          "prior_allowed": 19.1,
+          "current_allowed": 16.89,
+          "prior_player_games": 123,
+          "current_player_games": 19,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 48.7
+        }
+      }
+    },
+    "Philadelphia 76ers": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 9.89,
+          "prior_allowed": 11.76,
+          "current_allowed": 9.45,
+          "prior_player_games": 381,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "REB": {
+          "blended_allowed": 3.27,
+          "prior_allowed": 3.33,
+          "current_allowed": 3.25,
+          "prior_player_games": 381,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "AST": {
+          "blended_allowed": 2.95,
+          "prior_allowed": 3.39,
+          "current_allowed": 2.84,
+          "prior_player_games": 381,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "3PM": {
+          "blended_allowed": 1.18,
+          "prior_allowed": 1.56,
+          "current_allowed": 1.08,
+          "prior_player_games": 381,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        },
+        "PRA": {
+          "blended_allowed": 16.11,
+          "prior_allowed": 18.47,
+          "current_allowed": 15.54,
+          "prior_player_games": 381,
+          "current_player_games": 83,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 80.6
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 11.45,
+          "prior_allowed": 11.2,
+          "current_allowed": 11.53,
+          "prior_player_games": 289,
+          "current_player_games": 58,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.4
+        },
+        "REB": {
+          "blended_allowed": 4.65,
+          "prior_allowed": 4.74,
+          "current_allowed": 4.62,
+          "prior_player_games": 289,
+          "current_player_games": 58,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.4
+        },
+        "AST": {
+          "blended_allowed": 1.75,
+          "prior_allowed": 2.09,
+          "current_allowed": 1.64,
+          "prior_player_games": 289,
+          "current_player_games": 58,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.4
+        },
+        "3PM": {
+          "blended_allowed": 1.26,
+          "prior_allowed": 1.21,
+          "current_allowed": 1.28,
+          "prior_player_games": 289,
+          "current_player_games": 58,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.4
+        },
+        "PRA": {
+          "blended_allowed": 17.85,
+          "prior_allowed": 18.03,
+          "current_allowed": 17.79,
+          "prior_player_games": 289,
+          "current_player_games": 58,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 74.4
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 9.77,
+          "prior_allowed": 10.26,
+          "current_allowed": 9.35,
+          "prior_player_games": 128,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "REB": {
+          "blended_allowed": 6.54,
+          "prior_allowed": 6.81,
+          "current_allowed": 6.3,
+          "prior_player_games": 128,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "AST": {
+          "blended_allowed": 1.95,
+          "prior_allowed": 1.69,
+          "current_allowed": 2.17,
+          "prior_player_games": 128,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "3PM": {
+          "blended_allowed": 0.72,
+          "prior_allowed": 0.7,
+          "current_allowed": 0.74,
+          "prior_player_games": 128,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        },
+        "PRA": {
+          "blended_allowed": 18.26,
+          "prior_allowed": 18.76,
+          "current_allowed": 17.83,
+          "prior_player_games": 128,
+          "current_player_games": 23,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 53.5
+        }
+      }
+    },
     "Oklahoma City Thunder": {
       "SG": {
         "PTS": {
@@ -3439,146 +3439,575 @@
         }
       }
     },
-    "Chicago Bulls": {
+    "Atlanta Hawks": {
       "SG": {
         "PTS": {
-          "blended_allowed": 11.38,
-          "prior_allowed": 11.7,
-          "current_allowed": 11.29,
-          "prior_player_games": 367,
-          "current_player_games": 75,
+          "blended_allowed": 10.74,
+          "prior_allowed": 11.6,
+          "current_allowed": 10.46,
+          "prior_player_games": 382,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
+          "current_weight_pct": 75.9
         },
         "REB": {
-          "blended_allowed": 3.11,
-          "prior_allowed": 3.29,
-          "current_allowed": 3.07,
-          "prior_player_games": 367,
-          "current_player_games": 75,
+          "blended_allowed": 3.0,
+          "prior_allowed": 3.26,
+          "current_allowed": 2.92,
+          "prior_player_games": 382,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
+          "current_weight_pct": 75.9
         },
         "AST": {
-          "blended_allowed": 3.08,
-          "prior_allowed": 3.4,
-          "current_allowed": 3.0,
-          "prior_player_games": 367,
-          "current_player_games": 75,
+          "blended_allowed": 3.07,
+          "prior_allowed": 3.15,
+          "current_allowed": 3.05,
+          "prior_player_games": 382,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
+          "current_weight_pct": 75.9
         },
         "3PM": {
-          "blended_allowed": 1.55,
-          "prior_allowed": 1.56,
-          "current_allowed": 1.55,
-          "prior_player_games": 367,
-          "current_player_games": 75,
+          "blended_allowed": 1.41,
+          "prior_allowed": 1.53,
+          "current_allowed": 1.37,
+          "prior_player_games": 382,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
+          "current_weight_pct": 75.9
         },
         "PRA": {
-          "blended_allowed": 17.58,
-          "prior_allowed": 18.4,
-          "current_allowed": 17.36,
-          "prior_player_games": 367,
-          "current_player_games": 75,
+          "blended_allowed": 16.81,
+          "prior_allowed": 18.02,
+          "current_allowed": 16.43,
+          "prior_player_games": 382,
+          "current_player_games": 63,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
+          "current_weight_pct": 75.9
         }
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 12.18,
-          "prior_allowed": 12.64,
-          "current_allowed": 11.98,
-          "prior_player_games": 276,
-          "current_player_games": 47,
+          "blended_allowed": 11.78,
+          "prior_allowed": 11.11,
+          "current_allowed": 12.02,
+          "prior_player_games": 299,
+          "current_player_games": 57,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 70.1
+          "current_weight_pct": 74.0
         },
         "REB": {
-          "blended_allowed": 4.81,
-          "prior_allowed": 4.91,
-          "current_allowed": 4.77,
-          "prior_player_games": 276,
-          "current_player_games": 47,
+          "blended_allowed": 5.0,
+          "prior_allowed": 4.61,
+          "current_allowed": 5.14,
+          "prior_player_games": 299,
+          "current_player_games": 57,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 70.1
+          "current_weight_pct": 74.0
         },
         "AST": {
-          "blended_allowed": 2.49,
-          "prior_allowed": 2.25,
-          "current_allowed": 2.6,
-          "prior_player_games": 276,
-          "current_player_games": 47,
+          "blended_allowed": 2.16,
+          "prior_allowed": 2.07,
+          "current_allowed": 2.19,
+          "prior_player_games": 299,
+          "current_player_games": 57,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 70.1
+          "current_weight_pct": 74.0
         },
         "3PM": {
-          "blended_allowed": 1.15,
-          "prior_allowed": 1.41,
-          "current_allowed": 1.04,
-          "prior_player_games": 276,
-          "current_player_games": 47,
+          "blended_allowed": 1.33,
+          "prior_allowed": 1.16,
+          "current_allowed": 1.39,
+          "prior_player_games": 299,
+          "current_player_games": 57,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 70.1
+          "current_weight_pct": 74.0
         },
         "PRA": {
-          "blended_allowed": 19.48,
-          "prior_allowed": 19.8,
-          "current_allowed": 19.34,
-          "prior_player_games": 276,
-          "current_player_games": 47,
+          "blended_allowed": 18.95,
+          "prior_allowed": 17.79,
+          "current_allowed": 19.35,
+          "prior_player_games": 299,
+          "current_player_games": 57,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 70.1
+          "current_weight_pct": 74.0
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 10.03,
-          "prior_allowed": 11.72,
-          "current_allowed": 8.73,
+          "blended_allowed": 10.75,
+          "prior_allowed": 10.67,
+          "current_allowed": 10.81,
           "prior_player_games": 126,
           "current_player_games": 26,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 56.5
         },
         "REB": {
-          "blended_allowed": 6.66,
-          "prior_allowed": 6.91,
-          "current_allowed": 6.46,
+          "blended_allowed": 6.84,
+          "prior_allowed": 7.28,
+          "current_allowed": 6.5,
           "prior_player_games": 126,
           "current_player_games": 26,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 56.5
         },
         "AST": {
-          "blended_allowed": 1.7,
-          "prior_allowed": 2.06,
-          "current_allowed": 1.42,
+          "blended_allowed": 2.41,
+          "prior_allowed": 1.94,
+          "current_allowed": 2.77,
           "prior_player_games": 126,
           "current_player_games": 26,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 56.5
         },
         "3PM": {
-          "blended_allowed": 0.54,
-          "prior_allowed": 0.79,
-          "current_allowed": 0.35,
+          "blended_allowed": 0.48,
+          "prior_allowed": 0.55,
+          "current_allowed": 0.42,
           "prior_player_games": 126,
           "current_player_games": 26,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 56.5
         },
         "PRA": {
-          "blended_allowed": 18.39,
-          "prior_allowed": 20.69,
-          "current_allowed": 16.62,
+          "blended_allowed": 19.99,
+          "prior_allowed": 19.88,
+          "current_allowed": 20.08,
           "prior_player_games": 126,
           "current_player_games": 26,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 56.5
+        }
+      }
+    },
+    "Portland Trail Blazers": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.09,
+          "prior_allowed": 11.29,
+          "current_allowed": 11.04,
+          "prior_player_games": 373,
+          "current_player_games": 76,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.2
+        },
+        "REB": {
+          "blended_allowed": 2.71,
+          "prior_allowed": 2.97,
+          "current_allowed": 2.64,
+          "prior_player_games": 373,
+          "current_player_games": 76,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.2
+        },
+        "AST": {
+          "blended_allowed": 2.44,
+          "prior_allowed": 3.03,
+          "current_allowed": 2.29,
+          "prior_player_games": 373,
+          "current_player_games": 76,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.2
+        },
+        "3PM": {
+          "blended_allowed": 1.33,
+          "prior_allowed": 1.42,
+          "current_allowed": 1.3,
+          "prior_player_games": 373,
+          "current_player_games": 76,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.2
+        },
+        "PRA": {
+          "blended_allowed": 16.25,
+          "prior_allowed": 17.29,
+          "current_allowed": 15.97,
+          "prior_player_games": 373,
+          "current_player_games": 76,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.2
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 9.27,
+          "prior_allowed": 11.77,
+          "current_allowed": 8.43,
+          "prior_player_games": 287,
+          "current_player_games": 60,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.0
+        },
+        "REB": {
+          "blended_allowed": 4.48,
+          "prior_allowed": 4.8,
+          "current_allowed": 4.37,
+          "prior_player_games": 287,
+          "current_player_games": 60,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.0
+        },
+        "AST": {
+          "blended_allowed": 1.93,
+          "prior_allowed": 2.22,
+          "current_allowed": 1.83,
+          "prior_player_games": 287,
+          "current_player_games": 60,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.0
+        },
+        "3PM": {
+          "blended_allowed": 1.02,
+          "prior_allowed": 1.23,
+          "current_allowed": 0.95,
+          "prior_player_games": 287,
+          "current_player_games": 60,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.0
+        },
+        "PRA": {
+          "blended_allowed": 15.67,
+          "prior_allowed": 18.8,
+          "current_allowed": 14.63,
+          "prior_player_games": 287,
+          "current_player_games": 60,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 75.0
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 11.02,
+          "prior_allowed": 12.15,
+          "current_allowed": 9.95,
+          "prior_player_games": 117,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "REB": {
+          "blended_allowed": 6.68,
+          "prior_allowed": 7.1,
+          "current_allowed": 6.29,
+          "prior_player_games": 117,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "AST": {
+          "blended_allowed": 2.05,
+          "prior_allowed": 2.15,
+          "current_allowed": 1.95,
+          "prior_player_games": 117,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "3PM": {
+          "blended_allowed": 0.6,
+          "prior_allowed": 0.79,
+          "current_allowed": 0.43,
+          "prior_player_games": 117,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        },
+        "PRA": {
+          "blended_allowed": 19.76,
+          "prior_allowed": 21.4,
+          "current_allowed": 18.19,
+          "prior_player_games": 117,
+          "current_player_games": 21,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 51.2
+        }
+      }
+    },
+    "Indiana Pacers": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 11.46,
+          "prior_allowed": 12.08,
+          "current_allowed": 11.27,
+          "prior_player_games": 382,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "REB": {
+          "blended_allowed": 3.18,
+          "prior_allowed": 3.41,
+          "current_allowed": 3.11,
+          "prior_player_games": 382,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "AST": {
+          "blended_allowed": 3.09,
+          "prior_allowed": 3.11,
+          "current_allowed": 3.08,
+          "prior_player_games": 382,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "3PM": {
+          "blended_allowed": 1.63,
+          "prior_allowed": 1.41,
+          "current_allowed": 1.7,
+          "prior_player_games": 382,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        },
+        "PRA": {
+          "blended_allowed": 17.73,
+          "prior_allowed": 18.6,
+          "current_allowed": 17.45,
+          "prior_player_games": 382,
+          "current_player_games": 64,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 76.2
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.15,
+          "prior_allowed": 10.95,
+          "current_allowed": 9.91,
+          "prior_player_games": 303,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "REB": {
+          "blended_allowed": 4.48,
+          "prior_allowed": 4.59,
+          "current_allowed": 4.45,
+          "prior_player_games": 303,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "AST": {
+          "blended_allowed": 1.99,
+          "prior_allowed": 1.92,
+          "current_allowed": 2.01,
+          "prior_player_games": 303,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "3PM": {
+          "blended_allowed": 1.16,
+          "prior_allowed": 1.11,
+          "current_allowed": 1.18,
+          "prior_player_games": 303,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        },
+        "PRA": {
+          "blended_allowed": 16.62,
+          "prior_allowed": 17.46,
+          "current_allowed": 16.37,
+          "prior_player_games": 303,
+          "current_player_games": 67,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 77.0
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 10.58,
+          "prior_allowed": 11.31,
+          "current_allowed": 9.91,
+          "prior_player_games": 117,
+          "current_player_games": 22,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 52.4
+        },
+        "REB": {
+          "blended_allowed": 7.2,
+          "prior_allowed": 7.27,
+          "current_allowed": 7.14,
+          "prior_player_games": 117,
+          "current_player_games": 22,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 52.4
+        },
+        "AST": {
+          "blended_allowed": 1.82,
+          "prior_allowed": 2.07,
+          "current_allowed": 1.59,
+          "prior_player_games": 117,
+          "current_player_games": 22,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 52.4
+        },
+        "3PM": {
+          "blended_allowed": 0.48,
+          "prior_allowed": 0.5,
+          "current_allowed": 0.45,
+          "prior_player_games": 117,
+          "current_player_games": 22,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 52.4
+        },
+        "PRA": {
+          "blended_allowed": 19.6,
+          "prior_allowed": 20.65,
+          "current_allowed": 18.64,
+          "prior_player_games": 117,
+          "current_player_games": 22,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 52.4
+        }
+      }
+    },
+    "Milwaukee Bucks": {
+      "SG": {
+        "PTS": {
+          "blended_allowed": 10.8,
+          "prior_allowed": 12.06,
+          "current_allowed": 10.47,
+          "prior_player_games": 378,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "REB": {
+          "blended_allowed": 3.16,
+          "prior_allowed": 3.45,
+          "current_allowed": 3.08,
+          "prior_player_games": 378,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "AST": {
+          "blended_allowed": 3.08,
+          "prior_allowed": 3.33,
+          "current_allowed": 3.01,
+          "prior_player_games": 378,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "3PM": {
+          "blended_allowed": 1.55,
+          "prior_allowed": 1.74,
+          "current_allowed": 1.51,
+          "prior_player_games": 378,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        },
+        "PRA": {
+          "blended_allowed": 17.03,
+          "prior_allowed": 18.84,
+          "current_allowed": 16.56,
+          "prior_player_games": 378,
+          "current_player_games": 77,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 79.4
+        }
+      },
+      "SF": {
+        "PTS": {
+          "blended_allowed": 10.78,
+          "prior_allowed": 11.13,
+          "current_allowed": 10.66,
+          "prior_player_games": 289,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "REB": {
+          "blended_allowed": 4.61,
+          "prior_allowed": 4.5,
+          "current_allowed": 4.64,
+          "prior_player_games": 289,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "AST": {
+          "blended_allowed": 2.03,
+          "prior_allowed": 2.26,
+          "current_allowed": 1.95,
+          "prior_player_games": 289,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "3PM": {
+          "blended_allowed": 1.38,
+          "prior_allowed": 1.38,
+          "current_allowed": 1.38,
+          "prior_player_games": 289,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        },
+        "PRA": {
+          "blended_allowed": 17.42,
+          "prior_allowed": 17.89,
+          "current_allowed": 17.25,
+          "prior_player_games": 289,
+          "current_player_games": 56,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 73.7
+        }
+      },
+      "C": {
+        "PTS": {
+          "blended_allowed": 10.23,
+          "prior_allowed": 9.46,
+          "current_allowed": 10.84,
+          "prior_player_games": 123,
+          "current_player_games": 25,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 55.6
+        },
+        "REB": {
+          "blended_allowed": 6.93,
+          "prior_allowed": 6.19,
+          "current_allowed": 7.52,
+          "prior_player_games": 123,
+          "current_player_games": 25,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 55.6
+        },
+        "AST": {
+          "blended_allowed": 1.8,
+          "prior_allowed": 1.6,
+          "current_allowed": 1.96,
+          "prior_player_games": 123,
+          "current_player_games": 25,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 55.6
+        },
+        "3PM": {
+          "blended_allowed": 0.49,
+          "prior_allowed": 0.5,
+          "current_allowed": 0.48,
+          "prior_player_games": 123,
+          "current_player_games": 25,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 55.6
+        },
+        "PRA": {
+          "blended_allowed": 18.96,
+          "prior_allowed": 17.25,
+          "current_allowed": 20.32,
+          "prior_player_games": 123,
+          "current_player_games": 25,
+          "prior_equivalent_weight": 20,
+          "current_weight_pct": 55.6
         }
       }
     },
@@ -3725,49 +4154,49 @@
         }
       }
     },
-    "Boston Celtics": {
+    "New Orleans Pelicans": {
       "SG": {
         "PTS": {
-          "blended_allowed": 9.41,
-          "prior_allowed": 10.69,
-          "current_allowed": 9.06,
-          "prior_player_games": 382,
+          "blended_allowed": 12.37,
+          "prior_allowed": 12.71,
+          "current_allowed": 12.28,
+          "prior_player_games": 347,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
         },
         "REB": {
-          "blended_allowed": 2.81,
-          "prior_allowed": 3.07,
-          "current_allowed": 2.74,
-          "prior_player_games": 382,
+          "blended_allowed": 2.6,
+          "prior_allowed": 3.31,
+          "current_allowed": 2.4,
+          "prior_player_games": 347,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
         },
         "AST": {
-          "blended_allowed": 2.72,
-          "prior_allowed": 3.01,
-          "current_allowed": 2.64,
-          "prior_player_games": 382,
+          "blended_allowed": 3.28,
+          "prior_allowed": 3.38,
+          "current_allowed": 3.25,
+          "prior_player_games": 347,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
         },
         "3PM": {
-          "blended_allowed": 1.4,
-          "prior_allowed": 1.56,
-          "current_allowed": 1.36,
-          "prior_player_games": 382,
+          "blended_allowed": 1.61,
+          "prior_allowed": 1.86,
+          "current_allowed": 1.54,
+          "prior_player_games": 347,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
         },
         "PRA": {
-          "blended_allowed": 14.94,
-          "prior_allowed": 16.77,
-          "current_allowed": 14.43,
-          "prior_player_games": 382,
+          "blended_allowed": 18.25,
+          "prior_allowed": 19.4,
+          "current_allowed": 17.93,
+          "prior_player_games": 347,
           "current_player_games": 72,
           "prior_equivalent_weight": 20,
           "current_weight_pct": 78.3
@@ -3775,525 +4204,96 @@
       },
       "SF": {
         "PTS": {
-          "blended_allowed": 9.39,
-          "prior_allowed": 10.33,
-          "current_allowed": 9.1,
-          "prior_player_games": 290,
-          "current_player_games": 67,
+          "blended_allowed": 10.2,
+          "prior_allowed": 11.29,
+          "current_allowed": 9.9,
+          "prior_player_games": 288,
+          "current_player_games": 73,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
+          "current_weight_pct": 78.5
         },
         "REB": {
-          "blended_allowed": 4.34,
-          "prior_allowed": 4.12,
-          "current_allowed": 4.4,
-          "prior_player_games": 290,
-          "current_player_games": 67,
+          "blended_allowed": 5.0,
+          "prior_allowed": 4.8,
+          "current_allowed": 5.05,
+          "prior_player_games": 288,
+          "current_player_games": 73,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
+          "current_weight_pct": 78.5
         },
         "AST": {
-          "blended_allowed": 1.9,
-          "prior_allowed": 1.83,
-          "current_allowed": 1.93,
-          "prior_player_games": 290,
-          "current_player_games": 67,
+          "blended_allowed": 2.02,
+          "prior_allowed": 2.25,
+          "current_allowed": 1.96,
+          "prior_player_games": 288,
+          "current_player_games": 73,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
+          "current_weight_pct": 78.5
         },
         "3PM": {
-          "blended_allowed": 1.34,
-          "prior_allowed": 1.32,
-          "current_allowed": 1.34,
-          "prior_player_games": 290,
-          "current_player_games": 67,
+          "blended_allowed": 1.1,
+          "prior_allowed": 1.27,
+          "current_allowed": 1.05,
+          "prior_player_games": 288,
+          "current_player_games": 73,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
+          "current_weight_pct": 78.5
         },
         "PRA": {
-          "blended_allowed": 15.63,
-          "prior_allowed": 16.29,
-          "current_allowed": 15.43,
-          "prior_player_games": 290,
-          "current_player_games": 67,
+          "blended_allowed": 17.22,
+          "prior_allowed": 18.34,
+          "current_allowed": 16.92,
+          "prior_player_games": 288,
+          "current_player_games": 73,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 77.0
+          "current_weight_pct": 78.5
         }
       },
       "C": {
         "PTS": {
-          "blended_allowed": 8.28,
-          "prior_allowed": 9.01,
-          "current_allowed": 7.67,
-          "prior_player_games": 135,
-          "current_player_games": 24,
+          "blended_allowed": 12.02,
+          "prior_allowed": 11.64,
+          "current_allowed": 12.42,
+          "prior_player_games": 125,
+          "current_player_games": 19,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
+          "current_weight_pct": 48.7
         },
         "REB": {
-          "blended_allowed": 5.26,
-          "prior_allowed": 6.03,
-          "current_allowed": 4.62,
-          "prior_player_games": 135,
-          "current_player_games": 24,
+          "blended_allowed": 7.32,
+          "prior_allowed": 7.58,
+          "current_allowed": 7.05,
+          "prior_player_games": 125,
+          "current_player_games": 19,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
+          "current_weight_pct": 48.7
         },
         "AST": {
-          "blended_allowed": 1.62,
-          "prior_allowed": 1.56,
-          "current_allowed": 1.67,
-          "prior_player_games": 135,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "3PM": {
-          "blended_allowed": 0.63,
-          "prior_allowed": 0.7,
-          "current_allowed": 0.58,
-          "prior_player_games": 135,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        },
-        "PRA": {
-          "blended_allowed": 15.16,
-          "prior_allowed": 16.59,
-          "current_allowed": 13.96,
-          "prior_player_games": 135,
-          "current_player_games": 24,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 54.5
-        }
-      }
-    },
-    "Brooklyn Nets": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.14,
-          "prior_allowed": 11.57,
-          "current_allowed": 9.76,
-          "prior_player_games": 372,
-          "current_player_games": 75,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
-        },
-        "REB": {
-          "blended_allowed": 2.77,
-          "prior_allowed": 3.25,
-          "current_allowed": 2.64,
-          "prior_player_games": 372,
-          "current_player_games": 75,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
-        },
-        "AST": {
-          "blended_allowed": 2.87,
-          "prior_allowed": 3.33,
-          "current_allowed": 2.75,
-          "prior_player_games": 372,
-          "current_player_games": 75,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
-        },
-        "3PM": {
-          "blended_allowed": 1.44,
-          "prior_allowed": 1.53,
-          "current_allowed": 1.41,
-          "prior_player_games": 372,
-          "current_player_games": 75,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
-        },
-        "PRA": {
-          "blended_allowed": 15.78,
-          "prior_allowed": 18.14,
-          "current_allowed": 15.15,
-          "prior_player_games": 372,
-          "current_player_games": 75,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.9
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 11.02,
-          "prior_allowed": 11.02,
-          "current_allowed": 11.02,
-          "prior_player_games": 290,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "REB": {
-          "blended_allowed": 4.42,
-          "prior_allowed": 4.34,
-          "current_allowed": 4.44,
-          "prior_player_games": 290,
-          "current_player_games": 54,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        },
-        "AST": {
-          "blended_allowed": 2.08,
+          "blended_allowed": 2.46,
           "prior_allowed": 2.1,
-          "current_allowed": 2.07,
-          "prior_player_games": 290,
-          "current_player_games": 54,
+          "current_allowed": 2.84,
+          "prior_player_games": 125,
+          "current_player_games": 19,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
+          "current_weight_pct": 48.7
         },
         "3PM": {
-          "blended_allowed": 1.12,
-          "prior_allowed": 1.05,
-          "current_allowed": 1.15,
-          "prior_player_games": 290,
-          "current_player_games": 54,
+          "blended_allowed": 0.62,
+          "prior_allowed": 0.61,
+          "current_allowed": 0.63,
+          "prior_player_games": 125,
+          "current_player_games": 19,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
+          "current_weight_pct": 48.7
         },
         "PRA": {
-          "blended_allowed": 17.51,
-          "prior_allowed": 17.46,
-          "current_allowed": 17.54,
-          "prior_player_games": 290,
-          "current_player_games": 54,
+          "blended_allowed": 21.81,
+          "prior_allowed": 21.32,
+          "current_allowed": 22.32,
+          "prior_player_games": 125,
+          "current_player_games": 19,
           "prior_equivalent_weight": 20,
-          "current_weight_pct": 73.0
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.54,
-          "prior_allowed": 11.36,
-          "current_allowed": 9.76,
-          "prior_player_games": 118,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "REB": {
-          "blended_allowed": 5.75,
-          "prior_allowed": 6.69,
-          "current_allowed": 4.86,
-          "prior_player_games": 118,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "AST": {
-          "blended_allowed": 1.65,
-          "prior_allowed": 1.63,
-          "current_allowed": 1.67,
-          "prior_player_games": 118,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "3PM": {
-          "blended_allowed": 0.58,
-          "prior_allowed": 0.45,
-          "current_allowed": 0.71,
-          "prior_player_games": 118,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "PRA": {
-          "blended_allowed": 17.94,
-          "prior_allowed": 19.69,
-          "current_allowed": 16.29,
-          "prior_player_games": 118,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        }
-      }
-    },
-    "Washington Wizards": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 11.47,
-          "prior_allowed": 12.15,
-          "current_allowed": 11.29,
-          "prior_player_games": 370,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "REB": {
-          "blended_allowed": 3.29,
-          "prior_allowed": 3.41,
-          "current_allowed": 3.26,
-          "prior_player_games": 370,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "AST": {
-          "blended_allowed": 3.64,
-          "prior_allowed": 3.52,
-          "current_allowed": 3.67,
-          "prior_player_games": 370,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "3PM": {
-          "blended_allowed": 1.32,
-          "prior_allowed": 1.56,
-          "current_allowed": 1.26,
-          "prior_player_games": 370,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        },
-        "PRA": {
-          "blended_allowed": 18.39,
-          "prior_allowed": 19.08,
-          "current_allowed": 18.22,
-          "prior_player_games": 370,
-          "current_player_games": 78,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 79.6
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 11.23,
-          "prior_allowed": 11.83,
-          "current_allowed": 11.03,
-          "prior_player_games": 289,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "REB": {
-          "blended_allowed": 4.83,
-          "prior_allowed": 4.9,
-          "current_allowed": 4.81,
-          "prior_player_games": 289,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "AST": {
-          "blended_allowed": 1.98,
-          "prior_allowed": 2.32,
-          "current_allowed": 1.87,
-          "prior_player_games": 289,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "3PM": {
-          "blended_allowed": 1.23,
-          "prior_allowed": 1.25,
-          "current_allowed": 1.22,
-          "prior_player_games": 289,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        },
-        "PRA": {
-          "blended_allowed": 18.04,
-          "prior_allowed": 19.06,
-          "current_allowed": 17.71,
-          "prior_player_games": 289,
-          "current_player_games": 63,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 75.9
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 10.58,
-          "prior_allowed": 12.25,
-          "current_allowed": 9.13,
-          "prior_player_games": 130,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "REB": {
-          "blended_allowed": 7.11,
-          "prior_allowed": 7.15,
-          "current_allowed": 7.09,
-          "prior_player_games": 130,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "AST": {
-          "blended_allowed": 1.74,
-          "prior_allowed": 1.9,
-          "current_allowed": 1.61,
-          "prior_player_games": 130,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "3PM": {
-          "blended_allowed": 0.67,
-          "prior_allowed": 0.75,
-          "current_allowed": 0.61,
-          "prior_player_games": 130,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        },
-        "PRA": {
-          "blended_allowed": 19.44,
-          "prior_allowed": 21.3,
-          "current_allowed": 17.83,
-          "prior_player_games": 130,
-          "current_player_games": 23,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 53.5
-        }
-      }
-    },
-    "Orlando Magic": {
-      "SG": {
-        "PTS": {
-          "blended_allowed": 10.1,
-          "prior_allowed": 12.53,
-          "current_allowed": 9.43,
-          "prior_player_games": 376,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "REB": {
-          "blended_allowed": 2.89,
-          "prior_allowed": 3.33,
-          "current_allowed": 2.76,
-          "prior_player_games": 376,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "AST": {
-          "blended_allowed": 2.69,
-          "prior_allowed": 3.15,
-          "current_allowed": 2.56,
-          "prior_player_games": 376,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "3PM": {
-          "blended_allowed": 1.44,
-          "prior_allowed": 1.55,
-          "current_allowed": 1.42,
-          "prior_player_games": 376,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        },
-        "PRA": {
-          "blended_allowed": 15.68,
-          "prior_allowed": 19.02,
-          "current_allowed": 14.75,
-          "prior_player_games": 376,
-          "current_player_games": 72,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 78.3
-        }
-      },
-      "SF": {
-        "PTS": {
-          "blended_allowed": 11.85,
-          "prior_allowed": 10.83,
-          "current_allowed": 12.25,
-          "prior_player_games": 279,
-          "current_player_games": 51,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 71.8
-        },
-        "REB": {
-          "blended_allowed": 4.31,
-          "prior_allowed": 4.29,
-          "current_allowed": 4.31,
-          "prior_player_games": 279,
-          "current_player_games": 51,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 71.8
-        },
-        "AST": {
-          "blended_allowed": 2.34,
-          "prior_allowed": 1.81,
-          "current_allowed": 2.55,
-          "prior_player_games": 279,
-          "current_player_games": 51,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 71.8
-        },
-        "3PM": {
-          "blended_allowed": 1.32,
-          "prior_allowed": 1.08,
-          "current_allowed": 1.41,
-          "prior_player_games": 279,
-          "current_player_games": 51,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 71.8
-        },
-        "PRA": {
-          "blended_allowed": 18.5,
-          "prior_allowed": 16.92,
-          "current_allowed": 19.12,
-          "prior_player_games": 279,
-          "current_player_games": 51,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 71.8
-        }
-      },
-      "C": {
-        "PTS": {
-          "blended_allowed": 8.75,
-          "prior_allowed": 10.23,
-          "current_allowed": 7.33,
-          "prior_player_games": 127,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "REB": {
-          "blended_allowed": 6.32,
-          "prior_allowed": 6.96,
-          "current_allowed": 5.71,
-          "prior_player_games": 127,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "AST": {
-          "blended_allowed": 1.89,
-          "prior_allowed": 1.98,
-          "current_allowed": 1.81,
-          "prior_player_games": 127,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "3PM": {
-          "blended_allowed": 0.42,
-          "prior_allowed": 0.41,
-          "current_allowed": 0.43,
-          "prior_player_games": 127,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
-        },
-        "PRA": {
-          "blended_allowed": 16.96,
-          "prior_allowed": 19.17,
-          "current_allowed": 14.86,
-          "prior_player_games": 127,
-          "current_player_games": 21,
-          "prior_equivalent_weight": 20,
-          "current_weight_pct": 51.2
+          "current_weight_pct": 48.7
         }
       }
     }
