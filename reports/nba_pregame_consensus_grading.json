@@ -1,9 +1,9 @@
 {
   "status": "RESEARCH_ONLY_PENDING_MORE_GRADED_DATES",
-  "total_complete_pregame_snapshots": 653,
+  "total_complete_pregame_snapshots": 696,
   "graded_eligible": 629,
   "excluded": {
-    "pending": 24
+    "pending": 67
   },
   "points_graded": 211,
   "points_capture_dates": [

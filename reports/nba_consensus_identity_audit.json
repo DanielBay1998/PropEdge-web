@@ -1,8 +1,8 @@
 {
   "audit": "capture_identity_research_v1",
-  "total": 653,
+  "total": 696,
   "counts": {
-    "verified_from_available_logs": 653
+    "verified_from_available_logs": 696
   },
   "limitations": [
     "Verified means only consistency with available prior-season logs, not independently verified scheduled event or pregame eligibility.",
@@ -5886,6 +5886,393 @@
       "status": "verified_from_available_logs",
       "issues": [],
       "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731176|ausarthompson|AST|OVER|4.0",
+      "player": "Ausar Thompson",
+      "game": "Detroit Pistons @ Atlanta Hawks",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261122|731181|alexsarr|PRA|OVER|17.5",
+      "player": "Alex Sarr",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731181|bilalcoulibaly|PRA|OVER|10.5",
+      "player": "Bilal Coulibaly",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731180|isaiahhartenstein|AST|OVER|4.0",
+      "player": "Isaiah Hartenstein",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261122|731181|tristandasilva|PRA|OVER|16.5",
+      "player": "Tristan da Silva",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "orlandomagic"
+    },
+    {
+      "id": "20261122|731186|joshhart|PRA|UNDER|21.5",
+      "player": "Josh Hart",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|731181|jalensuggs|AST|OVER|4.0",
+      "player": "Jalen Suggs",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "orlandomagic"
+    },
+    {
+      "id": "20261122|731184|joshgiddey|AST|OVER|8.0",
+      "player": "Josh Giddey",
+      "game": "Denver Nuggets @ Chicago Bulls",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "chicagobulls"
+    },
+    {
+      "id": "20261122|731180|ajaymitchell|PRA|UNDER|29.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261122|723055|brandinpodziemski|AST|UNDER|4.0",
+      "player": "Brandin Podziemski",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261122|731186|jalenbrunson|AST|OVER|6.0",
+      "player": "Jalen Brunson",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|723055|jaysontatum|AST|UNDER|7.0",
+      "player": "Jayson Tatum",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731186|mikalbridges|PRA|UNDER|17.5",
+      "player": "Mikal Bridges",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|723055|derrickwhite|PRA|UNDER|23.5",
+      "player": "Derrick White",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731186|andrewnembhard|AST|OVER|7.0",
+      "player": "Andrew Nembhard",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "AST",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "indianapacers"
+    },
+    {
+      "id": "20261122|731184|aarongordon|PRA|UNDER|21.5",
+      "player": "Aaron Gordon",
+      "game": "Denver Nuggets @ Chicago Bulls",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "denvernuggets"
+    },
+    {
+      "id": "20261122|723055|jaysontatum|PRA|UNDER|42.5",
+      "player": "Jayson Tatum",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731186|andrewnembhard|PRA|OVER|23.5",
+      "player": "Andrew Nembhard",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "indianapacers"
+    },
+    {
+      "id": "20261122|731186|landryshamet|PRA|UNDER|15.5",
+      "player": "Landry Shamet",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PRA",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|731183|bricesensabaugh|PTS|OVER|12.5",
+      "player": "Brice Sensabaugh",
+      "game": "Dallas Mavericks @ Utah Jazz",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "utahjazz"
+    },
+    {
+      "id": "20261122|723055|charlesbassey|PTS|OVER|7.5",
+      "player": "Charles Bassey",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261122|731183|bricesensabaugh|REB|OVER|3.5",
+      "player": "Brice Sensabaugh",
+      "game": "Dallas Mavericks @ Utah Jazz",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "utahjazz"
+    },
+    {
+      "id": "20261122|731181|bilalcoulibaly|REB|OVER|3.5",
+      "player": "Bilal Coulibaly",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731181|alexsarr|REB|OVER|6.0",
+      "player": "Alex Sarr",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731183|joshgreen|REB|UNDER|2.5",
+      "player": "Josh Green",
+      "game": "Dallas Mavericks @ Utah Jazz",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "utahjazz"
+    },
+    {
+      "id": "20261122|731181|alexsarr|PTS|OVER|10.5",
+      "player": "Alex Sarr",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "washingtonwizards"
+    },
+    {
+      "id": "20261122|731176|dysondaniels|REB|OVER|7.0",
+      "player": "Dyson Daniels",
+      "game": "Detroit Pistons @ Atlanta Hawks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "atlantahawks"
+    },
+    {
+      "id": "20261122|723055|deanthonymelton|PTS|UNDER|10.5",
+      "player": "De'Anthony Melton",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "goldenstatewarriors"
+    },
+    {
+      "id": "20261122|731186|joshhart|PTS|UNDER|9.5",
+      "player": "Josh Hart",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|731176|kevinhuerter|REB|UNDER|4.0",
+      "player": "Kevin Huerter",
+      "game": "Detroit Pistons @ Atlanta Hawks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261122|731186|joshhart|REB|UNDER|7.5",
+      "player": "Josh Hart",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|731181|tristandasilva|PTS|OVER|11.5",
+      "player": "Tristan da Silva",
+      "game": "Orlando Magic @ Washington Wizards",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "orlandomagic"
+    },
+    {
+      "id": "20261122|723055|paulgeorge|REB|OVER|4.5",
+      "player": "Paul George",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "REB",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731186|mikalbridges|PTS|UNDER|11.5",
+      "player": "Mikal Bridges",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "newyorkknicks"
+    },
+    {
+      "id": "20261122|731180|isaiahhartenstein|PTS|UNDER|9.5",
+      "player": "Isaiah Hartenstein",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261122|731180|ajaymitchell|PTS|UNDER|20.5",
+      "player": "Ajay Mitchell",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "oklahomacitythunder"
+    },
+    {
+      "id": "20261122|731186|pascalsiakam|PTS|OVER|20.5",
+      "player": "Pascal Siakam",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "indianapacers"
+    },
+    {
+      "id": "20261122|723055|jaysontatum|PTS|UNDER|28.5",
+      "player": "Jayson Tatum",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731176|ausarthompson|PTS|UNDER|12.0",
+      "player": "Ausar Thompson",
+      "game": "Detroit Pistons @ Atlanta Hawks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "detroitpistons"
+    },
+    {
+      "id": "20261122|731180|pellelarsson|PTS|OVER|10.5",
+      "player": "Pelle Larsson",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "miamiheat"
+    },
+    {
+      "id": "20261122|731186|andrewnembhard|PTS|OVER|14.5",
+      "player": "Andrew Nembhard",
+      "game": "Indiana Pacers @ New York Knicks",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "indianapacers"
+    },
+    {
+      "id": "20261122|723055|neemiasqueta|PTS|OVER|9.5",
+      "player": "Neemias Queta",
+      "game": "Boston Celtics @ Golden State Warriors",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "bostonceltics"
+    },
+    {
+      "id": "20261122|731180|klaythompson|PTS|OVER|14.5",
+      "player": "Klay Thompson",
+      "game": "Oklahoma City Thunder @ Miami Heat",
+      "market": "PTS",
+      "status": "verified_from_available_logs",
+      "issues": [],
+      "latest_prior_team": "miamiheat"
     }
   ]
 }
