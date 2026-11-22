@@ -13,7 +13,7 @@
   "excluded": {
     "identity_review": 36,
     "missing_or_ambiguous_actual_minutes": 195,
-    "pending": 28,
+    "pending": 71,
     "duplicate_same_line": 53
   },
   "overall": {
