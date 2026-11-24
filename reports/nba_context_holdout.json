@@ -9,105 +9,105 @@
   "markets": {
     "PTS": {
       "status": "holdout_evaluated",
-      "train_n": 52181,
-      "holdout_n": 23390,
-      "holdout_start": "20251208",
-      "baseline_mae": 4.7675,
-      "adjusted_mae": 4.7265,
+      "train_n": 52242,
+      "holdout_n": 23519,
+      "holdout_start": "20251209",
+      "baseline_mae": 4.7649,
+      "adjusted_mae": 4.7235,
       "improved": true,
       "weights": {
-        "intercept": -0.15585508135143633,
+        "intercept": -0.15595541901152285,
         "weights": {
-          "rest": -0.29794189815603495,
-          "b2b": -0.18815379475995445
+          "rest": -0.29647605209627426,
+          "b2b": -0.1856024646295333
         },
         "means": {
-          "rest": 1.4733523696364577,
-          "b2b": 0.15494145378586074
+          "rest": 1.4736036139504614,
+          "b2b": 0.15476053749856436
         }
       },
       "production_promoted": false
     },
     "REB": {
       "status": "holdout_evaluated",
-      "train_n": 52181,
-      "holdout_n": 23390,
-      "holdout_start": "20251208",
-      "baseline_mae": 1.9538,
-      "adjusted_mae": 1.9338,
+      "train_n": 52242,
+      "holdout_n": 23519,
+      "holdout_start": "20251209",
+      "baseline_mae": 1.954,
+      "adjusted_mae": 1.9337,
       "improved": true,
       "weights": {
-        "intercept": -0.10099971253904103,
+        "intercept": -0.10096487500478504,
         "weights": {
-          "rest": -0.12415455930610936,
-          "b2b": -0.08139872618985117
+          "rest": -0.12388407776636512,
+          "b2b": -0.08099954504368166
         },
         "means": {
-          "rest": 1.4733523696364577,
-          "b2b": 0.15494145378586074
+          "rest": 1.4736036139504614,
+          "b2b": 0.15476053749856436
         }
       },
       "production_promoted": false
     },
     "AST": {
       "status": "holdout_evaluated",
-      "train_n": 52181,
-      "holdout_n": 23390,
-      "holdout_start": "20251208",
-      "baseline_mae": 1.3901,
-      "adjusted_mae": 1.3796,
+      "train_n": 52242,
+      "holdout_n": 23519,
+      "holdout_start": "20251209",
+      "baseline_mae": 1.3894,
+      "adjusted_mae": 1.3789,
       "improved": true,
       "weights": {
-        "intercept": -0.030713401429634968,
+        "intercept": -0.030372975766624236,
         "weights": {
-          "rest": -0.08829276061252457,
-          "b2b": -0.10220872867015013
+          "rest": -0.08831539273195368,
+          "b2b": -0.10264261189578039
         },
         "means": {
-          "rest": 1.4733523696364577,
-          "b2b": 0.15494145378586074
+          "rest": 1.4736036139504614,
+          "b2b": 0.15476053749856436
         }
       },
       "production_promoted": false
     },
     "3PM": {
       "status": "holdout_evaluated",
-      "train_n": 52181,
-      "holdout_n": 23390,
-      "holdout_start": "20251208",
-      "baseline_mae": 0.918,
-      "adjusted_mae": 0.9126,
+      "train_n": 52242,
+      "holdout_n": 23519,
+      "holdout_start": "20251209",
+      "baseline_mae": 0.9191,
+      "adjusted_mae": 0.9137,
       "improved": true,
       "weights": {
-        "intercept": -0.01639755849830247,
+        "intercept": -0.016649898549060165,
         "weights": {
-          "rest": -0.03509493386747778,
-          "b2b": -0.039101652141484936
+          "rest": -0.03479404624825798,
+          "b2b": -0.0383039458205125
         },
         "means": {
-          "rest": 1.4733523696364577,
-          "b2b": 0.15494145378586074
+          "rest": 1.4736036139504614,
+          "b2b": 0.15476053749856436
         }
       },
       "production_promoted": false
     },
     "PRA": {
       "status": "holdout_evaluated",
-      "train_n": 52181,
-      "holdout_n": 23390,
-      "holdout_start": "20251208",
-      "baseline_mae": 6.3123,
-      "adjusted_mae": 6.2437,
+      "train_n": 52242,
+      "holdout_n": 23519,
+      "holdout_start": "20251209",
+      "baseline_mae": 6.3083,
+      "adjusted_mae": 6.2387,
       "improved": true,
       "weights": {
-        "intercept": -0.2875681953201121,
+        "intercept": -0.28729326978293196,
         "weights": {
-          "rest": -0.5103892180746642,
-          "b2b": -0.37176124961994833
+          "rest": -0.5086755225945889,
+          "b2b": -0.3692446215689883
         },
         "means": {
-          "rest": 1.4733523696364577,
-          "b2b": 0.15494145378586074
+          "rest": 1.4736036139504614,
+          "b2b": 0.15476053749856436
         }
       },
       "production_promoted": false
