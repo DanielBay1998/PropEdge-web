@@ -51,7 +51,7 @@
         "losses": 193,
         "pushes": 0,
         "flat_stake_roi_pct": -9.82,
-        "mean_absolute_error_on_all_matched": 5.5957
+        "mean_absolute_error_on_all_matched": 5.5956
       }
     },
     "REB": {
@@ -69,7 +69,7 @@
         "losses": 94,
         "pushes": 1,
         "flat_stake_roi_pct": 0.86,
-        "mean_absolute_error_on_all_matched": 2.3419
+        "mean_absolute_error_on_all_matched": 2.342
       }
     },
     "AST": {
@@ -179,7 +179,7 @@
         "losses": 140,
         "pushes": 0,
         "flat_stake_roi_pct": -13.11,
-        "mean_absolute_error_on_all_matched": 4.4169
+        "mean_absolute_error_on_all_matched": 4.4168
       }
     },
     "20261031": {
@@ -233,7 +233,7 @@
         "losses": 8,
         "pushes": 0,
         "flat_stake_roi_pct": -33.33,
-        "mean_absolute_error_on_all_matched": 4.8709
+        "mean_absolute_error_on_all_matched": 4.8708
       }
     },
     "20261112": {
@@ -1329,8 +1329,8 @@
         "n": 1116,
         "mae": 4.429,
         "median_absolute_error": 3.085,
-        "p75_absolute_error": 6.359,
-        "p90_absolute_error": 10.081,
+        "p75_absolute_error": 6.358,
+        "p90_absolute_error": 10.08,
         "maximum_absolute_error": 35.714,
         "mean_signed_error_projection_minus_actual": 0.476,
         "within_0_5_pct": 9.41,
@@ -1387,11 +1387,11 @@
         "v4": {
           "n": 363,
           "mae": 5.599,
-          "median_absolute_error": 4.941,
-          "p75_absolute_error": 7.805,
-          "p90_absolute_error": 11.078,
-          "maximum_absolute_error": 32.005,
-          "mean_signed_error_projection_minus_actual": 1.147,
+          "median_absolute_error": 4.94,
+          "p75_absolute_error": 7.804,
+          "p90_absolute_error": 11.079,
+          "maximum_absolute_error": 32.004,
+          "mean_signed_error_projection_minus_actual": 1.146,
           "within_0_5_pct": 4.13,
           "within_1_pct": 7.99,
           "within_2_pct": 22.04,
@@ -1404,7 +1404,7 @@
           "median_absolute_error": 4.62,
           "p75_absolute_error": 7.952,
           "p90_absolute_error": 11.529,
-          "maximum_absolute_error": 31.062,
+          "maximum_absolute_error": 31.061,
           "mean_signed_error_projection_minus_actual": 1.283,
           "within_0_5_pct": 4.13,
           "within_1_pct": 8.82,
@@ -1448,7 +1448,7 @@
           "median_absolute_error": 2.081,
           "p75_absolute_error": 3.627,
           "p90_absolute_error": 5.017,
-          "maximum_absolute_error": 8.86,
+          "maximum_absolute_error": 8.859,
           "mean_signed_error_projection_minus_actual": -0.219,
           "within_0_5_pct": 15.64,
           "within_1_pct": 29.86,
@@ -1462,7 +1462,7 @@
           "median_absolute_error": 1.943,
           "p75_absolute_error": 3.504,
           "p90_absolute_error": 5.099,
-          "maximum_absolute_error": 8.589,
+          "maximum_absolute_error": 8.588,
           "mean_signed_error_projection_minus_actual": -0.102,
           "within_0_5_pct": 18.96,
           "within_1_pct": 30.33,
@@ -1505,7 +1505,7 @@
           "mae": 1.839,
           "median_absolute_error": 1.582,
           "p75_absolute_error": 2.58,
-          "p90_absolute_error": 3.682,
+          "p90_absolute_error": 3.681,
           "maximum_absolute_error": 14.158,
           "mean_signed_error_projection_minus_actual": 0.02,
           "within_0_5_pct": 18.82,
@@ -1619,11 +1619,11 @@
         "v4": {
           "n": 301,
           "mae": 6.693,
-          "median_absolute_error": 5.95,
-          "p75_absolute_error": 8.883,
-          "p90_absolute_error": 13.364,
+          "median_absolute_error": 5.952,
+          "p75_absolute_error": 8.882,
+          "p90_absolute_error": 13.363,
           "maximum_absolute_error": 35.714,
-          "mean_signed_error_projection_minus_actual": 0.464,
+          "mean_signed_error_projection_minus_actual": 0.463,
           "within_0_5_pct": 3.32,
           "within_1_pct": 6.64,
           "within_2_pct": 18.94,
@@ -1633,7 +1633,7 @@
         "consensus": {
           "n": 301,
           "mae": 6.719,
-          "median_absolute_error": 6.174,
+          "median_absolute_error": 6.175,
           "p75_absolute_error": 9.457,
           "p90_absolute_error": 13.443,
           "maximum_absolute_error": 33.898,
@@ -1678,10 +1678,10 @@
         },
         "v4": {
           "n": 268,
-          "mae": 3.887,
+          "mae": 3.888,
           "median_absolute_error": 2.569,
           "p75_absolute_error": 5.901,
-          "p90_absolute_error": 9.018,
+          "p90_absolute_error": 9.017,
           "maximum_absolute_error": 16.65,
           "mean_signed_error_projection_minus_actual": 0.688,
           "within_0_5_pct": 11.19,
@@ -1737,10 +1737,10 @@
         "v4": {
           "n": 232,
           "mae": 4.376,
-          "median_absolute_error": 2.976,
-          "p75_absolute_error": 6.666,
-          "p90_absolute_error": 9.893,
-          "maximum_absolute_error": 20.237,
+          "median_absolute_error": 2.975,
+          "p75_absolute_error": 6.667,
+          "p90_absolute_error": 9.894,
+          "maximum_absolute_error": 20.235,
           "mean_signed_error_projection_minus_actual": 0.557,
           "within_0_5_pct": 7.33,
           "within_1_pct": 17.67,
@@ -1752,7 +1752,7 @@
           "n": 232,
           "mae": 4.524,
           "median_absolute_error": 3.214,
-          "p75_absolute_error": 7.427,
+          "p75_absolute_error": 7.426,
           "p90_absolute_error": 10.278,
           "maximum_absolute_error": 17.865,
           "mean_signed_error_projection_minus_actual": 0.778,
@@ -1796,7 +1796,7 @@
           "n": 264,
           "mae": 4.409,
           "median_absolute_error": 2.958,
-          "p75_absolute_error": 6.244,
+          "p75_absolute_error": 6.245,
           "p90_absolute_error": 10.684,
           "maximum_absolute_error": 24.155,
           "mean_signed_error_projection_minus_actual": 0.503,
@@ -1852,9 +1852,9 @@
         },
         "v4": {
           "n": 64,
-          "mae": 6.271,
-          "median_absolute_error": 5.518,
-          "p75_absolute_error": 8.986,
+          "mae": 6.272,
+          "median_absolute_error": 5.519,
+          "p75_absolute_error": 8.985,
           "p90_absolute_error": 13.345,
           "maximum_absolute_error": 19.56,
           "mean_signed_error_projection_minus_actual": 1.069,
@@ -1913,7 +1913,7 @@
           "mae": 4.337,
           "median_absolute_error": 3.918,
           "p75_absolute_error": 5.806,
-          "p90_absolute_error": 8.503,
+          "p90_absolute_error": 8.505,
           "maximum_absolute_error": 16.511,
           "mean_signed_error_projection_minus_actual": 1.564,
           "within_0_5_pct": 2.27,
@@ -1924,10 +1924,10 @@
         },
         "consensus": {
           "n": 44,
-          "mae": 4.27,
+          "mae": 4.269,
           "median_absolute_error": 3.695,
           "p75_absolute_error": 5.161,
-          "p90_absolute_error": 8.589,
+          "p90_absolute_error": 8.588,
           "maximum_absolute_error": 16.16,
           "mean_signed_error_projection_minus_actual": 1.723,
           "within_0_5_pct": 9.09,
@@ -1969,10 +1969,10 @@
         "v4": {
           "n": 12,
           "mae": 5.04,
-          "median_absolute_error": 5.202,
-          "p75_absolute_error": 7.881,
+          "median_absolute_error": 5.201,
+          "p75_absolute_error": 7.88,
           "p90_absolute_error": 8.258,
-          "maximum_absolute_error": 8.883,
+          "maximum_absolute_error": 8.882,
           "mean_signed_error_projection_minus_actual": 4.631,
           "within_0_5_pct": 0.0,
           "within_1_pct": 8.33,
@@ -1987,7 +1987,7 @@
           "p75_absolute_error": 8.273,
           "p90_absolute_error": 8.576,
           "maximum_absolute_error": 9.123,
-          "mean_signed_error_projection_minus_actual": 4.599,
+          "mean_signed_error_projection_minus_actual": 4.598,
           "within_0_5_pct": 8.33,
           "within_1_pct": 8.33,
           "within_2_pct": 33.33,
@@ -2028,8 +2028,8 @@
           "n": 48,
           "mae": 5.013,
           "median_absolute_error": 3.079,
-          "p75_absolute_error": 5.211,
-          "p90_absolute_error": 11.023,
+          "p75_absolute_error": 5.212,
+          "p90_absolute_error": 11.021,
           "maximum_absolute_error": 35.714,
           "mean_signed_error_projection_minus_actual": -2.189,
           "within_0_5_pct": 12.5,
@@ -2043,7 +2043,7 @@
           "mae": 4.868,
           "median_absolute_error": 2.974,
           "p75_absolute_error": 4.726,
-          "p90_absolute_error": 10.982,
+          "p90_absolute_error": 10.981,
           "maximum_absolute_error": 33.898,
           "mean_signed_error_projection_minus_actual": -2.167,
           "within_0_5_pct": 12.5,
@@ -2085,9 +2085,9 @@
         "v4": {
           "n": 33,
           "mae": 6.688,
-          "median_absolute_error": 4.944,
+          "median_absolute_error": 4.942,
           "p75_absolute_error": 9.5,
-          "p90_absolute_error": 15.236,
+          "p90_absolute_error": 15.237,
           "maximum_absolute_error": 19.167,
           "mean_signed_error_projection_minus_actual": -2.162,
           "within_0_5_pct": 3.03,
@@ -2099,7 +2099,7 @@
         "consensus": {
           "n": 33,
           "mae": 6.761,
-          "median_absolute_error": 4.834,
+          "median_absolute_error": 4.833,
           "p75_absolute_error": 10.608,
           "p90_absolute_error": 15.014,
           "maximum_absolute_error": 18.368,
@@ -2144,9 +2144,9 @@
           "n": 109,
           "mae": 4.113,
           "median_absolute_error": 3.286,
-          "p75_absolute_error": 6.339,
-          "p90_absolute_error": 8.517,
-          "maximum_absolute_error": 18.493,
+          "p75_absolute_error": 6.338,
+          "p90_absolute_error": 8.516,
+          "maximum_absolute_error": 18.491,
           "mean_signed_error_projection_minus_actual": 1.235,
           "within_0_5_pct": 9.17,
           "within_1_pct": 16.51,
@@ -2160,7 +2160,7 @@
           "median_absolute_error": 3.078,
           "p75_absolute_error": 6.08,
           "p90_absolute_error": 8.743,
-          "maximum_absolute_error": 18.06,
+          "maximum_absolute_error": 18.059,
           "mean_signed_error_projection_minus_actual": 1.262,
           "within_0_5_pct": 11.01,
           "within_1_pct": 20.18,
@@ -2200,12 +2200,12 @@
         },
         "v4": {
           "n": 42,
-          "mae": 3.799,
+          "mae": 3.798,
           "median_absolute_error": 2.746,
           "p75_absolute_error": 5.716,
           "p90_absolute_error": 7.381,
-          "maximum_absolute_error": 15.241,
-          "mean_signed_error_projection_minus_actual": -1.565,
+          "maximum_absolute_error": 15.242,
+          "mean_signed_error_projection_minus_actual": -1.566,
           "within_0_5_pct": 14.29,
           "within_1_pct": 21.43,
           "within_2_pct": 38.1,
@@ -2228,8 +2228,8 @@
         }
       }
     },
-    "consensus_better_than_primary_count": 639,
-    "consensus_worse_than_primary_count": 477,
+    "consensus_better_than_primary_count": 640,
+    "consensus_worse_than_primary_count": 476,
     "worst_consensus_misses": [
       {
         "player": "Cade Cunningham",
@@ -2299,7 +2299,7 @@
         "actual": 44.0,
         "primary": 24.71,
         "challenger": 24.75,
-        "v4": 24.88,
+        "v4": 24.89,
         "consensus": 24.78,
         "absolute_miss": 19.22
       },
@@ -2372,8 +2372,8 @@
         "primary": 41.72,
         "challenger": 42.92,
         "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Giannis Antetokounmpo",
@@ -2384,8 +2384,8 @@
         "primary": 41.72,
         "challenger": 42.92,
         "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Giannis Antetokounmpo",
@@ -2396,8 +2396,8 @@
         "primary": 41.72,
         "challenger": 42.92,
         "v4": 38.76,
-        "consensus": 41.13,
-        "absolute_miss": 17.87
+        "consensus": 41.14,
+        "absolute_miss": 17.86
       },
       {
         "player": "Jamal Murray",
