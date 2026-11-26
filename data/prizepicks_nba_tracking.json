@@ -162710,8 +162710,11 @@
     "projection": 4.84,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375383+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|anferneesimons|PRA|OVER|12.5|CORE",
@@ -162806,8 +162809,11 @@
     "projection": 4.84,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375416+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|anferneesimons|PRA|UNDER|12.5|CORE",
@@ -162902,8 +162908,11 @@
     "projection": 2.9,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375430+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|anferneesimons|PTS|OVER|9.5|CORE",
@@ -162966,8 +162975,11 @@
     "projection": 4.67,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375439+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|ajaymitchell|PRA|UNDER|25.5|CORE",
@@ -162998,8 +163010,11 @@
     "projection": 2.9,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375445+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|anferneesimons|PTS|UNDER|9.5|CORE",
@@ -163062,8 +163077,11 @@
     "projection": 4.67,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375453+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|ajaymitchell|PTS|OVER|17.5|CORE",
@@ -163254,8 +163272,11 @@
     "projection": 12.87,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375473+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|bamadebayo|PRA|OVER|30.5|CORE",
@@ -163334,8 +163355,11 @@
     "projection": 12.87,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375481+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|bamadebayo|PRA|UNDER|30.5|CORE",
@@ -163814,8 +163838,11 @@
     "projection": 15.1,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375525+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|isaiahhartenstein|PTS|UNDER|8.5|CORE",
@@ -163926,8 +163953,11 @@
     "projection": 15.1,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375537+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|3PM|OVER|1.5|CORE",
@@ -163958,8 +163988,11 @@
     "projection": 5.72,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.375543+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|PRA|OVER|27.5|CORE",
@@ -164038,8 +164071,11 @@
     "projection": 4.59,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.375552+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|3PM|UNDER|1.5|CORE",
@@ -164070,8 +164106,11 @@
     "projection": 5.72,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.375557+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|PRA|UNDER|27.5|CORE",
@@ -164150,8 +164189,11 @@
     "projection": 4.59,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.375566+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|PRA|OVER|26.5|CORE",
@@ -164182,8 +164224,11 @@
     "projection": 7.03,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.375571+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|PTS|OVER|14.5|CORE",
@@ -164278,8 +164323,11 @@
     "projection": 7.03,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.375581+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|PTS|UNDER|14.5|CORE",
@@ -164374,8 +164422,11 @@
     "projection": 3.85,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.375591+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|TOV|OVER|2.5|EXTENDED_RESEARCH_V1",
@@ -164454,8 +164505,11 @@
     "projection": 14.91,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.375602+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|PTS|UNDER|17.5|CORE",
@@ -164486,8 +164540,11 @@
     "projection": 3.85,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.375606+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|davionmitchell|TOV|UNDER|2.5|EXTENDED_RESEARCH_V1",
@@ -164566,8 +164623,11 @@
     "projection": 6.17,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375616+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|REB|OVER|5.5|CORE",
@@ -164598,8 +164658,11 @@
     "projection": 2.06,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375620+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|deanwade|PRA|OVER|11.5|CORE",
@@ -164678,8 +164741,11 @@
     "projection": 2.9,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375629+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jadenmcdaniels|REB|UNDER|5.5|CORE",
@@ -164710,8 +164776,11 @@
     "projection": 2.06,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375634+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|deanwade|PRA|UNDER|11.5|CORE",
@@ -164790,8 +164859,11 @@
     "projection": 2.9,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375643+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|3PM|OVER|2.5|CORE",
@@ -164822,8 +164894,11 @@
     "projection": 1.44,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375648+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|deanwade|REB|OVER|4.5|CORE",
@@ -164934,8 +165009,11 @@
     "projection": 1.44,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.375660+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cameronjohnson|PRA|OVER|18.5|CORE",
@@ -165158,8 +165236,11 @@
     "projection": 19.21,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.375681+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|AST|UNDER|1.5|CORE",
@@ -165206,8 +165287,11 @@
     "projection": 13.14,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.375687+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|deanwade|STL|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -165286,8 +165370,11 @@
     "projection": 19.21,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.375697+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|PRA|OVER|20.5|CORE",
@@ -165318,8 +165405,11 @@
     "projection": 12.51,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.375702+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cameronjohnson|PTS|UNDER|12.5|CORE",
@@ -165334,8 +165424,11 @@
     "projection": 13.14,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.375706+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|3PM|OVER|0.5|CORE",
@@ -165414,8 +165507,11 @@
     "projection": 3.8,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375715+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|PRA|UNDER|20.5|CORE",
@@ -165446,8 +165542,11 @@
     "projection": 12.51,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.375720+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cameronjohnson|REB|OVER|3.5|CORE",
@@ -165462,8 +165561,11 @@
     "projection": 3.42,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375723+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|3PM|UNDER|0.5|CORE",
@@ -165542,8 +165644,11 @@
     "projection": 3.8,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.375733+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|PTS|OVER|15.5|CORE",
@@ -165574,8 +165679,11 @@
     "projection": 7.0,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375737+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cameronjohnson|REB|UNDER|3.5|CORE",
@@ -165590,8 +165698,11 @@
     "projection": 3.42,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375741+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|PRA|OVER|47.5|CORE",
@@ -165670,8 +165781,11 @@
     "projection": 6.75,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.375750+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|PTS|UNDER|15.5|CORE",
@@ -165702,8 +165816,11 @@
     "projection": 7.0,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375754+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|AST|OVER|2.5|CORE",
@@ -165718,8 +165835,11 @@
     "projection": 2.69,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.375758+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|PRA|UNDER|47.5|CORE",
@@ -165798,8 +165918,11 @@
     "projection": 6.75,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.375767+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|REB|OVER|3.5|CORE",
@@ -165830,8 +165953,11 @@
     "projection": 7.68,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375772+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|AST|UNDER|2.5|CORE",
@@ -165846,8 +165972,11 @@
     "projection": 2.69,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.375776+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|PTS|OVER|29.5|CORE",
@@ -165926,8 +166055,11 @@
     "projection": 4.62,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375804+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jaredmccain|REB|UNDER|3.5|CORE",
@@ -165958,8 +166090,11 @@
     "projection": 7.68,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375814+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|DREB|OVER|3.5|EXTENDED_RESEARCH_V1",
@@ -165974,8 +166109,11 @@
     "projection": 2.57,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375819+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|PTS|UNDER|29.5|CORE",
@@ -166054,8 +166192,11 @@
     "projection": 4.62,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375828+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|PRA|OVER|11.5|CORE",
@@ -166086,8 +166227,11 @@
     "projection": 18.17,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.375833+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|DREB|UNDER|3.5|EXTENDED_RESEARCH_V1",
@@ -166102,8 +166246,11 @@
     "projection": 2.57,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375837+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|REB|OVER|11.5|CORE",
@@ -166182,8 +166329,11 @@
     "projection": 18.08,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.375847+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|PRA|UNDER|11.5|CORE",
@@ -166214,8 +166364,11 @@
     "projection": 18.17,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.375852+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FGA|OVER|10.0|EXTENDED_RESEARCH_V1",
@@ -166230,8 +166383,11 @@
     "projection": 11.26,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375855+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|giannisantetokounmpo|REB|UNDER|11.5|CORE",
@@ -166310,8 +166466,11 @@
     "projection": 7.54,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.375865+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|REB|OVER|5.5|CORE",
@@ -166342,8 +166501,11 @@
     "projection": 9.19,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.375869+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FGA|UNDER|10.0|EXTENDED_RESEARCH_V1",
@@ -166358,8 +166520,11 @@
     "projection": 11.26,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375873+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|3PM|OVER|0.5|CORE",
@@ -166438,8 +166603,11 @@
     "projection": 7.54,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.375882+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|REB|UNDER|5.5|CORE",
@@ -166470,8 +166638,11 @@
     "projection": 4.57,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.375887+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FGM|OVER|5.0|EXTENDED_RESEARCH_V1",
@@ -166486,8 +166657,11 @@
     "projection": 6.33,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "push",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375890+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|3PM|UNDER|0.5|CORE",
@@ -166566,8 +166740,11 @@
     "projection": 5.64,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375900+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|TOV|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -166598,8 +166775,11 @@
     "projection": 3.94,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.375904+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FGM|UNDER|5.0|EXTENDED_RESEARCH_V1",
@@ -166614,8 +166794,11 @@
     "projection": 6.33,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "push",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375908+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|PRA|OVER|14.5|CORE",
@@ -166678,8 +166861,11 @@
     "projection": 4.76,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375916+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|joanberinger|TOV|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -166710,8 +166896,11 @@
     "projection": 1.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375920+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FTM|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -166726,8 +166915,11 @@
     "projection": 1.99,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375924+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|PRA|UNDER|14.5|CORE",
@@ -166822,8 +167014,11 @@
     "projection": 1.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.375935+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|FTM|UNDER|1.5|EXTENDED_RESEARCH_V1",
@@ -166838,8 +167033,11 @@
     "projection": 1.99,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.375939+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|PTS|OVER|7.5|CORE",
@@ -167014,8 +167212,11 @@
     "projection": 24.37,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.375956+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jonathankuminga|PRA|OVER|22.5|CORE",
@@ -167126,8 +167327,11 @@
     "projection": 24.37,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.375968+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jonathankuminga|PRA|UNDER|22.5|CORE",
@@ -167158,8 +167362,11 @@
     "projection": 25.56,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 33.0,
+    "graded_at": "2026-11-26T01:54:03.375974+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|PTS|OVER|12.5|CORE",
@@ -167174,8 +167381,11 @@
     "projection": 12.74,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 15.0,
+    "graded_at": "2026-11-26T01:54:03.375977+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jabariwalker|REB|UNDER|5.5|CORE",
@@ -167238,8 +167448,11 @@
     "projection": 6.23,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.375984+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jonathankuminga|PTS|OVER|14.5|CORE",
@@ -167270,8 +167483,11 @@
     "projection": 25.56,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 33.0,
+    "graded_at": "2026-11-26T01:54:03.375989+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|PTS|UNDER|12.5|CORE",
@@ -167286,8 +167502,11 @@
     "projection": 12.74,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 15.0,
+    "graded_at": "2026-11-26T01:54:03.375993+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735014|joshgiddey|REB|OVER|6.5|CORE",
@@ -167334,8 +167553,11 @@
     "projection": 6.23,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.375999+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|jonathankuminga|PTS|UNDER|14.5|CORE",
@@ -167366,8 +167588,11 @@
     "projection": 10.74,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376004+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|REB|OVER|4.5|CORE",
@@ -167382,8 +167607,11 @@
     "projection": 4.79,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376008+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735014|joshgiddey|REB|UNDER|6.5|CORE",
@@ -167446,8 +167674,11 @@
     "projection": 10.74,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376015+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|christianbraun|REB|UNDER|4.5|CORE",
@@ -167462,8 +167693,11 @@
     "projection": 4.79,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376019+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|3PM|OVER|1.5|CORE",
@@ -167558,8 +167792,11 @@
     "projection": 1.37,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376031+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|AST|OVER|6.5|CORE",
@@ -167574,8 +167811,11 @@
     "projection": 5.94,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.376035+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|3PM|UNDER|1.5|CORE",
@@ -167670,8 +167910,11 @@
     "projection": 1.37,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376046+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|AST|UNDER|6.5|CORE",
@@ -167686,8 +167929,11 @@
     "projection": 5.94,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.376050+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|AST|OVER|3.5|CORE",
@@ -167782,8 +168028,11 @@
     "projection": 5.31,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.376061+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|DREB|OVER|5.5|EXTENDED_RESEARCH_V1",
@@ -167798,8 +168047,11 @@
     "projection": 6.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376064+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|AST|UNDER|3.5|CORE",
@@ -167894,8 +168146,11 @@
     "projection": 5.31,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.376076+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|DREB|UNDER|5.5|EXTENDED_RESEARCH_V1",
@@ -167910,8 +168165,11 @@
     "projection": 6.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376080+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|PRA|OVER|32.5|CORE",
@@ -167990,8 +168248,11 @@
     "projection": 2.88,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376093+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|FGA|OVER|18.0|EXTENDED_RESEARCH_V1",
@@ -168006,8 +168267,11 @@
     "projection": 20.46,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.376098+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|PRA|UNDER|32.5|CORE",
@@ -168086,8 +168350,11 @@
     "projection": 2.88,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376107+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|FGA|UNDER|18.0|EXTENDED_RESEARCH_V1",
@@ -168102,8 +168369,11 @@
     "projection": 20.46,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.376111+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|PTS|OVER|22.5|CORE",
@@ -168198,8 +168468,11 @@
     "projection": 1.71,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376122+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|FGM|OVER|8.0|EXTENDED_RESEARCH_V1",
@@ -168214,8 +168487,11 @@
     "projection": 9.29,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "push",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.376126+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|PTS|UNDER|22.5|CORE",
@@ -168310,8 +168586,11 @@
     "projection": 1.71,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376137+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|FTA|OVER|6.0|EXTENDED_RESEARCH_V1",
@@ -168326,8 +168605,11 @@
     "projection": 8.37,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376140+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|jaylenbrown|TOV|OVER|2.5|EXTENDED_RESEARCH_V1",
@@ -168390,8 +168672,11 @@
     "projection": 10.98,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376148+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|kenrichwilliams|REB|UNDER|5.5|CORE",
@@ -168502,8 +168787,11 @@
     "projection": 10.98,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376161+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|kenrichwilliams|STL|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -168630,8 +168918,11 @@
     "projection": 4.78,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376174+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|kenrichwilliams|STL|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -168662,8 +168953,11 @@
     "projection": 7.55,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376179+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|PTS|OVER|24.5|CORE",
@@ -168678,8 +168972,11 @@
     "projection": 23.69,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 24.0,
+    "graded_at": "2026-11-26T01:54:03.376183+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|klaythompson|PRA|UNDER|17.5|CORE",
@@ -168758,8 +169055,11 @@
     "projection": 4.78,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376191+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|lameloball|3PM|OVER|3.5|CORE",
@@ -168790,8 +169090,11 @@
     "projection": 7.55,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376196+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|cooperflagg|PTS|UNDER|24.5|CORE",
@@ -168806,8 +169109,11 @@
     "projection": 23.69,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 24.0,
+    "graded_at": "2026-11-26T01:54:03.376199+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|klaythompson|PTS|OVER|13.5|CORE",
@@ -168902,8 +169208,11 @@
     "projection": 4.6,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376209+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|DREB|OVER|5.0|EXTENDED_RESEARCH_V1",
@@ -168918,8 +169227,11 @@
     "projection": 4.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376213+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|klaythompson|PTS|UNDER|13.5|CORE",
@@ -169014,8 +169326,11 @@
     "projection": 4.6,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376223+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|OREB|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -169030,8 +169345,11 @@
     "projection": 3.51,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376226+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|AST|OVER|6.5|CORE",
@@ -169094,8 +169412,11 @@
     "projection": 5.75,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376234+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|lameloball|PRA|UNDER|29.5|CORE",
@@ -169126,8 +169447,11 @@
     "projection": 0.36,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376239+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|OREB|UNDER|1.5|EXTENDED_RESEARCH_V1",
@@ -169142,8 +169466,11 @@
     "projection": 3.51,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376242+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|AST|UNDER|6.5|CORE",
@@ -169206,8 +169533,11 @@
     "projection": 5.75,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376250+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|lameloball|PTS|OVER|18.5|CORE",
@@ -169238,8 +169568,11 @@
     "projection": 0.36,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376272+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|PRA|OVER|17.5|CORE",
@@ -169334,8 +169667,11 @@
     "projection": 0.43,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376292+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|lameloball|PTS|UNDER|18.5|CORE",
@@ -169366,8 +169702,11 @@
     "projection": 4.95,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.376297+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|PRA|UNDER|17.5|CORE",
@@ -169462,8 +169801,11 @@
     "projection": 0.43,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376308+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|PRA|OVER|21.5|CORE",
@@ -169494,8 +169836,11 @@
     "projection": 4.95,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.376312+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|PTS|OVER|9.5|CORE",
@@ -169510,8 +169855,11 @@
     "projection": 8.35,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376316+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|PTS|OVER|18.5|CORE",
@@ -169590,8 +169938,11 @@
     "projection": 1.17,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376325+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|PRA|UNDER|21.5|CORE",
@@ -169622,8 +169973,11 @@
     "projection": 0.18,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376330+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|PTS|UNDER|9.5|CORE",
@@ -169638,8 +169992,11 @@
     "projection": 8.35,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376334+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|PTS|UNDER|18.5|CORE",
@@ -169718,8 +170075,11 @@
     "projection": 1.17,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376343+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|PTS|OVER|8.5|CORE",
@@ -169750,8 +170110,11 @@
     "projection": 0.18,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376349+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|REB|OVER|6.5|CORE",
@@ -169766,8 +170129,11 @@
     "projection": 4.93,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376353+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|REB|OVER|6.5|CORE",
@@ -169878,8 +170244,11 @@
     "projection": 9.51,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376365+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|REB|UNDER|6.5|CORE",
@@ -169894,8 +170263,11 @@
     "projection": 4.93,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376369+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|REB|UNDER|6.5|CORE",
@@ -170006,8 +170378,11 @@
     "projection": 9.51,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376381+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|STL|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -170022,8 +170397,11 @@
     "projection": 0.8,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376385+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|TOV|OVER|2.5|EXTENDED_RESEARCH_V1",
@@ -170102,8 +170480,11 @@
     "projection": 12.95,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 16.0,
+    "graded_at": "2026-11-26T01:54:03.376394+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|REB|UNDER|10.5|CORE",
@@ -170134,8 +170515,11 @@
     "projection": 3.87,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376399+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|danielgafford|STL|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -170150,8 +170534,11 @@
     "projection": 0.8,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376402+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|lebronjames|TOV|UNDER|2.5|EXTENDED_RESEARCH_V1",
@@ -170230,8 +170617,11 @@
     "projection": 12.95,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 16.0,
+    "graded_at": "2026-11-26T01:54:03.376415+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|STL|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -170262,8 +170652,11 @@
     "projection": 3.87,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376420+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|demarderozan|FGA|OVER|7.5|EXTENDED_RESEARCH_V1",
@@ -170278,8 +170671,11 @@
     "projection": 7.74,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.376424+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|PRA|OVER|19.5|CORE",
@@ -170342,8 +170738,11 @@
     "projection": 4.06,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376437+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|rudygobert|STL|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -170374,8 +170773,11 @@
     "projection": 1.03,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376442+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|demarderozan|FGA|UNDER|7.5|EXTENDED_RESEARCH_V1",
@@ -170390,8 +170792,11 @@
     "projection": 7.74,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.376446+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|PRA|UNDER|19.5|CORE",
@@ -170454,8 +170859,11 @@
     "projection": 4.06,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376453+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|AST|OVER|5.5|CORE",
@@ -170486,8 +170894,11 @@
     "projection": 1.03,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376459+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|demarderozan|FGM|OVER|4.0|EXTENDED_RESEARCH_V1",
@@ -170502,8 +170913,11 @@
     "projection": 2.85,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "push",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376462+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|PTS|OVER|11.5|CORE",
@@ -170566,8 +170980,11 @@
     "projection": 7.09,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 11.0,
+    "graded_at": "2026-11-26T01:54:03.376471+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|AST|UNDER|5.5|CORE",
@@ -170614,8 +171031,11 @@
     "projection": 2.85,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "push",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376478+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|PTS|UNDER|11.5|CORE",
@@ -170678,8 +171098,11 @@
     "projection": 6.27,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376486+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|PRA|OVER|41.5|CORE",
@@ -170726,8 +171149,11 @@
     "projection": 3.42,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376494+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|REB|OVER|3.5|CORE",
@@ -170790,8 +171216,11 @@
     "projection": 6.27,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 10.0,
+    "graded_at": "2026-11-26T01:54:03.376502+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|PRA|UNDER|41.5|CORE",
@@ -170822,8 +171251,11 @@
     "projection": 13.66,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376507+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|demarderozan|FTA|UNDER|2.5|EXTENDED_RESEARCH_V1",
@@ -170838,8 +171270,11 @@
     "projection": 3.42,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376511+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|pellelarsson|REB|UNDER|3.5|CORE",
@@ -170902,8 +171337,11 @@
     "projection": 3.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376519+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|PTS|OVER|31.5|CORE",
@@ -170934,8 +171372,11 @@
     "projection": 13.66,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376524+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|demarderozan|PRA|OVER|14.5|CORE",
@@ -171014,8 +171455,11 @@
     "projection": 3.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376534+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|PTS|UNDER|31.5|CORE",
@@ -171110,8 +171554,11 @@
     "projection": 3.67,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376545+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|REB|OVER|4.5|CORE",
@@ -171142,8 +171589,11 @@
     "projection": 10.62,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376550+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|AST|OVER|5.5|CORE",
@@ -171206,8 +171656,11 @@
     "projection": 3.67,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376558+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|shaigilgeousalexander|REB|UNDER|4.5|CORE",
@@ -171238,8 +171691,11 @@
     "projection": 10.62,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376564+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|AST|UNDER|5.5|CORE",
@@ -171302,8 +171758,11 @@
     "projection": 2.33,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376571+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|terrenceshannonjr|PRA|OVER|17.5|CORE",
@@ -171398,8 +171857,11 @@
     "projection": 2.33,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376583+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|terrenceshannonjr|PRA|UNDER|17.5|CORE",
@@ -171526,8 +171988,11 @@
     "projection": 6.33,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376597+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|PTS|OVER|25.5|CORE",
@@ -171606,8 +172071,11 @@
     "projection": 6.33,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376607+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|PTS|UNDER|25.5|CORE",
@@ -171654,8 +172122,11 @@
     "projection": 12.03,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376613+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|jaysontatum|AST|OVER|6.5|CORE",
@@ -171670,8 +172141,11 @@
     "projection": 6.06,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.376617+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FGA|OVER|16.0|EXTENDED_RESEARCH_V1",
@@ -171686,8 +172160,11 @@
     "projection": 17.91,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.376620+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|REB|OVER|3.5|CORE",
@@ -171734,8 +172211,11 @@
     "projection": 12.03,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376627+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|jaysontatum|AST|UNDER|6.5|CORE",
@@ -171750,8 +172230,11 @@
     "projection": 6.06,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.376630+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FGA|UNDER|16.0|EXTENDED_RESEARCH_V1",
@@ -171766,8 +172249,11 @@
     "projection": 17.91,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.376633+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|tyresemaxey|REB|UNDER|3.5|CORE",
@@ -171814,8 +172300,11 @@
     "projection": 8.12,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376640+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|jaysontatum|FGA|OVER|20.0|EXTENDED_RESEARCH_V1",
@@ -171830,8 +172319,11 @@
     "projection": 18.76,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 25.0,
+    "graded_at": "2026-11-26T01:54:03.376643+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FGM|OVER|8.0|EXTENDED_RESEARCH_V1",
@@ -171846,8 +172338,11 @@
     "projection": 9.26,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376647+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|3PM|OVER|1.5|CORE",
@@ -171894,8 +172389,11 @@
     "projection": 8.12,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376653+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|jaysontatum|FGA|UNDER|20.0|EXTENDED_RESEARCH_V1",
@@ -171910,8 +172408,11 @@
     "projection": 18.76,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 25.0,
+    "graded_at": "2026-11-26T01:54:03.376656+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FTA|OVER|5.0|EXTENDED_RESEARCH_V1",
@@ -171926,8 +172427,11 @@
     "projection": 8.02,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376660+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|3PM|UNDER|1.5|CORE",
@@ -171974,8 +172478,11 @@
     "projection": 1.95,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376667+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|treylyles|TOV|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -172006,8 +172513,11 @@
     "projection": 7.78,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 13.0,
+    "graded_at": "2026-11-26T01:54:03.376672+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FTA|UNDER|5.0|EXTENDED_RESEARCH_V1",
@@ -172022,8 +172532,11 @@
     "projection": 8.02,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376676+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|PRA|OVER|23.5|CORE",
@@ -172070,8 +172583,11 @@
     "projection": 1.95,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376684+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135524|treylyles|TOV|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -172102,8 +172618,11 @@
     "projection": 11.1,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.376689+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|FTM|OVER|4.5|EXTENDED_RESEARCH_V1",
@@ -172118,8 +172637,11 @@
     "projection": 6.94,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376693+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|PRA|UNDER|23.5|CORE",
@@ -172166,8 +172688,11 @@
     "projection": 9.73,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376698+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|PRA|OVER|34.5|CORE",
@@ -172230,8 +172755,11 @@
     "projection": 9.73,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376706+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|PRA|UNDER|34.5|CORE",
@@ -172310,8 +172838,11 @@
     "projection": 26.45,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376716+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|REB|OVER|5.5|CORE",
@@ -172374,8 +172905,11 @@
     "projection": 26.45,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376723+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|REB|UNDER|5.5|CORE",
@@ -172422,8 +172956,11 @@
     "projection": 25.14,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 41.0,
+    "graded_at": "2026-11-26T01:54:03.376730+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|REB|OVER|4.5|CORE",
@@ -172438,8 +172975,11 @@
     "projection": 4.79,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376733+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|TOV|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -172486,8 +173026,11 @@
     "projection": 25.14,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 41.0,
+    "graded_at": "2026-11-26T01:54:03.376741+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|jamalmurray|REB|UNDER|4.5|CORE",
@@ -172502,8 +173045,11 @@
     "projection": 4.79,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376744+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135606|vjedgecombe|TOV|UNDER|1.5|EXTENDED_RESEARCH_V1",
@@ -172550,8 +173096,11 @@
     "projection": 7.96,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376750+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FGA|OVER|18.0|EXTENDED_RESEARCH_V1",
@@ -172566,8 +173115,11 @@
     "projection": 14.24,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 19.0,
+    "graded_at": "2026-11-26T01:54:03.376754+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|PRA|OVER|22.5|CORE",
@@ -172598,8 +173150,11 @@
     "projection": 7.96,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.376759+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FGA|UNDER|18.0|EXTENDED_RESEARCH_V1",
@@ -172614,8 +173169,11 @@
     "projection": 14.24,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 19.0,
+    "graded_at": "2026-11-26T01:54:03.376763+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|PRA|UNDER|22.5|CORE",
@@ -172646,8 +173204,11 @@
     "projection": 3.6,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376768+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FTA|OVER|3.5|EXTENDED_RESEARCH_V1",
@@ -172662,8 +173223,11 @@
     "projection": 2.45,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376772+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|PTS|OVER|13.5|CORE",
@@ -172694,8 +173258,11 @@
     "projection": 3.6,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376776+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FTA|UNDER|3.5|EXTENDED_RESEARCH_V1",
@@ -172710,8 +173277,11 @@
     "projection": 2.45,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376780+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|PTS|UNDER|13.5|CORE",
@@ -172742,8 +173312,11 @@
     "projection": 5.92,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376785+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FTM|OVER|2.5|EXTENDED_RESEARCH_V1",
@@ -172758,8 +173331,11 @@
     "projection": 2.45,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376788+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|REB|OVER|5.5|CORE",
@@ -172790,8 +173366,11 @@
     "projection": 5.92,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376793+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|kyrieirving|FTM|UNDER|2.5|EXTENDED_RESEARCH_V1",
@@ -172806,8 +173385,11 @@
     "projection": 2.45,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376796+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|milesbridges|REB|UNDER|5.5|CORE",
@@ -172838,8 +173420,11 @@
     "projection": 4.04,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376801+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|osoighodaro|AST|OVER|2.5|CORE",
@@ -172870,8 +173455,11 @@
     "projection": 4.04,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376806+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|osoighodaro|AST|UNDER|2.5|CORE",
@@ -172902,8 +173490,11 @@
     "projection": 13.57,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376811+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|kyshawngeorge|FGA|UNDER|12.5|EXTENDED_RESEARCH_V1",
@@ -172918,8 +173509,11 @@
     "projection": 13.57,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376815+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|kyshawngeorge|FGM|OVER|5.5|EXTENDED_RESEARCH_V1",
@@ -172934,8 +173528,11 @@
     "projection": 6.66,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376818+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|morezjohnsonjr|FGA|OVER|5.5|EXTENDED_RESEARCH_V1",
@@ -172950,8 +173547,11 @@
     "projection": 5.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.376822+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|osoighodaro|PRA|OVER|14.5|CORE",
@@ -172982,8 +173582,11 @@
     "projection": 0.49,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376827+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|morezjohnsonjr|FGA|UNDER|5.5|EXTENDED_RESEARCH_V1",
@@ -172998,8 +173601,11 @@
     "projection": 5.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 7.0,
+    "graded_at": "2026-11-26T01:54:03.376831+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|osoighodaro|PRA|UNDER|14.5|CORE",
@@ -173030,8 +173636,11 @@
     "projection": 0.49,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376836+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|morezjohnsonjr|OREB|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -173046,8 +173655,11 @@
     "projection": 1.61,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 3.0,
+    "graded_at": "2026-11-26T01:54:03.376840+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|kyshawngeorge|PRA|OVER|23.5|CORE",
@@ -173110,8 +173722,11 @@
     "projection": 16.57,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 24.0,
+    "graded_at": "2026-11-26T01:54:03.376848+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|reedsheppard|3PM|UNDER|1.5|CORE",
@@ -173142,8 +173757,11 @@
     "projection": 16.57,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 24.0,
+    "graded_at": "2026-11-26T01:54:03.376853+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|reedsheppard|PRA|OVER|10.5|CORE",
@@ -173174,8 +173792,11 @@
     "projection": 4.26,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376858+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|reedsheppard|PRA|UNDER|10.5|CORE",
@@ -173206,8 +173827,11 @@
     "projection": 4.26,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376868+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|reedsheppard|PTS|OVER|6.5|CORE",
@@ -173238,8 +173862,11 @@
     "projection": 3.29,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.376878+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|reedsheppard|PTS|UNDER|6.5|CORE",
@@ -173270,8 +173897,11 @@
     "projection": 3.53,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376889+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|stevenadams|REB|OVER|4.5|CORE",
@@ -173302,8 +173932,11 @@
     "projection": 3.53,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376898+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|stevenadams|REB|UNDER|4.5|CORE",
@@ -173398,8 +174031,11 @@
     "projection": 10.46,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.376908+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|tarieason|PTS|OVER|9.5|CORE",
@@ -173430,8 +174066,11 @@
     "projection": 10.46,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 21.0,
+    "graded_at": "2026-11-26T01:54:03.376913+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "735018|tarieason|PTS|UNDER|9.5|CORE",
@@ -173462,8 +174101,11 @@
     "projection": 8.45,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.376921+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|najimarshall|PRA|OVER|16.5|CORE",
@@ -173494,8 +174136,11 @@
     "projection": 8.45,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.376927+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|najimarshall|PRA|UNDER|16.5|CORE",
@@ -173526,8 +174171,11 @@
     "projection": 0.21,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376932+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|najimarshall|PTS|OVER|9.5|CORE",
@@ -173542,8 +174190,11 @@
     "projection": 11.86,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.376935+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|neemiasqueta|STL|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -173558,8 +174209,11 @@
     "projection": 0.21,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.376939+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|najimarshall|PTS|UNDER|9.5|CORE",
@@ -173574,8 +174228,11 @@
     "projection": 11.86,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.376943+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|AST|OVER|3.5|CORE",
@@ -173590,8 +174247,11 @@
     "projection": 3.81,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376946+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|AST|UNDER|3.5|CORE",
@@ -173606,8 +174266,11 @@
     "projection": 3.81,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.376950+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FGA|OVER|15.0|EXTENDED_RESEARCH_V1",
@@ -173622,8 +174285,11 @@
     "projection": 16.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376953+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FGA|UNDER|15.0|EXTENDED_RESEARCH_V1",
@@ -173638,8 +174304,11 @@
     "projection": 16.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 20.0,
+    "graded_at": "2026-11-26T01:54:03.376956+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FGM|OVER|7.0|EXTENDED_RESEARCH_V1",
@@ -173654,8 +174323,11 @@
     "projection": 7.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 11.0,
+    "graded_at": "2026-11-26T01:54:03.376960+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FGM|UNDER|7.0|EXTENDED_RESEARCH_V1",
@@ -173670,8 +174342,11 @@
     "projection": 7.25,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 11.0,
+    "graded_at": "2026-11-26T01:54:03.376963+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FTA|OVER|2.5|EXTENDED_RESEARCH_V1",
@@ -173686,8 +174361,11 @@
     "projection": 2.84,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376966+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|FTA|UNDER|2.5|EXTENDED_RESEARCH_V1",
@@ -173702,8 +174380,11 @@
     "projection": 2.84,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376969+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|OREB|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -173718,8 +174399,11 @@
     "projection": 1.43,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376973+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|OREB|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -173734,8 +174418,11 @@
     "projection": 1.43,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.376976+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|PRA|OVER|27.5|CORE",
@@ -173782,8 +174469,11 @@
     "projection": 18.48,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 28.0,
+    "graded_at": "2026-11-26T01:54:03.376982+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|PTS|UNDER|18.5|CORE",
@@ -173798,8 +174488,11 @@
     "projection": 18.48,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 28.0,
+    "graded_at": "2026-11-26T01:54:03.376985+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|REB|OVER|5.0|CORE",
@@ -173814,8 +174507,11 @@
     "projection": 5.42,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376989+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paulgeorge|REB|UNDER|5.0|CORE",
@@ -173830,8 +174526,11 @@
     "projection": 5.42,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.376992+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FGA|OVER|10.5|EXTENDED_RESEARCH_V1",
@@ -173846,8 +174545,11 @@
     "projection": 10.13,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.376996+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FGA|UNDER|10.5|EXTENDED_RESEARCH_V1",
@@ -173862,8 +174564,11 @@
     "projection": 10.13,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.376999+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FGM|OVER|5.0|EXTENDED_RESEARCH_V1",
@@ -173878,8 +174583,11 @@
     "projection": 3.72,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377003+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|DREB|OVER|4.5|EXTENDED_RESEARCH_V1",
@@ -173894,8 +174602,11 @@
     "projection": 6.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377007+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FGM|UNDER|5.0|EXTENDED_RESEARCH_V1",
@@ -173910,8 +174621,11 @@
     "projection": 3.72,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377010+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|DREB|UNDER|4.5|EXTENDED_RESEARCH_V1",
@@ -173926,8 +174640,11 @@
     "projection": 6.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377014+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FTM|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -173942,8 +174659,11 @@
     "projection": 2.79,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377017+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|FGA|OVER|9.5|EXTENDED_RESEARCH_V1",
@@ -173958,8 +174678,11 @@
     "projection": 12.15,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 11.0,
+    "graded_at": "2026-11-26T01:54:03.377021+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|FTM|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -173974,8 +174697,11 @@
     "projection": 2.79,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377024+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|FTM|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -173990,8 +174716,11 @@
     "projection": 2.87,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377028+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|OREB|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -174006,8 +174735,11 @@
     "projection": 1.29,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.377031+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|FTM|UNDER|1.5|EXTENDED_RESEARCH_V1",
@@ -174022,8 +174754,11 @@
     "projection": 2.87,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377035+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|OREB|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -174038,8 +174773,11 @@
     "projection": 1.29,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.377038+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|PRA|OVER|18.5|CORE",
@@ -174118,8 +174856,11 @@
     "projection": 13.12,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.377049+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|PTS|OVER|13.0|CORE",
@@ -174134,8 +174875,11 @@
     "projection": 13.52,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.377053+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|PTS|UNDER|12.5|CORE",
@@ -174150,8 +174894,11 @@
     "projection": 13.12,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.377056+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|paytonpritchard|PTS|UNDER|13.0|CORE",
@@ -174166,8 +174913,11 @@
     "projection": 13.52,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 14.0,
+    "graded_at": "2026-11-26T01:54:03.377060+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|pjwashington|STL|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -174182,8 +174932,11 @@
     "projection": 0.72,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377063+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|samhauser|PRA|OVER|10.5|CORE",
@@ -174214,8 +174967,11 @@
     "projection": 0.72,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377068+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|samhauser|PRA|UNDER|10.5|CORE",
@@ -174262,8 +175018,11 @@
     "projection": 9.43,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377075+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|spencerjones|3PM|UNDER|0.5|CORE",
@@ -174294,8 +175053,11 @@
     "projection": 9.43,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377080+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|AST|OVER|3.5|CORE",
@@ -174310,8 +175072,11 @@
     "projection": 4.05,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377084+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|AST|OVER|7.5|CORE",
@@ -174326,8 +175091,11 @@
     "projection": 8.19,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.377087+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|AST|UNDER|3.5|CORE",
@@ -174342,8 +175110,11 @@
     "projection": 4.05,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 2.0,
+    "graded_at": "2026-11-26T01:54:03.377093+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|AST|UNDER|7.5|CORE",
@@ -174358,8 +175129,11 @@
     "projection": 8.19,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.377096+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|FGA|OVER|6.5|EXTENDED_RESEARCH_V1",
@@ -174374,8 +175148,11 @@
     "projection": 5.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377100+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|FGA|OVER|11.0|EXTENDED_RESEARCH_V1",
@@ -174390,8 +175167,11 @@
     "projection": 12.22,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.377103+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|FGA|UNDER|6.5|EXTENDED_RESEARCH_V1",
@@ -174406,8 +175186,11 @@
     "projection": 5.41,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377109+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|FGA|UNDER|11.0|EXTENDED_RESEARCH_V1",
@@ -174422,8 +175205,11 @@
     "projection": 12.22,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.377112+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|FTA|OVER|1.5|EXTENDED_RESEARCH_V1",
@@ -174438,8 +175224,11 @@
     "projection": 1.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.377116+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|FGM|OVER|4.5|EXTENDED_RESEARCH_V1",
@@ -174454,8 +175243,11 @@
     "projection": 4.93,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377119+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|FTA|UNDER|1.5|EXTENDED_RESEARCH_V1",
@@ -174470,8 +175262,11 @@
     "projection": 1.35,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 0.0,
+    "graded_at": "2026-11-26T01:54:03.377123+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|FGM|UNDER|4.5|EXTENDED_RESEARCH_V1",
@@ -174486,8 +175281,11 @@
     "projection": 4.93,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 4.0,
+    "graded_at": "2026-11-26T01:54:03.377126+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|PRA|OVER|13.5|CORE",
@@ -174518,8 +175316,11 @@
     "projection": 7.44,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.377131+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|PRA|UNDER|13.5|CORE",
@@ -174550,8 +175351,11 @@
     "projection": 7.44,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 9.0,
+    "graded_at": "2026-11-26T01:54:03.377136+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|PTS|OVER|7.5|CORE",
@@ -174566,8 +175370,11 @@
     "projection": 8.61,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377139+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|FTM|OVER|3.5|EXTENDED_RESEARCH_V1",
@@ -174582,8 +175389,11 @@
     "projection": 6.3,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.377143+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|walterclaytonjr|PTS|UNDER|7.5|CORE",
@@ -174598,8 +175408,11 @@
     "projection": 8.61,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 5.0,
+    "graded_at": "2026-11-26T01:54:03.377146+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|PRA|OVER|24.5|CORE",
@@ -174630,8 +175443,11 @@
     "projection": 1.2,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377152+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|PRA|UNDER|24.5|CORE",
@@ -174662,8 +175478,11 @@
     "projection": 1.2,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377157+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|PTS|OVER|14.5|CORE",
@@ -174678,8 +175497,11 @@
     "projection": 15.87,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.377160+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|FGA|OVER|7.0|EXTENDED_RESEARCH_V1",
@@ -174694,8 +175516,11 @@
     "projection": 7.77,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.377164+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135601|traeyoung|PTS|UNDER|14.5|CORE",
@@ -174710,8 +175535,11 @@
     "projection": 15.87,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 17.0,
+    "graded_at": "2026-11-26T01:54:03.377167+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|FGA|UNDER|7.0|EXTENDED_RESEARCH_V1",
@@ -174726,8 +175554,11 @@
     "projection": 7.77,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 8.0,
+    "graded_at": "2026-11-26T01:54:03.377171+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|PRA|OVER|12.5|CORE",
@@ -174774,8 +175605,11 @@
     "projection": 8.7,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.377178+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|PTS|UNDER|7.5|CORE",
@@ -174790,8 +175624,11 @@
     "projection": 8.7,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 12.0,
+    "graded_at": "2026-11-26T01:54:03.377181+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|REB|OVER|3.5|CORE",
@@ -174806,8 +175643,11 @@
     "projection": 4.24,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.377184+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|REB|UNDER|3.5|CORE",
@@ -174822,8 +175662,11 @@
     "projection": 4.24,
     "book": "prizepicks",
     "model": "CORE",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 6.0,
+    "graded_at": "2026-11-26T01:54:03.377188+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|TOV|OVER|0.5|EXTENDED_RESEARCH_V1",
@@ -174838,8 +175681,11 @@
     "projection": 1.6,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "win",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377191+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   },
   {
     "id": "135604|zaccharierisacher|TOV|UNDER|0.5|EXTENDED_RESEARCH_V1",
@@ -174854,7 +175700,10 @@
     "projection": 1.6,
     "book": "prizepicks",
     "model": "EXTENDED_RESEARCH_V1",
-    "status": "pending",
-    "source": "verified live PropEdge PrizePicks board"
+    "status": "loss",
+    "source": "verified live PropEdge PrizePicks board",
+    "actual": 1.0,
+    "graded_at": "2026-11-26T01:54:03.377195+00:00",
+    "grading_source": "NBA extended box score, unique player/date"
   }
 ]
