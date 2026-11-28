@@ -1,6 +1,6 @@
 {
   "status": "PROSPECTIVE_CAPTURED_RESEARCH_ONLY",
-  "generated_at": "2026-11-27T20:05:11.693935+00:00",
+  "generated_at": "2026-11-28T02:37:29.024727+00:00",
   "eligible_paired_snapshots": 614,
   "independent_capture_dates": 9,
   "excluded": {
@@ -454,44 +454,44 @@
   },
   "last_30_days": {
     "primary": {
-      "n": 614,
-      "independent_capture_dates": 9,
-      "mae": 4.5059,
-      "bias": 0.5113,
-      "median_absolute_error": 3.005,
-      "within_1_pct": 18.08,
-      "within_2_pct": 35.67,
-      "within_5_pct": 67.26
+      "n": 561,
+      "independent_capture_dates": 8,
+      "mae": 4.5792,
+      "bias": 0.525,
+      "median_absolute_error": 3.03,
+      "within_1_pct": 17.83,
+      "within_2_pct": 35.12,
+      "within_5_pct": 67.02
     },
     "challenger": {
-      "n": 614,
-      "independent_capture_dates": 9,
-      "mae": 4.5034,
-      "bias": 0.4637,
-      "median_absolute_error": 3.0185,
-      "within_1_pct": 18.4,
-      "within_2_pct": 36.16,
-      "within_5_pct": 67.26
+      "n": 561,
+      "independent_capture_dates": 8,
+      "mae": 4.5709,
+      "bias": 0.4668,
+      "median_absolute_error": 3.081,
+      "within_1_pct": 18.54,
+      "within_2_pct": 36.01,
+      "within_5_pct": 67.2
     },
     "v4": {
-      "n": 614,
-      "independent_capture_dates": 9,
-      "mae": 4.5522,
-      "bias": 0.2945,
-      "median_absolute_error": 3.1395,
-      "within_1_pct": 18.89,
-      "within_2_pct": 35.83,
-      "within_5_pct": 66.61
+      "n": 561,
+      "independent_capture_dates": 8,
+      "mae": 4.64,
+      "bias": 0.3329,
+      "median_absolute_error": 3.1858,
+      "within_1_pct": 18.0,
+      "within_2_pct": 35.12,
+      "within_5_pct": 66.13
     },
     "consensus": {
-      "n": 614,
-      "independent_capture_dates": 9,
-      "mae": 4.4998,
-      "bias": 0.4232,
-      "median_absolute_error": 3.0352,
-      "within_1_pct": 18.24,
-      "within_2_pct": 37.3,
-      "within_5_pct": 67.1
+      "n": 561,
+      "independent_capture_dates": 8,
+      "mae": 4.5748,
+      "bias": 0.4416,
+      "median_absolute_error": 3.0768,
+      "within_1_pct": 18.0,
+      "within_2_pct": 36.9,
+      "within_5_pct": 66.84
     }
   },
   "by_capture_date": {
